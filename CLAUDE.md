@@ -25,9 +25,9 @@ The approved design source of truth is `morebookedconsults-v18.html` (self-conta
 - Sticky mobile CTA that hides when either audit form is in view.
 
 ## Audit form (one component, rendered twice: hero + bottom)
-Four steps (step 1 is an addition to the v18 mockup, mandated by the topical map):
-1. "What kind of practice?" — option cards, auto-advance: Med spa / Plastic surgery / Injector / Laser clinic. (Routing + segmentation + B3 case-study evidence.)
-2. "What are you looking for?" — option cards, auto-advance: convert traffic / more Google traffic / bit of everything / not sure. (30px heading.)
+Four steps (the practice-type step is an addition to the v18 mockup, mandated by the topical map):
+1. "What are you looking for?" — option cards, auto-advance: convert traffic / more Google traffic / bit of everything / not sure. (30px heading.)
+2. "What kind of practice?" — option cards, auto-advance: Med spa / Plastic surgery / Injector / Laser clinic. (Routing + segmentation + B3 case-study evidence. 30px heading.)
 3. Consult-value slider with "I don't know — skip this."
 4. Name / email / website + success state.
 Forms are front-end only for now, but ALL submissions route through one stub function so a backend drops in later.

@@ -8,6 +8,7 @@ import {
 import "./globals.css";
 import SvgDefs from "@/components/SvgDefs";
 import Header from "@/components/Header";
+import PetalParallax from "@/components/PetalParallax";
 
 // Fonts self-hosted via next/font (no CDN <link>, no layout shift).
 // Each exposes a CSS variable consumed by :root in globals.css.
@@ -68,6 +69,7 @@ export default function RootLayout({
         <SvgDefs />
         <Header />
         {children}
+        <PetalParallax />
       </body>
     </html>
   );
