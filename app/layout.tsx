@@ -6,6 +6,8 @@ import {
   Great_Vibes,
 } from "next/font/google";
 import "./globals.css";
+import SvgDefs from "@/components/SvgDefs";
+import Header from "@/components/Header";
 
 // Fonts self-hosted via next/font (no CDN <link>, no layout shift).
 // Each exposes a CSS variable consumed by :root in globals.css.
@@ -62,7 +64,11 @@ export default function RootLayout({
       lang="en"
       className={`${dmSerif.variable} ${instrument.variable} ${splineMono.variable} ${greatVibes.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        <SvgDefs />
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
