@@ -1,0 +1,68 @@
+/*
+ * Global foundation ported from morebookedconsults-v18.html (the design source of truth).
+ * Only the :root tokens + base/global styles live here. Section/component CSS ports
+ * alongside each component in later steps.
+ *
+ * Font families resolve to next/font CSS variables set on <html> in app/layout.tsx.
+ */
+:root{
+  --paper:#F8F8FD;
+  --lilac:#EFEDFB;
+  --mist:#E7EEFC;
+  --line:#DDDBF0;
+  --ink:#232140;
+  --soft:#6C6990;
+  --violet:#6C57E8;
+  --violet-deep:#5843CF;
+  --blue:#4C8DFF;
+  --deep:#1B1936;
+  --card:#FFFFFF;
+  --maxw:1080px;
+  --display:var(--font-dm-serif),Georgia,serif;
+  --body:var(--font-instrument),system-ui,sans-serif;
+  --mono:var(--font-spline-mono),ui-monospace,monospace;
+  --script:var(--font-great-vibes),cursive;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+}
+body{
+  font-family:var(--body);background:var(--paper);color:var(--ink);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:1}
+a{color:inherit}
+::selection{background:var(--violet);color:#fff}
+h1,h2,h3{font-family:var(--display);font-weight:400}
+h2{font-size:clamp(29px,4.2vw,42px);line-height:1.15;margin:16px 0 12px}
+h2 em,h1 em{font-style:italic;color:var(--violet)}
+.eyebrow{
+  font-family:var(--mono);font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--violet);
+  display:flex;align-items:center;gap:10px;
+}
+.eyebrow::before{content:"";width:22px;height:1px;background:var(--violet)}
+.lede{color:var(--soft);font-size:18px;max-width:52ch}
+
+/* ---- petals ---- */
+.petals{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.petal{position:absolute;opacity:.55;animation:drift 14s ease-in-out infinite alternate}
+.petal:nth-child(2n){animation-duration:18s;animation-delay:-6s}
+.petal:nth-child(3n){animation-duration:22s;animation-delay:-11s}
+@keyframes drift{
+  from{transform:translateY(-10px) rotate(var(--r,0deg))}
+  to{transform:translateY(14px) rotate(calc(var(--r,0deg) + 8deg))}
+}
+.petal-parallax{position:absolute;pointer-events:none;will-change:transform}
+.petal-big{
+  display:block;opacity:.5;
+  animation:sway var(--dur,18s) ease-in-out var(--del,0s) infinite alternate;
+}
+@keyframes sway{
+  from{transform:translateX(-46px) translateY(-16px) rotate(-3.5deg)}
+  to{transform:translateX(50px) translateY(18px) rotate(4deg)}
+}
+section{position:relative}
