@@ -43,3 +43,6 @@ next-env.d.ts
 
 # local planning docs (topical map, etc.) — not part of the app
 docs/
+
+# git worktrees created by parallel sessions
+.claude/worktrees/

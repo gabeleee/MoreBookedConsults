@@ -40,7 +40,15 @@ export default function MathCalculator() {
             </h2>
             <p className="lede" style={{ fontSize: "16.5px" }}>
               Doubling conversion is the low end of what six years of testing
-              produced at LaserAway. Drag the sliders and see it on your numbers.
+              produced at{" "}
+              <a
+                href="https://www.laseraway.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LaserAway
+              </a>
+              . Drag the sliders and see it on your numbers.
             </p>
           </div>
           <div className="calc">
