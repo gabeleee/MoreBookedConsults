@@ -4,8 +4,9 @@
 // #petalShape path and #logoGrad gradient from <SvgDefs />, so two instances
 // on one page share ids without collision.
 //
-// The <em>Consults</em> is styled as Great Vibes via `.brand em` in
-// globals.css, offsets are tuned to that font; do not change.
+// The wordmark is one word, no spaces: "MoreBooked" in DM Serif Display with
+// <em>Consults</em> in Instrument Sans bold violet via `.brand em` in
+// globals.css.
 
 type LogoProps = {
   /** When set, renders a link (header). Omit for a plain span (footer). */
@@ -34,7 +35,7 @@ export default function Logo({ href }: LogoProps) {
         />
       </svg>
       <span>
-        More{"\u00A0"}Booked<em>Consults</em>
+        MoreBooked<em>Consults</em>
       </span>
     </>
   );

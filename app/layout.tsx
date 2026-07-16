@@ -3,7 +3,6 @@ import {
   DM_Serif_Display,
   Instrument_Sans,
   Spline_Sans_Mono,
-  Great_Vibes,
 } from "next/font/google";
 import "./globals.css";
 import { SITE } from "@/lib/site";
@@ -26,10 +25,10 @@ const dmSerif = DM_Serif_Display({
   display: "swap",
 });
 
-// Body
+// Body (700 is used by the bold "Consults" in the wordmark)
 const instrument = Instrument_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "500", "600", "700"],
   variable: "--font-instrument",
   display: "swap",
 });
@@ -39,14 +38,6 @@ const splineMono = Spline_Sans_Mono({
   subsets: ["latin"],
   weight: ["400", "500"],
   variable: "--font-spline-mono",
-  display: "swap",
-});
-
-// Script "Consults" in the wordmark ONLY
-const greatVibes = Great_Vibes({
-  subsets: ["latin"],
-  weight: "400",
-  variable: "--font-great-vibes",
   display: "swap",
 });
 
@@ -82,7 +73,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSerif.variable} ${instrument.variable} ${splineMono.variable} ${greatVibes.variable}`}
+      className={`${dmSerif.variable} ${instrument.variable} ${splineMono.variable}`}
     >
       <body>
         <OrgSchema />
