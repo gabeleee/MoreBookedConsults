@@ -9,8 +9,7 @@ export const SITE = {
   founder: {
     name: "Gabe Meierotto",
     jobTitle: "Founder",
-    // TODO: replace with Gabe's real LinkedIn profile URL.
-    linkedin: "https://www.linkedin.com/in/gabemeierotto",
+    linkedin: "https://www.linkedin.com/in/gabemeierotto/",
   },
   aestheticHires: "https://aesthetichires.com",
 } as const;

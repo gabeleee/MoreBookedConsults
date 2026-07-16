@@ -45,7 +45,7 @@ Forms are front-end only for now, but ALL submissions route through one stub fun
 - Port the mockup's vanilla CSS as-is (CSS Modules or global stylesheet). Do NOT rewrite in Tailwind.
 - Components: Header/Logo, Hero, AuditForm (reused 2×), ChartCard, PhotoBand items, Levers, Founder, ProcessSteps, MathCalculator, Footer, PetalBackground (small petals + parallax trios).
 - Deploy target: Vercel.
-- Email on site: hello@morebookedconsults.com (inbox not live yet — confirm before launch).
+- Email on site: hello@morebookedconsults.com — live, forwards to Gabe's personal inbox for now. Audit submissions email here via `/api/audit` (Resend: set `RESEND_API_KEY` + `AUDIT_FROM_EMAIL`; optional `CRM_WEBHOOK_URL`). Without those env vars the API logs instead of sending. See `.env.example`.
 
 ## Workflow rules for every Claude Code session
 - Work on feature branches, never directly on main.
