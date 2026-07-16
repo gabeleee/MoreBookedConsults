@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
-import { mdxComponents } from "@/components/mdx/MdxComponents";
+import { mdxComponents, FAQ, Related } from "@/components/mdx/MdxComponents";
 import { getMoneyPage, getAllMoneyPages } from "@/lib/content";
 
 // Root-level money pages (M1-M8, P1-P7, N1, N2), MDX-backed. Static routes
@@ -53,6 +53,15 @@ export default async function MoneyPage({ params }: Params) {
             components={mdxComponents}
             options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
           />
+          {frontmatter.faq && frontmatter.faq.length > 0 && (
+            <>
+              <h2>❓ Frequently asked questions</h2>
+              <FAQ items={frontmatter.faq} />
+            </>
+          )}
+          {frontmatter.related && frontmatter.related.length > 0 && (
+            <Related items={frontmatter.related} />
+          )}
         </div>
       </section>
     </main>

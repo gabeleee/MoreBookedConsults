@@ -27,6 +27,9 @@ export type Frontmatter = {
   eyebrow?: string;
   h1?: string; // visible headline when it differs from the meta title
   lede?: string;
+  // rendered by the routes after the MDX body
+  faq?: { q: string; a: string }[];
+  related?: { href: string; title: string; desc?: string }[];
 };
 
 export type ContentDoc = {

@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { mdxComponents } from "@/components/mdx/MdxComponents";
+import { mdxComponents, FAQ, Related } from "@/components/mdx/MdxComponents";
 import { getBlogPost, getAllBlogPosts } from "@/lib/content";
 import { SITE } from "@/lib/site";
 
@@ -85,6 +85,15 @@ export default async function BlogPost({ params }: Params) {
               components={mdxComponents}
               options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
             />
+            {frontmatter.faq && frontmatter.faq.length > 0 && (
+              <>
+                <h2>❓ Frequently asked questions</h2>
+                <FAQ items={frontmatter.faq} />
+              </>
+            )}
+            {frontmatter.related && frontmatter.related.length > 0 && (
+              <Related items={frontmatter.related} />
+            )}
           </div>
         </div>
       </article>
