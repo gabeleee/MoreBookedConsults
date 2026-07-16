@@ -27,7 +27,17 @@ export default function Proof() {
           <h2>These numbers came from six years at LaserAway.</h2>
           <p className="lede">
             Before More Booked Consults existed, our founder spent six years as{" "}
-            <strong>Director of CRO at LaserAway</strong>, the largest medspa
+            <strong>
+              Director of CRO at{" "}
+              <a
+                href="https://www.laseraway.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LaserAway
+              </a>
+            </strong>
+            , the largest medspa
             chain in the U.S., owning the testing roadmap end to end. These are
             the results he drove in that role, and the playbook this practice is
             built on.

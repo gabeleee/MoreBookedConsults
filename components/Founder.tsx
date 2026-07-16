@@ -34,7 +34,15 @@ export default function Founder() {
           </div>
           <p>
             Six years testing booking forms, treatment pages, and offers across
-            100+ LaserAway locations. Now the same playbook goes to work for
+            100+{" "}
+            <a
+              href="https://www.laseraway.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LaserAway
+            </a>{" "}
+            locations. Now the same playbook goes to work for
             independent aesthetic practices, where one winning test shows up on
             next month&apos;s schedule. When you work with More Booked Consults,
             this is who does the work.

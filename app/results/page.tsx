@@ -21,8 +21,19 @@ export default function Results() {
           <h1>The numbers this practice is built on.</h1>
           <p className="lede">
             Before More Booked Consults existed, founder Gabe Meierotto spent six
-            years as <strong>Director of CRO at LaserAway</strong>, the largest
-            medspa chain in the U.S., owning the testing roadmap end to end.
+            years as{" "}
+            <strong>
+              Director of CRO at{" "}
+              <a
+                href="https://www.laseraway.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LaserAway
+              </a>
+            </strong>
+            , the largest medspa chain in the U.S., owning the testing roadmap
+            end to end.
             These are the results he drove in that role.
           </p>
         </div>
@@ -85,7 +96,15 @@ export default function Results() {
         <div className="wrap prose">
           <h2>What these numbers mean for your practice.</h2>
           <p>
-            These are results Gabe drove at LaserAway, <strong>not a promise</strong>{" "}
+            These are results Gabe drove at{" "}
+            <a
+              href="https://www.laseraway.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LaserAway
+            </a>
+            , <strong>not a promise</strong>{" "}
             of what your practice will do. Every market, site, and starting point
             is different. What carries over is the method: disciplined testing,
             one change at a time, run long enough to trust the result.
