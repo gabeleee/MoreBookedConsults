@@ -530,6 +530,18 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 @media (max-width:900px){.r-hero-stats{grid-template-columns:1fr 1fr}}
 @media (max-width:440px){.r-hero-stats{grid-template-columns:1fr}}
 
+/* who-did-this attribution (photo + note), reused across sections */
+.r-attrib{margin:26px 0 34px;max-width:560px}
+.r-attrib .who span b{color:var(--ink)}
+.r-note{
+  display:flex;gap:16px;align-items:flex-start;
+  background:var(--lilac);border:1px solid var(--line);border-radius:16px;
+  padding:18px 22px;margin-top:28px;max-width:760px;
+}
+.r-note .avatar{width:46px;height:46px;flex:0 0 46px}
+.r-note p{margin:0;font-size:15px;color:var(--soft);line-height:1.55}
+.r-note p b{color:var(--ink)}
+
 /* jump-link chips */
 .r-toc{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
 .r-toc a{

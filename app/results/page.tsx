@@ -48,9 +48,24 @@ export default function Results() {
             medspa chain in the U.S., owning the testing roadmap end to end.
           </p>
           <p className="lede">
-            These are the results he drove in that role, documented in a case
-            study published by his testing platform partner.
+            Every number on this page is a result <strong>Gabe personally
+            drove for LaserAway</strong> in that role, not a claim about work
+            More Booked Consults has done for clients.
           </p>
+
+          <div className="attribution r-attrib">
+            <div className="avatar">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/gabe.jpg" alt="Gabe Meierotto" />
+            </div>
+            <div className="who">
+              <b>Gabe Meierotto</b>
+              <span>
+                Director of CRO at LaserAway, 2017–2022 · Now founder, More
+                Booked Consults
+              </span>
+            </div>
+          </div>
 
           <div className="r-hero-stats">
             <div className="r-hero-stat">
@@ -157,6 +172,19 @@ export default function Results() {
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="r-note">
+            <div className="avatar">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/gabe.jpg" alt="Gabe Meierotto" />
+            </div>
+            <p>
+              <b>Whose result is this?</b> Gabe&apos;s, from his six years
+              running CRO in-house at LaserAway. More Booked Consults launched
+              after he left, so this is his personal track record, not a client
+              result of this consultancy.
+            </p>
           </div>
         </div>
       </section>
@@ -273,6 +301,18 @@ export default function Results() {
             <p>
               No redesign-and-pray. Every lift traces back to a specific,
               controlled experiment.
+            </p>
+          </div>
+
+          <div className="r-note" style={{ marginTop: 0, marginBottom: 26 }}>
+            <div className="avatar">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/gabe.jpg" alt="Gabe Meierotto" />
+            </div>
+            <p>
+              <b>Every experiment below ran on Gabe&apos;s roadmap at
+              LaserAway.</b> He owned the hypotheses, the prioritization, and
+              the results reporting from 2017 to 2022.
             </p>
           </div>
 
@@ -434,9 +474,24 @@ export default function Results() {
         <div className="wrap prose">
           <p className="eyebrow">The fine print</p>
           <h2>What these numbers mean for your practice.</h2>
+          <div className="founder-id">
+            <div className="avatar">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/gabe.jpg" alt="Gabe Meierotto" />
+            </div>
+            <div className="who">
+              <b>Gabe Meierotto</b>
+              <span>Founder, More Booked Consults</span>
+            </div>
+          </div>
           <p>
-            These are results Gabe drove at LaserAway, <strong>not a promise</strong>{" "}
-            of what your practice will do.
+            These are results Gabe drove for LaserAway as their in-house
+            Director of CRO, <strong>not a promise</strong> of what your
+            practice will do.
+          </p>
+          <p>
+            They are his personal track record from that role, not client
+            results of More Booked Consults.
           </p>
           <p>
             Every market, site, and starting point is different.
