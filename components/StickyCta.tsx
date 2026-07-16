@@ -28,7 +28,7 @@ export default function StickyCta() {
 
   return (
     <div className="sticky-cta" id="stickyCta" ref={ref}>
-      <a className="btn" href="#audit">
+      <a className="btn" href="/free-audit/">
         Get a free audit
       </a>
     </div>

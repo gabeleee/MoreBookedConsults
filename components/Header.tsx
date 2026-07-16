@@ -1,18 +1,30 @@
-// Sticky site header, ported from morebookedconsults-v18.html (lines 372-377).
-// No JS — sticky is pure CSS (see `header` in globals.css). Server component.
-//
-// Nav is intentionally minimal (brand + Free audit CTA), matching the v18
-// mockup. The fuller nav (hubs, Results, Pricing) lands when those pages exist.
+// Sticky site header, ported from the v18 mockup and expanded to the full nav
+// per CLAUDE.md. No JS — sticky is pure CSS. Server component.
+import Link from "next/link";
 import Logo from "./Logo";
+
+const NAV = [
+  { href: "/medspa-marketing/", label: "For Med Spas" },
+  { href: "/plastic-surgeon-marketing/", label: "For Plastic Surgeons" },
+  { href: "/results/", label: "Results" },
+  { href: "/pricing/", label: "Pricing" },
+];
 
 export default function Header() {
   return (
     <header>
       <div className="wrap nav">
-        <Logo href="#top" />
-        <a className="nav-cta" href="#audit">
+        <Logo href="/" />
+        <nav className="nav-links" aria-label="Primary">
+          {NAV.map((n) => (
+            <Link key={n.href} href={n.href}>
+              {n.label}
+            </Link>
+          ))}
+        </nav>
+        <Link className="nav-cta" href="/free-audit/">
           Free audit
-        </a>
+        </Link>
       </div>
     </header>
   );

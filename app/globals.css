@@ -38,6 +38,7 @@ a{color:inherit}
 ::selection{background:var(--violet);color:#fff}
 h1,h2,h3{font-family:var(--display);font-weight:400}
 h2{font-size:clamp(29px,4.2vw,42px);line-height:1.15;margin:16px 0 12px}
+h1{font-size:clamp(29px,4.2vw,42px);line-height:1.12;margin:16px 0 12px}
 h2 em,h1 em{font-style:italic;color:var(--violet)}
 .eyebrow{
   font-family:var(--mono);font-size:12px;letter-spacing:.14em;
@@ -69,8 +70,12 @@ section{position:relative}
 
 /* ---- header ---- */
 header{border-bottom:1px solid var(--line);background:rgba(248,248,253,.9);backdrop-filter:blur(8px);position:sticky;top:0;z-index:40}
-.nav{display:flex;align-items:center;padding:16px 0}
-.nav .nav-cta{margin-left:auto}
+.nav{display:flex;align-items:center;gap:24px;padding:16px 0}
+.nav .brand{margin-right:auto}
+.nav-links{display:flex;gap:22px;align-items:center}
+.nav-links a{font-size:14.5px;color:var(--soft);text-decoration:none;font-weight:500;transition:color .15s}
+.nav-links a:hover,.nav-links a:focus-visible{color:var(--ink)}
+@media (max-width:820px){.nav-links{display:none}}
 .brand{font-family:var(--display);font-size:21px;text-decoration:none;display:inline-flex;align-items:center;gap:2px}
 .brand-tag{
   font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;
@@ -316,6 +321,18 @@ header{border-bottom:1px solid var(--line);background:rgba(248,248,253,.9);backd
   border-radius:16px;border:1px solid var(--line);
   box-shadow:0 14px 34px -20px rgba(35,33,64,.4);
 }
+
+/* ---- page intro (money/stub pages) ---- */
+.page-intro{padding:72px 0 96px;background:linear-gradient(180deg,var(--lilac),var(--paper));min-height:52vh}
+.page-intro h1{font-size:clamp(34px,4.8vw,50px);line-height:1.08;margin:14px 0 16px}
+.page-intro .lede{margin-bottom:22px}
+
+/* ---- breadcrumbs ---- */
+.breadcrumbs{font-family:var(--mono);font-size:12px;letter-spacing:.04em;color:var(--soft);display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:10px}
+.breadcrumbs a{color:var(--soft);text-decoration:none}
+.breadcrumbs a:hover{color:var(--violet)}
+.breadcrumbs .sep{opacity:.5}
+.breadcrumbs [aria-current="page"]{color:var(--ink)}
 
 /* ---- footer ---- */
 footer{background:var(--deep);color:#A6A3C8;padding:44px 0 56px;font-size:15px}

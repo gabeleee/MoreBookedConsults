@@ -16,7 +16,17 @@ export type AuditResult = { ok: boolean };
 export async function submitAudit(
   data: AuditSubmission,
 ): Promise<AuditResult> {
-  // TODO: POST to the audit backend when it exists.
-  console.info("[submitAudit] (stub) received:", data);
-  return { ok: true };
+  // Routes to /api/audit, which fans out to the CRM + email notification.
+  // Trailing slash matches next.config's trailingSlash: true.
+  try {
+    const res = await fetch("/api/audit/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    });
+    return { ok: res.ok };
+  } catch (err) {
+    console.error("[submitAudit] request failed", err);
+    return { ok: false };
+  }
 }

@@ -11,6 +11,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCta from "@/components/StickyCta";
 import PetalParallax from "@/components/PetalParallax";
+import OrgSchema from "@/components/OrgSchema";
 
 // Fonts self-hosted via next/font (no CDN <link>, no layout shift).
 // Each exposes a CSS variable consumed by :root in globals.css.
@@ -68,6 +69,7 @@ export default function RootLayout({
       className={`${dmSerif.variable} ${instrument.variable} ${splineMono.variable} ${greatVibes.variable}`}
     >
       <body>
+        <OrgSchema />
         <SvgDefs />
         <Header />
         {children}
