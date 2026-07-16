@@ -481,12 +481,19 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .related-desc{display:block;color:var(--soft);font-size:14.5px;margin-top:2px}
 
 /* ---- footer ---- */
-footer{background:var(--deep);color:#A6A3C8;padding:44px 0 56px;font-size:15px}
+footer{background:var(--deep);color:#A6A3C8;padding:52px 0 56px;font-size:15px}
+.foot-nav{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;padding-bottom:36px;margin-bottom:34px;border-bottom:1px solid #3A3766}
+.foot-head{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:14px}
+.foot-col ul{list-style:none;display:grid;gap:9px;margin:0}
+.foot-col a{color:#A6A3C8;text-decoration:none;font-size:14.5px;border:none}
+.foot-col a:hover{color:#fff}
 .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline}
 footer .brand{color:#fff}
 footer a{color:#fff;text-decoration:none;border-bottom:1px solid #3A3766}
 footer a:hover{border-color:var(--violet)}
+.foot-col a{border-bottom:none}
 .foot-note{font-family:var(--mono);font-size:12px;margin-top:10px}
+@media (max-width:640px){.foot-nav{grid-template-columns:1fr 1fr}}
 
 /* ---- sticky mobile CTA ---- */
 .sticky-cta{
