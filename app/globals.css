@@ -287,10 +287,30 @@ header{border-bottom:1px solid var(--line);background:rgba(248,248,253,.9);backd
 .il-fill-blue{fill:#C4D6FA}
 .il-white{fill:#fff}
 
+/* ---- math ---- */
+.math{padding:26px 0 90px;background:var(--lilac)}
+.math-card{
+  background:var(--card);border:1px solid var(--line);border-radius:22px;
+  padding:46px 44px;display:grid;grid-template-columns:1fr 1fr;gap:46px;align-items:center;
+  box-shadow:0 20px 50px -30px rgba(35,33,64,.35);
+}
+.calc label{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:16px 0 8px}
+.calc input[type=range]{width:100%;accent-color:var(--violet)}
+.calc .val{font-family:var(--display);font-size:26px}
+.liveband{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.band{margin-bottom:14px}
+.band .bl{display:flex;justify-content:space-between;font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--soft);margin-bottom:6px}
+.band .bl b{color:var(--ink)}
+.band .bar{height:14px;border-radius:999px;background:var(--lilac);overflow:hidden}
+.band .fill{height:100%;border-radius:999px;background:var(--blue);width:50%;transition:width .3s ease}
+.band.hot .fill{background:var(--violet)}
+.calc-note{font-size:14px;color:var(--soft);margin-top:6px}
+
 /* ---- responsive (extended as later sections land) ---- */
 @media (max-width:900px){
-  .hero-grid,.proof-grid,.lever-grid,.founder-grid{grid-template-columns:1fr}
+  .hero-grid,.proof-grid,.lever-grid,.founder-grid,.math-card{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
+  .math-card{padding:34px 26px}
   .hero{padding:44px 0 56px}
 }
 @media (max-width:520px){
