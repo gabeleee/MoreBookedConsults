@@ -44,7 +44,19 @@ export default function Results() {
           <h1>The numbers this practice is built on.</h1>
           <p className="lede">
             Before More Booked Consults existed, founder Gabe Meierotto spent six
-            years as <strong>Director of CRO at LaserAway</strong>, the largest
+            years as{" "}
+            <strong>
+              Director of CRO at{" "}
+              <a
+                className="r-ext"
+                href="https://www.laseraway.com/"
+                target="_blank"
+                rel="noopener"
+              >
+                LaserAway
+              </a>
+            </strong>
+            , the largest
             medspa chain in the U.S., owning the testing roadmap end to end.
           </p>
           <p className="lede">
@@ -160,8 +172,19 @@ export default function Results() {
               <div className="r-side-stat">
                 <div className="n">115+</div>
                 <div className="t">
-                  <b>LaserAway locations</b> across North America fed by the
-                  website&apos;s online booking funnel.
+                  <b>
+                    <a
+                      className="r-ext"
+                      href="https://www.laseraway.com/"
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      LaserAway
+                    </a>{" "}
+                    locations
+                  </b>{" "}
+                  across North America fed by the website&apos;s online booking
+                  funnel.
                 </div>
               </div>
               <div className="r-side-stat">
@@ -259,8 +282,16 @@ export default function Results() {
                 <div className="n">210x</div>
                 <div className="t">
                   <b>Return on the program</b>{" "}
-                  with minimal internal development resources, per
-                  LaserAway&apos;s CMO.
+                  with minimal internal development resources, per{" "}
+                  <a
+                    className="r-ext"
+                    href="https://www.laseraway.com/"
+                    target="_blank"
+                    rel="noopener"
+                  >
+                    LaserAway
+                  </a>
+                  &apos;s CMO.
                 </div>
               </div>
             </div>
@@ -320,7 +351,15 @@ export default function Results() {
             <div className="r-tested-card">
               <h3>The multi-step booking form</h3>
               <p>
-                LaserAway&apos;s main lead-gen engine, tested combination by
+                <a
+                  className="r-ext"
+                  href="https://www.laseraway.com/"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  LaserAway
+                </a>
+                &apos;s main lead-gen engine, tested combination by
                 combination.
               </p>
               <ul>
@@ -485,9 +524,17 @@ export default function Results() {
             </div>
           </div>
           <p>
-            These are results Gabe drove for LaserAway as their in-house
-            Director of CRO, <strong>not a promise</strong> of what your
-            practice will do.
+            These are results Gabe drove for{" "}
+            <a
+              className="r-ext"
+              href="https://www.laseraway.com/"
+              target="_blank"
+              rel="noopener"
+            >
+              LaserAway
+            </a>{" "}
+            as their in-house Director of CRO,{" "}
+            <strong>not a promise</strong> of what your practice will do.
           </p>
           <p>
             They are his personal track record from that role, not client

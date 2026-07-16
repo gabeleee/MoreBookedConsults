@@ -530,6 +530,10 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 @media (max-width:900px){.r-hero-stats{grid-template-columns:1fr 1fr}}
 @media (max-width:440px){.r-hero-stats{grid-template-columns:1fr}}
 
+/* external link inside results body copy */
+.r-ext{color:var(--violet-deep);text-decoration:underline;text-underline-offset:2px}
+.r-ext:hover,.r-ext:focus-visible{color:var(--violet)}
+
 /* who-did-this attribution (photo + note), reused across sections */
 .r-attrib{margin:26px 0 34px;max-width:560px}
 .r-attrib .who span b{color:var(--ink)}
