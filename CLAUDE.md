@@ -16,8 +16,8 @@ The approved design source of truth is `morebookedconsults-v18.html` (self-conta
 
 ## Design system (match mockup exactly)
 - Colors: paper #F8F8FD, lilac #EFEDFB, mist #E7EEFC, line #DDDBF0, ink #232140, soft #6C6990, violet #6C57E8, violet-deep #5843CF, blue #4C8DFF, deep #1B1936.
-- Fonts: DM Serif Display (headings), Instrument Sans (body), Spline Sans Mono (eyebrows/labels/chart axes), Great Vibes (script "Consults" in wordmark ONLY).
-- Wordmark: "More Booked" (DM Serif Display) + "Consults" (Great Vibes, 1.42em, margin-left -.16em, position: relative, top .06em, violet). Offsets are tuned to Great Vibes — do not change.
+- Fonts: DM Serif Display (headings), Instrument Sans (body, incl. 700 for the wordmark "Consults"), Spline Sans Mono (eyebrows/labels/chart axes).
+- Wordmark: one word, no spaces — "MoreBooked" (DM Serif Display) + "Consults" (Instrument Sans bold, .92em, violet). This supersedes the v18 mockup's Great Vibes script wordmark.
 - Logomark: three ascending petals (lilac #CBC4F5 → blue #4C8DFF → violet-blue gradient). Petal SVG path: `M0,-46 C22,-32 24,-4 0,12 C-24,-4 -22,-32 0,-46 Z`. Same shape reused for all background decoration.
 - Background motion (all disabled under prefers-reduced-motion), two independent layers:
   1. Small petals: CSS drift animation (vertical + slight rotation).

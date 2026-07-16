@@ -21,7 +21,6 @@
   --display:var(--font-dm-serif),Georgia,serif;
   --body:var(--font-instrument),system-ui,sans-serif;
   --mono:var(--font-spline-mono),ui-monospace,monospace;
-  --script:var(--font-great-vibes),cursive;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -112,12 +111,10 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
   .brand-tag{display:none}
 }
 .brand em{
-  font-family:var(--script);font-style:normal;
-  font-size:1.42em;line-height:1;color:var(--violet);
-  margin-left:-.16em;position:relative;top:.06em;
+  font-family:var(--body);font-style:normal;font-weight:700;
+  font-size:.92em;line-height:1;color:var(--violet);
 }
 .logo-mark{width:27px;height:27px;flex:0 0 27px}
-.brand em{font-style:italic;color:var(--violet)}
 .nav-cta{
   font-weight:600;font-size:14.5px;text-decoration:none;
   padding:10px 18px;border-radius:999px;
