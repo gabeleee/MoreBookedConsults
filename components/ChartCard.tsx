@@ -6,7 +6,7 @@ import type { ReactNode } from "react";
 
 type Props = {
   title: string;
-  range: string;
+  range?: string; // omitted by the Levers charts
   meta: string;
   delta?: string;
   caption?: string;
@@ -26,7 +26,7 @@ export default function ChartCard({
       <div className="chart-head">
         <div>
           <div className="chart-title">{title}</div>
-          <div className="chart-range">{range}</div>
+          {range && <div className="chart-range">{range}</div>}
           <div className="chart-meta">{meta}</div>
         </div>
         {delta && <span className="delta">{delta}</span>}

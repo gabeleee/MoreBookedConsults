@@ -216,8 +216,34 @@ header{border-bottom:1px solid var(--line);background:rgba(248,248,253,.9);backd
 .mini-stats .n{font-family:var(--display);font-size:30px;line-height:1}
 .mini-stats .l{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin-top:5px;max-width:15ch}
 
+/* ---- levers ---- */
+.levers{padding:84px 0;background:linear-gradient(180deg,var(--paper),var(--mist))}
+.levers-head{
+  display:grid;grid-template-columns:1fr auto;gap:40px;
+  align-items:stretch;margin-bottom:48px;
+}
+.levers-head .head-text{max-width:58ch;align-self:center}
+.head-photo{align-self:stretch;display:flex}
+.head-photo img{
+  height:100%;max-height:230px;width:auto;object-fit:cover;
+  border-radius:16px;border:1px solid var(--line);
+  box-shadow:0 14px 34px -20px rgba(35,33,64,.4);
+  display:block;
+}
+@media (max-width:900px){
+  .levers-head{grid-template-columns:1fr}
+  .head-photo img{max-height:240px}
+}
+.lever-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.lever{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 30px 26px}
+.lever h3{font-size:27px;margin:12px 0 8px}
+.lever p{color:var(--soft);font-size:16px;margin-bottom:18px}
+.lever .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.tag{font-size:13.5px;padding:6px 13px;border-radius:999px;background:var(--lilac);color:var(--ink);border:1px solid var(--line)}
+.lever .chart-card{box-shadow:none;background:var(--paper)}
+
 /* ---- responsive (extended as later sections land) ---- */
 @media (max-width:900px){
-  .hero-grid,.proof-grid{grid-template-columns:1fr}
+  .hero-grid,.proof-grid,.lever-grid{grid-template-columns:1fr}
   .hero{padding:44px 0 56px}
 }
