@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Pricing",
   description:
     "CRO and local SEO pricing for aesthetic practices, CRO from $2,500/mo, local SEO from $2,000/mo, or both levers for $3,750/mo. Senior-level, one operator.",
+  alternates: { canonical: "/pricing/" },
 };
 
 export default function Pricing() {
