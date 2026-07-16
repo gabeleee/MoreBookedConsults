@@ -12,6 +12,8 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
       { href: "/medspa-marketing-agency/", label: "Marketing Agency" },
       { href: "/medspa-cro/", label: "Conversion (CRO)" },
       { href: "/medspa-seo/", label: "Local SEO" },
+      { href: "/medspa-advertising/", label: "Advertising" },
+      { href: "/medspa-marketing-cost/", label: "What It Costs" },
     ],
   },
   {
@@ -21,6 +23,21 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
       { href: "/plastic-surgery-marketing-agency/", label: "Marketing Agency" },
       { href: "/plastic-surgery-cro/", label: "Conversion (CRO)" },
       { href: "/plastic-surgery-seo/", label: "Local SEO" },
+      { href: "/plastic-surgeon-advertising/", label: "Advertising" },
+      { href: "/plastic-surgery-marketing-cost/", label: "What It Costs" },
+    ],
+  },
+  {
+    head: "More",
+    links: [
+      { href: "/injector-marketing/", label: "For Injectors" },
+      { href: "/laser-clinic-marketing/", label: "For Laser Clinics" },
+      { href: "/medspa-marketing-consultant/", label: "Marketing Consultant" },
+      { href: "/best-medspa-marketing-agencies/", label: "Best Medspa Agencies" },
+      {
+        href: "/best-plastic-surgery-marketing-agencies/",
+        label: "Best Plastic Surgery Agencies",
+      },
     ],
   },
   {
