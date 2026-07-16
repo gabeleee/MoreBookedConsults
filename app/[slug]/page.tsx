@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { mdxComponents } from "@/components/mdx/MdxComponents";
-import { getMoneyPage, getAllMoneyPages, showDrafts } from "@/lib/content";
+import { getMoneyPage, getAllMoneyPages } from "@/lib/content";
 
 // Root-level money pages (M1-M8, P1-P7, N1, N2), MDX-backed. Static routes
 // (/results/, /pricing/, /free-audit/, /blog/, metadata files) take precedence
@@ -31,9 +31,7 @@ export async function generateMetadata({ params }: Params): Promise<Metadata> {
 export default async function MoneyPage({ params }: Params) {
   const { slug } = await params;
   const page = getMoneyPage(slug);
-  if (!page || (page.frontmatter.status !== "published" && !showDrafts)) {
-    notFound();
-  }
+  if (!page) notFound();
   const { frontmatter, body } = page;
 
   return (

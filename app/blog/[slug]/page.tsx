@@ -4,18 +4,15 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { mdxComponents } from "@/components/mdx/MdxComponents";
-import {
-  getBlogPost,
-  getPublishedBlogPosts,
-  showDrafts,
-} from "@/lib/content";
+import { getBlogPost, getAllBlogPosts } from "@/lib/content";
 import { SITE } from "@/lib/site";
 
 type Params = { params: Promise<{ slug: string }> };
 
-// Only published nodes are prerendered; draft slugs 404 in prod, preview in dev.
+// Every node file gets a route. Drafts render (200) but carry noindex and stay
+// out of the sitemap, so internal links resolve throughout the phased build.
 export function generateStaticParams() {
-  return getPublishedBlogPosts().map((p) => ({ slug: p.slug }));
+  return getAllBlogPosts().map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }: Params): Promise<Metadata> {
@@ -42,9 +39,7 @@ function formatDate(iso?: string) {
 export default async function BlogPost({ params }: Params) {
   const { slug } = await params;
   const post = getBlogPost(slug);
-  if (!post || (post.frontmatter.status !== "published" && !showDrafts)) {
-    notFound();
-  }
+  if (!post) notFound();
   const { frontmatter, body } = post;
   const url = `/blog/${slug}/`;
   const date = formatDate(frontmatter.date);
