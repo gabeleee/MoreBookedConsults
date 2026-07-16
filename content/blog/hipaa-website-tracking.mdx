@@ -1,14 +1,92 @@
 ---
-title: "HIPAA & Website Tracking (Pixels, Analytics)"
-description: "HIPAA & Website Tracking (Pixels, Analytics), a guide for aesthetic practice owners."
+title: "HIPAA & Website Tracking: Pixels, Analytics, and the Hidden Risk"
+description: "Why tracking pixels and analytics can create HIPAA exposure for a med spa, what the risk actually is, and how to measure marketing without leaking protected health information to ad platforms."
 cluster: "H"
-hub: "both"
+hub: "medspa"
 primaryQuery: "hipaa website tracking"
-queries: ["hipaa website tracking"]
-date: "2026-07-15"
-status: "draft"
+queries: ["hipaa website tracking", "tracking pixels hipaa med spa", "med spa analytics hipaa"]
+date: "2026-07-16"
+status: "published"
+faq:
+  - q: "Can tracking pixels violate HIPAA on a med spa website?"
+    a: "They can. When a pixel or analytics tool sends data that connects a person to a specific treatment or to being a patient, and that data goes to a third-party ad platform, it can constitute an impermissible disclosure of protected health information. This has been a real enforcement focus in healthcare."
+  - q: "Does this mean I can't use analytics or ads at all?"
+    a: "No. It means you have to configure tracking so it doesn't send protected information to third parties. You can still measure marketing, you just avoid passing anything that ties an individual to a treatment or patient status, and you use compliant setups where needed."
+  - q: "What's the safest way to track a med spa website?"
+    a: "Limit what tracking tools collect on sensitive pages, avoid sending treatment-specific or identifying data to ad platforms, use server-side or compliant configurations, and get a business associate agreement where a vendor handles protected information. When unsure, collect less."
+related:
+  - href: "/blog/hipaa-medspa-marketing/"
+    title: "HIPAA & Marketing"
+    desc: "The broader HIPAA picture."
+  - href: "/blog/medspa-retargeting/"
+    title: "Retargeting"
+    desc: "The channel most affected."
+  - href: "/blog/medspa-attribution-call-tracking/"
+    title: "Attribution & Tracking"
+    desc: "Measuring compliantly."
+  - href: "/blog/medspa-marketing-laws/"
+    title: "Marketing Laws Overview"
+    desc: "Where this fits the full picture."
 ---
 
-> Draft, content in progress.
+<AtAGlance>
 
-<CTA />
+- **Pixels and analytics can leak protected information** to ad platforms.
+- **The risk:** connecting a person to a treatment or patient status.
+- **You can still measure marketing,** just not by passing sensitive data.
+- **When unsure, collect less** and use compliant configurations.
+
+</AtAGlance>
+
+The tracking pixels most businesses install without a thought carry a specific, real risk for a med spa, and it's caught many healthcare organizations off guard.
+
+Understanding it doesn't mean abandoning analytics. It means configuring them so they don't quietly disclose who your patients are.
+
+## <span className="he">⚠️</span> Why tracking is a HIPAA issue
+
+<Callout type="warning">
+
+When a tracking tool sends data that ties a person to a specific treatment page, a booking, or patient status, and that data flows to a third-party ad platform, it can be an impermissible disclosure of protected health information.
+
+Regulators have made this a real focus in healthcare, and med spas are squarely in scope.
+
+</Callout>
+
+The problem isn't tracking in the abstract. It's the combination of identifiable data plus health context plus a third-party recipient.
+
+## <span className="he">🔍</span> Where the exposure hides
+
+The risky spots are the sensitive pages and actions.
+
+- A pixel firing on a specific treatment page, tying a visitor to that interest
+- Booking or contact confirmations that signal patient status
+- Analytics or ad tools receiving identifiers alongside health context
+- [Retargeting](/blog/medspa-retargeting/) audiences built from treatment-specific visits
+
+Each of these can turn ordinary measurement into a disclosure you didn't intend.
+
+## <span className="he">🛠️</span> How to measure without leaking
+
+<Callout type="key">
+
+You can still track your marketing. You just avoid sending anything that connects an individual to a treatment or to being a patient.
+
+</Callout>
+
+Practically:
+
+- Limit what tracking collects on sensitive pages
+- Avoid passing treatment-specific or identifying data to ad platforms
+- Use server-side or compliance-oriented configurations
+- Get a business associate agreement where a vendor handles protected information
+- When in doubt, collect less
+
+This keeps your [attribution](/blog/medspa-attribution-call-tracking/) useful while removing the sensitive data that creates exposure.
+
+## <span className="he">✅</span> The mindset
+
+Treat every tracking tool as something that might be broadcasting patient information, and configure it to prove it isn't.
+
+That posture, plus the broader [HIPAA discipline](/blog/hipaa-medspa-marketing/) in this cluster, keeps your measurement compliant without going blind, and it's worth confirming your specific setup with counsel or a compliance-savvy vendor.
+
+<CTA heading="Want your tracking checked for both privacy and accuracy?" />
