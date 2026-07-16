@@ -2,6 +2,7 @@
 // per CLAUDE.md. No JS — sticky is pure CSS. Server component.
 import Link from "next/link";
 import Logo from "./Logo";
+import MobileNav from "./MobileNav";
 
 const NAV = [
   { href: "/medspa-marketing/", label: "For Med Spas" },
@@ -25,6 +26,7 @@ export default function Header() {
         <Link className="nav-cta" href="/free-audit/">
           Free audit
         </Link>
+        <MobileNav items={NAV} />
       </div>
     </header>
   );
