@@ -6,6 +6,7 @@ import {
   Great_Vibes,
 } from "next/font/google";
 import "./globals.css";
+import { SITE } from "@/lib/site";
 import SvgDefs from "@/components/SvgDefs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -49,15 +50,30 @@ const greatVibes = Great_Vibes({
   display: "swap",
 });
 
+const TITLE_DEFAULT =
+  "More Booked Consults — CRO & Local SEO for Medspas & Plastic Surgeons";
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://morebookedconsults.com"),
+  metadataBase: new URL(SITE.url),
   title: {
-    default:
-      "More Booked Consults — CRO & Local SEO for Medspas & Plastic Surgeons",
+    default: TITLE_DEFAULT,
     template: "%s | More Booked Consults",
   },
-  description:
-    "Conversion optimization and local SEO, exclusively for medspas, plastic surgeons, and other aesthetic practices.",
+  description: SITE.description,
+  // og:image / twitter:image are supplied automatically by app/opengraph-image.tsx
+  openGraph: {
+    type: "website",
+    siteName: "More Booked Consults",
+    title: TITLE_DEFAULT,
+    description: SITE.description,
+    url: SITE.url,
+    locale: "en_US",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: TITLE_DEFAULT,
+    description: SITE.description,
+  },
 };
 
 export default function RootLayout({

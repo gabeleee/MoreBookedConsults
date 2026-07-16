@@ -17,7 +17,7 @@ export default function Hero() {
       />
       <div className="wrap hero-grid">
         <div>
-          <p className="eyebrow">CRO + Local SEO · Aesthetic practices</p>
+          <p className="eyebrow">CRO + Local SEO · Aesthetic practice marketing</p>
           <h1>
             More booked consults from the traffic you <em>already have.</em>
           </h1>
