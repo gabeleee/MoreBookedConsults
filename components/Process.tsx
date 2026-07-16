@@ -3,9 +3,18 @@
 // (.ph) awaiting real images — the alt text doubles as the swap spec.
 import PetalBackground from "./PetalBackground";
 
-const STEPS = [
+// `img` is the public path once a real photo exists; null shows the .ph
+// placeholder (whose alt text doubles as the shoot spec).
+const STEPS: {
+  img: string | null;
+  photo: string;
+  alt: string;
+  num: string;
+  title: string;
+  desc: string;
+}[] = [
   {
-    file: "step1.jpg",
+    img: "/step1.jpg",
     photo: "Photo 1 — Free audit",
     alt: "Laptop showing a medspa website with notes beside it",
     num: "Step 1",
@@ -13,7 +22,7 @@ const STEPS = [
     desc: "Where your site and rankings are leaking consults — ranked by revenue impact.",
   },
   {
-    file: "step2.jpg",
+    img: null,
     photo: "Photo 2 — Prioritized plan",
     alt: "Numbered checklist on a notepad, pen resting on it",
     num: "Step 2",
@@ -21,7 +30,7 @@ const STEPS = [
     desc: "What we test first, why, and what a win is worth. Biggest levers first.",
   },
   {
-    file: "step3.jpg",
+    img: null,
     photo: "Photo 3 — One test / month",
     alt: "Two phone screens side by side showing page variants",
     num: "Step 3",
@@ -29,7 +38,7 @@ const STEPS = [
     desc: "One clean change, run to significance — so you know what actually worked.",
   },
   {
-    file: "step4.jpg",
+    img: null,
     photo: "Photo 4 — Results report",
     alt: "Rising chart on a screen or printed report on a desk",
     num: "Step 4",
@@ -64,11 +73,15 @@ export default function Process() {
           {STEPS.map((s) => (
             <div className="step" key={s.num}>
               <div className="illo">
-                {/* swap for <img src={`/${s.file}`} alt={s.alt}> */}
-                <div className="ph">
-                  📷 <b>{s.photo}</b>
-                  <span>{s.alt}</span>
-                </div>
+                {s.img ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={s.img} alt={s.alt} width={800} height={533} />
+                ) : (
+                  <div className="ph">
+                    📷 <b>{s.photo}</b>
+                    <span>{s.alt}</span>
+                  </div>
+                )}
               </div>
               <span className="num">{s.num}</span>
               <h3>{s.title}</h3>
