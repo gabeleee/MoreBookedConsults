@@ -5,6 +5,7 @@ export const metadata: Metadata = {
   title: "Free Audit",
   description:
     "Get a free, prioritized audit of where your aesthetic practice's website and local rankings are leaking consults, no call required.",
+  alternates: { canonical: "/free-audit/" },
 };
 
 // Dedicated Free Audit page, the target of the persistent nav + sticky CTAs.

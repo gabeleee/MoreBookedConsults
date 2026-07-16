@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: "Blog",
   description:
     "Guides on aesthetic practice marketing, CRO and local SEO playbooks for medspas and plastic surgeons.",
+  alternates: { canonical: "/blog/" },
 };
 
 // Flat blog index. Posts live at /blog/{slug}/ (no nested folders); the cluster

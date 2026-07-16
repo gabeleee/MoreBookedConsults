@@ -7,6 +7,7 @@ export const metadata: Metadata = {
   title: "Results",
   description:
     "The track record behind More Booked Consults, the CRO results Gabe Meierotto drove as Director of CRO at LaserAway, and the method behind them.",
+  alternates: { canonical: "/results/" },
 };
 
 // Results / track record. LaserAway numbers are attributed to Gabe personally
