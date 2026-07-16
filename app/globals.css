@@ -434,8 +434,21 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
 .article-body th{background:var(--lilac);font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
 .article-body tr:nth-child(even) td{background:var(--paper)}
-.cta-block{background:var(--lilac);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:34px 0;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
-.cta-block p{margin:0;font-family:var(--display);font-size:21px;color:var(--ink)}
+.cta-block{
+  background:linear-gradient(135deg,var(--lilac),var(--mist));
+  border:1px solid var(--line);border-radius:18px;padding:24px 30px;margin:36px 0;
+  display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;
+}
+.cta-block p{margin:0;font-family:var(--display);font-size:22px;line-height:1.25;color:var(--ink);flex:1 1 240px}
+.cta-block .btn{flex:0 0 auto;white-space:nowrap}
+.cta-block .btn::after{content:"→";margin-left:.5em;font-weight:400;display:inline-block}
+.cta-block .btn:hover::after{transform:translateX(3px)}
+.cta-block .btn::after{transition:transform .18s ease}
+@media (max-width:560px){
+  .cta-block{flex-direction:column;align-items:stretch;text-align:left}
+  .cta-block p{flex:none}
+  .cta-block .btn{text-align:center}
+}
 
 /* at a glance */
 .at-a-glance{background:var(--lilac);border:1px solid var(--line);border-radius:16px;padding:20px 24px 8px;margin:24px 0 30px}

@@ -12,6 +12,7 @@ The approved design source of truth is `morebookedconsults-v18.html` (self-conta
 - Tone: direct, numbers-driven, zero agency fluff, written for practice owners (never patients).
 - Canonical brand string everywhere (schema, footer, bylines): "More Booked Consults" (never MBC or MoreBookedConsults in prose).
 - No em dashes (—) anywhere in copy. Use commas, colons, parentheses, or separate sentences instead. En dashes in number ranges (2017–2022, 40–60%) are fine; the arrow → in "3% → 11%" is fine.
+- One sentence per paragraph in body prose. Put a blank line (paragraph break) after each sentence so text never becomes a wall — this reads far better on mobile. Bullet lists, headings, short callouts, at-a-glance bullets, and FAQ answers are exempt (already broken up). Article depth: hubs/money pages/cluster heads ~1,300–1,500 substantive words is the practical bar (not thin); the topical map's higher targets are aspirational.
 
 ## Design system (match mockup exactly)
 - Colors: paper #F8F8FD, lilac #EFEDFB, mist #E7EEFC, line #DDDBF0, ink #232140, soft #6C6990, violet #6C57E8, violet-deep #5843CF, blue #4C8DFF, deep #1B1936.
