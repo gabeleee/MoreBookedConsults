@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import ChartCard from "@/components/ChartCard";
 import ConversionChart from "@/components/ConversionChart";
+import PetalBackground from "@/components/PetalBackground";
+import AuditForm from "@/components/AuditForm";
+import Audit from "@/components/Audit";
 
 export const metadata: Metadata = {
   title: "Results",
@@ -15,27 +18,46 @@ export const metadata: Metadata = {
 export default function Results() {
   return (
     <main>
-      <section className="page-hero">
-        <div className="wrap">
-          <p className="eyebrow">Results</p>
-          <h1>The numbers this practice is built on.</h1>
-          <p className="lede">
-            Before More Booked Consults existed, founder Gabe Meierotto spent six
-            years as{" "}
-            <strong>
-              Director of CRO at{" "}
-              <a
-                href="https://www.laseraway.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                LaserAway
-              </a>
-            </strong>
-            , the largest medspa chain in the U.S., owning the testing roadmap
-            end to end.
-            These are the results he drove in that role.
-          </p>
+      <section className="hero" id="top">
+        <PetalBackground
+          petals={[
+            { top: "8%", left: "4%", r: "-24deg", size: 64, fill: "#CBC4F5" },
+            { top: "66%", left: "2%", r: "38deg", size: 44, fill: "#C4D6FA" },
+          ]}
+          trios={[
+            { top: "-90px", right: "-150px", speed: 0.22, dur: "15s", del: "-3s", size: 640 },
+          ]}
+        />
+        <div className="wrap hero-grid">
+          <div>
+            <p className="eyebrow">Results</p>
+            <h1>The numbers this practice is built on.</h1>
+            <p className="lede">
+              Before More Booked Consults existed, founder Gabe Meierotto spent
+              six years as{" "}
+              <strong>
+                Director of CRO at{" "}
+                <a
+                  href="https://www.laseraway.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LaserAway
+                </a>
+              </strong>
+              , the largest medspa chain in the U.S., owning the testing roadmap
+              end to end. These are the results he drove in that role.
+            </p>
+            <div className="hero-chips">
+              <span className="chip">
+                <b>3% → 11%</b>, sitewide conversion at LaserAway
+              </span>
+              <span className="chip">
+                <b>210x ROI</b> on the testing program
+              </span>
+            </div>
+          </div>
+          <AuditForm idPrefix="results-hero" />
         </div>
       </section>
 
@@ -114,11 +136,6 @@ export default function Results() {
             practices, where a single winning test can show up on next
             month&apos;s schedule.
           </p>
-          <p style={{ marginTop: 20 }}>
-            <Link className="btn" href="/free-audit/">
-              Get a free audit
-            </Link>
-          </p>
           <p className="cross-links">
             Explore <Link href="/medspa-marketing/">medspa marketing</Link>,{" "}
             <Link href="/plastic-surgeon-marketing/">
@@ -128,6 +145,8 @@ export default function Results() {
           </p>
         </div>
       </section>
+
+      <Audit />
     </main>
   );
 }

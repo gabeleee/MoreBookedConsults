@@ -34,6 +34,8 @@ body{
 }
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:1}
 a{color:inherit}
+a[href*="laseraway.com"]{color:#E0518A;font-weight:700;text-decoration:none}
+a[href*="laseraway.com"]:hover,a[href*="laseraway.com"]:focus-visible{text-decoration:underline;text-underline-offset:2px}
 ::selection{background:var(--violet);color:#fff}
 h1,h2,h3{font-family:var(--display);font-weight:400}
 h2{font-size:clamp(29px,4.2vw,42px);line-height:1.15;margin:16px 0 12px}
