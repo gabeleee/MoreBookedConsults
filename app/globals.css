@@ -317,12 +317,32 @@ header{border-bottom:1px solid var(--line);background:rgba(248,248,253,.9);backd
   box-shadow:0 14px 34px -20px rgba(35,33,64,.4);
 }
 
+/* ---- footer ---- */
+footer{background:var(--deep);color:#A6A3C8;padding:44px 0 56px;font-size:15px}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline}
+footer .brand{color:#fff}
+footer a{color:#fff;text-decoration:none;border-bottom:1px solid #3A3766}
+footer a:hover{border-color:var(--violet)}
+.foot-note{font-family:var(--mono);font-size:12px;margin-top:10px}
+
+/* ---- sticky mobile CTA ---- */
+.sticky-cta{
+  position:fixed;left:0;right:0;bottom:0;z-index:50;display:none;
+  padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+  background:rgba(248,248,253,.94);backdrop-filter:blur(8px);
+  border-top:1px solid var(--line);
+}
+.sticky-cta .btn{display:block;width:100%}
+.sticky-cta.hidden{display:none!important}
+
 /* ---- responsive (extended as later sections land) ---- */
 @media (max-width:900px){
   .hero-grid,.proof-grid,.lever-grid,.founder-grid,.math-card,.audit-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
   .math-card{padding:34px 26px}
   .hero{padding:44px 0 56px}
+  .sticky-cta{display:block}
+  body{padding-bottom:80px}
 }
 @media (max-width:520px){
   .steps{grid-template-columns:1fr}

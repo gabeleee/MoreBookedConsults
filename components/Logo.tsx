@@ -1,18 +1,20 @@
 // Brand lockup: petal logomark + wordmark, ported from
-// morebookedconsults-v18.html (line 374). Reused in the header and, later,
-// the footer — so `href` is a prop. The three logomark petals reuse the
-// shared #petalShape path and #logoGrad gradient from <SvgDefs />.
+// morebookedconsults-v18.html. Reused in the header (as a link) and the
+// footer (as a plain span). The three logomark petals reuse the shared
+// #petalShape path and #logoGrad gradient from <SvgDefs />, so two instances
+// on one page share ids without collision.
 //
 // The <em>Consults</em> is styled as Great Vibes via `.brand em` in
 // globals.css — offsets are tuned to that font; do not change.
 
 type LogoProps = {
+  /** When set, renders a link (header). Omit for a plain span (footer). */
   href?: string;
 };
 
-export default function Logo({ href = "#top" }: LogoProps) {
-  return (
-    <a className="brand" href={href}>
+export default function Logo({ href }: LogoProps) {
+  const inner = (
+    <>
       <svg className="logo-mark" viewBox="10 2 86 94" aria-hidden="true">
         <use
           href="#petalShape"
@@ -34,6 +36,14 @@ export default function Logo({ href = "#top" }: LogoProps) {
       <span>
         More{"\u00A0"}Booked<em>Consults</em>
       </span>
+    </>
+  );
+
+  return href ? (
+    <a className="brand" href={href}>
+      {inner}
     </a>
+  ) : (
+    <span className="brand">{inner}</span>
   );
 }

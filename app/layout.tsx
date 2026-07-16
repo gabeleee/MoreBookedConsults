@@ -8,6 +8,8 @@ import {
 import "./globals.css";
 import SvgDefs from "@/components/SvgDefs";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import StickyCta from "@/components/StickyCta";
 import PetalParallax from "@/components/PetalParallax";
 
 // Fonts self-hosted via next/font (no CDN <link>, no layout shift).
@@ -69,6 +71,8 @@ export default function RootLayout({
         <SvgDefs />
         <Header />
         {children}
+        <Footer />
+        <StickyCta />
         <PetalParallax />
       </body>
     </html>

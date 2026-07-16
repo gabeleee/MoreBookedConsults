@@ -85,7 +85,7 @@ export default function AuditForm({ idPrefix }: Props) {
   const id = (field: string) => `${idPrefix}-${field}`;
 
   return (
-    <div className="form-card">
+    <div className="form-card" data-form>
       {!done && (
         <div className="progress">
           <span className="label">
