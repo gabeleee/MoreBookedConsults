@@ -242,8 +242,22 @@ header{border-bottom:1px solid var(--line);background:rgba(248,248,253,.9);backd
 .tag{font-size:13.5px;padding:6px 13px;border-radius:999px;background:var(--lilac);color:var(--ink);border:1px solid var(--line)}
 .lever .chart-card{box-shadow:none;background:var(--paper)}
 
+/* ---- founder ---- */
+.founder{padding:78px 0;background:var(--paper)}
+.founder-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:52px;align-items:center}
+.founder-id{display:flex;align-items:center;gap:18px;margin:22px 0 18px}
+.founder-id .avatar{width:84px;height:84px;flex:0 0 84px;font-size:30px;border:3px solid #fff;box-shadow:0 8px 24px -12px rgba(35,33,64,.4)}
+.founder-id .who b{font-family:var(--display);font-weight:400;font-size:23px;display:block;line-height:1.2}
+.founder-id .who span{color:var(--soft);font-size:15px}
+.founder p{color:var(--soft);max-width:50ch;margin-bottom:12px}
+.founder p strong{color:var(--ink)}
+.cred{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:10px 26px}
+.cred div{padding:15px 0;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:baseline;font-size:15px}
+.cred div:last-child{border-bottom:none}
+.cred .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--violet);flex:0 0 76px}
+
 /* ---- responsive (extended as later sections land) ---- */
 @media (max-width:900px){
-  .hero-grid,.proof-grid,.lever-grid{grid-template-columns:1fr}
+  .hero-grid,.proof-grid,.lever-grid,.founder-grid{grid-template-columns:1fr}
   .hero{padding:44px 0 56px}
 }
