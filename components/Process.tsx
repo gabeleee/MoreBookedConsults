@@ -22,7 +22,7 @@ const STEPS: {
     desc: "Where your site and rankings are leaking consults — ranked by revenue impact.",
   },
   {
-    img: null,
+    img: "/step2.jpg",
     photo: "Photo 2 — Prioritized plan",
     alt: "Numbered checklist on a notepad, pen resting on it",
     num: "Step 2",
@@ -30,7 +30,7 @@ const STEPS: {
     desc: "What we test first, why, and what a win is worth. Biggest levers first.",
   },
   {
-    img: null,
+    img: "/step3.jpg",
     photo: "Photo 3 — One test / month",
     alt: "Two phone screens side by side showing page variants",
     num: "Step 3",
@@ -38,7 +38,7 @@ const STEPS: {
     desc: "One clean change, run to significance — so you know what actually worked.",
   },
   {
-    img: null,
+    img: "/step4.jpg",
     photo: "Photo 4 — Results report",
     alt: "Rising chart on a screen or printed report on a desk",
     num: "Step 4",
