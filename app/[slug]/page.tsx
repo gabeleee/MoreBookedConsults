@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { mdxComponents, FAQ, Related } from "@/components/mdx/MdxComponents";
+import AuditForm from "@/components/AuditForm";
 import { getMoneyPage, getAllMoneyPages } from "@/lib/content";
 
 // Root-level money pages (M1-M8, P1-P7, N1, N2), MDX-backed. Static routes
@@ -36,14 +36,16 @@ export default async function MoneyPage({ params }: Params) {
 
   return (
     <main>
-      <section className="page-hero">
-        <div className="wrap">
-          {frontmatter.eyebrow && <p className="eyebrow">{frontmatter.eyebrow}</p>}
-          <h1>{frontmatter.h1 ?? frontmatter.title}</h1>
-          {frontmatter.lede && <p className="lede">{frontmatter.lede}</p>}
-          <Link className="btn" href="/free-audit/">
-            Get a free audit
-          </Link>
+      <section className="article-hero">
+        <div className="wrap hero-grid">
+          <div>
+            {frontmatter.eyebrow && (
+              <p className="eyebrow">{frontmatter.eyebrow}</p>
+            )}
+            <h1>{frontmatter.h1 ?? frontmatter.title}</h1>
+            {frontmatter.lede && <p className="lede">{frontmatter.lede}</p>}
+          </div>
+          <AuditForm idPrefix={slug} />
         </div>
       </section>
       <section className="page-section">
@@ -55,7 +57,9 @@ export default async function MoneyPage({ params }: Params) {
           />
           {frontmatter.faq && frontmatter.faq.length > 0 && (
             <>
-              <h2>❓ Frequently asked questions</h2>
+              <h2>
+                <span className="he">❓</span> Frequently asked questions
+              </h2>
               <FAQ items={frontmatter.faq} />
             </>
           )}

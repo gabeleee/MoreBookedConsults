@@ -1,6 +1,5 @@
 // Founder section, ported from the v18 mockup (lines 607-633). The 84px
-// avatar reuses /gabe.jpg. LaserAway credentials are Gabe's personally —
-// keep them attributed to him, never to the company.
+// avatar reuses /gabe.jpg. LaserAway credentials are Gabe's personally, // keep them attributed to him, never to the company.
 import PetalBackground from "./PetalBackground";
 
 export default function Founder() {
@@ -36,7 +35,7 @@ export default function Founder() {
           <p>
             Six years testing booking forms, treatment pages, and offers across
             100+ LaserAway locations. Now the same playbook goes to work for
-            independent aesthetic practices — where one winning test shows up on
+            independent aesthetic practices, where one winning test shows up on
             next month&apos;s schedule. When you work with More Booked Consults,
             this is who does the work.
           </p>
@@ -45,7 +44,7 @@ export default function Founder() {
           <div role="listitem">
             <span className="k">CRO</span>
             <span>
-              Director of CRO, LaserAway — grew sitewide conversion 3% → 11%
+              Director of CRO, LaserAway, grew sitewide conversion 3% → 11%
             </span>
           </div>
           <div role="listitem">

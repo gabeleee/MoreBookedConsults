@@ -4,7 +4,7 @@ import { ImageResponse } from "next/og";
 // twitter:image site-wide. Uses default fonts + brand colors (Satori has
 // limited custom-font/SVG support, so we keep it type-forward).
 export const alt =
-  "More Booked Consults — CRO & Local SEO for aesthetic practices";
+  "More Booked Consults, CRO & Local SEO for aesthetic practices";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 

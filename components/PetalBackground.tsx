@@ -1,7 +1,7 @@
 // Per-section petal decoration, ported from the mockup's `.petals` blocks.
 // Two layers: small drifting petals (pure-CSS `drift` animation) and
 // oversized parallax trios (CSS `sway` on the SVG + scroll parallax applied
-// by <PetalParallax /> to the wrapper div). Pure markup — no JS here.
+// by <PetalParallax /> to the wrapper div). Pure markup, no JS here.
 import type { CSSProperties } from "react";
 
 type Placement = Pick<CSSProperties, "top" | "left" | "right" | "bottom">;

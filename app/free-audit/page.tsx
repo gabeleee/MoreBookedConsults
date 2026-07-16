@@ -4,10 +4,10 @@ import AuditForm from "@/components/AuditForm";
 export const metadata: Metadata = {
   title: "Free Audit",
   description:
-    "Get a free, prioritized audit of where your aesthetic practice's website and local rankings are leaking consults — no call required.",
+    "Get a free, prioritized audit of where your aesthetic practice's website and local rankings are leaking consults, no call required.",
 };
 
-// Dedicated Free Audit page — the target of the persistent nav + sticky CTAs.
+// Dedicated Free Audit page, the target of the persistent nav + sticky CTAs.
 // Reuses the shared AuditForm (idPrefix "page").
 export default function FreeAuditPage() {
   return (
@@ -19,7 +19,7 @@ export default function FreeAuditPage() {
             <h1>Find out where your site is leaking consults.</h1>
             <p>
               Answer three quick questions. Within 3 business days you&apos;ll
-              get a prioritized findings doc — the specific spots losing you
+              get a prioritized findings doc, the specific spots losing you
               bookings and what to test first.
             </p>
             <p className="hero-note">

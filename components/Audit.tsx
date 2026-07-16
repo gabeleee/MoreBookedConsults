@@ -30,7 +30,7 @@ export default function Audit() {
           <h2>Find out where your site is leaking consults.</h2>
           <p>
             Answer three quick questions. Within 3 business days you&apos;ll get
-            a prioritized findings doc — the specific spots losing you bookings
+            a prioritized findings doc, the specific spots losing you bookings
             and what to test first.
           </p>
           <p className="hero-note">

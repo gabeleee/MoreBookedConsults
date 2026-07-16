@@ -5,7 +5,7 @@
 // on one page share ids without collision.
 //
 // The <em>Consults</em> is styled as Great Vibes via `.brand em` in
-// globals.css — offsets are tuned to that font; do not change.
+// globals.css, offsets are tuned to that font; do not change.
 
 type LogoProps = {
   /** When set, renders a link (header). Omit for a plain span (footer). */

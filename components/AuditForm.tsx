@@ -4,13 +4,12 @@ import { submitAudit } from "@/lib/submitAudit";
 
 // Reusable multi-step audit form (rendered in the hero and the bottom audit
 // section). Ported from the mockup's initAuditForm(), with step 1 "What kind
-// of practice?" added per CLAUDE.md (routing + segmentation). Front-end only —
-// submission routes through the single submitAudit() stub.
+// of practice?" added per CLAUDE.md (routing + segmentation). Front-end only, // submission routes through the single submitAudit() stub.
 
 const fmt = (n: number) => "$" + n.toLocaleString("en-US");
 const TOTAL_STEPS = 4;
 
-// Step 2 — aesthetic practice type (values feed segmentation).
+// Step 2, aesthetic practice type (values feed segmentation).
 const PRACTICES = [
   { value: "Med spa", emoji: "💆", label: "Med spa" },
   { value: "Plastic surgery", emoji: "🩺", label: "Plastic surgery" },
@@ -18,7 +17,7 @@ const PRACTICES = [
   { value: "Laser clinic", emoji: "✨", label: "Laser clinic" },
 ];
 
-// Step 1 — what they want (values match the mockup's data-need strings).
+// Step 1, what they want (values match the mockup's data-need strings).
 const NEEDS = [
   {
     value: "Convert existing traffic (CRO)",
@@ -31,7 +30,7 @@ const NEEDS = [
     label: "More traffic from Google",
   },
   { value: "Both CRO + SEO", emoji: "🧰", label: "A little bit of everything" },
-  { value: "Not sure yet", emoji: "🤔", label: "Not sure — tell me what you see" },
+  { value: "Not sure yet", emoji: "🤔", label: "Not sure, tell me what you see" },
 ];
 
 type Props = {
@@ -99,7 +98,7 @@ export default function AuditForm({ idPrefix }: Props) {
         </div>
       )}
 
-      {/* Step 1 — what they're looking for */}
+      {/* Step 1, what they're looking for */}
       <div className={stepClass(1)} data-step="1">
         <h3>What are you looking for?</h3>
         <p className="hint">Pick the one that sounds most like you.</p>
@@ -120,7 +119,7 @@ export default function AuditForm({ idPrefix }: Props) {
         </div>
       </div>
 
-      {/* Step 2 — practice type */}
+      {/* Step 2, practice type */}
       <div className={stepClass(2)} data-step="2">
         <h3>What kind of practice?</h3>
         <p className="hint">This tailors the audit to your patients and market.</p>
@@ -144,10 +143,10 @@ export default function AuditForm({ idPrefix }: Props) {
         </button>
       </div>
 
-      {/* Step 3 — consult value */}
+      {/* Step 3, consult value */}
       <div className={stepClass(3)} data-step="3">
         <h3>What&apos;s a booked consult worth to you?</h3>
-        <p className="hint">Ballpark is fine — it helps rank the findings by revenue.</p>
+        <p className="hint">Ballpark is fine, it helps rank the findings by revenue.</p>
         <div className="calc2">
           <div className="slider-val">{fmt(worthDisplay)}</div>
           <input
@@ -168,7 +167,7 @@ export default function AuditForm({ idPrefix }: Props) {
               setStep(4);
             }}
           >
-            I don&apos;t know — skip this
+            I don&apos;t know, skip this
           </button>
         </div>
         <button type="button" className="backlink" onClick={() => setStep(2)}>
@@ -176,7 +175,7 @@ export default function AuditForm({ idPrefix }: Props) {
         </button>
       </div>
 
-      {/* Step 4 — contact details */}
+      {/* Step 4, contact details */}
       <div className={stepClass(4)} data-step="4">
         <h3>Where do I send the findings?</h3>
         <p className="hint">One email with the audit. No drip sequence.</p>

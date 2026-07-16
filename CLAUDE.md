@@ -10,7 +10,8 @@ The approved design source of truth is `morebookedconsults-v18.html` (self-conta
 - Never promise or guarantee results.
 - Aesthetic industry only. Never broaden copy to dentists, chiro, or general healthcare.
 - Tone: direct, numbers-driven, zero agency fluff, written for practice owners (never patients).
-- Canonical brand string everywhere (schema, footer, bylines): "More Booked Consults" — never MBC or MoreBookedConsults in prose.
+- Canonical brand string everywhere (schema, footer, bylines): "More Booked Consults" (never MBC or MoreBookedConsults in prose).
+- No em dashes (—) anywhere in copy. Use commas, colons, parentheses, or separate sentences instead. En dashes in number ranges (2017–2022, 40–60%) are fine; the arrow → in "3% → 11%" is fine.
 
 ## Design system (match mockup exactly)
 - Colors: paper #F8F8FD, lilac #EFEDFB, mist #E7EEFC, line #DDDBF0, ink #232140, soft #6C6990, violet #6C57E8, violet-deep #5843CF, blue #4C8DFF, deep #1B1936.

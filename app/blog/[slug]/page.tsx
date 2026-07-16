@@ -4,6 +4,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { mdxComponents, FAQ, Related } from "@/components/mdx/MdxComponents";
+import AuditForm from "@/components/AuditForm";
 import { getBlogPost, getAllBlogPosts } from "@/lib/content";
 import { SITE } from "@/lib/site";
 
@@ -61,24 +62,31 @@ export default async function BlogPost({ params }: Params) {
 
   return (
     <main>
+      <section className="article-hero">
+        <div className="wrap hero-grid">
+          <div>
+            <Breadcrumbs
+              items={[
+                { name: "Home", href: "/" },
+                { name: "Blog", href: "/blog/" },
+                { name: frontmatter.title, href: url },
+              ]}
+            />
+            <h1>{frontmatter.title}</h1>
+            <p className="article-byline">
+              By {SITE.founder.name}
+              {date ? ` · ${date}` : ""}
+            </p>
+          </div>
+          <AuditForm idPrefix={slug} />
+        </div>
+      </section>
       <article className="article">
         <div className="wrap">
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
           />
-          <Breadcrumbs
-            items={[
-              { name: "Home", href: "/" },
-              { name: "Blog", href: "/blog/" },
-              { name: frontmatter.title, href: url },
-            ]}
-          />
-          <h1>{frontmatter.title}</h1>
-          <p className="article-byline">
-            By {SITE.founder.name}
-            {date ? ` · ${date}` : ""}
-          </p>
           <div className="article-body">
             <MDXRemote
               source={body}
@@ -87,7 +95,9 @@ export default async function BlogPost({ params }: Params) {
             />
             {frontmatter.faq && frontmatter.faq.length > 0 && (
               <>
-                <h2>❓ Frequently asked questions</h2>
+                <h2>
+                  <span className="he">❓</span> Frequently asked questions
+                </h2>
                 <FAQ items={frontmatter.faq} />
               </>
             )}

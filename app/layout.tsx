@@ -51,7 +51,7 @@ const greatVibes = Great_Vibes({
 });
 
 const TITLE_DEFAULT =
-  "More Booked Consults — CRO & Local SEO for Medspas & Plastic Surgeons";
+  "More Booked Consults, CRO & Local SEO for Medspas & Plastic Surgeons";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),

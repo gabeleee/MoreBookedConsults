@@ -1,8 +1,9 @@
 // Sticky site header, ported from the v18 mockup and expanded to the full nav
-// per CLAUDE.md. No JS — sticky is pure CSS. Server component.
+// per CLAUDE.md. No JS, sticky is pure CSS. Server component.
 import Link from "next/link";
 import Logo from "./Logo";
 import MobileNav from "./MobileNav";
+import HeaderShrink from "./HeaderShrink";
 
 const NAV = [
   { href: "/medspa-marketing/", label: "For Med Spas" },
@@ -14,6 +15,7 @@ const NAV = [
 export default function Header() {
   return (
     <header>
+      <HeaderShrink />
       <div className="wrap nav">
         <Logo href="/" />
         <nav className="nav-links" aria-label="Primary">

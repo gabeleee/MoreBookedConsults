@@ -70,7 +70,15 @@ section{position:relative}
 
 /* ---- header ---- */
 header{border-bottom:1px solid var(--line);background:rgba(248,248,253,.9);backdrop-filter:blur(8px);position:sticky;top:0;z-index:40}
-.nav{display:flex;align-items:center;gap:24px;padding:16px 0}
+.nav{display:flex;align-items:center;gap:24px;padding:16px 0;transition:padding .2s ease}
+/* shrink the sticky header on scroll */
+.logo-mark{transition:width .2s ease,height .2s ease}
+.brand{transition:font-size .2s ease}
+.nav-cta{transition:padding .2s ease,font-size .2s ease,background .18s}
+html.scrolled .nav{padding:8px 0}
+html.scrolled .brand{font-size:18px}
+html.scrolled .logo-mark{width:22px;height:22px;flex-basis:22px}
+html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .nav .brand{margin-right:auto}
 .nav-links{display:flex;gap:22px;align-items:center}
 .nav-links a{font-size:14.5px;color:var(--soft);text-decoration:none;font-weight:500;transition:color .15s}
@@ -400,6 +408,16 @@ header{border-bottom:1px solid var(--line);background:rgba(248,248,253,.9);backd
 .article{padding:52px 0 88px}
 .article h1{font-size:clamp(32px,4.4vw,46px);line-height:1.12;margin:10px 0 10px;max-width:24ch}
 .article-byline{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:var(--soft);margin-bottom:30px}
+/* article hero (copy + audit form), shared by money pages and blog nodes */
+.article-hero{padding:48px 0 40px;background:linear-gradient(180deg,var(--lilac),var(--paper))}
+.article-hero .hero-grid{align-items:start}
+.article-hero h1{font-size:clamp(29px,3.8vw,42px);line-height:1.12;margin:12px 0 14px;max-width:22ch}
+.article-hero .article-byline{margin-bottom:0}
+.article-hero .breadcrumbs{margin-bottom:8px}
+/* small heading emoji (~half size) */
+.he{font-size:.5em;display:inline-block;margin-right:.12em;vertical-align:.1em;font-weight:400}
+/* keep CTA/button text white inside articles (beats .article-body a) */
+.article-body .btn{color:#fff;text-decoration:none}
 .article-body{max-width:70ch;font-size:17.5px}
 .article-body h2{font-size:clamp(24px,3vw,30px);margin:38px 0 12px;line-height:1.2}
 .article-body h3{font-size:21px;margin:28px 0 8px}

@@ -27,7 +27,7 @@ export default function Hero() {
           </p>
           <div className="hero-chips">
             <span className="chip">
-              <b>3% → 11%</b> — the founder&apos;s results at LaserAway
+              <b>3% → 11%</b>, the founder&apos;s results at LaserAway
             </span>
             <span className="chip">
               <b>210x ROI</b> on the LaserAway testing program

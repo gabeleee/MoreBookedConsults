@@ -1,6 +1,6 @@
 // Two Levers section (CRO + Local SEO), ported from the v18 mockup
 // (lines 512-606). Each lever's chart renders through the reusable ChartCard.
-// Two services only — never broaden this copy.
+// Two services only, never broaden this copy.
 import PetalBackground from "./PetalBackground";
 import ChartCard from "./ChartCard";
 
@@ -45,13 +45,12 @@ export default function Levers() {
         </div>
 
         <div className="lever-grid">
-          {/* Lever 01 — CRO */}
+          {/* Lever 01, CRO */}
           <div className="lever">
             <p className="eyebrow">Lever 01</p>
             <h3>Conversion rate optimization</h3>
             <p>
-              One controlled test per month on the spots that leak bookings —
-              run long enough to trust the result, so wins stack instead of
+              One controlled test per month on the spots that leak bookings,               run long enough to trust the result, so wins stack instead of
               canceling out.
             </p>
             <div className="tags">
@@ -106,7 +105,7 @@ export default function Levers() {
             </ChartCard>
           </div>
 
-          {/* Lever 02 — Local SEO */}
+          {/* Lever 02, Local SEO */}
           <div className="lever">
             <p className="eyebrow">Lever 02</p>
             <h3>Local SEO</h3>

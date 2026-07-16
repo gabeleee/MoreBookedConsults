@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "CRO and local SEO pricing for aesthetic practices — CRO from $2,500/mo, local SEO from $2,000/mo, or both levers for $3,750/mo. Senior-level, one operator.",
+    "CRO and local SEO pricing for aesthetic practices, CRO from $2,500/mo, local SEO from $2,000/mo, or both levers for $3,750/mo. Senior-level, one operator.",
 };
 
 export default function Pricing() {
@@ -17,7 +17,7 @@ export default function Pricing() {
           <p className="lede">
             No agency layers, no junior account managers, no percentage of ad
             spend. One operator who ran the testing program at the largest medspa
-            chain in the U.S. — pick one lever or run both.
+            chain in the U.S., pick one lever or run both.
           </p>
         </div>
       </section>
@@ -47,7 +47,7 @@ export default function Pricing() {
               </Link>
             </div>
 
-            {/* Both — featured */}
+            {/* Both, featured */}
             <div className="pricing-card featured">
               <span className="pricing-badge">Best value</span>
               <span className="tier">CRO + Local SEO</span>
@@ -100,13 +100,13 @@ export default function Pricing() {
         <div className="wrap prose">
           <h2>How pricing works.</h2>
           <p>
-            Every engagement starts with a free audit — no call required. The
+            Every engagement starts with a free audit, no call required. The
             rates above are flat monthly for the work itself; any ad spend is
             billed to you directly by the platforms, never marked up.
           </p>
           <p>
             Start with the audit. If your site and rankings are already tight,
-            I&apos;ll tell you that too — no engagement needed.
+            I&apos;ll tell you that too, no engagement needed.
           </p>
           <p style={{ marginTop: 20 }}>
             <Link className="btn" href="/free-audit/">

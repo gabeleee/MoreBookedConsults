@@ -6,11 +6,11 @@ import ConversionChart from "@/components/ConversionChart";
 export const metadata: Metadata = {
   title: "Results",
   description:
-    "The track record behind More Booked Consults — the CRO results Gabe Meierotto drove as Director of CRO at LaserAway, and the method behind them.",
+    "The track record behind More Booked Consults, the CRO results Gabe Meierotto drove as Director of CRO at LaserAway, and the method behind them.",
 };
 
 // Results / track record. LaserAway numbers are attributed to Gabe personally
-// in his former role — never to this company. No promises about your results.
+// in his former role, never to this company. No promises about your results.
 export default function Results() {
   return (
     <main>
@@ -20,8 +20,8 @@ export default function Results() {
           <h1>The numbers this practice is built on.</h1>
           <p className="lede">
             Before More Booked Consults existed, founder Gabe Meierotto spent six
-            years as <strong>Director of CRO at LaserAway</strong> — the largest
-            medspa chain in the U.S. — owning the testing roadmap end to end.
+            years as <strong>Director of CRO at LaserAway</strong>, the largest
+            medspa chain in the U.S., owning the testing roadmap end to end.
             These are the results he drove in that role.
           </p>
         </div>
@@ -84,7 +84,7 @@ export default function Results() {
         <div className="wrap prose">
           <h2>What these numbers mean for your practice.</h2>
           <p>
-            These are results Gabe drove at LaserAway — <strong>not a promise</strong>{" "}
+            These are results Gabe drove at LaserAway, <strong>not a promise</strong>{" "}
             of what your practice will do. Every market, site, and starting point
             is different. What carries over is the method: disciplined testing,
             one change at a time, run long enough to trust the result.

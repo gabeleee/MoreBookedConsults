@@ -5,7 +5,7 @@ import PetalBackground from "./PetalBackground";
 // Interactive revenue calculator ("The math"), ported from the v18 mockup
 // (markup lines 672-706, calc() lines 799-811). Two sliders drive the live
 // Today vs 2x revenue figures; the bars stay at 50% / 100% to depict the
-// doubling. Same traffic, same ad spend — just a better-converting site.
+// doubling. Same traffic, same ad spend, just a better-converting site.
 
 const fmt = (n: number) => "$" + n.toLocaleString("en-US");
 

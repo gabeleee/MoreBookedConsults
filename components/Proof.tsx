@@ -1,6 +1,6 @@
 // Proof / track-record section, ported from morebookedconsults-v18.html
 // (lines 451-511). The LaserAway results are attributed to Gabe personally in
-// his former role — never to this company. Preserve this copy.
+// his former role, never to this company. Preserve this copy.
 import PetalBackground from "./PetalBackground";
 import ChartCard from "./ChartCard";
 import ConversionChart from "./ConversionChart";
@@ -28,7 +28,7 @@ export default function Proof() {
           <p className="lede">
             Before More Booked Consults existed, our founder spent six years as{" "}
             <strong>Director of CRO at LaserAway</strong>, the largest medspa
-            chain in the U.S. — owning the testing roadmap end to end. These are
+            chain in the U.S., owning the testing roadmap end to end. These are
             the results he drove in that role, and the playbook this practice is
             built on.
           </p>

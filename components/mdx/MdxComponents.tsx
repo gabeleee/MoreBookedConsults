@@ -78,7 +78,7 @@ function Stat({ value, label }: { value: string; label: string }) {
 }
 
 // Accordion FAQ + FAQPage JSON-LD. Driven from frontmatter (faq: [{q,a}]) and
-// rendered by the article routes — MDX doesn't evaluate array-of-object props.
+// rendered by the article routes, MDX doesn't evaluate array-of-object props.
 export function FAQ({ items = [] }: { items?: { q: string; a: string }[] }) {
   const ld = {
     "@context": "https://schema.org",
@@ -145,7 +145,7 @@ function CTA({
   );
 }
 
-// FAQ and Related are intentionally NOT in this map — they're rendered from
+// FAQ and Related are intentionally NOT in this map, they're rendered from
 // frontmatter by the routes (MDX can't pass their array-of-object props).
 export const mdxComponents = {
   a: SmartLink,

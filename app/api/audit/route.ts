@@ -61,8 +61,8 @@ async function sendEmailNotification(data: AuditSubmission) {
     `Name:          ${data.name}`,
     `Email:         ${data.email}`,
     `Website:       ${data.website}`,
-    `Practice type: ${data.practice ?? "—"}`,
-    `Looking for:   ${data.need ?? "—"}`,
+    `Practice type: ${data.practice ?? "n/a"}`,
+    `Looking for:   ${data.need ?? "n/a"}`,
     `Consult value: ${data.worth != null ? "$" + data.worth : "not provided"}`,
   ].join("\n");
 
@@ -76,7 +76,7 @@ async function sendEmailNotification(data: AuditSubmission) {
       from,
       to: SITE.email,
       reply_to: data.email,
-      subject: `New audit request — ${data.name || "unknown"} (${data.practice ?? "n/a"})`,
+      subject: `New audit request: ${data.name || "unknown"} (${data.practice ?? "n/a"})`,
       text: body,
     }),
   });
