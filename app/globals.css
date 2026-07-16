@@ -396,6 +396,31 @@ header{border-bottom:1px solid var(--line);background:rgba(248,248,253,.9);backd
 .breadcrumbs .sep{opacity:.5}
 .breadcrumbs [aria-current="page"]{color:var(--ink)}
 
+/* ---- article body (MDX blog nodes) ---- */
+.article{padding:52px 0 88px}
+.article h1{font-size:clamp(32px,4.4vw,46px);line-height:1.12;margin:10px 0 10px;max-width:24ch}
+.article-byline{font-family:var(--mono);font-size:12.5px;letter-spacing:.05em;color:var(--soft);margin-bottom:30px}
+.article-body{max-width:70ch;font-size:17.5px}
+.article-body h2{font-size:clamp(24px,3vw,30px);margin:38px 0 12px;line-height:1.2}
+.article-body h3{font-size:21px;margin:28px 0 8px}
+.article-body p{color:var(--ink);margin-bottom:16px}
+.article-body a{color:var(--violet-deep);text-decoration:underline;text-underline-offset:2px}
+.article-body a:hover{color:var(--violet)}
+.article-body ul,.article-body ol{margin:0 0 16px 22px}
+.article-body li{margin-bottom:8px}
+.article-body strong{color:var(--ink);font-weight:600}
+.article-body blockquote{border-left:3px solid var(--violet);padding:4px 0 4px 18px;margin:20px 0;color:var(--soft);font-style:italic}
+.article-body code{font-family:var(--mono);font-size:.9em;background:var(--lilac);padding:2px 6px;border-radius:6px}
+.table-scroll{overflow-x:auto;margin:22px 0}
+.article-body table{width:100%;border-collapse:collapse;font-size:15px;min-width:420px}
+.article-body th,.article-body td{border:1px solid var(--line);padding:10px 12px;text-align:left}
+.article-body th{background:var(--lilac);font-family:var(--mono);font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink)}
+.article-body tr:nth-child(even) td{background:var(--paper)}
+.cta-block{background:var(--lilac);border:1px solid var(--line);border-radius:16px;padding:24px 26px;margin:34px 0;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+.cta-block p{margin:0;font-family:var(--display);font-size:21px;color:var(--ink)}
+.callout{background:var(--mist);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:20px 0;color:var(--ink);font-size:15.5px}
+.callout p:last-child{margin-bottom:0}
+
 /* ---- footer ---- */
 footer{background:var(--deep);color:#A6A3C8;padding:44px 0 56px;font-size:15px}
 .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:baseline}
