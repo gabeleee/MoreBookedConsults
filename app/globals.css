@@ -306,9 +306,20 @@ header{border-bottom:1px solid var(--line);background:rgba(248,248,253,.9);backd
 .band.hot .fill{background:var(--violet)}
 .calc-note{font-size:14px;color:var(--soft);margin-top:6px}
 
+/* ---- audit section ---- */
+.audit{padding:88px 0;background:var(--paper)}
+.audit-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+.audit-copy p{color:var(--soft);max-width:42ch;margin-bottom:14px}
+.audit-photo{margin-top:26px}
+.audit-photo img{
+  width:100%;max-width:440px;height:auto;display:block;
+  border-radius:16px;border:1px solid var(--line);
+  box-shadow:0 14px 34px -20px rgba(35,33,64,.4);
+}
+
 /* ---- responsive (extended as later sections land) ---- */
 @media (max-width:900px){
-  .hero-grid,.proof-grid,.lever-grid,.founder-grid,.math-card{grid-template-columns:1fr}
+  .hero-grid,.proof-grid,.lever-grid,.founder-grid,.math-card,.audit-grid{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
   .math-card{padding:34px 26px}
   .hero{padding:44px 0 56px}

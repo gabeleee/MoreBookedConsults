@@ -4,6 +4,7 @@ import Levers from "@/components/Levers";
 import Founder from "@/components/Founder";
 import Process from "@/components/Process";
 import MathCalculator from "@/components/MathCalculator";
+import Audit from "@/components/Audit";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Founder />
       <Process />
       <MathCalculator />
+      <Audit />
     </main>
   );
 }
