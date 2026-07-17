@@ -63,6 +63,7 @@ async function sendEmailNotification(data: AuditSubmission) {
     `Website:       ${data.website}`,
     `Practice type: ${data.practice ?? "n/a"}`,
     `Looking for:   ${data.need ?? "n/a"}`,
+    `Market/city:   ${data.market ?? "n/a"}`,
     `Consult value: ${data.worth != null ? "$" + data.worth : "not provided"}`,
   ].join("\n");
 
