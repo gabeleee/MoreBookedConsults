@@ -17,8 +17,7 @@ export default function Pricing() {
           <h1>Senior-level work. Flat monthly pricing.</h1>
           <p className="lede">
             No agency layers, no junior account managers, no percentage of ad
-            spend. One operator who ran the testing program at the largest medspa
-            chain in the U.S., pick one lever or run both.
+            spend.
           </p>
         </div>
       </section>
