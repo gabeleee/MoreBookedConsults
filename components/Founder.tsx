@@ -22,7 +22,7 @@ export default function Founder() {
         <div>
           <p className="eyebrow">Who&apos;s behind this</p>
           <h2>
-            MoreBooked<span className="wm-consults">Consults</span>{" "}
+            More Booked <span className="wm-consults">Consults</span>{" "}
             is one person. That&apos;s the point.
           </h2>
           <div className="founder-id">
