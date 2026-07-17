@@ -129,8 +129,8 @@ export function Related({
 
 // Inline CTA block (drop at ~70% scroll and at the end, per the briefs).
 function CTA({
-  heading = "Want this found and fixed for you?",
-  label = "Get a free audit",
+  heading = "The fastest path to more booked consults.",
+  label = "Get a free marketing audit",
 }: {
   heading?: string;
   label?: string;

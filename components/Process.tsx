@@ -15,10 +15,10 @@ const STEPS: {
 }[] = [
   {
     img: "/step1.jpg",
-    photo: "Photo 1, Free audit",
+    photo: "Photo 1, Free marketing audit",
     alt: "Laptop showing a medspa website with notes beside it",
     num: "Step 1",
-    title: "Free audit",
+    title: "Free marketing audit",
     desc: "Where your site and rankings are leaking consults, ranked by revenue impact.",
   },
   {

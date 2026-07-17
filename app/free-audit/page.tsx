@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import AuditForm from "@/components/AuditForm";
 
 export const metadata: Metadata = {
-  title: "Free Audit",
+  title: "Free Marketing Audit",
   description:
-    "Get a free, prioritized audit of where your aesthetic practice's website and local rankings are leaking consults, no call required.",
+    "Get a free, prioritized marketing audit of where your aesthetic practice's website and local rankings are leaking consults, no call required.",
   alternates: { canonical: "/free-audit/" },
 };
 
@@ -16,7 +16,7 @@ export default function FreeAuditPage() {
       <section className="audit">
         <div className="wrap audit-grid">
           <div className="audit-copy">
-            <p className="eyebrow">Free audit</p>
+            <p className="eyebrow">Free marketing audit</p>
             <h1>Find out where your site is leaking consults.</h1>
             <p>
               Answer three quick questions. Within 3 business days you&apos;ll
