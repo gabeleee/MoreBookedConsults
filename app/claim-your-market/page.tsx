@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import AuditForm from "@/components/AuditForm";
 
 export const metadata: Metadata = {
-  title: "Claim Your Market",
+  title: "Get Exclusive Patient Leads",
   description:
-    "See if your market is still open for exclusive Pay-Per-Lead advertising. One practice per treatment, per market. Answer a few quick questions and I'll check availability.",
+    "Exclusive patient leads from Facebook and Instagram ads, delivered to your inbox and CRM, priced per lead. One practice per treatment, per market. Answer a few quick questions to get started.",
   alternates: { canonical: "/claim-your-market/" },
 };
 
@@ -18,16 +18,16 @@ export default function ClaimYourMarketPage() {
         <div className="wrap audit-grid">
           <div className="audit-copy">
             <p className="eyebrow">Pay-Per-Lead</p>
-            <h1>See if your market is still open.</h1>
+            <h1>Start getting exclusive patient leads.</h1>
             <p>
-              Pay-Per-Lead is exclusive: one practice per treatment, per market.
-              Once your market is taken for a treatment, a competitor can&apos;t
-              buy in behind you.
+              Facebook and Instagram ads run to a funnel I build and control,
+              with exclusive patient leads delivered to your inbox and CRM in real
+              time. You pay per lead, not a retainer.
             </p>
             <p>
               Answer a few quick questions and I&apos;ll check whether your market
-              is still available and whether Pay-Per-Lead is the right first move
-              for your practice.
+              is still open and whether Pay-Per-Lead is the right first move for
+              your practice.
             </p>
             <p className="hero-note">
               Free. No call required. You keep the findings either way.

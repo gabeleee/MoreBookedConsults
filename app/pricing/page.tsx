@@ -111,7 +111,7 @@ export default function Pricing() {
                 carry the ad spend.
               </p>
               <Link className="btn" href="/claim-your-market/">
-                Claim your market
+                Get more leads from ads
               </Link>
             </div>
             <ul className="feature-list">
