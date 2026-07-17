@@ -21,7 +21,10 @@ export default function Founder() {
       <div className="wrap founder-grid">
         <div>
           <p className="eyebrow">Who&apos;s behind this</p>
-          <h2>More Booked Consults is one person. That&apos;s the point.</h2>
+          <h2>
+            MoreBooked<span className="wm-consults">Consults</span>{" "}
+            is one person. That&apos;s the point.
+          </h2>
           <div className="founder-id">
             <div className="avatar">
               {/* eslint-disable-next-line @next/next/no-img-element */}
