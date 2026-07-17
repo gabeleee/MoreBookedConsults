@@ -283,6 +283,10 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .lever .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 .tag{font-size:13.5px;padding:6px 13px;border-radius:999px;background:var(--lilac);color:var(--ink);border:1px solid var(--line)}
 .lever .chart-card{box-shadow:none;background:var(--paper)}
+/* Lever 03 (Pay-Per-Lead): spans both columns as its own row, text beside chart */
+.lever-wide{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
+.lever-wide .chart-card{align-self:center}
+@media (max-width:681px){.lever-wide{grid-template-columns:1fr}}
 
 /* ---- founder ---- */
 .founder{padding:78px 0;background:var(--paper)}
@@ -411,8 +415,20 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .pricing-card .feature-list li{font-size:14.5px}
 .pricing-card .btn{margin-top:auto;text-align:center;font-size:15px;padding:13px 20px}
 .pricing-card .save{font-family:var(--mono);font-size:12px;color:var(--violet-deep);margin-top:6px}
+/* Pay-Per-Lead, a distinct billing model, spans its own full-width row */
+.ppl-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px 34px;margin-top:22px;display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.ppl-main .tier{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--violet)}
+.ppl-main h3{font-family:var(--display);font-weight:400;font-size:24px;margin:8px 0 12px}
+.ppl-price{font-family:var(--display);line-height:1.15;color:var(--ink);font-size:21px}
+.ppl-price strong{font-weight:400;font-size:30px}
+.ppl-price .sep{color:var(--soft);font-family:var(--body)}
+.ppl-main .tier-desc{color:var(--soft);font-size:15px;margin:14px 0 20px;max-width:40ch}
+.ppl-main .btn{font-size:15px;padding:13px 22px}
+.ppl-card .feature-list{margin:0;gap:11px;max-width:none}
+.ppl-card .feature-list li{font-size:14.5px}
 @media (max-width:820px){
   .pricing-grid{grid-template-columns:1fr;max-width:420px;margin-left:auto;margin-right:auto}
+  .ppl-card{grid-template-columns:1fr;gap:22px;max-width:420px;margin-left:auto;margin-right:auto}
 }
 
 /* ---- breadcrumbs ---- */

@@ -42,7 +42,7 @@ const splineMono = Spline_Sans_Mono({
 });
 
 const TITLE_DEFAULT =
-  "More Booked Consults, CRO & Local SEO for Medspas & Plastic Surgeons";
+  "More Booked Consults, CRO, Local SEO & Pay-Per-Lead for Medspas & Plastic Surgeons";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
