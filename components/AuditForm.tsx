@@ -41,22 +41,31 @@ const NEEDS = [
 type Props = {
   /** Unique per instance (hero / bottom) so label htmlFor ids don't collide. */
   idPrefix: string;
+  /**
+   * Pre-select a step-1 "need" and skip straight to step 2. Used by the
+   * /claim-your-market/ page so a Pay-Per-Lead click doesn't re-declare intent.
+   */
+  presetNeed?: string;
 };
 
-export default function AuditForm({ idPrefix }: Props) {
-  const [step, setStep] = useState(1);
+export default function AuditForm({ idPrefix, presetNeed }: Props) {
+  const [step, setStep] = useState(presetNeed ? 2 : 1);
   const [done, setDone] = useState(false);
 
   const [practice, setPractice] = useState<string | null>(null);
-  const [need, setNeed] = useState<string | null>(null);
+  const [need, setNeed] = useState<string | null>(presetNeed ?? null);
   const [worth, setWorth] = useState<number | null>(null);
   const [worthDisplay, setWorthDisplay] = useState(600);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [website, setWebsite] = useState("");
+  const [market, setMarket] = useState("");
   const [error, setError] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+
+  // Pay-Per-Lead prospects get market-availability framing and a city field.
+  const isPPL = (need ?? "").includes("Pay-Per-Lead");
 
   const worthRef = useRef<HTMLInputElement>(null);
 
@@ -80,7 +89,15 @@ export default function AuditForm({ idPrefix }: Props) {
     setError(!ok);
     if (!ok) return;
     setSubmitting(true);
-    await submitAudit({ practice, need, worth, name: nm, email: em, website: ur });
+    await submitAudit({
+      practice,
+      need,
+      worth,
+      market: market.trim() || null,
+      name: nm,
+      email: em,
+      website: ur,
+    });
     setSubmitting(false);
     setDone(true);
   }
@@ -105,7 +122,7 @@ export default function AuditForm({ idPrefix }: Props) {
 
       {/* Step 1, what they're looking for */}
       <div className={stepClass(1)} data-step="1">
-        <h3>What are you looking for?</h3>
+        <h3>How do you want to grow?</h3>
         <p className="hint">Pick the one that sounds most like you.</p>
         <div className="opts">
           {NEEDS.map((n) => (
@@ -182,8 +199,14 @@ export default function AuditForm({ idPrefix }: Props) {
 
       {/* Step 4, contact details */}
       <div className={stepClass(4)} data-step="4">
-        <h3>Where do I send the findings?</h3>
-        <p className="hint">One email with the audit. No drip sequence.</p>
+        <h3>
+          {isPPL ? "Where do I send your market check?" : "Where do I send the findings?"}
+        </h3>
+        <p className="hint">
+          {isPPL
+            ? "One email back with your market availability. No drip sequence."
+            : "One email back. No drip sequence."}
+        </p>
         <div className="field">
           <label htmlFor={id("name")}>Your name</label>
           <input
@@ -219,6 +242,19 @@ export default function AuditForm({ idPrefix }: Props) {
             onChange={(e) => setWebsite(e.target.value)}
           />
         </div>
+        {isPPL && (
+          <div className="field">
+            <label htmlFor={id("market")}>Your city / market</label>
+            <input
+              id={id("market")}
+              type="text"
+              placeholder="e.g. Austin, TX"
+              autoComplete="address-level2"
+              value={market}
+              onChange={(e) => setMarket(e.target.value)}
+            />
+          </div>
+        )}
         <p className={`ferror${error ? " show" : ""}`}>
           Add your name, a valid email, and your website so the audit can reach you.
         </p>
@@ -240,11 +276,24 @@ export default function AuditForm({ idPrefix }: Props) {
       {/* Success state */}
       <div className={`done${done ? " show" : ""}`}>
         <div className="mark">✓</div>
-        <h3>Audit request received.</h3>
-        <p>
-          Your prioritized findings doc will land in your inbox within 3 business
-          days. If your site&apos;s already airtight, I&apos;ll tell you that too.
-        </p>
+        {isPPL ? (
+          <>
+            <h3>Request received.</h3>
+            <p>
+              I&apos;ll check whether your market is still open and send back
+              whether Pay-Per-Lead fits your practice, within 3 business days.
+            </p>
+          </>
+        ) : (
+          <>
+            <h3>Audit request received.</h3>
+            <p>
+              Your prioritized findings doc will land in your inbox within 3
+              business days. If your site&apos;s already airtight, I&apos;ll tell
+              you that too.
+            </p>
+          </>
+        )}
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ export type AuditSubmission = {
   practice: string | null;
   need: string | null;
   worth: number | null;
+  market: string | null;
   name: string;
   email: string;
   website: string;

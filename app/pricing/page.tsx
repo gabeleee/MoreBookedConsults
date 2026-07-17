@@ -110,7 +110,7 @@ export default function Pricing() {
                 Facebook ads to funnels I build and control. You buy the leads, I
                 carry the ad spend.
               </p>
-              <Link className="btn" href="/medspa-advertising/">
+              <Link className="btn" href="/claim-your-market/">
                 Claim your market
               </Link>
             </div>
