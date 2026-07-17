@@ -30,9 +30,9 @@ const NEEDS = [
     label: "More traffic from Google",
   },
   {
-    value: "New patient leads from paid ads (Pay-Per-Lead)",
+    value: "New leads from paid ads (Pay-Per-Lead)",
     emoji: "🎯",
-    label: "New patient leads from paid ads",
+    label: "New leads from paid ads",
   },
   { value: "Both CRO + SEO", emoji: "🧰", label: "A little bit of everything" },
   { value: "Not sure yet", emoji: "🤔", label: "Not sure, tell me what you see" },
@@ -265,7 +265,7 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
             onClick={handleSubmit}
             disabled={submitting}
           >
-            {submitting ? "Sending…" : "Send my free audit"}
+            {submitting ? "Sending…" : isPPL ? "Get started" : "Send my free audit"}
           </button>
         </div>
         <button type="button" className="backlink" onClick={() => setStep(3)}>

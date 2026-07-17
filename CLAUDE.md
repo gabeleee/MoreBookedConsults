@@ -28,7 +28,7 @@ The approved design source of truth is `morebookedconsults-v18.html` (self-conta
 
 ## Audit form (one component, rendered twice: hero + bottom)
 Four steps (the practice-type step is an addition to the v18 mockup, mandated by the topical map):
-1. "What are you looking for?" — option cards, auto-advance: convert traffic / more Google traffic / new patient leads from paid ads (Pay-Per-Lead) / bit of everything / not sure. (30px heading.)
+1. "What are you looking for?" — option cards, auto-advance: convert traffic / more Google traffic / new leads from paid ads (Pay-Per-Lead) / bit of everything / not sure. (30px heading.)
 2. "What kind of practice?" — option cards, auto-advance: Med spa / Plastic surgery / Injector / Laser clinic. (Routing + segmentation + B3 case-study evidence. 30px heading.)
 3. Consult-value slider with "I don't know — skip this."
 4. Name / email / website + success state.
