@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "CRO and local SEO pricing for aesthetic practices, CRO from $2,500/mo, local SEO from $2,000/mo, or both levers for $3,750/mo. Senior-level, one operator.",
+    "Pricing for aesthetic practices: CRO from $2,500/mo, local SEO from $2,000/mo, or exclusive Pay-Per-Lead advertising from $30/lead. Senior-level, one operator.",
   alternates: { canonical: "/pricing/" },
 };
 
@@ -17,7 +17,9 @@ export default function Pricing() {
           <h1>Senior-level work. Flat monthly pricing.</h1>
           <p className="lede">
             No agency layers, no junior account managers, no percentage of ad
-            spend.
+            spend. One operator who ran the testing program at the largest medspa
+            chain in the U.S. Pick a lever, run two, or skip the retainer entirely
+            and just buy the leads.
           </p>
         </div>
       </section>
@@ -93,6 +95,36 @@ export default function Pricing() {
               </Link>
             </div>
           </div>
+
+          {/* Pay-Per-Lead, a different billing model, given its own row */}
+          <div className="ppl-card">
+            <div className="ppl-main">
+              <span className="tier">New · Pay-Per-Lead</span>
+              <h3>Pay-Per-Lead advertising</h3>
+              <div className="ppl-price">
+                <strong>$35</strong>/lead Botox
+                <span className="sep"> · </span>
+                <strong>$30</strong>/lead laser hair removal
+              </div>
+              <p className="tier-desc">
+                Facebook ads to funnels I build and control. You buy the leads, I
+                carry the ad spend.
+              </p>
+              <Link className="btn" href="/medspa-advertising/">
+                Claim your market
+              </Link>
+            </div>
+            <ul className="feature-list">
+              <li>$1,000 one-time funnel setup</li>
+              <li>100-lead monthly minimum</li>
+              <li>Exclusive: one practice per treatment, per market</li>
+              <li>
+                Real-time delivery to your inbox &amp; CRM, instant SMS follow-up
+                included
+              </li>
+              <li>Duplicates and out-of-area leads credited, never billed</li>
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -100,9 +132,12 @@ export default function Pricing() {
         <div className="wrap prose">
           <h2>How pricing works.</h2>
           <p>
-            Every engagement starts with a free audit, no call required. The
-            rates above are flat monthly for the work itself; any ad spend is
-            billed to you directly by the platforms, never marked up.
+            Every engagement starts with a free audit, no call required. CRO and
+            local SEO are flat monthly rates for the work itself; if you run your
+            own ads alongside them, that spend is billed to you directly by the
+            platforms, never marked up. Pay-Per-Lead is the opposite arrangement
+            on purpose: the ad spend is mine, the funnel is mine, and the only
+            thing on your invoice is the leads.
           </p>
           <p>
             Start with the audit. If your site and rankings are already tight,

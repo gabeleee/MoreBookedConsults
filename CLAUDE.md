@@ -1,7 +1,7 @@
 # CLAUDE.md — MoreBookedConsults.com
 
 ## What this project is
-Production site for More Booked Consults: a solo CRO + local SEO consultancy exclusively for aesthetic practices (medspas, plastic surgeons, injectors, laser clinics). Founder: Gabe Meierotto, former Director of CRO at LaserAway (2017–2022). Two services only: CRO (one controlled test/month) and Local SEO. Sales motion: free audit → prioritized plan → monthly test + results report.
+Production site for More Booked Consults: a solo CRO + local SEO consultancy exclusively for aesthetic practices (medspas, plastic surgeons, injectors, laser clinics). Founder: Gabe Meierotto, former Director of CRO at LaserAway (2017–2022). Three services: CRO (one controlled test/month), Local SEO, and Pay-Per-Lead advertising (exclusive Facebook/Instagram leads sent to funnels Gabe builds and controls, priced per lead, with the ad spend carried by us, not the client). Sales motion: free audit → prioritized plan → monthly test + results report; Pay-Per-Lead is the non-retainer option (buy leads directly, one practice per treatment/procedure per market).
 
 The approved design source of truth is `morebookedconsults-v18.html` (self-contained mockup). The build ports it to Next.js (App Router). Visual output must match the mockup.
 
@@ -28,7 +28,7 @@ The approved design source of truth is `morebookedconsults-v18.html` (self-conta
 
 ## Audit form (one component, rendered twice: hero + bottom)
 Four steps (the practice-type step is an addition to the v18 mockup, mandated by the topical map):
-1. "What are you looking for?" — option cards, auto-advance: convert traffic / more Google traffic / bit of everything / not sure. (30px heading.)
+1. "What are you looking for?" — option cards, auto-advance: convert traffic / more Google traffic / new patient leads from paid ads (Pay-Per-Lead) / bit of everything / not sure. (30px heading.)
 2. "What kind of practice?" — option cards, auto-advance: Med spa / Plastic surgery / Injector / Laser clinic. (Routing + segmentation + B3 case-study evidence. 30px heading.)
 3. Consult-value slider with "I don't know — skip this."
 4. Name / email / website + success state.

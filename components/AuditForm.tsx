@@ -29,6 +29,11 @@ const NEEDS = [
     emoji: "🔍",
     label: "More traffic from Google",
   },
+  {
+    value: "New patient leads from paid ads (Pay-Per-Lead)",
+    emoji: "🎯",
+    label: "New patient leads from paid ads",
+  },
   { value: "Both CRO + SEO", emoji: "🧰", label: "A little bit of everything" },
   { value: "Not sure yet", emoji: "🤔", label: "Not sure, tell me what you see" },
 ];

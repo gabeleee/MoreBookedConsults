@@ -1,6 +1,6 @@
-// Two Levers section (CRO + Local SEO), ported from the v18 mockup
-// (lines 512-606). Each lever's chart renders through the reusable ChartCard.
-// Two services only, never broaden this copy.
+// Three Levers section (CRO + Local SEO + Pay-Per-Lead), ported from the v18
+// mockup (lines 512-606). Each lever's chart renders through the reusable
+// ChartCard. Keep this copy to those three services, never broaden it further.
 import PetalBackground from "./PetalBackground";
 import ChartCard from "./ChartCard";
 
@@ -27,10 +27,10 @@ export default function Levers() {
       <div className="wrap">
         <div className="levers-head">
           <div className="head-text">
-            <p className="eyebrow">Two levers. Nothing else.</p>
+            <p className="eyebrow">Three levers. Nothing else.</p>
             <h2>
               Convert the traffic you have. <em>Rank</em> for the traffic you
-              don&apos;t.
+              don&apos;t. <em>Buy</em> the leads you&apos;re missing.
             </h2>
           </div>
           <div className="head-photo">
@@ -155,6 +155,68 @@ export default function Levers() {
                 </text>
                 <text className="ax" x="500" y="178" textAnchor="end">
                   Wk 12
+                </text>
+              </svg>
+            </ChartCard>
+          </div>
+
+          {/* Lever 03, Pay-Per-Lead, full-width row below the first two */}
+          <div className="lever lever-wide">
+            <div className="lever-wide-text">
+              <p className="eyebrow">Lever 03</p>
+              <h3>Pay-Per-Lead advertising</h3>
+              <p>
+                Facebook ads sent to conversion-tested funnels I control, never
+                to a leaky website. Exclusive leads, one practice per market,
+                priced per lead.
+              </p>
+              <div className="tags">
+                <span className="tag">Multi-step funnels</span>
+                <span className="tag">Exclusive leads</span>
+                <span className="tag">$30–35/lead</span>
+                <span className="tag">Instant SMS follow-up</span>
+                <span className="tag">I carry the ad spend</span>
+              </div>
+            </div>
+            <ChartCard
+              title="Cost per lead"
+              meta="Botox · Exclusive · Flat"
+              delta="$35 flat"
+              caption="What you pay never moves. What it costs me to earn it is my problem."
+            >
+              <svg
+                viewBox="0 0 520 190"
+                role="img"
+                aria-label="A flat line showing your fixed $35 cost per lead against a fluctuating line showing what each lead actually costs to acquire"
+              >
+                <line className="grid" x1="10" y1="160" x2="510" y2="160" />
+                <line className="grid" x1="10" y1="112" x2="510" y2="112" />
+                <line className="grid" x1="10" y1="64" x2="510" y2="64" />
+                <path
+                  fill="none"
+                  stroke="#CBC4F5"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  d="M20 96 C 70 58, 110 132, 160 92 C 205 56, 255 122, 305 74 C 355 34, 405 120, 455 86 C 480 68, 495 96, 500 84"
+                />
+                <line
+                  x1="20"
+                  y1="74"
+                  x2="500"
+                  y2="74"
+                  stroke="#6C57E8"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                />
+                <circle cx="500" cy="74" r="5.5" fill="#6C57E8" />
+                <text className="pt-label" x="500" y="62" textAnchor="end">
+                  $35 flat
+                </text>
+                <text className="ax" x="20" y="178">
+                  Your price
+                </text>
+                <text className="ax" x="500" y="178" textAnchor="end">
+                  My cost to earn it
                 </text>
               </svg>
             </ChartCard>
