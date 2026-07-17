@@ -289,32 +289,13 @@ export default function Results() {
                 <div className="n">210x</div>
                 <div className="t">
                   <b>Return on the program</b>{" "}
-                  with minimal internal development resources, per{" "}
-                  <a
-                    className="r-ext"
-                    href="https://www.laseraway.com/"
-                    target="_blank"
-                    rel="noopener"
-                  >
-                    LaserAway
-                  </a>
-                  &apos;s CMO.
+                  with minimal internal development resources, per the published
+                  Intellimize case study.
                 </div>
               </div>
             </div>
           </div>
 
-          <figure className="r-quote" style={{ marginTop: 36 }}>
-            <blockquote>
-              Combining our team&apos;s ideas with Intellimize&apos;s guidance
-              and machine-learning technology has driven incredible results. A
-              210x ROI with minimal internal resources is impressive.
-            </blockquote>
-            <figcaption>
-              <b>Paul Baumgarthuber</b>
-              CMO, LaserAway · from the published case study
-            </figcaption>
-          </figure>
         </div>
       </section>
 

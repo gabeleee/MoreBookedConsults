@@ -34,8 +34,8 @@ body{
 }
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:1}
 a{color:inherit}
-a[href*="laseraway.com"]{color:#E0518A;font-weight:700;text-decoration:none}
-a[href*="laseraway.com"]:hover,a[href*="laseraway.com"]:focus-visible{color:#E0518A;text-decoration:underline;text-underline-offset:2px}
+a[href*="laseraway.com"]{color:#E0518A;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+a[href*="laseraway.com"]:hover,a[href*="laseraway.com"]:focus-visible{color:#E0518A;text-decoration-thickness:2px}
 ::selection{background:var(--violet);color:#fff}
 h1,h2,h3{font-family:var(--display);font-weight:400}
 h2{font-size:clamp(29px,4.2vw,42px);line-height:1.15;margin:16px 0 12px}
@@ -599,21 +599,6 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .r-stat-card p{font-size:14px;color:var(--soft);line-height:1.55;margin:0}
 @media (max-width:820px){.r-stat-grid{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.r-stat-grid{grid-template-columns:1fr}}
-
-/* pull quote */
-.r-quote{
-  background:var(--deep);color:#fff;border-radius:22px;
-  padding:46px 48px;position:relative;overflow:hidden;
-  max-width:820px;margin-left:auto;margin-right:auto;
-}
-.r-quote::before{
-  content:"“";position:absolute;top:-14px;left:26px;
-  font-family:var(--display);font-size:150px;line-height:1;color:var(--violet);opacity:.5;
-}
-.r-quote blockquote{font-family:var(--display);font-size:clamp(21px,2.6vw,27px);line-height:1.4;max-width:34ch;margin:0;position:relative}
-.r-quote figcaption{margin-top:20px;font-size:14.5px;color:#A6A3C8;position:relative}
-.r-quote figcaption b{color:#fff;display:block;font-size:15.5px}
-@media (max-width:640px){.r-quote{padding:36px 26px}}
 
 /* tested checklist cards */
 .r-tested{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:26px}
