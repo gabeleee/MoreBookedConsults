@@ -351,6 +351,9 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 /* ---- audit section ---- */
 .audit{padding:88px 0;background:var(--paper)}
 .audit-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:56px;align-items:start}
+/* When the copy column also carries the photo, center the form against that
+   taller column so it sits inline with the image rather than up by the title. */
+.audit-grid-media{align-items:center}
 .audit-copy p{color:var(--soft);max-width:42ch;margin-bottom:14px}
 .audit-photo{margin-top:26px}
 .audit-photo img{

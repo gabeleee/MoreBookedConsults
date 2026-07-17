@@ -24,7 +24,7 @@ export default function Audit() {
           },
         ]}
       />
-      <div className="wrap audit-grid">
+      <div className="wrap audit-grid audit-grid-media">
         <div className="audit-copy">
           <p className="eyebrow">Free audit</p>
           <h2>Find out where your site is leaking consults.</h2>
