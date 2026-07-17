@@ -387,6 +387,10 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 @media (max-width:760px){.two-col{grid-template-columns:1fr;gap:24px}}
 
 /* ---- pricing tiers ---- */
+/* Pricing hero headline spans the full container width (no narrow cap), and
+   the cards sit closer to the hero subheading. */
+.pricing-hero h1{max-width:none}
+.pricing-cards{padding-top:22px}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:14px;align-items:start}
 .pricing-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;height:100%}
 .pricing-card.featured{border-color:var(--violet);box-shadow:0 22px 54px -28px rgba(108,87,232,.55);position:relative}

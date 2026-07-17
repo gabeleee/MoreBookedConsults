@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export default function Pricing() {
   return (
     <main>
-      <section className="page-hero">
+      <section className="page-hero pricing-hero">
         <div className="wrap">
           <p className="eyebrow">Pricing</p>
           <h1>Senior-level work. Flat monthly pricing.</h1>
@@ -23,7 +23,7 @@ export default function Pricing() {
         </div>
       </section>
 
-      <section className="page-section">
+      <section className="page-section pricing-cards">
         <div className="wrap">
           <div className="pricing-grid">
             {/* CRO only */}
