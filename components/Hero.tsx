@@ -8,11 +8,11 @@ export default function Hero() {
     <section className="hero" id="top">
       <PetalBackground
         petals={[
-          { top: "8%", left: "4%", r: "-24deg", size: 64, fill: "#CBC4F5" },
-          { top: "66%", left: "2%", r: "38deg", size: 44, fill: "#C4D6FA" },
+          { top: "8%", left: "4%", r: "-24deg", size: 64, fill: "#453F82" },
+          { top: "66%", left: "2%", r: "38deg", size: 44, fill: "#374680" },
         ]}
         trios={[
-          { top: "-90px", right: "-150px", speed: 0.22, dur: "15s", del: "-3s", size: 640 },
+          { top: "-90px", right: "-150px", speed: 0.22, dur: "15s", del: "-3s", size: 640, dark: true },
         ]}
       />
       <div className="wrap hero-grid">

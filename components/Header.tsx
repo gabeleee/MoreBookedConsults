@@ -26,7 +26,8 @@ export default function Header() {
           ))}
         </nav>
         <Link className="nav-cta" href="/free-audit/">
-          Free marketing audit
+          <span className="cta-full">Free marketing audit</span>
+          <span className="cta-short">Free audit</span>
         </Link>
         <MobileNav items={NAV} />
       </div>

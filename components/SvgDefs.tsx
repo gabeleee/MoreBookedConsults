@@ -46,6 +46,23 @@ export default function SvgDefs() {
             transform="translate(68,48) scale(0.98) rotate(6)"
           />
         </g>
+        <g id="petalTrioDark">
+          <use
+            href="#petalShape"
+            fill="#3B3670"
+            transform="translate(24,76) scale(0.52) rotate(-24)"
+          />
+          <use
+            href="#petalShape"
+            fill="#31407C"
+            transform="translate(45,64) scale(0.74) rotate(-10)"
+          />
+          <use
+            href="#petalShape"
+            fill="#413A78"
+            transform="translate(68,48) scale(0.98) rotate(6)"
+          />
+        </g>
       </defs>
     </svg>
   );

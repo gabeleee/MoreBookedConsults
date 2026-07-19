@@ -129,18 +129,29 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
   box-shadow:0 6px 22px -4px rgba(108,87,232,.7);
   transform:translateY(-1px);
 }
+.nav-cta .cta-short{display:none}
+@media (max-width:520px){
+  .nav-cta{padding:9px 15px;font-size:13.5px}
+  .nav-cta .cta-full{display:none}
+  .nav-cta .cta-short{display:inline}
+}
 
 /* ---- hero ---- */
-.hero{padding:64px 0 70px;background:linear-gradient(180deg,var(--lilac) 0%,var(--paper) 100%)}
+.hero{padding:64px 0 70px;background:var(--deep);color:#EDECFA}
 .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
-.hero h1{font-size:clamp(37px,5.2vw,56px);line-height:1.07;max-width:16ch;margin:22px 0 16px}
-.hero .lede{margin-bottom:26px;font-size:17px}
+.hero h1{font-size:clamp(37px,5.2vw,56px);line-height:1.07;max-width:16ch;margin:22px 0 16px;color:#fff}
+.hero h1 em{color:#A99BF7}
+.hero .eyebrow{color:#B4A7F7}
+.hero .eyebrow::before{background:#B4A7F7}
+.hero .lede{margin-bottom:26px;font-size:17px;color:#B7B4D8}
 .hero-chips{display:flex;gap:10px;flex-wrap:wrap}
 .chip{
   background:#fff;border:1px solid var(--line);border-radius:999px;
   padding:8px 16px;font-size:14px;color:var(--soft);
 }
 .chip b{color:var(--ink);font-weight:600}
+.hero .chip{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.15);color:#C9C6E6}
+.hero .chip b{color:#fff}
 .btn{
   display:inline-block;font-weight:600;font-size:16px;text-align:center;
   text-decoration:none;padding:16px 30px;border-radius:999px;
@@ -156,9 +167,32 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .btn:disabled{opacity:.6;cursor:default}
 .hero-note{font-family:var(--mono);font-size:12.5px;color:var(--soft);margin-top:16px}
 
+/* ---- trusted-by logo band (continues the dark hero block) ---- */
+.trustbar{background:var(--deep);padding:0 0 60px}
+.trustbar .wrap{display:flex;flex-direction:column;align-items:center;text-align:center;gap:20px}
+.trustbar .tb-label{
+  font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;
+  color:#8F8CB8;white-space:nowrap;
+}
+.trustbar .tb-logos{
+  display:flex;align-items:center;justify-content:center;gap:44px;flex-wrap:wrap;
+}
+.trustbar .tb-logo{
+  display:inline-flex;align-items:center;justify-content:center;height:30px;
+  color:#C9C6E6;opacity:.62;transition:opacity .18s;
+  font-family:var(--display);font-size:19px;line-height:1;white-space:nowrap;
+}
+.trustbar .tb-logo:hover{opacity:1}
+.trustbar .tb-logo img{height:100%;width:auto;object-fit:contain;filter:brightness(0) invert(1)}
+@media (max-width:720px){
+  .trustbar{padding-bottom:48px}
+  .trustbar .tb-logos{gap:26px}
+  .trustbar .tb-logo{height:26px;font-size:17px}
+}
+
 /* ---- audit form (shared component) ---- */
 .form-card{
-  background:var(--card);border:1px solid rgba(108,87,232,.35);border-radius:20px;
+  background:var(--card);color:var(--ink);border:1px solid rgba(108,87,232,.35);border-radius:20px;
   padding:30px 28px 26px;
   box-shadow:
     0 0 24px rgba(108,87,232,.3),
