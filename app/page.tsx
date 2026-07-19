@@ -4,7 +4,6 @@ import TrustBar from "@/components/TrustBar";
 import Proof from "@/components/Proof";
 import Levers from "@/components/Levers";
 import Founder from "@/components/Founder";
-import HomeCta from "@/components/HomeCta";
 import Process from "@/components/Process";
 import MathCalculator from "@/components/MathCalculator";
 import Audit from "@/components/Audit";
@@ -21,7 +20,6 @@ export default function Home() {
       <Proof />
       <Levers />
       <Founder />
-      <HomeCta />
       <Process />
       <MathCalculator />
       <Audit />

@@ -1,5 +1,8 @@
 // Founder section, ported from the v18 mockup (lines 607-633). The 84px
 // avatar reuses /gabe.jpg. LaserAway credentials are Gabe's personally, // keep them attributed to him, never to the company.
+// The mid-page CTA is folded into this same dark section so the petal trio
+// isn't clipped at a mid-block boundary.
+import Link from "next/link";
 import PetalBackground from "./PetalBackground";
 
 export default function Founder() {
@@ -14,7 +17,8 @@ export default function Founder() {
             dur: "22s",
             del: "-16s",
             size: 720,
-            opacity: 0.38,
+            opacity: 0.5,
+            dark: true,
           },
         ]}
       />
@@ -73,6 +77,14 @@ export default function Founder() {
             <span>GoDaddy + multiple growth agencies</span>
           </div>
         </div>
+      </div>
+      <div className="wrap founder-cta">
+        <aside className="cta-block">
+          <p>The fastest path to more booked consults.</p>
+          <Link className="btn" href="/free-audit/">
+            Get a free marketing audit
+          </Link>
+        </aside>
       </div>
     </section>
   );
