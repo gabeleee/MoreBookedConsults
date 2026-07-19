@@ -24,6 +24,8 @@ export default function Proof() {
       <div className="wrap proof-grid">
         <div>
           <p className="eyebrow">The track record</p>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="proof-logo" src="/logos/laseraway.png" alt="LaserAway" />
           <h2>These numbers came from six years at LaserAway.</h2>
           <p className="lede">
             Before More Booked Consults existed, our founder spent six years as{" "}
