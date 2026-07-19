@@ -18,6 +18,7 @@ export type ParallaxTrio = Placement & {
   del?: string; // sway delay (--del)
   size: number; // svg width/height in px
   opacity?: number;
+  dark?: boolean; // use the dark-fill trio (for dark-bg sections)
 };
 
 type Props = {
@@ -45,7 +46,7 @@ export default function PetalBackground({ petals = [], trios = [] }: Props) {
         );
       })}
       {trios.map((t, i) => {
-        const { speed, dur, del, size, opacity, ...pos } = t;
+        const { speed, dur, del, size, opacity, dark, ...pos } = t;
         const bigStyle = {
           "--dur": dur ?? "18s",
           "--del": del ?? "0s",
@@ -66,7 +67,7 @@ export default function PetalBackground({ petals = [], trios = [] }: Props) {
               height={size}
               aria-hidden="true"
             >
-              <use href="#petalTrio" />
+              <use href={dark ? "#petalTrioDark" : "#petalTrio"} />
             </svg>
           </div>
         );
