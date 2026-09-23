@@ -44,7 +44,7 @@ export default function Results() {
         <div className="wrap">
           <div className="r-hero-top">
             <div className="r-hero-intro">
-          <p className="eyebrow">Results · LaserAway · 2017–2022</p>
+          <p className="eyebrow">Results · LaserAway · 2018–2023</p>
           <h1>The numbers this practice is built on.</h1>
           <p className="lede">
             Before More Booked Consults existed, founder Gabe Meierotto spent six
@@ -77,7 +77,7 @@ export default function Results() {
             <div className="who">
               <b>Gabe Meierotto</b>
               <span>
-                Director of CRO at LaserAway, 2017–2022 · Now founder, More
+                Director of CRO at LaserAway, 2018–2023 · Now founder, More
                 Booked Consults
               </span>
             </div>
@@ -90,7 +90,7 @@ export default function Results() {
             <div className="r-hero-stat">
               <div className="n">3% → 11%</div>
               <div className="l">Sitewide conversion</div>
-              <div className="s">LaserAway · 2017–2022</div>
+              <div className="s">LaserAway · 2018–2023</div>
             </div>
             <div className="r-hero-stat">
               <div className="n">210x</div>
@@ -154,7 +154,7 @@ export default function Results() {
             <ChartCard
               title="Sitewide conversion rate"
               range="3% → 11%"
-              meta="LaserAway · 2017–2022 · Quarterly"
+              meta="LaserAway · 2018–2023 · Quarterly"
               delta="▲ +267%"
               caption="Sitewide conversion during Gabe's six years running the testing program at LaserAway."
             >
@@ -173,7 +173,7 @@ export default function Results() {
                 <div className="n">6 yrs</div>
                 <div className="t">
                   <b>One owner of the roadmap.</b> Gabe ran the testing program
-                  end to end from 2017 to 2022.
+                  end to end from 2018 to 2023.
                 </div>
               </div>
               <div className="r-side-stat">
@@ -331,7 +331,7 @@ export default function Results() {
             <p>
               <b>Every experiment below ran on Gabe&apos;s roadmap at
               LaserAway.</b> He owned the hypotheses, the prioritization, and
-              the results reporting from 2017 to 2022.
+              the results reporting from 2018 to 2023.
             </p>
           </div>
 
