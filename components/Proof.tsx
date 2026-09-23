@@ -53,7 +53,7 @@ export default function Proof() {
               <b>Gabe Meierotto</b>
               <span>
                 Founder, More Booked Consults · Director of CRO at LaserAway,
-                2017–2022
+                2018–2023
               </span>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function Proof() {
         <ChartCard
           title="Sitewide conversion rate"
           range="3% → 11%"
-          meta="LaserAway · 2017–2022 · Quarterly"
+          meta="LaserAway · 2018–2023 · Quarterly"
           delta="▲ +267%"
           caption="Sitewide conversion during Gabe's six years running the testing program at LaserAway."
         >

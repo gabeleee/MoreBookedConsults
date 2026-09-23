@@ -1,7 +1,7 @@
 # CLAUDE.md — MoreBookedConsults.com
 
 ## What this project is
-Production site for More Booked Consults: a solo CRO + local SEO consultancy exclusively for aesthetic practices (medspas, plastic surgeons, injectors, laser clinics). Founder: Gabe Meierotto, former Director of CRO at LaserAway (2017–2022). Three services: CRO (one controlled test/month), Local SEO, and Pay-Per-Lead advertising (exclusive Facebook/Instagram leads sent to funnels Gabe builds and controls, priced per lead, with the ad spend carried by us, not the client). Sales motion: free audit → prioritized plan → monthly test + results report; Pay-Per-Lead is the non-retainer option (buy leads directly, one practice per treatment/procedure per market).
+Production site for More Booked Consults: a solo CRO + local SEO consultancy exclusively for aesthetic practices (medspas, plastic surgeons, injectors, laser clinics). Founder: Gabe Meierotto, former Director of CRO at LaserAway (2018–2023). Three services: CRO (one controlled test/month), Local SEO, and Pay-Per-Lead advertising (exclusive Facebook/Instagram leads sent to funnels Gabe builds and controls, priced per lead, with the ad spend carried by us, not the client). Sales motion: free audit → prioritized plan → monthly test + results report; Pay-Per-Lead is the non-retainer option (buy leads directly, one practice per treatment/procedure per market).
 
 The approved design source of truth is `morebookedconsults-v18.html` (self-contained mockup). The build ports it to Next.js (App Router). Visual output must match the mockup.
 
@@ -11,7 +11,7 @@ The approved design source of truth is `morebookedconsults-v18.html` (self-conta
 - Aesthetic industry only. Never broaden copy to dentists, chiro, or general healthcare.
 - Tone: direct, numbers-driven, zero agency fluff, written for practice owners (never patients).
 - Canonical brand string everywhere (schema, footer, bylines): "More Booked Consults" (never MBC or MoreBookedConsults in prose).
-- No em dashes (—) anywhere in copy. Use commas, colons, parentheses, or separate sentences instead. En dashes in number ranges (2017–2022, 40–60%) are fine; the arrow → in "3% → 11%" is fine.
+- No em dashes (—) anywhere in copy. Use commas, colons, parentheses, or separate sentences instead. En dashes in number ranges (2018–2023, 40–60%) are fine; the arrow → in "3% → 11%" is fine.
 - One sentence per paragraph in body prose. Put a blank line (paragraph break) after each sentence so text never becomes a wall — this reads far better on mobile. Bullet lists, headings, short callouts, at-a-glance bullets, and FAQ answers are exempt (already broken up). Article depth: hubs/money pages/cluster heads ~1,300–1,500 substantive words is the practical bar (not thin); the topical map's higher targets are aspirational.
 
 ## Design system (match mockup exactly)
@@ -22,7 +22,7 @@ The approved design source of truth is `morebookedconsults-v18.html` (self-conta
 - Background motion (all disabled under prefers-reduced-motion), two independent layers:
   1. Small petals: CSS drift animation (vertical + slight rotation).
   2. Oversized petal trios (7 sections): sway animation on the SVG element + scroll parallax on a wrapper div. Keep as two separate elements so transforms don't conflict.
-- Charts: hand-built inline SVGs (mono uppercase title, metric range, timeframe caption, ▲ delta badge, gridlines, endpoint labels). Main chart: 3% → 11% conversion line, LaserAway 2017–2022.
+- Charts: hand-built inline SVGs (mono uppercase title, metric range, timeframe caption, ▲ delta badge, gridlines, endpoint labels). Main chart: 3% → 11% conversion line, LaserAway 2018–2023.
 - Interactive revenue calculator in "The math" section (two sliders → live Today vs 2× bars).
 - Sticky mobile CTA that hides when either audit form is in view.
 

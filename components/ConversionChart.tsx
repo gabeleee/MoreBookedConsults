@@ -6,7 +6,7 @@ export default function ConversionChart() {
     <svg
       viewBox="0 0 560 290"
       role="img"
-      aria-label="Line chart: sitewide conversion rate rising from 3 percent in 2017 to 11 percent in 2022"
+      aria-label="Line chart: sitewide conversion rate rising from 3 percent in 2018 to 11 percent in 2023"
     >
       <line className="grid" x1="52" y1="250" x2="545" y2="250" />
       <line className="grid" x1="52" y1="192" x2="545" y2="192" />
@@ -29,22 +29,22 @@ export default function ConversionChart() {
         12%
       </text>
       <text className="ax" x="60" y="272">
-        2017
-      </text>
-      <text className="ax" x="155" y="272">
         2018
       </text>
-      <text className="ax" x="250" y="272">
+      <text className="ax" x="155" y="272">
         2019
       </text>
-      <text className="ax" x="345" y="272">
+      <text className="ax" x="250" y="272">
         2020
       </text>
-      <text className="ax" x="440" y="272">
+      <text className="ax" x="345" y="272">
         2021
       </text>
-      <text className="ax" x="518" y="272">
+      <text className="ax" x="440" y="272">
         2022
+      </text>
+      <text className="ax" x="518" y="272">
+        2023
       </text>
       <path
         fill="url(#areaGrad)"
