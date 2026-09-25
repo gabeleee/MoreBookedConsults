@@ -448,7 +448,7 @@ export function Matrix({
       {title && <p className="vk-fig-title">{title}</p>}
       <Reveal className={`vk-matrix${best ? ` vk-best-${best}` : ""}`}>
         <div className="vk-matrix-plot">
-          <span className="vk-matrix-best" aria-hidden="true" />
+          {best && <span className="vk-matrix-best" aria-hidden="true" />}
           {children}
         </div>
         <ol className="vk-matrix-legend">
