@@ -50,6 +50,15 @@ Forms are front-end only for now, but ALL submissions route through one stub fun
 - Deploy target: Vercel.
 - Email on site: hello@morebookedconsults.com — live, forwards to Gabe's personal inbox for now. Audit submissions email here via `/api/audit` (Resend: set `RESEND_API_KEY` + `AUDIT_FROM_EMAIL`; optional `CRM_WEBHOOK_URL`). Without those env vars the API logs instead of sending. See `.env.example`.
 
+## Visual kit (use on every new article and money page)
+Text-heavy pages underperform; every NEW page ships with 2–3 visuals where they fit (Gabe, 2026-09-25). Components live in `components/mdx/Visuals.tsx` (CSS: the "visual kit" block at the end of `app/globals.css`, all classes `vk-`), registered in `components/mdx/MdxComponents.tsx`. Reference pages: `content/money/laser-clinic-seo.mdx`, `content/money/plastic-surgery-marketing-consultant.mdx`, `content/blog/how-to-grow-a-plastic-surgery-practice.mdx`.
+- String props + MDX children only (next-mdx-remote blocks JS expressions, so no `{[...]}`); blank lines around markdown inside a component.
+- Pick by content shape: 3–6 parallel items → `<Cards>`/`<Card icon title>` (4 = 2×2, avoid 5); a sequence → `<Steps>`/`<Step title>`; X vs Y → `<Compare>`/`<Side title tone="yes|no|neutral">`; a to-do list → `<Checklist>` around a markdown list; a funnel → `<Funnel>`/`<Stage label value width>`; a formula → `<Equation result>`/`<Term label note>`; worked-example numbers → `<Bars>`/`<Bar label value display highlight>`; options by two qualities → `<Matrix xLow xHigh yLow yHigh best>`/`<Dot x y label>`; seasonality → `<Season work build peak>`; local-SEO pages → `<LocalPack>`.
+- Icons: pin star page link chart calendar search shield clock zap target funnel check x sun.
+- Visuals never add claims: chart numbers must be in the page or simple arithmetic on them, and examples are captioned "Illustrative". No invented benchmarks or client results.
+- Animations are scroll-triggered by `Reveal.tsx`; the server renders the final state, and reduced motion is respected. New components: append with the `vk-` prefix; don't restyle existing ones.
+- Verify visually at 1100px and 390px. Screenshots ONLY via Playwright's `chrome-headless-shell` with `--use-mock-keychain` (other Chrome binaries pop keychain dialogs and hang); to see lower on a page, frame it in an offset iframe.
+
 ## Workflow rules for every Claude Code session
 - Work on feature branches, never directly on main.
 - Use plan mode for big changes; the user approves the approach first.
