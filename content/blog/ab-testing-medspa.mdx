@@ -57,27 +57,75 @@ A large change to the form or the offer produces an effect big enough to detect 
 
 Two mistakes kill most homegrown testing.
 
-The first is stopping early because a variation "looks like it's winning." Early leads reverse constantly, and calling it before significance is just reading tea leaves.
+<Compare>
 
-The second is peeking and re-deciding daily, which quietly inflates your false-positive rate until you're shipping changes that do nothing.
+<Side title="What kills homegrown tests" tone="no">
 
-A valid test runs to a predetermined sample or duration, then you look once and decide.
+- Stopping early because a variation "looks like it's winning": early leads reverse constantly, and calling it before significance is just reading tea leaves
+- Peeking and re-deciding daily, which quietly inflates your false-positive rate until you're shipping changes that do nothing
+
+</Side>
+
+<Side title="A valid test" tone="yes">
+
+- Runs to a predetermined sample or duration
+- Then you look once and decide
+
+</Side>
+
+</Compare>
 
 ## <span className="he">🎯</span> Picking hypotheses that can win big
 
 Since you only get a few tests a year, spend them where the upside is largest.
 
-- **Booking forms:** [multi-step vs single-step](/blog/medspa-multi-step-forms/) is usually the biggest single win available.
-- **Offers:** framing and placement of the intro offer.
-- **Page structure:** what's above the fold, and how the booking path is presented.
+<Cards>
+
+<Card icon="funnel" title="Booking forms">
+
+[Multi-step vs single-step](/blog/medspa-multi-step-forms/) is usually the biggest single win available.
+
+</Card>
+
+<Card icon="target" title="Offers">
+
+Framing and placement of the intro offer.
+
+</Card>
+
+<Card icon="page" title="Page structure">
+
+What's above the fold, and how the booking path is presented.
+
+</Card>
+
+</Cards>
 
 Button colors and micro-copy can matter, but they're rounding errors next to these, so they don't earn a month of traffic.
 
 ## <span className="he">📊</span> Reading results without fooling yourself
 
+<Steps>
+
+<Step title="Pick the real metric">
+
 Judge the outcome on your real metric, [booked consults](/blog/medspa-conversion-rate-benchmarks/), not on clicks or form starts.
 
-Let the test reach its planned size before you look, then act on the result even if it's not the one you hoped for.
+</Step>
+
+<Step title="Wait for the planned size">
+
+Let the test reach its planned size before you look.
+
+</Step>
+
+<Step title="Act on the result">
+
+Act on the result even if it's not the one you hoped for.
+
+</Step>
+
+</Steps>
 
 A flat or losing test is still valuable: it tells you where *not* to spend effort, and it protects you from shipping a change that would have quietly cost bookings.
 
