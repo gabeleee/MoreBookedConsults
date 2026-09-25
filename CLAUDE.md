@@ -47,7 +47,7 @@ Forms are front-end only for now, but ALL submissions route through one stub fun
 ## Build conventions
 - Port the mockup's vanilla CSS as-is (CSS Modules or global stylesheet). Do NOT rewrite in Tailwind.
 - Components: Header/Logo, Hero, AuditForm (reused 2×), ChartCard, PhotoBand items, Levers, Founder, ProcessSteps, MathCalculator, Footer, PetalBackground (small petals + parallax trios).
-- Deploy target: Vercel.
+- Deploy target: Vercel. Deploys are BATCHED (since 2026-09-25, same as the job boards): pushes to main do NOT build (Vercel Ignored Build Step skips every git build unless the commit message contains `[deploy-now]`); `.github/workflows/deploy-content.yml` deploys main at 10 AM / 3 PM / 8 PM Chicago and skips when production already has HEAD. Urgent: `[deploy-now]` in the commit message or `gh workflow run "Deploy content (batched)" -R gabeleee/MoreBookedConsults`. Pushed work is live within a few hours, not instantly; don't remove the ignore step to "fix" that.
 - Email on site: hello@morebookedconsults.com — live, forwards to Gabe's personal inbox for now. Audit submissions email here via `/api/audit` (Resend: set `RESEND_API_KEY` + `AUDIT_FROM_EMAIL`; optional `CRM_WEBHOOK_URL`). Without those env vars the API logs instead of sending. See `.env.example`.
 
 ## Visual kit (use on every new article and money page)

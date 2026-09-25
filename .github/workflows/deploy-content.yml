@@ -1,0 +1,55 @@
+# Batched production deploys (same setup as the job boards).
+#
+# Vercel's Ignored Build Step (project setting) skips every Git-triggered build:
+# previews always, and production unless the commit message contains
+# [deploy-now]. This workflow deploys main on a schedule instead, so a day of
+# pushes costs at most three builds.
+#
+# CLI deploys bypass the Ignored Build Step, which is what makes this work.
+# It skips when the current production deployment already carries HEAD.
+# Deploy immediately: put [deploy-now] in the commit message, or run
+#   gh workflow run "Deploy content (batched)" -R gabeleee/MoreBookedConsults
+name: Deploy content (batched)
+
+on:
+  schedule:
+    # 10 AM, 3 PM, 8 PM America/Chicago during daylight time (CDT = UTC-5).
+    # GitHub cron is UTC-only: on standard time (CST, Nov-Mar) these fire an
+    # hour earlier (9 AM, 2 PM, 7 PM). GitHub often runs crons late.
+    - cron: "0 1,15,20 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-content
+  cancel-in-progress: false
+
+env:
+  VERCEL_ORG_ID: team_RMrUzQmTAmnH14wCsVqLVTac
+  VERCEL_PROJECT_ID: prj_0vKnqIG1RFpVW6KsvLjYB74dABfP
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Skip if production already has HEAD
+        id: check
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          set -euo pipefail
+          current=$(curl -sf "https://api.vercel.com/v6/deployments?teamId=$VERCEL_ORG_ID&projectId=$VERCEL_PROJECT_ID&target=production&state=READY&limit=1" \
+            -H "Authorization: Bearer $VERCEL_TOKEN" \
+            | python3 -c 'import sys,json; d=json.load(sys.stdin)["deployments"]; m=d[0].get("meta",{}) if d else {}; print(m.get("contentSha") or m.get("githubCommitSha") or "")')
+          echo "production sha: ${current:-none} | HEAD: $GITHUB_SHA"
+          if [ "$current" = "$GITHUB_SHA" ]; then echo "skip=true" >> "$GITHUB_OUTPUT"; else echo "skip=false" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Deploy main to production
+        if: steps.check.outputs.skip == 'false'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          npx --yes vercel@latest deploy --prod --yes --token="$VERCEL_TOKEN" \
+            --meta contentSha="$GITHUB_SHA" --meta trigger=deploy-content
