@@ -12,7 +12,7 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
       { href: "/medspa-marketing-agency/", label: "Marketing Agency" },
       { href: "/medspa-cro/", label: "Conversion (CRO)" },
       { href: "/medspa-seo/", label: "Local SEO" },
-      { href: "/medspa-advertising/", label: "Pay-Per-Lead" },
+      { href: "/medspa-advertising/", label: "Managed Ads" },
       { href: "/medspa-lead-generation/", label: "Lead Generation" },
       { href: "/medspa-marketing-cost/", label: "What It Costs" },
     ],
@@ -24,7 +24,7 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
       { href: "/plastic-surgery-marketing-agency/", label: "Marketing Agency" },
       { href: "/plastic-surgery-cro/", label: "Conversion (CRO)" },
       { href: "/plastic-surgery-seo/", label: "Local SEO" },
-      { href: "/plastic-surgeon-advertising/", label: "Pay-Per-Lead" },
+      { href: "/plastic-surgeon-advertising/", label: "Managed Ads" },
       { href: "/plastic-surgery-lead-generation/", label: "Lead Generation" },
       { href: "/plastic-surgery-marketing-cost/", label: "What It Costs" },
     ],
@@ -75,7 +75,7 @@ export default function Footer() {
           <div>
             <Logo />
             <p className="foot-note">
-              CRO + Local SEO + Pay-Per-Lead · Aesthetic practices
+              CRO + Local SEO + Managed Ads · Aesthetic practices
             </p>
           </div>
           <div>

@@ -1,4 +1,4 @@
-// Three Levers section (CRO + Local SEO + Pay-Per-Lead), ported from the v18
+// Three Levers section (CRO + Local SEO + managed Meta ads), ported from the v18
 // mockup (lines 512-606). Each lever's chart renders through the reusable
 // ChartCard. Keep this copy to those three services, never broaden it further.
 import PetalBackground from "./PetalBackground";
@@ -30,7 +30,7 @@ export default function Levers() {
             <p className="eyebrow">Three levers. Nothing else.</p>
             <h2>
               Convert the traffic you have. <em>Rank</em> for the traffic you
-              don&apos;t. <em>Buy</em> the leads you&apos;re missing.
+              don&apos;t. <em>Advertise</em> to the patients you&apos;re missing.
             </h2>
           </div>
           <div className="head-photo">
@@ -172,7 +172,7 @@ export default function Levers() {
             </ChartCard>
           </div>
 
-          {/* Lever 03, Pay-Per-Lead, full-width row below the first two */}
+          {/* Lever 03, managed Meta ads, full-width row below the first two */}
           <div className="lever lever-wide">
             <div className="lever-wide-text">
               <span className="pillar-icon" aria-hidden="true">
@@ -182,30 +182,29 @@ export default function Levers() {
                 </svg>
               </span>
               <p className="eyebrow">Lever 03</p>
-              <h3>Pay-Per-Lead advertising</h3>
+              <h3>Managed Meta ads</h3>
               <p>
-                Facebook ads sent to conversion-tested funnels I control, never
-                to a leaky website. Exclusive leads, one practice per market,
-                priced per lead.
+                Facebook and Instagram ads sent to landing pages I build and
+                test, never to a leaky homepage. Fresh static creative every
+                month, and the ad spend goes straight from you to Meta.
               </p>
               <div className="tags">
-                <span className="tag">Multi-step funnels</span>
-                <span className="tag">Exclusive leads</span>
-                <span className="tag">$30–35/lead</span>
-                <span className="tag">Instant SMS follow-up</span>
-                <span className="tag">I carry the ad spend</span>
+                <span className="tag">Static ad creative</span>
+                <span className="tag">Tested landing pages</span>
+                <span className="tag">Monthly A/B test</span>
+                <span className="tag">No markup on spend</span>
               </div>
             </div>
             <ChartCard
-              title="Cost per lead"
-              meta="Botox · Exclusive · Flat"
-              delta="$35 flat"
-              caption="What you pay never moves. What it costs me to earn it is my problem."
+              title="Ad click-through rate"
+              meta="Static ads · 12 weeks"
+              delta="Fresh monthly"
+              caption="Illustrative: one ad wears out as the same people keep seeing it. A new batch every month keeps the feed from going stale."
             >
               <svg
                 viewBox="0 0 520 190"
                 role="img"
-                aria-label="A flat line showing your fixed $35 cost per lead against a fluctuating line showing what each lead actually costs to acquire"
+                aria-label="Illustrative line chart: a single ad's click-through rate decays over twelve weeks, while monthly creative refreshes keep it near its starting level"
               >
                 <line className="grid" x1="10" y1="160" x2="510" y2="160" />
                 <line className="grid" x1="10" y1="112" x2="510" y2="112" />
@@ -215,26 +214,27 @@ export default function Levers() {
                   stroke="#CBC4F5"
                   strokeWidth="3"
                   strokeLinecap="round"
-                  d="M20 96 C 70 58, 110 132, 160 92 C 205 56, 255 122, 305 74 C 355 34, 405 120, 455 86 C 480 68, 495 96, 500 84"
+                  d="M20 50 C 120 70, 200 100, 280 118 C 360 134, 430 142, 500 146"
                 />
-                <line
-                  x1="20"
-                  y1="74"
-                  x2="500"
-                  y2="74"
+                <path
+                  fill="none"
                   stroke="#6C57E8"
                   strokeWidth="3"
                   strokeLinecap="round"
+                  d="M20 50 C 70 60, 130 78, 180 88 L 180 46 C 230 56, 290 76, 340 86 L 340 42 C 390 52, 450 70, 500 80"
                 />
-                <circle cx="500" cy="74" r="5.5" fill="#6C57E8" />
-                <text className="pt-label" x="500" y="62" textAnchor="end">
-                  $35 flat
+                <circle cx="500" cy="80" r="5.5" fill="#6C57E8" />
+                <text className="pt-label" x="490" y="102" textAnchor="end">
+                  Refreshed
+                </text>
+                <text className="ax" x="500" y="136" textAnchor="end">
+                  One ad, never refreshed
                 </text>
                 <text className="ax" x="20" y="178">
-                  Your price
+                  Wk 1
                 </text>
                 <text className="ax" x="500" y="178" textAnchor="end">
-                  My cost to earn it
+                  Wk 12
                 </text>
               </svg>
             </ChartCard>

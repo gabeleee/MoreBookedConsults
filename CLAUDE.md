@@ -1,7 +1,8 @@
 # CLAUDE.md — MoreBookedConsults.com
 
 ## What this project is
-Production site for More Booked Consults: a solo CRO + local SEO consultancy exclusively for aesthetic practices (medspas, plastic surgeons, injectors, laser clinics). Founder: Gabe Meierotto, former Director of CRO at LaserAway (2018–2023). Three services: CRO (one controlled test/month), Local SEO, and Pay-Per-Lead advertising (exclusive Facebook/Instagram leads sent to funnels Gabe builds and controls, priced per lead, with the ad spend carried by us, not the client). Sales motion: free audit → prioritized plan → monthly test + results report; Pay-Per-Lead is the non-retainer option (buy leads directly, one practice per treatment/procedure per market).
+Production site for More Booked Consults: a solo CRO + local SEO consultancy exclusively for aesthetic practices (medspas, plastic surgeons, injectors, laser clinics). Founder: Gabe Meierotto, former Director of CRO at LaserAway (2018–2023). Three services: CRO ($2,500/mo, one controlled test/month), Local SEO ($2,500/mo), CRO + Local SEO together $5,000/mo, and managed Meta ads ($3,000/mo flat + $2,500 one-time setup, 3-month minimum; static image ads only, 8–12/month, landing pages Gabe builds, one landing-page A/B test/month; ad spend paid by the client directly to Meta, $3,000/mo minimum, never marked up, never a percentage of spend). No bundle discount on ads. Sales motion: free audit → prioritized plan → monthly test + results report.
+- Pay-Per-Lead was RETIRED 2026-09-25 (Gabe can't fund carrying ad spend). Never reintroduce per-lead pricing, "we carry the ad spend", market exclusivity, or video ads.
 
 The approved design source of truth is `morebookedconsults-v18.html` (self-contained mockup). The build ports it to Next.js (App Router). Visual output must match the mockup.
 
@@ -28,7 +29,7 @@ The approved design source of truth is `morebookedconsults-v18.html` (self-conta
 
 ## Audit form (one component, rendered twice: hero + bottom)
 Four steps (the practice-type step is an addition to the v18 mockup, mandated by the topical map):
-1. "What are you looking for?" — option cards, auto-advance: convert traffic / more Google traffic / new leads from paid ads (Pay-Per-Lead) / bit of everything / not sure. (30px heading.)
+1. "What are you looking for?" — option cards, auto-advance: convert traffic / more Google traffic / new leads from paid ads (Managed Ads) / bit of everything / not sure. (30px heading.)
 2. "What kind of practice?" — option cards, auto-advance: Med spa / Plastic surgery / Injector / Laser clinic. (Routing + segmentation + B3 case-study evidence. 30px heading.)
 3. Consult-value slider with "I don't know — skip this."
 4. Name / email / website + success state.
