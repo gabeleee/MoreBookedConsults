@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
         destination: "/plastic-surgery-lead-generation/",
         permanent: true,
       },
+      {
+        source: "/blog/plastic-surgery-lead-follow-up/",
+        destination: "/blog/plastic-surgery-lead-management/",
+        permanent: true,
+      },
     ];
   },
 };
