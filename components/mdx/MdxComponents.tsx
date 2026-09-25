@@ -1,5 +1,24 @@
 import Link from "next/link";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import {
+  Cards,
+  Card,
+  Steps,
+  Step,
+  Compare,
+  Side,
+  Checklist,
+  Funnel,
+  Stage,
+  LocalPack,
+  Season,
+  Equation,
+  Term,
+  Bars,
+  Bar,
+  Matrix,
+  Dot,
+} from "./Visuals";
 
 // Component map passed to <MDXRemote>. Body elements (h2/p/ul/table/…) are
 // styled by the .article-body container in globals.css. Everything below is an
@@ -155,4 +174,21 @@ export const mdxComponents = {
   Stats,
   Stat,
   CTA,
+  Cards,
+  Card,
+  Steps,
+  Step,
+  Compare,
+  Side,
+  Checklist,
+  Funnel,
+  Stage,
+  LocalPack,
+  Season,
+  Equation,
+  Term,
+  Bars,
+  Bar,
+  Matrix,
+  Dot,
 };

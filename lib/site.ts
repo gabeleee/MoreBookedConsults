@@ -4,6 +4,7 @@ export const SITE = {
   name: "More Booked Consults",
   url: "https://morebookedconsults.com",
   email: "hello@morebookedconsults.com",
+  gaId: "G-FS79BPHH7X", // GA4 property, added 2026-09-25
   description:
     "Conversion optimization and local SEO, exclusively for medspas, plastic surgeons, and other aesthetic practices.",
   founder: {

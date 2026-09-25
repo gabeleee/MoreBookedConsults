@@ -26,6 +26,7 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
       { href: "/plastic-surgery-seo/", label: "Local SEO" },
       { href: "/plastic-surgeon-advertising/", label: "Managed Ads" },
       { href: "/plastic-surgery-lead-generation/", label: "Lead Generation" },
+      { href: "/plastic-surgery-marketing-consultant/", label: "Marketing Consultant" },
       { href: "/plastic-surgery-marketing-cost/", label: "What It Costs" },
     ],
   },

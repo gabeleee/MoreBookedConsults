@@ -25,6 +25,15 @@ export async function submitAudit(
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
     });
+    // GA4 key event, so each lead ties back to the landing page it came from.
+    // No personal details are sent, only the segmentation answers.
+    if (res.ok) {
+      const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+      w.gtag?.("event", "generate_lead", {
+        practice: data.practice ?? "unknown",
+        need: data.need ?? "unknown",
+      });
+    }
     return { ok: res.ok };
   } catch (err) {
     console.error("[submitAudit] request failed", err);
