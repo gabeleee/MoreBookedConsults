@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { Children, isValidElement, type ReactNode } from "react";
 import Reveal from "./Reveal";
 
 // Visual kit for money pages and articles. Every component takes string
@@ -327,5 +327,153 @@ export function Season({
       </Reveal>
       {caption && <figcaption className="vk-fig-cap">{caption}</figcaption>}
     </figure>
+  );
+}
+
+// ---- Equation: terms joined by an operator, ending in a result ----
+export function Equation({
+  title,
+  result,
+  caption,
+  op = "×",
+  children,
+}: {
+  title?: string;
+  result: string;
+  caption?: string;
+  op?: string;
+  children: ReactNode;
+}) {
+  const terms = Array.isArray(children) ? children.filter(Boolean) : [children];
+  return (
+    <figure className="vk-figure">
+      {title && <p className="vk-fig-title">{title}</p>}
+      <Reveal className="vk-eq">
+        {terms.map((t, i) => (
+          <span key={i} className="vk-eq-part">
+            {i > 0 && (
+              <span className="vk-eq-op" aria-hidden="true">
+                {op}
+              </span>
+            )}
+            {t}
+          </span>
+        ))}
+        <span className="vk-eq-part">
+          <span className="vk-eq-op" aria-hidden="true">
+            =
+          </span>
+          <span className="vk-term vk-term-result">
+            <span className="vk-term-label">{result}</span>
+          </span>
+        </span>
+      </Reveal>
+      {caption && <figcaption className="vk-fig-cap">{caption}</figcaption>}
+    </figure>
+  );
+}
+export function Term({ label, note }: { label: string; note?: string }) {
+  return (
+    <span className="vk-term">
+      <span className="vk-term-label">{label}</span>
+      {note && <span className="vk-term-note">{note}</span>}
+    </span>
+  );
+}
+
+// ---- Bars: single-series horizontal bar chart with direct labels ----
+// value = bar length relative to the largest bar; display = the printed label.
+export function Bars({
+  title,
+  caption,
+  children,
+}: {
+  title?: string;
+  caption?: string;
+  children: ReactNode;
+}) {
+  return (
+    <figure className="vk-figure">
+      {title && <p className="vk-fig-title">{title}</p>}
+      <Reveal className="vk-bars">{children}</Reveal>
+      {caption && <figcaption className="vk-fig-cap">{caption}</figcaption>}
+    </figure>
+  );
+}
+export function Bar({
+  label,
+  value,
+  display,
+  highlight,
+}: {
+  label: string;
+  value: string;
+  display: string;
+  highlight?: string;
+}) {
+  return (
+    <div className={`vk-bar${highlight ? " vk-bar-hi" : ""}`} title={`${label}: ${display}`}>
+      <span className="vk-bar-label">{label}</span>
+      <span className="vk-bar-track">
+        <span className="vk-bar-fill" style={{ width: `${value}%` }} />
+        <span className="vk-bar-value">{display}</span>
+      </span>
+    </div>
+  );
+}
+
+// ---- Matrix: 2x2 map of options by two qualitative axes ----
+// x and y are 0-100 (x: left to right, y: bottom to top).
+export function Matrix({
+  title,
+  caption,
+  xLow,
+  xHigh,
+  yLow,
+  yHigh,
+  best = "",
+  children,
+}: {
+  title?: string;
+  caption?: string;
+  xLow: string;
+  xHigh: string;
+  yLow: string;
+  yHigh: string;
+  best?: "tl" | "tr" | "bl" | "br" | "";
+  children: ReactNode;
+}) {
+  return (
+    <figure className="vk-figure">
+      {title && <p className="vk-fig-title">{title}</p>}
+      <Reveal className={`vk-matrix${best ? ` vk-best-${best}` : ""}`}>
+        <div className="vk-matrix-plot">
+          <span className="vk-matrix-best" aria-hidden="true" />
+          {children}
+        </div>
+        <ol className="vk-matrix-legend">
+          {Children.toArray(children).map((c, i) =>
+            isValidElement<{ label: string }>(c) ? <li key={i}>{c.props.label}</li> : null,
+          )}
+        </ol>
+        <span className="vk-matrix-y vk-matrix-yhigh">{yHigh}</span>
+        <span className="vk-matrix-y vk-matrix-ylow">{yLow}</span>
+        <span className="vk-matrix-x vk-matrix-xlow">{xLow}</span>
+        <span className="vk-matrix-x vk-matrix-xhigh">{xHigh}</span>
+      </Reveal>
+      {caption && <figcaption className="vk-fig-cap">{caption}</figcaption>}
+    </figure>
+  );
+}
+export function Dot({ x, y, label }: { x: string; y: string; label: string }) {
+  const left = Number(x);
+  return (
+    <span
+      className={`vk-dot${left > 60 ? " vk-dot-flip" : ""}`}
+      style={{ left: `${x}%`, bottom: `${y}%` }}
+    >
+      <span className="vk-dot-mark" />
+      <span className="vk-dot-label">{label}</span>
+    </span>
   );
 }

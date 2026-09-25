@@ -12,6 +12,12 @@ import {
   Stage,
   LocalPack,
   Season,
+  Equation,
+  Term,
+  Bars,
+  Bar,
+  Matrix,
+  Dot,
 } from "./Visuals";
 
 // Component map passed to <MDXRemote>. Body elements (h2/p/ul/table/…) are
@@ -179,4 +185,10 @@ export const mdxComponents = {
   Stage,
   LocalPack,
   Season,
+  Equation,
+  Term,
+  Bars,
+  Bar,
+  Matrix,
+  Dot,
 };

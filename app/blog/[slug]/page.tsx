@@ -35,6 +35,9 @@ function formatDate(iso?: string) {
     year: "numeric",
     month: "long",
     day: "numeric",
+    // Frontmatter dates are calendar days; format in UTC so a build in a
+    // US time zone doesn't shift them back a day.
+    timeZone: "UTC",
   });
 }
 
