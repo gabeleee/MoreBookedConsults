@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import StickyCta from "@/components/StickyCta";
 import PetalParallax from "@/components/PetalParallax";
 import OrgSchema from "@/components/OrgSchema";
+import Script from "next/script";
 
 // Fonts self-hosted via next/font (no CDN <link>, no layout shift).
 // Each exposes a CSS variable consumed by :root in globals.css.
@@ -83,6 +84,13 @@ export default function RootLayout({
         <Footer />
         <StickyCta />
         <PetalParallax />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="ga4" strategy="afterInteractive">
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${SITE.gaId}');`}
+        </Script>
       </body>
     </html>
   );
