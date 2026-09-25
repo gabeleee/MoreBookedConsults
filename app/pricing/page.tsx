@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Pricing for aesthetic practices: CRO from $2,500/mo, local SEO from $2,000/mo, or exclusive Pay-Per-Lead advertising from $30/lead. Senior-level, one operator.",
+    "Pricing for aesthetic practices: CRO $2,500/mo, local SEO $2,500/mo, CRO + local SEO $5,000/mo, or managed Meta ads $3,000/mo. Senior-level, one operator.",
   alternates: { canonical: "/pricing/" },
 };
 
@@ -64,7 +64,7 @@ export default function Pricing() {
               <span className="tier">Local SEO</span>
               <h3>Local SEO</h3>
               <div className="price">
-                $2,000<span>/mo</span>
+                $2,500<span>/mo</span>
               </div>
               <p className="tier-desc">
                 Rank for the treatments and procedures patients search in your
@@ -81,7 +81,7 @@ export default function Pricing() {
               </Link>
             </div>
 
-            {/* Pay-Per-Lead, the non-retainer offering */}
+            {/* Managed Meta ads: client pays Meta directly, flat fee */}
             <div className="pricing-card featured">
               <span className="pricing-badge">New</span>
               <span className="pillar-icon" aria-hidden="true">
@@ -90,27 +90,31 @@ export default function Pricing() {
                   <path d="M11.6 16.8a3 3 0 1 1-5.8-1.6" />
                 </svg>
               </span>
-              <span className="tier">Pay-Per-Lead</span>
-              <h3>Pay-Per-Lead advertising</h3>
+              <span className="tier">Paid ads</span>
+              <h3>Managed Meta ads</h3>
               <div className="price">
-                from $30<span>/lead</span>
+                $3,000<span>/mo</span>
               </div>
               <p className="tier-desc">
-                Facebook ads to funnels I build and control. You buy the leads, I
-                carry the ad spend.
+                Facebook and Instagram ads sent to landing pages built to
+                convert, not to your homepage.
               </p>
               <ul className="feature-list">
-                <li>$35/lead Botox · $30/lead laser hair removal</li>
-                <li>$1,000 one-time funnel setup, 100-lead monthly minimum</li>
-                <li>Exclusive: one practice per treatment, per market</li>
-                <li>Real-time delivery to your inbox &amp; CRM, instant SMS follow-up</li>
-                <li>Duplicates and out-of-area leads credited, never billed</li>
+                <li>$2,500 one-time setup: tracking, first landing page, first ad batch</li>
+                <li>8–12 fresh static ads / month</li>
+                <li>One landing-page A/B test / month</li>
+                <li>Ad spend paid by you directly to Meta, never marked up ($3,000/mo minimum)</li>
+                <li>3-month minimum, plain-English monthly report</li>
               </ul>
               <Link className="btn" href="/get-leads/">
                 Get more leads from ads
               </Link>
             </div>
           </div>
+          <p className="pricing-bundle">
+            <strong>CRO + Local SEO: $5,000/mo.</strong> Both retainers together,
+            one plan, one monthly report.
+          </p>
         </div>
       </section>
 
@@ -122,14 +126,11 @@ export default function Pricing() {
             required.
           </p>
           <p>
-            CRO and local SEO are flat monthly rates for the work itself; if you
-            run your own ads alongside them, that spend is billed to you directly
-            by the platforms, never marked up.
+            Every service is a flat monthly rate for the work itself.
           </p>
           <p>
-            Pay-Per-Lead is the opposite arrangement on purpose: the ad spend is
-            mine, the funnel is mine, and the only thing on your invoice is the
-            leads.
+            With managed ads, the ad spend is billed to you directly by Meta,
+            never marked up and never a percentage of what you spend.
           </p>
           <p>Start with the audit.</p>
           <p>

@@ -320,7 +320,7 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .lever .tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
 .tag{font-size:13.5px;padding:6px 13px;border-radius:999px;background:var(--lilac);color:var(--ink);border:1px solid var(--line)}
 .lever .chart-card{box-shadow:none;background:var(--paper)}
-/* Lever 03 (Pay-Per-Lead): spans both columns as its own row, text beside chart */
+/* Lever 03 (Managed ads): spans both columns as its own row, text beside chart */
 .lever-wide{grid-column:1 / -1;display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:center}
 .lever-wide .chart-card{align-self:center}
 @media (max-width:681px){.lever-wide{grid-template-columns:1fr}}
@@ -448,6 +448,8 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .pricing-hero .lede{font-size:clamp(20px,2.6vw,27px);line-height:1.3;color:var(--ink);max-width:40ch;margin-bottom:0}
 .pricing-cards{padding-top:0}
 .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:14px;align-items:start}
+.pricing-bundle{margin:22px 0 0;padding:18px 22px;background:var(--lilac);border:1px solid var(--line);border-radius:14px;color:var(--ink);text-align:center}
+.pricing-bundle strong{color:var(--violet-deep)}
 .pricing-card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px 26px;display:flex;flex-direction:column;height:100%}
 .pricing-card.featured{border-color:var(--violet);box-shadow:0 22px 54px -28px rgba(108,87,232,.55);position:relative}
 .pricing-badge{

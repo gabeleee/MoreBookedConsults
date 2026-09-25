@@ -30,7 +30,7 @@ const NEEDS = [
     label: "More traffic from Google",
   },
   {
-    value: "New leads from paid ads (Pay-Per-Lead)",
+    value: "New leads from paid ads (Managed Ads)",
     emoji: "🎯",
     label: "New leads from paid ads",
   },
@@ -43,7 +43,7 @@ type Props = {
   idPrefix: string;
   /**
    * Pre-select a step-1 "need" and skip straight to step 2. Used by the
-   * /claim-your-market/ page so a Pay-Per-Lead click doesn't re-declare intent.
+   * /get-leads/ page so a managed-ads click doesn't re-declare intent.
    */
   presetNeed?: string;
 };
@@ -64,8 +64,8 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
   const [error, setError] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
-  // Pay-Per-Lead prospects get market-availability framing and a city field.
-  const isPPL = (need ?? "").includes("Pay-Per-Lead");
+  // Managed-ads prospects get ads-review framing and a city field.
+  const isAds = (need ?? "").includes("Managed Ads");
 
   const worthRef = useRef<HTMLInputElement>(null);
 
@@ -200,11 +200,11 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
       {/* Step 4, contact details */}
       <div className={stepClass(4)} data-step="4">
         <h3>
-          {isPPL ? "Where do I send your market check?" : "Where do I send the findings?"}
+          {isAds ? "Where do I send your ads review?" : "Where do I send the findings?"}
         </h3>
         <p className="hint">
-          {isPPL
-            ? "One email back with your market availability. No drip sequence."
+          {isAds
+            ? "One email back with what I'd run for you. No drip sequence."
             : "One email back. No drip sequence."}
         </p>
         <div className="field">
@@ -242,7 +242,7 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
             onChange={(e) => setWebsite(e.target.value)}
           />
         </div>
-        {isPPL && (
+        {isAds && (
           <div className="field">
             <label htmlFor={id("market")}>Your city / market</label>
             <input
@@ -265,7 +265,7 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
             onClick={handleSubmit}
             disabled={submitting}
           >
-            {submitting ? "Sending…" : isPPL ? "Get started" : "Send my free audit"}
+            {submitting ? "Sending…" : isAds ? "Get started" : "Send my free audit"}
           </button>
         </div>
         <button type="button" className="backlink" onClick={() => setStep(3)}>
@@ -276,12 +276,12 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
       {/* Success state */}
       <div className={`done${done ? " show" : ""}`}>
         <div className="mark">✓</div>
-        {isPPL ? (
+        {isAds ? (
           <>
             <h3>Request received.</h3>
             <p>
-              I&apos;ll check whether your market is still open and send back
-              whether Pay-Per-Lead fits your practice, within 3 business days.
+              I&apos;ll look at your site and any ads you&apos;re running, and send
+              back whether managed ads fit your practice, within 3 business days.
             </p>
           </>
         ) : (
