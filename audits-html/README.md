@@ -1,0 +1,1 @@
+Client audit pages, built in ~/aestheticamd-review (build/build.py → proposal-light.html, aesthetica-md-ads-light.html) and served by app/audits/*/route.ts. Not in the sitemap; noindex via meta + X-Robots-Tag.
