@@ -199,14 +199,16 @@ const PINS = [
 export function LocalPack({
   query = "laser hair removal near me",
   you = "Your laser clinic",
+  category = "Laser clinic",
   caption,
 }: {
   query?: string;
   you?: string;
+  category?: string;
   caption?: string;
 }) {
   const listings = [
-    { name: you, rating: "4.9", reviews: "212", meta: "Laser clinic · 0.8 mi · Book online", you: true },
+    { name: you, rating: "4.9", reviews: "212", meta: `${category} · 0.8 mi · Book online`, you: true },
     { name: "Competitor A", rating: "4.6", reviews: "140", meta: "Med spa · 1.4 mi", you: false },
     { name: "Competitor B", rating: "4.3", reviews: "58", meta: "Laser center · 2.1 mi", you: false },
   ];
