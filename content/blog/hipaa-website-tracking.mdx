@@ -52,16 +52,45 @@ Regulators have made this a real focus in healthcare, and med spas are squarely 
 
 </Callout>
 
-The problem isn't tracking in the abstract. It's the combination of identifiable data plus health context plus a third-party recipient.
+The problem isn't tracking in the abstract.
+
+<Equation title="Where the HIPAA risk comes from" result="Exposure" op="+" caption="The risk comes from the combination of all three.">
+<Term label="Identifiable data" note="Who" />
+<Term label="Health context" note="What" />
+<Term label="Third-party recipient" note="Where it goes" />
+</Equation>
 
 ## <span className="he">🔍</span> Where the exposure hides
 
 The risky spots are the sensitive pages and actions.
 
-- A pixel firing on a specific treatment page, tying a visitor to that interest
-- Booking or contact confirmations that signal patient status
-- Analytics or ad tools receiving identifiers alongside health context
-- [Retargeting](/blog/medspa-retargeting/) audiences built from treatment-specific visits
+<Cards>
+
+<Card icon="page" title="Treatment-page pixels">
+
+A pixel firing on a specific treatment page, tying a visitor to that interest.
+
+</Card>
+
+<Card icon="check" title="Booking confirmations">
+
+Booking or contact confirmations that signal patient status.
+
+</Card>
+
+<Card icon="chart" title="Analytics and ad tools">
+
+Analytics or ad tools receiving identifiers alongside health context.
+
+</Card>
+
+<Card icon="target" title="Retargeting audiences">
+
+[Retargeting](/blog/medspa-retargeting/) audiences built from treatment-specific visits.
+
+</Card>
+
+</Cards>
 
 Each of these can turn ordinary measurement into a disclosure you didn't intend.
 
@@ -75,11 +104,15 @@ You can still track your marketing. You just avoid sending anything that connect
 
 Practically:
 
+<Checklist>
+
 - Limit what tracking collects on sensitive pages
 - Avoid passing treatment-specific or identifying data to ad platforms
 - Use server-side or compliance-oriented configurations
 - Get a business associate agreement where a vendor handles protected information
 - When in doubt, collect less
+
+</Checklist>
 
 This keeps your [attribution](/blog/medspa-attribution-call-tracking/) useful while removing the sensitive data that creates exposure.
 
