@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 // Certified-ad-partner logo band, sits directly under the dark hero and shares
 // its bg. Each entry's `src` is a monochrome/transparent asset, auto-whitened
 // via CSS. `scale` shrinks an individual logo relative to the 30px row height.
@@ -11,6 +13,35 @@ const LOGOS: Logo[] = [
 ];
 
 const ROW_HEIGHT = 30; // px, matches .tb-logo height in globals.css
+
+// Founder track record, second row of the band. Every line must stay true:
+// LaserAway numbers are Gabe's in his former in-house role (see /results/).
+type Credential = { mark: ReactNode; line: string; href?: string };
+
+const CREDENTIALS: Credential[] = [
+  {
+    mark: <span className="tb-cred-word">LaserAway</span>,
+    line: "Founder was Director of CRO, 2018–2023",
+    href: "/results/",
+  },
+  {
+    mark: <span className="tb-cred-word">Intellimize</span>,
+    line: "Featured in its LaserAway case study",
+    href: "/laseraway-intellimize-case-study.pdf",
+  },
+  {
+    mark: (
+      <span className="tb-cred-word">
+        <img className="tb-cred-icon" src="/logos/aesthetichires-lips.png" alt="" />
+        AestheticHires
+      </span>
+    ),
+    line: "Founder of the med spa job board",
+    href: "https://aesthetichires.com/",
+  },
+  { mark: <span className="tb-cred-num">2,600+</span>, line: "Variations tested at LaserAway" },
+  { mark: <span className="tb-cred-num">2,500+</span>, line: "SEO articles published across 4 sites" },
+];
 
 export default function TrustBar() {
   return (
@@ -28,6 +59,28 @@ export default function TrustBar() {
             </span>
           ))}
         </div>
+        <p className="tb-label tb-label-2">Track record:</p>
+        <ul className="tb-creds">
+          {CREDENTIALS.map((c) => {
+            const inner = (
+              <>
+                <span className="tb-cred-mark">{c.mark}</span>
+                <span className="tb-cred-line">{c.line}</span>
+              </>
+            );
+            return (
+              <li key={c.line} className="tb-cred">
+                {c.href ? (
+                  <a href={c.href} {...(c.href.startsWith("http") || c.href.endsWith(".pdf") ? { target: "_blank", rel: "noopener" } : {})}>
+                    {inner}
+                  </a>
+                ) : (
+                  inner
+                )}
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </section>
   );
