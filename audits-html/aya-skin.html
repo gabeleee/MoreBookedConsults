@@ -110,6 +110,22 @@ svg.fig text{fill:var(--ink)}
 .cell{fill:#cfe0cc;stroke:#9dbb9f;stroke-width:1}
 .cell-now{fill:#fff;stroke:var(--forest);stroke-width:1.5}
 .hbar{fill:var(--forest)}
+.b-kept{fill:var(--sage);opacity:.4}.b-merge{fill:var(--tan);opacity:.75}.b-gone{fill:var(--muted);opacity:.16}
+.n-kept{fill:var(--sage)}.n-merge{fill:#b89f80}.n-gone{fill:var(--muted);opacity:.5}.n-new{fill:var(--forest)}
+.t-num{font-weight:800;font-variant-numeric:tabular-nums}.t-newc{fill:var(--forest)!important;font-weight:700}
+.ring-outer{fill:var(--tint)}.ring-core{fill:var(--forest-soft)}
+.t-ring{font-family:var(--mono);font-size:10.5px;font-weight:600;letter-spacing:.1em;fill:var(--muted)!important}.t-ringcore{fill:var(--forest)!important}
+.nd-core{fill:var(--paper);stroke:var(--forest);stroke-width:2}.nd-outer{fill:var(--paper);stroke:var(--sage);stroke-width:1.5}
+.t-node{font-size:12.5px;font-weight:700}.t-nodesub{font-size:11px;fill:var(--muted)!important;font-variant-numeric:tabular-nums}
+.ctr{fill:var(--ink)}.t-ctr{font-family:var(--display);font-size:13px;font-weight:700;fill:#f0eade!important}
+.link-in{stroke:var(--sage);stroke-width:1.4;opacity:.8}.link-core{stroke:var(--forest);stroke-width:2}
+.ah-core{fill:var(--forest)}.ah-in{fill:var(--sage)}
+svg.tmap{min-width:680px}
+.anim .link-in,.anim .link-core{stroke-dasharray:1;transition:stroke-dashoffset .9s ease,opacity .3s ease;transition-delay:calc(.4s + var(--i,0)*60ms)}
+.anim figure:not(.in) .link-in,.anim figure:not(.in) .link-core{stroke-dashoffset:1;opacity:0}
+.anim .nd-core,.anim .nd-outer{transition:opacity .5s ease;transition-delay:calc(var(--i,0)*70ms)}
+.anim figure:not(.in) .nd-core,.anim figure:not(.in) .nd-outer{opacity:0}
+.easy{background:var(--forest-soft);border-left:3px solid var(--forest);padding:10px 14px;font-size:.95rem;color:var(--forest-ink);font-weight:600;max-width:64ch}
 .bx{fill:var(--paper);stroke:var(--ink);stroke-width:1.5}.bx-off{fill:var(--coral-soft);stroke:var(--coral);stroke-width:1.5}
 .bx-new{fill:var(--forest-soft);stroke:var(--forest);stroke-width:2}
 .boundary{stroke:var(--coral);stroke-width:2;stroke-dasharray:6 4}
@@ -168,7 +184,8 @@ svg.fig text{fill:var(--ink)}
 
 /* cards */
 .bens{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
-@media (max-width:760px){.bens{grid-template-columns:1fr 1fr}}
+.bens.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:760px){.bens,.bens.three{grid-template-columns:1fr 1fr}}
 @media (max-width:420px){.bens{grid-template-columns:1fr}}
 .ben{background:var(--paper);border:1px solid var(--rule);padding:14px;display:flex;flex-direction:column;gap:6px;font-size:.9rem;line-height:1.4}
 .ben svg{width:28px;height:28px;color:var(--forest)}
@@ -746,20 +763,90 @@ footer b{color:#fff;font-family:var(--display)}
 </section>
 
 <section>
+  <div class="kicker">Topical map · months 3–6</div>
+  <div class="fix-head">
+    <h2>Make AYA the authority on its own treatments</h2>
+    <p>AYA has 375 blog posts written one at a time over 20 years, with no plan tying them together. Fifteen are about CoolSculpting, and several answer the same questions, so they compete with each other instead of ranking. A topical map fixes that: one strong page per question, every page linked to the treatment and local pages where people book.</p>
+    <p class="easy">This runs quietly in the background once the local pages are live. Your team's only job is approving pages.</p>
+  </div>
+  <figure><div class="figwrap"><svg class="fig tmap" viewBox="0 0 820 640" role="img" aria-label="Topical map: AYA's treatment and local pages at the center, five treatment topics closest to booking around them, and five outer topics that build authority and link inward.">
+<defs><marker id="ah4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah-core"/></marker><marker id="ah5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" class="ah-in"/></marker></defs>
+<ellipse class="ring-outer" cx="410" cy="320" rx="398" ry="300"/>
+<ellipse class="ring-core" cx="410" cy="320" rx="250" ry="178"/>
+<text class="t-ring" x="410" y="46" text-anchor="middle">OUTER TOPICS · build trust</text>
+<text class="t-ring t-ringcore" x="410" y="480" text-anchor="middle">CORE TOPICS · closest to booking</text>
+<line class="link-in" x1="594.2" y1="151.5" x2="582.1" y2="258.5" marker-end="url(#ah5)"/>
+<line class="link-in" x1="536.7" y1="151.5" x2="472.7" y2="177.0" marker-end="url(#ah5)"/>
+<line class="link-in" x1="683.4" y1="369.5" x2="609.5" y2="308.5" marker-end="url(#ah5)"/>
+<line class="link-in" x1="630.4" y1="402.6" x2="588.6" y2="407.3" marker-end="url(#ah5)"/>
+<line class="link-in" x1="427.6" y1="534.0" x2="496.3" y2="440.5" marker-end="url(#ah5)"/>
+<line class="link-in" x1="392.4" y1="534.0" x2="323.7" y2="440.5" marker-end="url(#ah5)"/>
+<line class="link-in" x1="136.6" y1="369.5" x2="210.5" y2="308.5" marker-end="url(#ah5)"/>
+<line class="link-in" x1="189.6" y1="402.6" x2="231.4" y2="407.3" marker-end="url(#ah5)"/>
+<line class="link-in" x1="225.8" y1="151.5" x2="237.9" y2="258.5" marker-end="url(#ah5)"/>
+<line class="link-in" x1="283.3" y1="151.5" x2="347.3" y2="177.0" marker-end="url(#ah5)"/>
+<line class="link-core" x1="410.0" y1="226.0" x2="410.0" y2="264.0" marker-end="url(#ah4)"/>
+<line class="link-core" x1="507.3" y1="299.0" x2="466.0" y2="307.9" marker-end="url(#ah4)"/>
+<line class="link-core" x1="488.3" y1="391.5" x2="466.0" y2="371.1" marker-end="url(#ah4)"/>
+<line class="link-core" x1="331.7" y1="391.5" x2="354.0" y2="371.1" marker-end="url(#ah4)"/>
+<line class="link-core" x1="312.7" y1="299.0" x2="354.0" y2="307.9" marker-end="url(#ah4)"/>
+<rect class="nd-outer" x="514.9" y="104.5" width="164" height="46" rx="8"/><text class="t-node" x="596.9" y="124.5" text-anchor="middle">Facials &amp; peels</text><text class="t-nodesub" x="596.9" y="141.5" text-anchor="middle">28 posts today</text>
+<rect class="nd-outer" x="630.4" y="370.5" width="164" height="46" rx="8"/><text class="t-node" x="712.4" y="390.5" text-anchor="middle">Skin concerns</text><text class="t-nodesub" x="712.4" y="407.5" text-anchor="middle">22 posts today</text>
+<rect class="nd-outer" x="328.0" y="535.0" width="164" height="46" rx="8"/><text class="t-node" x="410.0" y="555.0" text-anchor="middle">Men's treatments</text><text class="t-nodesub" x="410.0" y="572.0" text-anchor="middle">5 posts today</text>
+<rect class="nd-outer" x="25.6" y="370.5" width="164" height="46" rx="8"/><text class="t-node" x="107.6" y="390.5" text-anchor="middle">Seasonal skin tips</text><text class="t-nodesub" x="107.6" y="407.5" text-anchor="middle">35 posts today</text>
+<rect class="nd-outer" x="141.1" y="104.5" width="164" height="46" rx="8"/><text class="t-node" x="223.1" y="124.5" text-anchor="middle">Skincare &amp; products</text><text class="t-nodesub" x="223.1" y="141.5" text-anchor="middle">55 posts today</text>
+<rect class="nd-core" x="335.0" y="179.0" width="150" height="46" rx="8"/><text class="t-node" x="410.0" y="199.0" text-anchor="middle">Injectables</text><text class="t-nodesub" x="410.0" y="216.0" text-anchor="middle">26 posts today</text>
+<rect class="nd-core" x="504.3" y="260.5" width="150" height="46" rx="8"/><text class="t-node" x="579.3" y="280.5" text-anchor="middle">Laser hair removal</text><text class="t-nodesub" x="579.3" y="297.5" text-anchor="middle">19 posts today</text>
+<rect class="nd-core" x="439.6" y="392.5" width="150" height="46" rx="8"/><text class="t-node" x="514.6" y="412.5" text-anchor="middle">Body contouring</text><text class="t-nodesub" x="514.6" y="429.5" text-anchor="middle">23 posts today</text>
+<rect class="nd-core" x="230.4" y="392.5" width="150" height="46" rx="8"/><text class="t-node" x="305.4" y="412.5" text-anchor="middle">Lasers &amp; resurfacing</text><text class="t-nodesub" x="305.4" y="429.5" text-anchor="middle">29 posts today</text>
+<rect class="nd-core" x="165.7" y="260.5" width="150" height="46" rx="8"/><text class="t-node" x="240.7" y="280.5" text-anchor="middle">Skin tightening</text><text class="t-nodesub" x="240.7" y="297.5" text-anchor="middle">11 posts today</text>
+<circle class="ctr" cx="410" cy="320" r="58"/>
+<text class="t-ctr" x="410" y="317" text-anchor="middle">Treatment +</text>
+<text class="t-ctr" x="410" y="334" text-anchor="middle">local pages</text>
+</svg></div><figcaption>How the blog is organized after the rebuild. Outer topics link to the treatments, and every treatment topic links to the pages where people book. Post counts are from today's blog.</figcaption></figure>
+  <figure><div class="figwrap"><svg class="fig" viewBox="0 0 820 440" role="img" aria-label="AYA's 375 blog posts today become about 155: 89 kept and refreshed, 164 overlapping posts merged into 36 stronger hub pages with redirects, 122 old sale, event and testimonial posts retired, and about 30 new pages added where topics are missing.">
+<text class="t-head" x="252" y="30" text-anchor="end">Today · 375 blog posts</text>
+<text class="t-head" x="560" y="30">After · about 155, each with a job</text>
+<path class="b-kept" d="M252,56.0 C406.0,56.0 406.0,76.0 560,76.0 L560,151.6 C406.0,151.6 406.0,131.6 252,131.6 Z"><title>89 posts kept and refreshed</title></path>
+<path class="b-merge" d="M252,138.6 C406.0,138.6 406.0,161.6 560,161.6 L560,192.2 C406.0,192.2 406.0,278.0 252,278.0 Z"><title>164 overlapping posts merge into 36 hub pages, with redirects</title></path>
+<path class="b-gone" d="M252,285.0 C340,285.0 360,303.0 420,303.0 L420,370.7 C360,370.7 340,388.7 252,388.7 Z"><title>122 old sale, event, press and testimonial posts retired or redirected</title></path>
+<text class="t-muted" x="428" y="340.9">retired or redirected</text>
+<rect class="n-kept" x="236" y="56.0" width="16" height="75.6"/>
+<text class="t-label" x="226" y="97.8" text-anchor="end">Kept and refreshed <tspan class="t-num">89</tspan></text>
+<rect class="n-merge" x="236" y="138.6" width="16" height="139.4"/>
+<text class="t-label" x="226" y="212.3" text-anchor="end">Merged into hubs <tspan class="t-num">164</tspan></text>
+<rect class="n-gone" x="236" y="285.0" width="16" height="103.7"/>
+<text class="t-label" x="226" y="340.9" text-anchor="end">Retired <tspan class="t-num">122</tspan></text>
+<text class="t-small" x="226" y="356.9" text-anchor="end">old sales, events, press, testimonials</text>
+<rect class="n-kept" x="560" y="76.0" width="16" height="75.6"/>
+<rect class="n-merge" x="560" y="161.6" width="16" height="30.6"/>
+<rect class="n-new" x="560" y="202.2" width="16" height="25.5"/>
+<text class="t-label" x="588" y="117.8"><tspan class="t-num">89</tspan> kept, refreshed and linked</text>
+<text class="t-label" x="588" y="180.9"><tspan class="t-num">36</tspan> hubs, one per question</text>
+<text class="t-label t-newc" x="588" y="219.0"><tspan class="t-num">~30</tspan> new pages on missing topics</text>
+</svg></div><figcaption>What happens to each of today's 375 posts, estimated from their titles. Merged posts redirect to their hub, so the links they've earned count once instead of being split. The full map and redirect list come in week 1.</figcaption></figure>
+  <div class="bens three">
+    <div class="ben"><b>One page per question</b>No more 15 CoolSculpting posts splitting Google's attention, so the one that remains can win.</div>
+    <div class="ben"><b>Every post feeds a booking page</b>Links run from each article to the treatment and local pages where consults are booked.</div>
+    <div class="ben"><b>New pages rank faster</b>Once a topic is fully covered, Google trusts new pages on it sooner, including the 96 local pages.</div>
+  </div>
+</section>
+
+<section>
   <div class="kicker">Timeline</div>
   <h2>Six months</h2>
-  <figure><div class="figwrap"><svg class="fig" viewBox="0 0 820 314" role="img" aria-label="Six-month timeline: baseline and quick fixes in month 1, the on-site booking form live by mid month 2, local pages in three waves from month 2 to 5 starting with Atlanta, booking tests from month 2 to 6, a checkpoint at month 3 and a results review at month 6.">
-<rect class="mcol" x="206" y="34" width="101" height="218"/>
+  <figure><div class="figwrap"><svg class="fig" viewBox="0 0 820 344" role="img" aria-label="Six-month timeline: baseline and quick fixes in month 1, the on-site booking form live by mid month 2, local pages in three waves from month 2 to 5 starting with Atlanta, booking tests from month 2 to 6, a checkpoint at month 3 and a results review at month 6.">
+<rect class="mcol" x="206" y="34" width="101" height="248"/>
 <text class="t-axis" x="256.5" y="26" text-anchor="middle">Month 1</text>
-<rect class="mcol2" x="307" y="34" width="101" height="218"/>
+<rect class="mcol2" x="307" y="34" width="101" height="248"/>
 <text class="t-axis" x="357.5" y="26" text-anchor="middle">Month 2</text>
-<rect class="mcol" x="408" y="34" width="101" height="218"/>
+<rect class="mcol" x="408" y="34" width="101" height="248"/>
 <text class="t-axis" x="458.5" y="26" text-anchor="middle">Month 3</text>
-<rect class="mcol2" x="509" y="34" width="101" height="218"/>
+<rect class="mcol2" x="509" y="34" width="101" height="248"/>
 <text class="t-axis" x="559.5" y="26" text-anchor="middle">Month 4</text>
-<rect class="mcol" x="610" y="34" width="101" height="218"/>
+<rect class="mcol" x="610" y="34" width="101" height="248"/>
 <text class="t-axis" x="660.5" y="26" text-anchor="middle">Month 5</text>
-<rect class="mcol2" x="711" y="34" width="101" height="218"/>
+<rect class="mcol2" x="711" y="34" width="101" height="248"/>
 <text class="t-axis" x="761.5" y="26" text-anchor="middle">Month 6</text>
 <text class="t-label" x="196" y="59" text-anchor="end">Baseline &amp; tracking</text>
 <rect class="g-seo" x="207.0" y="47" width="48.5" height="16" rx="4"><title>Baseline &amp; tracking: month 0 to 0.5</title></rect>
@@ -773,14 +860,16 @@ footer b{color:#fff;font-family:var(--display)}
 <rect class="g-seo" x="409.0" y="167" width="200.0" height="16" rx="4"><title>Local pages · NY + Florida: month 2 to 4</title></rect>
 <text class="t-label" x="196" y="209" text-anchor="end">Local pages · Dallas + rest</text>
 <rect class="g-seo" x="560.5" y="197" width="149.5" height="16" rx="4"><title>Local pages · Dallas + rest: month 3.5 to 5</title></rect>
-<text class="t-label" x="196" y="239" text-anchor="end">Booking tests, one at a time</text>
-<rect class="g-cro" x="358.5" y="227" width="452.5" height="16" rx="4"><title>Booking tests, one at a time: month 1.5 to 6</title></rect>
-<line class="ms-line" x1="509" x2="509" y1="34" y2="264"/><path class="ms" d="M509,264 l7,7 l-7,7 l-7,-7 z"/>
-<text class="t-label" x="509" y="294" text-anchor="middle">Checkpoint</text>
-<line class="ms-line" x1="812" x2="812" y1="34" y2="264"/><path class="ms" d="M812,264 l7,7 l-7,7 l-7,-7 z"/>
-<text class="t-label" x="800" y="294" text-anchor="end">Results review</text>
-<rect class="g-seo" x="0" y="280" width="12" height="12" rx="2"/><text class="t-small" x="18" y="290">Search (SEO)</text>
-<rect class="g-cro" x="110" y="280" width="12" height="12" rx="2"/><text class="t-small" x="128" y="290">Booking (CRO)</text>
+<text class="t-label" x="196" y="239" text-anchor="end">Topical map: merge + new pages</text>
+<rect class="g-seo" x="459.5" y="227" width="351.5" height="16" rx="4"><title>Topical map: merge + new pages: month 2.5 to 6</title></rect>
+<text class="t-label" x="196" y="269" text-anchor="end">Booking tests, one at a time</text>
+<rect class="g-cro" x="358.5" y="257" width="452.5" height="16" rx="4"><title>Booking tests, one at a time: month 1.5 to 6</title></rect>
+<line class="ms-line" x1="509" x2="509" y1="34" y2="294"/><path class="ms" d="M509,294 l7,7 l-7,7 l-7,-7 z"/>
+<text class="t-label" x="509" y="324" text-anchor="middle">Checkpoint</text>
+<line class="ms-line" x1="812" x2="812" y1="34" y2="294"/><path class="ms" d="M812,294 l7,7 l-7,7 l-7,-7 z"/>
+<text class="t-label" x="800" y="324" text-anchor="end">Results review</text>
+<rect class="g-seo" x="0" y="310" width="12" height="12" rx="2"/><text class="t-small" x="18" y="320">Search (SEO)</text>
+<rect class="g-cro" x="110" y="310" width="12" height="12" rx="2"/><text class="t-small" x="128" y="320">Booking (CRO)</text>
 </svg></div><figcaption>Local pages go live in three waves, starting with Atlanta, where AYA has five clinics.</figcaption></figure>
   <div class="miles">
     <div><b>Week 2</b>Baseline report; booking tracking live</div>
@@ -804,6 +893,7 @@ footer b{color:#fff;font-family:var(--display)}
     <ul>
       <li>Everything on the timeline above, for all twelve clinics</li>
       <li>Up to 96 local pages, each reviewed and approved by AYA before it goes live</li>
+      <li>The full topical map and redirect list in week 1</li>
       <li>The booking form built on Zenoti, so the front desk works the same way</li>
       <li>A short weekly update and a monthly report on consults booked, not just traffic</li>
     </ul>
@@ -872,10 +962,11 @@ footer b{color:#fff;font-family:var(--display)}
   if (reduce || !('IntersectionObserver' in window)) { document.querySelectorAll('.hb-dot').forEach(function(d){ d.remove(); }); return; }
   document.documentElement.classList.add('anim');
   document.querySelectorAll('svg.fig').forEach(function(svg){
-    ['.dot,.dot-off','.t-dot','.bar-base,.bar-target,.bar-now','.g-seo,.g-cro'].forEach(function(sel){
+    ['.dot,.dot-off','.t-dot','.bar-base,.bar-target,.bar-now','.g-seo,.g-cro','.link-in,.link-core','.nd-core,.nd-outer'].forEach(function(sel){
       svg.querySelectorAll(sel).forEach(function(el,i){ el.style.setProperty('--i', i); });
     });
-    if (svg.querySelector('.trk')) svg.classList.add('wipe');
+    svg.querySelectorAll('.link-in,.link-core').forEach(function(el){ el.setAttribute('pathLength','1'); });
+    if (svg.querySelector('.trk,.b-kept')) svg.classList.add('wipe');
   });
   var figs=document.querySelectorAll('figure');
   var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.2});
