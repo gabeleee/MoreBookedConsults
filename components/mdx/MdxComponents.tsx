@@ -1,4 +1,6 @@
 import Link from "next/link";
+import AuditCtaLink from "../AuditCtaLink";
+import { isAuditHref } from "@/lib/audit-href";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
 import {
   Cards,
@@ -26,6 +28,14 @@ import {
 
 function SmartLink({ href = "", children, ...rest }: ComponentPropsWithoutRef<"a">) {
   const internal = href.startsWith("/") || href.startsWith("#");
+  // In-prose "[free audit](/free-audit/)" links are CTAs too.
+  if (isAuditHref(href)) {
+    return (
+      <AuditCtaLink href={href} location="blog_inline" {...rest}>
+        {children}
+      </AuditCtaLink>
+    );
+  }
   if (internal) {
     return (
       <Link href={href} {...rest}>
@@ -137,7 +147,13 @@ export function Related({
       <ul>
         {items.map((i) => (
           <li key={i.href}>
-            <Link href={i.href}>{i.title}</Link>
+            {isAuditHref(i.href) ? (
+              <AuditCtaLink href={i.href} location="blog_related">
+                {i.title}
+              </AuditCtaLink>
+            ) : (
+              <Link href={i.href}>{i.title}</Link>
+            )}
             {i.desc ? <span className="related-desc">{i.desc}</span> : null}
           </li>
         ))}
@@ -157,9 +173,9 @@ function CTA({
   return (
     <aside className="cta-block">
       <p>{heading}</p>
-      <Link className="btn" href="/free-audit/">
+      <AuditCtaLink className="btn" href="/free-audit/" location="blog">
         {label}
-      </Link>
+      </AuditCtaLink>
     </aside>
   );
 }

@@ -2,6 +2,7 @@
 // per CLAUDE.md. No JS, sticky is pure CSS. Server component.
 import Link from "next/link";
 import Logo from "./Logo";
+import AuditCtaLink from "./AuditCtaLink";
 import MobileNav from "./MobileNav";
 import HeaderShrink from "./HeaderShrink";
 
@@ -25,10 +26,10 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <Link className="nav-cta" href="/free-audit/">
+        <AuditCtaLink className="nav-cta" href="/free-audit/" location="nav">
           <span className="cta-full">Free marketing audit</span>
           <span className="cta-short">Free audit</span>
-        </Link>
+        </AuditCtaLink>
         <MobileNav items={NAV} />
       </div>
     </header>

@@ -2,8 +2,8 @@
 // avatar reuses /gabe.jpg. LaserAway credentials are Gabe's personally, // keep them attributed to him, never to the company.
 // The mid-page CTA is folded into this same dark section so the petal trio
 // isn't clipped at a mid-block boundary.
-import Link from "next/link";
 import PetalBackground from "./PetalBackground";
+import AuditCtaLink from "./AuditCtaLink";
 
 export default function Founder() {
   return (
@@ -81,9 +81,9 @@ export default function Founder() {
       <div className="wrap founder-cta">
         <aside className="cta-block">
           <p>The fastest path to more booked consults.</p>
-          <Link className="btn" href="/free-audit/">
+          <AuditCtaLink className="btn" href="/free-audit/" location="founder">
             Get a free marketing audit
-          </Link>
+          </AuditCtaLink>
         </aside>
       </div>
     </section>
