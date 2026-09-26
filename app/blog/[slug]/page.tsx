@@ -60,6 +60,7 @@ export default async function BlogPost({ params }: Params) {
     headline: frontmatter.title,
     description: frontmatter.description,
     ...(frontmatter.date ? { datePublished: frontmatter.date } : {}),
+    ...(frontmatter.updated ? { dateModified: frontmatter.updated } : {}),
     author: {
       "@type": "Person",
       name: SITE.founder.name,
