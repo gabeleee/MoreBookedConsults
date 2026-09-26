@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { getVisibleBlogPosts } from "@/lib/content";
+import { blogEmoji } from "@/lib/blog-emoji";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -68,18 +69,36 @@ export default function BlogIndex() {
             <p className="lede">Posts are on the way.</p>
           ) : (
             ordered.map(({ label, items }) => (
-              <div key={label} style={{ marginBottom: 40 }}>
-                <p className="eyebrow">{label}</p>
-                <ul className="feature-list" style={{ maxWidth: "62ch" }}>
+              <div key={label} className="blog-section">
+                <div className="blog-section-head">
+                  <h2>{label}</h2>
+                  <span>
+                    {items.length} {items.length === 1 ? "guide" : "guides"}
+                  </span>
+                </div>
+                <div className="blog-grid">
                   {items.map((p) => (
-                    <li key={p.slug}>
-                      <Link href={`/blog/${p.slug}/`}>
-                        <b>{p.frontmatter.title}</b>
-                      </Link>
-                      {p.frontmatter.status !== "published" && " (draft)"}
-                    </li>
+                    <Link
+                      key={p.slug}
+                      href={`/blog/${p.slug}/`}
+                      className="blog-card"
+                    >
+                      <span className="blog-card-emoji" aria-hidden="true">
+                        {blogEmoji(p.slug)}
+                      </span>
+                      <span className="blog-card-title">
+                        {p.frontmatter.title}
+                        {p.frontmatter.status !== "published" && " (draft)"}
+                      </span>
+                      {p.frontmatter.description && (
+                        <span className="blog-card-desc">
+                          {p.frontmatter.description}
+                        </span>
+                      )}
+                      <span className="blog-card-more">Read guide →</span>
+                    </Link>
                   ))}
-                </ul>
+                </div>
               </div>
             ))
           )}
