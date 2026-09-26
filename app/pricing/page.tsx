@@ -47,7 +47,7 @@ export default function Pricing() {
                 <li>Free marketing audit + prioritized plan</li>
                 <li>One controlled CRO test / month, run to significance</li>
                 <li>Booking flow, forms, offers &amp; treatment pages</li>
-                <li>Plain-English results report</li>
+                <li>6-month minimum, plain-English results report</li>
               </ul>
               <Link className="btn" href="/convert-more/">
                 Convert more traffic
@@ -76,6 +76,7 @@ export default function Pricing() {
                 <li>Treatment/procedure × city pages</li>
                 <li>Google Business Profile optimization</li>
                 <li>Citation cleanup (consistent name, address, phone)</li>
+                <li>6-month minimum, plain-English monthly report</li>
               </ul>
               <Link className="btn" href="/rank-higher/">
                 Rank higher on Google
@@ -114,7 +115,7 @@ export default function Pricing() {
           </div>
           <p className="pricing-bundle">
             <strong>CRO + Local SEO: $5,000/mo.</strong> Both retainers together,
-            one plan, one monthly report.
+            one plan, one monthly report, 6-month minimum.
           </p>
         </div>
       </section>
@@ -128,6 +129,11 @@ export default function Pricing() {
           </p>
           <p>
             Every service is a flat monthly rate for the work itself.
+          </p>
+          <p>
+            CRO and local SEO run on a 6-month minimum, because tests and
+            rankings need that long to show what they&apos;re worth; managed ads
+            run on a 3-month minimum.
           </p>
           <p>
             With managed ads, the ad spend is billed to you directly by Meta,
