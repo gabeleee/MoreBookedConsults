@@ -1,84 +1,456 @@
 ---
 title: "Meta Health & Wellness Ad Restrictions for Med Spas: Compliant Workarounds"
-description: "What Meta's health and wellness restrictions and Google's healthcare policies block for med spas, from conversion tracking and targeting to before-and-after images, and the compliant workarounds that still book consults."
+description: "How Meta's health and wellness restrictions hit med spa ads and tracking: the three restriction levels, how to check your classification in Events Manager, what the Conversions API can and can't restore, and the compliant workarounds that still book consults."
 cluster: "D"
 hub: "medspa"
-primaryQuery: "google ads policy med spa"
-queries: ["google ads policy med spa", "med spa ad restrictions", "meta health ad policy med spa", "meta health and wellness ad restrictions med spa", "meta ad restrictions workarounds med spa"]
+primaryQuery: "meta health wellness ad restrictions workarounds med spa"
+queries: ["meta health wellness ad restrictions workarounds med spa", "meta health and wellness ad restrictions med spa", "meta ad restrictions workarounds med spa", "meta health ad policy med spa", "med spa ad restrictions", "google ads policy med spa"]
 date: "2026-07-16"
+updated: "2026-09-26"
 status: "published"
 faq:
-  - q: "What ad restrictions apply to med spas?"
-    a: "Both Google and Meta treat health and cosmetic-procedure advertising as sensitive. That means limits on personalized targeting, restrictions on before-and-after imagery and certain claims, and extra scrutiny on landing pages. The rules exist to protect user privacy around health, and violating them gets ads or accounts suspended."
-  - q: "Can med spas use before-and-after photos in ads?"
-    a: "It's heavily restricted, especially on Meta, where close-up and before-and-after body imagery is commonly disallowed. Rules change over time, so check current policy, but plan your creative assuming before-and-afters may be limited rather than building your whole campaign around them."
+  - q: "What are Meta's three restriction levels and what does each block?"
+    a: "Meta's Business Help Center lists three data sharing restrictions for data sources in restricted categories. Core setup blocks custom parameters and anything in a URL after the domain. Restriction on certain standard events blocks specific mid and lower funnel events. Full restrictions block the sharing of all events, so the pixel and Conversions API can't be used for ads purposes in the affected regions."
+  - q: "How do I check my restriction level in Events Manager?"
+    a: "In Meta Events Manager, click Datasets, select your dataset, open the Settings tab and scroll to Manage data source categories to see any category assigned to your website. The Data restrictions section on the same tab shows whether core setup is on, and the Diagnostics tab lists blocked parameters and removed data. Meta also notifies you by email when it limits or restricts a data source."
+  - q: "Does server-side tracking or the Conversions API restore conversion data?"
+    a: "Not past the restriction. Meta lists the Conversions API as one of its Business Tools, and category restrictions limit the event data you can share through those tools, server events included. The Conversions API is still worth having because it makes measurement more complete, but on a restricted dataset it may not bring back lower-funnel optimization."
+  - q: "Does renaming Purchase or Lead events still work as a workaround?"
+    a: "It is a risk, not a workaround. Meta's terms say the names you choose for events, conversions and custom audiences must not reflect, imply or be based on prohibited information, and that you must not try to resend data Meta has already detected and removed. New custom events are blocked until you review them, and repeat problems can lead to wider data restrictions or suspension."
+  - q: "Can I still use custom and lookalike audiences?"
+    a: "Often yes, with limits. Meta flags custom audiences that reference specific health conditions and blocks them from new campaigns, and a lookalike built on a flagged seed audience is flagged too. Under core setup, audiences built on URL rules or custom parameters may populate slowly or not at all. Engagement, page visitor and customer list audiences without health details are the safer base."
+  - q: "How can Meta infer health information I never sent?"
+    a: "Meta categorizes a website based on its topics and the products or services it offers, not only on the events you send. It also scans the data that does arrive: page URLs, parameter names and values, custom event names, and the rules behind custom conversions and audiences. A treatment name in a thank-you page URL is enough to count as health context."
+  - q: "How do I appeal a misclassification and how long does it take?"
+    a: "If Meta assigned the category, open Manage data source categories in Events Manager, click View details and then Request review. Meta says it will notify you of its decision by email but does not publish a review timeline. Blocked custom events have their own review in the Manage event blocking section, and a declined custom event can't be submitted again."
+  - q: "Which businesses does Meta classify as health and wellness?"
+    a: "Meta's definition covers data sources associated with medical conditions or health statuses, provider and patient relationships, services for accessing personal health information, or health-related products and services. A med spa that offers injectables, lasers or other medical treatments fits that description, and adjacent businesses can land there too. Check what your own Events Manager shows rather than assuming either way."
+  - q: "Can med spas use before-and-after photos in Meta ads?"
+    a: "Meta's current Health and Wellness ad standard allows cosmetic procedure ads that depict a before-and-after transformation, as long as the ad targets people 18 and older and contains no statements of inferiority about appearance. Meta has revised this rule more than once, so check the policy's change log before launch, and get written patient consent for every photo."
   - q: "Why did my med spa ad get disapproved?"
-    a: "Usually a health-policy issue: restricted imagery, a claim that reads as a guaranteed medical outcome, targeting that isn't allowed for the health category, or a landing page problem. Fixing the specific flagged element and staying inside the sensitive-category rules is how you get approved."
+    a: "Usually a health-policy issue: copy that attacks the viewer's appearance or implies they have a condition, a brand-name prescription drug without authorization, a timeframe promise with no qualifier, targeting under 18, or a landing page problem. Fix the specific flagged element, then request a review if you believe the decision was wrong."
+  - q: "Do Google's healthcare ad rules work the same way?"
+    a: "No, Google has its own policies. Its personalized advertising policy treats health as a sensitive interest category, which rules out advertiser-curated audiences such as remarketing lists and customer match for health-related ads. Prescription drug names are restricted on Google too."
 related:
+  - href: "/blog/hipaa-website-tracking/"
+    title: "HIPAA & Website Tracking"
+    desc: "How pixels leak patient data."
   - href: "/blog/medspa-facebook-instagram-ads/"
     title: "Facebook & Instagram Ads"
-    desc: "Where these rules bite hardest."
-  - href: "/blog/medspa-retargeting/"
-    title: "Retargeting"
-    desc: "HIPAA-aware audience building."
+    desc: "The full Meta playbook for med spas."
+  - href: "/blog/medspa-before-after-photos/"
+    title: "Before & After Photos"
+    desc: "Consent and HIPAA rules for results photos."
+  - href: "/blog/medspa-attribution-call-tracking/"
+    title: "Attribution & Tracking"
+    desc: "Measuring when Meta can't see the booking."
   - href: "/blog/medspa-marketing-laws/"
     title: "Marketing Laws"
     desc: "The broader compliance picture."
-  - href: "/blog/medspa-google-ads/"
-    title: "Google Ads Guide"
-    desc: "Running paid search inside the rules."
 ---
 
 <AtAGlance>
 
-- **Health and cosmetic ads are a sensitive category** on Google and Meta.
-- **Personalized targeting is limited** for health-related audiences.
-- **Before-and-after imagery is restricted,** especially on Meta.
-- **Compliant campaigns still work;** you just build inside the guardrails.
+- **Two separate problems:** ad creative rules and data restrictions on your pixel.
+- **Three restriction levels:** core setup, restricted standard events, full restrictions.
+- **The Conversions API doesn't bypass them;** it improves measurement, not eligibility.
+- **Compliant workarounds work:** allowed objectives, your own booking data, a stronger page.
 
 </AtAGlance>
 
-Med spa advertising lives in a restricted category, and owners who don't know that tend to learn it the hard way, through disapprovals and suspended accounts.
+Meta's health and wellness ad restrictions hit a med spa in two places at once, and the only workarounds that hold up are the compliant ones.
 
-The good news is that compliant campaigns run just fine. You just have to build inside the rules instead of tripping over them.
+The first is the ad itself: what your creative and copy are allowed to say and show.
 
-## <span className="he">🔒</span> Why the rules exist
+The second is your data: what the Meta Pixel and Conversions API are allowed to send back, and therefore what Meta can optimize toward.
 
-Both Google and Meta treat health and cosmetic procedures as sensitive, because they involve personal information people don't want used against them.
+Most guides blur the two, which is why owners fix the wrong one.
 
-That drives most of the restrictions: limits on how you can target, what you can show, and what you can claim, all aimed at protecting user privacy around health.
+This guide covers both, with every rule linked to Meta's own documentation, so you can check your account and decide what to change.
 
-Understanding the why makes the specific rules easier to follow, because they're consistent once you see the logic.
+## <span className="he">🧭</span> Two problems, two different fixes
 
-## <span className="he">🎯</span> Targeting limits
+<Compare>
 
-Personalized advertising for health-related audiences is restricted.
+<Side title="Ad creative and content policy" tone="neutral">
 
-You generally can't target based on inferred health conditions or treatments someone appears interested in, which is the same principle behind [HIPAA-aware retargeting](/blog/medspa-retargeting/).
+- Governs what an ad says and shows
+- Enforced ad by ad, through review
+- Symptom: a disapproved ad
+- Fix: change the creative or copy
 
-Build audiences on general engagement and location rather than sensitive attributes, and you stay on the right side of the line.
+</Side>
 
-## <span className="he">🖼️</span> Creative and claims
+<Side title="Data restrictions on your pixel" tone="neutral">
 
-<Callout type="warning">
+- Governs what your website can send to Meta
+- Applied to the whole data source
+- Symptom: missing events, weak optimization
+- Fix: check your category, clean your data, change what you optimize for
 
-Before-and-after imagery is heavily restricted, especially on Meta, and claims that read as guaranteed medical outcomes get disapproved.
+</Side>
 
-Plan creative that doesn't depend on close-up before-and-afters, and keep language honest and outcome-neutral rather than promising results.
+</Compare>
+
+A disapproved ad tells you something is wrong with that ad.
+
+A data restriction is quieter.
+
+Your campaigns keep running, but Meta may no longer see the leads your site produces, so it optimizes with less information than you think it has.
+
+## <span className="he">🔒</span> Why Meta restricts health data
+
+Meta's [Business Tools Terms](https://www.facebook.com/business/help/361948878201809) prohibit advertisers from sending health information through the pixel and related tools.
+
+Meta's own list of prohibited health information includes medical procedures, treatments and testing, prescription medications, and body specifications.
+
+That covers most of what a med spa's website is about.
+
+The pressure behind it is legal as well as reputational.
+
+In February 2023 the FTC took its [first-ever action under the Health Breach Notification Rule](https://www.ftc.gov/news-events/news/press-releases/2023/02/ftc-enforcement-action-bar-goodrx-sharing-consumers-sensitive-health-info-advertising) against GoodRx, which it said shared users' prescription medications and health conditions with advertising platforms including Facebook, and GoodRx agreed to a $1.5 million civil penalty.
+
+A month later the FTC [proposed an order against BetterHelp](https://www.ftc.gov/news-events/news/press-releases/2023/03/ftc-ban-betterhelp-revealing-consumers-data-including-sensitive-mental-health-information-facebook) over sharing consumers' mental health data with Facebook and others for advertising.
+
+In July 2023 the FTC and HHS [warned about 130 hospital systems and telehealth providers](https://www.ftc.gov/news-events/news/press-releases/2023/07/ftc-hhs-warn-hospital-systems-telehealth-providers-about-privacy-security-risks-online-tracking) that tracking technologies like the Meta Pixel can disclose health conditions, diagnoses, medications and treatments.
+
+The FTC's point in that letter applies directly to aesthetic practices: businesses not covered by HIPAA still have to protect personal health information from unauthorized disclosure.
+
+So Meta filters the data, and the restrictions you see in Events Manager are the result.
+
+### PII vs PHI in plain terms
+
+**PII** (personally identifiable information) is anything that identifies a person: a name, an email address, a phone number.
+
+**PHI** (protected health information) is the HIPAA term for individually identifiable health information held or transmitted by a covered entity, such as a healthcare provider, or its business associate.
+
+The risk sits where the two meet.
+
+An email address on its own is PII.
+
+The same email address sent to an ad platform alongside "booked a filler consult" connects a person to a treatment, and that is the combination regulators and Meta care about.
+
+The [HIPAA and website tracking guide](/blog/hipaa-website-tracking/) covers where that leak usually hides and how to measure without it.
+
+<Callout type="note">
+
+This is general guidance, not legal advice.
+
+Whether HIPAA applies to your practice depends on how you operate, so confirm your own setup with healthcare counsel.
 
 </Callout>
 
-Rules shift over time, so check current policy, but the safe default is to assume before-and-afters may be limited and to lead with lifestyle, education, and offers instead.
+## <span className="he">🏷️</span> Which businesses Meta classifies as health and wellness
 
-## <span className="he">📉</span> Meta's health and wellness restrictions
+Meta assigns [data source categories](https://www.facebook.com/business/help/1402913027039332) to websites and apps based on their topics and the products or services they provide.
 
-In early 2025 Meta began limiting how advertisers it classifies as health and wellness, which includes many med spas, can use conversion data.
+Its health and wellness category covers sources associated with medical conditions or health statuses, provider and patient relationships, services for accessing personal health information, or health-related products and services.
 
-For those accounts, lower-funnel events such as a lead or a purchase on your own site may not be available for campaign optimization.
+Meta's own examples include a patient portal, a telemedicine platform and a pharmacy.
 
-In practice that means a campaign often can't be told to optimize for "booked consult" the way an unrestricted account can.
+A med spa that offers injectables, lasers and other medical treatments sits squarely inside that description.
 
-Check Events Manager for a restriction notice on your pixel before you assume your campaigns are optimizing the way you set them up.
+The definition is broad enough that adjacent businesses, such as skincare brands, wellness studios and fitness services with a health angle, can land in it too.
+
+There are two ways a category gets assigned.
+
+You can categorize your own dataset, and you can change a category you chose.
+
+Meta can also assign a category itself, and you can't edit a Meta-assigned category, only ask Meta to review it.
+
+## <span className="he">📊</span> Meta's three data restriction levels
+
+When a website domain is in a restricted category, Meta says it [may apply one or more of three restrictions](https://www.facebook.com/business/help/511197658391698), which can apply in specific countries or regions or globally.
+
+| Restriction | What Meta restricts | What Meta suggests you do |
+| --- | --- | --- |
+| **Core setup** | Custom parameters and anything in a URL after the domain | Most campaigns keep running; review custom audiences and events that depend on URLs or custom parameters |
+| **Restriction on certain standard events** | Specific mid and lower funnel events | Find alternative events, such as more upper-funnel events, for targeting and optimization |
+| **Full restrictions** | All events, in specific regions or all regions | Optimize for objectives that don't rely on your data, such as Awareness, Engagement and Traffic |
+
+Under any of these, custom events are blocked automatically until you review and confirm them in Events Manager.
+
+[Core setup](https://www.facebook.com/business/help/124742407297678) deserves a closer look, because it is the level many advertisers meet first.
+
+A URL like yourpractice.com/botox/thank-you?service=lip-filler reaches Meta as yourpractice.com, and any custom parameter you attached is dropped.
+
+Meta also notes that automatic advanced matching may be unavailable, and that URL-based custom audiences may take longer to fill or stop updating.
+
+You can switch core setup on yourself as a precaution, but if Meta turned it on, you can't turn it off.
+
+## <span className="he">🔍</span> How to check your classification in Events Manager
+
+This tells you whether your campaigns are optimizing the way you set them up.
+
+<Steps>
+
+<Step title="Open your dataset">
+
+In Meta Events Manager, click Datasets in the left menu and select your pixel's dataset.
+
+</Step>
+
+<Step title="Check the category">
+
+Open the Settings tab and scroll to Manage data source categories. If the section is missing, your data source isn't in a category that carries restrictions.
+
+</Step>
+
+<Step title="Check data restrictions">
+
+On the same tab, find Data restrictions and the Core setup section to see whether core setup is on and who turned it on.
+
+</Step>
+
+<Step title="Read the diagnostics">
+
+Open the Diagnostics tab for notices such as Event parameters blocked, and review what was removed and from which pages.
+
+</Step>
+
+<Step title="Review custom events">
+
+Under Data controls, the Manage event blocking section shows custom events waiting for review or blocked by Meta.
+
+</Step>
+
+</Steps>
+
+You need full control of the business portfolio, or an admin role on the ad account that owns the dataset, to see and change these settings.
+
+Meta also says it will tell you by email and in Events Manager when it limits or restricts a data source, so check the inbox tied to your business portfolio.
+
+## <span className="he">🕵️</span> How Meta infers health data you never meant to send
+
+Owners are often surprised to be restricted when they never sent a diagnosis.
+
+Meta doesn't need one.
+
+<Cards>
+
+<Card icon="link" title="Page URLs">
+
+Treatment names in URLs, such as /coolsculpting/booked, tell Meta what the visitor was looking at.
+
+</Card>
+
+<Card icon="page" title="Parameters">
+
+Parameter names and values, including form fields passed into an event, can carry a treatment or concern.
+
+</Card>
+
+<Card icon="zap" title="Custom event names">
+
+An event named after a treatment is health context in its own right.
+
+</Card>
+
+<Card icon="target" title="Conversion and audience rules">
+
+Custom conversions and audiences built on treatment URLs or keywords can be flagged.
+
+</Card>
+
+</Cards>
+
+On top of the data itself, the category is based on what your site is about, so a site full of treatment pages can be categorized even if its events are clean.
+
+When Meta detects prohibited information, it removes it and flags it in the Diagnostics tab.
+
+Meta says that if you get those notices repeatedly, it may [put your dataset into core setup for at least 90 days](https://www.facebook.com/business/help/3720004518245751).
+
+## <span className="he">📉</span> What restrictions do to campaign performance
+
+Meta's delivery system learns from the conversions you report.
+
+When lower-funnel events such as a lead are restricted, you can still run campaigns, but the system is optimizing toward a signal further from what you actually want.
+
+That is blind optimization: Meta finds people who click or land, not necessarily people who book.
+
+<Funnel title="Where the optimization signal can come from" caption="Illustrative. Which events are restricted depends on your category and region; the objectives shown are the ones Meta names for fully restricted data sources.">
+<Stage label="Reach and impressions" value="Awareness" width="100" />
+<Stage label="Likes, comments, shares" value="Engagement" width="80" />
+<Stage label="Link clicks" value="Traffic" width="60" />
+<Stage label="Leads on your site" value="May be restricted" width="38" />
+<Stage label="Booked consults" value="Your own records" width="20" />
+</Funnel>
+
+In practice, the practices hit hardest are the ones that relied on Meta's reporting to judge their ads.
+
+The reporting gets thinner, audiences that relied on URLs shrink, and return on ad spend becomes harder to read inside Ads Manager.
+
+That doesn't make Meta ads useless for a med spa.
+
+It means the proof of what works has to come from your own booking data, and the landing page has to convert more of the traffic Meta sends.
+
+## <span className="he">📡</span> Conversions API and server-side tracking: what they fix and what they don't
+
+The Conversions API sends events from your server to Meta instead of relying only on the browser pixel.
+
+Many guides present it as the workaround for health and wellness restrictions.
+
+It isn't one.
+
+Meta lists the [Conversions API as one of its Business Tools](https://www.facebook.com/help/331509497253087), alongside the Meta Pixel, and its category restrictions limit what event data you can share through those tools.
+
+If your data source is restricted, server events are restricted too.
+
+<Compare>
+
+<Side title="What the Conversions API helps with" tone="yes">
+
+- Events lost to browser blockers and iOS privacy settings
+- A more complete record of what your pages produce
+- Control over exactly which fields you send
+- Cleaner data for the events you're still allowed to share
+
+</Side>
+
+<Side title="What it won't do" tone="no">
+
+- Lift a category Meta assigned to your site
+- Unlock events Meta restricts for your category
+- Make prohibited health information acceptable
+- Guarantee lower-funnel optimization comes back
+
+</Side>
+
+</Compare>
+
+For an account without restrictions, the Meta Pixel plus the Conversions API is the setup that lets Meta optimize toward real leads.
+
+For a restricted account, the Conversions API still helps with measurement, but it may not restore lower-funnel optimization.
+
+Any vendor that promises otherwise is promising something Meta's own documentation doesn't support.
+
+## <span className="he">⚠️</span> Renaming events and parameters: the workaround to avoid
+
+The most common "hack" is to rename a restricted standard event, such as sending a Lead as a custom event with a vague name, so Meta can optimize on it again.
+
+Meta's terms address this directly.
+
+The names you choose for events, conversions and custom audiences [must not reflect, imply or be based on prohibited information](https://www.facebook.com/business/help/361948878201809), and Meta says you [must not attempt to send data it has previously detected and removed](https://www.facebook.com/business/help/414614186228298).
+
+New custom events are blocked until you review them, and Meta may block custom events it detects on its own.
+
+If Meta declines your review request for a blocked custom event, you can't request another one.
+
+The consequences Meta lists run from performance issues and data restrictions to suspension of your use of its business tools.
+
+For a practice whose new patients come from Meta, that risk outweighs any short-term gain.
+
+What is legitimate is data minimization: sending Meta less health detail in the first place.
+
+<Checklist>
+
+- Keep treatment and condition names out of thank-you page URLs and query strings
+- Don't pass form answers, such as the treatment a patient picked, into pixel parameters
+- Send only the standard parameters you actually use
+- Name custom events for the action, such as a form submit, never for a treatment
+- Turn on core setup yourself if you can't audit every page quickly
+
+</Checklist>
+
+Do this because it is the right way to handle patient data, not to change your category.
+
+A clean setup reduces what can leak and what Meta has to strip out, but it won't undo a category Meta assigned based on what your practice offers.
+
+## <span className="he">🎯</span> Custom and lookalike audience restrictions
+
+Meta [flags custom audiences](https://www.facebook.com/business/help/1055828013359808) that include information its terms don't allow, such as references to specific health conditions.
+
+A flagged audience can't be used in new campaigns, and Meta advises editing or pausing active campaigns that use one.
+
+Lookalike audiences inherit the problem: if the seed audience is flagged, so is the lookalike built on it.
+
+Custom conversions follow the same logic.
+
+Meta's developer documentation says that from September 2, 2025 it began rolling out [proactive restrictions on custom conversions](https://developers.facebook.com/docs/meta-pixel/implementation/conversion-tracking/) that suggest specific health conditions.
+
+Naming matters here as much as content.
+
+An audience called "Botox patients" or built on the rule "URL contains /tummy-tuck" is the kind of thing that gets flagged.
+
+Safer bases are engagement audiences, broad location and age targeting, and customer lists that carry no treatment detail.
+
+If you believe an audience was flagged in error, you can request a review from Ads Manager or Audience Manager.
+
+The [retargeting guide](/blog/medspa-retargeting/) covers how to build HIPAA-aware audiences that still bring visitors back.
+
+## <span className="he">🖼️</span> Meta ads creative rules: before-and-afters, personal attributes and Botox
+
+The creative side is governed by Meta's [Health and Wellness ad standards](https://transparency.meta.com/policies/ad-standards/restricted-goods-services/health-wellness/), which name dermal fillers, injectable treatments, chemical peels, micro-needling and laser treatments among the cosmetic procedures advertisers can promote.
+
+Ads for cosmetic products, procedures or surgeries must target people 18 and older.
+
+Under the current version, those ads can depict a before-and-after transformation.
+
+They can't contain statements of inferiority about physical appearance, meaning copy that is negative and attacks a person's appearance, specific body parts or hygiene.
+
+They also can't use clickbait, such as exaggerated claims or promises of specific outcomes within a set timeframe without disclaimers or qualifiers.
+
+Meta has revised this standard more than once, so check the change log on the policy page before you build a campaign around results photos.
+
+Before-and-after photos also need specific written patient consent, which the [before-and-after photo guide](/blog/medspa-before-after-photos/) covers.
+
+A second policy catches more med spa copy than the first.
+
+Meta's [personal attributes policy](https://transparency.meta.com/policies/ad-standards/objectionable-content/privacy-violations-personal-attributes/) bars ads that assert or imply someone's physical or mental health, including medical conditions.
+
+<Compare>
+
+<Side title="Likely to be rejected" tone="no">
+
+- "Tired of your double chin?"
+- "Your wrinkles are aging you."
+- "Drop two dress sizes before summer."
+
+</Side>
+
+<Side title="Safer framing" tone="yes">
+
+- "Jawline contouring consults this month."
+- "Smooth, rested skin, done by a nurse injector."
+- "Book a medical weight loss consult."
+
+</Side>
+
+</Compare>
+
+These examples are illustrative, based on the policy wording, and every ad is still reviewed on its own.
+
+Brand-name injectables add a third layer.
+
+Botox and other neuromodulators are prescription drugs, which fall under Meta's [Drugs and Pharmaceuticals standards](https://transparency.meta.com/policies/ad-standards/restricted-goods-services/drugs-pharmaceuticals/) rather than the health and wellness standard alone.
+
+The practical route is to sell the outcome and the offer in the ad and let the landing page explain the treatment, as the [Botox marketing guide](/blog/botox-marketing/) and the [Botox lead generation page](/botox-lead-generation/) describe.
+
+## <span className="he">🔎</span> Google's healthcare ad policies, briefly
+
+Google runs separate rules, and the short version is similar in spirit.
+
+Google's [personalized advertising policy](https://support.google.com/adspolicy/answer/143465) treats health as a sensitive interest category.
+
+Health-related ads can't use advertiser-curated audiences, which rules out remarketing lists and customer match for them.
+
+Prescription drug terms are restricted on Google as well.
+
+We don't manage Google Ads, but if you run them yourself, the [med spa Google Ads guide](/blog/medspa-google-ads/) covers campaigns that stay inside those rules.
+
+## <span className="he">📨</span> Appealing a misclassification
+
+If Meta assigned your website to health and wellness and you believe that's wrong, you can [ask for a review](https://www.facebook.com/business/help/467621355878794).
+
+In Events Manager, open Manage data source categories, click View details, then Request review.
+
+Meta says it will email you its decision, but it doesn't publish how long reviews take.
+
+Be realistic about the outcome.
+
+A practice that performs injectables and laser treatments fits Meta's own definition, so a review is most useful when the category is plainly wrong, not when it's inconvenient.
+
+Blocked custom events, flagged audiences and flagged custom conversions each have their own review button, in Events Manager, Audience Manager or Ads Manager.
 
 ## <span className="he">✅</span> Compliant workarounds that still book consults
 
@@ -88,13 +460,13 @@ None of these get around the policy; they work inside it.
 
 <Card icon="target" title="Optimize for what's allowed">
 
-Optimize for what's still allowed, such as landing page views or on-platform [instant form leads](/blog/facebook-lead-forms-vs-landing-pages/), then judge results by your own booked-consult numbers.
+Optimize for events and objectives still available to you, or for on-platform [instant form leads](/blog/facebook-lead-forms-vs-landing-pages/), then judge results by booked consults.
 
 </Card>
 
 <Card icon="chart" title="Track outcomes yourself">
 
-Tag every ad with UTMs and record lead source in your booking system or CRM, so you know which ads produce consults even when Meta can't see them.
+Tag every ad with UTMs and check lead source against your own booking records, so you know which ads produce consults even when Meta can't see them.
 
 </Card>
 
@@ -104,21 +476,33 @@ When the algorithm can't optimize for the conversion, the page's own conversion 
 
 </Card>
 
+<Card icon="shield" title="Keep the data clean">
+
+Strip health detail from URLs and parameters, review custom events, and request a review only where a flag is plainly wrong.
+
+</Card>
+
 </Cards>
+
+The [attribution guide](/blog/medspa-attribution-call-tracking/) covers phone bookings and patients who find you more than one way.
 
 ## <span className="he">🧾</span> Running compliant campaigns
 
-Getting approved is mostly about respecting the category from the start.
+Getting approved and staying measurable is mostly about respecting the category from the start.
 
 <Checklist>
 
-- Keep targeting general, not health-attribute-based
-- Use creative that doesn't rely on restricted imagery
-- Avoid guaranteed-result claims in copy
-- Send clicks to a clear, honest [landing page](/medspa-cro/) that matches the ad
+- Check your data source category and core setup status in Events Manager
+- Keep targeting general, 18 and older, and free of health attributes
+- Write copy that never attacks appearance or implies a condition
+- Keep brand-name prescription drugs out of the ad unless you're authorized
+- Send clicks to a clear, honest [landing page](/blog/medspa-landing-pages/) that matches the ad
+- Judge every campaign on booked consults from your own records
 
 </Checklist>
 
-Pair this with the broader [marketing-laws node](/blog/medspa-marketing-laws/), because ad-platform policy is only one layer of the compliance stack a med spa lives under.
+Pair this with the broader [marketing laws guide](/blog/medspa-marketing-laws/), because ad-platform policy is only one layer of the compliance stack a med spa lives under.
 
-<CTA heading="Want your ad account reviewed for compliance and conversion?" />
+If you'd rather have this run for you, [managed Meta ads](/medspa-advertising/) are $3,000 a month flat plus a $2,500 one-time setup.
+
+<CTA heading="Want your ad account and landing pages reviewed for compliance and conversion?" />
