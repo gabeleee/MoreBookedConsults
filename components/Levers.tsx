@@ -130,7 +130,7 @@ export default function Levers() {
               <span className="tag">Treatment × city pages</span>
               <span className="tag">Topical authority</span>
               <span className="tag">Citations &amp; map pack</span>
-              <span className="tag">Review velocity</span>
+              <span className="tag">Google Business Profile</span>
             </div>
             <ChartCard
               title="Search impressions"

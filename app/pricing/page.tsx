@@ -75,7 +75,7 @@ export default function Pricing() {
                 <li>Free marketing audit + prioritized plan</li>
                 <li>Treatment/procedure × city pages</li>
                 <li>Google Business Profile optimization</li>
-                <li>Citations &amp; review velocity</li>
+                <li>Citation cleanup (consistent name, address, phone)</li>
               </ul>
               <Link className="btn" href="/rank-higher/">
                 Rank higher on Google
