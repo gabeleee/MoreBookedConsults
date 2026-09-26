@@ -30,6 +30,8 @@ export type Frontmatter = {
   // rendered by the routes after the MDX body
   faq?: { q: string; a: string }[];
   related?: { href: string; title: string; desc?: string }[];
+  // money pages: emitted as Service JSON-LD (provider = the Organization)
+  services?: { name: string; description: string }[];
 };
 
 export type ContentDoc = {

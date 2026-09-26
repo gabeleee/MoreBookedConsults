@@ -8,6 +8,12 @@ export default function OrgSchema() {
     name: SITE.name,
     url: SITE.url,
     email: SITE.email,
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "sales",
+      email: SITE.email,
+      availableLanguage: "English",
+    },
     description: SITE.description,
     knowsAbout: [
       "Conversion rate optimization",

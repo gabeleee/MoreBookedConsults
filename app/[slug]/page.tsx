@@ -5,6 +5,7 @@ import remarkGfm from "remark-gfm";
 import { mdxComponents, FAQ, Related } from "@/components/mdx/MdxComponents";
 import AuditForm from "@/components/AuditForm";
 import { getMoneyPage, getAllMoneyPages } from "@/lib/content";
+import { SITE } from "@/lib/site";
 
 // Root-level money pages (M1-M8, P1-P7, N1, N2), MDX-backed. Static routes
 // (/results/, /pricing/, /free-audit/, /blog/, metadata files) take precedence
@@ -34,9 +35,23 @@ export default async function MoneyPage({ params }: Params) {
   const page = getMoneyPage(slug);
   if (!page) notFound();
   const { frontmatter, body } = page;
+  const serviceLd = frontmatter.services?.map((s) => ({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: s.name,
+    description: s.description,
+    url: `${SITE.url}/${slug}/`,
+    provider: { "@type": "Organization", name: SITE.name, url: SITE.url },
+  }));
 
   return (
     <main>
+      {serviceLd && serviceLd.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+        />
+      )}
       <section className="article-hero">
         <div className="wrap hero-grid">
           <div>
