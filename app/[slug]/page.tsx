@@ -65,6 +65,21 @@ export default async function MoneyPage({ params }: Params) {
         mainEntityOfPage: `${SITE.url}/${slug}/`,
       }
     : null;
+  const itemListLd = frontmatter.itemList?.length
+    ? {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: frontmatter.title,
+        itemListOrder: "https://schema.org/ItemListOrderAscending",
+        numberOfItems: frontmatter.itemList.length,
+        itemListElement: frontmatter.itemList.map((it, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name: it.name,
+          url: it.url,
+        })),
+      }
+    : null;
 
   return (
     <main>
@@ -72,6 +87,12 @@ export default async function MoneyPage({ params }: Params) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+        />
+      )}
+      {itemListLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListLd) }}
         />
       )}
       {articleLd && (

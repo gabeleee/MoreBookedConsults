@@ -36,6 +36,8 @@ export type Frontmatter = {
   // published, updated = dateModified)
   article?: boolean;
   updated?: string;
+  // ranked comparison pages: emitted as ItemList JSON-LD, in order
+  itemList?: { name: string; url: string }[];
 };
 
 export type ContentDoc = {
