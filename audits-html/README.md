@@ -1,4 +1,4 @@
-Client audit pages, built in ~/aestheticamd-review (build/build.py → proposal-light.html, aesthetica-md-ads-light.html) and served by app/audits/*/route.ts. Not in the sitemap; noindex via meta + X-Robots-Tag.
+Client audit pages, built in ~/aestheticamd-review (build/build.py → proposal-brand.html, aesthetica-md-ads-brand.html in Aesthetica MD's own colors since 09-26; then build/wrap_mbc_brand.py ~/<mbc checkout>) and served by app/audits/*/route.ts. Not in the sitemap; noindex via meta + X-Robots-Tag.
 
 Toxwell (Mykola, toxwell.com): built in ~/toxwell-review (build/build.py → proposal.html, toxwell-ads.html), served at /audits/toxwell/ and /audits/toxwell/ads/.
 
