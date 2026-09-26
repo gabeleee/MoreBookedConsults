@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { SITE } from "@/lib/site";
+import { captureServerEvent, posthogIdsFromRequest } from "@/lib/posthog-server";
 import type { AuditSubmission } from "@/lib/submitAudit";
 
 // Single ingest point for audit-form submissions. Fans out to the CRM webhook
@@ -22,6 +23,18 @@ export async function POST(req: Request) {
   }
 
   await Promise.allSettled([sendToCrm(data), sendEmailNotification(data)]);
+  const ph = posthogIdsFromRequest(req);
+  await captureServerEvent({
+    distinctId: ph.distinctId ?? crypto.randomUUID(),
+    sessionId: ph.sessionId,
+    event: "audit_request_submitted",
+    properties: {
+      practice_type: data.practice ?? "unknown",
+      growth_goal: data.need ?? "unknown",
+      consult_value_provided: data.worth != null,
+      market_provided: Boolean(data.market),
+    },
+  });
   return NextResponse.json({ ok: true });
 }
 

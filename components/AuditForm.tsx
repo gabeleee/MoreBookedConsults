@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
+import posthog from "posthog-js";
 import { submitAudit } from "@/lib/submitAudit";
 
 // Reusable multi-step audit form (rendered in the hero and the bottom audit
@@ -76,10 +77,15 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
     const onChange = () => {
       setWorth(Number(el.value));
       setStep(4);
+      posthog.capture("audit_form_step_completed", {
+        form_location: idPrefix,
+        step_name: "consult_value",
+        consult_value_provided: true,
+      });
     };
     el.addEventListener("change", onChange);
     return () => el.removeEventListener("change", onChange);
-  }, []);
+  }, [idPrefix]);
 
   async function handleSubmit() {
     const nm = name.trim();
@@ -87,9 +93,17 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
     const ur = website.trim();
     const ok = nm.length > 1 && /.+@.+\..+/.test(em) && ur.length > 3;
     setError(!ok);
-    if (!ok) return;
+    if (!ok) {
+      posthog.capture("audit_form_validation_failed", {
+        form_location: idPrefix,
+        has_valid_name: nm.length > 1,
+        has_valid_email: /.+@.+\..+/.test(em),
+        has_valid_website: ur.length > 3,
+      });
+      return;
+    }
     setSubmitting(true);
-    await submitAudit({
+    const result = await submitAudit({
       practice,
       need,
       worth,
@@ -100,6 +114,13 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
     });
     setSubmitting(false);
     setDone(true);
+    if (!result.ok) {
+      posthog.capture("audit_form_submission_failed", {
+        form_location: idPrefix,
+        practice_type: practice ?? "unknown",
+        growth_goal: need ?? "unknown",
+      });
+    }
   }
 
   const stepClass = (n: number) => `fstep${step === n && !done ? " active" : ""}`;
@@ -133,6 +154,10 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
               onClick={() => {
                 setNeed(n.value);
                 setStep(2);
+                posthog.capture("audit_form_started", {
+                  form_location: idPrefix,
+                  growth_goal: n.value,
+                });
               }}
             >
               <span className="e">{n.emoji}</span> {n.label}
@@ -154,6 +179,11 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
               onClick={() => {
                 setPractice(p.value);
                 setStep(3);
+                posthog.capture("audit_form_step_completed", {
+                  form_location: idPrefix,
+                  step_name: "practice_type",
+                  practice_type: p.value,
+                });
               }}
             >
               <span className="e">{p.emoji}</span> {p.label}
@@ -187,6 +217,11 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
             onClick={() => {
               setWorth(null);
               setStep(4);
+              posthog.capture("audit_form_step_completed", {
+                form_location: idPrefix,
+                step_name: "consult_value",
+                consult_value_provided: false,
+              });
             }}
           >
             I don&apos;t know, skip this
