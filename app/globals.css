@@ -555,7 +555,7 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .at-a-glance ul{margin:0 0 12px 20px}
 .at-a-glance li{margin-bottom:8px;color:var(--ink)}
 .at-a-glance p:last-child{margin-bottom:12px}
-/* blog hero: at-a-glance lifted beside the audit form (transparent, border only, so it does not compete with the form) */
+/* blog + money-page hero: at-a-glance lifted beside the audit form (transparent, border only, so it does not compete with the form) */
 .hero-glance .at-a-glance{background:transparent;border:none;padding:20px 10px 8px;margin:22px 0 0;max-width:60ch;font-size:16px;box-shadow:none}
 .hero-glance .at-a-glance li{margin-bottom:7px}
 

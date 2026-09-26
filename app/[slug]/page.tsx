@@ -35,6 +35,11 @@ export default async function MoneyPage({ params }: Params) {
   const page = getMoneyPage(slug);
   if (!page) notFound();
   const { frontmatter, body } = page;
+  // Lift the page's leading <AtAGlance> block into the hero, under the lede,
+  // so the summary sits beside the audit form instead of below the fold.
+  const glanceMatch = body.match(/<AtAGlance>[\s\S]*?<\/AtAGlance>/);
+  const glance = glanceMatch?.[0];
+  const pageBody = glance ? body.replace(glance, "") : body;
   const serviceLd = frontmatter.services?.map((s) => ({
     "@context": "https://schema.org",
     "@type": "Service",
@@ -83,6 +88,15 @@ export default async function MoneyPage({ params }: Params) {
             )}
             <h1>{frontmatter.h1 ?? frontmatter.title}</h1>
             {frontmatter.lede && <p className="lede">{frontmatter.lede}</p>}
+            {glance && (
+              <div className="hero-glance">
+                <MDXRemote
+                  source={glance}
+                  components={mdxComponents}
+                  options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+                />
+              </div>
+            )}
           </div>
           <AuditForm idPrefix={slug} />
         </div>
@@ -90,7 +104,7 @@ export default async function MoneyPage({ params }: Params) {
       <section className="page-section">
         <div className="wrap article-body">
           <MDXRemote
-            source={body}
+            source={pageBody}
             components={mdxComponents}
             options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
           />
