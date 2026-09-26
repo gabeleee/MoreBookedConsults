@@ -483,3 +483,38 @@ export function Dot({ x, y, label }: { x: string; y: string; label: string }) {
     </span>
   );
 }
+
+// ---- Photo: a content photo with a responsive srcset ----
+// src = full-size file; small = optional ~800px version for phones.
+// width/height are the full file's pixels so the page doesn't jump on load.
+export function Photo({
+  src,
+  small,
+  alt,
+  width,
+  height,
+  caption,
+}: {
+  src: string;
+  small?: string;
+  alt: string;
+  width: string;
+  height: string;
+  caption?: string;
+}) {
+  return (
+    <figure className="vk-photo">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={src}
+        srcSet={small ? `${small} 800w, ${src} ${width}w` : undefined}
+        sizes="(max-width: 820px) 100vw, 760px"
+        alt={alt}
+        width={width}
+        height={height}
+        decoding="async"
+      />
+      {caption && <figcaption className="vk-fig-cap">{caption}</figcaption>}
+    </figure>
+  );
+}
