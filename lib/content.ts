@@ -32,6 +32,10 @@ export type Frontmatter = {
   related?: { href: string; title: string; desc?: string }[];
   // money pages: emitted as Service JSON-LD (provider = the Organization)
   services?: { name: string; description: string }[];
+  // money pages that are guides: emitted as Article JSON-LD (date = first
+  // published, updated = dateModified)
+  article?: boolean;
+  updated?: string;
 };
 
 export type ContentDoc = {

@@ -43,6 +43,23 @@ export default async function MoneyPage({ params }: Params) {
     url: `${SITE.url}/${slug}/`,
     provider: { "@type": "Organization", name: SITE.name, url: SITE.url },
   }));
+  const articleLd = frontmatter.article
+    ? {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        headline: frontmatter.title,
+        description: frontmatter.description,
+        ...(frontmatter.date ? { datePublished: frontmatter.date } : {}),
+        ...(frontmatter.updated ? { dateModified: frontmatter.updated } : {}),
+        author: {
+          "@type": "Person",
+          name: SITE.founder.name,
+          url: SITE.founder.linkedin,
+        },
+        publisher: { "@type": "Organization", name: SITE.name, url: SITE.url },
+        mainEntityOfPage: `${SITE.url}/${slug}/`,
+      }
+    : null;
 
   return (
     <main>
@@ -50,6 +67,12 @@ export default async function MoneyPage({ params }: Params) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }}
+        />
+      )}
+      {articleLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
         />
       )}
       <section className="article-hero">
