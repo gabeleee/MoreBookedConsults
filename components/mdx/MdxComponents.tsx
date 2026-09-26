@@ -20,6 +20,7 @@ import {
   Bar,
   Matrix,
   Dot,
+  Photo,
 } from "./Visuals";
 
 // Component map passed to <MDXRemote>. Body elements (h2/p/ul/table/…) are
@@ -207,4 +208,5 @@ export const mdxComponents = {
   Bar,
   Matrix,
   Dot,
+  Photo,
 };
