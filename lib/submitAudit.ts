@@ -1,3 +1,6 @@
+import posthog from "posthog-js";
+import { posthogRequestHeaders } from "@/lib/posthog-client";
+
 // The single stub every audit-form submission routes through, so a real
 // backend (email + CRM) drops in here later without touching the form UI.
 // Front-end only for now.
@@ -22,7 +25,10 @@ export async function submitAudit(
   try {
     const res = await fetch("/api/audit/", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        ...posthogRequestHeaders(),
+      },
       body: JSON.stringify(data),
     });
     // GA4 key event, so each lead ties back to the landing page it came from.
@@ -36,6 +42,7 @@ export async function submitAudit(
     }
     return { ok: res.ok };
   } catch (err) {
+    posthog.captureException(err, { flow: "audit_form_submission" });
     console.error("[submitAudit] request failed", err);
     return { ok: false };
   }
