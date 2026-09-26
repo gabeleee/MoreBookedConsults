@@ -48,6 +48,11 @@ export default async function BlogPost({ params }: Params) {
   const { frontmatter, body } = post;
   const url = `/blog/${slug}/`;
   const date = formatDate(frontmatter.date);
+  // Lift the post's leading <AtAGlance> block into the hero, under the H1,
+  // so the summary sits beside the audit form instead of below the fold.
+  const glanceMatch = body.match(/<AtAGlance>[\s\S]*?<\/AtAGlance>/);
+  const glance = glanceMatch?.[0];
+  const articleBody = glance ? body.replace(glance, "") : body;
 
   const articleLd = {
     "@context": "https://schema.org",
@@ -81,6 +86,15 @@ export default async function BlogPost({ params }: Params) {
               By {SITE.founder.name}
               {date ? ` · ${date}` : ""}
             </p>
+            {glance && (
+              <div className="hero-glance">
+                <MDXRemote
+                  source={glance}
+                  components={mdxComponents}
+                  options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
+                />
+              </div>
+            )}
           </div>
           <AuditForm idPrefix={slug} />
         </div>
@@ -93,7 +107,7 @@ export default async function BlogPost({ params }: Params) {
           />
           <div className="article-body">
             <MDXRemote
-              source={body}
+              source={articleBody}
               components={mdxComponents}
               options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
             />
