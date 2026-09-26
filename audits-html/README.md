@@ -3,3 +3,5 @@ Client audit pages, built in ~/aestheticamd-review (build/build.py → proposal-
 Toxwell (Mykola, toxwell.com): built in ~/toxwell-review (build/build.py → proposal.html, toxwell-ads.html), served at /audits/toxwell/ and /audits/toxwell/ads/.
 
 AYA Skin (AestheticHires customer, 12 clinics): built in ~/ayaskin-review (build/build.py → proposal.html, then build/wrap_mbc.py ~/<mbc checkout> writes audits-html/aya-skin.html), served at /audits/aya-skin/.
+
+Hiatus Day Spa + Med Spa (AestheticHires customer, 14 Texas spas): built in ~/hiatus-review (build/build.py → proposal.html, then build/wrap_mbc.py ~/<mbc checkout> writes audits-html/hiatus.html), served at /audits/hiatus/.
