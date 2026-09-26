@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import AuditCtaLink from "./AuditCtaLink";
 
 // Sticky mobile CTA, ported from the v18 mockup (markup 792-794, JS 879-888).
 // Shown only under 900px (CSS); hidden whenever either audit form is on
@@ -28,9 +29,9 @@ export default function StickyCta() {
 
   return (
     <div className="sticky-cta" id="stickyCta" ref={ref}>
-      <a className="btn" href="/free-audit/">
+      <AuditCtaLink className="btn" href="/free-audit/" location="sticky" native>
         Get a free marketing audit
-      </a>
+      </AuditCtaLink>
     </div>
   );
 }

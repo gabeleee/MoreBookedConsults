@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import AuditCtaLink from "@/components/AuditCtaLink";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -138,9 +139,9 @@ export default function Pricing() {
             too, no engagement needed.
           </p>
           <p style={{ marginTop: 20 }}>
-            <Link className="btn" href="/free-audit/">
+            <AuditCtaLink className="btn" href="/free-audit/" location="pricing">
               Get a free marketing audit
-            </Link>
+            </AuditCtaLink>
           </p>
           <p className="cross-links">
             See <Link href="/results/">the track record</Link>, or explore{" "}

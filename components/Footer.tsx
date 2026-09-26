@@ -3,6 +3,8 @@
 // topical map, so the footer carries the broader wayfinding.
 import Link from "next/link";
 import Logo from "./Logo";
+import AuditCtaLink from "./AuditCtaLink";
+import { isAuditHref } from "@/lib/audit-href";
 
 const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
   {
@@ -65,7 +67,13 @@ export default function Footer() {
               <ul>
                 {col.links.map((l) => (
                   <li key={l.href}>
-                    <Link href={l.href}>{l.label}</Link>
+                    {isAuditHref(l.href) ? (
+                      <AuditCtaLink href={l.href} location="footer">
+                        {l.label}
+                      </AuditCtaLink>
+                    ) : (
+                      <Link href={l.href}>{l.label}</Link>
+                    )}
                   </li>
                 ))}
               </ul>
