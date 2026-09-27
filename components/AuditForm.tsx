@@ -14,7 +14,7 @@ const TOTAL_STEPS = 4;
 function OptIcon({ name }: { name: string }) {
   return (
     <span className="opt-ic" aria-hidden="true">
-      <LineIcon name={name} />
+      <LineIcon name={name} weight={2.6} />
     </span>
   );
 }
