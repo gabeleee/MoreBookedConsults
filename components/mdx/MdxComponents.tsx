@@ -2,6 +2,7 @@ import Link from "next/link";
 import AuditCtaLink from "../AuditCtaLink";
 import { isAuditHref } from "@/lib/audit-href";
 import type { ComponentPropsWithoutRef, ReactNode } from "react";
+import { HeadIcon, LineIcon } from "../LineIcon";
 import {
   Cards,
   Card,
@@ -63,7 +64,7 @@ function Table(props: ComponentPropsWithoutRef<"table">) {
 function AtAGlance({ children }: { children: ReactNode }) {
   return (
     <aside className="at-a-glance">
-      <p className="aag-title">⚡ At a glance</p>
+      <p className="aag-title"><LineIcon name="zap" className="aag-ic" /> At a glance</p>
       {children}
     </aside>
   );
@@ -71,11 +72,11 @@ function AtAGlance({ children }: { children: ReactNode }) {
 
 // Tinted callout with an icon. type: tip | warning | note | key | stat
 const CALLOUT_ICON: Record<string, string> = {
-  tip: "💡",
-  warning: "⚠️",
-  note: "📌",
-  key: "🔑",
-  stat: "📊",
+  tip: "bulb",
+  warning: "alert",
+  note: "pin",
+  key: "key",
+  stat: "chart",
 };
 function Callout({
   type = "note",
@@ -87,7 +88,7 @@ function Callout({
   return (
     <aside className={`callout callout-${type}`}>
       <span className="callout-icon" aria-hidden="true">
-        {CALLOUT_ICON[type] ?? "📌"}
+        <LineIcon name={CALLOUT_ICON[type] ?? "pin"} />
       </span>
       <div className="callout-body">{children}</div>
     </aside>
@@ -184,6 +185,7 @@ function CTA({
 // FAQ and Related are intentionally NOT in this map, they're rendered from
 // frontmatter by the routes (MDX can't pass their array-of-object props).
 export const mdxComponents = {
+  HeadIcon,
   a: SmartLink,
   table: Table,
   AtAGlance,

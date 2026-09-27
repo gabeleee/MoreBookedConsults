@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HeadIcon, iconizeHeadings } from "@/components/LineIcon";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
@@ -90,7 +91,7 @@ export default async function BlogPost({ params }: Params) {
             {glance && (
               <div className="hero-glance">
                 <MDXRemote
-                  source={glance}
+                  source={iconizeHeadings(glance)}
                   components={mdxComponents}
                   options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
                 />
@@ -108,14 +109,14 @@ export default async function BlogPost({ params }: Params) {
           />
           <div className="article-body">
             <MDXRemote
-              source={articleBody}
+              source={iconizeHeadings(articleBody)}
               components={mdxComponents}
               options={{ mdxOptions: { remarkPlugins: [remarkGfm] } }}
             />
             {frontmatter.faq && frontmatter.faq.length > 0 && (
               <>
                 <h2>
-                  <span className="he">❓</span> Frequently asked questions
+                  <HeadIcon name="help" /> Frequently asked questions
                 </h2>
                 <FAQ items={frontmatter.faq} />
               </>
