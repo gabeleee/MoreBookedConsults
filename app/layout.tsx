@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     template: "%s | More Booked Consults",
   },
   description: SITE.description,
-  // og:image / twitter:image are supplied automatically by app/opengraph-image.tsx
+  // og:image / twitter:image: static public/og-image.png (set below).
   openGraph: {
     type: "website",
     siteName: "More Booked Consults",
@@ -60,11 +60,15 @@ export const metadata: Metadata = {
     description: SITE.description,
     url: SITE.url,
     locale: "en_US",
+    // Static file, not a route: trailingSlash:true 308-redirects the
+    // generated /opengraph-image route and LinkedIn won't follow it.
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "More Booked Consults" }],
   },
   twitter: {
     card: "summary_large_image",
     title: TITLE_DEFAULT,
     description: SITE.description,
+    images: ["/og-image.png"],
   },
 };
 
