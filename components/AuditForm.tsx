@@ -10,33 +10,73 @@ import { submitAudit } from "@/lib/submitAudit";
 const fmt = (n: number) => "$" + n.toLocaleString("en-US");
 const TOTAL_STEPS = 4;
 
+// Line icons (Lucide paths, 24px grid) for the option cards. Stroke only, so
+// they take the card's color: violet at rest, white on hover (see .opt-ic).
+const ICON_PATHS: Record<string, string[]> = {
+  sparkles: [
+    "M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z",
+    "M20 3v4",
+    "M22 5h-4",
+  ],
+  stethoscope: [
+    "M11 2v2",
+    "M5 2v2",
+    "M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1",
+    "M8 15a6 6 0 0 0 12 0v-3",
+    "M22 10a2 2 0 1 1-4 0 2 2 0 0 1 4 0z",
+  ],
+  syringe: ["m18 2 4 4", "m17 7 3-3", "M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5", "m9 11 4 4", "m5 19-3 3", "m14 4 6 6"],
+  zap: ["M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"],
+  trending: ["M22 7 13.5 15.5 8.5 10.5 2 17", "M16 7h6v6"],
+  search: ["M19 11a8 8 0 1 1-16 0 8 8 0 0 1 16 0z", "m21 21-4.3-4.3"],
+  megaphone: ["m3 11 18-5v12L3 14v-3z", "M11.6 16.8a3 3 0 1 1-5.8-1.6"],
+  layers: [
+    "m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z",
+    "m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65",
+    "m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65",
+  ],
+  compass: ["M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0z", "m16.24 7.76-2.12 6.36-6.36 2.12 2.12-6.36 6.36-2.12z"],
+};
+
+function OptIcon({ name }: { name: string }) {
+  return (
+    <span className="opt-ic" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
+        {ICON_PATHS[name].map((d) => (
+          <path key={d} d={d} />
+        ))}
+      </svg>
+    </span>
+  );
+}
+
 // Step 2, aesthetic practice type (values feed segmentation).
 const PRACTICES = [
-  { value: "Med spa", emoji: "💆", label: "Med spa" },
-  { value: "Plastic surgery", emoji: "🩺", label: "Plastic surgery" },
-  { value: "Injector", emoji: "💉", label: "Injector" },
-  { value: "Laser clinic", emoji: "✨", label: "Laser clinic" },
+  { value: "Med spa", icon: "sparkles", label: "Med spa" },
+  { value: "Plastic surgery", icon: "stethoscope", label: "Plastic surgery" },
+  { value: "Injector", icon: "syringe", label: "Injector" },
+  { value: "Laser clinic", icon: "zap", label: "Laser clinic" },
 ];
 
 // Step 1, what they want (values match the mockup's data-need strings).
 const NEEDS = [
   {
     value: "Convert existing traffic (CRO)",
-    emoji: "📈",
+    icon: "trending",
     label: "Convert the traffic I already have",
   },
   {
     value: "More traffic from Google (SEO)",
-    emoji: "🔍",
+    icon: "search",
     label: "More traffic from Google",
   },
   {
     value: "New leads from paid ads (Managed Ads)",
-    emoji: "🎯",
+    icon: "megaphone",
     label: "New leads from paid ads",
   },
-  { value: "Both CRO + SEO", emoji: "🧰", label: "A little bit of everything" },
-  { value: "Not sure yet", emoji: "🤔", label: "Not sure, tell me what you see" },
+  { value: "Both CRO + SEO", icon: "layers", label: "A little bit of everything" },
+  { value: "Not sure yet", icon: "compass", label: "Not sure, tell me what you see" },
 ];
 
 type Props = {
@@ -160,7 +200,7 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
                 });
               }}
             >
-              <span className="e">{n.emoji}</span> {n.label}
+              <OptIcon name={n.icon} /> {n.label}
             </button>
           ))}
         </div>
@@ -186,7 +226,7 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
                 });
               }}
             >
-              <span className="e">{p.emoji}</span> {p.label}
+              <OptIcon name={p.icon} /> {p.label}
             </button>
           ))}
         </div>
