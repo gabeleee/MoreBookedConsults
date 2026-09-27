@@ -297,7 +297,15 @@ const EMOJI_NORM: Record<string, string> = Object.fromEntries(
   Object.entries(EMOJI_ICON).map(([k, v]) => [norm(k), v]),
 );
 
-export function LineIcon({ name, className }: { name: string; className?: string }) {
+export function LineIcon({
+  name,
+  className,
+  weight = 1.6,
+}: {
+  name: string;
+  className?: string;
+  weight?: number;
+}) {
   const paths = ICONS[name] ?? ICONS.dot;
   return (
     <svg
@@ -305,7 +313,7 @@ export function LineIcon({ name, className }: { name: string; className?: string
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
-      strokeWidth="1.6"
+      strokeWidth={weight}
       strokeLinecap="round"
       strokeLinejoin="round"
       aria-hidden="true"

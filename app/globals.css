@@ -246,9 +246,9 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .opt-ic{
   flex:0 0 34px;width:34px;height:34px;border-radius:10px;
   display:inline-flex;align-items:center;justify-content:center;
-  background:var(--lilac);color:var(--violet);transition:background .15s,color .15s;
+  background:var(--lilac);color:var(--violet-deep);transition:background .15s,color .15s;
 }
-.opt-ic svg{width:18px;height:18px}
+.opt-ic svg{width:20px;height:20px}
 .opt:hover .opt-ic,.opt:focus-visible .opt-ic{background:var(--violet);color:#fff}
 .slider-val{font-family:var(--display);font-size:38px;margin:6px 0 4px}
 .calc2 input[type=range]{width:100%;accent-color:var(--violet);margin:6px 0 4px}
