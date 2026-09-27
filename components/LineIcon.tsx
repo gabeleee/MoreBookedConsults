@@ -300,7 +300,7 @@ const EMOJI_NORM: Record<string, string> = Object.fromEntries(
 export function LineIcon({
   name,
   className,
-  weight = 1.6,
+  weight = 2,
 }: {
   name: string;
   className?: string;
