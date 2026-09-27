@@ -2,6 +2,7 @@
 // (lines 634-671). The four step illustrations are photo placeholders
 // (.ph) awaiting real images, the alt text doubles as the swap spec.
 import PetalBackground from "./PetalBackground";
+import { LineIcon } from "./LineIcon";
 
 // `img` is the public path once a real photo exists; null shows the .ph
 // placeholder (whose alt text doubles as the shoot spec).
@@ -78,7 +79,7 @@ export default function Process() {
                   <img src={s.img} alt={s.alt} width={800} height={533} />
                 ) : (
                   <div className="ph">
-                    📷 <b>{s.photo}</b>
+                    <LineIcon name="camera" className="ph-ic" /> <b>{s.photo}</b>
                     <span>{s.alt}</span>
                   </div>
                 )}

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HeadIcon } from "@/components/LineIcon";
 import Link from "next/link";
 import { getVisibleBlogPosts } from "@/lib/content";
 import { blogEmoji } from "@/lib/blog-emoji";
@@ -83,9 +84,7 @@ export default function BlogIndex() {
                       href={`/blog/${p.slug}/`}
                       className="blog-card"
                     >
-                      <span className="blog-card-emoji" aria-hidden="true">
-                        {blogEmoji(p.slug)}
-                      </span>
+                      <HeadIcon e={blogEmoji(p.slug)} />
                       <span className="blog-card-title">
                         {p.frontmatter.title}
                         {p.frontmatter.status !== "published" && " (draft)"}
