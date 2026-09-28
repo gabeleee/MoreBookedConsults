@@ -33,6 +33,8 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # full history so the IndexNow step can diff against the last deploy
 
       - name: Skip if production already has HEAD
         id: check
@@ -44,6 +46,7 @@ jobs:
             -H "Authorization: Bearer $VERCEL_TOKEN" \
             | python3 -c 'import sys,json; d=json.load(sys.stdin)["deployments"]; m=d[0].get("meta",{}) if d else {}; print(m.get("contentSha") or m.get("githubCommitSha") or "")')
           echo "production sha: ${current:-none} | HEAD: $GITHUB_SHA"
+          echo "prev_sha=$current" >> "$GITHUB_OUTPUT"
           if [ "$current" = "$GITHUB_SHA" ]; then echo "skip=true" >> "$GITHUB_OUTPUT"; else echo "skip=false" >> "$GITHUB_OUTPUT"; fi
 
       - name: Deploy main to production
@@ -53,3 +56,10 @@ jobs:
         run: |
           npx --yes vercel@latest deploy --prod --yes --token="$VERCEL_TOKEN" \
             --meta contentSha="$GITHUB_SHA" --meta trigger=deploy-content
+
+      # Tell Bing & co. (IndexNow) which pages changed since the last deploy.
+      # Never fails the deploy: a missed ping only means slower recrawl.
+      - name: Ping IndexNow with changed pages
+        if: steps.check.outputs.skip == 'false'
+        continue-on-error: true
+        run: node scripts/indexnow.mjs "${{ steps.check.outputs.prev_sha }}" "$GITHUB_SHA"
