@@ -29,7 +29,7 @@ export async function captureServerEvent({
     posthog.capture({
       distinctId,
       event,
-      properties: { ...properties, ...(sessionId ? { $session_id: sessionId } : {}) },
+      properties: { site: "More Booked Consults", ...properties, ...(sessionId ? { $session_id: sessionId } : {}) },
     });
     await posthog.flush();
   } catch (err) {
