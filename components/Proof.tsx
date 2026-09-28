@@ -4,6 +4,7 @@
 import PetalBackground from "./PetalBackground";
 import ChartCard from "./ChartCard";
 import ConversionChart from "./ConversionChart";
+import { LineIcon } from "./LineIcon";
 
 export default function Proof() {
   return (
@@ -71,6 +72,17 @@ export default function Proof() {
               <div className="l">Testing velocity</div>
             </div>
           </div>
+          <a
+            className="proof-pdf"
+            href="/laseraway-intellimize-case-study.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            <LineIcon name="file" className="proof-pdf-icon" />
+            <span>
+              Read the published case study <small>PDF · Intellimize</small>
+            </span>
+          </a>
         </div>
         <ChartCard
           title="Sitewide conversion rate"
