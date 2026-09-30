@@ -93,7 +93,7 @@ export default function RootLayout({
           strategy="afterInteractive"
         />
         <Script id="ga4" strategy="afterInteractive">
-          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${SITE.gaId}');`}
+          {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());try{var q=new URLSearchParams(location.search).get('notrack');if(q==='1'||location.pathname.indexOf('/admin')===0)localStorage.setItem('notrack','1');if(q==='0')localStorage.removeItem('notrack');if(localStorage.getItem('notrack')==='1')window['ga-disable-${SITE.gaId}']=true;}catch(e){}gtag('config','${SITE.gaId}');`}
         </Script>
       </body>
     </html>
