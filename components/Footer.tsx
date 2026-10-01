@@ -38,6 +38,7 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
       { href: "/injector-marketing/", label: "For Injectors" },
       { href: "/laser-clinic-marketing/", label: "For Laser Clinics" },
       { href: "/medspa-marketing-consultant/", label: "Marketing Consultant" },
+      { href: "/fact-sheet/", label: "Fact Sheet" },
       { href: "/best-medspa-marketing-agencies/", label: "Best Medspa Agencies" },
       {
         href: "/best-plastic-surgery-marketing-agencies/",
