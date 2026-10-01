@@ -139,6 +139,20 @@ export default function Pricing() {
             With managed ads, the ad spend is billed to you directly by Meta,
             never marked up and never a percentage of what you spend.
           </p>
+          <p>
+            After the minimum, every service continues month to month, and you
+            can cancel with 30 days&apos; notice by email, with no cancellation
+            fee.
+          </p>
+          <p>
+            You own your accounts from the first day: the Meta ad account and
+            pixel sit in your own Business Manager, and your website, Google
+            Business Profile, and analytics stay in your name.
+          </p>
+          <p>
+            The landing pages, ads, test results, and reports I build for you
+            are yours to keep when the engagement ends.
+          </p>
           <p>Start with the audit.</p>
           <p>
             If your site and rankings are already tight, I&apos;ll tell you that
