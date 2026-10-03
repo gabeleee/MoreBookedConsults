@@ -9,3 +9,5 @@ Hiatus Day Spa + Med Spa (AestheticHires customer, 14 Texas spas): built in ~/hi
 Carp Cosmetic Surgery Center (AestheticHires customer, Uniontown + Beachwood OH): built in ~/carp-review (build/build.py → proposal.html, then build/wrap_mbc.py ~/<mbc checkout> writes audits-html/carp.html), served at /audits/carp/.
 
 Hydrate Me (AestheticHires customer, 4 Central Ohio spas): built in ~/hydrateme-review (build/build.py → proposal.html, then build/wrap_mbc.py ~/<mbc checkout> writes audits-html/hydrate-me.html), served at /audits/hydrate-me/.
+
+Chandler Wellness & Recovery (inbound lead, Julie Collier, Chandler AZ): built in ~/chandlerwellness-review (build/build.py → proposal.html, then build/wrap_mbc.py ~/<mbc checkout> writes audits-html/chandler-wellness.html), served at /audits/chandler-wellness/.
