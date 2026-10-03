@@ -11,3 +11,4 @@ Carp Cosmetic Surgery Center (AestheticHires customer, Uniontown + Beachwood OH)
 Hydrate Me (AestheticHires customer, 4 Central Ohio spas): built in ~/hydrateme-review (build/build.py → proposal.html, then build/wrap_mbc.py ~/<mbc checkout> writes audits-html/hydrate-me.html), served at /audits/hydrate-me/.
 
 Chandler Wellness & Recovery (inbound lead, Julie Collier, Chandler AZ): built in ~/chandlerwellness-review (build/build.py → proposal.html, then build/wrap_mbc.py ~/<mbc checkout> writes audits-html/chandler-wellness.html), served at /audits/chandler-wellness/.
+Short version: build.py short → proposal-short.html, then build/wrap_mbc.py ~/<mbc checkout> short writes audits-html/chandler-wellness-short.html, served at /audits/chandler-wellness/short/.
