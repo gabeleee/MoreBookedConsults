@@ -17,7 +17,8 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
       { href: "/medspa-advertising/", label: "Managed Ads" },
       { href: "/medspa-lead-generation/", label: "Lead Generation" },
       { href: "/medspa-marketing-cost/", label: "What It Costs" },
-      { href: "/medspa-ad-checker/", label: "Free Ad Checker" },
+      { href: "/medspa-ad-checker/", label: "Ad Checker (free)" },
+      { href: "/medspa-offer-builder/", label: "Offer Builder (free)" },
     ],
   },
   {

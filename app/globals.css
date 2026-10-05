@@ -1129,3 +1129,72 @@ footer a:hover{border-color:var(--violet)}
 }
 .ac-nums{display:inline-flex;gap:3px;flex:none;margin-right:6px}
 .ac-nums .ac-num{margin-right:0}
+/* ---- Consult Magnet builder (/medspa-offer-builder/) ---- */
+.cm-intro{min-height:0;padding:64px 0 40px}
+.cm-wrap{padding:8px 0 64px;background:var(--paper)}
+.cm-explain{padding:24px 0 88px;background:var(--paper)}
+.cm{display:grid;gap:26px}
+.cm-k{font-family:var(--mono);font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--violet);margin-bottom:12px}
+.cm-concerns{display:flex;flex-wrap:wrap;gap:8px}
+.cm-concern{display:inline-flex;align-items:center;gap:8px;padding:9px 14px 9px 9px;border-radius:999px;border:1px solid var(--line);background:var(--card);font:inherit;font-size:14.5px;color:var(--ink);cursor:pointer;transition:border-color .15s,background .15s}
+.cm-concern:hover{border-color:var(--violet)}
+.cm-concern.on{border-color:var(--violet);background:var(--lilac);font-weight:600}
+.cm-ci{width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--lilac);color:var(--violet)}
+.cm-ci svg{width:16px;height:16px}
+.cm-concern.on .cm-ci{background:var(--violet);color:#fff}
+.cm-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.cm-edit,.cm-out{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:24px}
+.cm-row{display:flex;gap:8px;align-items:center}
+.cm-row input{flex:1;min-width:0}
+.cm .field input[type=range]{padding:0;border:0;background:none;accent-color:var(--violet)}
+.cm-two{align-items:flex-start}
+.cm-two .field{flex:1;min-width:0}
+.cm-ghost{flex:none;font:inherit;font-size:13px;font-weight:600;padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--violet-deep);cursor:pointer}
+.cm-ghost:hover{border-color:var(--violet)}
+.cm-price{flex:none;display:flex;align-items:center;gap:4px;width:112px;border:1px solid var(--line);border-radius:10px;background:var(--paper);padding-left:12px;color:var(--soft)}
+.cm-price input{border:0!important;background:none!important;padding:13px 10px 13px 0!important;outline:none}
+.cm-mode{display:inline-flex;background:var(--lilac);border-radius:999px;padding:4px;margin:4px 0 16px}
+.cm-mode button{font:inherit;font-size:14px;font-weight:600;border:0;background:none;padding:8px 16px;border-radius:999px;color:var(--soft);cursor:pointer}
+.cm-mode button.on{background:var(--card);color:var(--ink);box-shadow:0 1px 4px rgba(35,33,64,.12)}
+.cm-check{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:var(--soft);margin-bottom:14px;cursor:pointer}
+.cm-check input{margin-top:3px;accent-color:var(--violet)}
+.cm-note{font-size:13.5px;color:var(--soft);margin-top:4px}
+.cm-warn{color:#9A3B12;background:#FFF3EA;border-radius:10px;padding:9px 12px}
+.cm-card{--cm:var(--violet);border-radius:18px;padding:22px;background:linear-gradient(180deg,#fff,var(--paper));border:1px solid var(--line);box-shadow:0 18px 40px -22px rgba(35,33,64,.35);position:relative;overflow:hidden}
+.cm-card::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;background:var(--cm)}
+.cm-card-head{display:flex;gap:14px;align-items:center;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.cm-card-ic{width:58px;height:58px;flex:none;border-radius:16px;display:grid;place-items:center;background:color-mix(in srgb,var(--cm) 14%,#fff);color:var(--cm)}
+.cm-card-ic svg{width:28px;height:28px}
+.cm-card-name{font-family:var(--display);font-size:27px;line-height:1.1;color:var(--ink)}
+.cm-card-sub{font-size:13.5px;color:var(--soft);margin-top:3px}
+.cm-card ul{list-style:none;margin:6px 0 0;padding:0}
+.cm-card li{display:flex;justify-content:space-between;gap:12px;padding:10px 0;font-size:15px;color:var(--ink)}
+.cm-card li b{color:var(--cm);white-space:nowrap}
+.cm-total{border-top:1px solid var(--line);padding-top:12px;margin-top:4px}
+.cm-total p{display:flex;justify-content:space-between;font-size:15px;color:var(--soft);padding:3px 0}
+.cm-total p:first-child span:last-child{text-decoration:line-through}
+.cm-total .cm-offer{font-size:19px;font-weight:700;color:var(--ink)}
+.cm-total .cm-offer span:last-child{color:var(--cm);font-size:24px}
+.cm-noprice{font-size:14px;color:var(--soft)}
+.cm-swatches{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:16px}
+.cm-swatches button[role=radio]{width:28px;height:28px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px var(--line);cursor:pointer}
+.cm-swatches button.on{box-shadow:0 0 0 2px var(--ink)}
+.cm-dl{margin-left:auto;padding:12px 20px;font-size:14.5px}
+.cm-cap{display:flex;gap:10px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:8px}
+.cm-cap pre{flex:1;min-width:0;margin:0;white-space:pre-wrap;font:inherit;font-size:14px;color:var(--ink)}
+.cm-run{display:grid;grid-template-columns:1fr 1.3fr;gap:28px;align-items:start;background:var(--deep);color:#fff;border-radius:22px;padding:30px}
+.cm-run .cm-k{color:#B9AEFF}
+.cm-run-copy{color:#C9C6E6;font-size:16px;max-width:38ch}
+.cm-run .field label{color:#B9B5DA}
+.cm-run .field input{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.16);color:#fff}
+.cm-run-fields .btn{width:100%}
+.cm-run-done p:last-child{color:#C9C6E6}
+@media (max-width:900px){
+  .cm-grid,.cm-run{grid-template-columns:1fr}
+}
+@media (max-width:520px){
+  .cm-edit,.cm-out{padding:18px}
+  .cm-two{flex-direction:column;gap:0}
+  .cm-two .field{width:100%}
+  .cm-dl{margin-left:0;width:100%}
+}
