@@ -38,7 +38,7 @@ Forms are front-end only for now, but ALL submissions route through one stub fun
 ## Site architecture (must not conflict with the SEO topical map)
 - Root-level money pages; `/blog/` is flat (no nested folders) for all informational content; cluster hierarchy is expressed via internal links, not URL folders.
 - Two hubs: `/medspa-marketing/` and `/plastic-surgeon-marketing/`. No umbrella hub at launch — homepage + About own the umbrella entity "aesthetic practice marketing."
-- Nav: For Med Spas → medspa hub · For Plastic Surgeons → PS hub · Results (`/results/`) · Pricing · Free Audit (`/free-audit/`, persistent CTA).
+- Nav: For Med Spas → medspa hub · For Plastic Surgeons → PS hub · Results (`/results/`) · Pricing · Free Tools (`/tools/`, "New" badge; added 2026-10-04 at Gabe's request) · Free Audit (`/free-audit/`, persistent CTA).
 - Slugs use `medspa` (one URL per concept). ~115 pages planned; the Next.js routing must make root-level slugs and flat `/blog/{slug}/` trivial to add.
 - Title pattern sitewide: `{Query-matched title} | More Booked Consults`.
 - Schema: Organization (description, founder → Gabe Person entity, knowsAbout, sameAs → LinkedIn + AestheticHires); breadcrumbs on every blog node.
