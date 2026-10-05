@@ -1263,10 +1263,10 @@ footer a:hover{border-color:var(--violet)}
 .tools-card-go{font-weight:600;color:var(--violet-deep);white-space:nowrap}
 @media (max-width:700px){.tools-card{grid-template-columns:1fr;gap:12px}}
 /* Consult Magnet: big numbered steps */
-.cm-step-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
-.cm-num{width:52px;height:52px;flex:none;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:28px;line-height:1;color:var(--ink);background:var(--lilac);border:1.5px solid var(--line)}
-.cm-step-title{font-family:var(--display);font-size:clamp(25px,3vw,32px);line-height:1.1;margin:0;color:var(--ink)}
-.cm-step-hint{font-size:15px;color:var(--soft);margin-top:4px}
+.cm-step-head{display:flex;align-items:center;gap:13px;margin-bottom:16px}
+.cm-num{width:40px;height:40px;flex:none;border-radius:50%;display:grid;place-items:center;font-family:var(--body);font-weight:800;font-size:19px;line-height:1;color:var(--deep);background:#C9C1F7;border:1.5px solid #B4A9F2}
+.cm-step-title{font-family:var(--body);font-weight:800;font-size:clamp(17px,1.7vw,19px);letter-spacing:-.01em;line-height:1.2;margin:0;color:var(--ink)}
+.cm-step-hint{font-size:14px;color:var(--soft);margin-top:2px}
 .cm-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .cm-swatches + .cm-step-head{margin-top:34px}
-@media (max-width:520px){.cm-num{width:44px;height:44px;font-size:24px}.cm-step-head{gap:12px}}
+@media (max-width:520px){.cm-num{width:36px;height:36px;font-size:17px}.cm-step-head{gap:11px}}
