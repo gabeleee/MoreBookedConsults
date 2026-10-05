@@ -87,7 +87,7 @@ export default function ConsultMagnet() {
   return (
     <div className="cm">
       <div className="cm-step">
-        <p className="cm-k">1. Pick a concern</p>
+        <StepHead n={1} title="Pick a concern" hint="What do you want new patients to come in for?" />
         <div className="cm-concerns">
           {CONCERNS.map((c) => (
             <button key={c.id} type="button" className={`cm-concern${c.id === cid ? " on" : ""}`} onClick={() => pick(c.id)} aria-pressed={c.id === cid}>
@@ -100,7 +100,7 @@ export default function ConsultMagnet() {
 
       <div className="cm-grid">
         <div className="cm-edit">
-          <p className="cm-k">2. Shape your Consult Magnet</p>
+          <StepHead n={2} title="Shape your offer" hint="Rename it, edit the three parts, add prices if you want." />
           <div className="field">
             <label htmlFor="cm-name">Offer name</label>
             <div className="cm-row">
@@ -161,7 +161,7 @@ export default function ConsultMagnet() {
         </div>
 
         <div className="cm-out">
-          <p className="cm-k">3. Your Consult Magnet</p>
+          <StepHead n={3} title="Get your ad" hint="Pick a color, then download the image." />
           <div className="cm-card" style={{ ["--cm" as string]: color }}>
             <div className="cm-card-head">
               <span className="cm-card-ic" aria-hidden="true"><LineIcon name={concern.icon} weight={1.8} /></span>
@@ -192,7 +192,7 @@ export default function ConsultMagnet() {
             <button type="button" className="btn cm-dl" onClick={download}>Download the ad (1080×1080)</button>
           </div>
 
-          <p className="cm-k" style={{ marginTop: 22 }}>4. Ad captions</p>
+          <StepHead n={4} title="Copy a caption" hint="Paste it as the ad text in Meta." />
           {caps.map((c, i) => (
             <div className="cm-cap" key={i}>
               <pre>{c}</pre>
@@ -203,6 +203,19 @@ export default function ConsultMagnet() {
       </div>
 
       <RunItForm offer={{ concern: concern.label, name, parts: parts.map((p, i) => `${p.label}: ${lineTag(i)}`), priced, value, price, spa, city }} />
+    </div>
+  );
+}
+
+// Big numbered step heading, so the next move is always obvious.
+function StepHead({ n, title, hint }: { n: number; title: string; hint: string }) {
+  return (
+    <div className="cm-step-head">
+      <span className="cm-num" aria-hidden="true">{n}</span>
+      <div>
+        <h2 className="cm-step-title"><span className="cm-sr">Step {n}: </span>{title}</h2>
+        <p className="cm-step-hint">{hint}</p>
+      </div>
     </div>
   );
 }
