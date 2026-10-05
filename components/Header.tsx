@@ -11,6 +11,7 @@ const NAV = [
   { href: "/plastic-surgeon-marketing/", label: "For Plastic Surgeons" },
   { href: "/results/", label: "Results" },
   { href: "/pricing/", label: "Pricing" },
+  { href: "/tools/", label: "Free Tools", badge: "New" },
 ];
 
 export default function Header() {
@@ -23,6 +24,7 @@ export default function Header() {
           {NAV.map((n) => (
             <Link key={n.href} href={n.href}>
               {n.label}
+              {n.badge && <span className="nav-new">{n.badge}</span>}
             </Link>
           ))}
         </nav>
