@@ -28,7 +28,7 @@ export const RULES: Rule[] = [
     label: "Calls out the reader's age, body or appearance",
     severity: "high",
     source: "Meta ad policy",
-    why: "Meta rejects ads that assert or imply something about the person reading them, like their age, weight or skin. This is the most common reason med spa ads get disapproved.",
+    why: "Meta rejects ads that assert or imply something about the person reading them, like their age, weight or skin. It was the most common flagged claim in our study of 773 med spa ads.",
     fix: "Talk about the treatment and the result, not about the reader.",
     before: "Over 40? Your wrinkles are aging you.",
     after: "Soften fine lines in a 20-minute visit.",
