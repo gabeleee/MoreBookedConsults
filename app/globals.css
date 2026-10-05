@@ -1264,7 +1264,7 @@ footer a:hover{border-color:var(--violet)}
 @media (max-width:700px){.tools-card{grid-template-columns:1fr;gap:12px}}
 /* Consult Magnet: big numbered steps */
 .cm-step-head{display:flex;align-items:center;gap:16px;margin-bottom:18px}
-.cm-num{width:52px;height:52px;flex:none;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:28px;line-height:1;color:#fff;background:linear-gradient(135deg,var(--violet),var(--blue));box-shadow:0 8px 20px -6px rgba(108,87,232,.6)}
+.cm-num{width:52px;height:52px;flex:none;border-radius:50%;display:grid;place-items:center;font-family:var(--display);font-size:28px;line-height:1;color:var(--ink);background:var(--lilac);border:1.5px solid var(--line)}
 .cm-step-title{font-family:var(--display);font-size:clamp(25px,3vw,32px);line-height:1.1;margin:0;color:var(--ink)}
 .cm-step-hint{font-size:15px;color:var(--soft);margin-top:4px}
 .cm-sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
