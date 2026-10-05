@@ -6,12 +6,12 @@ import ConsultMagnetArt from "@/components/ConsultMagnetArt";
 export const metadata: Metadata = {
   title: "Free Marketing Tools for Med Spas",
   description:
-    "Free tools for med spa owners from More Booked Consults: build a new patient offer with Consult Magnet, check any ad for Meta and FTC problems, and see what 773 real med spa ads get wrong.",
+    "Free tools for med spa owners from More Booked Consults: build a new patient offer with Consult Magnet, and check any ad for Meta and FTC problems before it runs.",
   alternates: { canonical: "/tools/" },
 };
 
-// Free tools index: a 2×2 grid of equal cards so every tool is visible without
-// scrolling. Each card has a small illustration on top and the pitch below.
+// Free tools index: equal cards in one row (three across on desktop) so every
+// tool is visible without scrolling. Tools only: studies and guides live elsewhere. Each card has a small illustration on top and the pitch below.
 // A card without href renders as "coming soon" (not a link).
 
 function AdCheckerArt() {
@@ -30,25 +30,6 @@ function AdCheckerArt() {
         <p><mark className="tg-md">Guaranteed results</mark> with painless Botox.</p>
         <p className="tg-ac-fix">Safer: Soften fine lines in a 20-minute visit.</p>
       </div>
-    </div>
-  );
-}
-
-function StudyArt() {
-  return (
-    <div className="tg-st" aria-hidden="true">
-      <p className="tg-st-k">Ads that call out the reader&apos;s age or looks</p>
-      <div className="tg-st-row">
-        <span>Independent med spas</span>
-        <i style={{ width: "92%" }} />
-        <b>9.2%</b>
-      </div>
-      <div className="tg-st-row tg-st-dim">
-        <span>National chains</span>
-        <i style={{ width: "6%" }} />
-        <b>0.6%</b>
-      </div>
-      <p className="tg-st-n">773 Meta ads · 297 practices · Oct 2026</p>
     </div>
   );
 }
@@ -85,15 +66,6 @@ const TOOLS: Tool[] = [
     lede: "Paste your ad. See which lines Meta and regulators flag, and how to fix them.",
     cta: "Check an ad →",
     art: <AdCheckerArt />,
-    isNew: true,
-  },
-  {
-    href: "/blog/med-spa-ad-claims-study/",
-    tag: "Data study",
-    title: "What 773 med spa ads get wrong.",
-    lede: "We checked real Facebook and Instagram ads from 297 practices. See which claims show up most, and who makes them.",
-    cta: "Read the study →",
-    art: <StudyArt />,
     isNew: true,
   },
   {
