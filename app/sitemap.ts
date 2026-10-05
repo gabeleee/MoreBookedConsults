@@ -3,7 +3,7 @@ import { SITE } from "@/lib/site";
 import { getPublishedBlogPosts, getPublishedMoneyPages } from "@/lib/content";
 
 // Fixed routes that aren't content-driven.
-const STATIC_ROUTES = ["/", "/results/", "/pricing/", "/free-audit/", "/blog/"];
+const STATIC_ROUTES = ["/", "/results/", "/pricing/", "/free-audit/", "/blog/", "/medspa-ad-checker/"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticEntries = STATIC_ROUTES.map((path) => ({

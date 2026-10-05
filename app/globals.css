@@ -1033,3 +1033,99 @@ footer a:hover{border-color:var(--violet)}
 .blog-card .he-ic svg{width:21px;height:21px}
 .blog-card:hover .he-ic{background:var(--violet);color:#fff}
 @media (max-width:720px){.blog-card .he-ic{grid-row:span 2;width:40px;height:40px}}
+
+/* ---- med spa ad checker (/medspa-ad-checker/, components/AdChecker.tsx) ---- */
+.ac-hero .ac-hero-copy{max-width:760px;margin:0 auto 26px;text-align:center}
+.ac-hero .ac-hero-copy h1{margin-left:auto;margin-right:auto}
+.ac-hero .ac-hero-copy .lede{margin:0 auto}
+.ac-hero .ac-hero-copy .eyebrow{justify-content:center}
+.ac{max-width:760px;margin:0 auto}
+.ac-input{display:flex;flex-direction:column;gap:12px}
+.ac-label{font-weight:600;font-size:16px}
+.ac textarea{
+  width:100%;font:inherit;font-size:16px;line-height:1.55;color:var(--ink);resize:vertical;min-height:150px;
+  border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--paper);
+}
+.ac textarea:focus{outline:2px solid var(--violet);outline-offset:1px;background:#fff}
+.ac-row{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.ac-examples{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:14px;color:var(--soft)}
+.ac-examples button{
+  font:inherit;font-size:13.5px;color:var(--violet-deep);background:var(--lilac);border:1px solid var(--line);
+  border-radius:999px;padding:5px 12px;cursor:pointer;
+}
+.ac-examples button:hover,.ac-examples button:focus-visible{border-color:var(--violet)}
+.ac-count{font-family:var(--mono);font-size:12px;color:var(--soft)}
+.ac-count.ac-low{color:#B4232F}
+.ac-go{width:100%}
+.ac-error{color:#B4232F;font-size:15px}
+.ac-note{font-family:var(--mono);font-size:12px;color:var(--soft);text-align:center}
+.ac-result{margin-top:28px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:28px;scroll-margin-top:90px}
+.ac-summary{display:flex;align-items:center;gap:24px;margin-bottom:22px}
+.ac-summary h2{font-size:32px;line-height:1.1;margin:4px 0 6px}
+.ac-summary p:last-child{color:var(--soft)}
+.ac-ring{position:relative;width:120px;height:120px;flex:none;--ac:#1F8A5B}
+.ac-ring.ac-some{--ac:#C27A12}
+.ac-ring.ac-high{--ac:#B4232F}
+.ac-ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ac-ring circle{fill:none;stroke-width:10}
+.ac-ring-bg{stroke:var(--lilac)}
+.ac-ring-fg{stroke:var(--ac);stroke-linecap:round;transition:stroke-dashoffset .8s ease}
+.ac-ring-num{position:absolute;inset:0;display:flex;align-items:baseline;justify-content:center;padding-top:38px;font-family:var(--display);font-size:38px;color:var(--ink)}
+.ac-ring-num small{font-family:var(--mono);font-size:12px;color:var(--soft);margin-left:2px}
+.ac-sub{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:18px 0 10px}
+.ac-ad-text{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px;line-height:1.9;white-space:pre-wrap}
+.ac-mark{border-radius:6px;padding:2px 4px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.ac-mark-high{background:#FBE3E5}
+.ac-mark-medium{background:#FDF0D9}
+.ac-mark-watch{background:var(--mist)}
+.ac-num{
+  display:inline-flex;align-items:center;justify-content:center;flex:none;width:20px;height:20px;border-radius:50%;
+  background:var(--ink);color:#fff;font-family:var(--mono);font-size:11px;margin-right:6px;vertical-align:1px;
+}
+.ac-flags{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.ac-flag{border:1px solid var(--line);border-left:4px solid var(--ac,#C27A12);border-radius:12px;padding:16px 18px;background:#fff}
+.ac-flag.ac-sev-high{--ac:#B4232F}
+.ac-flag.ac-sev-medium{--ac:#C27A12}
+.ac-flag.ac-sev-low,.ac-flag.ac-watch{--ac:var(--blue)}
+.ac-flag-head{display:flex;align-items:flex-start;gap:4px}
+.ac-flag-head .ac-num{margin-top:3px}
+.ac-flag-title{font-weight:600;font-size:16.5px;line-height:1.35}
+.ac-flag-meta{font-family:var(--mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ac)}
+.ac-why{color:var(--soft);font-size:15px;margin:8px 0}
+.ac-fix{display:flex;gap:8px;align-items:flex-start;font-size:15px;font-weight:500}
+.ac-fix svg{width:16px;height:16px;flex:none;margin-top:4px;color:var(--violet)}
+.ac-eg{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px}
+.ac-eg p{font-size:14px;border-radius:10px;padding:10px 12px}
+.ac-eg span{display:block;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:3px}
+.ac-eg-no{background:#FBE3E5}
+.ac-eg-no span{color:#B4232F}
+.ac-eg-yes{background:#E1F3EA}
+.ac-eg-yes span{color:#1F8A5B}
+.ac-passed{margin-top:16px;font-size:15px}
+.ac-passed summary{cursor:pointer;display:flex;align-items:center;gap:8px;color:#1F8A5B;font-weight:600}
+.ac-passed ul{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px;color:var(--soft)}
+.ac-passed li{display:flex;gap:8px;align-items:flex-start}
+.ac-passed svg{width:16px;height:16px;flex:none;margin-top:4px;color:#1F8A5B}
+.ac-cta{margin-top:24px;display:flex;align-items:center;gap:20px;background:var(--lilac);border-radius:16px;padding:20px 22px}
+.ac-cta-title{font-weight:600;margin-bottom:4px}
+.ac-cta p:last-child{color:var(--soft);font-size:15px}
+.ac-cta .btn{flex:none;padding:14px 24px}
+.ac-rules{list-style:none;margin:0 0 24px!important;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.ac-rules li{display:flex;gap:10px;align-items:flex-start;border:1px solid var(--line);border-radius:12px;padding:12px 14px;background:#fff;margin:0!important;font-size:15.5px;line-height:1.4}
+.ac-rule-src{display:block;font-family:var(--mono);font-size:11.5px;color:var(--soft);margin-top:3px}
+.ac-chip{flex:none;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;border-radius:999px;padding:3px 8px;margin-top:1px}
+.ac-chip.ac-sev-high{background:#FBE3E5;color:#B4232F}
+.ac-chip.ac-sev-medium{background:#FDF0D9;color:#8F5A0C}
+.ac-chip.ac-sev-low{background:var(--mist);color:#2D5FB8}
+@media (max-width:720px){
+  .ac-result{padding:20px 16px}
+  .ac-summary{gap:16px}
+  .ac-ring{width:92px;height:92px}
+  .ac-ring-num{font-size:30px;padding-top:28px}
+  .ac-summary h2{font-size:26px}
+  .ac-eg{grid-template-columns:1fr}
+  .ac-cta{flex-direction:column;align-items:stretch;text-align:center}
+  .ac-rules{grid-template-columns:1fr}
+}
+.ac-nums{display:inline-flex;gap:3px;flex:none;margin-right:6px}
+.ac-nums .ac-num{margin-right:0}
