@@ -1,0 +1,28 @@
+segment,claim,ads_with_claim,ads_in_segment,percent
+all,"Addressed the reader's own age, body or appearance",41,773,5.3
+national_chains,"Addressed the reader's own age, body or appearance",2,351,0.6
+independents,"Addressed the reader's own age, body or appearance",39,422,9.2
+all,Featured a patient testimonial or specific result,20,773,2.6
+national_chains,Featured a patient testimonial or specific result,6,351,1.7
+independents,Featured a patient testimonial or specific result,14,422,3.3
+all,"Claimed no downtime, no pain or no risk",27,773,3.5
+national_chains,"Claimed no downtime, no pain or no risk",5,351,1.4
+independents,"Claimed no downtime, no pain or no risk",22,422,5.2
+all,Promised permanent or guaranteed results,24,773,3.1
+national_chains,Promised permanent or guaranteed results,20,351,5.7
+independents,Promised permanent or guaranteed results,4,422,0.9
+all,"Claimed to be the best, #1 or top, with no source in the ad",23,773,3.0
+national_chains,"Claimed to be the best, #1 or top, with no source in the ad",15,351,4.3
+independents,"Claimed to be the best, #1 or top, with no source in the ad",8,422,1.9
+all,Played on insecurity about appearance,1,773,0.1
+national_chains,Played on insecurity about appearance,0,351,0.0
+independents,Played on insecurity about appearance,1,422,0.2
+all,Any of the above,121,773,15.7
+national_chains,Any of the above,46,351,13.1
+independents,Any of the above,75,422,17.8
+treatment:skin,Any of the above,31,164,18.9
+treatment:neurotoxin,Any of the above,25,154,16.2
+treatment:multiple,Any of the above,15,147,10.2
+treatment:filler,Any of the above,12,135,8.9
+treatment:hair_removal,Any of the above,14,99,14.1
+treatment:body_contouring,Any of the above,22,50,44.0
