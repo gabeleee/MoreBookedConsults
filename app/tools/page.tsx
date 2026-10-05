@@ -1,24 +1,110 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import type { ReactNode } from "react";
 import ConsultMagnetArt from "@/components/ConsultMagnetArt";
-import { LineIcon } from "@/components/LineIcon";
 
 export const metadata: Metadata = {
   title: "Free Marketing Tools for Med Spas",
   description:
-    "Free tools for med spa owners from More Booked Consults: build a new patient offer and ready-to-run ad with Consult Magnet, then check any ad for Meta and FTC problems.",
+    "Free tools for med spa owners from More Booked Consults: build a new patient offer with Consult Magnet, check any ad for Meta and FTC problems, and see what 773 real med spa ads get wrong.",
   alternates: { canonical: "/tools/" },
 };
 
-const POINTS = [
-  { icon: "target", text: "Pick a concern, get a named three-part offer" },
-  { icon: "dollar", text: "Add your own prices, or skip them" },
-  { icon: "image", text: "Download a ready-to-run 1080×1080 ad" },
-  { icon: "message", text: "Copy three captions written for Meta" },
+// Free tools index: a 2×2 grid of equal cards so every tool is visible without
+// scrolling. Each card has a small illustration on top and the pitch below.
+// A card without href renders as "coming soon" (not a link).
+
+function AdCheckerArt() {
+  return (
+    <div className="tg-ac" aria-hidden="true">
+      <div className="tg-ac-score">
+        <svg viewBox="0 0 60 60">
+          <circle cx="30" cy="30" r="25" className="tg-ac-bg" />
+          <circle cx="30" cy="30" r="25" className="tg-ac-fg" strokeDasharray="157" strokeDashoffset="104" />
+        </svg>
+        <span>34</span>
+      </div>
+      <div className="tg-ac-lines">
+        <p className="tg-ac-k">High risk · 3 flagged</p>
+        <p><mark className="tg-hi">Over 40?</mark> Smooth those lines away.</p>
+        <p><mark className="tg-md">Guaranteed results</mark> with painless Botox.</p>
+        <p className="tg-ac-fix">Safer: Soften fine lines in a 20-minute visit.</p>
+      </div>
+    </div>
+  );
+}
+
+function StudyArt() {
+  return (
+    <div className="tg-st" aria-hidden="true">
+      <p className="tg-st-k">Ads that call out the reader&apos;s age or looks</p>
+      <div className="tg-st-row">
+        <span>Independent med spas</span>
+        <i style={{ width: "92%" }} />
+        <b>9.2%</b>
+      </div>
+      <div className="tg-st-row tg-st-dim">
+        <span>National chains</span>
+        <i style={{ width: "6%" }} />
+        <b>0.6%</b>
+      </div>
+      <p className="tg-st-n">773 Meta ads · 297 practices · Oct 2026</p>
+    </div>
+  );
+}
+
+function ReviewsArt() {
+  return (
+    <div className="tg-rv" aria-hidden="true">
+      {["Results", "Wait time", "Upsell pressure", "Staff", "Pain", "Price"].map((t, i) => (
+        <span key={t} className={`tg-rv-chip tg-rv-${i}`}>{t}</span>
+      ))}
+    </div>
+  );
+}
+
+type Tool = { href?: string; tag: string; title: ReactNode; lede: string; cta: string; art: ReactNode; isNew?: boolean };
+
+const TOOLS: Tool[] = [
+  {
+    href: "/medspa-offer-builder/",
+    tag: "Offer builder",
+    title: (
+      <>
+        Build a <em>Consult Magnet</em>.
+      </>
+    ),
+    lede: "A new patient offer people actually book, plus a ready-to-run ad and captions, in about two minutes.",
+    cta: "Build your offer →",
+    art: <ConsultMagnetArt />,
+  },
+  {
+    href: "/medspa-ad-checker/",
+    tag: "Ad checker",
+    title: "Will your med spa ad get rejected?",
+    lede: "Paste your ad. See which lines Meta and regulators flag, and how to fix them.",
+    cta: "Check an ad →",
+    art: <AdCheckerArt />,
+    isNew: true,
+  },
+  {
+    href: "/blog/med-spa-ad-claims-study/",
+    tag: "Data study",
+    title: "What 773 med spa ads get wrong.",
+    lede: "We checked real Facebook and Instagram ads from 297 practices. See which claims show up most, and who makes them.",
+    cta: "Read the study →",
+    art: <StudyArt />,
+    isNew: true,
+  },
+  {
+    tag: "Review analyzer",
+    title: "What are your reviews really saying?",
+    lede: "Turn your Google reviews into the themes patients mention most, good and bad, so you know what to fix first.",
+    cta: "Coming soon",
+    art: <ReviewsArt />,
+  },
 ];
 
-// Free tools index. Consult Magnet is the first (and for now only) tool, so it
-// gets the full-width feature treatment.
 export default function ToolsPage() {
   return (
     <main>
@@ -32,35 +118,34 @@ export default function ToolsPage() {
 
       <section className="tools-feature-wrap">
         <div className="wrap">
-          <Link href="/medspa-offer-builder/" className="tools-feature">
-            <div className="tools-feature-copy">
-              <p className="tools-tag"><span>New</span> Free offer builder</p>
-              <h2>
-                Build a <em>Consult Magnet</em>.
-              </h2>
-              <p className="tools-feature-lede">A new patient offer people actually book, plus the ad to run it, in about two minutes.</p>
-              <ul className="tools-points">
-                {POINTS.map((p) => (
-                  <li key={p.text}>
-                    <span className="tools-pi"><LineIcon name={p.icon} weight={2.2} /></span>
-                    {p.text}
-                  </li>
-                ))}
-              </ul>
-              <span className="btn tools-btn">Build your Consult Magnet →</span>
-            </div>
-            <ConsultMagnetArt />
-          </Link>
-          <Link href="/medspa-ad-checker/" className="tools-card">
-            <span className="tools-card-ic"><LineIcon name="shield" weight={2} /></span>
-            <div>
-              <p className="tools-card-k">Free tool · Ad checker</p>
-              <h3>Will your med spa ad get rejected?</h3>
-              <p>Paste an ad, caption or landing page and get a risk score in seconds, with a safer rewrite for every line Meta, the FTC or your state board would flag.</p>
-            </div>
-            <span className="tools-card-go">Check an ad →</span>
-          </Link>
-          <p className="tools-more">More free tools are on the way.</p>
+          <div className="tg">
+            {TOOLS.map((t) => {
+              const body = (
+                <>
+                  <div className="tg-art">{t.art}</div>
+                  <div className="tg-copy">
+                    <p className="tools-tag">
+                      {t.isNew && <span>New</span>}
+                      {!t.href && <span>Soon</span>}
+                      {t.tag}
+                    </p>
+                    <h2>{t.title}</h2>
+                    <p className="tg-lede">{t.lede}</p>
+                    <span className="tg-go">{t.cta}</span>
+                  </div>
+                </>
+              );
+              return t.href ? (
+                <Link key={t.tag} href={t.href} className="tg-card">
+                  {body}
+                </Link>
+              ) : (
+                <div key={t.tag} className="tg-card tg-soon">
+                  {body}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </section>
     </main>
