@@ -1,6 +1,8 @@
 "use client";
-// Animated prism-light background for dark sections: soft diagonal light
-// streaks with rainbow fringes drifting over the deep purple. One small
+// Animated prism-light background: soft diagonal light streaks with rainbow
+// fringes drifting over the deep purple (tone="dark", opaque) or over a light
+// section's own background (tone="light", transparent canvas with white
+// cores, pastel fringes and a faint lavender shade beside each beam). One small
 // WebGL fragment shader, rendered at half resolution (the look is blurry by
 // design). Pauses off-screen and in background tabs; draws a single still
 // frame for prefers-reduced-motion. Without WebGL the section keeps its
@@ -21,6 +23,7 @@ uniform float t;
 uniform float tilt;  // streak slope (negative = falling to the right)
 uniform float gain;  // overall brightness
 uniform float feather; // canvas px the dimming eases out over
+uniform float lightTone; // 1 = light section (transparent output)
 uniform vec4 calmBox[3]; // text areas to dim, canvas px (x0, y0, x1, y1)
 uniform float calmK[3];  // how much to dim each one
 
@@ -33,7 +36,11 @@ vec3 spectrum(float h){
 
 // One streak: a soft band along a gently curving line with a rainbow fringe
 // on its leading edge. c = offset of the line, w = width, k = brightness.
-vec3 streak(vec2 p, float c, float w, float k, float seed){
+// accumulated per pixel by streak(): dark-tone colour, and for the light tone
+// the white, rainbow and shade weights composited separately in main()
+vec3 gLight; float gWhite; vec3 gRain; float gRainA; float gShade;
+
+void streak(vec2 p, float c, float w, float k, float seed){
   vec2 dir = normalize(vec2(1.0, tilt));
   vec2 nrm = vec2(-dir.y, dir.x);
   float along = dot(p, dir);
@@ -49,16 +56,22 @@ vec3 streak(vec2 p, float c, float w, float k, float seed){
   float fe = (d - ww * 1.0) / (ww * 0.55);
   float fringe = exp(-fe * fe);
   vec3 rainbow = mix(spectrum(clamp(0.5 + 0.5 * fe, 0.0, 1.0) * 0.82 + 0.02), vec3(1.0), 0.12);
-  return (CORE * (core * 0.56 + halo * 0.12) + rainbow * fringe * 0.85) * glow * k;
+  float se = (d + ww * 1.1) / (ww * 0.9);
+  float m = glow * k;
+  gLight += (CORE * (core * 0.56 + halo * 0.12) + rainbow * fringe * 0.85) * m;
+  gWhite += (core * 0.8 + halo * 0.15) * m;
+  gRain += rainbow * fringe * m;
+  gRainA += fringe * m;
+  gShade += exp(-se * se) * m;
 }
 
 void main(){
   vec2 p = (gl_FragCoord.xy - 0.5 * res) / (res.x > res.y ? min(res.y, res.x * 0.5) : res.x * 1.5);
-  vec3 light = vec3(0.0);
-  light += streak(p,  0.40 + 0.04 * sin(t * 0.11),        0.13, 1.00, 0.0);
-  light += streak(p,  0.12 + 0.05 * sin(t * 0.09 + 1.0),  0.07, 0.55, 2.1);
-  light += streak(p, -0.30 + 0.05 * sin(t * 0.10 + 2.0),  0.15, 0.90, 4.3);
-  light += streak(p, -0.58 + 0.04 * sin(t * 0.08 + 3.0),  0.08, 0.65, 5.9);
+  gLight = vec3(0.0); gWhite = 0.0; gRain = vec3(0.0); gRainA = 0.0; gShade = 0.0;
+  streak(p,  0.40 + 0.04 * sin(t * 0.11),        0.13, 1.00, 0.0);
+  streak(p,  0.12 + 0.05 * sin(t * 0.09 + 1.0),  0.07, 0.55, 2.1);
+  streak(p, -0.30 + 0.05 * sin(t * 0.10 + 2.0),  0.15, 0.90, 4.3);
+  streak(p, -0.58 + 0.04 * sin(t * 0.08 + 3.0),  0.08, 0.65, 5.9);
   // dim the light under the copy, easing out around each box
   vec2 fc = gl_FragCoord.xy;
   float dim = 1.0;
@@ -68,8 +81,21 @@ void main(){
     vec2 o = max(max(calmBox[i].xy - fc, fc - calmBox[i].zw), 0.0);
     dim = min(dim, 1.0 - calmK[i] * calmScale * (1.0 - smoothstep(0.0, feather, length(o))));
   }
+  if (lightTone > 0.5) {
+    // premultiplied layers, back to front: lavender shade, rainbow, white
+    float s = 0.55 * gain * dim;
+    float aS = 0.35 * (1.0 - exp(-gShade * s));
+    float aR = 1.0 - exp(-gRainA * s * 0.9);
+    float aW = 1.0 - exp(-gWhite * s);
+    vec3 rcol = gRain / max(gRainA, 1e-4);
+    vec4 acc = vec4(vec3(0.78, 0.75, 0.95) * aS, aS);
+    acc = vec4(rcol * aR, aR) + acc * (1.0 - aR);
+    acc = vec4(vec3(aW), aW) + acc * (1.0 - aW);
+    gl_FragColor = acc;
+    return;
+  }
   // soft cap so overlapping streaks never blow out
-  vec3 l = light * 0.62 * gain * dim;
+  vec3 l = gLight * 0.62 * gain * dim;
   vec3 col = BASE + 0.7 * (1.0 - exp(-l / 0.7));
   gl_FragColor = vec4(col, 1.0);
 }
@@ -90,15 +116,16 @@ type Props = {
   phase?: number; // seconds into the motion to start from
   gain?: number; // brightness, 1 = homepage hero
   feather?: number; // CSS px the text dimming fades out over
+  tone?: "dark" | "light"; // light = transparent over a light section's bg
 };
 
-export default function PrismBackground({ tilt = 0.42, phase = 40, gain = 1, feather = 90 }: Props) {
+export default function PrismBackground({ tilt = 0.42, phase = 40, gain = 1, feather = 90, tone = "dark" }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = ref.current;
     if (!canvas) return;
-    const gl = canvas.getContext("webgl", { antialias: false, alpha: false, powerPreference: "low-power" });
+    const gl = canvas.getContext("webgl", { antialias: false, alpha: tone === "light", powerPreference: "low-power" });
     if (!gl) return;
     const vs = compile(gl, gl.VERTEX_SHADER, VERT);
     const fs = compile(gl, gl.FRAGMENT_SHADER, FRAG);
@@ -121,6 +148,7 @@ export default function PrismBackground({ tilt = 0.42, phase = 40, gain = 1, fea
     gl.uniform1f(gl.getUniformLocation(prog, "tilt"), tilt);
     gl.uniform1f(gl.getUniformLocation(prog, "gain"), gain);
     gl.uniform1f(gl.getUniformLocation(prog, "feather"), feather * SCALE);
+    gl.uniform1f(gl.getUniformLocation(prog, "lightTone"), tone === "light" ? 1 : 0);
     const uCalm = gl.getUniformLocation(prog, "calmBox");
     const uCalmK = gl.getUniformLocation(prog, "calmK");
     const calmEls = Array.from(canvas.parentElement?.querySelectorAll<HTMLElement>("[data-prism-calm]") ?? []).slice(0, 3);
@@ -199,7 +227,7 @@ export default function PrismBackground({ tilt = 0.42, phase = 40, gain = 1, fea
       ro.disconnect();
       document.removeEventListener("visibilitychange", onVis);
     };
-  }, [tilt, phase, gain, feather]);
+  }, [tilt, phase, gain, feather, tone]);
 
   return <canvas ref={ref} className="prism-bg" aria-hidden="true" />;
 }

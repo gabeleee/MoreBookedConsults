@@ -4,6 +4,7 @@ import ChartCard from "@/components/ChartCard";
 import ConversionChart from "@/components/ConversionChart";
 import PetalBackground from "@/components/PetalBackground";
 import AuditForm from "@/components/AuditForm";
+import PrismBackground from "@/components/PrismBackground";
 import Audit from "@/components/Audit";
 
 export const metadata: Metadata = {
@@ -23,27 +24,10 @@ export default function Results() {
   return (
     <main>
       <section className="results-hero">
-        <PetalBackground
-          petals={[
-            { top: "12%", right: "6%", r: "18deg", size: 54, fill: "#CBC4F5" },
-            { top: "58%", right: "14%", r: "-24deg", size: 38, fill: "#C4D6FA" },
-            { top: "30%", left: "3%", r: "40deg", size: 44, fill: "#CBC4F5" },
-          ]}
-          trios={[
-            {
-              top: "-150px",
-              right: "-200px",
-              speed: -0.18,
-              dur: "20s",
-              del: "-9s",
-              size: 620,
-              opacity: 0.35,
-            },
-          ]}
-        />
+        <PrismBackground tone="light" tilt={0.36} phase={70} gain={1.3} />
         <div className="wrap">
           <div className="r-hero-top">
-            <div className="r-hero-intro">
+            <div className="r-hero-intro" data-prism-calm="0.6">
           <p className="eyebrow">Results · LaserAway · 2018–2023</p>
           <h1>The numbers this practice is built on.</h1>
           <p className="lede">
