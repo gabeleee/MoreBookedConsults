@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import ConsultMagnetArt from "@/components/ConsultMagnetArt";
+import PrismBackground from "@/components/PrismBackground";
 
 export const metadata: Metadata = {
   title: "Free Marketing Tools for Med Spas",
@@ -109,7 +110,8 @@ export default function ToolsPage() {
   return (
     <main>
       <section className="page-intro tools-intro">
-        <div className="wrap">
+        <PrismBackground tone="light" gain={1.3} tilt={0.34} phase={160} />
+        <div className="wrap" data-prism-calm="0.5">
           <p className="eyebrow">Free tools</p>
           <h1>Free tools for med spa owners.</h1>
           <p className="lede">Built from what actually gets new patients to book. No signup, no sales call.</p>

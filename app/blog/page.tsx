@@ -3,6 +3,7 @@ import { HeadIcon } from "@/components/LineIcon";
 import Link from "next/link";
 import { getVisibleBlogPosts } from "@/lib/content";
 import { blogEmoji } from "@/lib/blog-emoji";
+import PrismBackground from "@/components/PrismBackground";
 
 export const metadata: Metadata = {
   title: "Blog",
@@ -56,7 +57,8 @@ export default function BlogIndex() {
   return (
     <main>
       <section className="page-hero">
-        <div className="wrap">
+        <PrismBackground tone="light" gain={1.3} tilt={0.38} phase={85} />
+        <div className="wrap" data-prism-calm="0.5">
           <p className="eyebrow">Blog</p>
           <h1>Guides on aesthetic practice marketing.</h1>
           <p className="lede">

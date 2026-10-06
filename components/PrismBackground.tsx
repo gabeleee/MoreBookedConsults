@@ -229,5 +229,5 @@ export default function PrismBackground({ tilt = 0.42, phase = 40, gain = 1, fea
     };
   }, [tilt, phase, gain, feather, tone]);
 
-  return <canvas ref={ref} className="prism-bg" aria-hidden="true" />;
+  return <canvas ref={ref} className={tone === "light" ? "prism-bg prism-light" : "prism-bg"} aria-hidden="true" />;
 }

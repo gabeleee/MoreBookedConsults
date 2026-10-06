@@ -7,6 +7,7 @@ import { mdxComponents, FAQ, Related } from "@/components/mdx/MdxComponents";
 import AuditForm from "@/components/AuditForm";
 import { getMoneyPage, getAllMoneyPages } from "@/lib/content";
 import { SITE } from "@/lib/site";
+import PrismBackground from "@/components/PrismBackground";
 
 // Root-level money pages (M1-M8, P1-P7, N1, N2), MDX-backed. Static routes
 // (/results/, /pricing/, /free-audit/, /blog/, metadata files) take precedence
@@ -103,8 +104,9 @@ export default async function MoneyPage({ params }: Params) {
         />
       )}
       <section className="article-hero">
+        <PrismBackground tone="light" gain={1.3} tilt={0.42} phase={55} />
         <div className="wrap hero-grid">
-          <div>
+          <div data-prism-calm="0.6">
             {frontmatter.eyebrow && (
               <p className="eyebrow">{frontmatter.eyebrow}</p>
             )}

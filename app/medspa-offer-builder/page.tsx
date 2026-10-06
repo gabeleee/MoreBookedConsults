@@ -3,6 +3,7 @@ import Link from "next/link";
 import ConsultMagnet from "@/components/ConsultMagnet";
 import { Steps, Step, Compare, Side, Checklist } from "@/components/mdx/Visuals";
 import { SITE } from "@/lib/site";
+import PrismBackground from "@/components/PrismBackground";
 
 export const metadata: Metadata = {
   title: "Med Spa Offer Builder: Build a Consult Magnet (Free Tool)",
@@ -30,7 +31,8 @@ export default function OfferBuilderPage() {
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appLd) }} />
       <section className="page-intro cm-intro">
-        <div className="wrap">
+        <PrismBackground tone="light" gain={1.3} tilt={0.4} phase={10} />
+        <div className="wrap" data-prism-calm="0.5">
           <p className="eyebrow">Free med spa offer builder</p>
           <h1>
             Build a <em>Consult Magnet</em>.
