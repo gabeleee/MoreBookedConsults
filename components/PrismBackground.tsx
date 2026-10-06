@@ -1,0 +1,152 @@
+"use client";
+// Animated prism-light background for dark sections: soft diagonal light
+// streaks with rainbow fringes drifting over the deep purple. One small
+// WebGL fragment shader, rendered at half resolution (the look is blurry by
+// design). Pauses off-screen and in background tabs; draws a single still
+// frame for prefers-reduced-motion. Without WebGL the section keeps its
+// plain --deep background.
+import { useEffect, useRef } from "react";
+
+const VERT = `
+attribute vec2 p;
+void main(){ gl_Position = vec4(p, 0.0, 1.0); }
+`;
+
+const FRAG = `
+precision mediump float;
+uniform vec2 res;
+uniform float t;
+
+const vec3 BASE = vec3(0.106, 0.098, 0.212); // --deep #1B1936
+const vec3 CORE = vec3(0.86, 0.83, 1.0);     // lilac-white light
+
+vec3 spectrum(float h){
+  return 0.5 + 0.5 * cos(6.28318 * (h + vec3(0.0, 0.33, 0.67)));
+}
+
+// One streak: a soft band along a gently curving line with a rainbow fringe
+// on its leading edge. c = offset of the line, w = width, k = brightness.
+vec3 streak(vec2 p, float c, float w, float k, float seed){
+  vec2 dir = normalize(vec2(1.0, 0.42));
+  vec2 nrm = vec2(-dir.y, dir.x);
+  float along = dot(p, dir);
+  float bend = 0.10 * sin(along * 1.6 + t * 0.21 + seed)
+             + 0.05 * sin(along * 3.1 - t * 0.17 + seed * 2.3);
+  float d = dot(p, nrm) - c - bend;
+  // portrait (stacked mobile hero): repeat the streak set down the section
+  if (res.y > res.x) d = mod(d + 0.8, 1.6) - 0.8;
+  float ww = w * (0.75 + 0.35 * sin(along * 1.3 + seed * 1.7 + t * 0.13));
+  // brightness varies along the length so streaks fade in and out
+  float glow = 0.55 + 0.45 * smoothstep(-0.2, 0.9, sin(along * 1.1 + seed * 3.0 - t * 0.19));
+  float core = exp(-d * d / (ww * ww));
+  float halo = exp(-d * d / (9.0 * ww * ww));
+  float fe = (d - ww * 1.0) / (ww * 0.55);
+  float fringe = exp(-fe * fe);
+  vec3 rainbow = mix(spectrum(clamp(0.5 + 0.5 * fe, 0.0, 1.0) * 0.82 + 0.02), vec3(1.0), 0.12);
+  return (CORE * (core * 0.56 + halo * 0.12) + rainbow * fringe * 0.85) * glow * k;
+}
+
+void main(){
+  vec2 uv = gl_FragCoord.xy / res;
+  vec2 p = (gl_FragCoord.xy - 0.5 * res) / (res.x > res.y ? res.y : res.x * 1.5);
+  vec3 light = vec3(0.0);
+  light += streak(p,  0.40 + 0.04 * sin(t * 0.11),        0.13, 1.00, 0.0);
+  light += streak(p,  0.12 + 0.05 * sin(t * 0.09 + 1.0),  0.07, 0.55, 2.1);
+  light += streak(p, -0.30 + 0.05 * sin(t * 0.10 + 2.0),  0.15, 0.90, 4.3);
+  light += streak(p, -0.58 + 0.04 * sin(t * 0.08 + 3.0),  0.08, 0.65, 5.9);
+  // keep the headline column calmer so the copy stays easy to read
+  float calm = 1.0 - (res.x > res.y ? 0.6 : 0.3) * smoothstep(0.55, 0.0, uv.x) * smoothstep(0.1, 0.5, uv.y) * smoothstep(0.95, 0.6, uv.y);
+  vec3 col = BASE + light * calm;
+  gl_FragColor = vec4(col, 1.0);
+}
+`;
+
+function compile(gl: WebGLRenderingContext, type: number, src: string) {
+  const s = gl.createShader(type);
+  if (!s) return null;
+  gl.shaderSource(s, src);
+  gl.compileShader(s);
+  return gl.getShaderParameter(s, gl.COMPILE_STATUS) ? s : null;
+}
+
+export default function PrismBackground() {
+  const ref = useRef<HTMLCanvasElement>(null);
+
+  useEffect(() => {
+    const canvas = ref.current;
+    if (!canvas) return;
+    const gl = canvas.getContext("webgl", { antialias: false, alpha: false, powerPreference: "low-power" });
+    if (!gl) return;
+    const vs = compile(gl, gl.VERTEX_SHADER, VERT);
+    const fs = compile(gl, gl.FRAGMENT_SHADER, FRAG);
+    const prog = gl.createProgram();
+    if (!vs || !fs || !prog) return;
+    gl.attachShader(prog, vs);
+    gl.attachShader(prog, fs);
+    gl.linkProgram(prog);
+    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return;
+    gl.useProgram(prog);
+
+    const buf = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+    const loc = gl.getAttribLocation(prog, "p");
+    gl.enableVertexAttribArray(loc);
+    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+    const uRes = gl.getUniformLocation(prog, "res");
+    const uT = gl.getUniformLocation(prog, "t");
+
+    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const SCALE = 0.5;
+    const start = performance.now() - 40000; // start mid-motion, not at t=0
+    let raf = 0;
+    let onScreen = true;
+
+    const resize = () => {
+      const w = Math.max(1, Math.round(canvas.clientWidth * SCALE));
+      const h = Math.max(1, Math.round(canvas.clientHeight * SCALE));
+      if (canvas.width !== w || canvas.height !== h) {
+        canvas.width = w;
+        canvas.height = h;
+        gl.viewport(0, 0, w, h);
+      }
+    };
+    const draw = (now: number) => {
+      resize();
+      gl.uniform2f(uRes, canvas.width, canvas.height);
+      gl.uniform1f(uT, (now - start) / 1000);
+      gl.drawArrays(gl.TRIANGLES, 0, 3);
+      canvas.classList.add("is-on");
+    };
+    const loop = (now: number) => {
+      draw(now);
+      raf = requestAnimationFrame(loop);
+    };
+    const play = () => {
+      cancelAnimationFrame(raf);
+      if (still) draw(start + 40000);
+      else if (onScreen && !document.hidden) raf = requestAnimationFrame(loop);
+    };
+
+    const io = new IntersectionObserver(([e]) => {
+      onScreen = e.isIntersecting;
+      if (onScreen) play();
+      else cancelAnimationFrame(raf);
+    });
+    io.observe(canvas);
+    const onVis = () => (document.hidden ? cancelAnimationFrame(raf) : play());
+    document.addEventListener("visibilitychange", onVis);
+    const ro = new ResizeObserver(() => still && play());
+    ro.observe(canvas);
+    play();
+
+    return () => {
+      cancelAnimationFrame(raf);
+      io.disconnect();
+      ro.disconnect();
+      document.removeEventListener("visibilitychange", onVis);
+    };
+  }, []);
+
+  return <canvas ref={ref} className="prism-bg" aria-hidden="true" />;
+}
