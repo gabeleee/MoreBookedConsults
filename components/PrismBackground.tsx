@@ -4,7 +4,9 @@
 // WebGL fragment shader, rendered at half resolution (the look is blurry by
 // design). Pauses off-screen and in background tabs; draws a single still
 // frame for prefers-reduced-motion. Without WebGL the section keeps its
-// plain --deep background.
+// plain --deep background. The light is dimmed under up to three elements
+// marked `data-prism-calm="<strength 0-1>"` so the text over it stays easy
+// to read.
 import { useEffect, useRef } from "react";
 
 const VERT = `
@@ -16,6 +18,8 @@ const FRAG = `
 precision mediump float;
 uniform vec2 res;
 uniform float t;
+uniform vec4 calmBox[3]; // text areas to dim, canvas px (x0, y0, x1, y1)
+uniform float calmK[3];  // how much to dim each one
 
 const vec3 BASE = vec3(0.106, 0.098, 0.212); // --deep #1B1936
 const vec3 CORE = vec3(0.86, 0.83, 1.0);     // lilac-white light
@@ -33,8 +37,7 @@ vec3 streak(vec2 p, float c, float w, float k, float seed){
   float bend = 0.10 * sin(along * 1.6 + t * 0.21 + seed)
              + 0.05 * sin(along * 3.1 - t * 0.17 + seed * 2.3);
   float d = dot(p, nrm) - c - bend;
-  // portrait (stacked mobile hero): repeat the streak set down the section
-  if (res.y > res.x) d = mod(d + 0.8, 1.6) - 0.8;
+  d = mod(d + 1.0, 2.0) - 1.0; // repeat the set down tall sections
   float ww = w * (0.75 + 0.35 * sin(along * 1.3 + seed * 1.7 + t * 0.13));
   // brightness varies along the length so streaks fade in and out
   float glow = 0.55 + 0.45 * smoothstep(-0.2, 0.9, sin(along * 1.1 + seed * 3.0 - t * 0.19));
@@ -47,16 +50,24 @@ vec3 streak(vec2 p, float c, float w, float k, float seed){
 }
 
 void main(){
-  vec2 uv = gl_FragCoord.xy / res;
-  vec2 p = (gl_FragCoord.xy - 0.5 * res) / (res.x > res.y ? res.y : res.x * 1.5);
+  vec2 p = (gl_FragCoord.xy - 0.5 * res) / (res.x > res.y ? min(res.y, res.x * 0.5) : res.x * 1.5);
   vec3 light = vec3(0.0);
   light += streak(p,  0.40 + 0.04 * sin(t * 0.11),        0.13, 1.00, 0.0);
   light += streak(p,  0.12 + 0.05 * sin(t * 0.09 + 1.0),  0.07, 0.55, 2.1);
   light += streak(p, -0.30 + 0.05 * sin(t * 0.10 + 2.0),  0.15, 0.90, 4.3);
   light += streak(p, -0.58 + 0.04 * sin(t * 0.08 + 3.0),  0.08, 0.65, 5.9);
-  // keep the headline column calmer so the copy stays easy to read
-  float calm = 1.0 - (res.x > res.y ? 0.6 : 0.3) * smoothstep(0.55, 0.0, uv.x) * smoothstep(0.1, 0.5, uv.y) * smoothstep(0.95, 0.6, uv.y);
-  vec3 col = BASE + light * calm;
+  // dim the light under the copy, easing out over ~90px around each box
+  vec2 fc = gl_FragCoord.xy;
+  float dim = 1.0;
+  // on phones the copy spans the full width, so dim less there
+  float calmScale = res.y > res.x ? 0.5 : 1.0;
+  for (int i = 0; i < 3; i++) {
+    vec2 o = max(max(calmBox[i].xy - fc, fc - calmBox[i].zw), 0.0);
+    dim = min(dim, 1.0 - calmK[i] * calmScale * (1.0 - smoothstep(0.0, 45.0, length(o))));
+  }
+  // soft cap so overlapping streaks never blow out
+  vec3 l = light * 0.62 * dim;
+  vec3 col = BASE + 0.7 * (1.0 - exp(-l / 0.7));
   gl_FragColor = vec4(col, 1.0);
 }
 `;
@@ -95,6 +106,11 @@ export default function PrismBackground() {
     gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
     const uRes = gl.getUniformLocation(prog, "res");
     const uT = gl.getUniformLocation(prog, "t");
+    const uCalm = gl.getUniformLocation(prog, "calmBox");
+    const uCalmK = gl.getUniformLocation(prog, "calmK");
+    const calmEls = Array.from(canvas.parentElement?.querySelectorAll<HTMLElement>("[data-prism-calm]") ?? []).slice(0, 3);
+    const calmK = new Float32Array(3);
+    calmEls.forEach((el, i) => (calmK[i] = Number(el.dataset.prismCalm) || 0.7));
 
     const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
     const SCALE = 0.5;
@@ -111,8 +127,26 @@ export default function PrismBackground() {
         gl.viewport(0, 0, w, h);
       }
     };
+    // calm boxes in GL canvas pixels (origin bottom-left); unused slots
+    // sit off-canvas
+    const calm = new Float32Array(12).fill(-1e4);
+    const measure = () => {
+      const c = canvas.getBoundingClientRect();
+      const h = c.height * SCALE;
+      calmEls.forEach((el, i) => {
+        const r = el.getBoundingClientRect();
+        calm.set([
+          (r.left - c.left) * SCALE,
+          h - (r.bottom - c.top) * SCALE,
+          (r.right - c.left) * SCALE,
+          h - (r.top - c.top) * SCALE,
+        ], i * 4);
+      });
+    };
     const draw = (now: number) => {
       resize();
+      gl.uniform4fv(uCalm, calm);
+      gl.uniform1fv(uCalmK, calmK);
       gl.uniform2f(uRes, canvas.width, canvas.height);
       gl.uniform1f(uT, (now - start) / 1000);
       gl.drawArrays(gl.TRIANGLES, 0, 3);
@@ -136,8 +170,13 @@ export default function PrismBackground() {
     io.observe(canvas);
     const onVis = () => (document.hidden ? cancelAnimationFrame(raf) : play());
     document.addEventListener("visibilitychange", onVis);
-    const ro = new ResizeObserver(() => still && play());
+    const ro = new ResizeObserver(() => {
+      measure();
+      if (still) play();
+    });
     ro.observe(canvas);
+    calmEls.forEach((el) => ro.observe(el));
+    measure();
     play();
 
     return () => {

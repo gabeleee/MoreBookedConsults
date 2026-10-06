@@ -46,7 +46,7 @@ const CREDENTIALS: Credential[] = [
 export default function TrustBar() {
   return (
     <section className="trustbar" aria-label="Certified ad partners">
-      <div className="wrap">
+      <div className="wrap" data-prism-calm="0.5">
         <p className="tb-label">Certified ad partners:</p>
         <div className="tb-logos">
           {LOGOS.map((logo) => (

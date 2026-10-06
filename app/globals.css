@@ -138,9 +138,10 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 
 /* ---- hero ---- */
 .hero{padding:64px 0 70px;background:var(--deep);color:#EDECFA}
-/* ---- prism light background (homepage hero) ---- */
-.prism-bg{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease;
-  -webkit-mask-image:linear-gradient(to bottom,#000 78%,transparent);mask-image:linear-gradient(to bottom,#000 78%,transparent)}
+/* ---- prism light background (homepage hero + trust bar) ---- */
+.hero-zone{position:relative;background:var(--deep)}
+.hero-zone > .hero,.hero-zone > .trustbar{background:transparent}
+.prism-bg{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
 .prism-bg.is-on{opacity:1}
 .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
 .hero h1{font-size:clamp(37px,5.2vw,56px);line-height:1.07;max-width:16ch;margin:22px 0 16px;color:#fff}

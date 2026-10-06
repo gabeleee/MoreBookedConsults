@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
+import PrismBackground from "@/components/PrismBackground";
 import Proof from "@/components/Proof";
 import Levers from "@/components/Levers";
 import Founder from "@/components/Founder";
@@ -15,8 +16,11 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <Hero />
-      <TrustBar />
+      <div className="hero-zone">
+        <PrismBackground />
+        <Hero />
+        <TrustBar />
+      </div>
       <Proof />
       <Levers />
       <Founder />

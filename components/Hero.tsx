@@ -1,14 +1,14 @@
 // Hero section, ported from morebookedconsults-v18.html (lines 380-449).
 // The mockup's inline form card is replaced by the reusable <AuditForm />.
-import PrismBackground from "./PrismBackground";
+// The animated background lives on the .hero-zone wrapper in app/page.tsx so
+// it spans the hero and the trust bar; data-prism-calm marks the copy it dims.
 import AuditForm from "./AuditForm";
 
 export default function Hero() {
   return (
     <section className="hero" id="top">
-      <PrismBackground />
       <div className="wrap hero-grid">
-        <div>
+        <div data-prism-calm="0.75">
           <p className="eyebrow">CRO + Local SEO · Aesthetic practice marketing</p>
           <h1>
             More booked consults from the traffic you <em>already have.</em>
