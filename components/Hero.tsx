@@ -1,22 +1,14 @@
 // Hero section, ported from morebookedconsults-v18.html (lines 380-449).
 // The mockup's inline form card is replaced by the reusable <AuditForm />.
-import PetalBackground from "./PetalBackground";
+// The animated background lives on the .hero-zone wrapper in app/page.tsx so
+// it spans the hero and the trust bar; data-prism-calm marks the copy it dims.
 import AuditForm from "./AuditForm";
 
 export default function Hero() {
   return (
     <section className="hero" id="top">
-      <PetalBackground
-        petals={[
-          { top: "8%", left: "4%", r: "-24deg", size: 64, fill: "#453F82" },
-          { top: "66%", left: "2%", r: "38deg", size: 44, fill: "#374680" },
-        ]}
-        trios={[
-          { top: "-90px", right: "-150px", speed: 0.22, dur: "15s", del: "-3s", size: 640, dark: true },
-        ]}
-      />
       <div className="wrap hero-grid">
-        <div>
+        <div data-prism-calm="0.75">
           <p className="eyebrow">CRO + Local SEO · Aesthetic practice marketing</p>
           <h1>
             More booked consults from the traffic you <em>already have.</em>

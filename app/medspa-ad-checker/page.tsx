@@ -10,6 +10,7 @@ import AdChecker from "@/components/AdChecker";
 import { RULES } from "@/lib/ad-check";
 import type { Frontmatter } from "@/lib/content";
 import { SITE } from "@/lib/site";
+import PrismBackground from "@/components/PrismBackground";
 
 // Free med spa ad checker. The tool (components/AdChecker.tsx → /api/ad-check)
 // sits in the hero; the explainer copy lives in content/tools/medspa-ad-checker.mdx
@@ -54,8 +55,9 @@ export default function AdCheckerPage() {
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(appLd) }} />
       <section className="article-hero ac-hero">
+        <PrismBackground tone="light" gain={1.3} tilt={0.36} phase={140} />
         <div className="wrap">
-          <div className="ac-hero-copy">
+          <div className="ac-hero-copy" data-prism-calm="0.6">
             {fm.eyebrow && <p className="eyebrow">{fm.eyebrow}</p>}
             <h1>{fm.h1 ?? fm.title}</h1>
             {fm.lede && <p className="lede">{fm.lede}</p>}

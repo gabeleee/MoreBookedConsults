@@ -138,6 +138,13 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 
 /* ---- hero ---- */
 .hero{padding:64px 0 70px;background:var(--deep);color:#EDECFA}
+/* ---- prism light background (homepage hero + trust bar) ---- */
+.hero-zone{position:relative;background:var(--deep)}
+.hero-zone > .hero,.hero-zone > .trustbar{background:transparent}
+.prism-bg{position:absolute;inset:0;width:100%;height:100%;z-index:0;pointer-events:none;opacity:0;transition:opacity 1.2s ease}
+.prism-bg.is-on{opacity:1}
+/* light tone ends on a plain paper section, so fade it out instead of a hard edge */
+.prism-light{-webkit-mask-image:linear-gradient(to bottom,#000 55%,transparent);mask-image:linear-gradient(to bottom,#000 55%,transparent)}
 .hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:52px;align-items:center}
 .hero h1{font-size:clamp(37px,5.2vw,56px);line-height:1.07;max-width:16ch;margin:22px 0 16px;color:#fff}
 .hero h1 em{color:#A99BF7}
@@ -778,7 +785,7 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 @media (max-width:640px){.r-doc-scroll{height:420px}}
 
 /* ---- footer ---- */
-footer{background:var(--deep);color:#A6A3C8;padding:52px 0 56px;font-size:15px}
+footer{position:relative;background:var(--deep);color:#A6A3C8;padding:52px 0 56px;font-size:15px}
 .foot-nav{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;padding-bottom:36px;margin-bottom:34px;border-bottom:1px solid #3A3766}
 .foot-head{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#fff;margin-bottom:14px}
 .foot-col ul{list-style:none;display:grid;gap:9px;margin:0}

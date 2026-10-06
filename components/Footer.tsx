@@ -5,6 +5,7 @@ import Link from "next/link";
 import Logo from "./Logo";
 import AuditCtaLink from "./AuditCtaLink";
 import { isAuditHref } from "@/lib/audit-href";
+import PrismBackground from "./PrismBackground";
 
 const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
   {
@@ -63,7 +64,8 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
 export default function Footer() {
   return (
     <footer>
-      <div className="wrap">
+      <PrismBackground tilt={0.22} phase={150} gain={0.6} />
+      <div className="wrap" data-prism-calm="0.45">
         <nav className="foot-nav" aria-label="Footer">
           {FOOT_NAV.map((col) => (
             <div className="foot-col" key={col.head}>

@@ -8,6 +8,7 @@ import { mdxComponents, FAQ, Related } from "@/components/mdx/MdxComponents";
 import AuditForm from "@/components/AuditForm";
 import { getBlogPost, getAllBlogPosts } from "@/lib/content";
 import { SITE } from "@/lib/site";
+import PrismBackground from "@/components/PrismBackground";
 
 type Params = { params: Promise<{ slug: string }> };
 
@@ -74,8 +75,9 @@ export default async function BlogPost({ params }: Params) {
   return (
     <main>
       <section className="article-hero">
+        <PrismBackground tone="light" gain={1.3} tilt={0.3} phase={120} />
         <div className="wrap hero-grid">
-          <div>
+          <div data-prism-calm="0.6">
             <Breadcrumbs
               items={[
                 { name: "Home", href: "/" },

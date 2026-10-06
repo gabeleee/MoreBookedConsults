@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AuditCtaLink from "@/components/AuditCtaLink";
+import PrismBackground from "@/components/PrismBackground";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -13,7 +14,8 @@ export default function Pricing() {
   return (
     <main>
       <section className="page-hero pricing-hero">
-        <div className="wrap">
+        <PrismBackground tone="light" gain={1.3} tilt={0.46} phase={30} />
+        <div className="wrap" data-prism-calm="0.5">
           <p className="eyebrow">Pricing</p>
           <h1>Senior-level work. Flat monthly pricing.</h1>
           <p className="lede">
