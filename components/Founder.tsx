@@ -1,29 +1,17 @@
 // Founder section, ported from the v18 mockup (lines 607-633). The 84px
 // avatar reuses /gabe.jpg. LaserAway credentials are Gabe's personally, // keep them attributed to him, never to the company.
 // The mid-page CTA is folded into this same dark section so the petal trio
-// isn't clipped at a mid-block boundary.
-import PetalBackground from "./PetalBackground";
+// isn't clipped at a mid-block boundary. The prism light falls the other way
+// from the hero's so the two don't look copied.
+import PrismBackground from "./PrismBackground";
 import AuditCtaLink from "./AuditCtaLink";
 
 export default function Founder() {
   return (
     <section className="founder">
-      <PetalBackground
-        trios={[
-          {
-            bottom: "-170px",
-            left: "-210px",
-            speed: -0.24,
-            dur: "22s",
-            del: "-16s",
-            size: 720,
-            opacity: 0.5,
-            dark: true,
-          },
-        ]}
-      />
+      <PrismBackground tilt={-0.34} phase={95} gain={0.9} feather={180} />
       <div className="wrap founder-grid">
-        <div>
+        <div data-prism-calm="0.75">
           <p className="eyebrow">Who&apos;s behind this</p>
           <h2>
             More Booked <span className="wm-consults">Consults</span>{" "}
@@ -79,7 +67,7 @@ export default function Founder() {
         </div>
       </div>
       <div className="wrap founder-cta">
-        <aside className="cta-block">
+        <aside className="cta-block" data-prism-calm="0.5">
           <p>The fastest path to more booked consults.</p>
           <AuditCtaLink className="btn" href="/free-audit/" location="founder">
             Get a free marketing audit

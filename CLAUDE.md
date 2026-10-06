@@ -20,7 +20,8 @@ The approved design source of truth is `morebookedconsults-v18.html` (self-conta
 - Fonts: DM Serif Display (headings), Instrument Sans (body, incl. 700 for the wordmark "Consults"), Spline Sans Mono (eyebrows/labels/chart axes).
 - Wordmark: one word, no spaces — "MoreBooked" (DM Serif Display) + "Consults" (Instrument Sans bold, .92em, violet). This supersedes the v18 mockup's Great Vibes script wordmark.
 - Logomark: three ascending petals (lilac #CBC4F5 → blue #4C8DFF → violet-blue gradient). Petal SVG path: `M0,-46 C22,-32 24,-4 0,12 C-24,-4 -22,-32 0,-46 Z`. Same shape reused for all background decoration.
-- Background motion (all disabled under prefers-reduced-motion), two independent layers:
+- Dark (--deep) sections use the animated prism light (`components/PrismBackground.tsx`, WebGL, added 2026-10-06 at Gabe's request): homepage hero + trust bar (`.hero-zone` wrapper in app/page.tsx), the Founder section, and the sitewide footer. Each instance gets its own `tilt`/`phase`/`gain` so they don't look copied; mark text it should dim behind with `data-prism-calm="<0-1>"` (max 3 per instance). Never reuse it as a CTA treatment.
+- Petal background motion on light sections (all disabled under prefers-reduced-motion), two independent layers:
   1. Small petals: CSS drift animation (vertical + slight rotation).
   2. Oversized petal trios (7 sections): sway animation on the SVG element + scroll parallax on a wrapper div. Keep as two separate elements so transforms don't conflict.
 - Charts: hand-built inline SVGs (mono uppercase title, metric range, timeframe caption, ▲ delta badge, gridlines, endpoint labels). Main chart: 3% → 11% conversion line, LaserAway 2018–2023.

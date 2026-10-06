@@ -18,6 +18,9 @@ const FRAG = `
 precision mediump float;
 uniform vec2 res;
 uniform float t;
+uniform float tilt;  // streak slope (negative = falling to the right)
+uniform float gain;  // overall brightness
+uniform float feather; // canvas px the dimming eases out over
 uniform vec4 calmBox[3]; // text areas to dim, canvas px (x0, y0, x1, y1)
 uniform float calmK[3];  // how much to dim each one
 
@@ -31,7 +34,7 @@ vec3 spectrum(float h){
 // One streak: a soft band along a gently curving line with a rainbow fringe
 // on its leading edge. c = offset of the line, w = width, k = brightness.
 vec3 streak(vec2 p, float c, float w, float k, float seed){
-  vec2 dir = normalize(vec2(1.0, 0.42));
+  vec2 dir = normalize(vec2(1.0, tilt));
   vec2 nrm = vec2(-dir.y, dir.x);
   float along = dot(p, dir);
   float bend = 0.10 * sin(along * 1.6 + t * 0.21 + seed)
@@ -56,21 +59,23 @@ void main(){
   light += streak(p,  0.12 + 0.05 * sin(t * 0.09 + 1.0),  0.07, 0.55, 2.1);
   light += streak(p, -0.30 + 0.05 * sin(t * 0.10 + 2.0),  0.15, 0.90, 4.3);
   light += streak(p, -0.58 + 0.04 * sin(t * 0.08 + 3.0),  0.08, 0.65, 5.9);
-  // dim the light under the copy, easing out over ~90px around each box
+  // dim the light under the copy, easing out around each box
   vec2 fc = gl_FragCoord.xy;
   float dim = 1.0;
   // on phones the copy spans the full width, so dim less there
   float calmScale = res.y > res.x ? 0.5 : 1.0;
   for (int i = 0; i < 3; i++) {
     vec2 o = max(max(calmBox[i].xy - fc, fc - calmBox[i].zw), 0.0);
-    dim = min(dim, 1.0 - calmK[i] * calmScale * (1.0 - smoothstep(0.0, 45.0, length(o))));
+    dim = min(dim, 1.0 - calmK[i] * calmScale * (1.0 - smoothstep(0.0, feather, length(o))));
   }
   // soft cap so overlapping streaks never blow out
-  vec3 l = light * 0.62 * dim;
+  vec3 l = light * 0.62 * gain * dim;
   vec3 col = BASE + 0.7 * (1.0 - exp(-l / 0.7));
   gl_FragColor = vec4(col, 1.0);
 }
 `;
+
+const SCALE = 0.5; // canvas renders at half the CSS size
 
 function compile(gl: WebGLRenderingContext, type: number, src: string) {
   const s = gl.createShader(type);
@@ -80,7 +85,14 @@ function compile(gl: WebGLRenderingContext, type: number, src: string) {
   return gl.getShaderParameter(s, gl.COMPILE_STATUS) ? s : null;
 }
 
-export default function PrismBackground() {
+type Props = {
+  tilt?: number; // streak slope; vary per section so they don't look copied
+  phase?: number; // seconds into the motion to start from
+  gain?: number; // brightness, 1 = homepage hero
+  feather?: number; // CSS px the text dimming fades out over
+};
+
+export default function PrismBackground({ tilt = 0.42, phase = 40, gain = 1, feather = 90 }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -106,6 +118,9 @@ export default function PrismBackground() {
     gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
     const uRes = gl.getUniformLocation(prog, "res");
     const uT = gl.getUniformLocation(prog, "t");
+    gl.uniform1f(gl.getUniformLocation(prog, "tilt"), tilt);
+    gl.uniform1f(gl.getUniformLocation(prog, "gain"), gain);
+    gl.uniform1f(gl.getUniformLocation(prog, "feather"), feather * SCALE);
     const uCalm = gl.getUniformLocation(prog, "calmBox");
     const uCalmK = gl.getUniformLocation(prog, "calmK");
     const calmEls = Array.from(canvas.parentElement?.querySelectorAll<HTMLElement>("[data-prism-calm]") ?? []).slice(0, 3);
@@ -113,8 +128,7 @@ export default function PrismBackground() {
     calmEls.forEach((el, i) => (calmK[i] = Number(el.dataset.prismCalm) || 0.7));
 
     const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const SCALE = 0.5;
-    const start = performance.now() - 40000; // start mid-motion, not at t=0
+    const start = performance.now() - phase * 1000; // start mid-motion, not at t=0
     let raf = 0;
     let onScreen = true;
 
@@ -158,7 +172,7 @@ export default function PrismBackground() {
     };
     const play = () => {
       cancelAnimationFrame(raf);
-      if (still) draw(start + 40000);
+      if (still) draw(start + phase * 1000);
       else if (onScreen && !document.hidden) raf = requestAnimationFrame(loop);
     };
 
@@ -185,7 +199,7 @@ export default function PrismBackground() {
       ro.disconnect();
       document.removeEventListener("visibilitychange", onVis);
     };
-  }, []);
+  }, [tilt, phase, gain, feather]);
 
   return <canvas ref={ref} className="prism-bg" aria-hidden="true" />;
 }
