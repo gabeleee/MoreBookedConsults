@@ -24,7 +24,6 @@ export default function BookingAuditPage() {
       <section className="ba-hero">
         <div className="wrap ba-grid">
           <div className="ba-copy">
-            <p className="eyebrow">Free Booking Audit · for med spa owners</p>
             <h1>Your Tuesday doesn&apos;t have to look like this.</h1>
             <div className="ba-photo">
               <Image
@@ -35,12 +34,31 @@ export default function BookingAuditPage() {
                 priority
               />
             </div>
-            <p>
-              I&apos;ll walk your website&apos;s booking path click by click, the way a new client does on her phone.
-            </p>
-            <p>Then I&apos;ll show you exactly where people give up, and what to fix first.</p>
+            <ul className="ba-bullets">
+              <li>See your booking path the way a new client does, tap by tap on her phone</li>
+              <li>Find the exact spots where people give up before they book</li>
+              <li>Know which fixes would book the most consults, ranked</li>
+              <li>In your inbox within 3 business days, no call needed</li>
+            </ul>
           </div>
-          <BookingAuditForm />
+          <div className="ba-side">
+            <div className="ba-offer">
+              <h2>Free Booking Flow Audit</h2>
+              <p>For med spa owners · a $100 value</p>
+            </div>
+            <BookingAuditForm />
+            <a className="ba-sample" href="/booking-audit/sample-audit.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+                <path d="M14 3v5h5" />
+                <path d="M8.5 16.5v-3h1a1 1 0 0 1 0 2h-1M12.5 16.5v-3h.8a1.5 1.5 0 0 1 0 3zM16.5 13.5h-1.5v3M15 15h1.2" />
+              </svg>
+              <span>
+                <b>See a sample audit</b>
+                <small>PDF · a real audit, names changed</small>
+              </span>
+            </a>
+          </div>
         </div>
       </section>
 
@@ -67,7 +85,7 @@ export default function BookingAuditPage() {
           </div>
 
           <div className="ba-example">
-            <p className="ba-ex-label">From a real audit (a Denver med spa, names removed)</p>
+            <p className="ba-ex-label">From a real audit (names changed)</p>
             <div className="ba-paths">
               <div className="ba-path today">
                 <div className="ba-pn">7</div>
