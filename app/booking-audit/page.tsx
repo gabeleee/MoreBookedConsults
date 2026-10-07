@@ -81,12 +81,25 @@ export default function BookingAuditPage() {
                 priority
               />
             </div>
+          </div>
+          <div className="ba-more">
             <ul className="ba-bullets">
               <li>See your booking path the way a new client does, tap by tap on her phone</li>
               <li>Find the exact spots where people give up before they book</li>
               <li>Know which fixes would book the most consults, ranked</li>
               <li>In your inbox within 3 business days, no call needed</li>
             </ul>
+            <a className="ba-sample" href="/booking-audit/sample-audit.pdf" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+                <path d="M14 3v5h5" />
+                <path d="M8.5 16.5v-3h1a1 1 0 0 1 0 2h-1M12.5 16.5v-3h.8a1.5 1.5 0 0 1 0 3zM16.5 13.5h-1.5v3M15 15h1.2" />
+              </svg>
+              <span>
+                <b>See a sample audit</b>
+                <small>PDF · a real audit, names changed</small>
+              </span>
+            </a>
           </div>
           <div className="ba-side">
             <BookingAuditForm />
@@ -101,17 +114,6 @@ export default function BookingAuditPage() {
                 <p>No spam, and no call needed.</p>
               </div>
             </div>
-            <a className="ba-sample" href="/booking-audit/sample-audit.pdf" target="_blank" rel="noopener">
-              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
-                <path d="M14 3v5h5" />
-                <path d="M8.5 16.5v-3h1a1 1 0 0 1 0 2h-1M12.5 16.5v-3h.8a1.5 1.5 0 0 1 0 3zM16.5 13.5h-1.5v3M15 15h1.2" />
-              </svg>
-              <span>
-                <b>See a sample audit</b>
-                <small>PDF · a real audit, names changed</small>
-              </span>
-            </a>
           </div>
         </div>
       </section>
@@ -145,8 +147,8 @@ export default function BookingAuditPage() {
             <p className="ba-ex-label">From a real audit (names changed)</p>
             <div className="ba-paths">
               <div className="ba-path today">
-                <div className="ba-pn">7</div>
-                <p className="ba-pl">taps on a phone before she&apos;s even asked her name</p>
+                <div className="ba-pn">7 taps</div>
+                <p className="ba-pl">7 taps on a phone before she&apos;s even asked her name</p>
                 <Track steps={7} today />
                 <p className="ba-tcap">Every extra tap, more people give up.</p>
                 <ol>
@@ -157,8 +159,8 @@ export default function BookingAuditPage() {
                 </ol>
               </div>
               <div className="ba-path new">
-                <div className="ba-pn">5</div>
-                <p className="ba-pl">easy steps on her own site, and she&apos;s booked</p>
+                <div className="ba-pn">5 steps</div>
+                <p className="ba-pl">5 easy steps on her own site, and she&apos;s booked</p>
                 <Track steps={5} />
                 <p className="ba-tcap">Short, simple, and she never leaves your site.</p>
                 <ol>
@@ -178,7 +180,7 @@ export default function BookingAuditPage() {
         <div className="wrap ba-me-in">
           <Image src="/gabe.jpg" alt="Gabe Meierotto" width={96} height={96} className="ba-me-img" />
           <div>
-            <p className="ba-me-name">Gabe Meierotto, More Booked Consults</p>
+            <p className="ba-me-name">Gabe Meierotto, <a href="/">More Booked Consults</a></p>
             <p>As Director of CRO at LaserAway, I helped take online conversion from 3% to 11%.</p>
             <p>Now I fix booking flows for med spas.</p>
           </div>
