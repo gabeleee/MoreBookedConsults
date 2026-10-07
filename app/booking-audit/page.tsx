@@ -147,6 +147,9 @@ export default function BookingAuditPage() {
             <p className="ba-ex-label">From a real audit (names changed)</p>
             <div className="ba-paths">
               <div className="ba-path today">
+                <div className="ba-tagrow">
+                  <span className="ba-tag yours">Yours</span>
+                </div>
                 <div className="ba-pn">7 taps</div>
                 <p className="ba-pl">7 taps on a phone before she&apos;s even asked her name</p>
                 <Track steps={7} today />
@@ -158,7 +161,16 @@ export default function BookingAuditPage() {
                   <li>Book Reservation, then sign in or sign up</li>
                 </ol>
               </div>
+              <div className="ba-vs" aria-hidden="true">
+                <span>VS</span>
+              </div>
               <div className="ba-path new">
+                <div className="ba-tagrow">
+                  <span className="ba-tag ours">
+                    Ours
+                    <Logo />
+                  </span>
+                </div>
                 <div className="ba-pn">5 steps</div>
                 <p className="ba-pl">5 easy steps on her own site, and she&apos;s booked</p>
                 <Track steps={5} />
