@@ -101,7 +101,7 @@ export default function BookingAuditForm() {
       )}
 
       <div className={cls(1)}>
-        <h3>When someone taps Book on your website, what happens?</h3>
+        <h3>When someone tries to book, what happens?</h3>
         <p className="hint">Pick the closest match.</p>
         <div className="opts">
           {BOOK_OPTS.map((o) => (
