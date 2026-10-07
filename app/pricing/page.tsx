@@ -6,7 +6,7 @@ import PrismBackground from "@/components/PrismBackground";
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Pricing for aesthetic practices: CRO $2,500/mo, local SEO $2,500/mo, CRO + local SEO $5,000/mo, or managed Meta ads $3,000/mo. Senior-level, one operator.",
+    "Pricing for aesthetic practices: booking flow & website optimization $2,500/mo with no contract, local SEO $2,500/mo, both $5,000/mo, or managed Meta ads $3,000/mo. Senior-level, one operator.",
   alternates: { canonical: "/pricing/" },
 };
 
@@ -36,20 +36,21 @@ export default function Pricing() {
                   <polyline points="16 7 22 7 22 13" />
                 </svg>
               </span>
-              <span className="tier">CRO</span>
-              <h3>Conversion optimization</h3>
+              <span className="tier">Bookings</span>
+              <h3>Booking flow &amp; website optimization</h3>
               <div className="price">
                 $2,500<span>/mo</span>
               </div>
               <p className="tier-desc">
-                One controlled test a month on the spot that leaks the most
-                consults.
+                More of the visitors you already have, booking consults. No
+                contract.
               </p>
               <ul className="feature-list">
                 <li>Free marketing audit + prioritized plan</li>
-                <li>One controlled CRO test / month, run to significance</li>
-                <li>Booking flow, forms, offers &amp; treatment pages</li>
-                <li>6-month minimum, plain-English results report</li>
+                <li>2 improvements shipped / month, each measured against your numbers before</li>
+                <li>New booking form live within 14 days, or month one is free</li>
+                <li>Booking flow, forms, popups, reviews &amp; offers</li>
+                <li>No contract, cancel anytime, plain-English monthly report</li>
               </ul>
               <Link className="btn" href="/convert-more/">
                 Convert more traffic
@@ -116,8 +117,8 @@ export default function Pricing() {
             </div>
           </div>
           <p className="pricing-bundle">
-            <strong>CRO + Local SEO: $5,000/mo.</strong> Both retainers together,
-            one plan, one monthly report, 6-month minimum.
+            <strong>Booking optimization + Local SEO: $5,000/mo.</strong> Both
+            together, one plan, one monthly report, 6-month minimum.
           </p>
         </div>
       </section>
@@ -133,16 +134,17 @@ export default function Pricing() {
             Every service is a flat monthly rate for the work itself.
           </p>
           <p>
-            CRO and local SEO run on a 6-month minimum, because tests and
-            rankings need that long to show what they&apos;re worth; managed ads
-            run on a 3-month minimum.
+            Booking flow &amp; website optimization runs month to month with no
+            contract. Local SEO runs on a 6-month minimum, because rankings need
+            that long to show what they&apos;re worth; managed ads run on a
+            3-month minimum.
           </p>
           <p>
             With managed ads, the ad spend is billed to you directly by Meta,
             never marked up and never a percentage of what you spend.
           </p>
           <p>
-            After the minimum, every service continues month to month, and you
+            After any minimum, every service continues month to month, and you
             can cancel with 30 days&apos; notice by email, with no cancellation
             fee.
           </p>
