@@ -34,7 +34,7 @@ function Track({ steps, today }: { steps: number; today?: boolean }) {
   return (
     <div className={`ba-track${today ? " today" : ""}`} aria-hidden="true">
       {Array.from({ length: steps }, (_, i) => (
-        <span key={i} className="ba-dot" style={today ? { opacity: 1 - i * 0.12 } : undefined}>
+        <span key={i} className="ba-dot" style={today ? { opacity: 1 - i * 0.105 } : undefined}>
           {i + 1}
         </span>
       ))}
@@ -144,12 +144,15 @@ export default function BookingAuditPage() {
           </div>
 
           <div className="ba-example">
-            <p className="ba-ex-label">From a real audit (names changed)</p>
+            <p className="ba-ex-label">Booking on a phone, tap by tap</p>
             <div className="ba-paths">
               <div className="ba-path today">
-                <div className="ba-pn">7 taps</div>
-                <p className="ba-pl">7 taps on a phone before she&apos;s even asked her name</p>
-                <Track steps={7} today />
+                <div className="ba-tagrow">
+                  <span className="ba-tag yours">Yours</span>
+                </div>
+                <div className="ba-pn">8+ taps</div>
+                <p className="ba-pl">8+ taps on a phone before she&apos;s even asked her name</p>
+                <Track steps={8} today />
                 <p className="ba-tcap">Every extra tap, more people give up.</p>
                 <ol>
                   <li>Find Book Online in the menu</li>
@@ -158,7 +161,16 @@ export default function BookingAuditPage() {
                   <li>Book Reservation, then sign in or sign up</li>
                 </ol>
               </div>
+              <div className="ba-vs" aria-hidden="true">
+                <span>VS</span>
+              </div>
               <div className="ba-path new">
+                <div className="ba-tagrow">
+                  <span className="ba-tag ours">
+                    Ours
+                    <Logo />
+                  </span>
+                </div>
                 <div className="ba-pn">5 steps</div>
                 <p className="ba-pl">5 easy steps on her own site, and she&apos;s booked</p>
                 <Track steps={5} />
