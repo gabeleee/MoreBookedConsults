@@ -14,6 +14,50 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+function Logo() {
+  return (
+    <span className="brand">
+      <svg className="logo-mark" viewBox="10 2 86 94" aria-hidden="true">
+        <use href="#petalShape" fill="#CBC4F5" transform="translate(24,76) scale(0.52) rotate(-24)" />
+        <use href="#petalShape" fill="#4C8DFF" opacity="0.9" transform="translate(45,64) scale(0.74) rotate(-10)" />
+        <use href="#petalShape" fill="url(#logoGrad)" transform="translate(68,48) scale(0.98) rotate(6)" />
+      </svg>
+      <span>
+        MoreBooked<em>Consults</em>
+      </span>
+    </span>
+  );
+}
+
+// Tap-by-tap track for the 7 vs 5 example: today's dots fade as clients drop off.
+function Track({ steps, today }: { steps: number; today?: boolean }) {
+  return (
+    <div className={`ba-track${today ? " today" : ""}`} aria-hidden="true">
+      {Array.from({ length: steps }, (_, i) => (
+        <span key={i} className="ba-dot" style={today ? { opacity: 1 - i * 0.12 } : undefined}>
+          {i + 1}
+        </span>
+      ))}
+      {today ? (
+        <span className="ba-end wall">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="5" y="11" width="14" height="10" rx="2" />
+            <path d="M8 11V8a4 4 0 0 1 8 0v3" />
+          </svg>
+          Sign in
+        </span>
+      ) : (
+        <span className="ba-end booked">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M5 12.5l4.5 4.5L19 7.5" />
+          </svg>
+          Booked
+        </span>
+      )}
+    </div>
+  );
+}
+
 export default function BookingAuditPage() {
   return (
     <main className="ba">
@@ -22,6 +66,9 @@ export default function BookingAuditPage() {
       <MetaPixel />
 
       <section className="ba-hero">
+        <div className="wrap ba-top">
+          <Logo />
+        </div>
         <div className="wrap ba-grid">
           <div className="ba-copy">
             <h1>Your Tuesday doesn&apos;t have to look like this.</h1>
@@ -43,6 +90,17 @@ export default function BookingAuditPage() {
           </div>
           <div className="ba-side">
             <BookingAuditForm />
+            <div className="ba-private">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6z" />
+                <path d="M9 12l2 2 4-4" />
+              </svg>
+              <div>
+                <b>Your answers stay private.</b>
+                <p>I use them only to build your audit, and I never sell or share them with anyone.</p>
+                <p>No spam, and no call needed.</p>
+              </div>
+            </div>
             <a className="ba-sample" href="/booking-audit/sample-audit.pdf" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
@@ -64,16 +122,19 @@ export default function BookingAuditPage() {
           <h2>Your audit, in plain English.</h2>
           <div className="ba-cards">
             <div className="ba-card">
+              <Image src="/booking-audit/card-path.jpg" alt="Two phones showing a med spa website, the way a new client sees it" width={800} height={500} className="ba-card-img" />
               <span className="ba-k">1</span>
               <h3>Your booking path, click by click</h3>
               <p>Every tap from your homepage to a booked time, next to the shorter path I&apos;d build.</p>
             </div>
             <div className="ba-card">
+              <Image src="/booking-audit/card-scorecard.jpg" alt="A med spa owner reviewing her booking calendar on a laptop" width={800} height={500} className="ba-card-img" />
               <span className="ba-k">2</span>
               <h3>A booking scorecard</h3>
               <p>Your Book button, booking form, mobile experience and steps to book, each graded.</p>
             </div>
             <div className="ba-card">
+              <Image src="/booking-audit/card-fix.jpg" alt="A busy med spa lobby with clients checking in at the front desk" width={800} height={500} className="ba-card-img" />
               <span className="ba-k">3</span>
               <h3>What to fix first</h3>
               <p>The changes that would book the most consults, ranked.</p>
@@ -86,6 +147,8 @@ export default function BookingAuditPage() {
               <div className="ba-path today">
                 <div className="ba-pn">7</div>
                 <p className="ba-pl">taps on a phone before she&apos;s even asked her name</p>
+                <Track steps={7} today />
+                <p className="ba-tcap">Every extra tap, more people give up.</p>
                 <ol>
                   <li>Find Book Online in the menu</li>
                   <li>Leave for a separate booking site</li>
@@ -96,6 +159,8 @@ export default function BookingAuditPage() {
               <div className="ba-path new">
                 <div className="ba-pn">5</div>
                 <p className="ba-pl">easy steps on her own site, and she&apos;s booked</p>
+                <Track steps={5} />
+                <p className="ba-tcap">Short, simple, and she never leaves your site.</p>
                 <ol>
                   <li>What would you like to improve?</li>
                   <li>First visit?</li>
@@ -122,16 +187,7 @@ export default function BookingAuditPage() {
           <a className="btn" href="#get-audit">Get my free audit</a>
         </div>
         <div className="wrap ba-logo">
-          <span className="brand">
-            <svg className="logo-mark" viewBox="10 2 86 94" aria-hidden="true">
-              <use href="#petalShape" fill="#CBC4F5" transform="translate(24,76) scale(0.52) rotate(-24)" />
-              <use href="#petalShape" fill="#4C8DFF" opacity="0.9" transform="translate(45,64) scale(0.74) rotate(-10)" />
-              <use href="#petalShape" fill="url(#logoGrad)" transform="translate(68,48) scale(0.98) rotate(6)" />
-            </svg>
-            <span>
-              MoreBooked<em>Consults</em>
-            </span>
-          </span>
+          <Logo />
         </div>
       </section>
     </main>
