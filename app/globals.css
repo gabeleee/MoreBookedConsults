@@ -1318,3 +1318,110 @@ a.tg-card:hover{transform:translateY(-3px);box-shadow:0 32px 70px -30px rgba(27,
   .tg-ac-fix{display:none}
   .tg-ac{gap:12px;padding:14px}
 }
+
+/* ===== /booking-audit/ paid-ad landing page (tumbleweed video) ===== */
+.ba-hero{padding:56px 0 64px;background:linear-gradient(180deg,var(--lilac),var(--paper))}
+.ba-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
+.ba-copy h1{font-size:clamp(34px,4.4vw,54px);line-height:1.05;margin:10px 0 18px}
+.ba-copy p{color:var(--ink);font-size:18px;margin-bottom:10px;max-width:46ch}
+.ba-photo{border-radius:18px;overflow:hidden;margin:6px 0 18px;box-shadow:0 24px 60px -28px rgba(35,33,64,.45);aspect-ratio:4/3}
+.ba-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 68%;display:block}
+.ba-form h3{font-size:24px;margin-bottom:6px}
+.ba-form .hint{color:var(--soft);font-size:14.5px;margin-bottom:16px}
+.ba-get{padding:72px 0;background:var(--paper)}
+.ba-get h2{font-size:clamp(28px,3.4vw,40px);margin:8px 0 28px}
+.ba-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ba-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.ba-card h3{font-size:21px;margin:12px 0 8px}
+.ba-card p{color:var(--soft);font-size:15.5px}
+.ba-k{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--lilac);color:var(--violet-deep);font-family:var(--mono);font-weight:600;font-size:14px}
+.ba-example{margin-top:40px}
+.ba-ex-label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin-bottom:14px}
+.ba-paths{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ba-path{border-radius:16px;padding:24px 26px;border:2px solid var(--line);background:var(--card)}
+.ba-path.today{background:#FBF7F8;border-color:#EBCFD5}
+.ba-path.new{border-color:var(--violet)}
+.ba-pn{font-family:var(--display);font-size:56px;line-height:1}
+.ba-path.today .ba-pn{color:#B3364B}
+.ba-path.new .ba-pn{color:var(--violet-deep)}
+.ba-pl{font-weight:600;margin:6px 0 12px}
+.ba-path ol{padding-left:20px;color:var(--ink)}
+.ba-path li{margin:6px 0}
+.ba-me{padding:56px 0 64px;background:linear-gradient(180deg,var(--paper),var(--lilac))}
+.ba-me-in{display:flex;gap:20px;align-items:center;max-width:680px}
+.ba-me-img{width:88px;height:88px;border-radius:50%;object-fit:cover;flex:none}
+.ba-me-name{font-weight:700;margin-bottom:4px}
+.ba-me p{color:var(--ink);font-size:16.5px}
+.ba-again{margin-top:28px}
+.ba-again .btn{font-size:16px;padding:15px 28px}
+.ba-logo{margin-top:44px;opacity:.9}
+
+.ba-bullets{list-style:none;padding:0;margin:4px 0 0;display:grid;gap:12px}
+.ba-bullets li{position:relative;padding-left:34px;font-size:17.5px;color:var(--ink);line-height:1.4}
+.ba-bullets li::before{content:"";position:absolute;left:0;top:1px;width:22px;height:22px;border-radius:50%;background:var(--lilac) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235843CF' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center/14px no-repeat}
+.ba-form{padding-top:0;overflow:hidden}
+.ba-banner{margin:0 -28px 22px;padding:20px 24px 18px;background:linear-gradient(135deg,var(--deep) 0%,var(--violet-deep) 100%);color:#fff;text-align:center}
+.ba-banner b{display:block;font-family:var(--body);font-weight:700;font-size:clamp(22px,2.4vw,27px);letter-spacing:-.01em;line-height:1.15}
+.ba-banner span{display:block;font-family:var(--mono);font-size:11.5px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.78);margin-top:6px}
+.ba-form .opt{text-align:left}
+.ba-form .opt.sel{border-color:var(--violet)}
+.ba-sample{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto 0;text-decoration:none;color:var(--ink);text-align:left;width:fit-content}
+.ba-sample:hover b{color:var(--violet-deep);text-decoration:underline}
+.ba-sample svg{width:34px;height:34px;color:#B3364B;flex:none}
+.ba-sample b{display:block;font-size:16px}
+.ba-sample small{display:block;color:var(--soft);font-size:13px;margin-top:2px}
+@media (max-width:900px){
+  .ba-hero{padding:28px 0 44px}
+  .ba-grid{grid-template-columns:1fr;gap:22px}
+  .ba-photo{aspect-ratio:16/9;margin:4px 0 14px}
+  .ba-copy p{font-size:16.5px}
+  .ba-cards,.ba-paths{grid-template-columns:1fr}
+  .ba-me-in{align-items:flex-start}
+}
+.ba-top{margin-bottom:22px}
+.ba-top .brand,.ba-logo .brand{font-size:19px}
+.ba-top .logo-mark,.ba-logo .logo-mark{width:24px;height:24px;flex-basis:24px}
+.ba-private{display:flex;gap:12px;align-items:flex-start;margin:16px 4px 0;padding:14px 16px;border-radius:14px;background:rgba(108,87,232,.06);border:1px solid rgba(108,87,232,.16)}
+.ba-private svg{width:26px;height:26px;color:var(--violet-deep);flex:none;margin-top:1px}
+.ba-private b{display:block;font-size:15px;color:var(--ink);margin-bottom:2px}
+.ba-private p{font-size:13.5px;color:var(--soft);line-height:1.45;margin:0}
+.ba-card{display:flex;flex-direction:column}
+.ba-card-img{display:block;width:calc(100% + 48px);height:auto;aspect-ratio:8/5;object-fit:cover;margin:-24px -24px 18px;border-radius:15px 15px 0 0}
+.ba-track{display:flex;align-items:center;flex-wrap:wrap;gap:6px 0;margin:4px 0 6px}
+.ba-dot{position:relative;display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;font-family:var(--mono);font-size:12.5px;font-weight:600;color:#fff;background:var(--violet);margin-right:14px}
+.ba-dot::after{content:"";position:absolute;left:100%;top:50%;width:14px;height:2px;background:currentColor;opacity:.35}
+.ba-track:not(.today) .ba-dot{color:#fff}
+.ba-track:not(.today) .ba-dot::after{background:var(--violet);opacity:.5}
+.ba-track.today .ba-dot{background:#B3364B}
+.ba-track.today .ba-dot::after{background:#B3364B}
+.ba-end{display:inline-flex;align-items:center;gap:6px;height:30px;padding:0 12px;border-radius:999px;font-size:13.5px;font-weight:700}
+.ba-end svg{width:16px;height:16px}
+.ba-end.wall{background:#F4E1E5;color:#8E2A3B;border:1px dashed #D9A3AE}
+.ba-end.booked{background:#E3F4EA;color:#1E7A46}
+.ba-tcap{font-size:14px;color:var(--soft);margin:2px 0 14px}
+.ba-again,.ba-logo{text-align:center}
+.ba-logo .brand{justify-content:center}
+@media (max-width:520px){
+  .ba-path{padding:22px 18px}
+  .ba-dot{width:23px;height:23px;font-size:11px;margin-right:8px}
+  .ba-dot::after{width:8px}
+  .ba-end{height:26px;padding:0 9px;font-size:12.5px;gap:4px}
+  .ba-end svg{width:14px;height:14px}
+}
+/* round 3: centered small top logo, bullets + sample under the photo, bullets below the form on phones */
+.ba-hero{padding-top:20px}
+.ba-top{display:flex;justify-content:center;margin-bottom:18px}
+.ba-grid{grid-template-areas:"copy side" "more side";grid-template-rows:auto 1fr;row-gap:0}
+.ba-copy{grid-area:copy}
+.ba-side{grid-area:side}
+.ba-more{grid-area:more;align-self:start}
+.ba-more .ba-sample{margin-top:22px}
+.ba-pn{font-size:48px}
+.ba-me-name a{color:var(--violet-deep);text-decoration:underline;text-underline-offset:3px}
+.ba-again .btn{min-width:min(420px,100%);justify-content:center}
+@media (max-width:900px){
+  .ba-hero{padding-top:14px}
+  .ba-top{margin-bottom:12px}
+  .ba-grid{grid-template-areas:"copy" "side" "more";grid-template-rows:auto;row-gap:22px}
+  .ba-copy .ba-photo{margin-bottom:0}
+}
