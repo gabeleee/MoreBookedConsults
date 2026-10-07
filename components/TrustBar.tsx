@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element -- small static logo PNGs */
 import type { ReactNode } from "react";
 
 // Certified-ad-partner logo band, sits directly under the dark hero and shares
@@ -20,12 +21,12 @@ type Credential = { mark: ReactNode; line: string; href?: string };
 
 const CREDENTIALS: Credential[] = [
   {
-    mark: <span className="tb-cred-word">LaserAway</span>,
+    mark: <img className="tb-cred-logo" src="/logos/laseraway-white.png" alt="LaserAway" style={{ height: 27 }} />,
     line: "Founder was Director of CRO, 2018–2023",
     href: "/results/",
   },
   {
-    mark: <span className="tb-cred-word">Intellimize</span>,
+    mark: <img className="tb-cred-logo" src="/logos/intellimize-white.png" alt="Intellimize" style={{ height: 28 }} />,
     line: "Featured in its LaserAway case study",
     href: "/laseraway-intellimize-case-study.pdf",
   },
