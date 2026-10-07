@@ -1318,3 +1318,49 @@ a.tg-card:hover{transform:translateY(-3px);box-shadow:0 32px 70px -30px rgba(27,
   .tg-ac-fix{display:none}
   .tg-ac{gap:12px;padding:14px}
 }
+
+/* ===== /booking-audit/ paid-ad landing page (tumbleweed video) ===== */
+.ba-hero{padding:56px 0 64px;background:linear-gradient(180deg,var(--lilac),var(--paper))}
+.ba-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:start}
+.ba-copy h1{font-size:clamp(34px,4.4vw,54px);line-height:1.05;margin:10px 0 18px}
+.ba-copy p{color:var(--ink);font-size:18px;margin-bottom:10px;max-width:46ch}
+.ba-photo{border-radius:18px;overflow:hidden;margin:6px 0 18px;box-shadow:0 24px 60px -28px rgba(35,33,64,.45);aspect-ratio:4/3}
+.ba-photo img{width:100%;height:100%;object-fit:cover;object-position:50% 68%;display:block}
+.ba-form h3{font-size:24px;margin-bottom:6px}
+.ba-form .hint{color:var(--soft);font-size:14.5px;margin-bottom:16px}
+.ba-fine{font-family:var(--mono);font-size:12px;color:var(--soft);text-align:center;margin-top:12px}
+.ba-get{padding:72px 0;background:var(--paper)}
+.ba-get h2{font-size:clamp(28px,3.4vw,40px);margin:8px 0 28px}
+.ba-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.ba-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.ba-card h3{font-size:21px;margin:12px 0 8px}
+.ba-card p{color:var(--soft);font-size:15.5px}
+.ba-k{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--lilac);color:var(--violet-deep);font-family:var(--mono);font-weight:600;font-size:14px}
+.ba-example{margin-top:40px}
+.ba-ex-label{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);margin-bottom:14px}
+.ba-paths{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.ba-path{border-radius:16px;padding:24px 26px;border:2px solid var(--line);background:var(--card)}
+.ba-path.today{background:#FBF7F8;border-color:#EBCFD5}
+.ba-path.new{border-color:var(--violet)}
+.ba-pn{font-family:var(--display);font-size:56px;line-height:1}
+.ba-path.today .ba-pn{color:#B3364B}
+.ba-path.new .ba-pn{color:var(--violet-deep)}
+.ba-pl{font-weight:600;margin:6px 0 12px}
+.ba-path ol{padding-left:20px;color:var(--ink)}
+.ba-path li{margin:6px 0}
+.ba-me{padding:56px 0 64px;background:linear-gradient(180deg,var(--paper),var(--lilac))}
+.ba-me-in{display:flex;gap:20px;align-items:center;max-width:680px}
+.ba-me-img{width:88px;height:88px;border-radius:50%;object-fit:cover;flex:none}
+.ba-me-name{font-weight:700;margin-bottom:4px}
+.ba-me p{color:var(--ink);font-size:16.5px}
+.ba-again{margin-top:28px}
+.ba-again .btn{font-size:16px;padding:15px 28px}
+.ba-logo{margin-top:44px;opacity:.9}
+@media (max-width:900px){
+  .ba-hero{padding:28px 0 44px}
+  .ba-grid{grid-template-columns:1fr;gap:22px}
+  .ba-photo{aspect-ratio:16/9;margin:4px 0 14px}
+  .ba-copy p{font-size:16.5px}
+  .ba-cards,.ba-paths{grid-template-columns:1fr}
+  .ba-me-in{align-items:flex-start}
+}

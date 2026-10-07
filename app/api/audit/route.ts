@@ -74,6 +74,8 @@ async function sendEmailNotification(data: AuditSubmission) {
     `Name:          ${data.name}`,
     `Email:         ${data.email}`,
     `Website:       ${data.website}`,
+    `Mobile:        ${data.phone ?? "n/a"}`,
+    `Source:        ${data.source ?? "n/a"}`,
     `Practice type: ${data.practice ?? "n/a"}`,
     `Looking for:   ${data.need ?? "n/a"}`,
     `Market/city:   ${data.market ?? "n/a"}`,

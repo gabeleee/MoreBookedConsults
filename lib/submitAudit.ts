@@ -13,6 +13,10 @@ export type AuditSubmission = {
   name: string;
   email: string;
   website: string;
+  /** Optional: mobile number (the /booking-audit/ ad landing page asks for it). */
+  phone?: string | null;
+  /** Optional: which page/campaign the request came from, e.g. "booking-audit utm_source=facebook". */
+  source?: string | null;
 };
 
 export type AuditResult = { ok: boolean };
