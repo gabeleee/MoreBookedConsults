@@ -207,6 +207,7 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .trustbar .tb-cred-mark{height:30px;display:flex;align-items:center;justify-content:center;color:#fff}
 .trustbar .tb-cred-word{font-family:var(--display);font-size:21px;line-height:1;display:inline-flex;align-items:center;gap:7px}
 .trustbar .tb-cred-icon{height:16px;width:auto;filter:brightness(0) invert(1)}
+.trustbar .tb-cred-logo{display:block;width:auto;max-width:170px;object-fit:contain}
 .trustbar .tb-cred-num{font-family:var(--display);font-size:28px;line-height:1;color:#fff}
 .trustbar .tb-cred-line{font-size:13px;line-height:1.35;color:#B9B6DA;max-width:18ch}
 @media (max-width:900px){
