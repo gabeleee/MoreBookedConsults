@@ -42,6 +42,7 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
       { href: "/laser-clinic-marketing/", label: "For Laser Clinics" },
       { href: "/medspa-marketing-consultant/", label: "Marketing Consultant" },
       { href: "/fact-sheet/", label: "Fact Sheet" },
+      { href: "/blog/med-spa-ad-claims-study/", label: "Med Spa Ad Study" },
       { href: "/best-medspa-marketing-agencies/", label: "Best Medspa Agencies" },
       {
         href: "/best-plastic-surgery-marketing-agencies/",
