@@ -1441,3 +1441,16 @@ a.tg-card:hover{transform:translateY(-3px);box-shadow:0 32px 70px -30px rgba(27,
   .ba-vs{width:auto;height:0;position:relative;z-index:1}
   .ba-vs span{width:46px;height:46px;font-size:15px}
 }
+@media (max-width:520px){
+  .ba-dot{width:22px;height:22px;font-size:10.5px;margin-right:6px}
+  .ba-dot::after{width:6px}
+}
+.ba-track{flex-wrap:nowrap}
+.ba-dot{width:28px;height:28px;margin-right:10px;flex:none}
+.ba-dot::after{width:10px}
+.ba-end{flex:none}
+@media (max-width:520px){
+  .ba-dot{width:21px;height:21px;font-size:10px;margin-right:6px}
+  .ba-dot::after{width:6px}
+  .ba-end{padding:0 8px;font-size:12px}
+}
