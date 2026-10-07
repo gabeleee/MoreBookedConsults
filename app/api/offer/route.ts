@@ -1,10 +1,13 @@
 import { NextResponse } from "next/server";
 import { SITE } from "@/lib/site";
+import { sesConfigured, sesSend } from "@/lib/ses";
 import { captureServerEvent, posthogIdsFromRequest } from "@/lib/posthog-server";
 
 // "Run this for me" submissions from the Consult Magnet builder
-// (/medspa-offer-builder/). Same delivery as /api/audit: Resend email to
-// SITE.email + optional CRM webhook, both log-only when env vars are absent.
+// (/medspa-offer-builder/). Same delivery as /api/audit: email to SITE.email
+// (Amazon SES when AWS_SES_ACCESS_KEY_ID + AWS_SES_SECRET_ACCESS_KEY are set,
+// else Resend via RESEND_API_KEY) + optional CRM webhook, both log-only when
+// env vars are absent.
 type OfferLead = {
   name?: string;
   email?: string;
@@ -73,6 +76,15 @@ async function sendToCrm(data: unknown) {
 async function sendEmail(data: OfferLead, text: string) {
   const apiKey = process.env.RESEND_API_KEY;
   const from = process.env.AUDIT_FROM_EMAIL || "More Booked Consults <audits@morebookedconsults.com>";
+  const subject = `Consult Magnet: ${clip(data.offer?.name, 80) || "offer"} (${clip(data.offer?.spa || data.name, 80)})`;
+  if (sesConfigured()) {
+    try {
+      await sesSend({ from, to: [SITE.email], replyTo: data.email ? [data.email] : undefined, subject, text });
+    } catch (err) {
+      console.error("[offer] SES email send failed", err);
+    }
+    return;
+  }
   if (!apiKey) {
     console.info(`[offer] email notify -> ${SITE.email} (no RESEND_API_KEY; logging only)\n${text}`);
     return;
@@ -84,7 +96,7 @@ async function sendEmail(data: OfferLead, text: string) {
       from,
       to: SITE.email,
       reply_to: data.email,
-      subject: `Consult Magnet: ${clip(data.offer?.name, 80) || "offer"} (${clip(data.offer?.spa || data.name, 80)})`,
+      subject,
       text,
     }),
   });

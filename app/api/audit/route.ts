@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { SITE } from "@/lib/site";
+import { sesConfigured, sesSend } from "@/lib/ses";
 import { captureServerEvent, posthogIdsFromRequest } from "@/lib/posthog-server";
 import type { AuditSubmission } from "@/lib/submitAudit";
 
@@ -8,7 +9,10 @@ import type { AuditSubmission } from "@/lib/submitAudit";
 // vars are absent, so local dev works without secrets.
 //
 // Env (set in Vercel):
-//   RESEND_API_KEY   — enables the email send (via Resend's HTTP API)
+//   AWS_SES_ACCESS_KEY_ID, AWS_SES_SECRET_ACCESS_KEY — when both are set the email
+//                      goes through Amazon SES (lib/ses.ts; optional AWS_SES_REGION,
+//                      AWS_SES_CONFIGURATION_SET)
+//   RESEND_API_KEY   — fallback email send when SES is not configured (Resend's HTTP API)
 //   AUDIT_FROM_EMAIL — verified Resend sender, e.g. "More Booked Consults <audits@morebookedconsults.com>"
 //   CRM_WEBHOOK_URL  — optional; the submission JSON is POSTed here (Zapier/Make/CRM)
 export async function POST(req: Request) {
@@ -60,14 +64,6 @@ async function sendEmailNotification(data: AuditSubmission) {
     process.env.AUDIT_FROM_EMAIL ||
     "More Booked Consults <audits@morebookedconsults.com>";
 
-  if (!apiKey) {
-    console.info(
-      `[audit] email notify -> ${SITE.email} (no RESEND_API_KEY; logging only) ->`,
-      data,
-    );
-    return;
-  }
-
   const body = [
     "New free-audit request from morebookedconsults.com",
     "",
@@ -79,6 +75,30 @@ async function sendEmailNotification(data: AuditSubmission) {
     `Market/city:   ${data.market ?? "n/a"}`,
     `Consult value: ${data.worth != null ? "$" + data.worth : "not provided"}`,
   ].join("\n");
+  const subject = `New audit request: ${data.name || "unknown"} (${data.practice ?? "n/a"})`;
+
+  if (sesConfigured()) {
+    try {
+      await sesSend({
+        from,
+        to: [SITE.email],
+        replyTo: data.email ? [data.email] : undefined,
+        subject,
+        text: body,
+      });
+    } catch (err) {
+      console.error("[audit] SES email send failed", err);
+    }
+    return;
+  }
+
+  if (!apiKey) {
+    console.info(
+      `[audit] email notify -> ${SITE.email} (no RESEND_API_KEY; logging only) ->`,
+      data,
+    );
+    return;
+  }
 
   const res = await fetch("https://api.resend.com/emails", {
     method: "POST",
@@ -90,7 +110,7 @@ async function sendEmailNotification(data: AuditSubmission) {
       from,
       to: SITE.email,
       reply_to: data.email,
-      subject: `New audit request: ${data.name || "unknown"} (${data.practice ?? "n/a"})`,
+      subject,
       text: body,
     }),
   });
