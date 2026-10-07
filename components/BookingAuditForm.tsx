@@ -2,6 +2,7 @@
 import { useState } from "react";
 import posthog from "posthog-js";
 import { submitAudit } from "@/lib/submitAudit";
+import { LineIcon } from "./LineIcon";
 
 // Multi-step form for the /booking-audit/ paid-ad landing page (the tumbleweed
 // video). Two tap-to-answer questions and the website come before any contact
@@ -11,10 +12,10 @@ import { submitAudit } from "@/lib/submitAudit";
 const TOTAL = 4;
 
 const BOOK_OPTS = [
-  "It opens our booking system",
-  "It goes to a contact form",
-  "They have to call us",
-  "I'm not sure",
+  { label: "It opens our booking system", icon: "calendar" },
+  { label: "It goes to a contact form", icon: "clipboard" },
+  { label: "They have to call us", icon: "call" },
+  { label: "I'm not sure", icon: "compass" },
 ];
 const LOC_OPTS = ["1 location", "2–3 locations", "4 or more"];
 
@@ -84,6 +85,10 @@ export default function BookingAuditForm() {
 
   return (
     <div className="form-card ba-form" data-form id="get-audit">
+      <div className="ba-banner">
+        <b>Free Booking Flow Audit</b>
+        <span>For med spa owners · a $100 value</span>
+      </div>
       {!done && (
         <div className="progress">
           <span className="label">Step {step} of {TOTAL}</span>
@@ -100,8 +105,9 @@ export default function BookingAuditForm() {
         <p className="hint">Pick the closest match.</p>
         <div className="opts">
           {BOOK_OPTS.map((o) => (
-            <button key={o} type="button" className={`opt${bookPath === o ? " sel" : ""}`} onClick={() => { setBookPath(o); next(2, "book_path"); }}>
-              {o}
+            <button key={o.label} type="button" className={`opt${bookPath === o.label ? " sel" : ""}`} onClick={() => { setBookPath(o.label); next(2, "book_path"); }}>
+              <span className="opt-ic" aria-hidden="true"><LineIcon name={o.icon} weight={2.6} /></span>
+              {o.label}
             </button>
           ))}
         </div>

@@ -42,10 +42,6 @@ export default function BookingAuditPage() {
             </ul>
           </div>
           <div className="ba-side">
-            <div className="ba-offer">
-              <h2>Free Booking Flow Audit</h2>
-              <p>For med spa owners · a $100 value</p>
-            </div>
             <BookingAuditForm />
             <a className="ba-sample" href="/booking-audit/sample-audit.pdf" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
