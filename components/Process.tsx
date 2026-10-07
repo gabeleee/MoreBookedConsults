@@ -32,11 +32,11 @@ const STEPS: {
   },
   {
     img: "/step3.jpg",
-    photo: "Photo 3, One test / month",
+    photo: "Photo 3, Two improvements / month",
     alt: "Two phone screens side by side showing page variants",
     num: "Step 3",
-    title: "One test / month",
-    desc: "One clean change, run to significance, so you know what actually worked.",
+    title: "Two improvements / month",
+    desc: "Two clear changes a month, each measured against your numbers before, so you know what actually worked.",
   },
   {
     img: "/step4.jpg",

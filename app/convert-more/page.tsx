@@ -4,7 +4,7 @@ import AuditForm from "@/components/AuditForm";
 export const metadata: Metadata = {
   title: "Convert More of Your Traffic",
   description:
-    "Turn the visitors you already have into booked consults. One controlled CRO test a month on your booking flow, forms, offers, and treatment pages. Answer a few quick questions to get started.",
+    "Turn the visitors you already have into booked consults. Two improvements a month to your booking flow, forms, offers, and treatment pages, with no contract. Answer a few quick questions to get started.",
   alternates: { canonical: "/convert-more/" },
 };
 
@@ -24,13 +24,13 @@ export default function ConvertMorePage() {
               problem.
             </p>
             <p>
-              I run one controlled test a month on the spot that leaks the most
+              I ship two improvements a month on the spots that leak the most
               consults: your booking flow, your forms, your offers, your
-              treatment pages.
+              treatment pages. No contract.
             </p>
             <p>
               Answer a few quick questions and I&apos;ll show you where visitors
-              are dropping off and what I&apos;d test first.
+              are dropping off and what I&apos;d fix first.
             </p>
             <p className="hero-note">
               Free. No call required. You keep the findings either way.
