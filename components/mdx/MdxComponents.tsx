@@ -23,6 +23,7 @@ import {
   Dot,
   Photo,
 } from "./Visuals";
+import { RealAd } from "./RealAd";
 
 // Component map passed to <MDXRemote>. Body elements (h2/p/ul/table/…) are
 // styled by the .article-body container in globals.css. Everything below is an
@@ -211,4 +212,5 @@ export const mdxComponents = {
   Matrix,
   Dot,
   Photo,
+  RealAd,
 };
