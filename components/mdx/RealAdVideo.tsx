@@ -20,7 +20,7 @@ export default function RealAdVideo({ src, poster, label }: { src: string; poste
           v.pause();
         }
       },
-      { threshold: 0.35 },
+      { threshold: 0.25 },
     );
     io.observe(v);
     return () => io.disconnect();
