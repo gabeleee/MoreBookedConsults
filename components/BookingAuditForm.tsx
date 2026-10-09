@@ -88,6 +88,7 @@ export default function BookingAuditForm() {
       <div className="ba-banner">
         <b>Free Booking Flow Audit</b>
         <span>For med spa owners · a $100 value</span>
+        <strong className="ba-offer">Free audits end Oct 31</strong>
       </div>
       {!done && (
         <div className="progress">
