@@ -3,7 +3,8 @@ import BookingAuditLanding from "@/components/BookingAuditLanding";
 
 // Paid-ad landing page for the UGC Facebook/Instagram video (~/mbc-ads/02-ugc):
 // "It's Tuesday. Nobody's booked." → lock screen full of bookings → "Want a
-// full calendar?". Same offer and form as /booking-audit/, hero matches the ad.
+// full calendar?". Same offer and form as /booking-audit/; the hero photo is
+// the ad's owner, now beaming at a full calendar.
 // noindex, no site nav/footer/sticky CTA, Meta pixel on.
 export const metadata: Metadata = {
   title: "Free Booking Audit for Med Spas",
@@ -22,11 +23,11 @@ export default function MoreBookingsPage() {
       sub="Or we keep working free until they do."
       offer
       image={{
-        src: "/booking-audit/lock-screen.jpg",
-        alt: "A lock screen on Tuesday morning, stacked with new consult booking notifications",
+        src: "/booking-audit/owner-smile.jpg",
+        alt: "A med spa owner at her front desk, smiling big after checking a fully booked calendar",
         width: 1440,
-        height: 1080,
-        position: "50% 50%",
+        height: 1075,
+        position: "50% 35%",
       }}
     />
   );
