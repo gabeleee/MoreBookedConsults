@@ -188,12 +188,14 @@ export default function BookingAuditLanding({
           <Logo />
         </div>
         <div className="wrap ba-grid">
-          <div className="ba-copy">
+          <div className="ba-head">
             <h1>
               {headline}
-              {accent && <span className="ba-accent">{accent}</span>}
+              {accent && <> <span className="ba-accent">{accent}</span></>}
             </h1>
             {sub && <p className="ba-sub">{sub}</p>}
+          </div>
+          <div className="ba-copy">
             <div className="ba-photo">
               <Image
                 src={image.src}
