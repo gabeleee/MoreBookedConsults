@@ -4,8 +4,8 @@ import posthog from "posthog-js";
 import { submitAudit } from "@/lib/submitAudit";
 import { LineIcon } from "./LineIcon";
 
-// Multi-step form for the /booking-audit/ paid-ad landing page (the tumbleweed
-// video). Two tap-to-answer questions and the website come before any contact
+// Multi-step form for the paid-ad landing pages (/booking-audit/ for the
+// tumbleweed video, /more-bookings/ for the UGC video). `page` tags the lead. Two tap-to-answer questions and the website come before any contact
 // details. Same .form-card / .opts styles and the same submitAudit() path as
 // AuditForm, plus mobile and the ad's UTM source. Fires the Meta pixel "Lead"
 // event on success (when the pixel is installed).
@@ -19,7 +19,7 @@ const BOOK_OPTS = [
 ];
 const LOC_OPTS = ["1 location", "2–3 locations", "4 or more"];
 
-export default function BookingAuditForm() {
+export default function BookingAuditForm({ page = "booking-audit" }: { page?: string }) {
   const [step, setStep] = useState(1);
   const [bookPath, setBookPath] = useState<string | null>(null);
   const [locations, setLocations] = useState<string | null>(null);
@@ -69,7 +69,7 @@ export default function BookingAuditForm() {
       email: em,
       website: website.trim(),
       phone: ph,
-      source: ["booking-audit", ...utm].join(" "),
+      source: [page, ...utm].join(" "),
     });
     setSubmitting(false);
     setDone(true);
