@@ -49,13 +49,128 @@ function Track({ steps, today }: { steps: number; today?: boolean }) {
   );
 }
 
+// "If we fix it for you" offer (Hormozi value stack + guarantee). No price here:
+// the price lives in the audit/proposal, the landing page only sells the free audit.
+const STACK = [
+  { name: "A new booking flow on your site", note: "Live in 14 days, booking straight into your calendar", value: 2500 },
+  { name: "Instant text-back", note: "Anyone who starts booking but doesn't finish gets a text within 60 seconds", value: 1500 },
+  { name: "Last-Chance Offer", note: "A first-visit offer we write, design in your brand, build and track, so visitors about to leave book instead", value: 750 },
+  { name: "Drop-off tracking", note: "See exactly which step people quit on", value: 500 },
+  { name: "Monthly before-and-after report", note: "Booking requests before vs after every change", value: 500 },
+];
+const BONUSES = [
+  { name: "Your Booking Audit", value: 100 },
+  { name: "A first-visit offer built with our Consult Magnet tool", value: 500 },
+  { name: "Your ads checked against our study of 773 med spa ads", value: 500 },
+  { name: "How your spa compares with the Med Spa Census for your state", value: 300 },
+];
+const usd = (n: number) => `$${n.toLocaleString("en-US")}`;
+const TOTAL = [...STACK, ...BONUSES].reduce((t, i) => t + i.value, 0);
+
+function Check() {
+  return (
+    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round">
+      <path d="M5 12.5l4.5 4.5L19 7.5" />
+    </svg>
+  );
+}
+
+function Offer() {
+  return (
+    <>
+      <section className="ba-worth">
+        <div className="wrap">
+          <p className="eyebrow">What a better booking flow is worth</p>
+          <h2>Same visitors. More bookings.</h2>
+          <div className="ba-worth-row">
+            <div className="ba-worth-box before">
+              <span className="ba-worth-n">30</span>
+              <span className="ba-worth-l">booking requests</span>
+              <span className="ba-worth-s">1,000 visitors at 3%</span>
+            </div>
+            <div className="ba-worth-arrow" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 12h15M13 6l6 6-6 6" />
+              </svg>
+            </div>
+            <div className="ba-worth-box after">
+              <span className="ba-worth-n">110</span>
+              <span className="ba-worth-l">booking requests</span>
+              <span className="ba-worth-s">1,000 visitors at 11%</span>
+            </div>
+          </div>
+          <p className="ba-worth-note">That&apos;s the 3% to 11% lift we helped get at LaserAway, on 1,000 visitors a month.</p>
+          <p className="ba-worth-note">Your audit shows what it could mean for your spa.</p>
+        </div>
+      </section>
+
+      <section className="ba-stack">
+        <div className="wrap ba-stack-in">
+          <p className="eyebrow">If you want us to fix it for you</p>
+          <h2>Everything in your first month.</h2>
+          <div className="ba-table">
+            {STACK.map((i) => (
+              <div className="ba-row" key={i.name}>
+                <span className="ba-row-ic"><Check /></span>
+                <div>
+                  <b>{i.name}</b>
+                  <p>{i.note}</p>
+                </div>
+                <span className="ba-row-v">{usd(i.value)}</span>
+              </div>
+            ))}
+            <div className="ba-bonus-h">Bonuses</div>
+            {BONUSES.map((i) => (
+              <div className="ba-row bonus" key={i.name}>
+                <span className="ba-row-ic"><Check /></span>
+                <div>
+                  <b>{i.name}</b>
+                </div>
+                <span className="ba-row-v">{usd(i.value)}</span>
+              </div>
+            ))}
+            <div className="ba-total">
+              <span>Total value</span>
+              <b>{usd(TOTAL)}</b>
+            </div>
+          </div>
+          <p className="ba-after">Every month after: 2 more improvements, each one measured.</p>
+          <p className="ba-after soft">Your price is in your free audit.</p>
+        </div>
+      </section>
+
+      <section className="ba-guarantee">
+        <div className="wrap ba-g-in">
+          <div className="ba-seal" aria-hidden="true">
+            <svg viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="56" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="3 5" />
+              <circle cx="60" cy="60" r="46" fill="currentColor" opacity=".12" />
+              <path d="M60 30l22 9v17c0 15-10 28-22 33-12-5-22-18-22-33V39z" fill="none" stroke="currentColor" strokeWidth="3.2" strokeLinejoin="round" />
+              <path d="M49 59l8 8 15-16" fill="none" stroke="currentColor" strokeWidth="3.6" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+          <p className="eyebrow">Our guarantee</p>
+          <h2>Your booking rate goes up in 90 days, or we keep working free until it does.</h2>
+          <ul className="ba-g-list">
+            <li><Check />Your new booking form is live in 14 days, or month one is free.</li>
+            <li><Check />No contract. Cancel anytime.</li>
+          </ul>
+          <p className="ba-fine">Booking rate means booking requests divided by website visitors. We measure your starting rate in week one, before anything changes. For sites with at least 300 visitors a month.</p>
+        </div>
+      </section>
+    </>
+  );
+}
+
 export default function BookingAuditLanding({
   page,
   headline,
   image,
+  offer = false,
 }: {
   page: string;
   headline: string;
+  offer?: boolean;
   image: { src: string; alt: string; width: number; height: number; position?: string };
 }) {
   return (
@@ -188,6 +303,8 @@ export default function BookingAuditLanding({
         </div>
       </section>
 
+      {offer && <Offer />}
+
       <section className="ba-me">
         <div className="wrap ba-me-in">
           <Image src="/gabe.jpg" alt="Gabe Meierotto" width={96} height={96} className="ba-me-img" />
@@ -195,6 +312,7 @@ export default function BookingAuditLanding({
             <p className="ba-me-name">Gabe Meierotto, <a href="/">More Booked Consults</a></p>
             <p>As Director of CRO at LaserAway, I helped take online conversion from 3% to 11%.</p>
             <p>Now I fix booking flows for med spas.</p>
+            {offer && <p className="ba-cap">I take on 4 new med spas a month, so each one gets my full attention.</p>}
           </div>
         </div>
         <div className="wrap ba-again">

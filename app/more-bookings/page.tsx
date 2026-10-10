@@ -18,6 +18,7 @@ export default function MoreBookingsPage() {
     <BookingAuditLanding
       page="more-bookings"
       headline="Want a full calendar?"
+      offer
       image={{
         src: "/booking-audit/lock-screen.jpg",
         alt: "A lock screen on Tuesday morning, stacked with new consult booking notifications",
