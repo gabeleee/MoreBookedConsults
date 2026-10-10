@@ -1540,3 +1540,8 @@ a.tg-card:hover{transform:translateY(-3px);box-shadow:0 32px 70px -30px rgba(27,
   .ba-total b{font-size:28px}
   .ba-after{font-size:17px}
 }
+
+/* guarantee hero (matches the guarantee ad end cards) */
+.ba-accent{display:block;color:var(--violet-deep)}
+.ba-copy p.ba-sub{font-size:20px;font-weight:600;color:var(--ink);margin:-6px 0 18px}
+@media (max-width:900px){.ba-copy p.ba-sub{font-size:17.5px}}

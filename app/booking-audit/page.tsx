@@ -16,7 +16,10 @@ export default function BookingAuditPage() {
   return (
     <BookingAuditLanding
       page="booking-audit"
-      headline="Your Tuesday doesn't have to look like this."
+      headline={"More of your visitors\u00A0book."}
+      accent="Guaranteed."
+      sub="Or we keep working free until they do."
+      offer
       image={{
         src: "/booking-audit/tumbleweed.jpg",
         alt: "An empty, beautiful med spa lobby with a tumbleweed rolling across the floor",

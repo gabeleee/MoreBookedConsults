@@ -166,10 +166,14 @@ export default function BookingAuditLanding({
   page,
   headline,
   image,
+  accent,
+  sub,
   offer = false,
 }: {
   page: string;
   headline: string;
+  accent?: string;
+  sub?: string;
   offer?: boolean;
   image: { src: string; alt: string; width: number; height: number; position?: string };
 }) {
@@ -185,7 +189,11 @@ export default function BookingAuditLanding({
         </div>
         <div className="wrap ba-grid">
           <div className="ba-copy">
-            <h1>{headline}</h1>
+            <h1>
+              {headline}
+              {accent && <span className="ba-accent">{accent}</span>}
+            </h1>
+            {sub && <p className="ba-sub">{sub}</p>}
             <div className="ba-photo">
               <Image
                 src={image.src}

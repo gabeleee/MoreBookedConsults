@@ -17,7 +17,9 @@ export default function MoreBookingsPage() {
   return (
     <BookingAuditLanding
       page="more-bookings"
-      headline="Want a full calendar?"
+      headline={"More of your visitors\u00A0book."}
+      accent="Guaranteed."
+      sub="Or we keep working free until they do."
       offer
       image={{
         src: "/booking-audit/lock-screen.jpg",
