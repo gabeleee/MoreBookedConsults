@@ -1484,3 +1484,59 @@ a.tg-card:hover{transform:translateY(-3px);box-shadow:0 32px 70px -30px rgba(27,
 .article-body ul.vk-realad-why{margin:0}
 .vk-realad-notes .vk-realad-why li{font-size:15.5px;line-height:1.45}
 @media (max-width:640px){.vk-realad-notes{grid-template-columns:1fr}}
+
+/* offer (more-bookings): worth band, value stack, guarantee */
+.ba-worth{padding:72px 0;background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line);text-align:center}
+.ba-worth .eyebrow,.ba-stack .eyebrow,.ba-guarantee .eyebrow{justify-content:center}
+.ba-worth h2,.ba-stack h2{font-size:clamp(28px,3.4vw,40px);margin:8px 0 32px}
+.ba-worth-row{display:flex;align-items:center;justify-content:center;gap:22px}
+.ba-worth-box{display:flex;flex-direction:column;align-items:center;min-width:210px;padding:26px 24px;border-radius:18px;border:2px solid var(--line)}
+.ba-worth-box.before{background:#FBF7F8;border-color:#EBCFD5}
+.ba-worth-box.after{background:var(--lilac);border-color:var(--violet)}
+.ba-worth-n{font-family:var(--display);font-size:64px;line-height:1}
+.before .ba-worth-n{color:#B3364B}
+.after .ba-worth-n{color:var(--violet-deep)}
+.ba-worth-l{font-weight:700;margin-top:6px}
+.ba-worth-s{font-size:14px;color:var(--soft);margin-top:2px}
+.ba-worth-arrow{width:34px;height:34px;color:var(--violet)}
+.ba-worth-note{color:var(--soft);font-size:15.5px;margin:0 auto;max-width:62ch}
+.ba-worth-row+.ba-worth-note{margin-top:26px}
+.ba-stack{padding:80px 0;background:var(--paper)}
+.ba-stack-in{max-width:760px;text-align:center}
+.ba-table{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:10px 28px 0;box-shadow:0 24px 60px -36px rgba(35,33,64,.35);overflow:hidden}
+.ba-row{display:grid;grid-template-columns:28px 1fr auto;gap:14px;align-items:start;padding:18px 0;border-bottom:1px solid var(--line)}
+.ba-row b{display:block;font-size:17px;color:var(--ink)}
+.ba-row p{margin:3px 0 0;font-size:14.5px;color:var(--soft);line-height:1.45}
+.ba-row-ic{display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:var(--lilac);color:var(--violet-deep);margin-top:1px}
+.ba-row-ic svg{width:15px;height:15px}
+.ba-row-v{font-family:var(--mono);font-weight:600;font-size:15px;color:var(--ink);padding-top:2px}
+.ba-row.bonus b{font-weight:600;font-size:16px}
+.ba-bonus-h{padding:22px 0 4px;font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--violet-deep)}
+.ba-total{display:flex;justify-content:space-between;align-items:center;margin:0 -28px;padding:20px 28px;background:var(--deep);color:#fff}
+.ba-total span{font-weight:700;font-size:17px}
+.ba-total b{font-family:var(--display);font-weight:400;font-size:34px;line-height:1}
+.ba-after{margin:28px 0 0;font-size:19px;font-weight:600;color:var(--ink)}
+.ba-after.soft{margin-top:8px;font-size:16px;font-weight:500;color:var(--soft)}
+.ba-guarantee{padding:84px 0;background:linear-gradient(180deg,var(--paper),var(--lilac));text-align:center}
+.ba-g-in{max-width:720px}
+.ba-seal{width:112px;height:112px;margin:0 auto 18px;color:var(--violet-deep)}
+.ba-seal svg{width:100%;height:100%}
+.ba-guarantee h2{font-size:clamp(28px,3.6vw,42px);line-height:1.12;margin:8px 0 26px}
+.ba-g-list{list-style:none;padding:0;margin:0 auto 22px;display:inline-grid;gap:12px;text-align:left}
+.ba-g-list li{display:flex;gap:10px;align-items:flex-start;font-size:17px;color:var(--ink)}
+.ba-g-list svg{width:20px;height:20px;color:var(--violet-deep);flex:none;margin-top:2px}
+.ba-fine{font-size:13px;color:var(--soft);max-width:56ch;margin:0 auto;line-height:1.5}
+.ba-cap{margin-top:8px;font-weight:600}
+@media (max-width:640px){
+  .ba-worth,.ba-stack,.ba-guarantee{padding:56px 0}
+  .ba-worth-row{flex-direction:column;gap:10px}
+  .ba-worth-box{min-width:0;width:100%;max-width:300px;padding:20px}
+  .ba-worth-n{font-size:52px}
+  .ba-worth-arrow{transform:rotate(90deg);width:28px;height:28px}
+  .ba-table{padding:4px 18px 0;border-radius:16px}
+  .ba-row{grid-template-columns:24px 1fr auto;gap:10px;padding:16px 0}
+  .ba-row b{font-size:16px}
+  .ba-total{margin:0 -18px;padding:18px}
+  .ba-total b{font-size:28px}
+  .ba-after{font-size:17px}
+}
