@@ -1,0 +1,106 @@
+segment,metric,value,unit,base_ads
+all,Ads showing a dollar price,24.7,percent,570
+national_chains,Ads showing a dollar price,12.4,percent,362
+independents,Ads showing a dollar price,46.2,percent,208
+all,Ads with a percent-off offer,8.9,percent,570
+national_chains,Ads with a percent-off offer,12.4,percent,362
+independents,Ads with a percent-off offer,2.9,percent,208
+all,Ads using the word free,15.1,percent,570
+national_chains,Ads using the word free,12.4,percent,362
+independents,Ads using the word free,19.7,percent,208
+all,Ads with deadline wording,10.0,percent,570
+national_chains,Ads with deadline wording,7.5,percent,362
+independents,Ads with deadline wording,14.4,percent,208
+all,Ads with any offer,47.2,percent,570
+national_chains,Ads with any offer,41.4,percent,362
+independents,Ads with any offer,57.2,percent,208
+all,Ads with video,33.0,percent,570
+national_chains,Ads with video,32.0,percent,362
+independents,Ads with video,34.6,percent,208
+all,Ads with more than one version,36.3,percent,570
+national_chains,Ads with more than one version,48.6,percent,362
+independents,Ads with more than one version,14.9,percent,208
+all,Format: Dynamic creative (DCO),40.5,percent,570
+all,Format: Video,29.3,percent,570
+all,Format: Single image,17.2,percent,570
+all,Format: Carousel,8.2,percent,570
+all,Format: Mixed formats,4.7,percent,570
+all,Click destination: Own website or landing page,66.5,percent,570
+all,Click destination: Instagram or link page,14.6,percent,570
+all,"Click destination: Facebook, Messenger or WhatsApp",9.8,percent,570
+all,Click destination: No link (message or call),7.4,percent,570
+all,Click destination: Booking platform,1.8,percent,570
+all,Button: Book now,44.6,percent,570
+all,Button: Learn more,15.8,percent,570
+all,Button: Visit instagram profile,9.8,percent,570
+all,Button: Get offer,8.9,percent,570
+all,Button: Send message,5.6,percent,570
+all,Button: No button,4.7,percent,570
+all,Button: See details,3.7,percent,570
+all,Button: Get quote,1.8,percent,570
+all,Share of ads still running on collection day,81.6,percent,570
+all,Live ads running 90+ days (share of live ads),50.1,percent,
+all,Live ads running 365+ days (share of live ads),12.5,percent,
+national_chains,Format: Dynamic creative (DCO),50.8,percent,362
+national_chains,Format: Video,27.6,percent,362
+national_chains,Format: Single image,8.8,percent,362
+national_chains,Format: Carousel,6.9,percent,362
+national_chains,Format: Mixed formats,5.8,percent,362
+national_chains,Click destination: Own website or landing page,79.3,percent,362
+national_chains,Click destination: Instagram or link page,12.7,percent,362
+national_chains,Click destination: No link (message or call),4.4,percent,362
+national_chains,"Click destination: Facebook, Messenger or WhatsApp",2.2,percent,362
+national_chains,Click destination: Booking platform,1.4,percent,362
+national_chains,Button: Book now,55.0,percent,362
+national_chains,Button: Learn more,14.9,percent,362
+national_chains,Button: Visit instagram profile,7.7,percent,362
+national_chains,Button: Get offer,7.5,percent,362
+national_chains,Button: Send message,5.2,percent,362
+national_chains,Button: See details,3.6,percent,362
+national_chains,Button: No button,3.3,percent,362
+national_chains,Button: Get quote,2.8,percent,362
+national_chains,Share of ads still running on collection day,77.3,percent,362
+national_chains,Live ads running 90+ days (share of live ads),31.4,percent,
+national_chains,Live ads running 365+ days (share of live ads),2.5,percent,
+independents,Format: Video,32.2,percent,208
+independents,Format: Single image,31.7,percent,208
+independents,Format: Dynamic creative (DCO),22.6,percent,208
+independents,Format: Carousel,10.6,percent,208
+independents,Format: Mixed formats,2.9,percent,208
+independents,Click destination: Own website or landing page,44.2,percent,208
+independents,"Click destination: Facebook, Messenger or WhatsApp",23.1,percent,208
+independents,Click destination: Instagram or link page,17.8,percent,208
+independents,Click destination: No link (message or call),12.5,percent,208
+independents,Click destination: Booking platform,2.4,percent,208
+independents,Button: Book now,26.4,percent,208
+independents,Button: Learn more,17.3,percent,208
+independents,Button: Visit instagram profile,13.5,percent,208
+independents,Button: Get offer,11.5,percent,208
+independents,Button: No button,7.2,percent,208
+independents,Button: Send message,6.2,percent,208
+independents,Button: See details,3.8,percent,208
+independents,Button: Sign up,3.4,percent,208
+independents,Share of ads still running on collection day,88.9,percent,208
+independents,Live ads running 90+ days (share of live ads),78.4,percent,
+independents,Live ads running 365+ days (share of live ads),27.6,percent,
+national_chains,Median age of live ads,25.0,days,280
+independents,Median age of live ads,210,days,185
+national_chains,Median run of ads that had stopped,31.0,days,82
+all,Skin treatments: ads showing a dollar price,36.2,percent,130
+all,Skin treatments: ads with any offer,49.2,percent,130
+all,Several treatments: ads showing a dollar price,9.6,percent,115
+all,Several treatments: ads with any offer,34.8,percent,115
+all,Dermal filler: ads showing a dollar price,32.7,percent,110
+all,Dermal filler: ads with any offer,48.2,percent,110
+all,Laser hair removal: ads showing a dollar price,6.3,percent,95
+all,Laser hair removal: ads with any offer,51.6,percent,95
+all,Botox and neurotoxins: ads showing a dollar price,50.7,percent,67
+all,Botox and neurotoxins: ads with any offer,64.2,percent,67
+all,Body contouring: ads showing a dollar price,10.6,percent,47
+all,Body contouring: ads with any offer,36.2,percent,47
+advertisers_with_botox_unit_price,Advertised Botox price per unit (median),10.0,USD,
+advertisers_with_botox_unit_price,Advertised Botox price per unit (p25),8.5,USD,
+advertisers_with_botox_unit_price,Advertised Botox price per unit (p75),11.0,USD,
+advertisers_with_botox_unit_price,Advertised Botox price per unit (min),7.49,USD,
+advertisers_with_botox_unit_price,Advertised Botox price per unit (max),13.0,USD,
+advertisers_with_botox_unit_price,Advertisers in sample,27,count,
