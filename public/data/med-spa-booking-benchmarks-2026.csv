@@ -1,0 +1,120 @@
+segment,metric,value,unit,base_sites,ci95_low,ci95_high
+all,Online booking reachable within 3 taps of the homepage,68.6,percent,509,64.4,72.4
+all,Online booking one tap from the homepage (or on it),61.9,percent,509,57.6,66.0
+all,Online booking two taps from the homepage,6.7,percent,509,4.8,9.2
+all,Online booking three taps from the homepage,0.0,percent,509,0.0,0.7
+all,No online booking found within 3 taps,31.4,percent,509,27.6,35.6
+all,Book button visible in the first mobile screen,65.4,percent,509,61.2,69.4
+all,Book button visible on the mobile homepage without opening a menu,85.7,percent,509,82.3,88.4
+all,Tap-to-call link in the first mobile screen,34.2,percent,509,30.2,38.4
+all,Tap-to-call link anywhere on the mobile homepage,72.5,percent,509,68.5,76.2
+all,Text-us (sms:) link on the homepage,5.5,percent,509,3.8,7.8
+all,Chat or text widget on the homepage,13.4,percent,509,10.7,16.6
+all,Mobile homepage wider than the screen (sideways scroll),0.6,percent,509,0.2,1.7
+all,Homepage missing the mobile viewport tag,0.0,percent,509,0.0,0.7
+all,Neither a book button nor tap-to-call in the first mobile screen,26.7,percent,509,23.1,30.7
+all,Mobile homepage took 5+ seconds to load,2.6,percent,509,1.5,4.3
+all,Online booking link reachable only through a closed menu (share of sites with online booking),5.4,percent,349,3.5,8.3
+all,Median taps from homepage to online booking,1,taps,349,,
+all,Median mobile homepage load time (one load per site),1.4,seconds,509,,
+advertisers,Online booking reachable within 3 taps of the homepage,73.1,percent,160,65.8,79.4
+advertisers,Online booking one tap from the homepage (or on it),66.9,percent,160,59.3,73.7
+advertisers,Online booking two taps from the homepage,6.2,percent,160,3.4,11.1
+advertisers,Online booking three taps from the homepage,0.0,percent,160,-0.0,2.3
+advertisers,No online booking found within 3 taps,26.9,percent,160,20.6,34.2
+advertisers,Book button visible in the first mobile screen,73.8,percent,160,66.4,80.0
+advertisers,Book button visible on the mobile homepage without opening a menu,88.1,percent,160,82.2,92.3
+advertisers,Tap-to-call link in the first mobile screen,36.9,percent,160,29.8,44.6
+advertisers,Tap-to-call link anywhere on the mobile homepage,80.6,percent,160,73.8,86.0
+advertisers,Text-us (sms:) link on the homepage,3.1,percent,160,1.3,7.1
+advertisers,Chat or text widget on the homepage,18.8,percent,160,13.5,25.5
+advertisers,Mobile homepage wider than the screen (sideways scroll),1.9,percent,160,0.6,5.4
+advertisers,Homepage missing the mobile viewport tag,0.0,percent,160,-0.0,2.3
+advertisers,Neither a book button nor tap-to-call in the first mobile screen,18.8,percent,160,13.5,25.5
+advertisers,Mobile homepage took 5+ seconds to load,2.5,percent,160,1.0,6.3
+advertisers,Online booking link reachable only through a closed menu (share of sites with online booking),5.1,percent,117,2.4,10.7
+advertisers,Median taps from homepage to online booking,1,taps,117,,
+advertisers,Median mobile homepage load time (one load per site),1.7,seconds,160,,
+non_advertisers,Online booking reachable within 3 taps of the homepage,66.5,percent,349,61.4,71.2
+non_advertisers,Online booking one tap from the homepage (or on it),59.6,percent,349,54.4,64.6
+non_advertisers,Online booking two taps from the homepage,6.9,percent,349,4.7,10.0
+non_advertisers,Online booking three taps from the homepage,0.0,percent,349,-0.0,1.1
+non_advertisers,No online booking found within 3 taps,33.5,percent,349,28.8,38.6
+non_advertisers,Book button visible in the first mobile screen,61.6,percent,349,56.4,66.6
+non_advertisers,Book button visible on the mobile homepage without opening a menu,84.5,percent,349,80.4,87.9
+non_advertisers,Tap-to-call link in the first mobile screen,33.0,percent,349,28.2,38.0
+non_advertisers,Tap-to-call link anywhere on the mobile homepage,68.8,percent,349,63.7,73.4
+non_advertisers,Text-us (sms:) link on the homepage,6.6,percent,349,4.4,9.7
+non_advertisers,Chat or text widget on the homepage,10.9,percent,349,8.0,14.6
+non_advertisers,Mobile homepage wider than the screen (sideways scroll),0.0,percent,349,-0.0,1.1
+non_advertisers,Homepage missing the mobile viewport tag,0.0,percent,349,-0.0,1.1
+non_advertisers,Neither a book button nor tap-to-call in the first mobile screen,30.4,percent,349,25.8,35.4
+non_advertisers,Mobile homepage took 5+ seconds to load,2.6,percent,349,1.4,4.8
+non_advertisers,Online booking link reachable only through a closed menu (share of sites with online booking),5.6,percent,232,3.3,9.3
+non_advertisers,Median taps from homepage to online booking,1.0,taps,232,,
+non_advertisers,Median mobile homepage load time (one load per site),1.3,seconds,349,,
+100_plus_reviews,Online booking reachable within 3 taps of the homepage,79.7,percent,158,72.8,85.3
+100_plus_reviews,Online booking one tap from the homepage (or on it),72.2,percent,158,64.7,78.6
+100_plus_reviews,Online booking two taps from the homepage,7.6,percent,158,4.4,12.8
+100_plus_reviews,Online booking three taps from the homepage,0.0,percent,158,-0.0,2.4
+100_plus_reviews,No online booking found within 3 taps,20.3,percent,158,14.7,27.2
+100_plus_reviews,Book button visible in the first mobile screen,75.9,percent,158,68.7,81.9
+100_plus_reviews,Book button visible on the mobile homepage without opening a menu,94.9,percent,158,90.3,97.4
+100_plus_reviews,Tap-to-call link in the first mobile screen,41.8,percent,158,34.4,49.6
+100_plus_reviews,Tap-to-call link anywhere on the mobile homepage,86.1,percent,158,79.8,90.6
+100_plus_reviews,Text-us (sms:) link on the homepage,7.0,percent,158,3.9,12.0
+100_plus_reviews,Chat or text widget on the homepage,27.8,percent,158,21.4,35.3
+100_plus_reviews,Mobile homepage wider than the screen (sideways scroll),1.3,percent,158,0.3,4.5
+100_plus_reviews,Homepage missing the mobile viewport tag,0.0,percent,158,-0.0,2.4
+100_plus_reviews,Neither a book button nor tap-to-call in the first mobile screen,17.7,percent,158,12.6,24.4
+100_plus_reviews,Mobile homepage took 5+ seconds to load,2.5,percent,158,1.0,6.3
+100_plus_reviews,Online booking link reachable only through a closed menu (share of sites with online booking),2.4,percent,126,0.8,6.8
+100_plus_reviews,Median taps from homepage to online booking,1.0,taps,126,,
+100_plus_reviews,Median mobile homepage load time (one load per site),1.6,seconds,158,,
+under_100_reviews,Online booking reachable within 3 taps of the homepage,63.5,percent,351,58.4,68.4
+under_100_reviews,Online booking one tap from the homepage (or on it),57.3,percent,351,52.0,62.3
+under_100_reviews,Online booking two taps from the homepage,6.3,percent,351,4.2,9.3
+under_100_reviews,Online booking three taps from the homepage,0.0,percent,351,0.0,1.1
+under_100_reviews,No online booking found within 3 taps,36.5,percent,351,31.6,41.6
+under_100_reviews,Book button visible in the first mobile screen,60.7,percent,351,55.5,65.7
+under_100_reviews,Book button visible on the mobile homepage without opening a menu,81.5,percent,351,77.1,85.2
+under_100_reviews,Tap-to-call link in the first mobile screen,30.8,percent,351,26.2,35.8
+under_100_reviews,Tap-to-call link anywhere on the mobile homepage,66.4,percent,351,61.3,71.1
+under_100_reviews,Text-us (sms:) link on the homepage,4.8,percent,351,3.0,7.6
+under_100_reviews,Chat or text widget on the homepage,6.8,percent,351,4.6,10.0
+under_100_reviews,Mobile homepage wider than the screen (sideways scroll),0.3,percent,351,0.1,1.6
+under_100_reviews,Homepage missing the mobile viewport tag,0.0,percent,351,0.0,1.1
+under_100_reviews,Neither a book button nor tap-to-call in the first mobile screen,30.8,percent,351,26.2,35.8
+under_100_reviews,Mobile homepage took 5+ seconds to load,2.6,percent,351,1.4,4.8
+under_100_reviews,Online booking link reachable only through a closed menu (share of sites with online booking),7.2,percent,223,4.5,11.3
+under_100_reviews,Median taps from homepage to online booking,1,taps,223,,
+under_100_reviews,Median mobile homepage load time (one load per site),1.4,seconds,351,,
+sites_with_online_booking,Booking system: aesthetic record,14.0,percent,349,,
+sites_with_online_booking,Booking system: boulevard,11.7,percent,349,,
+sites_with_online_booking,Booking system: vagaro,9.5,percent,349,,
+sites_with_online_booking,Booking system: other scheduler,8.9,percent,349,,
+sites_with_online_booking,Booking system: square,8.0,percent,349,,
+sites_with_online_booking,Booking system: jane,7.2,percent,349,,
+sites_with_online_booking,Booking system: moxie,6.3,percent,349,,
+sites_with_online_booking,Booking system: zenoti,5.4,percent,349,,
+sites_with_online_booking,Booking system: acuity,4.0,percent,349,,
+sites_with_online_booking,Booking system: aestheticspro,3.7,percent,349,,
+sites_with_online_booking,Booking system: mangomint,2.6,percent,349,,
+sites_with_online_booking,Booking system: patientnow,2.6,percent,349,,
+sites_with_online_booking,Booking system: glossgenius,2.0,percent,349,,
+sites_with_online_booking,Booking system: mindbody,2.0,percent,349,,
+sites_with_online_booking,Booking system: wix bookings,2.0,percent,349,,
+sites_with_online_booking,Booking system: optimantra,2.0,percent,349,,
+sites_with_online_booking,Booking system: highlevel calendar,1.4,percent,349,,
+sites_with_online_booking,Booking system: godaddy bookings,1.4,percent,349,,
+sites_with_online_booking,Booking system: calendly,0.9,percent,349,,
+sites_with_online_booking,Booking system: meevo,0.9,percent,349,,
+sites_with_online_booking,Booking system: fresha,0.9,percent,349,,
+sites_with_online_booking,Booking system: booker,0.6,percent,349,,
+sites_with_online_booking,Booking system: booksy,0.6,percent,349,,
+sites_with_online_booking,Booking system: highlevel calendar (own domain),0.6,percent,349,,
+sites_with_online_booking,Booking system: schedulicity,0.3,percent,349,,
+sites_with_online_booking,Booking system: phorest,0.3,percent,349,,
+sites_with_online_booking,Booking system: noterro,0.3,percent,349,,
+contact_forms,Median contact form fields,5.0,fields,240,,
+contact_forms,Contact forms asking which treatment,17.5,percent,240,,
