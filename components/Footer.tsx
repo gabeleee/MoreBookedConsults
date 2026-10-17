@@ -57,6 +57,7 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
       { href: "/blog/", label: "Blog" },
       { href: "/tools/", label: "Free tools" },
       { href: "/free-audit/", label: "Free marketing audit" },
+      { href: "/privacy/", label: "Privacy policy" },
     ],
   },
 ];
