@@ -6,6 +6,14 @@ export const metadata: Metadata = {
   description:
     "How More Booked Consults collects, uses and protects the information you share through this site, including audit requests and free tools.",
   alternates: { canonical: "/privacy/" },
+  // Own og:url: Meta's app review rejects a privacy URL whose og:url points
+  // at the homepage (the layout default).
+  openGraph: {
+    type: "website",
+    siteName: "More Booked Consults",
+    title: "Privacy Policy | More Booked Consults",
+    url: "/privacy/",
+  },
 };
 
 const UPDATED = "October 16, 2026";
