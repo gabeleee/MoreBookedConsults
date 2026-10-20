@@ -4,7 +4,8 @@ import posthog from "posthog-js";
 
 // Shown after the booking-audit form submits: Gabe's Cal.com calendar inline,
 // prefilled with the lead's details. Event "audit-walkthrough" (20 min, noon to
-// 5 PM Central, 24 h notice) lives in Cal.com, not here. Fires the Meta pixel
+// 5 PM Central, 24 h notice) lives in Cal.com, not here. Theme is pinned to
+// light so a dark-mode device still gets the light, on-brand calendar. Fires the Meta pixel
 // "Schedule" event and a PostHog event when a call is booked.
 const CAL_LINK = "gabe-lee-42/audit-walkthrough";
 const NS = "audit";
@@ -57,9 +58,9 @@ export default function AuditBooking({ name, email, phone }: { name: string; ema
     api("inline", {
       elementOrSelector: "#ba-cal",
       calLink: CAL_LINK,
-      config: { layout: "month_view", name, email, attendeePhoneNumber: phone },
+      config: { layout: "month_view", theme: "light", name, email, attendeePhoneNumber: phone },
     });
-    api("ui", { hideEventTypeDetails: true, layout: "month_view", styles: { branding: { brandColor: "#6C57E8" } } });
+    api("ui", { theme: "light", hideEventTypeDetails: true, layout: "month_view", styles: { branding: { brandColor: "#6C57E8" } } });
     const onBooked = () => {
       setBooked(true);
       const w = window as unknown as { fbq?: (...args: unknown[]) => void };
