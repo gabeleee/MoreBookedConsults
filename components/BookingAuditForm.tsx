@@ -3,12 +3,13 @@ import { useState } from "react";
 import posthog from "posthog-js";
 import { submitAudit } from "@/lib/submitAudit";
 import { LineIcon } from "./LineIcon";
+import AuditBooking from "./AuditBooking";
 
 // Multi-step form for the paid-ad landing pages (/booking-audit/ for the
 // tumbleweed video, /more-bookings/ for the UGC video). `page` tags the lead. Two tap-to-answer questions and the website come before any contact
 // details. Same .form-card / .opts styles and the same submitAudit() path as
 // AuditForm, plus mobile and the ad's UTM source. Fires the Meta pixel "Lead"
-// event on success (when the pixel is installed).
+// event on success (when the pixel is installed), then shows Gabe's calendar.
 const TOTAL = 4;
 
 const BOOK_OPTS = [
@@ -160,13 +161,7 @@ export default function BookingAuditForm({ page = "booking-audit" }: { page?: st
         <button type="button" className="backlink" onClick={() => setStep(3)}>← Back</button>
       </form>
 
-      {done && (
-        <div className="done show">
-          <div className="mark">✓</div>
-          <h3>Request received.</h3>
-          <p>Your Booking Flow Audit will land in your inbox within 3 business days.</p>
-        </div>
-      )}
+      {done && <AuditBooking name={name.trim()} email={email.trim()} phone={phone.trim()} />}
     </div>
   );
 }

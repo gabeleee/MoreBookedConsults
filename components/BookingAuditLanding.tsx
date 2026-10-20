@@ -1,6 +1,5 @@
 import Image from "next/image";
 import BookingAuditForm from "@/components/BookingAuditForm";
-import MetaPixel from "@/components/MetaPixel";
 
 // Shared body of the paid-ad landing pages. Each ad gets its own route with a
 // hero that matches the video (headline + image); the form and everything
@@ -181,7 +180,6 @@ export default function BookingAuditLanding({
     <main className="ba">
       {/* Landing page: no site header, footer or sticky CTA, so the form is the only next step. */}
       <style>{`body>header,body>footer,.sticky-cta{display:none!important}`}</style>
-      <MetaPixel />
 
       <section className="ba-hero">
         <div className="wrap ba-top">
@@ -212,7 +210,7 @@ export default function BookingAuditLanding({
               <li>See your booking path the way a new client does, tap by tap on her phone</li>
               <li>Find the exact spots where people give up before they book</li>
               <li>Know which fixes would book the most consults, ranked</li>
-              <li>In your inbox within 3 business days, no call needed</li>
+              <li>In your inbox within 1 business day, no call needed</li>
             </ul>
             <a className="ba-sample" href="/booking-audit/sample-audit.pdf" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
