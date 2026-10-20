@@ -1565,3 +1565,12 @@ a.tg-card:hover{transform:translateY(-3px);box-shadow:0 32px 70px -30px rgba(27,
 .ba-head .ba-accent{display:block}
 .ba-head p.ba-sub{font-weight:400;color:var(--soft)}
 @media (max-width:900px){.ba-head{margin-bottom:6px}.ba-head h1{margin-top:8px}}
+
+/* Booking step after the booking-audit form (AuditBooking). */
+.ba-booking{animation:fade .3s ease}
+.ba-booking .mark{font-family:var(--display);font-size:40px;color:var(--violet);line-height:1;margin-bottom:10px}
+.ba-booking h3{font-size:24px;margin-bottom:6px}
+.ba-booking p{color:var(--soft);font-size:15.5px;margin:0 0 4px}
+.ba-booking .ba-booking-meta{font-size:14px}
+.ba-cal{margin:14px -8px 0;min-height:420px;overflow:auto}
+.ba-booking .ba-booking-skip{font-size:13.5px;margin-top:12px}

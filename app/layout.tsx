@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import StickyCta from "@/components/StickyCta";
 import PetalParallax from "@/components/PetalParallax";
 import OrgSchema from "@/components/OrgSchema";
+import MetaPixel from "@/components/MetaPixel";
 import Script from "next/script";
 
 // Fonts self-hosted via next/font (no CDN <link>, no layout shift).
@@ -88,6 +89,7 @@ export default function RootLayout({
         <Footer />
         <StickyCta />
         <PetalParallax />
+        <MetaPixel />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}`}
           strategy="afterInteractive"
