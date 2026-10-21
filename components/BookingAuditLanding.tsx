@@ -52,7 +52,7 @@ function Track({ steps, today }: { steps: number; today?: boolean }) {
 // the price lives in the audit/proposal, the landing page only sells the free audit.
 const STACK = [
   { name: "A new booking flow on your site", note: "Live in 14 days, booking straight into your calendar", value: 2500 },
-  { name: "Instant text-back", note: "Anyone who starts booking but doesn't finish gets a text within 60 seconds", value: 1500 },
+  { name: "Instant follow-up", note: "Every booking request gets a call within 60 seconds from your AI receptionist, and anyone who stops halfway or calls when you're busy gets a text", value: 2000 },
   { name: "Last-Chance Offer", note: "A first-visit offer we write, design in your brand, build and track, so visitors about to leave book instead", value: 750 },
   { name: "Drop-off tracking", note: "See exactly which step people quit on", value: 500 },
   { name: "Monthly before-and-after report", note: "Booking requests before vs after every change", value: 500 },
