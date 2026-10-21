@@ -49,6 +49,7 @@ export default function Pricing() {
                 <li>Free marketing audit + prioritized plan</li>
                 <li>2 improvements shipped / month, each measured against your numbers before</li>
                 <li>New booking form live within 14 days, or month one is free</li>
+                <li>Every booking request called back within 60 seconds by an AI receptionist</li>
                 <li>Booking flow, forms, popups, reviews &amp; offers</li>
                 <li>No contract, cancel anytime, plain-English monthly report</li>
               </ul>
