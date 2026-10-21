@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import posthog from "posthog-js";
 import { submitAudit } from "@/lib/submitAudit";
 import { LineIcon } from "./LineIcon";
@@ -28,6 +29,7 @@ export default function BookingAuditForm({ page = "booking-audit" }: { page?: st
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
+  const [smsOk, setSmsOk] = useState(false);
   const [error, setError] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
@@ -63,7 +65,7 @@ export default function BookingAuditForm({ page = "booking-audit" }: { page?: st
     const utm = ["utm_source", "utm_campaign", "utm_content"].map((k) => (q.get(k) ? `${k}=${q.get(k)}` : "")).filter(Boolean);
     const result = await submitAudit({
       practice: "Med spa",
-      need: `Booking Audit · Book button: ${bookPath ?? "n/a"} · ${locations ?? "locations n/a"}`,
+      need: `Booking Audit · Book button: ${bookPath ?? "n/a"} · ${locations ?? "locations n/a"} · SMS opt-in: ${smsOk ? "yes" : "no"}`,
       worth: null,
       market: null,
       name: nm,
@@ -154,10 +156,20 @@ export default function BookingAuditForm({ page = "booking-audit" }: { page?: st
           <label htmlFor="ba-phone">Mobile</label>
           <input id="ba-phone" type="tel" placeholder="(555) 555-5555" autoComplete="tel" inputMode="tel" value={phone} onChange={(e) => setPhone(e.target.value)} />
         </div>
+        <label className="ba-sms">
+          <input type="checkbox" checked={smsOk} onChange={(e) => setSmsOk(e.target.checked)} />
+          <span>Text me about my audit (optional)</span>
+        </label>
         <p className={`ferror${error && step === 4 ? " show" : ""}`}>Add your name, a valid email and your mobile so the audit can reach you.</p>
         <div className="fnav">
           <button type="submit" className="btn" disabled={submitting}>{submitting ? "Sending…" : "Get my free audit"}</button>
         </div>
+        <p className="ba-consent">
+          By clicking Get my free audit, you agree that More Booked Consults may call you at the number above about your
+          audit, including calls made with automated technology and an AI-generated voice. Consent is not a condition of
+          purchase. We only text you if you tick the box above: message frequency varies, msg &amp; data rates may apply,
+          reply STOP to opt out or HELP for help. <Link href="/terms/">Terms</Link> · <Link href="/privacy/">Privacy</Link>
+        </p>
         <button type="button" className="backlink" onClick={() => setStep(3)}>← Back</button>
       </form>
 

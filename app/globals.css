@@ -1526,6 +1526,10 @@ a.tg-card:hover{transform:translateY(-3px);box-shadow:0 32px 70px -30px rgba(27,
 .ba-g-list li{display:flex;gap:10px;align-items:flex-start;font-size:17px;color:var(--ink)}
 .ba-g-list svg{width:20px;height:20px;color:var(--violet-deep);flex:none;margin-top:2px}
 .ba-fine{font-size:13px;color:var(--soft);max-width:56ch;margin:0 auto;line-height:1.5}
+.ba-sms{display:flex;align-items:center;gap:8px;font-size:14px;margin:4px 0 2px;cursor:pointer}
+.ba-sms input{width:16px;height:16px;margin:0;flex:none}
+.ba-consent{font-size:12px;color:var(--soft);line-height:1.5;margin:12px 0 0}
+.ba-consent a{color:inherit;text-decoration:underline}
 .ba-cap{margin-top:8px;font-weight:600}
 @media (max-width:640px){
   .ba-worth,.ba-stack,.ba-guarantee{padding:56px 0}
