@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import PrismBackground from "@/components/PrismBackground";
 
 export const metadata: Metadata = {
@@ -16,11 +17,12 @@ export const metadata: Metadata = {
   },
 };
 
-const UPDATED = "October 16, 2026";
+const UPDATED = "October 21, 2026";
 
 // Plain privacy policy. Keep it accurate to what the site actually does:
 // forms (audit, offer builder, ad checker), GA4 + PostHog analytics, the Meta
-// pixel on paid-ad landing pages, and email sent through Amazon SES.
+// pixel on paid-ad landing pages, email sent through Amazon SES, and calls/texts
+// through Telnyx with an xAI voice assistant (the SMS wording is what 10DLC carriers review).
 export default function Privacy() {
   return (
     <main>
@@ -45,8 +47,8 @@ export default function Privacy() {
               <li>
                 <strong>Information you give us.</strong> When you request an
                 audit or use a free tool, we collect what you enter, such as
-                your name, email, website, practice type and any details you
-                add.
+                your name, email, mobile number, website, practice type and any
+                details you add.
               </li>
               <li>
                 <strong>Usage data.</strong> Like most websites, we collect
@@ -76,6 +78,8 @@ export default function Privacy() {
                 landing pages to measure ad results.
               </li>
               <li>Amazon Web Services, to send email.</li>
+              <li>Telnyx, to place phone calls and send text messages.</li>
+              <li>xAI, to run the AI voice assistant on those calls.</li>
               <li>
                 AI service providers, to process the text you submit to our
                 free tools.
@@ -83,6 +87,22 @@ export default function Privacy() {
             </ul>
             <p>
               Each provider handles data under its own privacy policy.
+            </p>
+
+            <h2>Phone calls and text messages</h2>
+            <p>
+              If you give us your mobile number, we may call you about your
+              request, including with an AI voice assistant. We only send text
+              messages if you opt in on our form. Message frequency varies and
+              message and data rates may apply. Reply STOP to opt out at any
+              time, or HELP for help. See our{" "}
+              <Link href="/terms/">Terms</Link> for details.
+            </p>
+            <p>
+              No mobile information will be shared with third parties or
+              affiliates for marketing or promotional purposes. Text messaging
+              opt-in data and consent will not be shared with any third
+              parties.
             </p>
 
             <h2>Your choices</h2>
