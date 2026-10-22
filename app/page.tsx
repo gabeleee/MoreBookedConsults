@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import TrustBar from "@/components/TrustBar";
 import PrismBackground from "@/components/PrismBackground";
-import Proof from "@/components/Proof";
 import Levers from "@/components/Levers";
 import Founder from "@/components/Founder";
 import Process from "@/components/Process";
@@ -21,7 +20,6 @@ export default function Home() {
         <Hero />
         <TrustBar />
       </div>
-      <Proof />
       <Levers />
       <Founder />
       <Process />

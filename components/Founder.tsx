@@ -1,10 +1,15 @@
-// Founder section, ported from the v18 mockup (lines 607-633). The 84px
-// avatar reuses /gabe.jpg. LaserAway credentials are Gabe's personally, // keep them attributed to him, never to the company.
+// Founder + track record section. The old Proof (LaserAway results) and
+// Founder sections were merged here so Gabe is introduced once, right after
+// the three levers. LaserAway credentials and results are Gabe's personally,
+// never the company's. Preserve that attribution.
 // The mid-page CTA is folded into this same dark section so the petal trio
 // isn't clipped at a mid-block boundary. The prism light falls the other way
 // from the hero's so the two don't look copied.
 import PrismBackground from "./PrismBackground";
 import AuditCtaLink from "./AuditCtaLink";
+import ChartCard from "./ChartCard";
+import ConversionChart from "./ConversionChart";
+import { LineIcon } from "./LineIcon";
 
 export default function Founder() {
   return (
@@ -13,10 +18,7 @@ export default function Founder() {
       <div className="wrap founder-grid">
         <div data-prism-calm="0.75">
           <p className="eyebrow">Who&apos;s behind this</p>
-          <h2>
-            More Booked <span className="wm-consults">Consults</span>{" "}
-            is one person. That&apos;s the point.
-          </h2>
+          <h2>Six years running CRO at LaserAway. Now it works for you.</h2>
           <div className="founder-id">
             <div className="avatar">
               {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -24,32 +26,68 @@ export default function Founder() {
             </div>
             <div className="who">
               <b>Gabe Meierotto</b>
-              <span>Founder · Former Director of CRO, LaserAway</span>
+              <span>Founder · Director of CRO at LaserAway, 2018–2023</span>
             </div>
           </div>
           <p>
-            Six years testing booking forms, treatment pages, and offers across
-            100+{" "}
+            <strong>
+              More Booked <span className="wm-consults">Consults</span>{" "}
+              is one person. That&apos;s the point.
+            </strong>
+          </p>
+          <p>
+            Gabe spent six years owning the testing roadmap at{" "}
             <a
               href="https://www.laseraway.com"
               target="_blank"
               rel="noopener noreferrer"
             >
               LaserAway
-            </a>{" "}
-            locations. Now the same playbook goes to work for
-            independent aesthetic practices, where one winning test shows up on
-            next month&apos;s schedule. When you work with More Booked Consults,
-            this is who does the work.
+            </a>
+            , the largest medspa chain in the U.S., across 100+ locations.
           </p>
-        </div>
-        <div className="cred" role="list">
-          <div role="listitem">
-            <span className="k">CRO</span>
-            <span>
-              Director of CRO, LaserAway, grew sitewide conversion 3% → 11%
-            </span>
+          <p>
+            The same playbook now goes to work for independent aesthetic
+            practices, and Gabe does the work personally.
+          </p>
+          <div className="mini-stats">
+            <div>
+              <div className="n">2,600+</div>
+              <div className="l">Variations tested</div>
+            </div>
+            <div>
+              <div className="n">200%</div>
+              <div className="l">Avg lift, core pages</div>
+            </div>
+            <div>
+              <div className="n">11x</div>
+              <div className="l">Testing velocity</div>
+            </div>
           </div>
+          <a
+            className="proof-pdf"
+            href="/laseraway-intellimize-case-study.pdf"
+            target="_blank"
+            rel="noopener"
+          >
+            <LineIcon name="file" className="proof-pdf-icon" />
+            <span>
+              Read the published case study <small>PDF · Intellimize</small>
+            </span>
+          </a>
+        </div>
+        <ChartCard
+          title="Sitewide conversion rate"
+          range="3% → 11%"
+          meta="LaserAway · 2018–2023 · Quarterly"
+          delta="▲ +267%"
+          caption="Sitewide conversion during Gabe's six years running the testing program at LaserAway."
+        >
+          <ConversionChart />
+        </ChartCard>
+      </div>
+      <div className="wrap">
+        <div className="cred" role="list">
           <div role="listitem">
             <span className="k">SEO</span>
             <span>
