@@ -391,6 +391,13 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .cred div{padding:15px 0;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:baseline;font-size:15px}
 .cred div:last-child{border-bottom:none}
 .cred .k{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--violet);flex:0 0 76px}
+/* Track record merged into the founder section: proof bits on the dark band,
+   credentials as a single row under the grid. */
+.founder .mini-stats .n{color:#fff}
+.founder .mini-stats .l{color:#B7B4D8}
+.founder .cred{display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px;margin-top:44px;padding:6px 26px}
+.founder .cred div{border-bottom:none}
+.founder .chart-card{color:var(--ink)}
 
 /* ---- process ---- */
 .process{padding:84px 0;background:linear-gradient(180deg,var(--paper),var(--lilac))}
@@ -812,7 +819,7 @@ footer a:hover{border-color:var(--violet)}
 
 /* ---- responsive (extended as later sections land) ---- */
 @media (max-width:900px){
-  .hero-grid,.proof-grid,.lever-grid,.founder-grid,.math-card,.audit-grid{grid-template-columns:1fr}
+  .hero-grid,.proof-grid,.lever-grid,.founder-grid,.math-card,.audit-grid,.founder .cred{grid-template-columns:1fr}
   .steps{grid-template-columns:1fr 1fr}
   .math-card{padding:34px 26px}
   .hero{padding:44px 0 56px}
