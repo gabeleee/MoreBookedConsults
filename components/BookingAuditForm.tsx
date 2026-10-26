@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import posthog from "posthog-js";
 import { submitAudit } from "@/lib/submitAudit";
+import { SITE } from "@/lib/site";
 import { LineIcon } from "./LineIcon";
 import AuditBooking from "./AuditBooking";
 
@@ -31,6 +32,7 @@ export default function BookingAuditForm({ page = "booking-audit" }: { page?: st
   const [phone, setPhone] = useState("");
   const [smsOk, setSmsOk] = useState(false);
   const [error, setError] = useState(false);
+  const [failed, setFailed] = useState(false);
   const [submitting, setSubmitting] = useState(false);
   const [done, setDone] = useState(false);
 
@@ -61,6 +63,7 @@ export default function BookingAuditForm({ page = "booking-audit" }: { page?: st
       return;
     }
     setSubmitting(true);
+    setFailed(false);
     const q = new URLSearchParams(window.location.search);
     const utm = ["utm_source", "utm_campaign", "utm_content"].map((k) => (q.get(k) ? `${k}=${q.get(k)}` : "")).filter(Boolean);
     const result = await submitAudit({
@@ -75,11 +78,12 @@ export default function BookingAuditForm({ page = "booking-audit" }: { page?: st
       source: [page, ...utm].join(" "),
     });
     setSubmitting(false);
-    setDone(true);
     if (result.ok) {
+      setDone(true);
       const w = window as unknown as { fbq?: (...args: unknown[]) => void };
       w.fbq?.("track", "Lead", { content_name: "Booking Audit" });
     } else {
+      setFailed(true);
       posthog.capture("booking_audit_submission_failed");
     }
   }
@@ -161,6 +165,9 @@ export default function BookingAuditForm({ page = "booking-audit" }: { page?: st
           <span>Text me about my audit (optional)</span>
         </label>
         <p className={`ferror${error && step === 4 ? " show" : ""}`}>Add your name, a valid email and your mobile so the audit can reach you.</p>
+        <p className={`ferror${failed && step === 4 ? " show" : ""}`}>
+          Your request didn&apos;t send. Try again, or email <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
+        </p>
         <div className="fnav">
           <button type="submit" className="btn" disabled={submitting}>{submitting ? "Sending…" : "Get my free audit"}</button>
         </div>

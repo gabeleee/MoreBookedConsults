@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import posthog from "posthog-js";
 import { submitAudit } from "@/lib/submitAudit";
+import { SITE } from "@/lib/site";
 import { LineIcon } from "./LineIcon";
 
 // Reusable multi-step audit form (rendered in the hero and the bottom audit
@@ -72,6 +73,7 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
   const [website, setWebsite] = useState("");
   const [market, setMarket] = useState("");
   const [error, setError] = useState(false);
+  const [failed, setFailed] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
   // Managed-ads prospects get ads-review framing and a city field.
@@ -112,6 +114,7 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
       return;
     }
     setSubmitting(true);
+    setFailed(false);
     const result = await submitAudit({
       practice,
       need,
@@ -122,14 +125,16 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
       website: ur,
     });
     setSubmitting(false);
-    setDone(true);
-    if (!result.ok) {
-      posthog.capture("audit_form_submission_failed", {
-        form_location: idPrefix,
-        practice_type: practice ?? "unknown",
-        growth_goal: need ?? "unknown",
-      });
+    if (result.ok) {
+      setDone(true);
+      return;
     }
+    setFailed(true);
+    posthog.capture("audit_form_submission_failed", {
+      form_location: idPrefix,
+      practice_type: practice ?? "unknown",
+      growth_goal: need ?? "unknown",
+    });
   }
 
   const stepClass = (n: number) => `fstep${step === n && !done ? " active" : ""}`;
@@ -301,6 +306,10 @@ export default function AuditForm({ idPrefix, presetNeed }: Props) {
         )}
         <p className={`ferror${error ? " show" : ""}`}>
           Add your name, a valid email, and your website so the audit can reach you.
+        </p>
+        <p className={`ferror${failed ? " show" : ""}`}>
+          Your request didn&apos;t send. Try again, or email{" "}
+          <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.
         </p>
         <div className="fnav">
           <button
