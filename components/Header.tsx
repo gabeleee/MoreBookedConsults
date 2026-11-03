@@ -140,7 +140,7 @@ export default function Header() {
                 </div>
                 <div className="mega-foot">
                   <span>Not sure where to start? Most practices start with Booking Systems, then add traffic.</span>
-                  <Link href="/#book">
+                  <Link href="/demo/">
                     Get a free demo <LineIcon name="arrow" />
                   </Link>
                 </div>
@@ -154,7 +154,7 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <AuditCtaLink className="nav-cta" href="/#book" location="nav" native>
+        <AuditCtaLink className="nav-cta" href="/demo/" location="nav" native>
           <span className="cta-full">Get a free demo</span>
           <span className="cta-short">Get a free demo</span>
         </AuditCtaLink>

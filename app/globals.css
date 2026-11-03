@@ -205,7 +205,7 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 }
 .nav-cta .cta-short{display:none}
 @media (max-width:520px){
-  .nav-cta{padding:9px 15px;font-size:13.5px}
+  .nav-cta{padding:9px 13px;font-size:13px;white-space:nowrap}
   .nav-cta .cta-full{display:none}
   .nav-cta .cta-short{display:inline}
 }

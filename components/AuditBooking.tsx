@@ -10,6 +10,8 @@ import posthog from "posthog-js";
 const CAL_LINK = "gabe-lee-42/audit-walkthrough";
 const NS = "audit";
 
+type Copy = { calLink?: string; title?: string; sub?: string; skip?: string; event?: string };
+
 type CalFn = ((...args: unknown[]) => void) & {
   loaded?: boolean;
   ns?: Record<string, (...args: unknown[]) => void>;
@@ -48,7 +50,7 @@ function loadCal(): CalFn {
   return w.Cal;
 }
 
-export default function AuditBooking({ name, email, phone }: { name: string; email: string; phone: string }) {
+export default function AuditBooking({ name, email, phone, calLink = CAL_LINK, title, sub, skip, event = "Audit walkthrough" }: { name: string; email: string; phone: string } & Copy) {
   const [booked, setBooked] = useState(false);
 
   useEffect(() => {
@@ -57,27 +59,27 @@ export default function AuditBooking({ name, email, phone }: { name: string; ema
     const api = Cal.ns![NS];
     api("inline", {
       elementOrSelector: "#ba-cal",
-      calLink: CAL_LINK,
+      calLink,
       config: { layout: "month_view", theme: "light", name, email, attendeePhoneNumber: phone },
     });
     api("ui", { theme: "light", hideEventTypeDetails: true, layout: "month_view", styles: { branding: { brandColor: "#6C57E8" } } });
     const onBooked = () => {
       setBooked(true);
       const w = window as unknown as { fbq?: (...args: unknown[]) => void };
-      w.fbq?.("track", "Schedule", { content_name: "Audit walkthrough" });
+      w.fbq?.("track", "Schedule", { content_name: event });
       posthog.capture("booking_audit_call_booked");
     };
     api("on", { action: "bookingSuccessfulV2", callback: onBooked });
-  }, [name, email, phone]);
+  }, [name, email, phone, calLink, event]);
 
   return (
     <div className="ba-booking">
       <div className="mark">✓</div>
-      <h3>{booked ? "You're booked." : "Got it. Your audit is on its way."}</h3>
-      <p>{booked ? "The invite is in your inbox, and your audit will be too." : "Pick a time to walk through it together."}</p>
+      <h3>{booked ? "You're booked." : title ?? "Got it. Your audit is on its way."}</h3>
+      <p>{booked ? "The invite is in your inbox." : sub ?? "Pick a time to walk through it together."}</p>
       {!booked && <p className="ba-booking-meta">20 minutes on Google Meet.</p>}
       <div id="ba-cal" className="ba-cal" />
-      {!booked && <p className="ba-booking-skip">Not ready to pick a time? Your audit still lands in your inbox within 1 business day.</p>}
+      {!booked && <p className="ba-booking-skip">{skip ?? "Not ready to pick a time? Your audit still lands in your inbox within 1 business day."}</p>}
     </div>
   );
 }

@@ -5,7 +5,6 @@ import "./home-v2.css";
 import PrismBackground from "@/components/PrismBackground";
 import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
-import HomeCall from "@/components/home/HomeCall";
 import { MazeArt, WaitArt, BlindArt, SpotlightAds, AdMoneyFlow, AtlasArt, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, HeroArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03 draft): sold like a product. Five branded systems
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
     "Aesthetic practice marketing for med spas and plastic surgeons: we install five booking systems on your website in 14 days, then keep improving them every month.",
 };
 
-const CALL = "#book";
+const CALL = "/demo/";
 
 const SYSTEMS = [
   {
@@ -194,7 +193,15 @@ export default function Home() {
             Done for you, measured, no contract.
           </p>
           <div className="hv-ctas">
-            <CallButton />
+            <a className="btn hv-cta-hero" href={CALL}>
+              <span className="hv-cta-ic" aria-hidden="true">
+                <svg viewBox="0 0 24 24">
+                  <path d="M9 7.5v9l7.5-4.5z" />
+                </svg>
+              </span>
+              Get a free demo
+              <span className="hv-cta-arrow" aria-hidden="true">→</span>
+            </a>
           </div>
           <p className="hv-proofline">
             <img className="hv-face" src="/gabe.jpg" alt="Gabe Meierotto" width={30} height={30} />
@@ -502,31 +509,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- Book a call ---------------- */}
+      {/* ---------------- Final CTA ---------------- */}
       <section className="hv-book" id="book">
-        <div className="wrap hv-book-in">
-          <div className="hv-book-copy">
-            <h2>See the five systems on your own site</h2>
-            <p>Pick a time for your free 20-minute demo.</p>
-            <ul>
-              <li>
-                <LineIcon name="check" /> Where your site loses bookings today
-              </li>
-              <li>
-                <LineIcon name="check" /> What each system would look like for your practice
-              </li>
-              <li>
-                <LineIcon name="check" /> Hear Sienna AI make a live call
-              </li>
-              <li>
-                <LineIcon name="check" /> A fixed monthly price, no pressure
-              </li>
-            </ul>
-            <p className="hv-book-alt">
-              Not ready for a call? <Link href="/tools/">Try our free tools</Link>.
-            </p>
-          </div>
-          <HomeCall />
+        <div className="wrap hv-final">
+          <h2>See The Five Systems On Your Own Site</h2>
+          <p>A free 20-minute demo. Answer 4 quick questions, then pick your time.</p>
+          <ul>
+            <li><LineIcon name="check" /> Where your site loses bookings today</li>
+            <li><LineIcon name="check" /> Hear Sienna AI make a live call</li>
+            <li><LineIcon name="check" /> A fixed monthly price, no pressure</li>
+          </ul>
+          <a className="btn hv-cta-hero" href={CALL}>
+            <span className="hv-cta-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 7.5v9l7.5-4.5z" />
+              </svg>
+            </span>
+            Get a free demo
+            <span className="hv-cta-arrow" aria-hidden="true">→</span>
+          </a>
+          <p className="hv-book-alt">
+            Not ready yet? <Link href="/tools/">Try our free tools</Link>.
+          </p>
         </div>
       </section>
     </main>

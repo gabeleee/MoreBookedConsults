@@ -1,0 +1,26 @@
+/* /demo/ page (2026-11-03 draft) */
+.dm-hero{position:relative;overflow:hidden;padding:56px 0 90px;min-height:calc(100vh - 77px);
+  background:radial-gradient(1000px 480px at 30% 0%,#E9E4FF 0%,rgba(233,228,255,0) 70%),linear-gradient(180deg,var(--lilac) 0%,var(--paper) 100%)}
+.dm-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.dm h1{font-size:clamp(32px,4vw,48px);line-height:1.08;margin:8px 0 14px}
+.dm-copy ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin:24px 0}
+.dm-copy li{display:flex;align-items:center;gap:10px;font-weight:600}
+.dm-copy li svg{width:20px;height:20px;color:var(--violet);flex:none}
+.dm-by{display:flex;align-items:center;gap:12px;font-size:14.5px;color:var(--soft);background:rgba(255,255,255,.7);border:1px solid var(--line);border-radius:16px;padding:12px 14px}
+.dm-by img{width:44px;height:44px;border-radius:50%;object-fit:cover;flex:none}
+.dm-by b{color:var(--ink)}
+.dm-guar{display:flex;align-items:center;gap:14px;margin-top:14px;font-weight:600;font-size:15px}
+.dm-guar .hv-seal-svg{width:70px;height:70px;margin:0;flex:none}
+.dm-guar .hv-seal-svg .s-txt{font-size:15px}
+.demo-form{position:relative}
+.demo-form .ba-booking{padding-top:6px}
+/* after submit: the calendar gets the full width so dates and times sit side by side */
+.dm-grid:has(.demo-form.is-done){grid-template-columns:1fr;max-width:1000px;margin:0 auto}
+.dm-grid:has(.demo-form.is-done) .dm-copy{display:none}
+@media (max-width:900px){
+  .dm-grid{grid-template-columns:1fr;gap:28px}.dm-hero{padding:24px 0 60px}
+  .dm-copy{display:contents}
+  .dm-copy h1{order:-2;margin:0}
+  .dm-copy .hv-lede{order:-2;margin-top:-16px}
+  .demo-form{order:-1}
+}

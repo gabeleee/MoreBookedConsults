@@ -126,7 +126,7 @@ export default function About() {
           <div className="hv-head">
             <h2>See what we&apos;d change on your site</h2>
             <p>Pick a time for your free 20-minute demo.</p>
-            <Link className="btn" href="/#book">
+            <Link className="btn" href="/demo/">
               Get a free demo
             </Link>
             <p className="ab-alt">
