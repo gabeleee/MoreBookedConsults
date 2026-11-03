@@ -6,6 +6,7 @@ import PrismBackground from "@/components/PrismBackground";
 import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
 import HomeCall from "@/components/home/HomeCall";
+import FontLab from "@/components/home/FontLab";
 import { HeroArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03 draft): sold like a product. Five branded systems
@@ -184,6 +185,7 @@ function CallButton({ children = "Book a 20-minute call", className = "btn" }: {
 export default function Home() {
   return (
     <main className="hv">
+      <FontLab />
       {/* ---------------- Hero ---------------- */}
       <section className="hv-hero" id="top">
         <PrismBackground tone="light" gain={1.25} tilt={0.38} phase={70} />
