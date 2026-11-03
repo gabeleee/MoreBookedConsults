@@ -190,7 +190,8 @@ export default function Home() {
             </a>
           </div>
           <p className="hv-proofline">
-            Led by the CRO director behind LaserAway&apos;s <b>3% → 11%</b> sitewide conversion
+            <img className="hv-face" src="/gabe.jpg" alt="Gabe Meierotto" width={30} height={30} />
+            <span>Led by the CRO director behind LaserAway&apos;s <b>3% → 11%</b> sitewide conversion</span>
           </p>
           <HeroArt />
         </div>
