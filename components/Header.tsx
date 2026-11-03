@@ -10,7 +10,6 @@ const NAV = [
   { href: "/medspa-marketing/", label: "For Med Spas" },
   { href: "/plastic-surgeon-marketing/", label: "For Plastic Surgeons" },
   { href: "/results/", label: "Results" },
-  { href: "/pricing/", label: "Pricing" },
   { href: "/tools/", label: "Free Tools", badge: "New" },
 ];
 
@@ -28,9 +27,9 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <AuditCtaLink className="nav-cta" href="/free-audit/" location="nav">
-          <span className="cta-full">Free marketing audit</span>
-          <span className="cta-short">Free audit</span>
+        <AuditCtaLink className="nav-cta" href="/#book" location="nav" native>
+          <span className="cta-full">Book a call</span>
+          <span className="cta-short">Book a call</span>
         </AuditCtaLink>
         <MobileNav items={NAV} />
       </div>
