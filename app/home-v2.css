@@ -5,8 +5,16 @@
 .hv h3{font-family:var(--display)}
 .hv sup{font-size:.45em;vertical-align:super;margin-left:1px;font-family:var(--body);font-weight:600}
 
+/* ---------- header over the hero (homepage only) ---------- */
+body:has(.hv-hero) header{background:transparent;border-bottom-color:transparent;backdrop-filter:none;
+  transition:background .2s,border-color .2s,backdrop-filter .2s}
+html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-bottom-color:var(--line);backdrop-filter:blur(8px)}
+.hv-hero{margin-top:-78px}
+.hv-lede a{color:var(--violet-deep);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+.hv-lede a:hover{color:var(--violet)}
+
 /* ---------- hero ---------- */
-.hv-hero{position:relative;overflow:hidden;padding:72px 0 40px;
+.hv-hero{position:relative;overflow:hidden;padding:150px 0 40px;
   background:radial-gradient(1100px 520px at 50% 0%,#E9E4FF 0%,rgba(233,228,255,0) 70%),linear-gradient(180deg,var(--lilac) 0%,var(--paper) 100%)}
 .hv-hero-in{text-align:center;display:flex;flex-direction:column;align-items:center}
 .hv-hero h1{font-size:clamp(38px,5.4vw,62px);line-height:1.06;max-width:19ch;margin:0 0 20px;letter-spacing:-.01em}
@@ -308,7 +316,7 @@
 /* ---------- responsive ---------- */
 @media (max-width:900px){
   .hv-sec{padding:68px 0}
-  .hv-hero{padding:48px 0 24px}
+  .hv-hero{padding:120px 0 24px}
   .hh-art{height:430px;margin-top:30px}
   .hh-art::before{inset:60px 0 -10px}
   .hh-phone{width:230px;height:430px;border-radius:34px}

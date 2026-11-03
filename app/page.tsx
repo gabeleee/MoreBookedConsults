@@ -180,14 +180,11 @@ export default function Home() {
         <div className="wrap hv-hero-in">
           <h1 data-prism-calm="0.8">Turn more of your website visitors into booked consults.</h1>
           <p className="hv-lede" data-prism-calm="0.6">
-            We install five booking systems on your med spa&apos;s website in 14 days, then keep improving them every month.
+            We install <a href="#systems">five booking systems</a>{" "}on your med spa&apos;s website in 14 days, then keep improving them every month.
             Done for you, measured, no contract.
           </p>
           <div className="hv-ctas">
             <CallButton />
-            <a className="hv-link" href="#systems">
-              See the five systems <LineIcon name="arrow" />
-            </a>
           </div>
           <p className="hv-proofline">
             <img className="hv-face" src="/gabe.jpg" alt="Gabe Meierotto" width={30} height={30} />

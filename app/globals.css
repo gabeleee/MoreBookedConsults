@@ -82,7 +82,7 @@ html.scrolled .logo-mark{width:22px;height:22px;flex-basis:22px}
 html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .nav .brand{margin-right:auto}
 .nav-links{display:flex;gap:22px;align-items:center}
-.nav-links a{font-size:14.5px;color:var(--soft);text-decoration:none;font-weight:500;transition:color .15s}
+.nav-links a{font-size:14.5px;color:#514A57;text-decoration:none;font-weight:500;transition:color .15s}
 .nav-links a:hover,.nav-links a:focus-visible{color:var(--ink)}
 .mobile-nav{display:none;position:relative}
 .nav-toggle{
