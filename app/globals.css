@@ -86,14 +86,14 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .nav-links a:hover,.nav-links a:focus-visible{color:var(--ink)}
 /* ---- Services mega menu (hover / focus-within, no JS) ---- */
 .nav-drop{position:static}
-.nav-drop-btn{display:inline-flex;align-items:center;gap:5px;background:none;border:0;cursor:pointer;padding:8px 0;
+.nav-drop-btn{display:inline-flex;align-items:center;gap:5px;background:none;border:0;cursor:pointer;padding:24px 0;margin:-16px 0;
   font:500 14.5px var(--body);color:#514A57;transition:color .15s}
 .nav-drop-btn svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
 .nav-drop:hover .nav-drop-btn,.nav-drop:focus-within .nav-drop-btn{color:var(--ink)}
 .nav-drop:hover .nav-drop-btn svg,.nav-drop:focus-within .nav-drop-btn svg{transform:rotate(180deg)}
-.mega{position:absolute;left:0;right:0;top:100%;padding-top:10px;opacity:0;visibility:hidden;transform:translateY(-6px);
-  transition:opacity .18s ease,transform .18s ease,visibility 0s linear .18s;z-index:50}
-.nav-drop:hover .mega,.nav-drop:focus-within .mega{opacity:1;visibility:visible;transform:none;transition:opacity .18s ease,transform .18s ease}
+.mega{position:absolute;left:0;right:0;top:100%;margin-top:-8px;padding-top:18px;opacity:0;visibility:hidden;transform:translateY(-6px);
+  transition:opacity .18s ease .22s,transform .18s ease .22s,visibility 0s linear .4s;z-index:50}
+.nav-drop:hover .mega,.nav-drop:focus-within .mega{opacity:1;visibility:visible;transform:none;transition:opacity .18s ease,transform .18s ease,visibility 0s}
 .mega-in{max-width:1080px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:26px;padding:16px;
   box-shadow:0 40px 80px -36px rgba(35,33,64,.45),0 2px 6px rgba(35,33,64,.04)}
 .mega-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}

@@ -6,8 +6,7 @@ import PrismBackground from "@/components/PrismBackground";
 import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
 import HomeCall from "@/components/home/HomeCall";
-import FontLab from "@/components/home/FontLab";
-import { MazeArt, WaitArt, BlindArt, HeroArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
+import { MazeArt, WaitArt, BlindArt, SpotlightAds, AdMoneyFlow, AtlasArt, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, HeroArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03 draft): sold like a product. Five branded systems
 // from the proposals, a call as the only CTA, no prices, the founder named
@@ -102,10 +101,10 @@ const PAINS = [
 ];
 
 const BENEFITS = [
-  { icon: "zap", t: "Live in 14 days", p: "Your new booking flow is on your site within two weeks of our kickoff." },
-  { icon: "layers", t: "Keep your website and software", p: "We add to the site and booking system you already have. No rebuild, no migration." },
-  { icon: "users", t: "Done for you", p: "We write, design, build and track everything. You approve it." },
-  { icon: "chart", t: "Every change measured", p: "Each improvement is checked against your numbers from before, on your dashboard." },
+  { Art: FastArt, t: "Live in 14 days", p: "Your new booking flow is on your site within two weeks of our kickoff." },
+  { Art: KeepArt, t: "Keep your website and software", p: "We add to the site and booking system you already have. No rebuild, no migration." },
+  { Art: DoneArt, t: "Done for you", p: "We write, design, build and track everything. You approve it." },
+  { Art: MeasuredArt, t: "Every change measured", p: "Each improvement is checked against your numbers from before, on your dashboard." },
 ];
 
 const STEPS = [
@@ -185,7 +184,6 @@ function CallButton({ children = "Get a free demo", className = "btn" }: { child
 export default function Home() {
   return (
     <main className="hv">
-      <FontLab />
       {/* ---------------- Hero ---------------- */}
       <section className="hv-hero" id="top">
         <PrismBackground tone="light" gain={1.25} tilt={0.38} phase={70} />
@@ -275,16 +273,16 @@ export default function Home() {
           </div>
 
           <div className="hv-bonus">
-            <span className="hv-ic">
-              <LineIcon name="gift" />
-            </span>
-            <div>
+            <div className="hv-bonus-copy">
+              <p className="hv-sys-k">Bonus · Offer builder</p>
               <h3>
-                Bonus: Consult Magnet<sup>™</sup> offer
+                Consult Magnet<sup>™</sup>
               </h3>
-              <p>A first-visit offer new clients actually want to book, built with you, so your exit offer and ads have something worth claiming.</p>
+              <p className="hv-sys-tag">A first-visit offer people actually want to claim.</p>
+              <p>We build a named package for your top treatment, then use it everywhere: your exit offer, your follow-up texts and your ads.</p>
+              <CallButton className="btn-ghost">Get all five, plus the bonus</CallButton>
             </div>
-            <CallButton className="btn-ghost">Get all five</CallButton>
+            <MagnetArt />
           </div>
         </div>
       </section>
@@ -296,25 +294,19 @@ export default function Home() {
             <h2>Month one installs it. Every month after makes it better.</h2>
             <p>Each month we ship 2 improvements to your site and measure every one.</p>
           </div>
-          <ol className="hv-loop">
+          <ol className="hv-loop has-art">
             <li>
-              <span className="hv-ic">
-                <LineIcon name="search" />
-              </span>
+              <LoopLeakArt />
               <b>Find the biggest leak</b>
               <p>Leak Finder shows where your site loses the most people that month.</p>
             </li>
             <li>
-              <span className="hv-ic">
-                <LineIcon name="shuffle" />
-              </span>
+              <LoopTestArt />
               <b>Ship 2 fixes</b>
               <p>New forms for your top treatments, sharper offers, better follow-up timing, whatever the numbers point to.</p>
             </li>
             <li>
-              <span className="hv-ic">
-                <LineIcon name="check" />
-              </span>
+              <LoopWinArt />
               <b>Keep what wins</b>
               <p>Winners stay live, the rest get switched off, and you see both on Clear View.</p>
             </li>
@@ -329,11 +321,9 @@ export default function Home() {
             <h2>More consults. No new software. No extra work for your team.</h2>
           </div>
           <div className="hv-benefits">
-            {BENEFITS.map((b) => (
-              <div key={b.t} className="hv-benefit">
-                <span className="hv-ic">
-                  <LineIcon name={b.icon} />
-                </span>
+            {BENEFITS.map(({ Art, ...b }) => (
+              <div key={b.t} className="hv-benefit has-art">
+                <Art />
                 <h3>{b.t}</h3>
                 <p>{b.p}</p>
               </div>
@@ -365,21 +355,19 @@ export default function Home() {
       <section className="hv-guar-wrap">
         <div className="wrap">
           <div className="hv-guar">
-            <span className="hv-seal">
-              <LineIcon name="shield" />
-            </span>
-            <div>
-              <h2>Your booking rate goes up in 90 days, or we keep working free until it does.</h2>
-              <ul>
-                <li>
-                  <LineIcon name="check" /> Booking flow live in 14 days, or month one is free
-                </li>
-                <li>
-                  <LineIcon name="check" /> No contract, cancel anytime
-                </li>
-              </ul>
-              <p className="hv-fine">Booking rate = booking requests ÷ website visitors, measured against your week-1 baseline. For sites with at least 300 visitors a month.</p>
-            </div>
+            <GuaranteeSeal />
+            <h2>
+              Your booking rate goes up in 90 days, or <span className="hv-u">we keep working free until it does</span>.
+            </h2>
+            <ul>
+              <li>
+                <LineIcon name="clock" /> Booking flow live in 14 days, or month one is free
+              </li>
+              <li>
+                <LineIcon name="lock" /> No contract, cancel anytime
+              </li>
+            </ul>
+            <p className="hv-fine">Booking rate = booking requests ÷ website visitors, measured against your week-1 baseline. For sites with at least 300 visitors a month.</p>
           </div>
         </div>
       </section>
@@ -394,14 +382,18 @@ export default function Home() {
           </div>
           <div className="hv-proof-grid">
             <div className="hv-proof-chart">
-              <p className="hv-chart-t">LaserAway sitewide conversion, 2018–2023</p>
+              <p className="hv-chart-t">
+                <img src="/logos/laseraway.png" alt="LaserAway" className="hv-la-logo" />
+                <span>Sitewide conversion, 2018–2023</span>
+              </p>
               <ConversionChart />
               <p className="hv-chart-c">Results from Gabe Meierotto&apos;s time as LaserAway&apos;s Director of CRO. He now leads every More Booked Consults project.</p>
             </div>
             <div className="hv-stats">
-              <div>
+              <div className="hv-stat-la">
+                <img src="/logos/laseraway-white.png" alt="LaserAway" />
                 <b>3% → 11%</b>
-                <span>Sitewide conversion at LaserAway</span>
+                <span>Sitewide conversion</span>
               </div>
               <div>
                 <b>210x</b>
@@ -438,31 +430,52 @@ export default function Home() {
       </section>
 
       {/* ---------------- Add-ons ---------------- */}
-      <section className="hv-sec">
+      <section className="hv-sec hv-addons-sec">
         <div className="wrap">
           <div className="hv-head">
             <h2>When you&apos;re booking more, add more traffic</h2>
             <p>Once your site turns visitors into consults, every new visitor is worth more.</p>
           </div>
-          <div className="hv-addons">
-            <div className="hv-addon">
-              <span className="hv-ic">
-                <LineIcon name="megaphone" />
-              </span>
-              <h3>
-                Spotlight<sup>™</sup> Ads
-              </h3>
-              <p>Meta ads built around your best first-visit offer, sent to a landing page that books.</p>
+
+          <div className="hv-addon-big">
+            <div className="hv-addon-top">
+              <div>
+                <p className="hv-sys-k">Add-on · Facebook &amp; Instagram ads</p>
+                <h3>
+                  Spotlight<sup>™</sup> Ads
+                </h3>
+                <p className="hv-sys-tag">Ads built to bring back more than they cost.</p>
+                <ul className="hv-addon-pts">
+                  <li><LineIcon name="check" />Built around your best first-visit offer, not a generic discount</li>
+                  <li><LineIcon name="check" />8–12 fresh ads every month, written to Meta&apos;s healthcare rules</li>
+                  <li><LineIcon name="check" />Every click lands on a page built to book, with Sienna AI calling each lead</li>
+                  <li><LineIcon name="check" />You pay Meta directly, with no markup on your ad budget</li>
+                </ul>
+              </div>
+              <AdMoneyFlow />
             </div>
-            <div className="hv-addon">
-              <span className="hv-ic">
-                <LineIcon name="map" />
-              </span>
-              <h3>
-                Authority Atlas<sup>™</sup> Local SEO
-              </h3>
-              <p>Treatment pages and Google Maps work that bring in people searching for what you offer near you.</p>
+            <SpotlightAds />
+            <p className="hv-addon-note">Example ads for a made-up med spa. We write your real ads with you.</p>
+          </div>
+
+          <div className="hv-addon-big atlas">
+            <div className="hv-addon-top">
+              <div>
+                <p className="hv-sys-k">Add-on · Local SEO</p>
+                <h3>
+                  Authority Atlas<sup>™</sup> Local SEO
+                </h3>
+                <p className="hv-sys-tag">Show up first when people near you are ready to book.</p>
+                <ul className="hv-addon-pts">
+                  <li><LineIcon name="check" />Google Maps and the local pack, so you&apos;re in the top 3 near you</li>
+                  <li><LineIcon name="check" />A page for every treatment, written to rank in your city</li>
+                  <li><LineIcon name="check" />Every visitor from Google is a free click, no ad spend behind it</li>
+                  <li><LineIcon name="check" />A monthly report on your rankings and the bookings they bring</li>
+                </ul>
+              </div>
+              <AtlasArt />
             </div>
+            <p className="hv-addon-note">Illustrative search result for a made-up med spa.</p>
           </div>
         </div>
       </section>
