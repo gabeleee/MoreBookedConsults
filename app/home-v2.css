@@ -672,3 +672,6 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 .hv-final li{display:flex;align-items:center;gap:8px;font-weight:600}
 .hv-final li svg{width:20px;height:20px;color:var(--violet)}
 .hv-final .hv-book-alt{margin-top:22px;font-size:15px}
+
+/* guarantee: no white box, sits on the section background (Gabe 11-03) */
+.hv-guar{background:transparent;border:0;box-shadow:none;padding:24px 0 0}
