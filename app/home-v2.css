@@ -6,19 +6,18 @@
 .hv sup{font-size:.45em;vertical-align:super;margin-left:1px;font-family:var(--body);font-weight:600}
 
 /* ---------- header over the hero (homepage only) ---------- */
-body:has(.hv-hero) header{background:transparent;border-bottom-color:transparent;backdrop-filter:none;
-  transition:background .2s,border-color .2s,backdrop-filter .2s}
+body:has(.hv-hero) header{position:fixed;top:0;left:0;right:0;background:transparent;border-bottom-color:transparent;backdrop-filter:none;
+  transition:background .35s ease,border-color .35s ease,backdrop-filter .35s ease}
 html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-bottom-color:var(--line);backdrop-filter:blur(8px)}
-.hv-hero{margin-top:-78px}
 .hv-lede a{color:var(--violet-deep);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 .hv-lede a:hover{color:var(--violet)}
 
 /* ---------- hero ---------- */
-.hv-hero{position:relative;overflow:hidden;padding:150px 0 40px;
+.hv-hero{position:relative;overflow:hidden;padding:140px 0 40px;
   background:radial-gradient(1100px 520px at 50% 0%,#E9E4FF 0%,rgba(233,228,255,0) 70%),linear-gradient(180deg,var(--lilac) 0%,var(--paper) 100%)}
 .hv-hero-in{text-align:center;display:flex;flex-direction:column;align-items:center}
-.hv-hero h1{font-size:clamp(38px,5.4vw,62px);line-height:1.06;max-width:19ch;margin:0 0 20px;letter-spacing:-.01em}
-.hv-lede{font-size:clamp(17px,1.6vw,20px);color:var(--soft);max-width:40em;line-height:1.55}
+.hv-hero h1{font-size:clamp(34px,4.6vw,52px);line-height:1.08;max-width:19ch;margin:0 0 20px;letter-spacing:-.01em}
+.hv-lede{font-size:clamp(16px,1.35vw,18px);color:var(--soft);max-width:38em;line-height:1.55}
 .hv-ctas{display:flex;align-items:center;justify-content:center;gap:22px;margin:30px 0 18px;flex-wrap:wrap}
 .hv-link{display:inline-flex;align-items:center;gap:6px;color:var(--ink);font-weight:600;text-decoration:none;font-size:16px}
 .hv-link svg{width:16px;height:16px;transition:transform .18s}
@@ -369,3 +368,4 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
   .hv-ctas{flex-direction:column;gap:14px}
 }
 @media (prefers-reduced-motion:reduce){.hv-float,.hh-orb,.si-orb{animation:none}}
+#systems,#book,#faq{scroll-margin-top:64px}
