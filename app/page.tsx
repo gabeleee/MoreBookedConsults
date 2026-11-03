@@ -7,7 +7,7 @@ import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
 import HomeCall from "@/components/home/HomeCall";
 import FontLab from "@/components/home/FontLab";
-import { HeroArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
+import { MazeArt, WaitArt, BlindArt, HeroArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03 draft): sold like a product. Five branded systems
 // from the proposals, a call as the only CTA, no prices, the founder named
@@ -85,17 +85,17 @@ const SYSTEMS = [
 
 const PAINS = [
   {
-    icon: "ban",
+    Art: MazeArt,
     t: "The Book button is a maze",
     p: "People tap Book, land on a long booking page full of treatments and prices, and give up.",
   },
   {
-    icon: "clock",
+    Art: WaitArt,
     t: "New leads wait hours",
     p: "A form comes in at 9 PM, someone calls back tomorrow, and the lead already booked somewhere else.",
   },
   {
-    icon: "eye",
+    Art: BlindArt,
     t: "Nobody sees the drop-off",
     p: "You know how many people visit, but not where they quit, so nothing gets fixed.",
   },
@@ -109,7 +109,7 @@ const BENEFITS = [
 ];
 
 const STEPS = [
-  { when: "Day 0", t: "20-minute call", p: "We look at your site together and show you where bookings are slipping." },
+  { when: "Day 0", t: "Free demo", p: "20 minutes. We look at your site together and show you where bookings are slipping." },
   { when: "Week 1", t: "Baseline + plan", p: "We measure your booking rate today, before anything changes." },
   { when: "Day 14", t: "Systems go live", p: "Booking flow, Sienna AI, exit offer, tracking and dashboard, all switched on." },
   { when: "Every month", t: "2 improvements", p: "We fix the next biggest leak, measure it, and keep what wins." },
@@ -174,7 +174,7 @@ const FAQ = [
   },
 ];
 
-function CallButton({ children = "Book a 20-minute call", className = "btn" }: { children?: React.ReactNode; className?: string }) {
+function CallButton({ children = "Get a free demo", className = "btn" }: { children?: React.ReactNode; className?: string }) {
   return (
     <a className={className} href={CALL}>
       {children}
@@ -228,11 +228,9 @@ export default function Home() {
             <p>Most people who want a consult never finish booking one.</p>
           </div>
           <div className="hv-pains">
-            {PAINS.map((x) => (
-              <div key={x.t} className="hv-pain">
-                <span className="hv-ic">
-                  <LineIcon name={x.icon} />
-                </span>
+            {PAINS.map(({ Art, ...x }) => (
+              <div key={x.t} className="hv-pain has-art">
+                <Art />
                 <h3>{x.t}</h3>
                 <p>{x.p}</p>
               </div>
@@ -496,7 +494,7 @@ export default function Home() {
         <div className="wrap hv-book-in">
           <div className="hv-book-copy">
             <h2>See the five systems on your own site</h2>
-            <p>Pick a time for a 20-minute call.</p>
+            <p>Pick a time for your free 20-minute demo.</p>
             <ul>
               <li>
                 <LineIcon name="check" /> Where your site loses bookings today

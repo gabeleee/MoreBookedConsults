@@ -30,7 +30,7 @@ export default function StickyCta() {
   return (
     <div className="sticky-cta" id="stickyCta" ref={ref}>
       <AuditCtaLink className="btn" href="/#book" location="sticky" native>
-        Book a 20-minute call
+        Get a free demo
       </AuditCtaLink>
     </div>
   );

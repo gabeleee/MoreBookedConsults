@@ -41,13 +41,19 @@ export function GlidePathArt() {
           <p className="gp-step">Step 2 of 4</p>
           <p className="gp-q">What brings you in?</p>
           <div className="gp-opts">
-            <span>Botox &amp; filler</span>
+            <span>
+              <i className="gp-oi"><LineIcon name="syringe" /></i>Botox &amp; filler
+            </span>
             <span className="sel">
-              Laser hair removal
+              <i className="gp-oi"><LineIcon name="sparkles" /></i>Laser hair removal
               <LineIcon name="check" />
             </span>
-            <span>Skin &amp; facials</span>
-            <span>Not sure yet</span>
+            <span>
+              <i className="gp-oi"><LineIcon name="droplet" /></i>Skin &amp; facials
+            </span>
+            <span>
+              <i className="gp-oi"><LineIcon name="help" /></i>Not sure yet
+            </span>
           </div>
         </div>
       </div>
@@ -261,6 +267,99 @@ export function HeroArt() {
           <span>$50 off a first visit</span>
         </div>
       </div>
+    </div>
+  );
+}
+
+/* ---------- Problem cards: what goes wrong today (illustrative) ---------- */
+export function MazeArt() {
+  const rows = [
+    ["Botox, per unit", "$14"],
+    ["Dysport, per unit", "$5"],
+    ["Filler, 1 syringe", "$750"],
+    ["Lip flip", "$150"],
+    ["HydraFacial Signature", "$199"],
+    ["Laser hair removal, small area", "$99"],
+    ["Laser hair removal, medium", "$199"],
+  ];
+  return (
+    <div className="pa pa-maze" aria-hidden="true">
+      <div className="pm-win">
+        <div className="pm-bar">
+          <span>Select a service</span>
+          <i>1 of 48</i>
+        </div>
+        <div className="pm-list">
+          {rows.map(([t, p]) => (
+            <div key={t}>
+              <span>{t}</span>
+              <b>{p}</b>
+            </div>
+          ))}
+        </div>
+        <span className="pm-scroll" />
+      </div>
+      <span className="pa-tag bad">
+        <LineIcon name="ban" /> Visitor left
+      </span>
+    </div>
+  );
+}
+
+export function WaitArt() {
+  return (
+    <div className="pa pa-wait" aria-hidden="true">
+      <div className="pw-note">
+        <span className="pw-ic">
+          <LineIcon name="mail" />
+        </span>
+        <div>
+          <b>New booking request</b>
+          <span>Jessica M. · Lip filler</span>
+        </div>
+        <time>9:04 PM</time>
+      </div>
+      <div className="pw-gap">
+        <LineIcon name="clock" />
+        <span>13 hours later</span>
+      </div>
+      <div className="pw-note dim">
+        <span className="pw-ic">
+          <LineIcon name="call" />
+        </span>
+        <div>
+          <b>Front desk calls back</b>
+          <span>No answer. Voicemail left.</span>
+        </div>
+        <time>10:12 AM</time>
+      </div>
+      <span className="pa-tag bad">
+        <LineIcon name="ban" /> Booked somewhere else
+      </span>
+    </div>
+  );
+}
+
+export function BlindArt() {
+  return (
+    <div className="pa pa-blind" aria-hidden="true">
+      <div className="pb-card">
+        <div className="pb-kpi">
+          <span>Website visitors</span>
+          <b>4,210</b>
+        </div>
+        <div className="pb-steps">
+          {["Clicked Book", "Picked a treatment", "Entered details", "Booked"].map((t) => (
+            <div key={t}>
+              <span>{t}</span>
+              <i>?</i>
+            </div>
+          ))}
+        </div>
+      </div>
+      <span className="pa-tag">
+        <LineIcon name="help" /> Where did they go?
+      </span>
     </div>
   );
 }

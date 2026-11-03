@@ -4,7 +4,7 @@ import Link from "next/link";
 
 // Mobile nav: a hamburger toggle + dropdown, shown only under 820px (CSS).
 // The desktop .nav-links are hidden at that width, so this carries the nav.
-type Item = { href: string; label: string; badge?: string };
+type Item = { href: string; label: string; badge?: string; sub?: string };
 
 export default function MobileNav({ items }: { items: Item[] }) {
   const [open, setOpen] = useState(false);
@@ -41,10 +41,19 @@ export default function MobileNav({ items }: { items: Item[] }) {
       </button>
       {open && (
         <div className="mobile-menu">
-          {items.map((n) => (
-            <Link key={n.href} href={n.href} onClick={() => setOpen(false)}>
-              {n.label}
-              {n.badge && <span className="nav-new">{n.badge}</span>}
+          {items.some((n) => n.sub) && <p className="mobile-menu-h">Services</p>}
+          {items.map((n, i) => (
+            <Link
+              key={n.href}
+              href={n.href}
+              onClick={() => setOpen(false)}
+              className={[n.sub ? "mm-svc" : "", i > 0 && items[i - 1].sub && !n.sub ? "mm-sep" : ""].join(" ").trim() || undefined}
+            >
+              <span>
+                {n.label}
+                {n.badge && <span className="nav-new">{n.badge}</span>}
+              </span>
+              {n.sub && <small>{n.sub}</small>}
             </Link>
           ))}
         </div>
