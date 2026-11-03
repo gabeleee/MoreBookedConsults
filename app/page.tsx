@@ -114,7 +114,17 @@ const STEPS = [
   { when: "Every month", t: "2 improvements", p: "We fix the next biggest leak, measure it, and keep what wins." },
 ];
 
-const PLATFORMS = ["Boulevard", "Vagaro", "Aesthetic Record", "Mangomint", "Zenoti", "Jane", "PatientNow", "Square"];
+// Logos from each company's own site, shown as one-tone marks. "Works with"
+// only: we hand requests to these systems, we are not their partner.
+const PLATFORMS = [
+  { name: "Boulevard", file: "boulevard.svg", h: 17 },
+  { name: "Vagaro", file: "vagaro.svg", h: 22 },
+  { name: "Aesthetic Record", file: "aestheticrecord.png", h: 28 },
+  { name: "Mangomint", file: "mangomint.svg", h: 24 },
+  { name: "Zenoti", file: "zenoti.svg", h: 24 },
+  { name: "PatientNow", file: "patientnow.svg", h: 24 },
+  { name: "Square", file: "square.svg", h: 24 },
+];
 
 const FAQ = [
   {
@@ -194,26 +204,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- Logo / platform band ---------------- */}
-      <section className="hv-band" aria-label="Partners and platforms">
+      {/* ---------------- Booking software band ---------------- */}
+      <section className="hv-band" aria-label="Booking software we work with">
         <div className="wrap">
-          <div className="hv-band-row">
-            <p className="hv-band-l">Certified ad partners</p>
-            <div className="hv-logos">
-              <img src="/logos/client-1.png" alt="Google Partner" />
-              <img src="/logos/facebook-marketing-partner.png" alt="Meta Marketing Partner" />
-              <img src="/logos/instagram-partner.avif" alt="Instagram Partner" />
-              <img src="/logos/adroll.webp" alt="AdRoll" className="sm" />
-            </div>
-          </div>
-          <div className="hv-band-row">
-            <p className="hv-band-l">Works with your booking software</p>
-            <ul className="hv-platforms">
-              {PLATFORMS.map((p) => (
-                <li key={p}>{p}</li>
-              ))}
-            </ul>
-          </div>
+          <p className="hv-band-l">Works with the booking software you already use</p>
+          <ul className="hv-platforms">
+            {PLATFORMS.map((p) => (
+              <li key={p.name}>
+                <img src={`/logos/booking/${p.file}`} alt={p.name} style={{ height: p.h }} />
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 

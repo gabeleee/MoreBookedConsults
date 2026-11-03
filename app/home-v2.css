@@ -76,13 +76,14 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 /* ---------- band ---------- */
 .hv-band{padding:34px 0 10px}
 .hv-band .wrap{display:flex;flex-direction:column;gap:22px;align-items:center}
-.hv-band-row{display:flex;flex-direction:column;align-items:center;gap:14px}
 .hv-band-l{font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--soft)}
-.hv-logos{display:flex;gap:44px;align-items:center;justify-content:center;flex-wrap:wrap}
-.hv-logos img{height:28px;width:auto;filter:grayscale(1) brightness(.35) contrast(1.1);opacity:.6}
-.hv-logos img.sm{height:15px}
-.hv-platforms{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:10px}
-.hv-platforms li{border:1px solid var(--line);background:#fff;border-radius:999px;padding:6px 14px;font-size:14px;color:var(--soft);font-weight:600}
+.hv-band-l{text-align:center}
+.hv-platforms{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:22px 34px;margin-top:20px}
+@media (min-width:901px){.hv-band .wrap{max-width:1200px}}
+.hv-platforms li{display:flex;align-items:center;height:32px}
+.hv-platforms img{width:auto;display:block;filter:brightness(0);opacity:.5;transition:opacity .2s}
+.hv-platforms li:hover img{opacity:.75}
+@media (max-width:520px){.hv-platforms{gap:20px 30px}.hv-platforms img{transform:scale(.88)}}
 
 /* ---------- section scaffolding ---------- */
 .hv-sec{padding:96px 0}
