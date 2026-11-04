@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
-    "next": "16.2.10",
+    "next": "16.4.3",
     "next-mdx-remote": "^6.0.0",
     "posthog-js": "^1.434.14",
     "posthog-node": "^5.54.1",
@@ -23,7 +23,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
-    "eslint-config-next": "16.2.10",
+    "eslint-config-next": "16.4.3",
     "typescript": "^5"
   }
 }
