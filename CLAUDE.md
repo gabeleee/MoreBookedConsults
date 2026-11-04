@@ -27,7 +27,7 @@ Homepage v2 (shipped 2026-11-03) replaced the v18 homepage: it sells the offer a
   2. Oversized petal trios (7 sections): sway animation on the SVG element + scroll parallax on a wrapper div. Keep as two separate elements so transforms don't conflict.
 - Charts: hand-built inline SVGs (mono uppercase title, metric range, timeframe caption, ▲ delta badge, gridlines, endpoint labels). Main chart: 3% → 11% conversion line, LaserAway 2018–2023.
 - Interactive revenue calculator in "The math" section (two sliders → live Today vs 2× bars).
-- Sticky mobile CTA that hides when either audit form is in view.
+- No bottom sticky CTA on mobile (removed 2026-11-03): the sticky header already keeps "Get a free demo" on screen.
 
 ## Audit form (legacy: the v18 homepage form, still used by the audit landing pages; the homepage now links to /demo/ via `components/home/DemoForm.tsx`)
 Four steps (the practice-type step is an addition to the v18 mockup, mandated by the topical map):

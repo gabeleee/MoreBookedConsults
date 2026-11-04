@@ -9,7 +9,6 @@ import { SITE } from "@/lib/site";
 import SvgDefs from "@/components/SvgDefs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import StickyCta from "@/components/StickyCta";
 import PetalParallax from "@/components/PetalParallax";
 import OrgSchema from "@/components/OrgSchema";
 import MetaPixel from "@/components/MetaPixel";
@@ -87,7 +86,6 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <StickyCta />
         <PetalParallax />
         <MetaPixel />
         <Script

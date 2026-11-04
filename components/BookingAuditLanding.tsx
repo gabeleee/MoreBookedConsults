@@ -179,7 +179,7 @@ export default function BookingAuditLanding({
   return (
     <main className="ba">
       {/* Landing page: no site header, footer or sticky CTA, so the form is the only next step. */}
-      <style>{`body>header,body>footer,.sticky-cta{display:none!important}`}</style>
+      <style>{`body>header,body>footer{display:none!important}`}</style>
 
       <section className="ba-hero">
         <div className="wrap ba-top">
