@@ -675,3 +675,16 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 
 /* guarantee: no white box, sits on the section background (Gabe 11-03) */
 .hv-guar{background:transparent;border:0;box-shadow:none;padding:24px 0 0}
+/* Final CTA: pitch on the left, the /demo/ multi-step form on the right (11-03) */
+.hv-fin{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.hv-fin-copy h2{margin:0 0 14px}
+.hv-fin-copy > p{color:var(--soft);font-size:18px}
+.hv-fin-copy ul{list-style:none;display:flex;flex-direction:column;gap:12px;margin:24px 0}
+.hv-fin-copy li{display:flex;align-items:center;gap:10px;font-weight:600}
+.hv-fin-copy li svg{width:20px;height:20px;color:var(--violet);flex:none}
+.hv-fin .demo-form{position:relative}
+.hv-fin .demo-form .ba-booking{padding-top:6px}
+/* after submit: the calendar takes the full width so dates and times sit side by side */
+.hv-fin:has(.demo-form.is-done){grid-template-columns:1fr;max-width:1000px;margin:0 auto}
+.hv-fin:has(.demo-form.is-done) .hv-fin-copy{display:none}
+@media (max-width:900px){.hv-fin{grid-template-columns:1fr;gap:28px}}
