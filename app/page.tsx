@@ -248,7 +248,7 @@ export default function Home() {
       <section className="hv-sec hv-systems" id="systems">
         <div className="wrap">
           <div className="hv-head">
-            <h2>The five systems we install</h2>
+            <h2>Every place you lose a booking, covered</h2>
             <p>Aesthetic practice marketing for med spas and plastic surgeons, starting where the money leaks: your booking path.</p>
           </div>
           <div className="hv-sys-list">
