@@ -5,7 +5,6 @@ import "./home-v2.css";
 import PrismBackground from "@/components/PrismBackground";
 import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
-import DemoForm from "@/components/home/DemoForm";
 import { MazeArt, WaitArt, BlindArt, SpotlightAds, AdMoneyFlow, AtlasArt, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, HeroArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03 draft): sold like a product. Five branded systems
@@ -510,23 +509,28 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- Final CTA: pitch left, the demo form right ---------------- */}
+      {/* ---------------- Final CTA ---------------- */}
       <section className="hv-book" id="book">
-        <div className="wrap hv-fin">
-          <div className="hv-fin-copy">
-            <h2>See The Five Systems On Your Own Site</h2>
-            <p>A free 20-minute demo. Answer 5 quick questions, then pick your time.</p>
-            <ul>
-              <li><LineIcon name="check" /> Where your site loses bookings today</li>
-              <li><LineIcon name="check" /> What each system would look like for your practice</li>
-              <li><LineIcon name="check" /> Hear Sienna AI make a live call</li>
-              <li><LineIcon name="check" /> A fixed monthly price, no pressure</li>
-            </ul>
-            <p className="hv-book-alt">
-              Not ready yet? <Link href="/tools/">Try our free tools</Link>.
-            </p>
-          </div>
-          <DemoForm />
+        <div className="wrap hv-final">
+          <h2>See The Five Systems On Your Own Site</h2>
+          <p>A free 20-minute demo. Answer 4 quick questions, then pick your time.</p>
+          <ul>
+            <li><LineIcon name="check" /> Where your site loses bookings today</li>
+            <li><LineIcon name="check" /> Hear Sienna AI make a live call</li>
+            <li><LineIcon name="check" /> A fixed monthly price, no pressure</li>
+          </ul>
+          <a className="btn hv-cta-hero" href={CALL}>
+            <span className="hv-cta-ic" aria-hidden="true">
+              <svg viewBox="0 0 24 24">
+                <path d="M9 7.5v9l7.5-4.5z" />
+              </svg>
+            </span>
+            Get a free demo
+            <span className="hv-cta-arrow" aria-hidden="true">→</span>
+          </a>
+          <p className="hv-book-alt">
+            Not ready yet? <Link href="/tools/">Try our free tools</Link>.
+          </p>
         </div>
       </section>
     </main>
