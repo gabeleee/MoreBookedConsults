@@ -468,6 +468,9 @@ export default function Home() {
             </div>
             <SpotlightAds />
             <p className="hv-addon-note">Example ads for a made-up med spa. We write your real ads with you.</p>
+            <p className="hv-sys-more sp-more">
+              <Link href="/spotlight-ads/">See how Spotlight™ Ads work, in detail →</Link>
+            </p>
           </div>
 
           <div className="hv-addon-big atlas">
