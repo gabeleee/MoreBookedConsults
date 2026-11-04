@@ -317,37 +317,6 @@ export default function Results() {
               </article>
             ))}
           </div>
-
-          <div className="hv-bonus">
-            <div className="hv-bonus-copy">
-              <p className="hv-sys-k">Tested at LaserAway · 2020</p>
-              <h3>Agility when it counted</h3>
-              <p className="hv-sys-tag">When COVID shut down in-person consults, the funnel changed in weeks.</p>
-              <p>
-                Virtual consultation messaging was tested and shipped for the sales team, and the booking setup was repointed so revenue kept flowing through the shutdown.
-              </p>
-            </div>
-            <div className="rs-pivot" aria-hidden="true">
-              <div className="rs-pv off">
-                <span className="rs-pv-ic"><LineIcon name="building" /></span>
-                <div>
-                  <b>In-person consult</b>
-                  <em>Paused</em>
-                </div>
-              </div>
-              <span className="rs-pv-arrow">→</span>
-              <div className="rs-pv on">
-                <span className="rs-pv-ic"><LineIcon name="video" /></span>
-                <div>
-                  <b>Virtual consult</b>
-                  <em>Tested and live in weeks</em>
-                </div>
-              </div>
-              <div className="rs-pv-chip">
-                <LineIcon name="calendar" /> Booking kept flowing
-              </div>
-            </div>
-          </div>
         </div>
       </section>
 

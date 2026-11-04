@@ -35,23 +35,6 @@
 .rs-sys-link{display:inline-block;margin-top:14px;font-weight:700;font-size:14.5px;color:var(--violet-deep);text-decoration:none;border-bottom:1px solid rgba(169,21,115,.35)}
 .rs-sys-link:hover{border-color:var(--violet-deep)}
 
-/* COVID pivot visual */
-.rs-pivot{position:relative;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:14px;background:var(--glass);border:1px solid rgba(195,46,132,.16);border-radius:22px;padding:30px 22px 64px}
-.rs-pv{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:0 16px 34px -24px rgba(125,9,90,.45)}
-.rs-pv div{display:flex;flex-direction:column;gap:2px}
-.rs-pv b{font-size:15px}
-.rs-pv em{font-style:normal;font-size:12px;color:var(--soft)}
-.rs-pv-ic{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;flex:none;background:#EFE6E9;color:var(--soft)}
-.rs-pv-ic svg{width:21px;height:21px}
-.rs-pv.off{opacity:.65}
-.rs-pv.off b{text-decoration:line-through;text-decoration-color:rgba(138,96,112,.5)}
-.rs-pv.on{border-color:rgba(195,46,132,.35)}
-.rs-pv.on .rs-pv-ic{background:linear-gradient(135deg,#C32E84,#BF69D2);color:#fff}
-.rs-pv.on em{color:var(--violet-deep);font-weight:600}
-.rs-pv-arrow{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,var(--violet),var(--blue));color:#fff;font-weight:700}
-.rs-pv-chip{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);display:inline-flex;align-items:center;gap:8px;white-space:nowrap;background:#fff;border:1px solid rgba(195,46,132,.16);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;box-shadow:0 12px 28px -14px rgba(125,9,90,.45)}
-.rs-pv-chip svg{width:15px;height:15px;color:var(--violet)}
-
 /* source document */
 .rs-doc{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:1060px;margin:0 auto}
 .rs-doc-info h2{font-size:clamp(30px,3.4vw,42px);line-height:1.1;margin-bottom:12px}
@@ -79,7 +62,5 @@
   .rs-stats div{padding:16px 8px}
   .rs-stats b{font-size:24px}
   .rs-stats span{font-size:12.5px}
-  .rs-pivot{grid-template-columns:1fr;padding:20px 16px 62px;justify-items:stretch}
-  .rs-pv-arrow{justify-self:center;transform:rotate(90deg)}
   .rs-facts div{grid-template-columns:80px 1fr;font-size:14px}
 }
