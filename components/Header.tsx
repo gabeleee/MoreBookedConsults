@@ -223,7 +223,7 @@ export default function Header() {
           ))}
           <div className="nav-drop">
             <button type="button" className="nav-drop-btn" aria-haspopup="true">
-              Free Tools <span className="nav-new">New</span>
+              Free Tools
               <svg viewBox="0 0 12 12" aria-hidden="true">
                 <path d="M3 4.5 6 7.5 9 4.5" />
               </svg>
@@ -270,7 +270,7 @@ export default function Header() {
           items={[
             ...SERVICES.map((s) => ({ href: s.href, label: s.title, sub: s.sub })),
             ...NAV,
-            { href: "/tools/", label: "Free Tools", badge: "New" },
+            { href: "/tools/", label: "Free Tools" },
           ]}
         />
       </div>
