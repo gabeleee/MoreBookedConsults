@@ -62,7 +62,7 @@ export default function AuditBooking({ name, email, phone, calLink = CAL_LINK, t
       calLink,
       config: { layout: "month_view", theme: "light", name, email, attendeePhoneNumber: phone },
     });
-    api("ui", { theme: "light", hideEventTypeDetails: true, layout: "month_view", styles: { branding: { brandColor: "#6C57E8" } } });
+    api("ui", { theme: "light", hideEventTypeDetails: true, layout: "month_view", styles: { branding: { brandColor: "#C32E84" } } });
     const onBooked = () => {
       setBooked(true);
       const w = window as unknown as { fbq?: (...args: unknown[]) => void };

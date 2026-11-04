@@ -278,6 +278,9 @@ export default function Home() {
               </article>
             ))}
           </div>
+          <p className="hv-sys-more">
+            <Link href="/booking-systems/">See how each system works, in detail →</Link>
+          </p>
 
           <div className="hv-bonus">
             <div className="hv-bonus-copy">

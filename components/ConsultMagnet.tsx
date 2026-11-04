@@ -17,7 +17,7 @@ import {
 // then copy captions and download a 1080x1080 ad. The only network call is the
 // optional "run this for me" form, which posts to /api/offer/.
 
-const SWATCHES = ["#6C57E8", "#4DA9BA", "#C2185B", "#B8860B", "#2E7D5B", "#1B1936"];
+const SWATCHES = ["#C32E84", "#4DA9BA", "#C2185B", "#B8860B", "#2E7D5B", "#2F1220"];
 const money = (n: number) => "$" + n.toLocaleString("en-US");
 
 export default function ConsultMagnet() {
@@ -293,16 +293,16 @@ async function renderAd(o: { spa: string; name: string; parts: Part[]; tags: str
   g.save(); g.shadowColor = "rgba(0,0,0,.25)"; g.shadowBlur = 50; g.shadowOffsetY = 18;
   round(g, x, y, w, h, 36); g.fillStyle = "#fff"; g.fill(); g.restore();
 
-  g.fillStyle = "#232140";
+  g.fillStyle = "#391A29";
   let fs = 76; g.font = `${fs}px ${serif}`;
   while (g.measureText(o.name).width > w - 100 && fs > 40) { fs -= 4; g.font = `${fs}px ${serif}`; }
   g.fillText(o.name, x + 50, y + 110);
 
   // lines
   let ly = y + 200;
-  g.strokeStyle = "#DDDBF0"; g.lineWidth = 2; line(g, x + 50, ly - 50, x + w - 50, ly - 50);
+  g.strokeStyle = "#EED7DD"; g.lineWidth = 2; line(g, x + 50, ly - 50, x + w - 50, ly - 50);
   o.parts.forEach((p, i) => {
-    g.font = `500 32px ${sans}`; g.fillStyle = "#232140";
+    g.font = `500 32px ${sans}`; g.fillStyle = "#391A29";
     g.fillText(fit(g, p.label, w - 330), x + 50, ly);
     g.font = `700 34px ${sans}`; g.fillStyle = o.color; g.textAlign = "right";
     g.fillText(o.tags[i], x + w - 50, ly); g.textAlign = "left";
@@ -310,17 +310,17 @@ async function renderAd(o: { spa: string; name: string; parts: Part[]; tags: str
   });
   line(g, x + 50, ly - 30, x + w - 50, ly - 30);
   if (o.priced) {
-    g.font = `500 32px ${sans}`; g.fillStyle = "#6C6990";
+    g.font = `500 32px ${sans}`; g.fillStyle = "#8A6070";
     g.fillText("Total value", x + 50, ly + 34);
     g.textAlign = "right"; g.fillText(money(o.value), x + w - 50, ly + 34);
     // strike-through
-    const tw = g.measureText(money(o.value)).width; g.strokeStyle = "#6C6990"; line(g, x + w - 50 - tw, ly + 23, x + w - 50, ly + 23);
-    g.textAlign = "left"; g.font = `700 44px ${sans}`; g.fillStyle = "#232140";
+    const tw = g.measureText(money(o.value)).width; g.strokeStyle = "#8A6070"; line(g, x + w - 50 - tw, ly + 23, x + w - 50, ly + 23);
+    g.textAlign = "left"; g.font = `700 44px ${sans}`; g.fillStyle = "#391A29";
     g.fillText("Offer price", x + 50, ly + 110);
     g.textAlign = "right"; g.fillStyle = o.color; g.font = `700 64px ${sans}`;
     g.fillText(money(o.price), x + w - 50, ly + 114); g.textAlign = "left";
   } else {
-    g.font = `500 32px ${sans}`; g.fillStyle = "#6C6990";
+    g.font = `500 32px ${sans}`; g.fillStyle = "#8A6070";
     g.fillText("For new patients. One simple visit.", x + 50, ly + 50);
   }
 

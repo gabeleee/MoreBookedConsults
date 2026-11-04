@@ -8,8 +8,8 @@ function Logo() {
   return (
     <span className="brand">
       <svg className="logo-mark" viewBox="10 2 86 94" aria-hidden="true">
-        <use href="#petalShape" fill="#CBC4F5" transform="translate(24,76) scale(0.52) rotate(-24)" />
-        <use href="#petalShape" fill="#4C8DFF" opacity="0.9" transform="translate(45,64) scale(0.74) rotate(-10)" />
+        <use href="#petalShape" fill="#F0BAC9" transform="translate(24,76) scale(0.52) rotate(-24)" />
+        <use href="#petalShape" fill="#BF69D2" opacity="0.9" transform="translate(45,64) scale(0.74) rotate(-10)" />
         <use href="#petalShape" fill="url(#logoGrad)" transform="translate(68,48) scale(0.98) rotate(6)" />
       </svg>
       <span>

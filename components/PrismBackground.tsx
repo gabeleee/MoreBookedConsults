@@ -27,8 +27,8 @@ uniform float lightTone; // 1 = light section (transparent output)
 uniform vec4 calmBox[3]; // text areas to dim, canvas px (x0, y0, x1, y1)
 uniform float calmK[3];  // how much to dim each one
 
-const vec3 BASE = vec3(0.106, 0.098, 0.212); // --deep #1B1936
-const vec3 CORE = vec3(0.86, 0.83, 1.0);     // lilac-white light
+const vec3 BASE = vec3(0.184, 0.071, 0.125); // --deep #2F1220
+const vec3 CORE = vec3(0.988, 0.800, 0.847); // blush-white light
 
 vec3 spectrum(float h){
   return 0.5 + 0.5 * cos(6.28318 * (h + vec3(0.0, 0.33, 0.67)));
@@ -88,7 +88,7 @@ void main(){
     float aR = 1.0 - exp(-gRainA * s * 0.9);
     float aW = 1.0 - exp(-gWhite * s);
     vec3 rcol = gRain / max(gRainA, 1e-4);
-    vec4 acc = vec4(vec3(0.78, 0.75, 0.95) * aS, aS);
+    vec4 acc = vec4(vec3(0.929, 0.710, 0.769) * aS, aS);
     acc = vec4(rcol * aR, aR) + acc * (1.0 - aR);
     acc = vec4(vec3(aW), aW) + acc * (1.0 - aW);
     gl_FragColor = acc;
