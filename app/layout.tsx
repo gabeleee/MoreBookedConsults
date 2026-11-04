@@ -10,6 +10,7 @@ import SvgDefs from "@/components/SvgDefs";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyCta from "@/components/StickyCta";
+import ThemePreview from "@/components/ThemePreview"; // PREVIEW ONLY, remove before merge
 import PetalParallax from "@/components/PetalParallax";
 import OrgSchema from "@/components/OrgSchema";
 import MetaPixel from "@/components/MetaPixel";
@@ -88,6 +89,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <StickyCta />
+        <ThemePreview />
         <PetalParallax />
         <MetaPixel />
         <Script
