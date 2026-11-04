@@ -262,10 +262,10 @@ const STAIRS = [
   { m: "Before", h: 34 },
   { m: "Month 1", h: 52, tag: "Install" },
   { m: "Month 2", h: 59, tag: "Win" },
-  { m: "Month 3", h: 59, tag: "Held" },
+  { m: "Month 3", h: 59 },
   { m: "Month 4", h: 67, tag: "Win" },
   { m: "Month 5", h: 73, tag: "Win" },
-  { m: "Month 6", h: 73, tag: "Held" },
+  { m: "Month 6", h: 73 },
 ];
 
 const PLAN = [
@@ -555,7 +555,7 @@ export default function BookingSystems() {
                 return (
                   <div key={b.m} className={`bs-stair${i === 0 ? " is-before" : ""}`}>
                     {b.tag && (
-                      <span className={`bs-stair-tag${b.tag === "Held" ? " is-held" : ""}`} style={{ bottom: `calc(${b.h}% + 8px)` }}>
+                      <span className="bs-stair-tag" style={{ bottom: `calc(${b.h}% + 8px)` }}>
                         {b.tag}
                       </span>
                     )}
