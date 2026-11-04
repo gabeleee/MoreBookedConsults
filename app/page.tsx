@@ -5,7 +5,8 @@ import "./home-v2.css";
 import PrismBackground from "@/components/PrismBackground";
 import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
-import { MazeArt, WaitArt, BlindArt, SpotlightAds, AdMoneyFlow, AtlasArt, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, HeroArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
+import HeroVideo from "@/components/home/HeroVideo";
+import { MazeArt, WaitArt, BlindArt, SpotlightAds, AdMoneyFlow, AtlasArt, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03 draft): sold like a product. Five branded systems
 // from the proposals, a call as the only CTA, no prices, the founder named
@@ -207,7 +208,8 @@ export default function Home() {
               <span className="hv-cta-arrow" aria-hidden="true">→</span>
             </a>
           </div>
-          <HeroArt />
+          <HeroVideo />
+          <p className="hv-video-cap">Sample walkthrough. Glow Aesthetics is an illustrative med spa.</p>
         </div>
       </section>
 
