@@ -197,8 +197,8 @@ export function ClearViewArt() {
         <svg className="cv-chart" viewBox="0 0 300 110" preserveAspectRatio="none">
           <defs>
             <linearGradient id="cvFill" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0" stopColor="#6C57E8" stopOpacity=".28" />
-              <stop offset="1" stopColor="#6C57E8" stopOpacity="0" />
+              <stop offset="0" stopColor="#C32E84" stopOpacity=".28" />
+              <stop offset="1" stopColor="#C32E84" stopOpacity="0" />
             </linearGradient>
           </defs>
           <line x1="0" y1="27" x2="300" y2="27" className="cv-grid" />
@@ -233,16 +233,30 @@ export function HeroArt() {
           </div>
           <div className="gp-progress">
             <span className="on" />
-            <span className="on" />
-            <span className="on" />
+            <span />
+            <span />
             <span />
           </div>
-          <p className="gp-step">Step 3 of 4</p>
-          <p className="gp-q">Where should we send your times?</p>
-          <span className="hh-in">Jessica Moore</span>
-          <span className="hh-in">jessica@email.com</span>
-          <span className="hh-in">(555) 014-2290</span>
-          <span className="hh-btn">See open times</span>
+          <p className="gp-step">Step 1 of 4</p>
+          <p className="gp-q">What would you like to treat?</p>
+          <div className="gp-opts hh-opts">
+            <span>
+              <i className="gp-oi"><LineIcon name="syringe" /></i>Botox
+            </span>
+            <span className="sel">
+              <i className="gp-oi"><LineIcon name="droplet" /></i>Lip filler
+              <LineIcon name="check" />
+            </span>
+            <span>
+              <i className="gp-oi"><LineIcon name="zap" /></i>Laser hair removal
+            </span>
+            <span>
+              <i className="gp-oi"><LineIcon name="sparkles" /></i>Skin &amp; facials
+            </span>
+            <span>
+              <i className="gp-oi"><LineIcon name="help" /></i>Not sure yet
+            </span>
+          </div>
         </div>
       </div>
 
@@ -589,8 +603,8 @@ export function GuaranteeSeal({ text = "90-day booking guarantee" }: { text?: st
       <defs>
         <path id="hvSealPath" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0" />
         <linearGradient id="hvSealFill" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#F3F0FF" />
-          <stop offset="1" stopColor="#E4ECFF" />
+          <stop offset="0" stopColor="#FFEDF0" />
+          <stop offset="1" stopColor="#F6E6F5" />
         </linearGradient>
       </defs>
       <circle cx="100" cy="100" r="96" className="s-out" />

@@ -52,13 +52,13 @@ export default function ConversionChart() {
       />
       <path
         fill="none"
-        stroke="#6C57E8"
+        stroke="#C32E84"
         strokeWidth="3"
         strokeLinecap="round"
         d="M60 192 C 100 187, 130 181, 158 173 C 190 164, 220 158, 254 148 C 290 138, 316 136, 350 128 C 386 119, 412 96, 446 82 C 478 68, 506 48, 536 37"
       />
-      <circle cx="60" cy="192" r="5" fill="#fff" stroke="#6C57E8" strokeWidth="2.5" />
-      <circle cx="536" cy="37" r="5.5" fill="#6C57E8" />
+      <circle cx="60" cy="192" r="5" fill="#fff" stroke="#C32E84" strokeWidth="2.5" />
+      <circle cx="536" cy="37" r="5.5" fill="#C32E84" />
       <text className="pt-label" x="72" y="182">
         3.0%
       </text>

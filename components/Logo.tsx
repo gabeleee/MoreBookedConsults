@@ -19,12 +19,12 @@ export default function Logo({ href }: LogoProps) {
       <svg className="logo-mark" viewBox="10 2 86 94" aria-hidden="true">
         <use
           href="#petalShape"
-          fill="#CBC4F5"
+          fill="#F0BAC9"
           transform="translate(24,76) scale(0.52) rotate(-24)"
         />
         <use
           href="#petalShape"
-          fill="#4C8DFF"
+          fill="#BF69D2"
           opacity="0.9"
           transform="translate(45,64) scale(0.74) rotate(-10)"
         />

@@ -14,9 +14,9 @@ export default function ConsultMagnetArt() {
   return (
     <div className="cma" aria-hidden="true">
       <svg className="cma-petals" viewBox="0 0 400 400">
-        <g transform="translate(70 320) rotate(-20) scale(1.6)"><path d={PETAL} fill="#CBC4F5" opacity=".35" /></g>
-        <g transform="translate(340 90) rotate(25) scale(2.1)"><path d={PETAL} fill="#4C8DFF" opacity=".28" /></g>
-        <g transform="translate(320 330) rotate(160) scale(1.2)"><path d={PETAL} fill="#6C57E8" opacity=".35" /></g>
+        <g transform="translate(70 320) rotate(-20) scale(1.6)"><path d={PETAL} fill="#F0BAC9" opacity=".35" /></g>
+        <g transform="translate(340 90) rotate(25) scale(2.1)"><path d={PETAL} fill="#BF69D2" opacity=".28" /></g>
+        <g transform="translate(320 330) rotate(160) scale(1.2)"><path d={PETAL} fill="#C32E84" opacity=".35" /></g>
       </svg>
       {CARDS.map((c, i) => (
         <div key={c.name} className={`cma-card cma-c${i}`}>

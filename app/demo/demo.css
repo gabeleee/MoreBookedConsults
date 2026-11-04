@@ -1,6 +1,6 @@
 /* /demo/ page (2026-11-03 draft) */
 .dm-hero{position:relative;overflow:hidden;padding:56px 0 90px;min-height:calc(100vh - 77px);
-  background:radial-gradient(1000px 480px at 30% 0%,#E9E4FF 0%,rgba(233,228,255,0) 70%),linear-gradient(180deg,var(--lilac) 0%,var(--paper) 100%)}
+  background:radial-gradient(1000px 480px at 30% 0%,#FEDFE5 0%,rgba(254,223,229,0) 70%),linear-gradient(180deg,var(--lilac) 0%,var(--paper) 100%)}
 .dm-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
 .dm h1{font-size:clamp(32px,4vw,48px);line-height:1.08;margin:8px 0 14px}
 .dm-copy ul{list-style:none;display:flex;flex-direction:column;gap:11px;margin:24px 0}

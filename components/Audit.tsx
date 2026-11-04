@@ -9,8 +9,8 @@ export default function Audit() {
     <section className="audit" id="audit">
       <PetalBackground
         petals={[
-          { top: "14%", right: "3%", r: "26deg", size: 54, fill: "#DED9FA" },
-          { bottom: "10%", left: "5%", r: "-12deg", size: 42, fill: "#C4D6FA" },
+          { top: "14%", right: "3%", r: "26deg", size: 54, fill: "#F8D3DC" },
+          { bottom: "10%", left: "5%", r: "-12deg", size: 42, fill: "#E7CBE9" },
         ]}
         trios={[
           {

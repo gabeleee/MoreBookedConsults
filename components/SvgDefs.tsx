@@ -18,48 +18,48 @@ export default function SvgDefs() {
           d="M0,-46 C22,-32 24,-4 0,12 C-24,-4 -22,-32 0,-46 Z"
         />
         <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#6C57E8" stopOpacity=".28" />
-          <stop offset="100%" stopColor="#6C57E8" stopOpacity="0" />
+          <stop offset="0%" stopColor="#C32E84" stopOpacity=".28" />
+          <stop offset="100%" stopColor="#C32E84" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="areaGradBlue" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#4C8DFF" stopOpacity=".26" />
-          <stop offset="100%" stopColor="#4C8DFF" stopOpacity="0" />
+          <stop offset="0%" stopColor="#BF69D2" stopOpacity=".26" />
+          <stop offset="100%" stopColor="#BF69D2" stopOpacity="0" />
         </linearGradient>
         <linearGradient id="logoGrad" x1="0" y1="1" x2="1" y2="0">
-          <stop offset="0%" stopColor="#6C57E8" />
-          <stop offset="100%" stopColor="#4C8DFF" />
+          <stop offset="0%" stopColor="#C32E84" />
+          <stop offset="100%" stopColor="#BF69D2" />
         </linearGradient>
         <g id="petalTrio">
           <use
             href="#petalShape"
-            fill="#DCD6F9"
+            fill="#F7CFD8"
             transform="translate(24,76) scale(0.52) rotate(-24)"
           />
           <use
             href="#petalShape"
-            fill="#CFDFFB"
+            fill="#EBD6EF"
             transform="translate(45,64) scale(0.74) rotate(-10)"
           />
           <use
             href="#petalShape"
-            fill="#D9D0F8"
+            fill="#F6C9D1"
             transform="translate(68,48) scale(0.98) rotate(6)"
           />
         </g>
         <g id="petalTrioDark">
           <use
             href="#petalShape"
-            fill="#3B3670"
+            fill="#622845"
             transform="translate(24,76) scale(0.52) rotate(-24)"
           />
           <use
             href="#petalShape"
-            fill="#31407C"
+            fill="#632F5C"
             transform="translate(45,64) scale(0.74) rotate(-10)"
           />
           <use
             href="#petalShape"
-            fill="#413A78"
+            fill="#6A2B49"
             transform="translate(68,48) scale(0.98) rotate(6)"
           />
         </g>

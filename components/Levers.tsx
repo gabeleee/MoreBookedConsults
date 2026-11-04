@@ -9,8 +9,8 @@ export default function Levers() {
     <section className="levers" id="levers">
       <PetalBackground
         petals={[
-          { top: "6%", right: "5%", r: "-16deg", size: 60, fill: "#D6E2FB" },
-          { bottom: "8%", left: "4%", r: "30deg", size: 44, fill: "#D9D3F9" },
+          { top: "6%", right: "5%", r: "-16deg", size: 60, fill: "#EEDAEF" },
+          { bottom: "8%", left: "4%", r: "30deg", size: 44, fill: "#F6CCD6" },
         ]}
         trios={[
           {
@@ -78,14 +78,14 @@ export default function Levers() {
                 aria-label="Bar chart: cumulative conversion lift growing over six monthly tests to plus 41 percent"
               >
                 <line className="grid" x1="10" y1="160" x2="510" y2="160" />
-                <g fill="#CBC4F5">
+                <g fill="#F0BAC9">
                   <rect x="28" y="150" width="56" height="10" rx="5" />
                   <rect x="108" y="126" width="56" height="34" rx="5" />
                   <rect x="188" y="122" width="56" height="38" rx="5" />
                   <rect x="268" y="88" width="56" height="72" rx="5" />
                   <rect x="348" y="66" width="56" height="94" rx="5" />
                 </g>
-                <rect x="428" y="36" width="56" height="124" rx="5" fill="#6C57E8" />
+                <rect x="428" y="36" width="56" height="124" rx="5" fill="#C32E84" />
                 <text className="ax" x="56" y="178" textAnchor="middle">
                   M1
                 </text>
@@ -153,12 +153,12 @@ export default function Levers() {
                 />
                 <path
                   fill="none"
-                  stroke="#4C8DFF"
+                  stroke="#BF69D2"
                   strokeWidth="3"
                   strokeLinecap="round"
                   d="M20 158 C 120 156, 200 152, 280 140 C 350 129, 410 104, 450 74 C 476 54, 492 38, 500 26"
                 />
-                <circle cx="500" cy="26" r="5.5" fill="#4C8DFF" />
+                <circle cx="500" cy="26" r="5.5" fill="#BF69D2" />
                 <text className="ax" x="20" y="178">
                   Wk 1
                 </text>
@@ -211,19 +211,19 @@ export default function Levers() {
                 <line className="grid" x1="10" y1="64" x2="510" y2="64" />
                 <path
                   fill="none"
-                  stroke="#CBC4F5"
+                  stroke="#F0BAC9"
                   strokeWidth="3"
                   strokeLinecap="round"
                   d="M20 50 C 120 70, 200 100, 280 118 C 360 134, 430 142, 500 146"
                 />
                 <path
                   fill="none"
-                  stroke="#6C57E8"
+                  stroke="#C32E84"
                   strokeWidth="3"
                   strokeLinecap="round"
                   d="M20 50 C 70 60, 130 78, 180 88 L 180 46 C 230 56, 290 76, 340 86 L 340 42 C 390 52, 450 70, 500 80"
                 />
-                <circle cx="500" cy="80" r="5.5" fill="#6C57E8" />
+                <circle cx="500" cy="80" r="5.5" fill="#C32E84" />
                 <text className="pt-label" x="490" y="102" textAnchor="end">
                   Refreshed
                 </text>

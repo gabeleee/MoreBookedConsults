@@ -52,7 +52,7 @@ export default function Process() {
   return (
     <section className="process" id="process">
       <PetalBackground
-        petals={[{ top: "10%", left: "4%", r: "-30deg", size: 48, fill: "#D9D3F9" }]}
+        petals={[{ top: "10%", left: "4%", r: "-30deg", size: 48, fill: "#F6CCD6" }]}
         trios={[
           {
             bottom: "-140px",
