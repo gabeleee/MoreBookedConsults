@@ -15,7 +15,7 @@ import { MazeArt, WaitArt, BlindArt, SpotlightAds, AdMoneyFlow, AtlasArt, Guaran
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   description:
-    "Aesthetic practice marketing for med spas and plastic surgeons: we install five booking systems on your website in 14 days, then keep improving them every month.",
+    "Aesthetic practice marketing for med spas and plastic surgeons: we build five booking systems into your website in 14 days, then keep improving them every month.",
 };
 
 const CALL = "/demo/";
@@ -192,7 +192,7 @@ export default function Home() {
           <h1 data-prism-calm="0.8">Turn more of your website visitors into booked consults.</h1>
           <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
-            We install <a href="#systems">five booking systems</a>{" "}on your med spa&apos;s website in 14 days, then keep improving them every month.
+            We build <a href="#systems">five booking systems</a>{" "}into your med spa&apos;s website in 14 days, then keep improving them every month.
             Done for you, measured, no contract.
           </p>
           <div className="hv-ctas">
@@ -301,7 +301,7 @@ export default function Home() {
       <section className="hv-sec hv-engine">
         <div className="wrap">
           <div className="hv-head">
-            <h2>Month one installs it. Every month after makes it better.</h2>
+            <h2>Month one builds it. Every month after makes it better.</h2>
             <p>Each month we ship 2 improvements to your site and measure every one.</p>
           </div>
           <ol className="hv-loop has-art">

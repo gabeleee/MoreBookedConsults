@@ -9,7 +9,7 @@ import { GuaranteeSeal } from "@/components/home/SystemArt";
 
 export const metadata: Metadata = {
   title: "Get A Free Demo",
-  description: "A free 20-minute demo of the five booking systems we install for med spas and plastic surgeons, shown on your own website.",
+  description: "A free 20-minute demo of the five booking systems we build for med spas and plastic surgeons, shown on your own website.",
   alternates: { canonical: "/demo/" },
 };
 

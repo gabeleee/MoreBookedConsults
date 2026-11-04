@@ -15,7 +15,7 @@ import { GuaranteeSeal, MagnetArt, GlidePathArt, SiennaArt, SecondGlanceArt, Lea
 export const metadata: Metadata = {
   title: "Booking Systems For Med Spas And Plastic Surgeons",
   description:
-    "Five booking systems installed on your med spa or plastic surgery website in 14 days: a booking flow people finish, an AI receptionist that calls every lead in 60 seconds, an exit offer, drop-off tracking and a live dashboard.",
+    "Five booking systems built into your med spa or plastic surgery website in 14 days: a booking flow people finish, an AI receptionist that calls every lead in 60 seconds, an exit offer, drop-off tracking and a live dashboard.",
   alternates: { canonical: "/booking-systems/" },
 };
 
@@ -261,7 +261,7 @@ const LOOP = [
 
 const STAIRS = [
   { m: "Before", h: 34 },
-  { m: "Month 1", h: 52, tag: "Install" },
+  { m: "Month 1", h: 52, tag: "Launch" },
   { m: "Month 2", h: 59, tag: "Win" },
   { m: "Month 3", h: 59 },
   { m: "Month 4", h: 67, tag: "Win" },
@@ -288,7 +288,7 @@ export default function BookingSystems() {
           <h1 data-prism-calm="0.8">Booking systems that turn med spa visitors into booked consults</h1>
           <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
-            Five systems, installed on the website you already have in 14 days.
+            Five systems, built into the website you already have in 14 days.
             Each one fixes a different place where people who want a consult slip away.
           </p>
           <div className="hv-ctas">
@@ -498,7 +498,7 @@ export default function BookingSystems() {
       <section className="hv-sec hv-how bs-how">
         <div className="wrap">
           <div className="hv-head">
-            <h2>The 14-day install</h2>
+            <h2>Live in 14 days</h2>
             <p>A kickoff call and your approvals. We do the rest.</p>
           </div>
           <ol className="bs-tl">
@@ -531,7 +531,7 @@ export default function BookingSystems() {
         <div className="wrap">
           <div className="hv-head">
             <h2>Month one builds it. Every month after makes it better.</h2>
-            <p>The install is the start, not the finish.</p>
+            <p>Launch day is the start, not the finish.</p>
           </div>
           <ol className="bs-loop">
             {LOOP.map((l) => (
@@ -550,7 +550,7 @@ export default function BookingSystems() {
               <span className="bs-stairs-tag">Illustrative</span>
             </div>
             <p className="bs-stairs-sub">Booking rate, month by month. Some months a change doesn&apos;t beat what&apos;s live, so we switch it off and nothing drops.</p>
-            <div className="bs-stairs" role="img" aria-label="Illustrative chart: booking rate rises after the install, then steps up most months as winning changes stack, and holds flat in months where a test didn't win.">
+            <div className="bs-stairs" role="img" aria-label="Illustrative chart: booking rate rises after launch, then steps up most months as winning changes stack, and holds flat in months where a test didn't win.">
               {STAIRS.map((b, i) => {
                 const prev = i > 0 ? STAIRS[i - 1].h : b.h;
                 const gain = i > 0 ? b.h - prev : 0;
