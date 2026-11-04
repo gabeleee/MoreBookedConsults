@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./home-v2.css";
 import PrismBackground from "@/components/PrismBackground";
+import ProofLine from "@/components/home/ProofLine";
 import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
 import HeroVideo from "@/components/home/HeroVideo";
@@ -189,10 +190,7 @@ export default function Home() {
         <PrismBackground tone="light" gain={1.25} tilt={0.38} phase={70} />
         <div className="wrap hv-hero-in">
           <h1 data-prism-calm="0.8">Turn more of your website visitors into booked consults.</h1>
-          <p className="hv-proofline">
-            <img className="hv-face" src="/gabe.jpg" alt="Gabe Meierotto" width={30} height={30} />
-            <span>Ex-LaserAway CRO director · <b>3% → 11%</b> conversion</span>
-          </p>
+          <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
             We install <a href="#systems">five booking systems</a>{" "}on your med spa&apos;s website in 14 days, then keep improving them every month.
             Done for you, measured, no contract.

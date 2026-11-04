@@ -3,6 +3,7 @@ import Link from "next/link";
 import "../home-v2.css";
 import "./bs.css";
 import PrismBackground from "@/components/PrismBackground";
+import ProofLine from "@/components/home/ProofLine";
 import { LineIcon } from "@/components/LineIcon";
 import { GuaranteeSeal, MagnetArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
 
@@ -285,6 +286,7 @@ export default function BookingSystems() {
         <PrismBackground tone="light" gain={1.2} tilt={0.3} phase={200} />
         <div className="wrap bs-hero-in">
           <h1 data-prism-calm="0.8">Booking systems that turn med spa visitors into booked consults</h1>
+          <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
             Five systems, installed on the website you already have in 14 days.
             Each one fixes a different place where people who want a consult slip away.

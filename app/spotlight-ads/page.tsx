@@ -4,6 +4,7 @@ import "../home-v2.css";
 import "../booking-systems/bs.css";
 import "./sp.css";
 import PrismBackground from "@/components/PrismBackground";
+import ProofLine from "@/components/home/ProofLine";
 import { LineIcon } from "@/components/LineIcon";
 import { GuaranteeSeal, MagnetArt, SiennaArt, SpotlightAds } from "@/components/home/SystemArt";
 import { AdStudioArt, OfferPageArt, AudienceArt, AdReportArt, MonthlyReportArt } from "@/components/home/SpotlightArt";
@@ -269,6 +270,7 @@ export default function SpotlightAdsPage() {
         <PrismBackground tone="light" gain={1.2} tilt={-0.25} phase={420} />
         <div className="wrap bs-hero-in">
           <h1 data-prism-calm="0.8">Meta ads that fill your calendar with new med spa clients</h1>
+          <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
             Facebook and Instagram ads built around your best first-visit offer, sent to a page built to book, with every lead called in 60 seconds.
             You pay Meta directly, with no markup.
