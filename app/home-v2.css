@@ -681,3 +681,15 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 .hh-opts{gap:8px;margin-top:2px}
 .hh-screen{overflow:hidden}
 .hh-opts span{padding:10px 12px;font-size:13.5px}
+
+/* ---- hero explainer video (replaced HeroArt 2026-11-03) ---- */
+.hv-video{position:relative;width:min(960px,100%);margin-top:44px;border-radius:24px;overflow:hidden;background:#F8F8FD;
+  border:1px solid var(--line);box-shadow:0 40px 80px -40px rgba(57,26,41,.45)}
+.hv-video video{display:block;width:100%;height:auto;aspect-ratio:16/9}
+.hv-video-btn{position:absolute;right:14px;bottom:14px;display:inline-flex;align-items:center;gap:7px;padding:8px 14px 8px 11px;border:0;border-radius:999px;
+  background:rgba(57,26,41,.78);color:#fff;font:600 13.5px var(--body);cursor:pointer;backdrop-filter:blur(6px);transition:background .15s}
+.hv-video-btn:hover,.hv-video-btn:focus-visible{background:rgba(57,26,41,.92)}
+.hv-video-btn svg{width:17px;height:17px;fill:#fff;stroke:#fff;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.hv-video-play{left:50%;right:auto;bottom:50%;transform:translate(-50%,50%);padding:14px 22px 14px 18px;font-size:15px;background:linear-gradient(120deg,var(--violet),var(--blue))}
+.hv-video-cap{margin-top:12px;font-size:12.5px;color:var(--soft)}
+@media (max-width:520px){.hv-video{margin-top:30px;border-radius:16px}.hv-video-btn:not(.hv-video-play){right:8px;bottom:8px;padding:7px}.hv-video-btn:not(.hv-video-play) .hv-video-lbl{display:none}}
