@@ -94,6 +94,9 @@ html.scrolled .nav-cta{padding:7px 15px;font-size:13.5px}
 .mega{position:absolute;left:0;right:0;top:100%;margin-top:-8px;padding-top:18px;opacity:0;visibility:hidden;transform:translateY(-6px);
   transition:opacity .18s ease .22s,transform .18s ease .22s,visibility 0s linear .4s;z-index:50}
 .nav-drop:hover .mega,.nav-drop:focus-within .mega{opacity:1;visibility:visible;transform:none;transition:opacity .18s ease,transform .18s ease,visibility 0s}
+/* closed after a click on a menu link until the pointer leaves (NavDropCloser.tsx) */
+.nav-drop.mega-off .mega{opacity:0;visibility:hidden;transform:translateY(-6px);transition:none}
+.nav-drop.mega-off .nav-drop-btn svg{transform:none}
 .mega-in{max-width:1080px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:26px;padding:16px;
   box-shadow:0 40px 80px -36px rgba(57,26,41,.45),0 2px 6px rgba(57,26,41,.04)}
 .mega-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}

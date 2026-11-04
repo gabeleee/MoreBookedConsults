@@ -6,6 +6,7 @@ import Logo from "./Logo";
 import AuditCtaLink from "./AuditCtaLink";
 import MobileNav from "./MobileNav";
 import HeaderShrink from "./HeaderShrink";
+import NavDropCloser from "./NavDropCloser";
 import { LineIcon } from "./LineIcon";
 
 export const SERVICES = [
@@ -171,6 +172,7 @@ export default function Header() {
   return (
     <header>
       <HeaderShrink />
+      <NavDropCloser />
       <div className="wrap nav">
         <Logo href="/" />
         <nav className="nav-links" aria-label="Primary">
