@@ -41,7 +41,7 @@ const SYSTEMS = [
     pts: [
       "Your AI receptionist calls each new booking request within a minute, day or night.",
       "Answers questions about your treatments, books the consult, or hands the call to your front desk.",
-      "Anyone who stops halfway through booking gets a follow-up call too, so nobody slips through.",
+      "Anyone who stops halfway, or calls when nobody can pick up, gets a text with your booking link.",
     ],
     Art: SiennaArt,
   },
@@ -289,7 +289,7 @@ export default function Home() {
                 Consult Magnet<sup>™</sup>
               </h3>
               <p className="hv-sys-tag">A first-visit offer people actually want to claim.</p>
-              <p>We build a named package for your top treatment, then use it everywhere: your exit offer, your follow-up calls and your ads.</p>
+              <p>We build a named package for your top treatment, then use it everywhere: your exit offer, your follow-up texts and your ads.</p>
               <CallButton className="btn-ghost">Get all five, plus the bonus</CallButton>
             </div>
             <MagnetArt />

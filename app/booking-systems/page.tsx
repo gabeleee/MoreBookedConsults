@@ -60,7 +60,7 @@ const SYSTEMS = [
       "Your AI receptionist, set up with your treatments, policies and tone",
       "A call script you read and approve before anything goes live",
       "Hand-off rules: when Sienna books, and when it passes the call to your team",
-      "A follow-up call for anyone who stops halfway through booking",
+      "A text with your booking link for anyone who stops halfway or calls when nobody can pick up",
     ],
     get: [
       "Every new request gets a call within a minute, day or night",
