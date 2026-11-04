@@ -347,7 +347,7 @@ export default function Results() {
                 <img src="/logos/intellimize-white.png" alt="" />
                 laseraway-intellimize-case-study.pdf
               </span>
-              <img src="/case-study-preview.jpg" alt="First page of the case study: LaserAway Drives 200% Growth with Intellimize" loading="lazy" />
+              <img src="/case-study-preview.jpg" alt="First page of the case study: LaserAway Drives 200% Growth with Intellimize" />
             </a>
           </div>
         </div>
