@@ -65,7 +65,7 @@ const NAV = [
   { href: "/about/", label: "About" },
 ];
 
-function MegaArt({ kind }: { kind: string }) {
+export function MegaArt({ kind }: { kind: string }) {
   if (kind === "book")
     return (
       <div className="mm-art mm-art-book" aria-hidden="true">
