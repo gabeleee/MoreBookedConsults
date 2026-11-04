@@ -32,10 +32,36 @@ export const SERVICES = [
   },
 ] as const;
 
+export const FREE_TOOLS = [
+  {
+    href: "/medspa-offer-builder/",
+    art: "offer",
+    title: "Consult Magnet Builder",
+    sub: "Build a new patient offer people actually book.",
+    pts: ["A first-visit offer built for your spa", "Ready-to-run ad and captions", "Takes about two minutes"],
+    cta: "Build your offer",
+  },
+  {
+    href: "/medspa-ad-checker/",
+    art: "check",
+    title: "Med Spa Ad Checker",
+    sub: "Find out if your ad will get rejected before you run it.",
+    pts: ["Paste any Facebook or Instagram ad", "See which lines Meta and regulators flag", "Shows how to fix each one"],
+    cta: "Check an ad",
+  },
+  {
+    href: "/blog/med-spa-ad-claims-study/",
+    art: "study",
+    title: "Ad Claims Study",
+    sub: "What 773 real med spa ads get wrong.",
+    pts: ["Ads from 297 practices", "The claims that show up most", "Which practices make them"],
+    cta: "Read the study",
+  },
+] as const;
+
 const NAV = [
   { href: "/results/", label: "Results" },
   { href: "/about/", label: "About" },
-  { href: "/tools/", label: "Free Tools", badge: "New" },
 ];
 
 function MegaArt({ kind }: { kind: string }) {
@@ -74,6 +100,47 @@ function MegaArt({ kind }: { kind: string }) {
             <span>Limited spots this month</span>
             <em>Book now</em>
           </div>
+        </div>
+      </div>
+    );
+  if (kind === "offer")
+    return (
+      <div className="mm-art mm-art-offer" aria-hidden="true">
+        <div className="mm-offer">
+          <span className="mm-offer-k">Your Consult Magnet</span>
+          <b>$50 off your first lip filler</b>
+          <span className="mm-offer-row">
+            <i /> Ad copy <LineIcon name="check" />
+          </span>
+          <span className="mm-offer-row">
+            <i /> Captions <LineIcon name="check" />
+          </span>
+        </div>
+      </div>
+    );
+  if (kind === "check")
+    return (
+      <div className="mm-art mm-art-check" aria-hidden="true">
+        <div className="mm-check">
+          <span className="ok">Glowing skin starts here.</span>
+          <span className="flag">
+            Guaranteed results in one visit!
+            <em>Flagged</em>
+          </span>
+          <span className="ok">Book your consult today.</span>
+        </div>
+        <span className="mm-chip mm-chip-warn">1 line to fix</span>
+      </div>
+    );
+  if (kind === "study")
+    return (
+      <div className="mm-art mm-art-study" aria-hidden="true">
+        <div className="mm-bars">
+          <b>773 ads checked</b>
+          <span><i style={{ width: "86%" }} /></span>
+          <span><i style={{ width: "62%" }} /></span>
+          <span><i style={{ width: "41%" }} /></span>
+          <span><i style={{ width: "24%" }} /></span>
         </div>
       </div>
     );
@@ -150,9 +217,48 @@ export default function Header() {
           {NAV.map((n) => (
             <Link key={n.href} href={n.href}>
               {n.label}
-              {n.badge && <span className="nav-new">{n.badge}</span>}
             </Link>
           ))}
+          <div className="nav-drop">
+            <button type="button" className="nav-drop-btn" aria-haspopup="true">
+              Free Tools <span className="nav-new">New</span>
+              <svg viewBox="0 0 12 12" aria-hidden="true">
+                <path d="M3 4.5 6 7.5 9 4.5" />
+              </svg>
+            </button>
+            <div className="mega" role="menu">
+              <div className="mega-in">
+                <div className="mega-cards">
+                  {FREE_TOOLS.map((t) => (
+                    <Link key={t.href} href={t.href} className="mega-card" role="menuitem">
+                      <MegaArt kind={t.art} />
+                      <div className="mega-copy">
+                        <b>{t.title}</b>
+                        <p>{t.sub}</p>
+                        <ul>
+                          {t.pts.map((p) => (
+                            <li key={p}>
+                              <LineIcon name="check" />
+                              {p}
+                            </li>
+                          ))}
+                        </ul>
+                        <span className="mega-more">
+                          {t.cta} <LineIcon name="arrow" />
+                        </span>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+                <div className="mega-foot">
+                  <span>Every tool is free. No signup, no sales call.</span>
+                  <Link href="/tools/">
+                    See all free tools <LineIcon name="arrow" />
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
         </nav>
         <AuditCtaLink className="nav-cta" href="/demo/" location="nav" native>
           <span className="cta-full">Get a free demo</span>
@@ -162,6 +268,7 @@ export default function Header() {
           items={[
             ...SERVICES.map((s) => ({ href: s.href, label: s.title, sub: s.sub })),
             ...NAV,
+            { href: "/tools/", label: "Free Tools", badge: "New" },
           ]}
         />
       </div>
