@@ -52,6 +52,8 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
   {
     head: "Company",
     links: [
+      { href: "/booking-systems/", label: "Booking Systems" },
+      { href: "/about/", label: "About" },
       { href: "/results/", label: "Results" },
       { href: "/pricing/", label: "Pricing" },
       { href: "/blog/", label: "Blog" },

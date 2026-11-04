@@ -10,7 +10,7 @@ import { LineIcon } from "./LineIcon";
 
 export const SERVICES = [
   {
-    href: "/medspa-cro/",
+    href: "/booking-systems/",
     art: "book",
     title: "Booking Systems",
     sub: "Turn more of your website visitors into booked consults.",
