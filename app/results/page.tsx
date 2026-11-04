@@ -41,7 +41,7 @@ const LIFTS = [
 const ORIGINS = [
   {
     id: "booking-form",
-    k: "LaserAway's multi-step booking form",
+    k: "Multi-step booking form",
     sys: "Glide Path™",
     href: "/booking-systems/#glide-path",
     tag: "The main lead engine, tested combination by combination.",
