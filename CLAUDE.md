@@ -40,7 +40,7 @@ Forms are front-end only for now, but ALL submissions route through one stub fun
 ## Site architecture (must not conflict with the SEO topical map)
 - Root-level money pages; `/blog/` is flat (no nested folders) for all informational content; cluster hierarchy is expressed via internal links, not URL folders.
 - Two hubs: `/medspa-marketing/` and `/plastic-surgeon-marketing/`. No umbrella hub at launch — homepage + About own the umbrella entity "aesthetic practice marketing."
-- Nav (2026-11-03): Services ▾ mega menu (Booking Systems → /medspa-cro/, Spotlight™ Ads → /medspa-advertising/, Authority Atlas™ Local SEO → /medspa-seo/) · Results · About (`/about/`) · Free Tools ("New" badge) · CTA "Get a free demo" → `/demo/` (5-step form, then Cal.com `gabe-lee-42/30min`). The CTA text is "Get a free demo" everywhere; the free audit is no longer the main CTA. Pricing is out of the menu.
+- Nav (2026-11-03): Services ▾ mega menu (Booking Systems → /booking-systems/, Spotlight™ Ads → /spotlight-ads/, Authority Atlas™ Local SEO → /local-seo/; the old /medspa-cro/, /medspa-advertising/ and /medspa-seo/ stay as SEO pages) · Results · About (`/about/`) · Free Tools ("New" badge) · CTA "Get a free demo" → `/demo/` (5-step form, then Cal.com `gabe-lee-42/30min`). The CTA text is "Get a free demo" everywhere; the free audit is no longer the main CTA. Pricing is out of the menu.
 - Slugs use `medspa` (one URL per concept). ~115 pages planned; the Next.js routing must make root-level slugs and flat `/blog/{slug}/` trivial to add.
 - Title pattern sitewide: `{Query-matched title} | More Booked Consults`.
 - Schema: Organization (description, founder → Gabe Person entity, knowsAbout, sameAs → LinkedIn + AestheticHires); breadcrumbs on every blog node.

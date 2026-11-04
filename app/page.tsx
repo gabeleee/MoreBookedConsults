@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import "./home-v2.css";
 import PrismBackground from "@/components/PrismBackground";
+import ProofLine from "@/components/home/ProofLine";
 import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
 import HeroVideo from "@/components/home/HeroVideo";
@@ -14,7 +15,7 @@ import { MazeArt, WaitArt, BlindArt, SpotlightAds, AdMoneyFlow, AtlasArt, Guaran
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   description:
-    "Aesthetic practice marketing for med spas and plastic surgeons: we install five booking systems on your website in 14 days, then keep improving them every month.",
+    "Aesthetic practice marketing for med spas and plastic surgeons: we build five booking systems into your website in 14 days, then keep improving them every month.",
 };
 
 const CALL = "/demo/";
@@ -189,12 +190,9 @@ export default function Home() {
         <PrismBackground tone="light" gain={1.25} tilt={0.38} phase={70} />
         <div className="wrap hv-hero-in">
           <h1 data-prism-calm="0.8">Turn more of your website visitors into booked consults.</h1>
-          <p className="hv-proofline">
-            <img className="hv-face" src="/gabe.jpg" alt="Gabe Meierotto" width={30} height={30} />
-            <span>Ex-LaserAway CRO director · <b>3% → 11%</b> conversion</span>
-          </p>
+          <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
-            We install <a href="#systems">five booking systems</a>{" "}on your med spa&apos;s website in 14 days, then keep improving them every month.
+            We build <a href="#systems">five booking systems</a>{" "}into your med spa&apos;s website in 14 days, then keep improving them every month.
             Done for you, measured, no contract.
           </p>
           <div className="hv-ctas">
@@ -250,7 +248,7 @@ export default function Home() {
       <section className="hv-sec hv-systems" id="systems">
         <div className="wrap">
           <div className="hv-head">
-            <h2>The five systems we install</h2>
+            <h2>Every place you lose a booking, covered</h2>
             <p>Aesthetic practice marketing for med spas and plastic surgeons, starting where the money leaks: your booking path.</p>
           </div>
           <div className="hv-sys-list">
@@ -303,7 +301,7 @@ export default function Home() {
       <section className="hv-sec hv-engine">
         <div className="wrap">
           <div className="hv-head">
-            <h2>Month one installs it. Every month after makes it better.</h2>
+            <h2>Month one builds it. Every month after makes it better.</h2>
             <p>Each month we ship 2 improvements to your site and measure every one.</p>
           </div>
           <ol className="hv-loop has-art">
@@ -468,6 +466,9 @@ export default function Home() {
             </div>
             <SpotlightAds />
             <p className="hv-addon-note">Example ads for a made-up med spa. We write your real ads with you.</p>
+            <p className="hv-sys-more sp-more">
+              <Link href="/spotlight-ads/">See how Spotlight™ Ads work, in detail →</Link>
+            </p>
           </div>
 
           <div className="hv-addon-big atlas">
@@ -488,6 +489,9 @@ export default function Home() {
               <AtlasArt />
             </div>
             <p className="hv-addon-note">Illustrative search result for a made-up med spa.</p>
+            <p className="hv-sys-more sp-more">
+              <Link href="/local-seo/">See how Authority Atlas™ works, in detail →</Link>
+            </p>
           </div>
         </div>
       </section>

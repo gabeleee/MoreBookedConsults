@@ -1,0 +1,132 @@
+/* /local-seo/ (Authority Atlas) service page (2026-11-03 draft). Reuses hv- (home-v2.css) and bs- (booking-systems/bs.css); classes here start ls-. */
+.ls-inc-ic svg{width:22px;height:22px;color:#fff}
+.ls-stairs-note{margin-top:44px}
+.ls .bs-stair-tag{white-space:nowrap}
+
+/* 01 topical map tree */
+.ls-tree{position:absolute;left:6%;right:6%;top:92px;display:flex;flex-direction:column;align-items:center}
+.ls-root{display:inline-flex;align-items:center;gap:8px;padding:9px 16px;border-radius:999px;color:#fff;font-weight:700;font-size:14px;
+  background:linear-gradient(135deg,#C32E84,#BF69D2);box-shadow:0 12px 26px -12px rgba(125,9,90,.7);position:relative;z-index:1}
+.ls-root svg{width:16px;height:16px}
+.ls-branches{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:10px;width:100%;margin-top:34px}
+.ls-branches::before{content:"";position:absolute;left:16.5%;right:16.5%;top:-18px;height:2px;background:#E9B5C6}
+.ls-branches::after{content:"";position:absolute;left:50%;top:-34px;width:2px;height:16px;background:#E9B5C6}
+.ls-branch{position:relative;display:flex;flex-direction:column;align-items:stretch;gap:6px}
+.ls-branch::before{content:"";position:absolute;left:50%;top:-18px;width:2px;height:18px;background:#E9B5C6}
+.ls-node{text-align:center;background:#fff;border:2px solid var(--violet);color:var(--violet-deep);border-radius:12px;padding:8px 6px;font-weight:700;font-size:12.5px;
+  box-shadow:0 10px 22px -14px rgba(125,9,90,.6);margin-bottom:4px}
+.ls-leaf{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:9px;padding:6px 8px;font-size:11px;color:var(--ink);line-height:1.25;text-align:center}
+.ls-c-plan{left:50%;bottom:22px;transform:translateX(-50%)}
+.ls-c-plan.hv-float{animation:none}
+
+/* 02 Google Business Profile */
+.ls-gbp{position:absolute;left:50%;top:84px;transform:translateX(-50%);width:76%;background:#fff;border-radius:20px;overflow:hidden;
+  border:1px solid rgba(195,46,132,.12);box-shadow:0 22px 46px -24px rgba(125,9,90,.5)}
+.ls-gbp-photos{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:3px;height:92px}
+.ls-gbp-photos span{background-size:cover}
+.ls-gbp-body{padding:12px 16px 14px;display:flex;flex-direction:column;gap:4px}
+.ls-gbp-body > b{font-size:17px;color:var(--ink)}
+.ls-gbp-rate{font-size:12px;color:var(--ink)}
+.ls-gbp-rate em{font-style:normal;color:#E3A008;letter-spacing:-.04em}
+.ls-gbp-cat{font-size:11.5px;color:var(--soft)}
+.ls-gbp-btns{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:8px 0 6px}
+.ls-gbp-btns span{display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10.5px;font-weight:600;color:var(--violet-deep);
+  border:1px solid var(--line);border-radius:10px;padding:7px 4px}
+.ls-gbp-btns span.on{background:var(--violet);border-color:var(--violet);color:#fff}
+.ls-gbp-btns svg{width:15px;height:15px}
+.ls-gbp-row{display:flex;align-items:center;gap:7px;font-size:11px;color:var(--ink)}
+.ls-gbp-row svg{width:13px;height:13px;color:var(--soft);flex:none}
+.ls-c-cat{left:18px;bottom:44px}
+.ls-c-photo{right:16px;top:72px}
+
+/* 03 treatment pages SERP */
+.ls-serp{position:absolute;left:50%;top:96px;transform:translateX(-50%);width:84%;background:#fff;border-radius:20px;padding:14px;
+  border:1px solid rgba(195,46,132,.12);box-shadow:0 22px 46px -24px rgba(125,9,90,.5);display:flex;flex-direction:column;gap:10px}
+.ls-q{display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-size:12.5px;color:var(--ink)}
+.ls-q svg{width:14px;height:14px;color:var(--soft)}
+.ls-res{position:relative;display:flex;flex-direction:column;gap:4px;padding:10px 12px;border-radius:12px;border:1px solid #F5E8EC}
+.ls-res.you{border-color:var(--violet);background:#FFF7F9;padding-right:46px}
+.ls-url{font-size:10px;color:var(--soft)}
+.ls-res b{font-size:13.5px;color:#5B0E3D;line-height:1.25}
+.ls-desc{font-size:10.5px;color:var(--soft);line-height:1.4}
+.ls-rank{position:absolute;right:10px;top:10px;font-size:11px;font-weight:700;color:#1E9E6E;background:#E7F7EF;border-radius:999px;padding:2px 8px}
+.ls-res i{display:block;height:6px;border-radius:3px;background:var(--line);width:46%}
+.ls-res i.w2{width:80%}
+.ls-res i.w3{width:64%}
+.ls-c-cred{left:50%;bottom:22px;transform:translateX(-50%)}
+.ls-c-cred.hv-float{animation:none}
+
+/* 04 citations */
+.ls-cite{position:absolute;left:50%;top:84px;transform:translateX(-50%);width:78%;display:flex;flex-direction:column;gap:6px}
+.ls-nap{display:flex;flex-direction:column;gap:2px;background:linear-gradient(135deg,#C32E84,#BF69D2);color:#fff;border-radius:14px;padding:10px 14px;
+  box-shadow:0 14px 30px -16px rgba(125,9,90,.7);margin-bottom:4px}
+.ls-nap b{font-size:14px}
+.ls-nap span{font-size:11px;opacity:.9}
+.ls-cite-r{display:grid;grid-template-columns:1fr auto 22px;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 10px;font-size:12px;color:var(--ink);font-weight:600}
+.ls-cite-r em{font-style:normal;font-size:10.5px;font-weight:500;color:var(--soft)}
+.ls-cite-r svg{width:20px;height:20px;padding:3px;border-radius:50%;background:#E7F7EF;color:#1E9E6E}
+.ls-cite-r.fixed{border-color:rgba(195,46,132,.35);background:#FFF7F9}
+.ls-cite-r.fixed em{color:var(--violet-deep);font-weight:600}
+.ls-cite-r.fixed svg{background:var(--violet);color:#fff}
+.ls-c-tech{right:16px;bottom:16px}
+
+/* 05 rank grid */
+.ls-grid-wrap{position:absolute;left:50%;top:92px;transform:translateX(-50%);width:72%;background:#fff;border-radius:20px;padding:14px;
+  border:1px solid rgba(195,46,132,.12);box-shadow:0 22px 46px -24px rgba(125,9,90,.5);
+  background-image:linear-gradient(rgba(255,255,255,.86),rgba(255,255,255,.86)),repeating-linear-gradient(35deg,#F3DCE3 0 2px,transparent 2px 26px),repeating-linear-gradient(-55deg,#F3DCE3 0 2px,transparent 2px 34px)}
+.ls-grid-q{display:flex;align-items:center;gap:7px;font-size:12px;font-weight:600;color:var(--ink);margin-bottom:10px}
+.ls-grid-q svg{width:13px;height:13px;color:var(--soft)}
+.ls-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;justify-items:center}
+.ls-cell{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;font-size:12.5px;font-weight:700;box-shadow:0 6px 14px -8px rgba(57,26,41,.5)}
+.ls-cell.top{background:var(--violet);color:#fff}
+.ls-cell.mid{background:#F4B9CB;color:#5B0E3D}
+.ls-cell.low{background:#EFE6E9;color:var(--soft)}
+.ls-cell.you{background:#2F1220;color:#fff;box-shadow:0 0 0 6px rgba(195,46,132,.18)}
+.ls-cell.you svg{width:17px;height:17px}
+.ls-c-calls{left:50%;bottom:20px;transform:translateX(-50%)}
+.ls-c-calls.hv-float{animation:none}
+
+/* bonus: review reply */
+.ls-rev{display:flex;flex-direction:column;gap:10px;background:var(--glass);border:1px solid rgba(195,46,132,.16);border-radius:22px;padding:20px}
+.ls-rev-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 16px;box-shadow:0 16px 34px -24px rgba(125,9,90,.45)}
+.ls-rev-card p{font-size:14px;color:var(--ink);line-height:1.45}
+.ls-rev-top{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.ls-rev-top > div{flex:1;display:flex;flex-direction:column}
+.ls-rev-top b{font-size:13.5px}
+.ls-rev-top em{font-style:normal;color:#E3A008;font-size:13px;letter-spacing:-.04em}
+.ls-rev-av{width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#F4B9CB;color:#5B0E3D;font-weight:700}
+.ls-rev-when{font-size:11.5px;color:var(--soft)}
+.ls-rev-card.reply{margin-left:28px;background:#FFF7F9;border-color:rgba(195,46,132,.25)}
+.ls-rev-owner{font-family:var(--mono);font-size:10.5px !important;letter-spacing:.12em;text-transform:uppercase;color:var(--violet-deep) !important;margin-bottom:5px}
+.ls-rev-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.ls-rev-tags span{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 11px 5px 6px;font-size:12px;font-weight:600;color:var(--ink)}
+.ls-rev-tags svg{width:16px;height:16px;padding:2px;border-radius:50%;background:var(--violet);color:#fff}
+
+@media (max-width:560px){
+  .ls-tree{top:70px;left:3%;right:3%}
+  .ls-root{font-size:12px;padding:7px 12px}
+  .ls-branches{gap:6px;margin-top:28px}
+  .ls-node{font-size:10.5px;padding:6px 3px}
+  .ls-leaf{font-size:9px;padding:4px 4px}
+  .ls-c-plan{bottom:12px}
+  .ls-gbp{top:62px;width:84%}
+  .ls-gbp-photos{height:64px}
+  .ls-gbp-body{padding:9px 12px 10px;gap:3px}
+  .ls-gbp-row:last-child{display:none}
+  .ls-c-photo,.ls-c-tech{display:none}
+  .ls-c-cat{bottom:12px}
+  .ls-serp{top:74px;width:90%;padding:10px;gap:7px}
+  .ls-desc{display:none}
+  .ls-c-cred{bottom:14px}
+  .ls-cite{top:66px;width:86%;gap:4px}
+  .ls-cite-r{padding:5px 8px;font-size:11px}
+  .ls-nap{padding:8px 12px}
+  .ls-grid-wrap{top:70px;width:84%;padding:10px}
+  .ls-cell{width:30px;height:30px;font-size:11px}
+  .ls-grid{gap:6px}
+  .ls-c-calls{bottom:12px}
+  .ls-rev{padding:14px}
+  .ls-rev-card.reply{margin-left:14px}
+}
+.ls-cite{top:80px}
+@media (max-width:560px){.ls-cite-r:nth-of-type(n+5){display:none}}

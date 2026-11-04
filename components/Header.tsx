@@ -18,14 +18,14 @@ export const SERVICES = [
     pts: ["Booking flow live in 14 days", "Sienna AI calls every lead in 60 seconds", "Exit offer, tracking and live dashboard"],
   },
   {
-    href: "/medspa-advertising/",
+    href: "/spotlight-ads/",
     art: "ads",
     title: "Spotlight™ Ads",
     sub: "Meta ads that fill your calendar with new clients.",
     pts: ["Built around your best first-visit offer", "8–12 fresh ads every month", "Sent to a landing page that books"],
   },
   {
-    href: "/medspa-seo/",
+    href: "/local-seo/",
     art: "seo",
     title: "Authority Atlas™ Local SEO",
     sub: "Show up first when people near you search.",

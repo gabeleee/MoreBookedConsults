@@ -10,7 +10,7 @@ import { LineIcon } from "@/components/LineIcon";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "More Booked Consults installs booking systems for med spas and plastic surgeons, led by Gabe Meierotto, LaserAway's former Director of CRO.",
+    "More Booked Consults builds booking systems for med spas and plastic surgeons, led by Gabe Meierotto, LaserAway's former Director of CRO.",
   alternates: { canonical: "/about/" },
 };
 
@@ -61,7 +61,7 @@ export default function About() {
             <h2>Built inside one of the biggest aesthetic brands in the country</h2>
             <p>From 2018 to 2023, Gabe Meierotto ran conversion testing at LaserAway, across more than 100 locations.</p>
             <p>Over those years, LaserAway&apos;s sitewide conversion rate went from 3% to 11%, with more than 2,600 page variations tested.</p>
-            <p>More Booked Consults takes that same playbook and installs it for independent practices, as five booking systems that go live in 14 days.</p>
+            <p>More Booked Consults takes that same playbook and builds it for independent practices, as five booking systems that go live in 14 days.</p>
             <p>Gabe still leads every project, so you work with the person who built the playbook.</p>
             <a className="ab-pdf" href="/laseraway-intellimize-case-study.pdf" target="_blank" rel="noopener">
               <LineIcon name="file" />

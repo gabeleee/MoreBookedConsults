@@ -53,6 +53,8 @@ const FOOT_NAV: { head: string; links: { href: string; label: string }[] }[] = [
     head: "Company",
     links: [
       { href: "/booking-systems/", label: "Booking Systems" },
+      { href: "/spotlight-ads/", label: "Spotlight Ads" },
+      { href: "/local-seo/", label: "Authority Atlas" },
       { href: "/about/", label: "About" },
       { href: "/results/", label: "Results" },
       { href: "/pricing/", label: "Pricing" },
