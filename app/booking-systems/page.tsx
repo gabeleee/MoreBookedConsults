@@ -644,7 +644,7 @@ export default function BookingSystems() {
           <HeroCta />
           <p className="hv-book-alt">
             Want more traffic too? See <Link href="/spotlight-ads/">Spotlight™ Ads</Link> and{" "}
-            <Link href="/medspa-seo/">Authority Atlas™ Local SEO</Link>.
+            <Link href="/local-seo/">Authority Atlas™ Local SEO</Link>.
           </p>
         </div>
       </section>

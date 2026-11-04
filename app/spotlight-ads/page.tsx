@@ -600,7 +600,7 @@ export default function SpotlightAdsPage() {
           <HeroCta />
           <p className="hv-book-alt">
             Want more of your website visitors to book too? See <Link href="/booking-systems/">Booking Systems</Link> and{" "}
-            <Link href="/medspa-seo/">Authority Atlas™ Local SEO</Link>.
+            <Link href="/local-seo/">Authority Atlas™ Local SEO</Link>.
           </p>
         </div>
       </section>

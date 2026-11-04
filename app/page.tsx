@@ -489,6 +489,9 @@ export default function Home() {
               <AtlasArt />
             </div>
             <p className="hv-addon-note">Illustrative search result for a made-up med spa.</p>
+            <p className="hv-sys-more sp-more">
+              <Link href="/local-seo/">See how Authority Atlas™ works, in detail →</Link>
+            </p>
           </div>
         </div>
       </section>

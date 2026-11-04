@@ -25,7 +25,7 @@ export const SERVICES = [
     pts: ["Built around your best first-visit offer", "8–12 fresh ads every month", "Sent to a landing page that books"],
   },
   {
-    href: "/medspa-seo/",
+    href: "/local-seo/",
     art: "seo",
     title: "Authority Atlas™ Local SEO",
     sub: "Show up first when people near you search.",
