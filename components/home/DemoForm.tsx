@@ -149,7 +149,7 @@ export default function DemoForm() {
 
       <form className={cls(4)} onSubmit={websiteNext} noValidate>
         <h3>What&apos;s your website?</h3>
-        <p className="hint">We&apos;ll use it to show the five systems on your own site.</p>
+        <p className="hint">We&apos;ll use it to show what we would build for your site.</p>
         <div className="field">
           <label htmlFor="dm-website">Your website</label>
           <input id="dm-website" type="url" placeholder="yourmedspa.com" autoComplete="url" inputMode="url" value={website} onChange={(e) => setWebsite(e.target.value)} />
@@ -203,7 +203,7 @@ export default function DemoForm() {
           calLink="gabe-lee-42/30min"
           event="Free demo"
           title="Got it. Now pick your demo time."
-          sub="We'll show the five systems on your own site."
+          sub="We'll show what we would build for your site."
           skip="Not ready to pick a time? We'll email you to find one that works."
         />
       )}

@@ -67,7 +67,7 @@ export function GlidePathArt() {
   );
 }
 
-/* ---------- 02 Sienna AI: 60-second call + text-back ---------- */
+/* ---------- 02 Sienna AI: 60-second call + follow-up call ---------- */
 export function SiennaArt() {
   return (
     <ArtFrame title="Sienna AI<sup>™</sup> Follow-Up Agent">
@@ -83,8 +83,8 @@ export function SiennaArt() {
         <span className="si-time">0:42</span>
       </div>
       <div className="si-bubble">Hi Jessica, it&apos;s Sienna from Glow Aesthetics. Want me to hold Thursday at 4 for your consult?</div>
-      <Chip icon="message" className="hv-float f2 si-c1">
-        Text sent: finish booking
+      <Chip icon="call" className="hv-float f2 si-c1">
+        Callback set: finish booking
       </Chip>
       <Chip icon="check" className="hv-float f1 si-c2">
         Consult booked

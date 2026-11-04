@@ -60,7 +60,7 @@ const SYSTEMS = [
       "Your AI receptionist, set up with your treatments, policies and tone",
       "A call script you read and approve before anything goes live",
       "Hand-off rules: when Sienna books, and when it passes the call to your team",
-      "A text with your booking link for anyone who stops halfway or calls when nobody can pick up",
+      "A follow-up call for anyone who stops halfway through booking",
     ],
     get: [
       "Every new request gets a call within a minute, day or night",
@@ -634,7 +634,7 @@ export default function BookingSystems() {
       {/* ---------------- Final CTA ---------------- */}
       <section className="hv-book">
         <div className="wrap hv-final">
-          <h2>See all five on your own site</h2>
+          <h2>See what we would build for your site</h2>
           <p>A free 20-minute demo. Answer 5 quick questions, then pick your time.</p>
           <ul>
             <li><LineIcon name="check" /> Where your site loses bookings today</li>

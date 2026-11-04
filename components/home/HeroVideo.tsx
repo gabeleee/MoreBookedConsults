@@ -23,7 +23,8 @@ export default function HeroVideo() {
     if (!v) return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       v.pause();
-      setState("idle");
+      // Deferred so the state change happens after the effect, not inside it.
+      queueMicrotask(() => setState("idle"));
       return;
     }
     v.play().catch(() => setState("idle"));

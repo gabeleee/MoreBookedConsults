@@ -41,7 +41,7 @@ const SYSTEMS = [
     pts: [
       "Your AI receptionist calls each new booking request within a minute, day or night.",
       "Answers questions about your treatments, books the consult, or hands the call to your front desk.",
-      "Anyone who stops halfway, or calls when nobody can pick up, gets a text with your booking link.",
+      "Anyone who stops halfway through booking gets a follow-up call too, so nobody slips through.",
     ],
     Art: SiennaArt,
   },
@@ -289,7 +289,7 @@ export default function Home() {
                 Consult Magnet<sup>™</sup>
               </h3>
               <p className="hv-sys-tag">A first-visit offer people actually want to claim.</p>
-              <p>We build a named package for your top treatment, then use it everywhere: your exit offer, your follow-up texts and your ads.</p>
+              <p>We build a named package for your top treatment, then use it everywhere: your exit offer, your follow-up calls and your ads.</p>
               <CallButton className="btn-ghost">Get all five, plus the bonus</CallButton>
             </div>
             <MagnetArt />
@@ -521,7 +521,7 @@ export default function Home() {
       {/* ---------------- Final CTA ---------------- */}
       <section className="hv-book" id="book">
         <div className="wrap hv-final">
-          <h2>See The Five Systems On Your Own Site</h2>
+          <h2>See What We Would Build For Your Site</h2>
           <p>A free 20-minute demo. Answer 5 quick questions, then pick your time.</p>
           <ul>
             <li><LineIcon name="check" /> Where your site loses bookings today</li>

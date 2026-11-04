@@ -22,7 +22,7 @@ export default function DemoPage() {
         <PrismBackground tone="light" gain={1.15} tilt={0.34} phase={150} />
         <div className="wrap dm-grid">
           <div className="dm-copy" data-prism-calm="0.7">
-            <h1>See The Five Systems On Your Own Site</h1>
+            <h1>See What We Would Build For Your Site</h1>
             <p className="hv-lede">Answer 5 quick questions, then pick a time for your free 20-minute demo.</p>
             <ul>
               <li><LineIcon name="check" /> Where your site loses bookings today</li>
