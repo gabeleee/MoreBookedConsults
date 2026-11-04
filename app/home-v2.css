@@ -302,14 +302,22 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 .hv-faq-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
 .hv-faq-wrap .hv-head{position:sticky;top:110px}
 .hv-faq-wrap .hv-head .btn{margin-top:22px}
-.hv-faq details{border-bottom:1px solid var(--line)}
-.hv-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:18px;padding:20px 0;font-weight:600;font-size:17.5px}
+/* FAQ (2026-11-03): numbered cards + berry chevron, so it doesn't read like the usual plus-and-line accordion */
+.hv-faq{display:flex;flex-direction:column;gap:12px;counter-reset:faq}
+.hv-faq details{counter-increment:faq;background:#fff;border:1px solid var(--line);border-radius:18px;transition:background .2s,border-color .2s,box-shadow .2s}
+.hv-faq details:hover{border-color:rgba(195,46,132,.3)}
+.hv-faq details[open]{background:linear-gradient(165deg,#FFF1F3,#FAEEF7);border-color:rgba(195,46,132,.28);box-shadow:0 24px 50px -40px rgba(125,9,90,.55)}
+.hv-faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:18px 18px 18px 20px;font-weight:600;font-size:17px;line-height:1.35}
+.hv-faq summary::before{content:counter(faq,decimal-leading-zero);font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;color:var(--violet);
+  flex:none;width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:var(--lilac)}
+.hv-faq details[open] summary::before{background:linear-gradient(135deg,#C32E84,#BF69D2);color:#fff}
 .hv-faq summary::-webkit-details-marker{display:none}
-.hv-plus{position:relative;width:26px;height:26px;flex:none;border-radius:50%;background:var(--lilac)}
-.hv-plus::before,.hv-plus::after{content:"";position:absolute;left:50%;top:50%;width:11px;height:2px;background:var(--violet);transform:translate(-50%,-50%);transition:transform .2s}
-.hv-plus::after{transform:translate(-50%,-50%) rotate(90deg)}
-.hv-faq details[open] .hv-plus::after{transform:translate(-50%,-50%) rotate(0)}
-.hv-faq details p{color:var(--soft);padding:0 40px 22px 0;font-size:16.5px}
+.hv-plus{position:relative;width:30px;height:30px;flex:none;margin-left:auto;border-radius:50%;border:1.5px solid rgba(195,46,132,.35);transition:background .2s,border-color .2s,transform .25s}
+.hv-plus::before{content:"";position:absolute;left:50%;top:44%;width:8px;height:8px;border-right:2px solid var(--violet);border-bottom:2px solid var(--violet);transform:translate(-50%,-50%) rotate(45deg)}
+.hv-faq details[open] .hv-plus{transform:rotate(180deg);background:var(--violet);border-color:var(--violet)}
+.hv-faq details[open] .hv-plus::before{border-color:#fff}
+.hv-faq details p{color:var(--soft);padding:0 24px 20px 70px;font-size:16px;line-height:1.55}
+@media (max-width:560px){.hv-faq summary{font-size:15.5px;gap:12px;padding:15px 14px}.hv-faq summary::before{width:30px;height:30px;font-size:11px}.hv-faq details p{padding:0 16px 16px 56px;font-size:15px}}
 
 /* book */
 .hv-book{padding:96px 0;background:radial-gradient(900px 500px at 20% 0%,#FEDFE5,transparent 70%),linear-gradient(180deg,var(--lilac),var(--paper))}
