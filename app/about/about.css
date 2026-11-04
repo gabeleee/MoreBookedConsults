@@ -1,19 +1,64 @@
-/* About page (2026-11-03 draft). Builds on the homepage hv- styles. */
-.ab-hero{position:relative;overflow:hidden;padding:90px 0 70px;
-  background:radial-gradient(1000px 480px at 50% 0%,#FEDFE5 0%,rgba(254,223,229,0) 70%),linear-gradient(180deg,var(--lilac) 0%,var(--paper) 100%)}
-.ab-hero-in{text-align:center;display:flex;flex-direction:column;align-items:center}
-.ab-hero h1{font-size:clamp(32px,4.4vw,50px);line-height:1.1;max-width:22ch;margin:0 0 18px;font-weight:var(--dw);letter-spacing:var(--dls)}
-.ab-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
-.ab-photo{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 40px 80px -46px rgba(125,9,90,.55)}
+/* /about/ (2026-11-03 redesign in the service-page style). Reuses hv- (home-v2.css) and bs- (booking-systems/bs.css); classes here start ab-. */
+
+/* story path in the hero card */
+.ab-path li{text-align:center}
+.ab-path-sub{font-size:13.5px;color:var(--soft);max-width:18ch}
+
+/* story */
+.ab-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}
+.ab-photo{position:relative;border-radius:30px;overflow:hidden;aspect-ratio:4/5;border:1px solid rgba(195,46,132,.2);box-shadow:0 40px 80px -46px rgba(125,9,90,.55)}
 .ab-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .ab-photo-tag{position:absolute;left:16px;right:16px;bottom:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-radius:16px;padding:14px 16px}
 .ab-photo-tag b{display:block;font-size:16px}
 .ab-photo-tag span{font-size:13.5px;color:var(--soft)}
-.ab-copy p{color:var(--soft);font-size:17px;margin-bottom:14px}
-.ab-pdf{display:inline-flex;align-items:center;gap:8px;margin-top:8px;color:var(--violet-deep);font-weight:600;font-size:15px}
-.ab-pdf svg{width:18px;height:18px}
-.ab-cta{background:linear-gradient(180deg,var(--paper),var(--lilac))}
-.ab-cta .btn{margin-top:10px}
-.ab-alt{font-size:15px!important;margin-top:16px}
-.ab-alt a{color:var(--violet-deep)}
-@media (max-width:900px){.ab-grid{grid-template-columns:1fr;gap:32px}.ab-photo{max-width:420px;margin:0 auto;width:100%}.ab-hero{padding:56px 0 40px}}
+.ab-copy h2{font-size:clamp(30px,3.4vw,40px);line-height:1.1;margin:0 0 18px}
+.ab-copy > p:not(.hv-sys-k){color:var(--soft);font-size:17px;margin-bottom:12px}
+.ab-creds{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:22px}
+.ab-creds a{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--soft);font-size:13.5px;line-height:1.35;background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px 16px;transition:border-color .18s,transform .18s}
+.ab-creds a:hover{border-color:rgba(195,46,132,.4);transform:translateY(-1px)}
+.ab-creds b{display:block;color:var(--ink);font-size:15px}
+.ab-creds svg{width:34px;height:34px;padding:8px;border-radius:10px;background:var(--lilac);color:var(--violet);flex:none}
+.ab-creds img{width:34px;height:34px;object-fit:contain;flex:none}
+
+/* beliefs */
+.ab-bel{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ab-bel-card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px 22px 26px}
+.ab-bel-card h3{font-size:22px;margin:20px 0 8px;line-height:1.2}
+.ab-bel-card p{color:var(--soft);font-size:16px}
+.ab-viz{position:relative;height:150px;border-radius:18px;background:var(--glass);border:1px solid rgba(195,46,132,.14);overflow:hidden}
+.ab-viz-bars{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;align-items:end;padding:30px 22px 14px}
+.ab-viz-bars > div{display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end}
+.ab-viz-bars i{width:100%;max-width:56px;border-radius:10px 10px 4px 4px;background:#EADCE1;display:flex;justify-content:center;padding-top:6px;color:#fff}
+.ab-viz-bars .hi i{background:linear-gradient(180deg,#C32E84,#BF69D2);box-shadow:0 10px 22px -10px rgba(125,9,90,.7)}
+.ab-viz-bars i svg{width:16px;height:16px}
+.ab-viz-bars span{font-size:11.5px;font-weight:600;color:var(--soft)}
+.ab-viz-bars .hi span{color:var(--violet-deep)}
+.ab-viz-bars em{position:absolute;right:12px;top:10px;font-style:normal;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--violet-deep);background:#fff;border-radius:999px;padding:3px 8px}
+.ab-viz-line{padding:18px 16px 12px;display:flex;flex-direction:column;gap:8px}
+.ab-viz-line svg{flex:none;height:92px;width:100%;overflow:visible}
+.ab-line{fill:none;stroke:var(--violet);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.ab-mark{stroke:rgba(195,46,132,.35);stroke-width:1.5;stroke-dasharray:4 4;vector-effect:non-scaling-stroke}
+.ab-viz-lg{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.ab-viz-lg .hi{color:var(--violet-deep)}
+.ab-viz-chips{display:flex;flex-wrap:wrap;align-content:center;justify-content:center;gap:8px;padding:16px}
+.ab-viz-chips span{border-radius:999px;padding:6px 12px;font-size:12.5px;font-weight:600}
+.ab-viz-chips .on{background:#fff;border:1px solid rgba(195,46,132,.3);color:var(--violet-deep);box-shadow:0 8px 18px -12px rgba(125,9,90,.5)}
+.ab-viz-chips .off{color:#BFA5AD;border:1px dashed #E2CDD3;text-decoration:line-through}
+
+/* what we build */
+.ab-svc{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.ab-svc-card{display:flex;flex-direction:column;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:18px 18px 22px;text-decoration:none;color:var(--ink);transition:border-color .18s,transform .18s,box-shadow .18s}
+.ab-svc-card:hover{border-color:rgba(195,46,132,.4);transform:translateY(-2px);box-shadow:0 30px 60px -44px rgba(125,9,90,.55)}
+.ab-svc-card .mm-art{height:170px}
+.ab-svc-card h3{font-size:22px;margin:18px 4px 6px;line-height:1.2}
+.ab-svc-card p{color:var(--soft);font-size:15.5px;margin:0 4px;flex:1}
+.ab-svc-more{margin:14px 4px 0;font-weight:700;font-size:14.5px;color:var(--violet-deep)}
+
+.ab-fit{padding-top:96px}
+
+@media (max-width:900px){
+  .ab-grid{grid-template-columns:1fr;gap:32px}
+  .ab-photo{max-width:420px;margin:0 auto;width:100%}
+  .ab-bel,.ab-svc{grid-template-columns:1fr}
+  .ab-creds{grid-template-columns:1fr}
+}
