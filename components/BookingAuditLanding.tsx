@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import BookingAuditForm from "@/components/BookingAuditForm";
 
@@ -52,7 +53,7 @@ function Track({ steps, today }: { steps: number; today?: boolean }) {
 // the price lives in the audit/proposal, the landing page only sells the free audit.
 const STACK = [
   { name: "A new booking flow on your site", note: "Live in 14 days, booking straight into your calendar", value: 2500 },
-  { name: "Instant text-back", note: "Anyone who starts booking but doesn't finish gets a text within 60 seconds", value: 1500 },
+  { name: "Instant follow-up call", note: "Anyone who starts booking but doesn't finish gets a call within 60 seconds", value: 1500 },
   { name: "Last-Chance Offer", note: "A first-visit offer we write, design in your brand, build and track, so visitors about to leave book instead", value: 750 },
   { name: "Drop-off tracking", note: "See exactly which step people quit on", value: 500 },
   { name: "Monthly before-and-after report", note: "Booking requests before vs after every change", value: 500 },
@@ -317,7 +318,7 @@ export default function BookingAuditLanding({
         <div className="wrap ba-me-in">
           <Image src="/gabe.jpg" alt="Gabe Meierotto" width={96} height={96} className="ba-me-img" />
           <div>
-            <p className="ba-me-name">Gabe Meierotto, <a href="/">More Booked Consults</a></p>
+            <p className="ba-me-name">Gabe Meierotto, <Link href="/">More Booked Consults</Link></p>
             <p>As Director of CRO at LaserAway, I helped take online conversion from 3% to 11%.</p>
             <p>Now I fix booking flows for med spas.</p>
             {offer && <p className="ba-cap">I take on 4 new med spas a month, so each one gets my full attention.</p>}
