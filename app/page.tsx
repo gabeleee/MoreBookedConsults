@@ -513,7 +513,7 @@ export default function Home() {
       <section className="hv-book" id="book">
         <div className="wrap hv-final">
           <h2>See The Five Systems On Your Own Site</h2>
-          <p>A free 20-minute demo. Answer 4 quick questions, then pick your time.</p>
+          <p>A free 20-minute demo. Answer 5 quick questions, then pick your time.</p>
           <ul>
             <li><LineIcon name="check" /> Where your site loses bookings today</li>
             <li><LineIcon name="check" /> Hear Sienna AI make a live call</li>
