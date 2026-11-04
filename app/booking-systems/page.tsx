@@ -238,6 +238,45 @@ function HeroCta() {
   );
 }
 
+// "Every month after" section (2026-11-03). Heights are illustrative, and two
+// months are flat on purpose: not every change wins, and the copy says so.
+const LOOP = [
+  {
+    icon: "search",
+    h: "Find the biggest leak",
+    p: "Leak Finder shows the one step that lost the most people last month, in your booking path or anywhere else on your site.",
+  },
+  {
+    icon: "wrench",
+    h: "Ship 2 improvements",
+    p: "We pick changes that already won real tests on other sites, so even a smaller site gets proven ideas, not guesses.",
+  },
+  {
+    icon: "chart",
+    h: "Keep what wins",
+    p: "Every change is measured against your baseline in Clear View. Winners stay live, the rest get switched off.",
+  },
+] as const;
+
+const STAIRS = [
+  { m: "Before", h: 34 },
+  { m: "Month 1", h: 52, tag: "Install" },
+  { m: "Month 2", h: 59, tag: "Win" },
+  { m: "Month 3", h: 59 },
+  { m: "Month 4", h: 67, tag: "Win" },
+  { m: "Month 5", h: 73, tag: "Win" },
+  { m: "Month 6", h: 73 },
+];
+
+const PLAN = [
+  { m: "Month 1", t: "Glide Path, Sienna AI and Second Glance go live" },
+  { m: "Month 2", t: "Booking forms built for your top 3 treatments" },
+  { m: "Month 3", t: "Second Glance offer A vs. offer B" },
+  { m: "Month 4", t: "Sienna's call script and callback timing" },
+  { m: "Month 5", t: "A before-and-after gallery that links to booking" },
+  { m: "Month 6", t: "A seasonal offer on your homepage" },
+];
+
 export default function BookingSystems() {
   return (
     <main className="hv bs">
@@ -482,6 +521,66 @@ export default function BookingSystems() {
               <p>All five systems switch on, and your Clear View link starts showing before vs. after.</p>
             </li>
           </ol>
+        </div>
+      </section>
+
+      {/* ---------------- Every month after ---------------- */}
+      <section className="hv-sec bs-after">
+        <div className="wrap">
+          <div className="hv-head">
+            <h2>Month one builds it. Every month after makes it better.</h2>
+            <p>The install is the start, not the finish.</p>
+          </div>
+          <ol className="bs-loop">
+            {LOOP.map((l) => (
+              <li key={l.h}>
+                <span className="bs-loop-ic">
+                  <LineIcon name={l.icon} />
+                </span>
+                <b>{l.h}</b>
+                <p>{l.p}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="bs-stairs-card">
+            <div className="bs-stairs-top">
+              <h3>Each win stacks on the last.</h3>
+              <span className="bs-stairs-tag">Illustrative</span>
+            </div>
+            <p className="bs-stairs-sub">Booking rate, month by month. Some months a change doesn&apos;t beat what&apos;s live, so we switch it off and nothing drops.</p>
+            <div className="bs-stairs" role="img" aria-label="Illustrative chart: booking rate rises after the install, then steps up most months as winning changes stack, and holds flat in months where a test didn't win.">
+              {STAIRS.map((b, i) => {
+                const prev = i > 0 ? STAIRS[i - 1].h : b.h;
+                const gain = i > 0 ? b.h - prev : 0;
+                return (
+                  <div key={b.m} className={`bs-stair${i === 0 ? " is-before" : ""}`}>
+                    {b.tag && (
+                      <span className="bs-stair-tag" style={{ bottom: `calc(${b.h}% + 8px)` }}>
+                        {b.tag}
+                      </span>
+                    )}
+                    <div className="bs-stair-col" style={{ height: `${b.h}%` }}>
+                      {gain > 0 && <span className="bs-stair-gain" style={{ height: `${(gain / b.h) * 100}%` }} />}
+                    </div>
+                    <span className="bs-stair-m">{b.m}</span>
+                  </div>
+                );
+              })}
+            </div>
+            <div className="bs-plan">
+              <p className="bs-plan-h">A sample 6-month plan</p>
+              <ul>
+                {PLAN.map((p) => (
+                  <li key={p.m}>
+                    <span>{p.m}</span>
+                    {p.t}
+                  </li>
+                ))}
+              </ul>
+              <p className="bs-plan-note">Sample plan for illustration. Yours is chosen from what your Leak Finder numbers show, so no two spas get the same plan.</p>
+              <p className="bs-plan-note">With enough traffic, we split-test: half your visitors see the new version and half see the old one. With less, we make bigger changes that already won elsewhere and compare your bookings before and after.</p>
+            </div>
+          </div>
         </div>
       </section>
 
