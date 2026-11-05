@@ -31,7 +31,7 @@ export default function DemoPage() {
               <li><LineIcon name="check" /> A fixed monthly price, no pressure</li>
             </ul>
             <div className="dm-by">
-              <img src="/gabe.jpg" alt="Gabe Meierotto" />
+              <img src="/gabe-96.webp" alt="Gabe Meierotto" width={44} height={44} />
               <span>
                 Your demo is with <b>Gabe Meierotto</b>, LaserAway&apos;s former Director of CRO (3% → 11% sitewide conversion).
               </span>
