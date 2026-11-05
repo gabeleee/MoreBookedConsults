@@ -202,6 +202,7 @@ export default function BookingAuditLanding({
                 width={image.width}
                 height={image.height}
                 style={image.position ? { objectPosition: image.position } : undefined}
+                sizes="(max-width: 900px) 100vw, 560px"
                 priority
               />
             </div>
@@ -248,19 +249,19 @@ export default function BookingAuditLanding({
           <h2>Your audit, in plain English.</h2>
           <div className="ba-cards">
             <div className="ba-card">
-              <Image src="/booking-audit/card-path.jpg" alt="Two phones showing a med spa website, the way a new client sees it" width={800} height={500} className="ba-card-img" />
+              <Image src="/booking-audit/card-path.jpg" alt="Two phones showing a med spa website, the way a new client sees it" width={800} height={500} sizes="(max-width: 900px) 100vw, 380px" className="ba-card-img" />
               <span className="ba-k">1</span>
               <h3>Your booking path, click by click</h3>
               <p>Every tap from your homepage to a booked time, next to the shorter path I&apos;d build.</p>
             </div>
             <div className="ba-card">
-              <Image src="/booking-audit/card-scorecard.jpg" alt="A med spa owner reviewing her booking calendar on a laptop" width={800} height={500} className="ba-card-img" />
+              <Image src="/booking-audit/card-scorecard.jpg" alt="A med spa owner reviewing her booking calendar on a laptop" width={800} height={500} sizes="(max-width: 900px) 100vw, 380px" className="ba-card-img" />
               <span className="ba-k">2</span>
               <h3>A booking scorecard</h3>
               <p>Your Book button, booking form, mobile experience and steps to book, each graded.</p>
             </div>
             <div className="ba-card">
-              <Image src="/booking-audit/card-fix.jpg" alt="A busy med spa lobby with clients checking in at the front desk" width={800} height={500} className="ba-card-img" />
+              <Image src="/booking-audit/card-fix.jpg" alt="A busy med spa lobby with clients checking in at the front desk" width={800} height={500} sizes="(max-width: 900px) 100vw, 380px" className="ba-card-img" />
               <span className="ba-k">3</span>
               <h3>What to fix first</h3>
               <p>The changes that would book the most consults, ranked.</p>

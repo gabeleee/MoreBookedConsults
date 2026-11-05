@@ -22,8 +22,8 @@ function notTracked(): boolean {
 
 const noTrack = notTracked();
 
-// Page speed (2026-11-04): load posthog-js after the page has loaded and gone
-// idle, so its ~100 KB never competes with the first paint. Calls made before
+// Page speed (2026-11-04): posthog-js (~100 KB) is loaded late (see below),
+// so it never competes with the first paint. Calls made before
 // then are queued in lib/ph.ts.
 function loadPosthog() {
   import("posthog-js").then(({ default: posthog }) => {
@@ -42,10 +42,21 @@ function loadPosthog() {
 }
 
 if (projectToken && apiHost) {
-  const w = window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number };
-  const idle = () => (w.requestIdleCallback ? w.requestIdleCallback(loadPosthog, { timeout: 4000 }) : setTimeout(loadPosthog, 1500));
-  if (document.readyState === "complete") idle();
-  else window.addEventListener("load", idle, { once: true });
+  // Load on the visitor's first scroll/tap/key/mouse move, or 8 s after the
+  // page loads, whichever comes first (same pattern as the Hires boards,
+  // 2026-11-04). Its recorder and surveys were the last big main-thread cost.
+  let done = false;
+  const WAKE = ["pointermove", "pointerdown", "touchstart", "scroll", "keydown", "wheel"] as const;
+  const go = () => {
+    if (done) return;
+    done = true;
+    WAKE.forEach((ev) => window.removeEventListener(ev, go));
+    loadPosthog();
+  };
+  WAKE.forEach((ev) => window.addEventListener(ev, go, { passive: true, once: true }));
+  const timer = () => setTimeout(go, 8000);
+  if (document.readyState === "complete") timer();
+  else window.addEventListener("load", timer, { once: true });
 } else if (process.env.NODE_ENV === "development") {
   console.warn("[posthog] NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN / NEXT_PUBLIC_POSTHOG_HOST not set — analytics off");
 }

@@ -5,7 +5,7 @@
 export default function ProofLine() {
   return (
     <p className="hv-proofline">
-      <img className="hv-face" src="/gabe.jpg" alt="Gabe Meierotto" width={30} height={30} />
+      <img className="hv-face" src="/gabe-96.webp" alt="Gabe Meierotto" width={30} height={30} />
       <span>
         Ex-LaserAway CRO director · <b>3% → 11%</b> conversion
       </span>
