@@ -627,9 +627,9 @@ export function GuaranteeSeal({ text = "90-day booking guarantee" }: { text?: st
 
 /* ---------- Spotlight Ads: example Meta feed ads (made-up spa, own photos) ---------- */
 const ADS = [
-  { img: "/injector.jpg", pos: "50% 18%", text: "Your first Botox visit, with a licensed injector who takes the time to plan it with you.", over: "First Botox visit, done right", foot: "Book your consult", btn: "Book now" },
-  { img: "/home/exit-photo.jpg", pos: "50% 35%", text: "Our signature facial, now with a first-visit offer for new clients this month.", over: "Glow by Friday", foot: "New client offer", btn: "Book now" },
-  { img: "/audit.jpg", pos: "50% 30%", text: "Not sure where to start? Our Smooth Start Package covers your consult, first treatment and aftercare.", over: "Start with a plan", foot: "Smooth Start Package", btn: "Learn more" },
+  { img: "/injector.webp", pos: "50% 18%", text: "Your first Botox visit, with a licensed injector who takes the time to plan it with you.", over: "First Botox visit, done right", foot: "Book your consult", btn: "Book now" },
+  { img: "/home/exit-photo.webp", pos: "50% 35%", text: "Our signature facial, now with a first-visit offer for new clients this month.", over: "Glow by Friday", foot: "New client offer", btn: "Book now" },
+  { img: "/audit.webp", pos: "50% 30%", text: "Not sure where to start? Our Smooth Start Package covers your consult, first treatment and aftercare.", over: "Start with a plan", foot: "Smooth Start Package", btn: "Learn more" },
 ];
 
 export function SpotlightAds() {

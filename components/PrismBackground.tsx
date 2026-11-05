@@ -119,113 +119,154 @@ type Props = {
   tone?: "dark" | "light"; // light = transparent over a light section's bg
 };
 
+function setupPrism(canvas: HTMLCanvasElement, { tilt, phase, gain, feather, tone }: Required<Props>): (() => void) | undefined {
+  const gl = canvas.getContext("webgl", { antialias: false, alpha: tone === "light", powerPreference: "low-power" });
+  if (!gl) return;
+  const vs = compile(gl, gl.VERTEX_SHADER, VERT);
+  const fs = compile(gl, gl.FRAGMENT_SHADER, FRAG);
+  const prog = gl.createProgram();
+  if (!vs || !fs || !prog) return;
+  gl.attachShader(prog, vs);
+  gl.attachShader(prog, fs);
+  gl.linkProgram(prog);
+  if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return;
+  gl.useProgram(prog);
+
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
+  const loc = gl.getAttribLocation(prog, "p");
+  gl.enableVertexAttribArray(loc);
+  gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+  const uRes = gl.getUniformLocation(prog, "res");
+  const uT = gl.getUniformLocation(prog, "t");
+  gl.uniform1f(gl.getUniformLocation(prog, "tilt"), tilt);
+  gl.uniform1f(gl.getUniformLocation(prog, "gain"), gain);
+  gl.uniform1f(gl.getUniformLocation(prog, "feather"), feather * SCALE);
+  gl.uniform1f(gl.getUniformLocation(prog, "lightTone"), tone === "light" ? 1 : 0);
+  const uCalm = gl.getUniformLocation(prog, "calmBox");
+  const uCalmK = gl.getUniformLocation(prog, "calmK");
+  const calmEls = Array.from(canvas.parentElement?.querySelectorAll<HTMLElement>("[data-prism-calm]") ?? []).slice(0, 3);
+  const calmK = new Float32Array(3);
+  calmEls.forEach((el, i) => (calmK[i] = Number(el.dataset.prismCalm) || 0.7));
+
+  const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const start = performance.now() - phase * 1000; // start mid-motion, not at t=0
+  let raf = 0;
+  let onScreen = true;
+
+  const resize = () => {
+    const w = Math.max(1, Math.round(canvas.clientWidth * SCALE));
+    const h = Math.max(1, Math.round(canvas.clientHeight * SCALE));
+    if (canvas.width !== w || canvas.height !== h) {
+      canvas.width = w;
+      canvas.height = h;
+      gl.viewport(0, 0, w, h);
+    }
+  };
+  // calm boxes in GL canvas pixels (origin bottom-left); unused slots
+  // sit off-canvas
+  const calm = new Float32Array(12).fill(-1e4);
+  const measure = () => {
+    const c = canvas.getBoundingClientRect();
+    const h = c.height * SCALE;
+    calmEls.forEach((el, i) => {
+      const r = el.getBoundingClientRect();
+      calm.set([
+        (r.left - c.left) * SCALE,
+        h - (r.bottom - c.top) * SCALE,
+        (r.right - c.left) * SCALE,
+        h - (r.top - c.top) * SCALE,
+      ], i * 4);
+    });
+  };
+  const draw = (now: number) => {
+    resize();
+    gl.uniform4fv(uCalm, calm);
+    gl.uniform1fv(uCalmK, calmK);
+    gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.uniform1f(uT, (now - start) / 1000);
+    gl.drawArrays(gl.TRIANGLES, 0, 3);
+    canvas.classList.add("is-on");
+  };
+  let last = 0;
+  const loop = (now: number) => {
+    if (now - last >= 32) {
+      last = now;
+      draw(now);
+    }
+    raf = requestAnimationFrame(loop);
+  };
+  const play = () => {
+    cancelAnimationFrame(raf);
+    if (still) draw(start + phase * 1000);
+    else if (onScreen && !document.hidden) raf = requestAnimationFrame(loop);
+  };
+
+  const io = new IntersectionObserver(([e]) => {
+    onScreen = e.isIntersecting;
+    if (onScreen) play();
+    else cancelAnimationFrame(raf);
+  });
+  io.observe(canvas);
+  const onVis = () => (document.hidden ? cancelAnimationFrame(raf) : play());
+  document.addEventListener("visibilitychange", onVis);
+  const ro = new ResizeObserver(() => {
+    measure();
+    if (still) play();
+  });
+  ro.observe(canvas);
+  calmEls.forEach((el) => ro.observe(el));
+  measure();
+  play();
+
+  return () => {
+    cancelAnimationFrame(raf);
+    io.disconnect();
+    ro.disconnect();
+    document.removeEventListener("visibilitychange", onVis);
+  };
+}
+
 export default function PrismBackground({ tilt = 0.42, phase = 40, gain = 1, feather = 90, tone = "dark" }: Props) {
   const ref = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = ref.current;
     if (!canvas) return;
-    const gl = canvas.getContext("webgl", { antialias: false, alpha: tone === "light", powerPreference: "low-power" });
-    if (!gl) return;
-    const vs = compile(gl, gl.VERTEX_SHADER, VERT);
-    const fs = compile(gl, gl.FRAGMENT_SHADER, FRAG);
-    const prog = gl.createProgram();
-    if (!vs || !fs || !prog) return;
-    gl.attachShader(prog, vs);
-    gl.attachShader(prog, fs);
-    gl.linkProgram(prog);
-    if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) return;
-    gl.useProgram(prog);
-
-    const buf = gl.createBuffer();
-    gl.bindBuffer(gl.ARRAY_BUFFER, buf);
-    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1, -1, 3, -1, -1, 3]), gl.STATIC_DRAW);
-    const loc = gl.getAttribLocation(prog, "p");
-    gl.enableVertexAttribArray(loc);
-    gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
-    const uRes = gl.getUniformLocation(prog, "res");
-    const uT = gl.getUniformLocation(prog, "t");
-    gl.uniform1f(gl.getUniformLocation(prog, "tilt"), tilt);
-    gl.uniform1f(gl.getUniformLocation(prog, "gain"), gain);
-    gl.uniform1f(gl.getUniformLocation(prog, "feather"), feather * SCALE);
-    gl.uniform1f(gl.getUniformLocation(prog, "lightTone"), tone === "light" ? 1 : 0);
-    const uCalm = gl.getUniformLocation(prog, "calmBox");
-    const uCalmK = gl.getUniformLocation(prog, "calmK");
-    const calmEls = Array.from(canvas.parentElement?.querySelectorAll<HTMLElement>("[data-prism-calm]") ?? []).slice(0, 3);
-    const calmK = new Float32Array(3);
-    calmEls.forEach((el, i) => (calmK[i] = Number(el.dataset.prismCalm) || 0.7));
-
-    const still = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    const start = performance.now() - phase * 1000; // start mid-motion, not at t=0
-    let raf = 0;
-    let onScreen = true;
-
-    const resize = () => {
-      const w = Math.max(1, Math.round(canvas.clientWidth * SCALE));
-      const h = Math.max(1, Math.round(canvas.clientHeight * SCALE));
-      if (canvas.width !== w || canvas.height !== h) {
-        canvas.width = w;
-        canvas.height = h;
-        gl.viewport(0, 0, w, h);
-      }
+    // Page speed (2026-11-04): the shader is decoration, and on phones without
+    // a fast GPU even compiling it and drawing one frame cost over a second of
+    // main-thread time. So nothing GPU-related runs until the visitor first
+    // scrolls, taps, presses a key or moves the mouse (after the page has
+    // loaded). The canvas fades in, so the light simply eases in then.
+    let cleanup: (() => void) | undefined;
+    let cancelled = false;
+    let loaded = document.readyState === "complete";
+    let poked = false;
+    const WAKE = ["pointermove", "pointerdown", "touchstart", "scroll", "keydown", "wheel"] as const;
+    const stopWaiting = () => {
+      WAKE.forEach((ev) => window.removeEventListener(ev, onPoke));
+      window.removeEventListener("load", onLoad);
     };
-    // calm boxes in GL canvas pixels (origin bottom-left); unused slots
-    // sit off-canvas
-    const calm = new Float32Array(12).fill(-1e4);
-    const measure = () => {
-      const c = canvas.getBoundingClientRect();
-      const h = c.height * SCALE;
-      calmEls.forEach((el, i) => {
-        const r = el.getBoundingClientRect();
-        calm.set([
-          (r.left - c.left) * SCALE,
-          h - (r.bottom - c.top) * SCALE,
-          (r.right - c.left) * SCALE,
-          h - (r.top - c.top) * SCALE,
-        ], i * 4);
-      });
+    const maybeStart = () => {
+      if (cancelled || !loaded || !poked) return;
+      stopWaiting();
+      cleanup = setupPrism(canvas, { tilt, phase, gain, feather, tone });
     };
-    const draw = (now: number) => {
-      resize();
-      gl.uniform4fv(uCalm, calm);
-      gl.uniform1fv(uCalmK, calmK);
-      gl.uniform2f(uRes, canvas.width, canvas.height);
-      gl.uniform1f(uT, (now - start) / 1000);
-      gl.drawArrays(gl.TRIANGLES, 0, 3);
-      canvas.classList.add("is-on");
-    };
-    const loop = (now: number) => {
-      draw(now);
-      raf = requestAnimationFrame(loop);
-    };
-    const play = () => {
-      cancelAnimationFrame(raf);
-      if (still) draw(start + phase * 1000);
-      else if (onScreen && !document.hidden) raf = requestAnimationFrame(loop);
-    };
-
-    const io = new IntersectionObserver(([e]) => {
-      onScreen = e.isIntersecting;
-      if (onScreen) play();
-      else cancelAnimationFrame(raf);
-    });
-    io.observe(canvas);
-    const onVis = () => (document.hidden ? cancelAnimationFrame(raf) : play());
-    document.addEventListener("visibilitychange", onVis);
-    const ro = new ResizeObserver(() => {
-      measure();
-      if (still) play();
-    });
-    ro.observe(canvas);
-    calmEls.forEach((el) => ro.observe(el));
-    measure();
-    play();
-
+    function onPoke() {
+      poked = true;
+      maybeStart();
+    }
+    function onLoad() {
+      loaded = true;
+      maybeStart();
+    }
+    WAKE.forEach((ev) => window.addEventListener(ev, onPoke, { passive: true }));
+    if (!loaded) window.addEventListener("load", onLoad, { once: true });
     return () => {
-      cancelAnimationFrame(raf);
-      io.disconnect();
-      ro.disconnect();
-      document.removeEventListener("visibilitychange", onVis);
+      cancelled = true;
+      stopWaiting();
+      cleanup?.();
     };
   }, [tilt, phase, gain, feather, tone]);
 

@@ -27,9 +27,9 @@ function Frame({ title, children, sample }: { title: string; children: React.Rea
 
 /* ---------- 01 Ad studio: fresh ads, each testing a new angle ---------- */
 const STUDIO = [
-  { img: "/injector.jpg", pos: "50% 18%", angle: "Angle A · Expert", over: "Meet your injector" },
-  { img: "/home/exit-photo.jpg", pos: "50% 35%", angle: "Angle B · Offer", over: "Smooth Start" },
-  { img: "/audit.jpg", pos: "50% 30%", angle: "Angle C · First timer", over: "New to Botox?" },
+  { img: "/injector.webp", pos: "50% 18%", angle: "Angle A · Expert", over: "Meet your injector" },
+  { img: "/home/exit-photo.webp", pos: "50% 35%", angle: "Angle B · Offer", over: "Smooth Start" },
+  { img: "/audit.webp", pos: "50% 30%", angle: "Angle C · First timer", over: "New to Botox?" },
 ];
 
 export function AdStudioArt() {

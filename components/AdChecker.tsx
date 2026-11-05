@@ -1,6 +1,6 @@
 "use client";
 import { useRef, useState } from "react";
-import posthog from "posthog-js";
+import { ph as posthog } from "@/lib/ph";
 import { posthogRequestHeaders } from "@/lib/posthog-client";
 import { MAX_CHARS, type CheckResult, type Flag } from "@/lib/ad-check";
 import AuditCtaLink from "./AuditCtaLink";

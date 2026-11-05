@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-import posthog from "posthog-js";
+import { ph as posthog } from "@/lib/ph";
 import { submitAudit } from "@/lib/submitAudit";
 import { LineIcon } from "./LineIcon";
 

@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import posthog from "posthog-js";
+import { ph as posthog } from "@/lib/ph";
 
 // Shown after the booking-audit form submits: Gabe's Cal.com calendar inline,
 // prefilled with the lead's details. Event "audit-walkthrough" (20 min, noon to

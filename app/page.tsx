@@ -393,7 +393,7 @@ export default function Home() {
           <div className="hv-proof-grid">
             <div className="hv-proof-chart">
               <p className="hv-chart-t">
-                <img src="/logos/laseraway.png" alt="LaserAway" className="hv-la-logo" />
+                <img loading="lazy" src="/logos/laseraway.png" alt="LaserAway" className="hv-la-logo" />
                 <span>Sitewide conversion, 2018–2023</span>
               </p>
               <ConversionChart />
@@ -401,7 +401,7 @@ export default function Home() {
             </div>
             <div className="hv-stats">
               <div className="hv-stat-la">
-                <img src="/logos/laseraway-white.png" alt="LaserAway" />
+                <img loading="lazy" src="/logos/laseraway-white.png" alt="LaserAway" />
                 <b>3% → 11%</b>
                 <span>Sitewide conversion</span>
               </div>
@@ -421,12 +421,12 @@ export default function Home() {
           </div>
           <div className="hv-creds">
             <a href="/laseraway-intellimize-case-study.pdf" target="_blank" rel="noopener">
-              <img src="/logos/intellimize-white.png" alt="Intellimize" />
+              <img loading="lazy" src="/logos/intellimize-white.png" alt="Intellimize" />
               <span>Featured in Intellimize&apos;s LaserAway case study</span>
             </a>
             <a href="https://aesthetichires.com/" target="_blank" rel="noopener">
               <span className="hv-cred-word">
-                <img src="/logos/aesthetichires-lips.png" alt="" />
+                <img loading="lazy" src="/logos/aesthetichires-lips.png" alt="" />
                 AestheticHires
               </span>
               <span>We also run the med spa job board</span>
