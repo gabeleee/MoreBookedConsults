@@ -90,9 +90,9 @@ export default function RootLayout({
         <MetaPixel />
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=${SITE.gaId}`}
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="ga4" strategy="afterInteractive">
+        <Script id="ga4" strategy="lazyOnload">
           {`window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());try{var q=new URLSearchParams(location.search).get('notrack');if(q==='1'||location.pathname.indexOf('/admin')===0)localStorage.setItem('notrack','1');if(q==='0')localStorage.removeItem('notrack');if(localStorage.getItem('notrack')==='1')window['ga-disable-${SITE.gaId}']=true;}catch(e){}gtag('config','${SITE.gaId}');`}
         </Script>
       </body>

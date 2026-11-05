@@ -1,4 +1,4 @@
-import posthog from "posthog-js";
+import { setPosthog } from "@/lib/ph";
 
 // PostHog (product analytics, session replay, error tracking). The agency sites
 // (More Booked Consults, More Booked Chairs, ...) share ONE PostHog project,
@@ -22,17 +22,30 @@ function notTracked(): boolean {
 
 const noTrack = notTracked();
 
-if (projectToken && apiHost) {
-  posthog.init(projectToken, {
-    api_host: apiHost,
-    opt_out_capturing_by_default: noTrack,
-    defaults: "2026-05-30",
-    capture_exceptions: true,
-    debug: process.env.NODE_ENV === "development",
+// Page speed (2026-11-04): load posthog-js after the page has loaded and gone
+// idle, so its ~100 KB never competes with the first paint. Calls made before
+// then are queued in lib/ph.ts.
+function loadPosthog() {
+  import("posthog-js").then(({ default: posthog }) => {
+    posthog.init(projectToken!, {
+      api_host: apiHost,
+      opt_out_capturing_by_default: noTrack,
+      defaults: "2026-05-30",
+      capture_exceptions: true,
+      debug: process.env.NODE_ENV === "development",
+    });
+    posthog.register({ site: "More Booked Consults" });
+    if (noTrack) posthog.opt_out_capturing();
+    else if (posthog.has_opted_out_capturing()) posthog.opt_in_capturing();
+    setPosthog(posthog);
   });
-  posthog.register({ site: "More Booked Consults" });
-  if (noTrack) posthog.opt_out_capturing();
-  else if (posthog.has_opted_out_capturing()) posthog.opt_in_capturing();
+}
+
+if (projectToken && apiHost) {
+  const w = window as Window & { requestIdleCallback?: (cb: () => void, o?: { timeout: number }) => number };
+  const idle = () => (w.requestIdleCallback ? w.requestIdleCallback(loadPosthog, { timeout: 4000 }) : setTimeout(loadPosthog, 1500));
+  if (document.readyState === "complete") idle();
+  else window.addEventListener("load", idle, { once: true });
 } else if (process.env.NODE_ENV === "development") {
   console.warn("[posthog] NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN / NEXT_PUBLIC_POSTHOG_HOST not set — analytics off");
 }

@@ -26,7 +26,7 @@
 .sp-phone{position:absolute;left:50%;top:84px;transform:translateX(-50%);width:205px;height:400px;border-radius:32px;background:#fff;
   border:7px solid #2F1220;box-shadow:0 30px 60px -28px rgba(47,18,32,.6);overflow:hidden}
 .sp-phone-notch{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:62px;height:15px;border-radius:10px;background:#2F1220;z-index:2}
-.sp-lp-hero{height:116px;background:url(/home/exit-photo.jpg) 50% 30%/cover;display:flex;align-items:flex-end;padding:9px 12px}
+.sp-lp-hero{height:116px;background:url(/home/exit-photo.webp) 50% 30%/cover;display:flex;align-items:flex-end;padding:9px 12px}
 .sp-lp-brand{font-family:var(--mono);font-size:8px;letter-spacing:.18em;color:#fff;text-shadow:0 1px 6px rgba(0,0,0,.4)}
 .sp-lp-body{padding:12px 14px;display:flex;flex-direction:column;gap:6px}
 .sp-lp-k{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--violet)}

@@ -1,11 +1,12 @@
-import posthog from "posthog-js";
+import { ph } from "@/lib/ph";
 
 // Headers that let /api/audit attach server-side events to
 // this visitor's PostHog session. Empty when PostHog isn't initialised.
 export function posthogRequestHeaders(): Record<string, string> {
-  if (!posthog.__loaded) return {};
+  const distinct = ph.__loaded ? ph.get_distinct_id() : undefined;
+  if (!distinct) return {};
   return {
-    "X-PostHog-Distinct-ID": posthog.get_distinct_id(),
-    "X-PostHog-Session-ID": posthog.get_session_id(),
+    "X-PostHog-Distinct-ID": distinct,
+    "X-PostHog-Session-ID": ph.get_session_id() ?? "",
   };
 }

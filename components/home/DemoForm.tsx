@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import posthog from "posthog-js";
+import { ph as posthog } from "@/lib/ph";
 import { submitAudit } from "@/lib/submitAudit";
 import { LineIcon } from "@/components/LineIcon";
 import AuditBooking from "@/components/AuditBooking";

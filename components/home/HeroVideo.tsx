@@ -5,6 +5,9 @@
 // offers a replay with sound. A sound toggle shows while it plays. People who
 // ask for reduced motion get the poster and a play button instead of autoplay.
 import { useEffect, useRef, useState } from "react";
+import { preload } from "react-dom";
+
+const POSTER = "/video/hero-explainer-poster.webp";
 
 // The end card is fully on screen from about 26 s and starts fading at 28.85 s;
 // stop just before that so the logo slide after it never plays in the hero.
@@ -14,6 +17,9 @@ const HOLD_AT = 28.0;
 type State = "playing" | "idle" | "ended";
 
 export default function HeroVideo() {
+  // The poster is the largest thing on a phone screen (the LCP element), so
+  // fetch it ahead of the scripts.
+  preload(POSTER, { as: "image", fetchPriority: "high" });
   const ref = useRef<HTMLVideoElement>(null);
   const [muted, setMuted] = useState(true);
   const [state, setState] = useState<State>("playing");
@@ -27,7 +33,16 @@ export default function HeroVideo() {
       queueMicrotask(() => setState("idle"));
       return;
     }
-    v.play().catch(() => setState("idle"));
+    // Page speed (2026-11-04): the 1.4 MB video waits until the page has
+    // loaded, so it doesn't fight the page's own files on a phone connection.
+    // The poster shows until then.
+    const go = () => {
+      v.preload = "auto";
+      v.play().catch(() => setState("idle"));
+    };
+    if (document.readyState === "complete") go();
+    else window.addEventListener("load", go, { once: true });
+    return () => window.removeEventListener("load", go);
   }, []);
 
   function onTime() {
@@ -64,10 +79,10 @@ export default function HeroVideo() {
       <video
         ref={ref}
         src="/video/hero-explainer.mp4"
-        poster="/video/hero-explainer-poster.jpg"
+        poster={POSTER}
         muted
         playsInline
-        preload="auto"
+        preload="none"
         width={1280}
         height={720}
         onTimeUpdate={onTime}

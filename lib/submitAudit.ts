@@ -1,4 +1,4 @@
-import posthog from "posthog-js";
+import { ph as posthog } from "@/lib/ph";
 import { posthogRequestHeaders } from "@/lib/posthog-client";
 
 // The single stub every audit-form submission routes through, so a real

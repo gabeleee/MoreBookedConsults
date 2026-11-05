@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import posthog from "posthog-js";
+import { ph as posthog } from "@/lib/ph";
 import type { ComponentPropsWithoutRef, MouseEvent } from "react";
 
 // Every "free audit" CTA goes through this, so PostHog can tell which one

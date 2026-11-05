@@ -510,7 +510,7 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 
 /* Second Glance: luxury split popup */
 .sg-modal.lux{display:grid;grid-template-columns:42% 58%;width:84%;padding:0;overflow:hidden;text-align:left;background:#FBF7F2;border-radius:14px}
-.sg-photo{background:url(/home/exit-photo.jpg) 60% 30%/cover no-repeat;min-height:100%}
+.sg-photo{background:url(/home/exit-photo.webp) 60% 30%/cover no-repeat;min-height:100%}
 .sg-body{position:relative;padding:16px 14px 12px;display:flex;flex-direction:column}
 .sg-modal.lux .sg-x{right:8px;top:8px}
 .sg-brand{font-family:var(--display);font-size:11px;color:#7A5A38;letter-spacing:.02em;margin-bottom:6px}
@@ -536,7 +536,7 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 .mg-offer li > span{width:20px;height:20px;border-radius:50%;background:#7A5A38;color:#fff;font-size:10.5px;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
 .mg-offer em{display:block;font-style:normal;font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:#7A5A38}
 .mg-offer b{font-size:11.5px;color:#2A2220;line-height:1.25}
-.mg-ad{position:relative;border-radius:14px;overflow:hidden;min-height:250px;background:#2A2220 url(/injector.jpg) 50% 20%/cover no-repeat;display:flex;flex-direction:column;justify-content:space-between;
+.mg-ad{position:relative;border-radius:14px;overflow:hidden;min-height:250px;background:#2A2220 url(/injector.webp) 50% 20%/cover no-repeat;display:flex;flex-direction:column;justify-content:space-between;
   box-shadow:0 20px 40px -24px rgba(42,34,32,.7)}
 .mg-ad::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,24,22,.55) 0%,rgba(30,24,22,0) 30%,rgba(30,24,22,0) 45%,rgba(30,24,22,.85) 100%)}
 .mg-brand{position:relative;color:#F3E9DD;font-family:var(--display);font-size:12px;letter-spacing:.22em;padding:12px 14px}

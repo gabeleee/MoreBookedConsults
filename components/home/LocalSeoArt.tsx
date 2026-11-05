@@ -65,9 +65,9 @@ export function ProfileArt() {
     <Frame title="Your Google Business Profile">
       <div className="ls-gbp">
         <div className="ls-gbp-photos">
-          <span style={{ backgroundImage: "url(/home/exit-photo.jpg)", backgroundPosition: "50% 30%" }} />
-          <span style={{ backgroundImage: "url(/injector.jpg)", backgroundPosition: "50% 15%" }} />
-          <span style={{ backgroundImage: "url(/audit.jpg)", backgroundPosition: "50% 30%" }} />
+          <span style={{ backgroundImage: "url(/home/exit-photo.webp)", backgroundPosition: "50% 30%" }} />
+          <span style={{ backgroundImage: "url(/injector.webp)", backgroundPosition: "50% 15%" }} />
+          <span style={{ backgroundImage: "url(/audit.webp)", backgroundPosition: "50% 30%" }} />
         </div>
         <div className="ls-gbp-body">
           <b>Glow Aesthetics</b>
