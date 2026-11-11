@@ -1170,6 +1170,9 @@ dialog.dm[open]{animation:dmin .22s ease-out}
 .lp-what .br-badge svg,.lp-what .br-badge .ic{width:17px;height:17px;color:#fff;stroke:#fff;fill:none}
 .lp-what .tm,.lp-dlg .tm{font-family:var(--sans);font-size:.42em;font-weight:700;letter-spacing:.04em;vertical-align:super;margin-left:2px;color:var(--muted)}
 .lp-what .br-sub{display:block;font-style:normal;font-weight:600;font-size:.98rem;color:var(--ink);margin:2px 0 2px}
+/* No-price box (11-10): the price line is a reason to call */
+.lp-ask{font-family:var(--display);font-size:clamp(1.9rem,6vw,2.6rem);line-height:1.12;font-weight:700;margin:0;max-width:16em}
+.lp-askp{color:var(--muted);font-size:1.08rem;line-height:1.55;margin:0;max-width:30em}
 </style>
 </head><body>
 <div class="topbar">Your free injection-perfection.com booking audit</div>
@@ -1239,16 +1242,11 @@ dialog.dm[open]{animation:dmin .22s ease-out}
   <div class="lp-in narrow center">
     <div class="lp-price">
       <div class="lp-was"><span>Total value</span><s>$7,650</s></div>
-      <div class="lp-now"><span class="lp-nowlab">Your first month</span>
-      <div class="lp-bigrow"><span class="lp-big">$2,000</span><span class="lp-save">Save $500 on<br>first month</span></div>
-      <span class="lp-then">Then $2,500 a month for 2 new tests every month.</span></div>
+      <div class="lp-now"><span class="lp-nowlab">Your price</span>
+        <p class="lp-ask">Depends on what Injection Perfection needs.</p>
+        <p class="lp-askp">Every spa starts in a different place. Let&#x27;s talk it through on a quick 20-minute call, and you&#x27;ll know exactly what it costs before you decide anything.</p></div>
       <p class="lp-terms">No contract. Cancel anytime.</p>
       <a class="cal-btn lp-cta" href="#book" data-cta="price">Book your 20-minute call <span aria-hidden="true">→</span></a>
-      <div class="lp-deadline" data-deadline="2026-12-04T23:59:59-06:00">
-        <p class="lp-dl-h"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg><span>This price ends Dec 4</span></p>
-        <div class="lp-count" aria-label="Time left"><div><b data-u="d">--</b><span>days</span></div><div><b data-u="h">--</b><span>hours</span></div><div><b data-u="m">--</b><span>minutes</span></div><div><b data-u="s">--</b><span>seconds</span></div></div>
-        <p class="lp-dl-s">Start by Dec 4 and your first month is $2,000.</p>
-      </div>
     </div>
   </div>
 </section>
@@ -1282,10 +1280,11 @@ dialog.dm[open]{animation:dmin .22s ease-out}
 </section>
 <section class="lp-band alt">
   <div class="lp-in narrow">
-    <p class="lp-kicker">What it takes to pay for itself</p>
-    <div class="lp-roi" id="roi" data-fee="2500">
-      <div class="lp-roi-out"><span class="lp-roi-n" id="roi-n">6</span><span class="lp-roi-t">extra booked consults a month covers it.</span><span class="lp-roi-w" id="roi-w"></span></div>
+    <p class="lp-kicker">What more booked consults are worth</p>
+    <div class="lp-roi" id="roi">
+      <div class="lp-roi-out"><span class="lp-roi-n" id="roi-n">$21,600</span><span class="lp-roi-t">a year in new-client revenue.</span><span class="lp-roi-w" id="roi-w"></span></div>
       <div class="lp-roi-in">
+        <div class="rng"><label for="roi-x">Extra booked consults a month <output id="roi-xo">4</output></label><input id="roi-x" type="range" min="1" max="30" step="1" value="4"></div>
         <div class="rng"><label for="roi-v">What a new client is worth in year one <output id="roi-vo">$750</output></label><input id="roi-v" type="range" min="250" max="5000" step="50" value="750"></div>
         <div class="rng"><label for="roi-c">Consults that go ahead with treatment <output id="roi-co">60%</output></label><input id="roi-c" type="range" min="10" max="100" step="5" value="60"></div>
         <p class="lp-fine">Example numbers. Move them to match yours.</p>
@@ -1332,7 +1331,7 @@ dialog.dm[open]{animation:dmin .22s ease-out}
   <div class="lp-in narrow center">
     <div class="lp-cap"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8.5" r="3.2"/><path d="M3.5 19.5c.6-3 2.8-5 5.5-5s4.9 2 5.5 5"/><circle cx="16.8" cy="9.5" r="2.5"/><path d="M15.5 14.6c2.3.1 4.2 1.9 4.8 4.9"/></svg><span>I take on 4 new med spas a month.</span></div>
     <h2>Ready for more booked consults?</h2>
-    <p class="lp-urg">Start by Dec 4 and your first month is $2,000.</p>
+    <p class="lp-urg">Your price depends on what you need. Let's talk it through.</p>
     <a class="cal-btn lp-cta" href="#book" data-cta="close">Book your 20-minute call <span aria-hidden="true">→</span></a>
   </div>
 </section>
@@ -1590,31 +1589,18 @@ document.querySelectorAll('[data-cta]').forEach(function(a){a.addEventListener('
   if(p>=50&&!sent[p]){sent[p]=1;try{posthog.capture('audit_scroll',{depth:p});}catch(e){}}},{passive:true});})();
 </script><script>
 (function(){
-  var b=document.querySelector('.lp-deadline'); if(!b) return;
-  var end=new Date(b.getAttribute('data-deadline')).getTime();
-  function pad(n){return (n<10?'0':'')+n;}
-  function tick(){
-    var t=end-Date.now(); if(t<=0){b.style.display='none';return;}
-    var sec=Math.floor(t/1000), m=Math.floor(sec/60);
-    b.querySelector('[data-u=d]').textContent=Math.floor(m/1440);
-    b.querySelector('[data-u=h]').textContent=pad(Math.floor(m/60)%24);
-    b.querySelector('[data-u=m]').textContent=pad(m%60);
-    b.querySelector('[data-u=s]').textContent=pad(sec%60);
-  }
-  tick(); setInterval(tick,1000);
-})();
-(function(){
   var r=document.getElementById('roi'); if(!r) return;
-  var fee=+r.getAttribute('data-fee'), v=document.getElementById('roi-v'), c=document.getElementById('roi-c');
+  var x=document.getElementById('roi-x'), v=document.getElementById('roi-v'), c=document.getElementById('roi-c');
+  function m(n){return '$'+Math.round(n).toLocaleString('en-US');}
   function upd(){
-    var n=Math.ceil(fee/(+v.value*(+c.value/100)));
-    document.getElementById('roi-vo').textContent='$'+(+v.value).toLocaleString('en-US');
+    var cl=+x.value*(+c.value/100);
+    document.getElementById('roi-xo').textContent=x.value;
+    document.getElementById('roi-vo').textContent=m(+v.value);
     document.getElementById('roi-co').textContent=c.value+'%';
-    document.getElementById('roi-n').textContent=n;
-    var w=n/4.3;
-    document.getElementById('roi-w').textContent='That\'s about '+Math.max(1,Math.round(w))+' a week.';
+    document.getElementById('roi-n').textContent=m(cl*12*(+v.value));
+    document.getElementById('roi-w').textContent='About '+Math.max(1,Math.round(cl))+' new clients a month at '+m(+v.value)+' each.';
   }
-  [v,c].forEach(function(x){x.addEventListener('input',upd)}); upd();
+  [x,v,c].forEach(function(e){e.addEventListener('input',upd)}); upd();
 })();
 </script><script>
 (function(){
