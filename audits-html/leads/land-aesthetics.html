@@ -1423,7 +1423,9 @@ dialog.dm,dialog.dm:focus,dialog.dm:focus-visible,.dm-box:focus,.dm-box:focus-vi
 .nt-finds .ic{width:30px;height:30px;flex:none;color:var(--orange-ink);margin-top:2px}
 .nt-finds b{display:block;font-family:var(--display);font-weight:400;font-size:1.35rem;line-height:1.25;margin-bottom:6px}
 .nt-finds span{display:block;color:var(--muted);font-size:.98rem}
-.nt-finds span+span{margin-top:4px}
+.nt-finds span+span{margin-top:8px}
+.nt-l{color:var(--ink);font-weight:600}
+.nt-note{margin:16px 0 0!important;font-size:1rem;color:var(--ink)}
 .ba{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .ba div{text-align:center}
 .ba img{display:block;width:100%;height:auto;border:5px solid #1A1714;border-radius:24px;box-shadow:0 24px 50px -28px rgba(60,40,15,.6)}
@@ -1474,19 +1476,14 @@ dialog.dm,dialog.dm:focus,dialog.dm:focus-visible,.dm-box:focus,.dm-box:focus-vi
   <div class="lp-in wide">
     <h2>What I noticed on your booking page</h2>
     <div class="nt">
-      <ul class="nt-finds"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18h4v-4h4v-4h4V6h4"/><circle cx="20" cy="18" r="1.6"/><path d="M15.5 16.5l3 3"/></svg><div><b>Booking starts with 87 services.</b><span>Book Now opens your full menu before anyone can pick a time.</span><span>You know exactly what each client needs, but a new client has to work that out on her own first.</span></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/></svg><div><b>No Book button on the first phone screen.</b><span>On a phone, the first screen is your hero image, and its Book button is cut off at the edge.</span><span>Most people find you from Instagram on their phone, so that first screen matters most.</span></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4.5L3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z"/><path d="M9 4.5v13M15 6.5v13"/></svg><div><b>Google already loves you by name.</b><span>Search “Land Aesthetics” and you own the page, with 4.9 stars from 49 reviews.</span><span>Searches like laser hair removal or VI Peel in Denver don’t show you yet. That’s the opportunity.</span></div></li></ul>
+      <div><ul class="nt-finds"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 18h4v-4h4v-4h4V6h4"/><circle cx="20" cy="18" r="1.6"/><path d="M15.5 16.5l3 3"/></svg><div><b>Booking starts with 87 services.</b><span><strong class="nt-l">The problem:</strong> Book Now opens your full menu before anyone can pick a time, so a new client has to work out which treatment she needs on her own.</span><span><strong class="nt-l">The fix:</strong> A booking step that starts with her goal (hair removal, sun spots, acne scars, a tattoo), shows the 2 or 3 treatments that fit, then hands her to your GlossGenius calendar.</span></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="2.5" width="10" height="19" rx="2.2"/><path d="M11 18.5h2"/></svg><div><b>No Book button on the first phone screen.</b><span><strong class="nt-l">The problem:</strong> Most people find you from Instagram on their phone, and the first screen is your hero image with its Book button cut off at the edge.</span><span><strong class="nt-l">The fix:</strong> A phone layout with Book and Call always on screen, like the new design shown here.</span></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4.5L3.5 6.5v13l5.5-2 6 2 5.5-2v-13l-5.5 2z"/><path d="M9 4.5v13M15 6.5v13"/></svg><div><b>Google knows you by name, not by treatment.</b><span><strong class="nt-l">The problem:</strong> Search “Land Aesthetics” and you own the page, with 4.9 stars from 49 reviews. Searches like laser hair removal or VI Peel in Denver don’t show you yet.</span><span><strong class="nt-l">The fix:</strong> A page for each treatment and concern, so Google has something to show for each search.</span></div></li></ul>
+      <p class="nt-note">GlossGenius is a great calendar, but it’s a closed template, so none of these can be built inside it. They need your own website in front, with GlossGenius still running your bookings and payments behind it.</p>
+      <p class="nt-note"><b>One thing you can do this week:</b> add before-and-after photos to your GlossGenius Portfolio page. It’s empty today, and it’s what new clients look for first.</p></div>
       <figure class="ba">
         <div><img src="/audit-assets/land-aesthetics/today-m.jpg" width="780" height="1688" alt="Land Aesthetics on a phone today: the first screen shows the hero image with its Book button cut off" loading="lazy"><figcaption>Today, first phone screen</figcaption></div>
         <div><img src="/audit-assets/land-aesthetics/hero-design-m.jpg" width="780" height="1688" alt="The new design on a phone: Book Now and Call on the first screen" loading="lazy"><figcaption>New design, first phone screen</figcaption></div>
       </figure>
     </div>
-  </div>
-</section>
-<section class="lp-band">
-  <div class="lp-in narrow">
-    <h2>3 quick wins you can do this week on GlossGenius</h2>
-    <p class="qw-sub">Free, and worth doing whatever you decide about the rest of this page.</p>
-    <ol class="qw"><li><span class="n">1</span><div><b>Put your best sellers first.</b><span>Make a category of your 5 to 8 most-booked services at the top of GlossGenius, and group the rest by goal.</span></div></li><li><span class="n">2</span><div><b>Use a hero image without text on it.</b><span>Words baked into the photo get cropped on phones, which hides your Book button.</span></div></li><li><span class="n">3</span><div><b>Fill your Portfolio page.</b><span>It’s empty today, and before-and-after photos are what new clients look for first.</span></div></li></ol>
   </div>
 </section>
 <section class="lp-band alt">
