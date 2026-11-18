@@ -6,8 +6,10 @@ import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
 import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
+import { ProductTitle, ProductMark, MARK_FOR } from "@/components/home/ProductMark";
 import HeroVideo from "@/components/home/HeroVideo";
-import { MazeArt, WaitArt, BlindArt, SpotlightAds, AdMoneyFlow, AtlasArt, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
+import { MissedCallArt } from "@/components/home/FullBookArt";
+import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, AtlasArt, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03 draft): sold like a product. Five branded systems
 // from the proposals, a call as the only CTA, no prices, the founder named
@@ -95,9 +97,9 @@ const PAINS = [
     p: "A form comes in at 9 PM, someone calls back tomorrow, and the lead already booked somewhere else.",
   },
   {
-    Art: BlindArt,
-    t: "Nobody sees the drop-off",
-    p: "You know how many people visit, but not where they quit, so nothing gets fixed.",
+    Art: MissedCallArt,
+    t: "Calls go to voicemail",
+    p: "The phone rings while your team is with a client, and the caller books with whoever picks up first.",
   },
 ];
 
@@ -146,7 +148,7 @@ const FAQ = [
   },
   {
     q: "What does Sienna say on the call? Can I hear it first?",
-    a: "Sienna is set up with your treatments, policies and tone, and you approve the script before it goes live. It never gives medical advice, and it hands the call to your front desk whenever a person is better. We'll let you hear a live call on our first call.",
+    a: "Sienna is set up with your treatments, policies and tone, and you approve the script before it goes live. It never gives medical advice, and it hands the call to your front desk whenever a person is better. Call (773) 249-0840 to hear it now: Sienna answers for a sample med spa called Glow Aesthetics.",
   },
   {
     q: "How do you measure results?",
@@ -206,6 +208,14 @@ export default function Home() {
               <span className="hv-cta-arrow" aria-hidden="true">→</span>
             </a>
           </div>
+          <a className="fb-hear" href="tel:+17732490840">
+            <span className="fb-hear-ic" aria-hidden="true">
+              <LineIcon name="call" />
+            </span>
+            <span>
+              Hear Sienna<span className="fb-hear-long"> AI answer now</span>: <b>(773) 249-0840</b>
+            </span>
+          </a>
           <HeroVideo />
           <p className="hv-video-cap">Sample walkthrough. Glow Aesthetics is an illustrative med spa.</p>
         </div>
@@ -261,10 +271,7 @@ export default function Home() {
                   <p className="hv-sys-k">
                     System {n} · {cat}
                   </p>
-                  <h3>
-                    {name}
-                    <sup>™</sup>
-                  </h3>
+                  <ProductTitle id={MARK_FOR[name]} name={name} />
                   <p className="hv-sys-tag">{tag}</p>
                   <ul>
                     {pts.map((p) => (
@@ -285,9 +292,7 @@ export default function Home() {
           <div className="hv-bonus">
             <div className="hv-bonus-copy">
               <p className="hv-sys-k">Bonus · Offer builder</p>
-              <h3>
-                Consult Magnet<sup>™</sup>
-              </h3>
+              <ProductTitle id="consult-magnet" name="Consult Magnet" />
               <p className="hv-sys-tag">A first-visit offer people actually want to claim.</p>
               <p>We build a named package for your top treatment, then use it everywhere: your exit offer, your follow-up texts and your ads.</p>
               <CallButton className="btn-ghost">Get all five, plus the bonus</CallButton>
@@ -451,8 +456,11 @@ export default function Home() {
             <div className="hv-addon-top">
               <div>
                 <p className="hv-sys-k">Add-on · Facebook &amp; Instagram ads</p>
-                <h3>
-                  Spotlight<sup>™</sup> Ads
+                <h3 className="pm-title">
+                  <ProductMark id="spotlight" />
+                  <span>
+                    Spotlight<sup>™</sup> Ads
+                  </span>
                 </h3>
                 <p className="hv-sys-tag">Ads built to bring back more than they cost.</p>
                 <ul className="hv-addon-pts">
@@ -475,8 +483,11 @@ export default function Home() {
             <div className="hv-addon-top">
               <div>
                 <p className="hv-sys-k">Add-on · Local SEO</p>
-                <h3>
-                  Authority Atlas<sup>™</sup> Local SEO
+                <h3 className="pm-title">
+                  <ProductMark id="atlas" />
+                  <span>
+                    Authority Atlas<sup>™</sup> Local SEO
+                  </span>
                 </h3>
                 <p className="hv-sys-tag">Show up first when people near you are ready to book.</p>
                 <ul className="hv-addon-pts">
