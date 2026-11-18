@@ -771,6 +771,18 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 .ll-chart span{display:block;margin-top:6px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
 .ll-c1{right:4%;top:70px}
 .ll-c2{left:4%;bottom:150px}
+/* phones: the square frame is ~340px, so tighten Lift Lab so the cards don't cover the chart */
+@media (max-width:560px){
+  .ll-pair{top:80px;left:6%;right:6%;gap:10px}
+  .ll-v{gap:6px}
+  .ll-v p{padding:5px 8px;font-size:10px}
+  .ll-v p b{font-size:13px}
+  .ll-chart{left:6%;right:6%;bottom:14px;padding:8px 10px 6px}
+  .ll-chart svg{height:30px}
+  .ll-chart span{font-size:8px;margin-top:4px}
+  .ll-c1{display:none}
+  .ll-c2{display:none}
+}
 
 /* ===== Homepage hero, two columns (2026-11-18): copy left, phone right ===== */
 .hx-hero{padding:128px 0 70px}

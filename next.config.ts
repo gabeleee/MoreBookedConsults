@@ -20,6 +20,8 @@ const nextConfig: NextConfig = {
   // Merged pages: the old URL passes its signals to the one page that should rank.
   async redirects() {
     return [
+      // 2026-11-18: the draft Full Book page was retired for the one plan.
+      { source: "/full-book/", destination: "/pricing/", permanent: true },
       {
         source: "/blog/plastic-surgery-lead-generation/",
         destination: "/plastic-surgery-lead-generation/",
