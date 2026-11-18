@@ -202,7 +202,7 @@ const FAQ = [
   },
   {
     q: "How much does it cost?",
-    a: "You get one fixed monthly price on the demo call, based on your site, before you commit to anything. There's no contract.",
+    a: "Booking Systems are part of Full Book: $499 a month with your website included and a 12-month minimum. Plans start at $299 a month, and every plan is listed on our pricing page.",
   },
   {
     q: "What if I cancel?",
@@ -396,7 +396,7 @@ export default function BookingSystems() {
         <div className="wrap">
           <div className="hv-head">
             <h2>Everything that&apos;s included</h2>
-            <p>One fixed monthly price covers all of it, with no contract.</p>
+            <p>One monthly price covers all of it. <Link href="/pricing/">See plans and prices</Link>.</p>
           </div>
           <div className="bs-inc">
             {INCLUDED.map((g, gi) => (
@@ -595,7 +595,7 @@ export default function BookingSystems() {
                 <LineIcon name="clock" /> Booking flow live in 14 days, or month one is free
               </li>
               <li>
-                <LineIcon name="lock" /> No contract, cancel anytime
+                <LineIcon name="dollar" /> Plans from $299 a month
               </li>
             </ul>
             <p className="hv-fine">Booking rate = booking requests ÷ website visitors, measured against your week-1 baseline. For sites with at least 300 visitors a month.</p>

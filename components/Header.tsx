@@ -176,6 +176,7 @@ export default function Header() {
       <div className="wrap nav">
         <Logo href="/" />
         <nav className="nav-links" aria-label="Primary">
+          <Link href="/pricing/">Pricing</Link>
           <div className="nav-drop">
             <button type="button" className="nav-drop-btn" aria-haspopup="true">
               Services
@@ -208,9 +209,9 @@ export default function Header() {
                   ))}
                 </div>
                 <div className="mega-foot">
-                  <span>Not sure where to start? Most practices start with Booking Systems, then add traffic.</span>
-                  <Link href="/demo/">
-                    Get a free demo <LineIcon name="arrow" />
+                  <span>Not sure where to start? Plans start at $299 a month.</span>
+                  <Link href="/pricing/">
+                    See plans and prices <LineIcon name="arrow" />
                   </Link>
                 </div>
               </div>
@@ -268,6 +269,7 @@ export default function Header() {
         </AuditCtaLink>
         <MobileNav
           items={[
+            { href: "/pricing/", label: "Pricing" },
             ...SERVICES.map((s) => ({ href: s.href, label: s.title, sub: s.sub })),
             ...NAV,
             { href: "/tools/", label: "Free Tools" },
