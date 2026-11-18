@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 // company's client results. Program stats come from the Intellimize case study
 // (PDF in /public). No promises about the reader's results.
 const PDF = "/laseraway-intellimize-case-study.pdf";
-const CALL = "/pricing/"; // 2026-11-18: every CTA = See pricing (demo is secondary, on /pricing/)
+const CALL = "/pricing/"; // 2026-11-18: every CTA = Get started (demo is secondary, on /pricing/)
 
 const HERO_STATS = [
   { n: "3% → 11%", l: "Sitewide conversion", s: "LaserAway · 2018–2023" },
@@ -127,7 +127,7 @@ const FAQ = [
 function HeroCta() {
   return (
     <a className="btn hv-cta-hero" href={CALL}>
-      See pricing
+      Get started
       <span className="hv-cta-arrow" aria-hidden="true">→</span>
     </a>
   );
@@ -387,7 +387,7 @@ export default function Results() {
             <h2>Results, answered</h2>
             <p>Anything else? Email hello@morebookedconsults.com or book a <Link href="/demo/">free demo</Link>.</p>
             <a className="btn" href={CALL}>
-              See pricing
+              Get started
             </a>
           </div>
           <div className="hv-faq">

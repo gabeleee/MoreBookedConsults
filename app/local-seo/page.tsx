@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/local-seo/" },
 };
 
-const CALL = "/pricing/"; // 2026-11-18: every CTA = See pricing (demo is secondary, on /pricing/)
+const CALL = "/pricing/"; // 2026-11-18: every CTA = Get started (demo is secondary, on /pricing/)
 
 // Where each part sits in a searcher's path (the hero map).
 const PATH = [
@@ -232,7 +232,7 @@ function Mark({ v }: { v: string }) {
 function HeroCta() {
   return (
     <a className="btn hv-cta-hero" href={CALL}>
-      See pricing
+      Get started
       <span className="hv-cta-arrow" aria-hidden="true">→</span>
     </a>
   );
@@ -586,7 +586,7 @@ export default function LocalSeoPage() {
             <h2>Local SEO, answered</h2>
             <p>Anything else? Email hello@morebookedconsults.com or book a <Link href="/demo/">free demo</Link>.</p>
             <a className="btn" href={CALL}>
-              See pricing
+              Get started
             </a>
           </div>
           <div className="hv-faq">

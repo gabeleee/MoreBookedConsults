@@ -776,7 +776,7 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 .hx-hero{padding:128px 0 70px}
 .hx-in{display:grid;grid-template-columns:1.02fr .98fr;gap:40px;align-items:center}
 .hx-copy{text-align:left;display:flex;flex-direction:column;align-items:flex-start}
-.hx-hero h1{max-width:13ch;font-size:clamp(38px,4.6vw,58px);margin:0 0 18px}
+.hx-hero h1{max-width:15ch;font-size:clamp(36px,4.2vw,54px);margin:0 0 18px}
 .hx-copy .hv-lede{max-width:33em}
 .hx-ctas{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin:28px 0 20px}
 .hx-demo{font-size:15px;color:var(--soft);text-decoration:none}

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 // About page (2026-11-03 redesign in the service-page style). LaserAway
 // numbers are Gabe's personally, in his former role, never the company's.
-const CALL = "/pricing/"; // 2026-11-18: every CTA = See pricing (demo is secondary, on /pricing/)
+const CALL = "/pricing/"; // 2026-11-18: every CTA = Get started (demo is secondary, on /pricing/)
 
 // The origin story as a path (hero map).
 const PATH = [
@@ -45,7 +45,7 @@ const DONT = [
 function HeroCta() {
   return (
     <a className="btn hv-cta-hero" href={CALL}>
-      See pricing
+      Get started
       <span className="hv-cta-arrow" aria-hidden="true">→</span>
     </a>
   );

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "Aesthetic practice marketing for med spas and plastic surgeons: we build six booking systems into your website in 14 days, then keep improving them every month.",
 };
 
-const CALL = "/pricing/"; // 2026-11-18: every CTA = See pricing (demo is secondary, on /pricing/)
+const CALL = "/pricing/"; // 2026-11-18: every CTA = Get started (demo is secondary, on /pricing/)
 
 const SYSTEMS = [
   {
@@ -194,7 +194,7 @@ const FAQ = [
   },
 ];
 
-function CallButton({ children = "See pricing", className = "btn" }: { children?: React.ReactNode; className?: string }) {
+function CallButton({ children = "Get started", className = "btn" }: { children?: React.ReactNode; className?: string }) {
   return (
     <a className={className} href={CALL}>
       {children}
@@ -211,14 +211,14 @@ export default function Home() {
         <div className="wrap hx-in">
           <div className="hx-copy">
             <ProofLine />
-            <h1 data-prism-calm="0.8">Turn Your Website Into A Booking Machine</h1>
+            <h1 data-prism-calm="0.8">Turn More Of Your Website Visitors Into Booked Consults</h1>
             <p className="hv-lede" data-prism-calm="0.6">
               New Google pages every month, a booking flow that converts, and an AI receptionist that answers every call.
               One plan, done for you, $499 a month.
             </p>
             <div className="hx-ctas">
-              <Link className="btn hv-cta-hero" href="/pricing/#full-book">
-                Get started, $499/month
+              <Link className="btn hv-cta-hero" href="/pricing/">
+                Get started
                 <span className="hv-cta-arrow" aria-hidden="true">→</span>
               </Link>
               <Link className="hx-demo" href="/demo/">
@@ -493,7 +493,7 @@ export default function Home() {
             <li><LineIcon name="check" /> Every call answered, 24/7</li>
           </ul>
           <a className="btn hv-cta-hero" href={CALL}>
-            See pricing
+            Get started
             <span className="hv-cta-arrow" aria-hidden="true">→</span>
           </a>
           <p className="hv-book-alt">

@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "Aesthetic practice marketing for med spas and plastic surgeons: an AI receptionist that answers every call, a website that books, more people finding you on Google, and a monthly report in plain numbers.",
 };
 
-const CALL = "/pricing/"; // 2026-11-18: every CTA = See pricing (demo is secondary, on /pricing/)
+const CALL = "/pricing/"; // 2026-11-18: every CTA = Get started (demo is secondary, on /pricing/)
 const SIENNA_TEL = "tel:+17732490840";
 const SIENNA_NUM = "(773) 249-0840";
 
@@ -198,7 +198,7 @@ export default function FullBook() {
             <p className="hv-lede fb-lede2">All done for you, with a report every month showing exactly how many new clients it booked.</p>
             <div className="hv-ctas fb-ctas">
               <a className="btn hv-cta-hero" href={CALL}>
-                See pricing
+                Get started
                 <span className="hv-cta-arrow" aria-hidden="true">→</span>
               </a>
             </div>
@@ -439,7 +439,7 @@ export default function FullBook() {
             <h2>Questions, Answered</h2>
             <p>Anything else? Email hello@morebookedconsults.com or book a <Link href="/demo/">free demo</Link>.</p>
             <a className="btn" href={CALL}>
-              See pricing
+              Get started
             </a>
           </div>
           <div className="hv-faq">
@@ -467,7 +467,7 @@ export default function FullBook() {
             <li><LineIcon name="check" /> One fixed monthly price, no pressure</li>
           </ul>
           <a className="btn hv-cta-hero" href={CALL}>
-            See pricing
+            Get started
             <span className="hv-cta-arrow" aria-hidden="true">→</span>
           </a>
           <p className="hv-book-alt">
