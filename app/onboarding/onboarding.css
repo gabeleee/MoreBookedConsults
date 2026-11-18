@@ -1,0 +1,58 @@
+/* Client onboarding intake (/onboarding/). */
+.ob{padding:56px 0 96px;background:var(--paper);min-height:80vh}
+.ob-wrap{max-width:720px}
+.ob-head h1{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);font-size:clamp(30px,5vw,44px);line-height:1.1;margin:14px 0 14px;color:var(--ink)}
+.ob-head p{color:var(--soft);font-size:17px;margin:0 0 6px;max-width:56ch}
+.ob-head .ob-plan{display:inline-block;margin-top:14px;padding:7px 14px;border-radius:999px;background:var(--lilac);color:var(--violet-deep);font-weight:600;font-size:14.5px}
+
+.ob-card{margin-top:32px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:30px 30px 26px;box-shadow:0 18px 40px -28px rgba(57,26,41,.35)}
+.ob-card h2{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);font-size:26px;margin:4px 0 6px;color:var(--ink)}
+.ob-intro{color:var(--soft);margin:0 0 22px;font-size:16px}
+.ob-feeds{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--violet);margin:0}
+
+.ob-progress{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:22px}
+.ob-progress-label{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);white-space:nowrap}
+.ob-bars{display:flex;gap:5px;flex:1;max-width:340px}
+.ob-bars button{flex:1;height:6px;border-radius:99px;border:0;padding:0;background:var(--line);cursor:default}
+.ob-bars button.on{background:var(--violet);cursor:pointer}
+.ob-bars button.now{background:linear-gradient(90deg,var(--violet),var(--blue))}
+
+.ob-field{margin:0 0 18px;border:0;padding:0;min-width:0}
+.ob-field label,.ob-field legend{display:block;font-weight:600;font-size:15.5px;color:var(--ink);margin-bottom:6px;padding:0}
+.ob-req{color:var(--violet)}
+.ob-hint{color:var(--soft);font-size:14px;margin:-2px 0 8px}
+.ob-field input,.ob-field textarea{width:100%;box-sizing:border-box;padding:12px 14px;font:inherit;font-size:16px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink)}
+.ob-field textarea{resize:vertical;min-height:84px}
+.ob-field input:focus,.ob-field textarea:focus{outline:2px solid var(--violet);outline-offset:1px;border-color:transparent}
+.ob-bad input,.ob-bad textarea,.ob-bad .ob-opt{border-color:#D23B5A}
+.ob-bad label,.ob-bad legend{color:#B4233F}
+
+.ob-opts{display:flex;flex-wrap:wrap;gap:8px}
+.ob-opt{font:inherit;font-size:15px;padding:10px 15px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;text-align:left;transition:background .15s,border-color .15s}
+.ob-opt:hover{border-color:var(--violet)}
+.ob-opt.on{background:var(--violet);border-color:var(--violet);color:#fff}
+.ob-opt:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+
+.ob-error{color:#B4233F;font-weight:600;margin:4px 0 0}
+.ob-nav{display:flex;gap:10px;margin-top:22px}
+.ob-nav .btn,.ob-nav .btn-ghost{flex:1;font-size:16px;padding:14px 20px}
+.ob-saved{color:var(--soft);font-size:13.5px;text-align:center;margin:14px 0 0}
+
+.ob-review{border-top:1px solid var(--line);padding:16px 0 4px}
+.ob-review-head{display:flex;align-items:center;justify-content:space-between}
+.ob-review h3{font-size:17px;margin:0;color:var(--ink)}
+.ob-edit{font:inherit;font-size:14px;font-weight:600;color:var(--violet);background:none;border:0;cursor:pointer;padding:6px}
+.ob-review dl{margin:8px 0 0}
+.ob-review dl div{margin:0 0 10px}
+.ob-review dt{font-size:13.5px;color:var(--soft)}
+.ob-review dd{margin:2px 0 0;white-space:pre-wrap;color:var(--ink)}
+
+.ob-done{text-align:center;padding:44px 30px}
+.ob-done p{color:var(--soft);margin:0 0 6px}
+
+@media (max-width:600px){
+  .ob{padding:32px 0 64px}
+  .ob-wrap{padding:0 16px}
+  .ob-card{padding:22px 18px 20px;border-radius:16px}
+  .ob-opt{width:100%}
+}
