@@ -13,9 +13,8 @@ import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
 import { LineIcon } from "@/components/LineIcon";
 import { ProductTitle, ProductMark, MARK_FOR } from "@/components/home/ProductMark";
-import HeroVideo from "@/components/home/HeroVideo";
-import { MissedCallArt } from "@/components/home/FullBookArt";
-import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, LiftLabArt, ClearViewArt } from "@/components/home/SystemArt";
+import HomeHeroArt from "@/components/home/HomeHeroArt";
+import { SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, LiftLabArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03): sold like a product. Branded systems from the
 // proposals, a call as the main CTA, the founder named once inside the proof
@@ -26,7 +25,7 @@ export const metadata: Metadata = {
     "Aesthetic practice marketing for med spas and plastic surgeons: we build six booking systems into your website in 14 days, then keep improving them every month.",
 };
 
-const CALL = "/demo/";
+const CALL = "/pricing/"; // 2026-11-18: every CTA = Get started (demo is secondary, on /pricing/)
 
 const SYSTEMS = [
   {
@@ -103,24 +102,6 @@ const SYSTEMS = [
   },
 ];
 
-const PAINS = [
-  {
-    Art: MazeArt,
-    t: "The Book button is a maze",
-    p: "People tap Book, land on a long booking page full of treatments and prices, and give up.",
-  },
-  {
-    Art: WaitArt,
-    t: "New leads wait hours",
-    p: "A form comes in at 9 PM, someone calls back tomorrow, and the lead already booked somewhere else.",
-  },
-  {
-    Art: MissedCallArt,
-    t: "Calls go to voicemail",
-    p: "The phone rings while your team is with a client, and the caller books with whoever picks up first.",
-  },
-];
-
 const BENEFITS = [
   { Art: FastArt, t: "Live in 14 days", p: "Your new booking flow is on your site within two weeks of our kickoff." },
   { Art: KeepArt, t: "Keep your website and software", p: "We add to the site and booking system you already have. No rebuild, no migration." },
@@ -190,11 +171,11 @@ const FAQ = [
   },
   {
     q: "Is there a contract? What if I cancel?",
-    a: "The Optimized Booking System has a 6-month minimum, because new Google pages take a few months to rank. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
+    a: "No. The Optimized Booking System is month to month, and you can cancel anytime with 30 days' notice. The free website is the one exception: it needs 12 months. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
   },
 ];
 
-function CallButton({ children = "Get a free demo", className = "btn" }: { children?: React.ReactNode; className?: string }) {
+function CallButton({ children = "Get started", className = "btn" }: { children?: React.ReactNode; className?: string }) {
   return (
     <a className={className} href={CALL}>
       {children}
@@ -205,37 +186,38 @@ function CallButton({ children = "Get a free demo", className = "btn" }: { child
 export default function Home() {
   return (
     <main className="hv">
-      {/* ---------------- Hero ---------------- */}
-      <section className="hv-hero" id="top">
+      {/* ---------------- Hero (two columns, 2026-11-18) ---------------- */}
+      <section className="hv-hero hx-hero" id="top">
         <PrismBackground tone="light" gain={1.25} tilt={0.38} phase={70} />
-        <div className="wrap hv-hero-in">
-          <h1 data-prism-calm="0.8">Turn more of your website visitors into booked consults.</h1>
-          <ProofLine />
-          <p className="hv-lede" data-prism-calm="0.6">
-            We build <a href="#systems">six booking systems</a>{" "}into your med spa&apos;s website in 14 days, then keep improving them every month.
-            Done for you, measured, $499 a month.
-          </p>
-          <div className="hv-ctas">
-            <a className="btn hv-cta-hero" href={CALL}>
-              <span className="hv-cta-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M9 7.5v9l7.5-4.5z" />
-                </svg>
+        <div className="wrap hx-in">
+          <div className="hx-copy">
+            <ProofLine />
+            <h1 data-prism-calm="0.8">Turn More Of Your Website Visitors Into Booked Consults</h1>
+            <ul className="hx-bullets" data-prism-calm="0.6">
+              <li><LineIcon name="check" /> New Google pages every month</li>
+              <li><LineIcon name="check" /> A booking flow that converts</li>
+              <li><LineIcon name="check" /> An AI receptionist that answers every call</li>
+              <li><LineIcon name="check" /> One plan, done for you, $499 a month</li>
+            </ul>
+            <div className="hx-ctas">
+              <Link className="btn hv-cta-hero" href="/pricing/">
+                Get started
+                <span className="hv-cta-arrow" aria-hidden="true">→</span>
+              </Link>
+              <Link className="hx-demo" href="/demo/">
+                Prefer to talk first? <span>Book a free demo</span>
+              </Link>
+            </div>
+            <a className="fb-hear" href="tel:+17732490840">
+              <span className="fb-hear-ic" aria-hidden="true">
+                <LineIcon name="call" />
               </span>
-              Get a free demo
-              <span className="hv-cta-arrow" aria-hidden="true">→</span>
+              <span>
+                Hear Sienna<span className="fb-hear-long"> AI answer now</span>: <b>(773) 249-0840</b>
+              </span>
             </a>
           </div>
-          <a className="fb-hear" href="tel:+17732490840">
-            <span className="fb-hear-ic" aria-hidden="true">
-              <LineIcon name="call" />
-            </span>
-            <span>
-              Hear Sienna<span className="fb-hear-long"> AI answer now</span>: <b>(773) 249-0840</b>
-            </span>
-          </a>
-          <HeroVideo />
-          <p className="hv-video-cap">Sample walkthrough. Glow Aesthetics is an illustrative med spa.</p>
+          <HomeHeroArt />
         </div>
       </section>
 
@@ -253,31 +235,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- Problem ---------------- */}
-      <section className="hv-sec">
-        <div className="wrap">
-          <div className="hv-head">
-            <h2>Your website gets the visits. Your calendar doesn&apos;t get the bookings.</h2>
-            <p>Most people who want a consult never finish booking one.</p>
-          </div>
-          <div className="hv-pains">
-            {PAINS.map(({ Art, ...x }) => (
-              <div key={x.t} className="hv-pain has-art">
-                <Art />
-                <h3>{x.t}</h3>
-                <p>{x.p}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ---------------- Systems ---------------- */}
       <section className="hv-sec hv-systems" id="systems">
         <div className="wrap">
           <div className="hv-head">
-            <h2>Every place you lose a booking, covered</h2>
-            <p>Aesthetic practice marketing for med spas and plastic surgeons, starting where the money leaks: your booking path.</p>
+            <h2>6 Systems That Turn More Visitors Into Booked Consults</h2>
+            <p>Each one is built and run for you, and each one raises how many of your visitors book.</p>
           </div>
           <div className="hv-sys-list">
             {SYSTEMS.map(({ n, cat, name, tag, pts, Art }, i) => (
@@ -486,20 +449,15 @@ export default function Home() {
       {/* ---------------- Final CTA ---------------- */}
       <section className="hv-book" id="book">
         <div className="wrap hv-final">
-          <h2>See What We Would Build For Your Site</h2>
-          <p>A free 20-minute demo. Answer 5 quick questions, then pick your time.</p>
+          <h2>One Plan, Everything Included</h2>
+          <p>The Optimized Booking System™ is $499 a month. See everything that&apos;s included, then get started in minutes.</p>
           <ul>
-            <li><LineIcon name="check" /> Where your site loses bookings today</li>
-            <li><LineIcon name="check" /> Hear Sienna AI make a live call</li>
-            <li><LineIcon name="check" /> A fixed monthly price, no pressure</li>
+            <li><LineIcon name="check" /> 20 new Google pages every month</li>
+            <li><LineIcon name="check" /> A booking flow built to convert</li>
+            <li><LineIcon name="check" /> Every call answered, 24/7</li>
           </ul>
           <a className="btn hv-cta-hero" href={CALL}>
-            <span className="hv-cta-ic" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M9 7.5v9l7.5-4.5z" />
-              </svg>
-            </span>
-            Get a free demo
+            Get started
             <span className="hv-cta-arrow" aria-hidden="true">→</span>
           </a>
           <p className="hv-book-alt">

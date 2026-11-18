@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 
 // About page (2026-11-03 redesign in the service-page style). LaserAway
 // numbers are Gabe's personally, in his former role, never the company's.
-const CALL = "/demo/";
+const CALL = "/pricing/"; // 2026-11-18: every CTA = Get started (demo is secondary, on /pricing/)
 
 // The origin story as a path (hero map).
 const PATH = [
@@ -45,12 +45,7 @@ const DONT = [
 function HeroCta() {
   return (
     <a className="btn hv-cta-hero" href={CALL}>
-      <span className="hv-cta-ic" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M9 7.5v9l7.5-4.5z" />
-        </svg>
-      </span>
-      Get a free demo
+      Get started
       <span className="hv-cta-arrow" aria-hidden="true">→</span>
     </a>
   );
@@ -321,12 +316,12 @@ export default function About() {
       {/* ---------------- Final CTA ---------------- */}
       <section className="hv-book">
         <div className="wrap hv-final">
-          <h2>See what we&apos;d change on your site</h2>
-          <p>A free 20-minute demo with Gabe. Answer 5 quick questions, then pick your time.</p>
+          <h2>One Plan, Everything Included</h2>
+          <p>The Optimized Booking System™ is $499 a month. See everything that&apos;s included, then get started in minutes.</p>
           <ul>
-            <li><LineIcon name="check" /> Where your site loses bookings today</li>
-            <li><LineIcon name="check" /> Hear Sienna AI make a live call</li>
-            <li><LineIcon name="check" /> A fixed monthly price, no pressure</li>
+            <li><LineIcon name="check" /> 20 new Google pages every month</li>
+            <li><LineIcon name="check" /> A booking flow built to convert</li>
+            <li><LineIcon name="check" /> Every call answered, 24/7</li>
           </ul>
           <HeroCta />
           <p className="hv-book-alt">

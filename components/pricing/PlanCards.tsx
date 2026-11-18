@@ -6,7 +6,7 @@ import { TreatmentPagesArt } from "@/components/home/LocalSeoArt";
 import { RaveLoopArt, MonthlyReportArt } from "@/components/home/FullBookArt";
 import SeeExample from "@/components/pricing/SeeExample";
 
-// One plan (Gabe 2026-11-18; named "Full Book" until renamed the same day): Optimized Booking System™ $499/mo, 6-month minimum. The website
+// One plan (Gabe 2026-11-18; named "Full Book" until renamed the same day): Optimized Booking System™ $499/mo, month to month. The website
 // is OPTIONAL (built free if they need one) and is NOT counted in the value, so
 // practices that keep their own site (e.g. multi-location spas) still see the
 // value. Front Desk ($299) and Full Book Pro ($749) were dropped the same
@@ -73,9 +73,9 @@ export const ITEMS: Item[] = [
   { mark: "clear-view", name: "Clear View", d: "Monthly report + live dashboard", basis: "Monthly reporting and a live dashboard", value: 250 },
 ];
 
-// Why the minimum is 6 months (shown in a tooltip next to the terms).
+// Month to month since 11-18 (Gabe dropped the 6-month minimum); the tooltip sets expectations instead.
 export const MIN_WHY =
-  "New Google pages usually take 3 to 6 months to rank, and design tests need a few months of real numbers to show what books more. Six months is enough time to see results you can count. After that, it's month to month.";
+  "No contract. Cancel anytime with 30 days' notice. New Google pages usually take 3 to 6 months to rank, so most practices see the biggest gains after month three.";
 
 // Small "?" with a tooltip on hover or tap (CSS only: .pv-tip in pv.css).
 export function Tip({ text, label = "Why?" }: { text: string; label?: string }) {
@@ -113,7 +113,7 @@ export function WebsiteOptional({ compact = false }: { compact?: boolean }) {
 // Fine print for the free website (Gabe 11-18: the free build needs a longer
 // commitment; 12 months matches the offer sent to Land Aesthetics).
 export const FREE_SITE_TERMS =
-  "*Free website: available with a 12-month minimum. Without a new website, the Optimized Booking System has a 6-month minimum. The website is built on your own domain and stays yours.";
+  "*Free website: available with a 12-month minimum. Without a new website, the Optimized Booking System is month to month. The website is built on your own domain and stays yours.";
 
 export const TOTAL = ITEMS.reduce((a, i) => a + i.value, 0);
 export const PRICE = 499;
@@ -171,7 +171,7 @@ export function PlanCards({ cta = "Get a free demo" }: { cta?: string }) {
           <span>/month</span>
         </p>
         <p className="pr-terms">
-          6-month minimum <Tip text={MIN_WHY} label="Why a 6-month minimum?" />
+          No contract · cancel anytime <Tip text={MIN_WHY} label="When will I see results?" />
         </p>
         <div className="pv-hi">
           <span>Highlights</span>

@@ -17,7 +17,7 @@ import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, WebsiteOptional, Tip, MIN_WHY, 
 
 
 // Pricing (2026-11-18, Gabe): website as the front door. ONE plan, Optimized Booking System
-// $499/mo, 6-month minimum, website optional (free) + add-ons; no second plan.
+// $499/mo, month to month (no minimum), website optional (free with 12 months) + add-ons; no second plan.
 // Value stack (crossed-out year-one values) mirrors the proposals.
 // Plan cards live in components/pricing/PlanCards.tsx (also on the homepage).
 export const metadata: Metadata = {
@@ -85,8 +85,8 @@ const FAQ: { q: string; a: ReactNode }[] = [
     a: "No. Most of what you get works on the website you already have: new Google pages, the booking flow, the exit offer, Sienna AI and the monthly design tests. If you do need a new site, or yours is just a booking-app page, we build one for you free, on your own domain, with a 12-month minimum.",
   },
   {
-    q: "Why is there a 6-month minimum?",
-    a: "New Google pages usually take 3 to 6 months to rank, and design tests need a few months of real numbers to show what books more. Six months is enough time to see results you can count. After that, it's month to month with 30 days' notice.",
+    q: "Is there a contract?",
+    a: "No. It's month to month, and you can cancel anytime with 30 days' notice. The only exception is the free website, which needs a 12-month commitment. New Google pages usually take 3 to 6 months to rank, so most practices see the biggest gains after month three.",
   },
   {
     q: "What's Lift Lab?",
@@ -207,7 +207,7 @@ export default function Pricing() {
                   <small>/month</small>
                 </b>
                 <em>
-                  6-month minimum <Tip text={MIN_WHY} label="Why a 6-month minimum?" />
+                  No contract · cancel anytime <Tip text={MIN_WHY} label="When will I see results?" />
                 </em>
               </div>
               <a className="btn" href={BUY_URL || CALL}>
@@ -295,8 +295,8 @@ export default function Pricing() {
         <div className="wrap hv-faq-wrap">
           <div className="hv-head left">
             <h2>Pricing, Answered</h2>
-            <p>Not sure which plan fits? We&apos;ll tell you on the demo.</p>
-            <a className="btn" href={CALL}>Get a free demo</a>
+            <p>Still deciding? Book a <Link href="/demo/">free demo</Link> and ask us anything.</p>
+            <a className="btn" href={BUY_URL || CALL}>Get started</a>
           </div>
           <div className="hv-faq">
             {FAQ.map((f) => (
@@ -315,9 +315,9 @@ export default function Pricing() {
       <section className="hv-book">
         <div className="wrap hv-final">
           <h2>Hear Sienna Answer Before You Decide</h2>
-          <p>Call our demo line: <a href="tel:+17732490840">(773) 249-0840</a>. Then book a free 20-minute demo.</p>
-          <a className="btn hv-cta-hero" href={CALL}>
-            Get a free demo <span className="hv-cta-arrow" aria-hidden="true">→</span>
+          <p>Call our demo line: <a href="tel:+17732490840">(773) 249-0840</a>. Then get started in minutes.</p>
+          <a className="btn hv-cta-hero" href={BUY_URL || CALL}>
+            Get started, $499/month <span className="hv-cta-arrow" aria-hidden="true">→</span>
           </a>
           <p className="hv-book-alt">Or see <Link href="/results/">the track record</Link>.</p>
           <p className="pv-fine" id="fine-print">{FREE_SITE_TERMS}</p>

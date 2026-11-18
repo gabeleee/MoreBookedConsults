@@ -11,7 +11,7 @@ import { TopicalMapArt, ProfileArt, TreatmentPagesArt, CitationsArt, RankGridArt
 
 // Authority Atlas (local SEO) service page (2026-11-03 draft). The Services
 // menu points here; /medspa-seo/ stays as the SEO page. Same layout and styles
-// as /booking-systems/ and /spotlight-ads/. No prices (the 6-month minimum is
+// as /booking-systems/ and /spotlight-ads/. No prices (the term
 // a fit fact). Never promise a ranking: the seal is about ownership.
 export const metadata: Metadata = {
   title: "Authority Atlas: Local SEO For Med Spas And Plastic Surgeons",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/local-seo/" },
 };
 
-const CALL = "/demo/";
+const CALL = "/pricing/"; // 2026-11-18: every CTA = Get started (demo is secondary, on /pricing/)
 
 // Where each part sits in a searcher's path (the hero map).
 const PATH = [
@@ -181,7 +181,7 @@ const COMPARE: [string, string, string, string][] = [
 const FAQ = [
   {
     q: "How long does local SEO take?",
-    a: "Google profile improvements can show in weeks. Ranking for competitive treatment-and-city searches usually takes a few months of steady work, which is why Optimized Booking System has a 6-month minimum.",
+    a: "Google profile improvements can show in weeks. Ranking for competitive treatment-and-city searches usually takes a few months of steady work, so most practices see the biggest gains after month three.",
   },
   {
     q: "Do you guarantee first-page rankings?",
@@ -189,7 +189,7 @@ const FAQ = [
   },
   {
     q: "How much does it cost?",
-    a: "Authority Atlas is part of the Optimized Booking System: $499 a month for 20 new pages a month, with a 6-month minimum, since rankings take months to build.",
+    a: "Authority Atlas is part of the Optimized Booking System: $499 a month for 20 new pages a month, month to month, since rankings take months to build.",
   },
   {
     q: "Do you run review campaigns?",
@@ -232,12 +232,7 @@ function Mark({ v }: { v: string }) {
 function HeroCta() {
   return (
     <a className="btn hv-cta-hero" href={CALL}>
-      <span className="hv-cta-ic" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M9 7.5v9l7.5-4.5z" />
-        </svg>
-      </span>
-      Get a free demo
+      Get started
       <span className="hv-cta-arrow" aria-hidden="true">→</span>
     </a>
   );
@@ -589,9 +584,9 @@ export default function LocalSeoPage() {
         <div className="wrap hv-faq-wrap">
           <div className="hv-head left">
             <h2>Local SEO, answered</h2>
-            <p>Anything else, ask us on the demo.</p>
+            <p>Anything else? Email hello@morebookedconsults.com or book a <Link href="/demo/">free demo</Link>.</p>
             <a className="btn" href={CALL}>
-              Get a free demo
+              Get started
             </a>
           </div>
           <div className="hv-faq">
@@ -612,7 +607,7 @@ export default function LocalSeoPage() {
       <section className="hv-book">
         <div className="wrap hv-final">
           <h2>See where you show up today</h2>
-          <p>A free 20-minute demo. Answer 5 quick questions, then pick your time.</p>
+          <p>The Optimized Booking System™ is $499 a month. See everything that&apos;s included, then get started in minutes.</p>
           <ul>
             <li><LineIcon name="check" /> How you rank for your top treatments</li>
             <li><LineIcon name="check" /> The pages we&apos;d build first</li>

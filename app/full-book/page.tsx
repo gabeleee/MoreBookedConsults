@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "Aesthetic practice marketing for med spas and plastic surgeons: an AI receptionist that answers every call, a website that books, more people finding you on Google, and a monthly report in plain numbers.",
 };
 
-const CALL = "/demo/";
+const CALL = "/pricing/"; // 2026-11-18: every CTA = Get started (demo is secondary, on /pricing/)
 const SIENNA_TEL = "tel:+17732490840";
 const SIENNA_NUM = "(773) 249-0840";
 
@@ -169,16 +169,6 @@ const FAQ = [
   },
 ];
 
-function PlayIcon() {
-  return (
-    <span className="hv-cta-ic" aria-hidden="true">
-      <svg viewBox="0 0 24 24">
-        <path d="M9 7.5v9l7.5-4.5z" />
-      </svg>
-    </span>
-  );
-}
-
 function HearSienna({ className = "" }: { className?: string }) {
   return (
     <a className={`fb-hear ${className}`} href={SIENNA_TEL}>
@@ -208,8 +198,7 @@ export default function FullBook() {
             <p className="hv-lede fb-lede2">All done for you, with a report every month showing exactly how many new clients it booked.</p>
             <div className="hv-ctas fb-ctas">
               <a className="btn hv-cta-hero" href={CALL}>
-                <PlayIcon />
-                Get a free demo
+                Get started
                 <span className="hv-cta-arrow" aria-hidden="true">→</span>
               </a>
             </div>
@@ -448,9 +437,9 @@ export default function FullBook() {
         <div className="wrap hv-faq-wrap">
           <div className="hv-head left">
             <h2>Questions, Answered</h2>
-            <p>Anything else, ask us on the demo.</p>
+            <p>Anything else? Email hello@morebookedconsults.com or book a <Link href="/demo/">free demo</Link>.</p>
             <a className="btn" href={CALL}>
-              Get a free demo
+              Get started
             </a>
           </div>
           <div className="hv-faq">
@@ -471,15 +460,14 @@ export default function FullBook() {
       <section className="hv-book" id="book">
         <div className="wrap hv-final">
           <h2>Hear What Sienna Would Say To Your Callers</h2>
-          <p>A free 20-minute demo. Answer 5 quick questions, then pick your time.</p>
+          <p>The Optimized Booking System™ is $499 a month. See everything that&apos;s included, then get started in minutes.</p>
           <ul>
             <li><LineIcon name="check" /> Hear Sienna take a live call</li>
             <li><LineIcon name="check" /> See where new clients slip away today</li>
             <li><LineIcon name="check" /> One fixed monthly price, no pressure</li>
           </ul>
           <a className="btn hv-cta-hero" href={CALL}>
-            <PlayIcon />
-            Get a free demo
+            Get started
             <span className="hv-cta-arrow" aria-hidden="true">→</span>
           </a>
           <p className="hv-book-alt">
