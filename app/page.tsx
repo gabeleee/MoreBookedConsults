@@ -4,15 +4,18 @@ import Link from "next/link";
 import "./home-v2.css";
 import "./pricing/pr.css";
 import "./pricing/pv.css";
-import { PlanCards } from "@/components/pricing/PlanCards";
+import "./pricing/pv3.css";
+import "./local-seo/ls.css";
+import "./full-book/fb.css";
+import { PlanCards, FREE_SITE_TERMS } from "@/components/pricing/PlanCards";
+import LaserAwayProof from "@/components/home/LaserAwayProof";
 import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
-import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
 import { ProductTitle, ProductMark, MARK_FOR } from "@/components/home/ProductMark";
 import HeroVideo from "@/components/home/HeroVideo";
 import { MissedCallArt } from "@/components/home/FullBookArt";
-import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
+import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, LiftLabArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03): sold like a product. Branded systems from the
 // proposals, a call as the main CTA, the founder named once inside the proof
@@ -20,7 +23,7 @@ import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   description:
-    "Aesthetic practice marketing for med spas and plastic surgeons: we build five booking systems into your website in 14 days, then keep improving them every month.",
+    "Aesthetic practice marketing for med spas and plastic surgeons: we build six booking systems into your website in 14 days, then keep improving them every month.",
 };
 
 const CALL = "/demo/";
@@ -76,6 +79,18 @@ const SYSTEMS = [
   },
   {
     n: "05",
+    cat: "Design tests",
+    name: "Lift Lab",
+    tag: "Your booking rate climbs every month.",
+    pts: [
+      "2 new design tests on your site every month: offers, booking steps, layouts and treatment pages.",
+      "Picked from what your numbers show, starting with the biggest leak.",
+      "We keep the winners, so each month starts from a higher booking rate.",
+    ],
+    Art: LiftLabArt,
+  },
+  {
+    n: "06",
     cat: "Live dashboard",
     name: "Clear View",
     tag: "Know what's working, any time.",
@@ -135,7 +150,7 @@ const PLATFORMS = [
 const FAQ = [
   {
     q: "How much does it cost?",
-    a: "Two plans. Front Desk ($299) answers every call. Full Book ($499) adds a new website designed to book and 20 new Google pages a month, with your website included. Both are listed on our pricing page.",
+    a: "One plan, everything included: the Optimized Booking System is $499 a month for 20 new Google pages a month, a booking flow built to convert and an AI receptionist that answers every call, on your website or a new one we build free. Need more pages or design tests? Add them anytime. It's all on our pricing page.",
   },
   {
     q: "Does it work with my booking software?",
@@ -143,7 +158,7 @@ const FAQ = [
   },
   {
     q: "Do I need a new website?",
-    a: "Front Desk works with the site you have. Full Book includes a new website designed to book. If you love your current site, we can redesign the pages that matter most for booking instead.",
+    a: "No. Everything works on the website you already have. If you need a new one, or you only have a booking-app page, we build it free with a 12-month minimum.",
   },
   {
     q: "How long until it's live?",
@@ -167,7 +182,7 @@ const FAQ = [
   },
   {
     q: "Do you run ads or SEO too?",
-    a: "SEO is built into Full Book: Authority Atlas adds new Google pages for your treatments every month. Meta ads (Spotlight Ads) are an add-on once your site books more of the visitors it already gets.",
+    a: "SEO is built into the Optimized Booking System: Authority Atlas adds new Google pages for your treatments every month. Meta ads (Spotlight Ads) are an add-on once your site books more of the visitors it already gets.",
   },
   {
     q: "Who will I work with?",
@@ -175,7 +190,7 @@ const FAQ = [
   },
   {
     q: "Is there a contract? What if I cancel?",
-    a: "Front Desk is month to month. Full Book includes your website and has a 12-month minimum. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
+    a: "The Optimized Booking System has a 6-month minimum, because new Google pages take a few months to rank. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
   },
 ];
 
@@ -197,8 +212,8 @@ export default function Home() {
           <h1 data-prism-calm="0.8">Turn more of your website visitors into booked consults.</h1>
           <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
-            We build <a href="#systems">five booking systems</a>{" "}into your med spa&apos;s website in 14 days, then keep improving them every month.
-            Done for you, measured, from $299 a month.
+            We build <a href="#systems">six booking systems</a>{" "}into your med spa&apos;s website in 14 days, then keep improving them every month.
+            Done for you, measured, $499 a month.
           </p>
           <div className="hv-ctas">
             <a className="btn hv-cta-hero" href={CALL}>
@@ -298,7 +313,7 @@ export default function Home() {
               <ProductTitle id="consult-magnet" name="Consult Magnet" />
               <p className="hv-sys-tag">A first-visit offer people actually want to claim.</p>
               <p>We build a named package for your top treatment, then use it everywhere: your exit offer, your follow-up texts and your ads.</p>
-              <CallButton className="btn-ghost">Get all five, plus the bonus</CallButton>
+              <CallButton className="btn-ghost">Get all six, plus the bonus</CallButton>
             </div>
             <MagnetArt />
           </div>
@@ -382,7 +397,7 @@ export default function Home() {
                 <LineIcon name="clock" /> Booking flow live in 14 days, or month one is free
               </li>
               <li>
-                <LineIcon name="dollar" /> Plans from $299 a month
+                <LineIcon name="dollar" /> One plan, $499 a month
               </li>
             </ul>
             <p className="hv-fine">Booking rate = booking requests ÷ website visitors, measured against your week-1 baseline. For sites with at least 300 visitors a month.</p>
@@ -391,73 +406,20 @@ export default function Home() {
       </section>
 
       {/* ---------------- Proof ---------------- */}
-      <section className="hv-proof">
-        <PrismBackground tilt={0.5} phase={120} gain={0.85} />
-        <div className="wrap">
-          <div className="hv-head light" data-prism-calm="0.7">
-            <h2>Built on what&apos;s already been proven</h2>
-            <p>These systems come from five years of testing at one of the biggest aesthetic brands in the country.</p>
-          </div>
-          <div className="hv-proof-grid">
-            <div className="hv-proof-chart">
-              <p className="hv-chart-t">
-                <img loading="lazy" src="/logos/laseraway.png" alt="LaserAway" className="hv-la-logo" />
-                <span>Sitewide conversion, 2018–2023</span>
-              </p>
-              <ConversionChart />
-              <p className="hv-chart-c">Results from Gabe Meierotto&apos;s time as LaserAway&apos;s Director of CRO. He now leads every More Booked Consults project.</p>
-            </div>
-            <div className="hv-stats">
-              <div className="hv-stat-la">
-                <img loading="lazy" src="/logos/laseraway-white.png" alt="LaserAway" />
-                <b>3% → 11%</b>
-                <span>Sitewide conversion</span>
-              </div>
-              <div>
-                <b>210x</b>
-                <span>ROI on the LaserAway testing program</span>
-              </div>
-              <div>
-                <b>2,600+</b>
-                <span>Page variations tested</span>
-              </div>
-              <div>
-                <b>31,689</b>
-                <span>Med spas counted in our 2026 Med Spa Census</span>
-              </div>
-            </div>
-          </div>
-          <div className="hv-creds">
-            <a href="/laseraway-intellimize-case-study.pdf" target="_blank" rel="noopener">
-              <img loading="lazy" src="/logos/intellimize-white.png" alt="Intellimize" />
-              <span>Featured in Intellimize&apos;s LaserAway case study</span>
-            </a>
-            <a href="https://aesthetichires.com/" target="_blank" rel="noopener">
-              <span className="hv-cred-word">
-                <img loading="lazy" src="/logos/aesthetichires-lips.png" alt="" />
-                AestheticHires
-              </span>
-              <span>We also run the med spa job board</span>
-            </a>
-            <Link href="/results/">
-              <span className="hv-cred-word">Results</span>
-              <span>See the full track record</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <LaserAwayProof />
 
       {/* ---------------- Pricing (same cards as /pricing/) ---------------- */}
       <section className="hv-sec pr pv hv-pricing" id="pricing">
         <div className="wrap">
           <div className="hv-head">
-            <h2>Simple Pricing, Listed Up Front</h2>
-            <p>Plans from $299 a month. Keep the booking software you already use.</p>
+            <h2>One Plan, Everything Included</h2>
+            <p>One plan, everything included. Keep the booking software you already use.</p>
           </div>
           <PlanCards />
           <p className="hv-sys-more hv-pricing-more">
-            <Link href="/pricing/">Compare every plan and see examples →</Link>
+            <Link href="/pricing/">See what each piece is worth, plus add-ons →</Link>
           </p>
+          <p className="pv-fine" id="fine-print">{FREE_SITE_TERMS}</p>
         </div>
       </section>
 

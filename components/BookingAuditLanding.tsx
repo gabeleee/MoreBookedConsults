@@ -153,7 +153,7 @@ function Offer() {
           <h2>Your booking rate goes up in 90 days, or we keep working free until it does.</h2>
           <ul className="ba-g-list">
             <li><Check />Your new booking form is live in 14 days, or month one is free.</li>
-            <li><Check />Plans from $299 a month.</li>
+            <li><Check />One plan, $499 a month, everything included.</li>
           </ul>
           <p className="ba-fine">Booking rate means booking requests divided by website visitors. We measure your starting rate in week one, before anything changes. For sites with at least 300 visitors a month.</p>
         </div>

@@ -11,7 +11,8 @@ type MarkId =
   | "consult-magnet"
   | "spotlight"
   | "atlas"
-  | "rave-loop";
+  | "rave-loop"
+  | "lift-lab";
 
 const MARKS: Record<MarkId, React.ReactNode> = {
   // a path that curves up to a booked check
@@ -85,6 +86,15 @@ const MARKS: Record<MarkId, React.ReactNode> = {
     </>
   ),
   // a loop arrow around a star
+  // a lab flask with a rising arrow (design tests that lift conversion)
+  "lift-lab": (
+    <>
+      <path className="pm-soft" d="M19 9h10M21 9v11L11 37a3 3 0 0 0 2.6 4.5h20.8A3 3 0 0 0 37 37L27 20V9" />
+      <path className="pm-faint" d="M15 31h18" />
+      <path className="pm-acc" d="m17 36 6-5 4 3 6-7" />
+      <circle className="pm-acc-fill" cx="33" cy="27" r="2.2" />
+    </>
+  ),
   "rave-loop": (
     <>
       <path className="pm-soft" d="M38 22a14 14 0 1 0-3.5 11" />
@@ -125,4 +135,5 @@ export const MARK_FOR: Record<string, MarkId> = {
   Spotlight: "spotlight",
   "Authority Atlas": "atlas",
   "Rave Loop": "rave-loop",
+  "Lift Lab": "lift-lab",
 };

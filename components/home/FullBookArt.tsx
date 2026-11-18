@@ -3,6 +3,7 @@
 // result. Glow Aesthetics is the made-up demo spa Sienna answers for.
 /* eslint-disable @next/next/no-img-element -- decorative local photo */
 import { LineIcon } from "@/components/LineIcon";
+import SiennaAvatar from "@/components/home/SiennaAvatar";
 
 function Chip({ icon, children, className = "" }: { icon: string; children: React.ReactNode; className?: string }) {
   return (
@@ -76,7 +77,9 @@ export function HeroCallArt() {
         </div>
       </div>
       <div className="hh-card fb-hc3 hv-float f3">
-        <span className="hh-orb" />
+        <span className="hh-orb hh-face">
+          <SiennaAvatar badge={false} />
+        </span>
         <div>
           <b>New client booked</b>
           You were with a client the whole time

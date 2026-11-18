@@ -181,7 +181,7 @@ const COMPARE: [string, string, string, string][] = [
 const FAQ = [
   {
     q: "How long does local SEO take?",
-    a: "Google profile improvements can show in weeks. Ranking for competitive treatment-and-city searches usually takes a few months of steady work, which is why Full Book has a 12-month minimum.",
+    a: "Google profile improvements can show in weeks. Ranking for competitive treatment-and-city searches usually takes a few months of steady work, which is why Optimized Booking System has a 6-month minimum.",
   },
   {
     q: "Do you guarantee first-page rankings?",
@@ -189,7 +189,7 @@ const FAQ = [
   },
   {
     q: "How much does it cost?",
-    a: "Authority Atlas is part of Full Book: $499 a month for 20 new pages a month, with your website included and a 12-month minimum, since rankings take months to build.",
+    a: "Authority Atlas is part of the Optimized Booking System: $499 a month for 20 new pages a month, with a 6-month minimum, since rankings take months to build.",
   },
   {
     q: "Do you run review campaigns?",

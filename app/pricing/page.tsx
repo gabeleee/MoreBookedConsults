@@ -11,31 +11,19 @@ import "./pv3.css";
 import PrismBackground from "@/components/PrismBackground";
 import { LineIcon } from "@/components/LineIcon";
 import { ProductMark } from "@/components/home/ProductMark";
-import { GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, MagnetArt } from "@/components/home/SystemArt";
-import { TreatmentPagesArt } from "@/components/home/LocalSeoArt";
-import { RaveLoopArt, MonthlyReportArt } from "@/components/home/FullBookArt";
 import SeeExample from "@/components/pricing/SeeExample";
-import { B, PlanCards } from "@/components/pricing/PlanCards";
+import LaserAwayProof from "@/components/home/LaserAwayProof";
+import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, WebsiteOptional, Tip, MIN_WHY, FREE_SITE_TERMS, EXAMPLES as ART, BUY_URL } from "@/components/pricing/PlanCards";
 
-// Picture for each system in the "8 Systems" section (existing site art).
-const ART: Record<string, { Art: () => ReactNode; note: string }> = {
-  atlas: { Art: TreatmentPagesArt, note: "Example: a page for each treatment people search for in your city." },
-  "glide-path": { Art: GlidePathArt, note: "Example: visitors pick their goal, answer quick questions, then book." },
-  sienna: { Art: SiennaArt, note: "Example: Sienna answering a call and texting the booking link." },
-  "second-glance": { Art: SecondGlanceArt, note: "Example: an exit offer shown to a visitor about to leave." },
-  "consult-magnet": { Art: MagnetArt, note: "Example: a first-visit offer built for one treatment." },
-  "leak-finder": { Art: LeakFinderArt, note: "Example with sample data: the step where visitors give up." },
-  "rave-loop": { Art: RaveLoopArt, note: "Example: the review text a client gets after a visit." },
-  "clear-view": { Art: MonthlyReportArt, note: "Example with sample data: your plain-numbers monthly report." },
-};
 
-// Pricing (2026-11-18, Gabe): website as the front door. Front Desk $299,
-// Full Book $499 (website included, 12-month minimum). Two plans only.
+// Pricing (2026-11-18, Gabe): website as the front door. ONE plan, Optimized Booking System
+// $499/mo, 6-month minimum, website optional (free) + add-ons; no second plan.
+// Value stack (crossed-out year-one values) mirrors the proposals.
 // Plan cards live in components/pricing/PlanCards.tsx (also on the homepage).
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Med spa marketing plans with listed prices: Front Desk $299/mo (AI receptionist) and Full Book $499/mo (a new website designed to book, 20 Google pages a month). Works with Boulevard, Vagaro and GlossGenius.",
+    "One plan, everything included: the Optimized Booking System is $499/mo for 20 new Google pages a month, a booking flow built to convert and an AI receptionist that answers every call. Works with Boulevard, Vagaro and GlossGenius.",
   alternates: { canonical: "/pricing/" },
 };
 
@@ -44,15 +32,16 @@ const CALL = "/demo/";
 type MarkId = Parameters<typeof ProductMark>[0]["id"];
 
 // href = the page that explains the system in detail (none yet for Consult Magnet, Rave Loop).
-const SYSTEM_INFO: { id: MarkId; name: string; p: string; plans: string; href?: string }[] = [
-  { id: "atlas", name: "Authority Atlas", p: "New pages for every treatment, cost and nearby town people search for.", plans: "Full Book", href: "/local-seo/" },
-  { id: "glide-path", name: "Glide Path", p: "A highly optimized, multi-step booking flow that hands clients to your booking app.", plans: "Full Book", href: "/booking-systems/#glide-path" },
-  { id: "sienna", name: "Sienna AI", p: "An AI receptionist that answers every call and texts your booking link.", plans: "Both plans", href: "/booking-systems/#sienna-ai" },
-  { id: "second-glance", name: "Second Glance", p: "A well-timed offer that brings leaving visitors back to book.", plans: "Full Book", href: "/booking-systems/#second-glance" },
-  { id: "consult-magnet", name: "Consult Magnet", p: "A first-visit offer that turns browsers into booked consults.", plans: "Full Book" },
-  { id: "leak-finder", name: "Leak Finder", p: "Tracking that shows the exact step where people give up.", plans: "Full Book", href: "/booking-systems/#leak-finder" },
-  { id: "rave-loop", name: "Rave Loop", p: "Review requests after each visit. Unhappy clients reach you first.", plans: "Both plans" },
-  { id: "clear-view", name: "Clear View", p: "One plain-numbers report: calls, new clients booked, reviews.", plans: "Both plans", href: "/booking-systems/#clear-view" },
+const SYSTEM_INFO: { id: MarkId; name: string; p: string; href?: string }[] = [
+  { id: "atlas", name: "Authority Atlas", p: "New pages for every treatment, cost and nearby town people search for.", href: "/local-seo/" },
+  { id: "glide-path", name: "Glide Path", p: "A highly optimized, multi-step booking flow that hands clients to your booking app.", href: "/booking-systems/#glide-path" },
+  { id: "sienna", name: "Sienna AI", p: "An AI receptionist that answers every call and texts your booking link.", href: "/booking-systems/#sienna-ai" },
+  { id: "lift-lab", name: "Lift Lab", p: "2 design tests a month on your site. We keep the winners, so your conversion rate climbs over time." },
+  { id: "second-glance", name: "Second Glance", p: "A well-timed offer that brings leaving visitors back to book.", href: "/booking-systems/#second-glance" },
+  { id: "consult-magnet", name: "Consult Magnet", p: "A first-visit offer that turns browsers into booked consults." },
+  { id: "leak-finder", name: "Leak Finder", p: "Tracking that shows the exact step where people give up.", href: "/booking-systems/#leak-finder" },
+  { id: "rave-loop", name: "Rave Loop", p: "Review requests after each visit. Unhappy clients reach you first." },
+  { id: "clear-view", name: "Clear View", p: "One plain-numbers report: calls, new clients booked, reviews.", href: "/booking-systems/#clear-view" },
 ];
 
 const SOFTWARE = [
@@ -69,13 +58,20 @@ const US = [
 ];
 const APPS = ["Boulevard", "Vagaro", "GlossGenius", "Aesthetic Record", "Zenoti", "Mangomint"];
 
+// Add-on prices are Gabe's working numbers (11-18): pages ~$150-200/mo.
+const ADDONS: { mark: MarkId; name: string; brand?: boolean; price: string; p: string }[] = [
+  { mark: "atlas", name: "More Google pages", price: "+$150 a month", p: "20 more Google pages every month, so you cover more treatments, costs and nearby towns, faster." },
+  { mark: "leak-finder", name: "More design tests", price: "+$150 a month", p: "2 more measured design tests every month, for busy sites with plenty of traffic." },
+  { mark: "spotlight", name: "Spotlight Ads", brand: true, price: "Priced on the demo", p: "Meta ads built around your best offer. Ad spend paid straight to Meta, never marked up." },
+];
+
 const FAQ: { q: string; a: ReactNode }[] = [
   {
-    q: "I already have an AI receptionist. Is Full Book still worth it?",
+    q: "I already have an AI receptionist. Is the Optimized Booking System still worth it?",
     a: (
       <>
-        Yes. Most of Full Book is your new website and Google: <B n="Glide Path" />, <B n="Second Glance" />,{" "}
-        <B n="Leak Finder" />, 2 design updates and 20 new pages every month. Keep the receptionist you have;{" "}
+        Yes. Most of the Optimized Booking System is your website and Google: <B n="Glide Path" />, <B n="Second Glance" />,{" "}
+        <B n="Leak Finder" />, <B n="Lift Lab" /> design tests and 20 new pages every month. Keep the receptionist you have;{" "}
         <B n="Sienna AI" /> is there if you ever want to switch.
       </>
     ),
@@ -85,12 +81,16 @@ const FAQ: { q: string; a: ReactNode }[] = [
     a: "They do different jobs. Boulevard (or Vagaro, GlossGenius, Aesthetic Record) runs your day: the calendar, charts, payments and memberships. We bring new clients to that calendar. You keep your software; we work in front of it.",
   },
   {
-    q: "Do I really get a new website?",
-    a: "Yes. On Full Book we design and build your website, on your own domain, as part of the plan. It's designed around one job: turning visitors into booked consults. If you already have a site you love, we can redesign the pages that matter most for booking instead.",
+    q: "Do I need a new website?",
+    a: "No. Most of what you get works on the website you already have: new Google pages, the booking flow, the exit offer, Sienna AI and the monthly design tests. If you do need a new site, or yours is just a booking-app page, we build one for you free, on your own domain, with a 12-month minimum.",
   },
   {
-    q: "What's a design update?",
-    a: "Each month we keep improving your site based on what your numbers show: a new offer, a clearer booking step, a better page for a top treatment, a faster phone layout. Each one is measured against the month before, and we keep only what books more.",
+    q: "Why is there a 6-month minimum?",
+    a: "New Google pages usually take 3 to 6 months to rank, and design tests need a few months of real numbers to show what books more. Six months is enough time to see results you can count. After that, it's month to month with 30 days' notice.",
+  },
+  {
+    q: "What's Lift Lab?",
+    a: "Lift Lab is our design testing program. Each month we test 2 changes to your site based on what your numbers show: a new offer, a clearer booking step, a better page for a top treatment, a faster phone layout. We keep what books more, so your conversion rate climbs over time.",
   },
   {
     q: "Are 20 pages a month really any good?",
@@ -104,11 +104,15 @@ const FAQ: { q: string; a: ReactNode }[] = [
   },
   {
     q: "I don't have a website, just a booking page. Can I still join?",
-    a: "Yes. That's who Full Book is built for: we build your website as part of the plan. Front Desk works with just a booking page.",
+    a: "Yes. We build you a website free as part of the plan, then everything else runs on it.",
   },
   {
-    q: "Can I switch plans?",
-    a: "Yes, move up anytime. Your setup, pages and numbers carry over.",
+    q: "Can I get more pages or more design tests?",
+    a: "Yes. Add 20 more Google pages a month, or 2 more design tests a month, for $150 each. Add or drop them month to month.",
+  },
+  {
+    q: "Can I get just the AI receptionist?",
+    a: "The Optimized Booking System is the one plan we offer, because the website, Google pages and calls work best together. If you only need one piece, ask on the demo and we'll tell you honestly whether it makes sense.",
   },
   {
     q: "What happens if I cancel?",
@@ -129,31 +133,21 @@ export default function Pricing() {
       <section className="bs-hero pr-hero">
         <PrismBackground tone="light" gain={1.25} tilt={0.46} phase={30} />
         <div className="wrap bs-hero-in">
-          <h1 data-prism-calm="0.8">A New Website That Books, From $499 A Month</h1>
+          <h1 data-prism-calm="0.8">Turn Your Website Into A Booking Machine, $499 A Month</h1>
           <p className="hv-lede" data-prism-calm="0.6">
-            We design your website so visitors turn into booked consults, add new Google pages every month and
-            answer every call. You keep the booking software you already use.
+            New Google pages, a booking flow that converts, and every call answered.
           </p>
           <ul className="bs-chips">
-            <li><LineIcon name="dollar" /> Prices listed, no surprises</li>
+            <li><LineIcon name="dollar" /> One plan, everything included</li>
             <li><LineIcon name="calendar" /> Works with your booking app</li>
-            <li><LineIcon name="monitor" /> Website included on Full Book</li>
+            <li><LineIcon name="monitor" /> New website optional, built free*</li>
           </ul>
 
           <PlanCards />
 
-          <div className="pr-bundle pv-anchor">
-            <span className="pr-bundle-ic">
-              <LineIcon name="search" />
-            </span>
-            <p>
-              <b>SEO agencies charge med spas $1,000 to $2,500 a month, and that&apos;s before paying for a website.</b> Full Book includes the website, 20 pages a month and an AI receptionist for $499.
-            </p>
-          </div>
-
           <p className="pv-site">
-            <LineIcon name="monitor" /> Prefer to buy the website outright? One-time builds from $1,997.{" "}
-            <a href={CALL}>Ask about a one-time build →</a>
+            <LineIcon name="help" /> Just need an AI receptionist?{" "}
+            <a href={CALL}>Ask on the demo →</a>
           </p>
         </div>
       </section>
@@ -162,8 +156,8 @@ export default function Pricing() {
       <section className="hv-sec pv-sys-sec">
         <div className="wrap">
           <div className="hv-head">
-            <h2>8 Systems, One Monthly Price</h2>
-            <p>Each one is built and run for you. Nothing to learn, nothing to log into.</p>
+            <h2>9 Systems, One Monthly Price</h2>
+            <p>Each one is built and run for you. Here&apos;s what each would cost you on its own for a year.</p>
           </div>
           <div className="pv-sys">
             {SYSTEM_INFO.map((s) => (
@@ -180,15 +174,46 @@ export default function Pricing() {
                   <ProductMark id={s.id} />
                   <h3><B n={s.name} /></h3>
                 </div>
+                {(() => {
+                  const it = ITEMS.find((i) => i.mark === s.id);
+                  return it ? (
+                    <p className="pv-sys-val">
+                      <s>{usd(it.value)}</s>
+                      <em>Included</em>
+                      <span>{it.basis}</span>
+                    </p>
+                  ) : null;
+                })()}
                 <p>{s.p}</p>
                 {s.href && (
                   <Link className="pv-more" href={s.href}>
                     How {s.name}™ works →
                   </Link>
                 )}
-                <span className="pv-sys-plans">{s.plans}</span>
               </div>
             ))}
+          </div>
+          <div className="pv-stack-sum">
+            <WebsiteOptional />
+            <div className="pv-stack-total">
+              <div>
+                <span>Total value in year one</span>
+                <s>{usd(TOTAL)}</s>
+              </div>
+              <div className="pv-stack-price">
+                <span>Your price</span>
+                <b>
+                  {usd(PRICE)}
+                  <small>/month</small>
+                </b>
+                <em>
+                  6-month minimum <Tip text={MIN_WHY} label="Why a 6-month minimum?" />
+                </em>
+              </div>
+              <a className="btn" href={BUY_URL || CALL}>
+                {BUY_URL ? "Get started" : "Get a free demo"}
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -220,7 +245,7 @@ export default function Pricing() {
                   <li key={t}><LineIcon name={ic} />{t}</li>
                 ))}
               </ul>
-              <p className="pv-col-foot">From $299 a month, on top of the software you already have</p>
+              <p className="pv-col-foot">$499 a month, on top of the software you already have</p>
             </div>
           </div>
           <div className="pv-flow" aria-label="How a new client reaches your calendar">
@@ -237,21 +262,33 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ---------------- Add-on ---------------- */}
-      <section className="hv-sec pv-add-sec">
+      {/* ---------------- Add-ons (scale up without a second plan) ---------------- */}
+      <section className="hv-sec pv-add-sec" id="add-ons">
         <div className="wrap">
-          <div className="pv-adds one">
-            <div className="pv-add">
-              <ProductMark id="spotlight" />
-              <div>
-                <span className="pv-col-tag">Add when you&apos;re ready</span>
-                <h3><B n="Spotlight Ads" /></h3>
-                <p>Meta ads built around your best offer, sent to a page that books. Ad spend paid straight to Meta, never marked up. Priced on the demo.</p>
+          <div className="hv-head">
+            <h2>Want More? Add It Anytime.</h2>
+            <p>One plan to start. Scale it up whenever you&apos;re ready, month to month.</p>
+          </div>
+          <div className="pv-adds three">
+            {ADDONS.map((a) => (
+              <div key={a.name} className="pv-add">
+                <ProductMark id={a.mark} />
+                <div>
+                  <h3>{a.brand ? <B n={a.name} /> : a.name}</h3>
+                  <p className="pv-add-price">{a.price}</p>
+                  <p>{a.p}</p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
+
+      {/* ---------------- LaserAway proof ---------------- */}
+      <LaserAwayProof
+        title="We've Done This Before, At LaserAway"
+        lede="Before More Booked Consults, Gabe Meierotto ran five years of booking tests as LaserAway's Director of CRO. Every system here comes from that work."
+      />
 
       {/* ---------------- FAQ ---------------- */}
       <section className="hv-sec hv-faq-sec">
@@ -283,6 +320,7 @@ export default function Pricing() {
             Get a free demo <span className="hv-cta-arrow" aria-hidden="true">→</span>
           </a>
           <p className="hv-book-alt">Or see <Link href="/results/">the track record</Link>.</p>
+          <p className="pv-fine" id="fine-print">{FREE_SITE_TERMS}</p>
         </div>
       </section>
     </main>
