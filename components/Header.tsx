@@ -209,7 +209,7 @@ export default function Header() {
                   ))}
                 </div>
                 <div className="mega-foot">
-                  <span>Not sure where to start? Plans start at $299 a month.</span>
+                  <span>One plan, everything included: $499 a month.</span>
                   <Link href="/pricing/">
                     See plans and prices <LineIcon name="arrow" />
                   </Link>

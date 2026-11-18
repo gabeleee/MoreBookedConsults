@@ -135,7 +135,7 @@ const PLATFORMS = [
 const FAQ = [
   {
     q: "How much does it cost?",
-    a: "Two plans. Front Desk ($299) answers every call. Full Book ($499) adds a new website designed to book and 20 new Google pages a month, with your website included. Both are listed on our pricing page.",
+    a: "One plan, everything included: Full Book is $499 a month for 20 new Google pages a month, a booking flow built to convert and an AI receptionist that answers every call, on your website or a new one we build free. Need more pages or design updates? Add them anytime. It's all on our pricing page.",
   },
   {
     q: "Does it work with my booking software?",
@@ -143,7 +143,7 @@ const FAQ = [
   },
   {
     q: "Do I need a new website?",
-    a: "Front Desk works with the site you have. Full Book includes a new website designed to book. If you love your current site, we can redesign the pages that matter most for booking instead.",
+    a: "No. Everything works on the website you already have. If you need a new one, or you only have a booking-app page, we build it free as part of the plan.",
   },
   {
     q: "How long until it's live?",
@@ -175,7 +175,7 @@ const FAQ = [
   },
   {
     q: "Is there a contract? What if I cancel?",
-    a: "Front Desk is month to month. Full Book includes your website and has a 12-month minimum. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
+    a: "Full Book has a 6-month minimum, because new Google pages take a few months to rank. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
   },
 ];
 
@@ -198,7 +198,7 @@ export default function Home() {
           <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
             We build <a href="#systems">five booking systems</a>{" "}into your med spa&apos;s website in 14 days, then keep improving them every month.
-            Done for you, measured, from $299 a month.
+            Done for you, measured, $499 a month.
           </p>
           <div className="hv-ctas">
             <a className="btn hv-cta-hero" href={CALL}>
@@ -382,7 +382,7 @@ export default function Home() {
                 <LineIcon name="clock" /> Booking flow live in 14 days, or month one is free
               </li>
               <li>
-                <LineIcon name="dollar" /> Plans from $299 a month
+                <LineIcon name="dollar" /> One plan, $499 a month
               </li>
             </ul>
             <p className="hv-fine">Booking rate = booking requests ÷ website visitors, measured against your week-1 baseline. For sites with at least 300 visitors a month.</p>
@@ -451,12 +451,12 @@ export default function Home() {
       <section className="hv-sec pr pv hv-pricing" id="pricing">
         <div className="wrap">
           <div className="hv-head">
-            <h2>Simple Pricing, Listed Up Front</h2>
-            <p>Plans from $299 a month. Keep the booking software you already use.</p>
+            <h2>One Plan, Everything Included</h2>
+            <p>One plan, everything included. Keep the booking software you already use.</p>
           </div>
           <PlanCards />
           <p className="hv-sys-more hv-pricing-more">
-            <Link href="/pricing/">Compare every plan and see examples →</Link>
+            <Link href="/pricing/">See what each piece is worth, plus add-ons →</Link>
           </p>
         </div>
       </section>

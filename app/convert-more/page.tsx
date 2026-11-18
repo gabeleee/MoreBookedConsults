@@ -26,7 +26,7 @@ export default function ConvertMorePage() {
             <p>
               I ship two improvements a month on the spots that leak the most
               consults: your booking flow, your forms, your offers, your
-              treatment pages. Plans from $299 a month.
+              treatment pages. One plan, $499 a month.
             </p>
             <p>
               Answer a few quick questions and I&apos;ll show you where visitors
