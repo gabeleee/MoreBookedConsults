@@ -4,10 +4,29 @@ import type { ReactNode } from "react";
 import "../home-v2.css";
 import "../booking-systems/bs.css";
 import "../pricing/pr.css";
+import "../local-seo/ls.css";
+import "../full-book/fb.css";
 import "../pricing-v2/pv.css";
+import "./pv3.css";
 import PrismBackground from "@/components/PrismBackground";
 import { LineIcon } from "@/components/LineIcon";
 import { ProductMark } from "@/components/home/ProductMark";
+import { GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, MagnetArt } from "@/components/home/SystemArt";
+import { TreatmentPagesArt } from "@/components/home/LocalSeoArt";
+import { RaveLoopArt, MonthlyReportArt } from "@/components/home/FullBookArt";
+import SeeExample from "./SeeExample";
+
+// Picture for each system in the "8 Systems" section (existing site art).
+const ART: Record<string, { Art: () => ReactNode; note: string }> = {
+  atlas: { Art: TreatmentPagesArt, note: "Example: a page for each treatment people search for in your city." },
+  "glide-path": { Art: GlidePathArt, note: "Example: visitors pick their goal, answer quick questions, then book." },
+  sienna: { Art: SiennaArt, note: "Example: Sienna answering a call and texting the booking link." },
+  "second-glance": { Art: SecondGlanceArt, note: "Example: an exit offer shown to a visitor about to leave." },
+  "consult-magnet": { Art: MagnetArt, note: "Example: a first-visit offer built for one treatment." },
+  "leak-finder": { Art: LeakFinderArt, note: "Example with sample data: the step where visitors give up." },
+  "rave-loop": { Art: RaveLoopArt, note: "Example: the review text a client gets after a visit." },
+  "clear-view": { Art: MonthlyReportArt, note: "Example with sample data: your plain-numbers monthly report." },
+};
 
 // DRAFT v3 (2026-11-18): v2 with the website as the front door (Brad/Gabe idea):
 // owners understand "a new website", not "booking upgrades". Same prices.
@@ -270,9 +289,19 @@ export default function PricingDraftV3() {
           </div>
           <div className="pv-sys">
             {SYSTEM_INFO.map((s) => (
-              <div key={s.id} className="pv-sys-card">
-                <ProductMark id={s.id} />
-                <h3><B n={s.name} /></h3>
+              <div key={s.id} className="pv-sys-card has-art">
+                {(() => {
+                  const { Art, note } = ART[s.id];
+                  return (
+                    <SeeExample name={s.name} note={note}>
+                      <Art />
+                    </SeeExample>
+                  );
+                })()}
+                <div className="pv-sys-head">
+                  <ProductMark id={s.id} />
+                  <h3><B n={s.name} /></h3>
+                </div>
                 <p>{s.p}</p>
                 <span className="pv-sys-plans">{s.plans}</span>
               </div>
