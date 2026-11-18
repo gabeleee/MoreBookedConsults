@@ -15,7 +15,7 @@ import { LineIcon } from "@/components/LineIcon";
 import { ProductTitle, ProductMark, MARK_FOR } from "@/components/home/ProductMark";
 import HeroVideo from "@/components/home/HeroVideo";
 import { MissedCallArt } from "@/components/home/FullBookArt";
-import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
+import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, LiftLabArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03): sold like a product. Branded systems from the
 // proposals, a call as the main CTA, the founder named once inside the proof
@@ -23,7 +23,7 @@ import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   description:
-    "Aesthetic practice marketing for med spas and plastic surgeons: we build five booking systems into your website in 14 days, then keep improving them every month.",
+    "Aesthetic practice marketing for med spas and plastic surgeons: we build six booking systems into your website in 14 days, then keep improving them every month.",
 };
 
 const CALL = "/demo/";
@@ -79,6 +79,18 @@ const SYSTEMS = [
   },
   {
     n: "05",
+    cat: "Design tests",
+    name: "Lift Lab",
+    tag: "Your booking rate climbs every month.",
+    pts: [
+      "2 new design tests on your site every month: offers, booking steps, layouts and treatment pages.",
+      "Picked from what your numbers show, starting with the biggest leak.",
+      "We keep the winners, so each month starts from a higher booking rate.",
+    ],
+    Art: LiftLabArt,
+  },
+  {
+    n: "06",
     cat: "Live dashboard",
     name: "Clear View",
     tag: "Know what's working, any time.",
@@ -200,7 +212,7 @@ export default function Home() {
           <h1 data-prism-calm="0.8">Turn more of your website visitors into booked consults.</h1>
           <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
-            We build <a href="#systems">five booking systems</a>{" "}into your med spa&apos;s website in 14 days, then keep improving them every month.
+            We build <a href="#systems">six booking systems</a>{" "}into your med spa&apos;s website in 14 days, then keep improving them every month.
             Done for you, measured, $499 a month.
           </p>
           <div className="hv-ctas">
@@ -301,7 +313,7 @@ export default function Home() {
               <ProductTitle id="consult-magnet" name="Consult Magnet" />
               <p className="hv-sys-tag">A first-visit offer people actually want to claim.</p>
               <p>We build a named package for your top treatment, then use it everywhere: your exit offer, your follow-up texts and your ads.</p>
-              <CallButton className="btn-ghost">Get all five, plus the bonus</CallButton>
+              <CallButton className="btn-ghost">Get all six, plus the bonus</CallButton>
             </div>
             <MagnetArt />
           </div>

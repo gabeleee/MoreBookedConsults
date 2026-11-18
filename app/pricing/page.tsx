@@ -13,7 +13,7 @@ import { LineIcon } from "@/components/LineIcon";
 import { ProductMark } from "@/components/home/ProductMark";
 import SeeExample from "@/components/pricing/SeeExample";
 import LaserAwayProof from "@/components/home/LaserAwayProof";
-import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, WebsiteOptional, Tip, MIN_WHY, FREE_SITE_TERMS, EXAMPLES as ART } from "@/components/pricing/PlanCards";
+import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, WebsiteOptional, Tip, MIN_WHY, FREE_SITE_TERMS, EXAMPLES as ART, BUY_URL } from "@/components/pricing/PlanCards";
 
 
 // Pricing (2026-11-18, Gabe): website as the front door. ONE plan, Optimized Booking System
@@ -210,8 +210,8 @@ export default function Pricing() {
                   6-month minimum <Tip text={MIN_WHY} label="Why a 6-month minimum?" />
                 </em>
               </div>
-              <a className="btn" href={CALL}>
-                Get a free demo
+              <a className="btn" href={BUY_URL || CALL}>
+                {BUY_URL ? "Get started" : "Get a free demo"}
               </a>
             </div>
           </div>

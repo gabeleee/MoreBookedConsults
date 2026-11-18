@@ -24,7 +24,7 @@ const CALL = "/demo/";
 // A Stripe Payment Link for the $499/mo plan, set at build time. When set, the
 // card's main button is "Get started" (checkout) and the demo becomes the
 // secondary button; when unset, the card keeps "Get a free demo" only.
-const BUY_URL = process.env.NEXT_PUBLIC_MBC_BUY_URL || "";
+export const BUY_URL = process.env.NEXT_PUBLIC_MBC_BUY_URL || "https://buy.stripe.com/7sYbJ1cPd7tacYD4kHcs800";
 
 type MarkId = Parameters<typeof ProductMark>[0]["id"];
 
