@@ -2,7 +2,6 @@
 // HTML/CSS (no image files) so they stay crisp and on-brand. Every number in
 // here is a labeled sample, never a client result. Server component.
 import { LineIcon } from "@/components/LineIcon";
-import SiennaAvatar from "@/components/home/SiennaAvatar";
 
 function Chip({ icon, children, className = "" }: { icon: string; children: React.ReactNode; className?: string }) {
   return (
@@ -74,9 +73,7 @@ export function SiennaArt() {
     <ArtFrame title="Sienna AI<sup>™</sup> Follow-Up Agent">
       <div className="si-ring si-r1" />
       <div className="si-ring si-r2" />
-      <div className="si-orb si-face">
-        <SiennaAvatar />
-      </div>
+      <div className="si-orb" />
       <div className="si-call">
         <span className="si-dot" />
         <div>
@@ -264,9 +261,7 @@ export function HeroArt() {
       </div>
 
       <div className="hh-card hh-left hv-float f1">
-        <div className="hh-orb hh-face">
-          <SiennaAvatar />
-        </div>
+        <div className="hh-orb" />
         <div>
           <b>Sienna AI is calling Jessica</b>
           <span>New request, 38 seconds ago</span>
