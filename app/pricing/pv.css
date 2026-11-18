@@ -196,3 +196,11 @@
 .pv-sys-val span{flex-basis:100%;font-size:12.5px;line-height:1.4;color:var(--soft)}
 .pv-stack-sum{max-width:860px;margin:28px auto 0;background:#fff;border:1px solid var(--line);border-radius:28px;padding:6px 26px 26px;box-shadow:0 30px 60px -44px rgba(125,9,90,.4)}
 @media (max-width:560px){.pv-stack-sum{padding:4px 16px 18px}}
+
+/* plan card: linked names + "(See example)" */
+.pv-ttl{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 6px}
+.pv-ttl-a{color:inherit;text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px;text-decoration-thickness:1.5px}
+.pv-ttl-a:hover{text-decoration-color:var(--violet)}
+.pv-see-inline{padding:0;border:0;background:none;cursor:pointer;font:inherit;font-size:13.5px;font-weight:400;color:var(--soft)}
+.pv-see-inline span{color:var(--violet-deep);text-decoration:underline;text-underline-offset:2px}
+.pv-see-inline:hover span{color:var(--violet)}

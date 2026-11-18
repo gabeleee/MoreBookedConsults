@@ -3,7 +3,7 @@ import { useRef, type ReactNode } from "react";
 
 // Thumbnail of a system's art + "See example" button that opens it full size
 // (same idea as the proposals' "See it" popups).
-export default function SeeExample({ name, note, children, thumb = true, label = "See example" }: { name: string; note: string; children: ReactNode; thumb?: boolean; label?: string }) {
+export default function SeeExample({ name, note, children, thumb = true, label = "See example", inline = false }: { name: string; note: string; children: ReactNode; thumb?: boolean; label?: string; inline?: boolean }) {
   const ref = useRef<HTMLDialogElement>(null);
   const open = () => ref.current?.showModal();
   return (
@@ -13,9 +13,15 @@ export default function SeeExample({ name, note, children, thumb = true, label =
           <span className="pv-thumb-in">{children}</span>
         </button>
       )}
-      <button type="button" className="pv-see" onClick={open}>
-        {label} <span aria-hidden="true">→</span>
-      </button>
+      {inline ? (
+        <button type="button" className="pv-see-inline" onClick={open}>
+          (<span>{label}</span>)
+        </button>
+      ) : (
+        <button type="button" className="pv-see" onClick={open}>
+          {label} <span aria-hidden="true">→</span>
+        </button>
+      )}
       <dialog
         ref={ref}
         className="pv-dlg"
@@ -29,7 +35,7 @@ export default function SeeExample({ name, note, children, thumb = true, label =
           </button>
           <p className="pv-dlg-name">
             {name}
-            {thumb && <sup>™</sup>}
+            {(thumb || inline) && <sup>™</sup>}
           </p>
           <div className="pv-dlg-art">{children}</div>
           <p className="pv-dlg-note">{note}</p>

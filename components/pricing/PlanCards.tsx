@@ -1,13 +1,16 @@
 import { LineIcon } from "@/components/LineIcon";
 import { ProductMark } from "@/components/home/ProductMark";
-import { HeroArt } from "@/components/home/SystemArt";
+import type { ReactNode } from "react";
+import { HeroArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, MagnetArt } from "@/components/home/SystemArt";
+import { TreatmentPagesArt } from "@/components/home/LocalSeoArt";
+import { RaveLoopArt, MonthlyReportArt } from "@/components/home/FullBookArt";
 import SeeExample from "@/components/pricing/SeeExample";
 
 // One plan (Gabe 2026-11-18): Full Book $499/mo, 6-month minimum. The website
 // is OPTIONAL (built free if they need one) and is NOT counted in the value, so
 // practices that keep their own site (e.g. multi-location spas) still see the
 // value. Front Desk ($299) and Full Book Pro ($749) were dropped the same
-// day; more pages / more design updates are add-ons, never a second plan.
+// day; more pages / more design tests are add-ons, never a second plan.
 // Shared by /pricing/ and the homepage. Styles: .pr-* (app/pricing/pr.css) +
 // .pv-* (app/pricing/pv.css), inside a "pr pv" wrapper.
 //
@@ -28,6 +31,19 @@ export function B({ n }: { n: string }) {
   );
 }
 
+// Example picture (popup) + detail page for each system. Used by the plan card
+// ("Name (See example)") and the "8 Systems" cards on /pricing/.
+export const EXAMPLES: Record<string, { Art: () => ReactNode; note: string; href?: string }> = {
+  atlas: { Art: TreatmentPagesArt, note: "Example: a page for each treatment people search for in your city.", href: "/local-seo/" },
+  "glide-path": { Art: GlidePathArt, note: "Example: visitors pick their goal, answer quick questions, then book.", href: "/booking-systems/#glide-path" },
+  sienna: { Art: SiennaArt, note: "Example: Sienna answering a call and texting the booking link.", href: "/booking-systems/#sienna-ai" },
+  "second-glance": { Art: SecondGlanceArt, note: "Example: an exit offer shown to a visitor about to leave.", href: "/booking-systems/#second-glance" },
+  "consult-magnet": { Art: MagnetArt, note: "Example: a first-visit offer built for one treatment." },
+  "leak-finder": { Art: LeakFinderArt, note: "Example with sample data: the step where visitors give up.", href: "/booking-systems/#leak-finder" },
+  "rave-loop": { Art: RaveLoopArt, note: "Example: the review text a client gets after a visit." },
+  "clear-view": { Art: MonthlyReportArt, note: "Example with sample data: your plain-numbers monthly report.", href: "/booking-systems/#clear-view" },
+};
+
 export type Item = {
   mark?: MarkId; // branded system
   icon?: string; // LineIcon for unbranded items
@@ -42,7 +58,7 @@ export const ITEMS: Item[] = [
   { mark: "atlas", name: "Authority Atlas", d: "20 new Google pages a month", basis: "Entry-level SEO runs about $500 a month", value: 6000 },
   { mark: "glide-path", name: "Glide Path", d: "Highly optimized booking flow", basis: "A custom multi-step booking flow, designed and built", value: 1200 },
   { mark: "sienna", name: "Sienna AI", d: "AI receptionist, answers 24/7", basis: "AI receptionists run about $79 to $299 a month", value: 1800 },
-  { icon: "trending", name: "2 design updates a month", d: "Each one measured against last month", basis: "24 measured site improvements a year", value: 2400 },
+  { icon: "trending", name: "2 design tests a month", d: "Raises your conversion rate over time", basis: "24 site tests a year", value: 2400 },
   { mark: "second-glance", name: "Second Glance", d: "Exit offer for leaving visitors", basis: "An exit offer, written, designed and built", value: 400 },
   { mark: "consult-magnet", name: "Consult Magnet", d: "Your first-visit offer, done for you", basis: "A first-visit offer, written and designed", value: 250 },
   { mark: "leak-finder", name: "Leak Finder", d: "Pinpoints where visitors drop off", basis: "Step-by-step drop-off tracking", value: 250 },
@@ -52,7 +68,7 @@ export const ITEMS: Item[] = [
 
 // Why the minimum is 6 months (shown in a tooltip next to the terms).
 export const MIN_WHY =
-  "New Google pages usually take 3 to 6 months to rank, and design updates need a few months of real numbers to show what books more. Six months is enough time to see results you can count. After that, it's month to month.";
+  "New Google pages usually take 3 to 6 months to rank, and design tests need a few months of real numbers to show what books more. Six months is enough time to see results you can count. After that, it's month to month.";
 
 // Small "?" with a tooltip on hover or tap (CSS only: .pv-tip in pv.css).
 export function Tip({ text, label = "Why?" }: { text: string; label?: string }) {
@@ -109,6 +125,28 @@ export function ItemName({ i }: { i: Item }) {
   return i.mark ? <B n={i.name} /> : <b className="pv-b">{i.name}</b>;
 }
 
+// Name linked to its detail page + "(See example)" popup, when we have them.
+function ItemTitle({ i }: { i: Item }) {
+  const ex = i.mark ? EXAMPLES[i.mark] : undefined;
+  const name = <ItemName i={i} />;
+  return (
+    <span className="pv-ttl">
+      {ex?.href ? (
+        <a className="pv-ttl-a" href={ex.href}>
+          {name}
+        </a>
+      ) : (
+        name
+      )}
+      {ex && (
+        <SeeExample name={i.name} note={ex.note} thumb={false} label="See example" inline>
+          <ex.Art />
+        </SeeExample>
+      )}
+    </span>
+  );
+}
+
 export function PlanCards({ cta = "Get a free demo" }: { cta?: string }) {
   return (
     <div className="pv-one" id="full-book">
@@ -141,7 +179,7 @@ export function PlanCards({ cta = "Get a free demo" }: { cta?: string }) {
           {cta}
         </a>
         <p className="pv-one-note">
-          Want more pages or more design updates? <a href="#add-ons">Add them anytime</a>.
+          Want more pages or more design tests? <a href="#add-ons">Add them anytime</a>.
         </p>
       </div>
       <div className="pv-one-r">
@@ -154,7 +192,7 @@ export function PlanCards({ cta = "Get a free demo" }: { cta?: string }) {
             <li key={i.name}>
               <ItemIcon i={i} />
               <div>
-                <ItemName i={i} />
+                <ItemTitle i={i} />
                 <span>{i.d}</span>
               </div>
               <s className="pv-val">{usd(i.value)}</s>

@@ -4,6 +4,9 @@ import Link from "next/link";
 import "./home-v2.css";
 import "./pricing/pr.css";
 import "./pricing/pv.css";
+import "./pricing/pv3.css";
+import "./local-seo/ls.css";
+import "./full-book/fb.css";
 import { PlanCards, FREE_SITE_TERMS } from "@/components/pricing/PlanCards";
 import LaserAwayProof from "@/components/home/LaserAwayProof";
 import PrismBackground from "@/components/PrismBackground";
@@ -135,7 +138,7 @@ const PLATFORMS = [
 const FAQ = [
   {
     q: "How much does it cost?",
-    a: "One plan, everything included: Full Book is $499 a month for 20 new Google pages a month, a booking flow built to convert and an AI receptionist that answers every call, on your website or a new one we build free. Need more pages or design updates? Add them anytime. It's all on our pricing page.",
+    a: "One plan, everything included: Full Book is $499 a month for 20 new Google pages a month, a booking flow built to convert and an AI receptionist that answers every call, on your website or a new one we build free. Need more pages or design tests? Add them anytime. It's all on our pricing page.",
   },
   {
     q: "Does it work with my booking software?",

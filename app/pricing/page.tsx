@@ -11,24 +11,10 @@ import "./pv3.css";
 import PrismBackground from "@/components/PrismBackground";
 import { LineIcon } from "@/components/LineIcon";
 import { ProductMark } from "@/components/home/ProductMark";
-import { GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, MagnetArt } from "@/components/home/SystemArt";
-import { TreatmentPagesArt } from "@/components/home/LocalSeoArt";
-import { RaveLoopArt, MonthlyReportArt } from "@/components/home/FullBookArt";
 import SeeExample from "@/components/pricing/SeeExample";
 import LaserAwayProof from "@/components/home/LaserAwayProof";
-import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, WebsiteOptional, Tip, MIN_WHY, FREE_SITE_TERMS } from "@/components/pricing/PlanCards";
+import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, WebsiteOptional, Tip, MIN_WHY, FREE_SITE_TERMS, EXAMPLES as ART } from "@/components/pricing/PlanCards";
 
-// Picture for each system in the "8 Systems" section (existing site art).
-const ART: Record<string, { Art: () => ReactNode; note: string }> = {
-  atlas: { Art: TreatmentPagesArt, note: "Example: a page for each treatment people search for in your city." },
-  "glide-path": { Art: GlidePathArt, note: "Example: visitors pick their goal, answer quick questions, then book." },
-  sienna: { Art: SiennaArt, note: "Example: Sienna answering a call and texting the booking link." },
-  "second-glance": { Art: SecondGlanceArt, note: "Example: an exit offer shown to a visitor about to leave." },
-  "consult-magnet": { Art: MagnetArt, note: "Example: a first-visit offer built for one treatment." },
-  "leak-finder": { Art: LeakFinderArt, note: "Example with sample data: the step where visitors give up." },
-  "rave-loop": { Art: RaveLoopArt, note: "Example: the review text a client gets after a visit." },
-  "clear-view": { Art: MonthlyReportArt, note: "Example with sample data: your plain-numbers monthly report." },
-};
 
 // Pricing (2026-11-18, Gabe): website as the front door. ONE plan, Full Book
 // $499/mo, 6-month minimum, website optional (free) + add-ons; no second plan.
@@ -74,7 +60,7 @@ const APPS = ["Boulevard", "Vagaro", "GlossGenius", "Aesthetic Record", "Zenoti"
 // Add-on prices are Gabe's working numbers (11-18): pages ~$150-200/mo.
 const ADDONS: { mark: MarkId; name: string; brand?: boolean; price: string; p: string }[] = [
   { mark: "atlas", name: "More Google pages", price: "+$150 a month", p: "20 more Google pages every month, so you cover more treatments, costs and nearby towns, faster." },
-  { mark: "leak-finder", name: "More design updates", price: "+$150 a month", p: "2 more measured design updates every month, for busy sites with plenty of traffic." },
+  { mark: "leak-finder", name: "More design tests", price: "+$150 a month", p: "2 more measured design tests every month, for busy sites with plenty of traffic." },
   { mark: "spotlight", name: "Spotlight Ads", brand: true, price: "Priced on the demo", p: "Meta ads built around your best offer. Ad spend paid straight to Meta, never marked up." },
 ];
 
@@ -84,7 +70,7 @@ const FAQ: { q: string; a: ReactNode }[] = [
     a: (
       <>
         Yes. Most of Full Book is your new website and Google: <B n="Glide Path" />, <B n="Second Glance" />,{" "}
-        <B n="Leak Finder" />, 2 design updates and 20 new pages every month. Keep the receptionist you have;{" "}
+        <B n="Leak Finder" />, 2 design tests and 20 new pages every month. Keep the receptionist you have;{" "}
         <B n="Sienna AI" /> is there if you ever want to switch.
       </>
     ),
@@ -95,15 +81,15 @@ const FAQ: { q: string; a: ReactNode }[] = [
   },
   {
     q: "Do I need a new website?",
-    a: "No. Most of what you get works on the website you already have: new Google pages, the booking flow, the exit offer, Sienna AI and the monthly design updates. If you do need a new site, or yours is just a booking-app page, we build one for you free, on your own domain, with a 12-month minimum.",
+    a: "No. Most of what you get works on the website you already have: new Google pages, the booking flow, the exit offer, Sienna AI and the monthly design tests. If you do need a new site, or yours is just a booking-app page, we build one for you free, on your own domain, with a 12-month minimum.",
   },
   {
     q: "Why is there a 6-month minimum?",
-    a: "New Google pages usually take 3 to 6 months to rank, and design updates need a few months of real numbers to show what books more. Six months is enough time to see results you can count. After that, it's month to month with 30 days' notice.",
+    a: "New Google pages usually take 3 to 6 months to rank, and design tests need a few months of real numbers to show what books more. Six months is enough time to see results you can count. After that, it's month to month with 30 days' notice.",
   },
   {
-    q: "What's a design update?",
-    a: "Each month we keep improving your site based on what your numbers show: a new offer, a clearer booking step, a better page for a top treatment, a faster phone layout. Each one is measured against the month before, and we keep only what books more.",
+    q: "What's a design test?",
+    a: "Each month we test 2 changes to your site based on what your numbers show: a new offer, a clearer booking step, a better page for a top treatment, a faster phone layout. We keep what books more, so your conversion rate climbs over time.",
   },
   {
     q: "Are 20 pages a month really any good?",
@@ -120,8 +106,8 @@ const FAQ: { q: string; a: ReactNode }[] = [
     a: "Yes. We build you a website free as part of the plan, then everything else runs on it.",
   },
   {
-    q: "Can I get more pages or more design updates?",
-    a: "Yes. Add 20 more Google pages a month, or 2 more design updates a month, for $150 each. Add or drop them month to month.",
+    q: "Can I get more pages or more design tests?",
+    a: "Yes. Add 20 more Google pages a month, or 2 more design tests a month, for $150 each. Add or drop them month to month.",
   },
   {
     q: "Can I get just the AI receptionist?",
