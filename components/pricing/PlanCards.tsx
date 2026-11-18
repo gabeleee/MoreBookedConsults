@@ -6,7 +6,7 @@ import { TreatmentPagesArt } from "@/components/home/LocalSeoArt";
 import { RaveLoopArt, MonthlyReportArt } from "@/components/home/FullBookArt";
 import SeeExample from "@/components/pricing/SeeExample";
 
-// One plan (Gabe 2026-11-18): Full Book $499/mo, 6-month minimum. The website
+// One plan (Gabe 2026-11-18; named "Full Book" until renamed the same day): Optimized Booking System™ $499/mo, 6-month minimum. The website
 // is OPTIONAL (built free if they need one) and is NOT counted in the value, so
 // practices that keep their own site (e.g. multi-location spas) still see the
 // value. Front Desk ($299) and Full Book Pro ($749) were dropped the same
@@ -19,6 +19,11 @@ import SeeExample from "@/components/pricing/SeeExample";
 // Basis (scanned 2026-11-18): entry-level SEO ~$500/mo, AI receptionists
 // $79–$299/mo, review tools ~$50/mo; builds = half the proposal stack values.
 const CALL = "/demo/";
+
+// Self-serve checkout (Gabe 11-18: "give people the ability to just buy it").
+// A Stripe Payment Link for the $499/mo plan, set at build time. The "Buy it
+// today" link only renders when this is set, so the page never shows a dead link.
+const BUY_URL = process.env.NEXT_PUBLIC_MBC_BUY_URL || "";
 
 type MarkId = Parameters<typeof ProductMark>[0]["id"];
 
@@ -106,7 +111,7 @@ export function WebsiteOptional({ compact = false }: { compact?: boolean }) {
 // Fine print for the free website (Gabe 11-18: the free build needs a longer
 // commitment; 12 months matches the offer sent to Land Aesthetics).
 export const FREE_SITE_TERMS =
-  "*Free website: available with a 12-month minimum. Without a new website, Full Book has a 6-month minimum. The website is built on your own domain and stays yours.";
+  "*Free website: available with a 12-month minimum. Without a new website, the Optimized Booking System has a 6-month minimum. The website is built on your own domain and stays yours.";
 
 export const TOTAL = ITEMS.reduce((a, i) => a + i.value, 0);
 export const PRICE = 499;
@@ -152,8 +157,10 @@ export function PlanCards({ cta = "Get a free demo" }: { cta?: string }) {
     <div className="pv-one" id="full-book">
       <div className="pv-one-l">
         <span className="pr-tag">Everything included</span>
-        <h2 className="pr-name">Full Book</h2>
-        <p className="pr-sub">New Google pages every month, a booking flow built to convert, and every call answered.</p>
+        <h2 className="pr-name pv-name">
+          Optimized Booking System<sup>™</sup>
+        </h2>
+        <p className="pr-sub">More Google pages, more bookings, every call answered.</p>
         <p className="pv-was">
           <s>{usd(TOTAL)}</s> value in year one
         </p>
@@ -178,6 +185,11 @@ export function PlanCards({ cta = "Get a free demo" }: { cta?: string }) {
         <a className="btn" href={CALL}>
           {cta}
         </a>
+        {BUY_URL && (
+          <a className="pv-buy" href={BUY_URL}>
+            Ready now? Buy it today <span aria-hidden="true">→</span>
+          </a>
+        )}
         <p className="pv-one-note">
           Want more pages or more design tests? <a href="#add-ons">Add them anytime</a>.
         </p>

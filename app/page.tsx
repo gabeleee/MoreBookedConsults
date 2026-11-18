@@ -138,7 +138,7 @@ const PLATFORMS = [
 const FAQ = [
   {
     q: "How much does it cost?",
-    a: "One plan, everything included: Full Book is $499 a month for 20 new Google pages a month, a booking flow built to convert and an AI receptionist that answers every call, on your website or a new one we build free. Need more pages or design tests? Add them anytime. It's all on our pricing page.",
+    a: "One plan, everything included: the Optimized Booking System is $499 a month for 20 new Google pages a month, a booking flow built to convert and an AI receptionist that answers every call, on your website or a new one we build free. Need more pages or design tests? Add them anytime. It's all on our pricing page.",
   },
   {
     q: "Does it work with my booking software?",
@@ -170,7 +170,7 @@ const FAQ = [
   },
   {
     q: "Do you run ads or SEO too?",
-    a: "SEO is built into Full Book: Authority Atlas adds new Google pages for your treatments every month. Meta ads (Spotlight Ads) are an add-on once your site books more of the visitors it already gets.",
+    a: "SEO is built into the Optimized Booking System: Authority Atlas adds new Google pages for your treatments every month. Meta ads (Spotlight Ads) are an add-on once your site books more of the visitors it already gets.",
   },
   {
     q: "Who will I work with?",
@@ -178,7 +178,7 @@ const FAQ = [
   },
   {
     q: "Is there a contract? What if I cancel?",
-    a: "Full Book has a 6-month minimum, because new Google pages take a few months to rank. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
+    a: "The Optimized Booking System has a 6-month minimum, because new Google pages take a few months to rank. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
   },
 ];
 

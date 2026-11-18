@@ -16,14 +16,14 @@ import LaserAwayProof from "@/components/home/LaserAwayProof";
 import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, WebsiteOptional, Tip, MIN_WHY, FREE_SITE_TERMS, EXAMPLES as ART } from "@/components/pricing/PlanCards";
 
 
-// Pricing (2026-11-18, Gabe): website as the front door. ONE plan, Full Book
+// Pricing (2026-11-18, Gabe): website as the front door. ONE plan, Optimized Booking System
 // $499/mo, 6-month minimum, website optional (free) + add-ons; no second plan.
 // Value stack (crossed-out year-one values) mirrors the proposals.
 // Plan cards live in components/pricing/PlanCards.tsx (also on the homepage).
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "One plan, everything included: Full Book is $499/mo for a new website designed to book, 20 new Google pages a month and an AI receptionist that answers every call. Works with Boulevard, Vagaro and GlossGenius.",
+    "One plan, everything included: the Optimized Booking System is $499/mo for 20 new Google pages a month, a booking flow built to convert and an AI receptionist that answers every call. Works with Boulevard, Vagaro and GlossGenius.",
   alternates: { canonical: "/pricing/" },
 };
 
@@ -66,10 +66,10 @@ const ADDONS: { mark: MarkId; name: string; brand?: boolean; price: string; p: s
 
 const FAQ: { q: string; a: ReactNode }[] = [
   {
-    q: "I already have an AI receptionist. Is Full Book still worth it?",
+    q: "I already have an AI receptionist. Is the Optimized Booking System still worth it?",
     a: (
       <>
-        Yes. Most of Full Book is your new website and Google: <B n="Glide Path" />, <B n="Second Glance" />,{" "}
+        Yes. Most of the Optimized Booking System is your website and Google: <B n="Glide Path" />, <B n="Second Glance" />,{" "}
         <B n="Leak Finder" />, 2 design tests and 20 new pages every month. Keep the receptionist you have;{" "}
         <B n="Sienna AI" /> is there if you ever want to switch.
       </>
@@ -111,7 +111,7 @@ const FAQ: { q: string; a: ReactNode }[] = [
   },
   {
     q: "Can I get just the AI receptionist?",
-    a: "Full Book is the one plan we offer, because the website, Google pages and calls work best together. If you only need one piece, ask on the demo and we'll tell you honestly whether it makes sense.",
+    a: "The Optimized Booking System is the one plan we offer, because the website, Google pages and calls work best together. If you only need one piece, ask on the demo and we'll tell you honestly whether it makes sense.",
   },
   {
     q: "What happens if I cancel?",

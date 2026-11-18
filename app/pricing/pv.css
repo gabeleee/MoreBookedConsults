@@ -204,3 +204,9 @@
 .pv-see-inline{padding:0;border:0;background:none;cursor:pointer;font:inherit;font-size:13.5px;font-weight:400;color:var(--soft)}
 .pv-see-inline span{color:var(--violet-deep);text-decoration:underline;text-underline-offset:2px}
 .pv-see-inline:hover span{color:var(--violet)}
+
+/* plan name: bigger, with ™ */
+.pr .pv-one h2.pr-name.pv-name{font-size:clamp(30px,3.4vw,38px);line-height:1.08;margin:8px 0 8px}
+.pv-name sup{font-size:.42em;margin-left:2px;vertical-align:super}
+.pv-buy{display:block;text-align:center;margin-top:12px;font-weight:600;font-size:15px;color:var(--violet-deep);text-decoration:underline;text-underline-offset:3px}
+.pv-buy:hover{color:var(--violet)}
