@@ -1,0 +1,50 @@
+/* /pricing-v2/ draft (2026-11-18). Builds on pr- (pricing/pr.css); new classes start pv-. */
+.pv-draft{position:fixed;left:0;right:0;bottom:0;z-index:50;background:#2F1220;color:#fff;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;padding:7px 12px;}
+.pv-top{display:flex;align-items:center;gap:12px;margin:6px 4px 0}
+.pr .pv-plan h2.pr-name{margin:0}
+.pv-once{font-size:14px;font-weight:600;color:var(--violet-deep);margin:2px 4px 6px;min-height:1.4em}
+.pv-lead{font-size:14px;font-weight:700;color:var(--ink);margin:0 4px 10px}
+.pv-anchor p{font-size:15.5px}
+
+/* software vs us */
+.pv-vs{display:grid;grid-template-columns:1fr 56px 1fr;align-items:stretch;max-width:960px;margin:0 auto}
+.pv-col{background:#fff;border:1px solid var(--line);border-radius:24px;padding:26px 24px;display:flex;flex-direction:column}
+.pv-col.us{border:2px solid var(--violet);box-shadow:0 30px 70px -48px rgba(125,9,90,.55)}
+.pv-col-tag{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--soft)}
+.pv-col.us .pv-col-tag{color:var(--violet-deep)}
+.pv-col h3{font-family:var(--display);font-weight:var(--dw);letter-spacing:var(--dls);font-size:26px;margin:6px 0 16px;color:var(--ink)}
+.pv-col ul{list-style:none;display:flex;flex-direction:column;gap:12px;flex:1}
+.pv-col li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.45;color:var(--ink)}
+.pv-col li svg{width:20px;height:20px;flex:none;margin-top:1px;color:var(--soft)}
+.pv-col.us li svg{color:var(--violet)}
+.pv-col-foot{margin-top:18px;padding-top:14px;border-top:1px dashed var(--line);font-size:14px;color:var(--soft)}
+.pv-join{display:grid;place-items:center}
+.pv-join span{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--deep);color:#fff;font-size:22px;font-weight:700}
+.pv-flow{display:flex;align-items:center;justify-content:center;gap:14px;max-width:960px;margin:28px auto 0}
+.pv-flow > div{flex:1;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:16px;display:flex;flex-direction:column;gap:2px}
+.pv-flow > div.end{background:linear-gradient(165deg,#FFF1F3,#FAEEF7);border-color:rgba(195,46,132,.3)}
+.pv-flow svg{width:22px;height:22px;color:var(--violet);margin-bottom:6px}
+.pv-flow b{font-size:16px;color:var(--ink)}
+.pv-flow span{font-size:14px;color:var(--soft)}
+.pv-flow i{font-style:normal;color:var(--soft);font-size:20px}
+.pv-apps{list-style:none;display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:22px auto 0;max-width:960px}
+.pv-apps li{font-size:13.5px;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.pv-apps li.lbl{background:none;border:0;color:var(--soft);font-weight:500}
+
+/* add-ons */
+.pv-adds{display:grid;grid-template-columns:1fr 1fr;gap:18px;max-width:960px;margin:0 auto}
+.pv-add{display:flex;gap:16px;background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px}
+.pv-add h3{font-family:var(--display);font-weight:var(--dw);font-size:19px;margin:0 0 4px;color:var(--ink)}
+.pv-add-price{font-weight:700;color:var(--ink);margin-bottom:6px}
+.pv-add-price span{font-weight:500;color:var(--soft);font-size:14px;margin-left:6px}
+.pv-add p{font-size:15px;color:var(--soft);line-height:1.5}
+.pv-add .pv-add-price{color:var(--ink)}
+.hv-final a[href^="tel"]{color:inherit;font-weight:700}
+
+@media (max-width:980px){
+  .pv-vs{grid-template-columns:1fr;gap:0}
+  .pv-join{padding:10px 0}
+  .pv-flow{flex-direction:column;align-items:stretch}
+  .pv-flow i{transform:rotate(90deg);text-align:center}
+  .pv-adds{grid-template-columns:1fr}
+}
