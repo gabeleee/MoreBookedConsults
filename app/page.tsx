@@ -14,8 +14,7 @@ import ProofLine from "@/components/home/ProofLine";
 import { LineIcon } from "@/components/LineIcon";
 import { ProductTitle, ProductMark, MARK_FOR } from "@/components/home/ProductMark";
 import HomeHeroArt from "@/components/home/HomeHeroArt";
-import { MissedCallArt } from "@/components/home/FullBookArt";
-import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, LiftLabArt, ClearViewArt } from "@/components/home/SystemArt";
+import { SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, LiftLabArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Homepage v2 (2026-11-03): sold like a product. Branded systems from the
 // proposals, a call as the main CTA, the founder named once inside the proof
@@ -100,24 +99,6 @@ const SYSTEMS = [
       "No monthly slide deck to wait for.",
     ],
     Art: ClearViewArt,
-  },
-];
-
-const PAINS = [
-  {
-    Art: MazeArt,
-    t: "The Book button is a maze",
-    p: "People tap Book, land on a long booking page full of treatments and prices, and give up.",
-  },
-  {
-    Art: WaitArt,
-    t: "New leads wait hours",
-    p: "A form comes in at 9 PM, someone calls back tomorrow, and the lead already booked somewhere else.",
-  },
-  {
-    Art: MissedCallArt,
-    t: "Calls go to voicemail",
-    p: "The phone rings while your team is with a client, and the caller books with whoever picks up first.",
   },
 ];
 
@@ -254,31 +235,12 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ---------------- Problem ---------------- */}
-      <section className="hv-sec">
-        <div className="wrap">
-          <div className="hv-head">
-            <h2>Your website gets the visits. Your calendar doesn&apos;t get the bookings.</h2>
-            <p>Most people who want a consult never finish booking one.</p>
-          </div>
-          <div className="hv-pains">
-            {PAINS.map(({ Art, ...x }) => (
-              <div key={x.t} className="hv-pain has-art">
-                <Art />
-                <h3>{x.t}</h3>
-                <p>{x.p}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ---------------- Systems ---------------- */}
       <section className="hv-sec hv-systems" id="systems">
         <div className="wrap">
           <div className="hv-head">
-            <h2>Every place you lose a booking, covered</h2>
-            <p>Aesthetic practice marketing for med spas and plastic surgeons, starting where the money leaks: your booking path.</p>
+            <h2>6 Systems That Turn More Visitors Into Booked Consults</h2>
+            <p>Each one is built and run for you, and each one raises how many of your visitors book.</p>
           </div>
           <div className="hv-sys-list">
             {SYSTEMS.map(({ n, cat, name, tag, pts, Art }, i) => (
