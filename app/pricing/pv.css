@@ -179,3 +179,12 @@
 .pv-dlg:has(.hh-art){max-width:min(620px,calc(100vw - 32px))}
 .pv-stack-price em{display:flex!important;align-items:center;gap:2px}
 .pv-dlg-art:has(.hh-art){padding-bottom:36px}
+
+/* highlights as bullets, asterisk, fine print */
+.pv-hi ul{list-style:none;display:flex;flex-direction:column;gap:6px;margin:4px 0 0}
+.pv-hi li{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:700;color:var(--ink)}
+.pv-hi li svg{width:17px;height:17px;flex:none;color:var(--violet)}
+.pv-hi li:last-child{font-weight:500;color:var(--soft)}
+.pv-ast{color:var(--violet-deep);text-decoration:none;margin-left:1px}
+.pv-fine{max-width:720px;margin:28px auto 0;font-size:12.5px;line-height:1.5;color:var(--soft);text-align:center}
+.hv-final .pv-fine,.hv-pricing .pv-fine{font-size:12.5px;max-width:620px}

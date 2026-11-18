@@ -74,7 +74,9 @@ export function WebsiteOptional({ compact = false }: { compact?: boolean }) {
         <LineIcon name="monitor" />
       </span>
       <div>
-        <b className="pv-b">Need a new website? We&apos;ll build it free.</b>
+        <b className="pv-b">
+          Need a new website? We&apos;ll build it free.<a className="pv-ast" href="#fine-print" aria-label="See terms">*</a>
+        </b>
         <span>Optional. Already have a site you like? We work on the one you have.</span>
         <SeeExample name="A website built to book" note="Example: a booking-first home page on a phone, with Sienna AI and the exit offer working together." thumb={false} label="See an example">
           <HeroArt />
@@ -84,6 +86,11 @@ export function WebsiteOptional({ compact = false }: { compact?: boolean }) {
     </div>
   );
 }
+
+// Fine print for the free website (Gabe 11-18: the free build needs a longer
+// commitment; 12 months matches the offer sent to Land Aesthetics).
+export const FREE_SITE_TERMS =
+  "*Free website: available with a 12-month minimum. Without a new website, Full Book has a 6-month minimum. The website is built on your own domain and stays yours.";
 
 export const TOTAL = ITEMS.reduce((a, i) => a + i.value, 0);
 export const PRICE = 499;
@@ -121,9 +128,14 @@ export function PlanCards({ cta = "Get a free demo" }: { cta?: string }) {
         </p>
         <div className="pv-hi">
           <span>Highlights</span>
-          <b>20 new Google pages a month</b>
-          <b>A booking flow built to convert</b>
-          <b>Every call answered, 24/7</b>
+          <ul>
+            {["20 new Google pages a month", "A booking flow built to convert", "Every call answered, 24/7", "And many more"].map((h) => (
+              <li key={h}>
+                <LineIcon name="check" />
+                {h}
+              </li>
+            ))}
+          </ul>
         </div>
         <a className="btn" href={CALL}>
           {cta}

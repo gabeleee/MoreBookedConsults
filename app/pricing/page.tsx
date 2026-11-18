@@ -15,7 +15,7 @@ import { GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, MagnetArt } fr
 import { TreatmentPagesArt } from "@/components/home/LocalSeoArt";
 import { RaveLoopArt, MonthlyReportArt } from "@/components/home/FullBookArt";
 import SeeExample from "@/components/pricing/SeeExample";
-import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, ItemIcon, ItemName, WebsiteOptional, Tip, MIN_WHY } from "@/components/pricing/PlanCards";
+import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, ItemIcon, ItemName, WebsiteOptional, Tip, MIN_WHY, FREE_SITE_TERMS } from "@/components/pricing/PlanCards";
 
 // Picture for each system in the "8 Systems" section (existing site art).
 const ART: Record<string, { Art: () => ReactNode; note: string }> = {
@@ -94,7 +94,7 @@ const FAQ: { q: string; a: ReactNode }[] = [
   },
   {
     q: "Do I need a new website?",
-    a: "No. Most of what you get works on the website you already have: new Google pages, the booking flow, the exit offer, Sienna AI and the monthly design updates. If you do need a new site, or yours is just a booking-app page, we build one for you free, on your own domain, as part of the plan.",
+    a: "No. Most of what you get works on the website you already have: new Google pages, the booking flow, the exit offer, Sienna AI and the monthly design updates. If you do need a new site, or yours is just a booking-app page, we build one for you free, on your own domain, with a 12-month minimum.",
   },
   {
     q: "Why is there a 6-month minimum?",
@@ -147,13 +147,12 @@ export default function Pricing() {
         <div className="wrap bs-hero-in">
           <h1 data-prism-calm="0.8">Turn Your Website Into A Booking Machine, $499 A Month</h1>
           <p className="hv-lede" data-prism-calm="0.6">
-            New Google pages every month, a booking flow built to convert, and every call answered. We work on the
-            website you have, or build you a new one free. You keep the booking software you already use.
+            New Google pages, a booking flow that converts, and every call answered.
           </p>
           <ul className="bs-chips">
             <li><LineIcon name="dollar" /> One plan, everything included</li>
             <li><LineIcon name="calendar" /> Works with your booking app</li>
-            <li><LineIcon name="monitor" /> New website optional, built free</li>
+            <li><LineIcon name="monitor" /> New website optional, built free*</li>
           </ul>
 
           <PlanCards />
@@ -340,6 +339,7 @@ export default function Pricing() {
             Get a free demo <span className="hv-cta-arrow" aria-hidden="true">→</span>
           </a>
           <p className="hv-book-alt">Or see <Link href="/results/">the track record</Link>.</p>
+          <p className="pv-fine" id="fine-print">{FREE_SITE_TERMS}</p>
         </div>
       </section>
     </main>

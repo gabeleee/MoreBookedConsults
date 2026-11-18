@@ -4,7 +4,7 @@ import Link from "next/link";
 import "./home-v2.css";
 import "./pricing/pr.css";
 import "./pricing/pv.css";
-import { PlanCards } from "@/components/pricing/PlanCards";
+import { PlanCards, FREE_SITE_TERMS } from "@/components/pricing/PlanCards";
 import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
 import ConversionChart from "@/components/ConversionChart";
@@ -143,7 +143,7 @@ const FAQ = [
   },
   {
     q: "Do I need a new website?",
-    a: "No. Everything works on the website you already have. If you need a new one, or you only have a booking-app page, we build it free as part of the plan.",
+    a: "No. Everything works on the website you already have. If you need a new one, or you only have a booking-app page, we build it free with a 12-month minimum.",
   },
   {
     q: "How long until it's live?",
@@ -458,6 +458,7 @@ export default function Home() {
           <p className="hv-sys-more hv-pricing-more">
             <Link href="/pricing/">See what each piece is worth, plus add-ons →</Link>
           </p>
+          <p className="pv-fine" id="fine-print">{FREE_SITE_TERMS}</p>
         </div>
       </section>
 
