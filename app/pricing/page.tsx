@@ -30,12 +30,12 @@ const ART: Record<string, { Art: () => ReactNode; note: string }> = {
 };
 
 // Pricing (2026-11-18, Gabe): website as the front door. Front Desk $299,
-// Full Book $499 and Full Book Pro $749 (website included, 12-month minimum).
+// Full Book $499 (website included, 12-month minimum). Two plans only.
 // Plan cards live in components/pricing/PlanCards.tsx (also on the homepage).
 export const metadata: Metadata = {
   title: "Pricing",
   description:
-    "Med spa marketing plans with listed prices: Front Desk $299/mo (AI receptionist), Full Book $499/mo (a new website designed to book, 20 Google pages a month) and Full Book Pro $749/mo. Works with Boulevard, Vagaro and GlossGenius.",
+    "Med spa marketing plans with listed prices: Front Desk $299/mo (AI receptionist) and Full Book $499/mo (a new website designed to book, 20 Google pages a month). Works with Boulevard, Vagaro and GlossGenius.",
   alternates: { canonical: "/pricing/" },
 };
 
@@ -45,14 +45,14 @@ type MarkId = Parameters<typeof ProductMark>[0]["id"];
 
 // href = the page that explains the system in detail (none yet for Consult Magnet, Rave Loop).
 const SYSTEM_INFO: { id: MarkId; name: string; p: string; plans: string; href?: string }[] = [
-  { id: "atlas", name: "Authority Atlas", p: "New pages for every treatment, cost and nearby town people search for.", plans: "Full Book + Pro", href: "/local-seo/" },
-  { id: "glide-path", name: "Glide Path", p: "A highly optimized, multi-step booking flow that hands clients to your booking app.", plans: "Full Book + Pro", href: "/booking-systems/#glide-path" },
-  { id: "sienna", name: "Sienna AI", p: "An AI receptionist that answers every call and texts your booking link.", plans: "All plans", href: "/booking-systems/#sienna-ai" },
-  { id: "second-glance", name: "Second Glance", p: "A well-timed offer that brings leaving visitors back to book.", plans: "Full Book + Pro", href: "/booking-systems/#second-glance" },
-  { id: "consult-magnet", name: "Consult Magnet", p: "A first-visit offer that turns browsers into booked consults.", plans: "Full Book + Pro" },
-  { id: "leak-finder", name: "Leak Finder", p: "Tracking that shows the exact step where people give up.", plans: "Full Book + Pro", href: "/booking-systems/#leak-finder" },
-  { id: "rave-loop", name: "Rave Loop", p: "Review requests after each visit. Unhappy clients reach you first.", plans: "All plans" },
-  { id: "clear-view", name: "Clear View", p: "One plain-numbers report: calls, new clients booked, reviews.", plans: "All plans", href: "/booking-systems/#clear-view" },
+  { id: "atlas", name: "Authority Atlas", p: "New pages for every treatment, cost and nearby town people search for.", plans: "Full Book", href: "/local-seo/" },
+  { id: "glide-path", name: "Glide Path", p: "A highly optimized, multi-step booking flow that hands clients to your booking app.", plans: "Full Book", href: "/booking-systems/#glide-path" },
+  { id: "sienna", name: "Sienna AI", p: "An AI receptionist that answers every call and texts your booking link.", plans: "Both plans", href: "/booking-systems/#sienna-ai" },
+  { id: "second-glance", name: "Second Glance", p: "A well-timed offer that brings leaving visitors back to book.", plans: "Full Book", href: "/booking-systems/#second-glance" },
+  { id: "consult-magnet", name: "Consult Magnet", p: "A first-visit offer that turns browsers into booked consults.", plans: "Full Book" },
+  { id: "leak-finder", name: "Leak Finder", p: "Tracking that shows the exact step where people give up.", plans: "Full Book", href: "/booking-systems/#leak-finder" },
+  { id: "rave-loop", name: "Rave Loop", p: "Review requests after each visit. Unhappy clients reach you first.", plans: "Both plans" },
+  { id: "clear-view", name: "Clear View", p: "One plain-numbers report: calls, new clients booked, reviews.", plans: "Both plans", href: "/booking-systems/#clear-view" },
 ];
 
 const SOFTWARE = [
@@ -86,7 +86,7 @@ const FAQ: { q: string; a: ReactNode }[] = [
   },
   {
     q: "Do I really get a new website?",
-    a: "Yes. On Full Book and Full Book Pro we design and build your website, on your own domain, as part of the plan. It's designed around one job: turning visitors into booked consults. If you already have a site you love, we can redesign the pages that matter most for booking instead.",
+    a: "Yes. On Full Book we design and build your website, on your own domain, as part of the plan. It's designed around one job: turning visitors into booked consults. If you already have a site you love, we can redesign the pages that matter most for booking instead.",
   },
   {
     q: "What's a design update?",
