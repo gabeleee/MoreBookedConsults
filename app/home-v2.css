@@ -748,3 +748,13 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 .pm-ink{stroke:#2F1220;stroke-width:2.4}
 .pm-ink-fill{fill:#2F1220;stroke:none}
 @media (max-width:520px){.pm-title{gap:12px}.pm-md{width:48px;height:48px;border-radius:13px}}
+
+/* Sienna avatar face: photo + "AI" bubble (replaces the glowing orb, 2026-11-18) */
+.si-orb.si-face,.hh-orb.hh-face{background:none;display:block;animation:none}
+.si-orb.si-face{overflow:visible;box-shadow:0 0 0 6px rgba(255,255,255,.85),0 18px 50px -10px rgba(195,46,132,.55);border-radius:50%}
+.hh-orb.hh-face{overflow:hidden;box-shadow:0 0 0 3px rgba(255,255,255,.95),0 0 16px rgba(195,46,132,.35)}
+.sienna-av{position:relative;display:block;width:100%;height:100%}
+.sienna-av img{display:block;width:100%;height:100%;object-fit:cover;border-radius:50%}
+.sienna-ai-badge{position:absolute;right:-10px;bottom:4px;display:inline-flex;align-items:center;gap:3px;padding:4px 9px 4px 7px;border-radius:999px;
+  background:var(--deep);color:#fff;font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.02em;box-shadow:0 6px 16px -6px rgba(47,18,32,.6);border:2px solid #fff}
+.sienna-ai-badge svg{width:11px;height:11px;fill:#F6C9DF}
