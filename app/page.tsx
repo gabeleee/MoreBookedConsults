@@ -2,6 +2,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./home-v2.css";
+import "./pricing/pr.css";
+import "./pricing/pv.css";
+import { PlanCards } from "@/components/pricing/PlanCards";
 import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
 import ConversionChart from "@/components/ConversionChart";
@@ -9,11 +12,11 @@ import { LineIcon } from "@/components/LineIcon";
 import { ProductTitle, ProductMark, MARK_FOR } from "@/components/home/ProductMark";
 import HeroVideo from "@/components/home/HeroVideo";
 import { MissedCallArt } from "@/components/home/FullBookArt";
-import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, AtlasArt, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
+import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
 
-// Homepage v2 (2026-11-03 draft): sold like a product. Five branded systems
-// from the proposals, a call as the only CTA, no prices, the founder named
-// once inside the proof section.
+// Homepage v2 (2026-11-03): sold like a product. Branded systems from the
+// proposals, a call as the main CTA, the founder named once inside the proof
+// section. Since 2026-11-18 the three plan cards from /pricing/ show here too.
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
   description:
@@ -132,7 +135,7 @@ const PLATFORMS = [
 const FAQ = [
   {
     q: "How much does it cost?",
-    a: "It depends on your site and which systems you need. You get one fixed monthly price on the call, before you commit to anything. There's no contract, and you can cancel anytime.",
+    a: "Plans start at $299 a month. Front Desk ($299) answers every call. Full Book ($499) adds a new website designed to book and 20 new Google pages a month. Full Book Pro ($749) builds a 150-page website in 90 days. Every plan is listed on our pricing page.",
   },
   {
     q: "Does it work with my booking software?",
@@ -140,7 +143,7 @@ const FAQ = [
   },
   {
     q: "Do I need a new website?",
-    a: "No. We add the systems to the site you have, whether it's WordPress, Squarespace, Wix, Webflow or custom.",
+    a: "Front Desk works with the site you have. Full Book and Full Book Pro include a new website designed to book. If you love your current site, we can redesign the pages that matter most for booking instead.",
   },
   {
     q: "How long until it's live?",
@@ -160,11 +163,11 @@ const FAQ = [
   },
   {
     q: "Who is this for?",
-    a: "Med spas, plastic surgeons, injectors and laser clinics whose websites get at least 300 visitors a month. If you get less than that, we'll tell you on the call and point you to what will help more.",
+    a: "Med spas, plastic surgeons, injectors and laser clinics, from solo studios to busy multi-provider practices.",
   },
   {
     q: "Do you run ads or SEO too?",
-    a: "Yes. Once your site books more of the visitors it already gets, we can add Meta ads or local SEO to send it more. Most practices start with the booking systems, because more traffic to a leaky site is wasted money.",
+    a: "SEO is built into Full Book and Full Book Pro: Authority Atlas adds new Google pages for your treatments every month. Meta ads (Spotlight Ads) are an add-on once your site books more of the visitors it already gets.",
   },
   {
     q: "Who will I work with?",
@@ -172,7 +175,7 @@ const FAQ = [
   },
   {
     q: "Is there a contract? What if I cancel?",
-    a: "No contract. If you cancel, you keep your booking flow and exit offer, plus your lead history. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
+    a: "Front Desk is month to month. Full Book and Full Book Pro include your website and have a 12-month minimum. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
   },
 ];
 
@@ -195,7 +198,7 @@ export default function Home() {
           <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
             We build <a href="#systems">five booking systems</a>{" "}into your med spa&apos;s website in 14 days, then keep improving them every month.
-            Done for you, measured, no contract.
+            Done for you, measured, from $299 a month.
           </p>
           <div className="hv-ctas">
             <a className="btn hv-cta-hero" href={CALL}>
@@ -379,7 +382,7 @@ export default function Home() {
                 <LineIcon name="clock" /> Booking flow live in 14 days, or month one is free
               </li>
               <li>
-                <LineIcon name="lock" /> No contract, cancel anytime
+                <LineIcon name="dollar" /> Plans from $299 a month
               </li>
             </ul>
             <p className="hv-fine">Booking rate = booking requests ÷ website visitors, measured against your week-1 baseline. For sites with at least 300 visitors a month.</p>
@@ -444,6 +447,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ---------------- Pricing (same cards as /pricing/) ---------------- */}
+      <section className="hv-sec pr pv hv-pricing" id="pricing">
+        <div className="wrap">
+          <div className="hv-head">
+            <h2>Simple Pricing, Listed Up Front</h2>
+            <p>Plans from $299 a month. Keep the booking software you already use.</p>
+          </div>
+          <PlanCards />
+          <p className="hv-sys-more hv-pricing-more">
+            <Link href="/pricing/">Compare every plan and see examples →</Link>
+          </p>
+        </div>
+      </section>
+
       {/* ---------------- Add-ons ---------------- */}
       <section className="hv-sec hv-addons-sec">
         <div className="wrap">
@@ -479,31 +496,6 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="hv-addon-big atlas">
-            <div className="hv-addon-top">
-              <div>
-                <p className="hv-sys-k">Add-on · Local SEO</p>
-                <h3 className="pm-title">
-                  <ProductMark id="atlas" />
-                  <span>
-                    Authority Atlas<sup>™</sup> Local SEO
-                  </span>
-                </h3>
-                <p className="hv-sys-tag">Show up first when people near you are ready to book.</p>
-                <ul className="hv-addon-pts">
-                  <li><LineIcon name="check" />Google Maps and the local pack, so you&apos;re in the top 3 near you</li>
-                  <li><LineIcon name="check" />A page for every treatment, written to rank in your city</li>
-                  <li><LineIcon name="check" />Every visitor from Google is a free click, no ad spend behind it</li>
-                  <li><LineIcon name="check" />A monthly report on your rankings and the bookings they bring</li>
-                </ul>
-              </div>
-              <AtlasArt />
-            </div>
-            <p className="hv-addon-note">Illustrative search result for a made-up med spa.</p>
-            <p className="hv-sys-more sp-more">
-              <Link href="/local-seo/">See how Authority Atlas™ works, in detail →</Link>
-            </p>
-          </div>
         </div>
       </section>
 

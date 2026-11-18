@@ -4,7 +4,7 @@ import AuditForm from "@/components/AuditForm";
 export const metadata: Metadata = {
   title: "Convert More of Your Traffic",
   description:
-    "Turn the visitors you already have into booked consults. Two improvements a month to your booking flow, forms, offers, and treatment pages, with no contract. Answer a few quick questions to get started.",
+    "Turn the visitors you already have into booked consults. Two improvements a month to your booking flow, forms, offers, and treatment pages. Answer a few quick questions to get started.",
   alternates: { canonical: "/convert-more/" },
 };
 
@@ -26,7 +26,7 @@ export default function ConvertMorePage() {
             <p>
               I ship two improvements a month on the spots that leak the most
               consults: your booking flow, your forms, your offers, your
-              treatment pages. No contract.
+              treatment pages. Plans from $299 a month.
             </p>
             <p>
               Answer a few quick questions and I&apos;ll show you where visitors
