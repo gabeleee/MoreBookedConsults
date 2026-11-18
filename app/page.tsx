@@ -6,6 +6,7 @@ import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
 import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
+import { ProductTitle, ProductMark, MARK_FOR } from "@/components/home/ProductMark";
 import HeroVideo from "@/components/home/HeroVideo";
 import { MissedCallArt } from "@/components/home/FullBookArt";
 import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, AtlasArt, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
@@ -270,10 +271,7 @@ export default function Home() {
                   <p className="hv-sys-k">
                     System {n} · {cat}
                   </p>
-                  <h3>
-                    {name}
-                    <sup>™</sup>
-                  </h3>
+                  <ProductTitle id={MARK_FOR[name]} name={name} />
                   <p className="hv-sys-tag">{tag}</p>
                   <ul>
                     {pts.map((p) => (
@@ -294,9 +292,7 @@ export default function Home() {
           <div className="hv-bonus">
             <div className="hv-bonus-copy">
               <p className="hv-sys-k">Bonus · Offer builder</p>
-              <h3>
-                Consult Magnet<sup>™</sup>
-              </h3>
+              <ProductTitle id="consult-magnet" name="Consult Magnet" />
               <p className="hv-sys-tag">A first-visit offer people actually want to claim.</p>
               <p>We build a named package for your top treatment, then use it everywhere: your exit offer, your follow-up texts and your ads.</p>
               <CallButton className="btn-ghost">Get all five, plus the bonus</CallButton>
@@ -460,8 +456,11 @@ export default function Home() {
             <div className="hv-addon-top">
               <div>
                 <p className="hv-sys-k">Add-on · Facebook &amp; Instagram ads</p>
-                <h3>
-                  Spotlight<sup>™</sup> Ads
+                <h3 className="pm-title">
+                  <ProductMark id="spotlight" />
+                  <span>
+                    Spotlight<sup>™</sup> Ads
+                  </span>
                 </h3>
                 <p className="hv-sys-tag">Ads built to bring back more than they cost.</p>
                 <ul className="hv-addon-pts">
@@ -484,8 +483,11 @@ export default function Home() {
             <div className="hv-addon-top">
               <div>
                 <p className="hv-sys-k">Add-on · Local SEO</p>
-                <h3>
-                  Authority Atlas<sup>™</sup> Local SEO
+                <h3 className="pm-title">
+                  <ProductMark id="atlas" />
+                  <span>
+                    Authority Atlas<sup>™</sup> Local SEO
+                  </span>
                 </h3>
                 <p className="hv-sys-tag">Show up first when people near you are ready to book.</p>
                 <ul className="hv-addon-pts">

@@ -8,6 +8,7 @@ import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
 import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
+import { ProductTitle, MARK_FOR } from "@/components/home/ProductMark";
 import { MazeArt, GuaranteeSeal, MagnetArt, GlidePathArt, SiennaArt } from "@/components/home/SystemArt";
 import { TreatmentPagesArt } from "@/components/home/LocalSeoArt";
 import { HeroCallArt, MissedCallArt, HiddenArt, RaveLoopArt, MonthlyReportArt, FrontDeskCompare, SoloArt, GrowingArt } from "@/components/home/FullBookArt";
@@ -271,10 +272,7 @@ export default function FullBook() {
                   <p className="hv-sys-k">
                     Part {n} · {cat}
                   </p>
-                  <h3>
-                    {name}
-                    <sup>™</sup>
-                  </h3>
+                  <ProductTitle id={MARK_FOR[name]} name={name} />
                   <p className="hv-sys-tag">{tag}</p>
                   <ul>
                     {pts.map((p) => (
@@ -292,9 +290,7 @@ export default function FullBook() {
           <div className="hv-bonus">
             <div className="hv-bonus-copy">
               <p className="hv-sys-k">Bonus · First-visit offer</p>
-              <h3>
-                Consult Magnet<sup>™</sup>
-              </h3>
+              <ProductTitle id="consult-magnet" name="Consult Magnet" />
               <p className="hv-sys-tag">A first-visit offer people actually want to claim.</p>
               <p>We build a named package for your top treatment, then Sienna, your website and your review texts all use it.</p>
               <a className="btn-ghost" href={CALL}>

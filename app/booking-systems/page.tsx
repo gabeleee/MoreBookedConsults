@@ -5,6 +5,7 @@ import "./bs.css";
 import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
 import { LineIcon } from "@/components/LineIcon";
+import { ProductTitle, MARK_FOR } from "@/components/home/ProductMark";
 import { GuaranteeSeal, MagnetArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Booking Systems service page (2026-11-03 draft). The Services menu points
@@ -344,10 +345,7 @@ export default function BookingSystems() {
                   <p className="hv-sys-k">
                     System {n} · {cat}
                   </p>
-                  <h3>
-                    {name}
-                    <sup>™</sup>
-                  </h3>
+                  <ProductTitle id={MARK_FOR[name]} name={name} />
                   <p className="hv-sys-tag">{tag}</p>
                   <p className="bs-why">{why}</p>
                   <div className="bs-cols">
@@ -382,9 +380,7 @@ export default function BookingSystems() {
           <div className="hv-bonus">
             <div className="hv-bonus-copy">
               <p className="hv-sys-k">Included · Offer builder</p>
-              <h3>
-                Consult Magnet<sup>™</sup>
-              </h3>
+              <ProductTitle id="consult-magnet" name="Consult Magnet" />
               <p className="hv-sys-tag">The offer that makes the other systems work harder.</p>
               <p>
                 We build a named first-visit package for your top treatment. It becomes the offer in Second Glance, the reason Sienna gives people to book, and the hook in your ads if you run them.
