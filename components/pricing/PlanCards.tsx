@@ -176,7 +176,7 @@ export function PlanCards({ cta = "Get a free demo" }: { cta?: string }) {
         <div className="pv-hi">
           <span>Highlights</span>
           <ul>
-            {["20 new Google pages a month", "A booking flow built to convert", "Every call answered, 24/7", "And many more"].map((h) => (
+            {["A booking flow built to convert", "Every call answered, 24/7", "2 design tests a month to lift bookings", "20 new Google pages a month", "And many more"].map((h) => (
               <li key={h}>
                 <LineIcon name="check" />
                 {h}
