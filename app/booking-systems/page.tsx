@@ -6,17 +6,18 @@ import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
 import { LineIcon } from "@/components/LineIcon";
 import { ProductTitle, MARK_FOR } from "@/components/home/ProductMark";
-import { GuaranteeSeal, MagnetArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, ClearViewArt } from "@/components/home/SystemArt";
+import { GuaranteeSeal, MagnetArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, LiftLabArt, ClearViewArt } from "@/components/home/SystemArt";
 
 // Booking Systems service page (2026-11-03 draft). The Services menu points
 // here; /medspa-cro/ stays as the SEO page. The homepage gives one card per
 // system; this page goes deeper: where each one sits in the visitor's path,
 // what we build, what changes for the practice, plus fit, comparison and a
-// service FAQ. No prices, CTA = /demo/.
+// service FAQ. Since 2026-11-18: six systems (Lift Lab added), framed as the
+// booking half of the Optimized Booking System ($499/mo, one plan), CTA = /pricing/.
 export const metadata: Metadata = {
   title: "Booking Systems For Med Spas And Plastic Surgeons",
   description:
-    "Five booking systems built into your med spa or plastic surgery website in 14 days: a booking flow people finish, an AI receptionist that calls every lead in 60 seconds, an exit offer, drop-off tracking and a live dashboard.",
+    "Six booking systems built into your med spa or plastic surgery website in 14 days: a booking flow people finish, an AI receptionist that calls every lead in 60 seconds, an exit offer, drop-off tracking, monthly design tests and a live dashboard.",
   alternates: { canonical: "/booking-systems/" },
 };
 
@@ -107,8 +108,26 @@ const SYSTEMS = [
     Art: LeakFinderArt,
   },
   {
-    id: "clear-view",
+    id: "lift-lab",
     n: "05",
+    cat: "Design tests",
+    name: "Lift Lab",
+    tag: "Your booking rate climbs every month.",
+    why: "Fixing a leak once isn't enough. Lift Lab tests 2 new designs on your site every month and keeps only the ones that book more people.",
+    build: [
+      "2 new design tests a month: offers, booking steps, layouts and treatment pages",
+      "Each idea picked from what Leak Finder shows, starting with the biggest leak",
+      "Ideas that already won real tests on other aesthetic sites, not guesses",
+    ],
+    get: [
+      "Winners stay live, the rest get switched off, so nothing drops",
+      "Each month starts from a higher booking rate than the last",
+    ],
+    Art: LiftLabArt,
+  },
+  {
+    id: "clear-view",
+    n: "06",
     cat: "Live dashboard",
     name: "Clear View",
     tag: "Know what's working, any time.",
@@ -137,13 +156,15 @@ const INCLUDED = [
       "Second Glance exit popup built around it",
       "Leak Finder tracking on every step",
       "Your Clear View dashboard link",
+      "Rave Loop review texts after every visit",
     ],
   },
   {
     h: "Every month after",
     items: [
-      "2 new improvements to your site, starting with the biggest leak",
-      "Each one measured against your baseline",
+      "2 Lift Lab design tests, starting with the biggest leak",
+      "20 new Authority Atlas pages, so more people find you on Google",
+      "Each change measured against your baseline",
       "Winners stay live, the rest get switched off",
       "Sienna's script and timing tuned from real calls",
       "One point of contact and a shared channel for questions",
@@ -159,7 +180,7 @@ const FIT_YES = [
 ];
 const FIT_NO = [
   "Your site gets fewer than 300 visitors a month (we'll tell you what helps more)",
-  "You want a whole new website from scratch",
+  "You want a one-time project with no monthly work",
   "You're outside aesthetics",
 ];
 
@@ -178,7 +199,7 @@ const COMPARE: [string, string, string, string][] = [
 const FAQ = [
   {
     q: "How is this different from getting a new website?",
-    a: "A new website changes how your site looks. Booking systems change what happens when someone wants to book: the form, the follow-up call, the exit offer and the tracking. We add them to the site you already have, so there's nothing to rebuild.",
+    a: "A new website changes how your site looks. Booking systems change what happens when someone wants to book: the form, the follow-up call, the exit offer and the tracking. We add them to the site you already have, so there's nothing to rebuild. If you do need a new site, we build it free with a 12-month minimum.",
   },
   {
     q: "Does Glide Path replace my booking software?",
@@ -194,7 +215,7 @@ const FAQ = [
   },
   {
     q: "How do you choose what to improve each month?",
-    a: "Leak Finder shows which step loses the most people. We fix that one first, measure it against your baseline, and move to the next biggest leak. Your booking path comes first, then the rest of your site.",
+    a: "Leak Finder shows which step loses the most people. Lift Lab tests a fix for that one first, measures it against your baseline, and moves to the next biggest leak. Your booking path comes first, then the rest of your site.",
   },
   {
     q: "Will the exit popup annoy my visitors?",
@@ -202,7 +223,7 @@ const FAQ = [
   },
   {
     q: "How much does it cost?",
-    a: "Booking Systems are part of the Optimized Booking System: $499 a month , month to month, on the website you have or a new one we build free. Everything is listed on our pricing page.",
+    a: "Booking Systems are part of the Optimized Booking System: $499 a month, month to month, on the website you have or a new one we build free. Everything is listed on our pricing page.",
   },
   {
     q: "What if I cancel?",
@@ -245,7 +266,7 @@ const LOOP = [
   },
   {
     icon: "wrench",
-    h: "Ship 2 improvements",
+    h: "Run 2 Lift Lab tests",
     p: "We pick changes that already won real tests on other sites, so even a smaller site gets proven ideas, not guesses.",
   },
   {
@@ -284,7 +305,7 @@ export default function BookingSystems() {
           <h1 data-prism-calm="0.8">Booking systems that turn med spa visitors into booked consults</h1>
           <ProofLine />
           <p className="hv-lede" data-prism-calm="0.6">
-            Five systems, built into the website you already have in 14 days.
+            Six systems, built into your website in 14 days, as part of the <Link href="/pricing/">Optimized Booking System™</Link>.
             Each one fixes a different place where people who want a consult slip away.
           </p>
           <div className="hv-ctas">
@@ -293,7 +314,7 @@ export default function BookingSystems() {
           <ul className="bs-chips">
             <li><LineIcon name="clock" /> Live in 14 days</li>
             <li><LineIcon name="call" /> Leads called in 60 seconds</li>
-            <li><LineIcon name="repeat" /> 2 improvements every month</li>
+            <li><LineIcon name="repeat" /> 2 design tests every month</li>
           </ul>
 
           <div className="bs-map" aria-label="Where each system works in a visitor's path">
@@ -316,7 +337,7 @@ export default function BookingSystems() {
               <span className="bs-scan" aria-hidden="true" />
               <LineIcon name="eye" />
               <span>
-                <b>Leak Finder™</b> watches every step and shows where people quit
+                <b>Leak Finder™</b> shows where people quit, and <b>Lift Lab™</b> tests the fix
               </span>
             </a>
           </div>
@@ -328,7 +349,7 @@ export default function BookingSystems() {
         <div className="wrap">
           <div className="hv-head">
             <h2>What each system does, and what we build</h2>
-            <p>All five are written, designed, built and tracked by us. You approve everything before it goes live.</p>
+            <p>All six are written, designed, built and tracked by us. You approve everything before it goes live.</p>
           </div>
           <div className="bs-list">
             {SYSTEMS.map(({ id, n, cat, name, tag, why, build, get, Art }, i) => (
@@ -391,7 +412,7 @@ export default function BookingSystems() {
         <div className="wrap">
           <div className="hv-head">
             <h2>Everything that&apos;s included</h2>
-            <p>One monthly price covers all of it. <Link href="/pricing/">See plans and prices</Link>.</p>
+            <p>One plan, $499 a month, month to month, covers all of it. <Link href="/pricing/">See the plan</Link>.</p>
           </div>
           <div className="bs-inc">
             {INCLUDED.map((g, gi) => (
@@ -511,7 +532,7 @@ export default function BookingSystems() {
             <li>
               <span className="bs-tl-when">Day 14</span>
               <b>Live</b>
-              <p>All five systems switch on, and your Clear View link starts showing before vs. after.</p>
+              <p>All six systems switch on, and your Clear View link starts showing before vs. after.</p>
             </li>
           </ol>
         </div>
