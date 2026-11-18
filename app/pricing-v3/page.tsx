@@ -32,15 +32,16 @@ function B({ n }: { n: string }) {
   );
 }
 
+// Most valuable first. Each card shows its included systems first, then the rest greyed.
 const SYS: { id: MarkId; name: string }[] = [
+  { id: "atlas", name: "Authority Atlas" },
+  { id: "glide-path", name: "Glide Path" },
   { id: "sienna", name: "Sienna AI" },
+  { id: "second-glance", name: "Second Glance" },
+  { id: "consult-magnet", name: "Consult Magnet" },
+  { id: "leak-finder", name: "Leak Finder" },
   { id: "rave-loop", name: "Rave Loop" },
   { id: "clear-view", name: "Clear View" },
-  { id: "glide-path", name: "Glide Path" },
-  { id: "second-glance", name: "Second Glance" },
-  { id: "leak-finder", name: "Leak Finder" },
-  { id: "consult-magnet", name: "Consult Magnet" },
-  { id: "atlas", name: "Authority Atlas" },
 ];
 
 type Plan = {
@@ -64,9 +65,9 @@ const PLANS: Plan[] = [
     terms: "Month to month",
     hi: ["Every call answered, 24/7"],
     rows: {
-      sienna: "Answers every call with your menu and prices, texts your booking link",
-      "rave-loop": "Review texts after every visit. Unhappy clients reach you first",
-      "clear-view": "Monthly report: calls, after-hours calls, new clients booked",
+      sienna: "AI receptionist, answers 24/7",
+      "rave-loop": "Review texts after every visit",
+      "clear-view": "Monthly report: calls and new clients",
     },
   },
   {
@@ -78,14 +79,14 @@ const PLANS: Plan[] = [
     terms: "Website included · 12-month minimum",
     hi: ["A new website, designed to book", "20 new Google pages a month", "2 design updates a month"],
     rows: {
-      sienna: "Answers every call with your menu and prices, texts your booking link",
-      "rave-loop": "Review texts after every visit. Unhappy clients reach you first",
-      "clear-view": "Monthly report plus a live dashboard of visits, calls and bookings",
-      "glide-path": "Your new website, designed so visitors pick their goal and land in your booking app with the treatment chosen",
-      "second-glance": "An exit offer built into your site that wins back visitors about to leave",
-      "leak-finder": "Shows where visitors drop off, so each design update fixes a real problem",
-      "consult-magnet": "Your first-visit offer, written and designed for you",
-      atlas: "20 new treatment, cost and city pages every month, with photos",
+      atlas: "20 new Google pages a month",
+      "glide-path": "Highly optimized booking flow",
+      sienna: "AI receptionist, answers 24/7",
+      "second-glance": "Exit offer for leaving visitors",
+      "consult-magnet": "Your first-visit offer, done for you",
+      "leak-finder": "Pinpoints where visitors drop off",
+      "rave-loop": "Review texts after every visit",
+      "clear-view": "Monthly report + live dashboard",
     },
     featured: true,
   },
@@ -97,27 +98,27 @@ const PLANS: Plan[] = [
     terms: "Website included · 12-month minimum",
     hi: ["A 150-page website in 90 days", "30 new Google pages a month", "4 design updates a month"],
     rows: {
-      sienna: "Answers every call with your menu and prices, texts your booking link",
-      "rave-loop": "Review texts, plus a reply written to every Google review",
-      "clear-view": "Monthly report, live dashboard and a monthly 20-minute review call",
-      "glide-path": "Your new website, designed so visitors pick their goal and land in your booking app with the treatment chosen",
-      "second-glance": "An exit offer built into your site that wins back visitors about to leave",
-      "leak-finder": "Shows where visitors drop off, so each design update fixes a real problem",
-      "consult-magnet": "A first-visit offer for each of your top treatments",
-      atlas: "Your full 150-page Atlas in 90 days, then 30 new pages a month, plus weekly Google profile posts",
+      atlas: "150 pages in 90 days",
+      "glide-path": "Highly optimized booking flow",
+      sienna: "AI receptionist, answers 24/7",
+      "second-glance": "Exit offer for leaving visitors",
+      "consult-magnet": "An offer for each top treatment",
+      "leak-finder": "Pinpoints where visitors drop off",
+      "rave-loop": "Review texts + replies to every review",
+      "clear-view": "Report, dashboard + monthly call",
     },
   },
 ];
 
 const SYSTEM_INFO: { id: MarkId; name: string; p: string; plans: string }[] = [
-  { id: "sienna", name: "Sienna AI", p: "An AI receptionist that answers every call, day or night, knows your treatments and prices, and texts a booking link when someone can't book on the call.", plans: "All plans" },
-  { id: "rave-loop", name: "Rave Loop", p: "A text after each visit asks happy clients for a Google review. Anyone unhappy reaches you privately first.", plans: "All plans" },
-  { id: "clear-view", name: "Clear View", p: "One plain-numbers report: calls answered, after-hours calls, new clients booked, new reviews.", plans: "All plans" },
-  { id: "glide-path", name: "Glide Path", p: "Your website, designed around booking: visitors pick their goal, answer a couple of quick questions, then land in your booking app with the right treatment chosen.", plans: "Full Book + Pro" },
-  { id: "second-glance", name: "Second Glance", p: "When a visitor is about to leave, a well-timed offer brings them back to book.", plans: "Full Book + Pro" },
-  { id: "leak-finder", name: "Leak Finder", p: "Tracking that shows the exact step where people give up, so every upgrade fixes a real drop-off.", plans: "Full Book + Pro" },
-  { id: "consult-magnet", name: "Consult Magnet", p: "A first-visit offer built to turn browsers into booked consults.", plans: "Full Book + Pro" },
-  { id: "atlas", name: "Authority Atlas", p: "A map of every search people make for your treatments in your city, turned into pages: treatments, costs, comparisons, before-and-after guides and nearby towns.", plans: "Full Book + Pro" },
+  { id: "atlas", name: "Authority Atlas", p: "New pages for every treatment, cost and nearby town people search for.", plans: "Full Book + Pro" },
+  { id: "glide-path", name: "Glide Path", p: "A highly optimized, multi-step booking flow that hands clients to your booking app.", plans: "Full Book + Pro" },
+  { id: "sienna", name: "Sienna AI", p: "An AI receptionist that answers every call and texts your booking link.", plans: "All plans" },
+  { id: "second-glance", name: "Second Glance", p: "A well-timed offer that brings leaving visitors back to book.", plans: "Full Book + Pro" },
+  { id: "consult-magnet", name: "Consult Magnet", p: "A first-visit offer that turns browsers into booked consults.", plans: "Full Book + Pro" },
+  { id: "leak-finder", name: "Leak Finder", p: "Tracking that shows the exact step where people give up.", plans: "Full Book + Pro" },
+  { id: "rave-loop", name: "Rave Loop", p: "Review requests after each visit. Unhappy clients reach you first.", plans: "All plans" },
+  { id: "clear-view", name: "Clear View", p: "One plain-numbers report: calls, new clients booked, reviews.", plans: "All plans" },
 ];
 
 const SOFTWARE = [
@@ -224,7 +225,7 @@ export default function PricingDraftV3() {
                   ))}
                 </div>
                 <ul className="pv-rows">
-                  {SYS.map((s) => {
+                  {[...SYS.filter((s) => p.rows[s.id]), ...SYS.filter((s) => !p.rows[s.id])].map((s) => {
                     const d = p.rows[s.id];
                     return (
                       <li key={s.id} className={d ? "" : "off"}>
