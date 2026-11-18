@@ -164,7 +164,7 @@ const FAQ: { q: string; a: ReactNode }[] = [
   },
   {
     q: "I don't have a website, just a booking page. Can I still join?",
-    a: "Full Book and Full Book Pro need a website we can build on. Front Desk works with just a booking page. If you need a site first, we build one for a one-time fee and you start on any plan once it's live.",
+    a: "Yes. On Full Book we build your website as part of the plan, with a 12-month minimum. Front Desk works with just a booking page. Prefer to buy a site outright? We also build one-time websites from $1,997.",
   },
   {
     q: "Can I switch plans?",
