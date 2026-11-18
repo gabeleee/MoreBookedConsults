@@ -21,8 +21,9 @@ import SeeExample from "@/components/pricing/SeeExample";
 const CALL = "/demo/";
 
 // Self-serve checkout (Gabe 11-18: "give people the ability to just buy it").
-// A Stripe Payment Link for the $499/mo plan, set at build time. The "Buy it
-// today" link only renders when this is set, so the page never shows a dead link.
+// A Stripe Payment Link for the $499/mo plan, set at build time. When set, the
+// card's main button is "Get started" (checkout) and the demo becomes the
+// secondary button; when unset, the card keeps "Get a free demo" only.
 const BUY_URL = process.env.NEXT_PUBLIC_MBC_BUY_URL || "";
 
 type MarkId = Parameters<typeof ProductMark>[0]["id"];
@@ -182,12 +183,18 @@ export function PlanCards({ cta = "Get a free demo" }: { cta?: string }) {
             ))}
           </ul>
         </div>
-        <a className="btn" href={CALL}>
-          {cta}
-        </a>
-        {BUY_URL && (
-          <a className="pv-buy" href={BUY_URL}>
-            Ready now? Buy it today <span aria-hidden="true">→</span>
+        {BUY_URL ? (
+          <>
+            <a className="btn" href={BUY_URL}>
+              Get started, $499/month
+            </a>
+            <a className="btn-ghost pv-demo2" href={CALL}>
+              Or get a free demo first
+            </a>
+          </>
+        ) : (
+          <a className="btn" href={CALL}>
+            {cta}
           </a>
         )}
         <p className="pv-one-note">

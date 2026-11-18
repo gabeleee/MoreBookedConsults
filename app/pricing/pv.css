@@ -208,5 +208,4 @@
 /* plan name: bigger, with ™ */
 .pr .pv-one h2.pr-name.pv-name{font-size:clamp(30px,3.4vw,38px);line-height:1.08;margin:8px 0 8px}
 .pv-name sup{font-size:.42em;margin-left:2px;vertical-align:super}
-.pv-buy{display:block;text-align:center;margin-top:12px;font-weight:600;font-size:15px;color:var(--violet-deep);text-decoration:underline;text-underline-offset:3px}
-.pv-buy:hover{color:var(--violet)}
+.pv-demo2{display:flex;justify-content:center;margin-top:10px}
