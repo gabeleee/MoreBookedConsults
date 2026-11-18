@@ -212,10 +212,12 @@ export default function Home() {
           <div className="hx-copy">
             <ProofLine />
             <h1 data-prism-calm="0.8">Turn More Of Your Website Visitors Into Booked Consults</h1>
-            <p className="hv-lede" data-prism-calm="0.6">
-              New Google pages every month, a booking flow that converts, and an AI receptionist that answers every call.
-              One plan, done for you, $499 a month.
-            </p>
+            <ul className="hx-bullets" data-prism-calm="0.6">
+              <li><LineIcon name="check" /> New Google pages every month</li>
+              <li><LineIcon name="check" /> A booking flow that converts</li>
+              <li><LineIcon name="check" /> An AI receptionist that answers every call</li>
+              <li><LineIcon name="check" /> One plan, done for you, $499 a month</li>
+            </ul>
             <div className="hx-ctas">
               <Link className="btn hv-cta-hero" href="/pricing/">
                 Get started
