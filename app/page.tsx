@@ -5,9 +5,9 @@ import "./home-v2.css";
 import "./pricing/pr.css";
 import "./pricing/pv.css";
 import { PlanCards, FREE_SITE_TERMS } from "@/components/pricing/PlanCards";
+import LaserAwayProof from "@/components/home/LaserAwayProof";
 import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
-import ConversionChart from "@/components/ConversionChart";
 import { LineIcon } from "@/components/LineIcon";
 import { ProductTitle, ProductMark, MARK_FOR } from "@/components/home/ProductMark";
 import HeroVideo from "@/components/home/HeroVideo";
@@ -391,61 +391,7 @@ export default function Home() {
       </section>
 
       {/* ---------------- Proof ---------------- */}
-      <section className="hv-proof">
-        <PrismBackground tilt={0.5} phase={120} gain={0.85} />
-        <div className="wrap">
-          <div className="hv-head light" data-prism-calm="0.7">
-            <h2>Built on what&apos;s already been proven</h2>
-            <p>These systems come from five years of testing at one of the biggest aesthetic brands in the country.</p>
-          </div>
-          <div className="hv-proof-grid">
-            <div className="hv-proof-chart">
-              <p className="hv-chart-t">
-                <img loading="lazy" src="/logos/laseraway.png" alt="LaserAway" className="hv-la-logo" />
-                <span>Sitewide conversion, 2018–2023</span>
-              </p>
-              <ConversionChart />
-              <p className="hv-chart-c">Results from Gabe Meierotto&apos;s time as LaserAway&apos;s Director of CRO. He now leads every More Booked Consults project.</p>
-            </div>
-            <div className="hv-stats">
-              <div className="hv-stat-la">
-                <img loading="lazy" src="/logos/laseraway-white.png" alt="LaserAway" />
-                <b>3% → 11%</b>
-                <span>Sitewide conversion</span>
-              </div>
-              <div>
-                <b>210x</b>
-                <span>ROI on the LaserAway testing program</span>
-              </div>
-              <div>
-                <b>2,600+</b>
-                <span>Page variations tested</span>
-              </div>
-              <div>
-                <b>31,689</b>
-                <span>Med spas counted in our 2026 Med Spa Census</span>
-              </div>
-            </div>
-          </div>
-          <div className="hv-creds">
-            <a href="/laseraway-intellimize-case-study.pdf" target="_blank" rel="noopener">
-              <img loading="lazy" src="/logos/intellimize-white.png" alt="Intellimize" />
-              <span>Featured in Intellimize&apos;s LaserAway case study</span>
-            </a>
-            <a href="https://aesthetichires.com/" target="_blank" rel="noopener">
-              <span className="hv-cred-word">
-                <img loading="lazy" src="/logos/aesthetichires-lips.png" alt="" />
-                AestheticHires
-              </span>
-              <span>We also run the med spa job board</span>
-            </a>
-            <Link href="/results/">
-              <span className="hv-cred-word">Results</span>
-              <span>See the full track record</span>
-            </Link>
-          </div>
-        </div>
-      </section>
+      <LaserAwayProof />
 
       {/* ---------------- Pricing (same cards as /pricing/) ---------------- */}
       <section className="hv-sec pr pv hv-pricing" id="pricing">

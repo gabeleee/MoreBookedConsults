@@ -188,3 +188,11 @@
 .pv-ast{color:var(--violet-deep);text-decoration:none;margin-left:1px}
 .pv-fine{max-width:720px;margin:28px auto 0;font-size:12.5px;line-height:1.5;color:var(--soft);text-align:center}
 .hv-final .pv-fine,.hv-pricing .pv-fine{font-size:12.5px;max-width:620px}
+
+/* value on each system card + total under the grid */
+.pv-sys-val{display:flex;flex-wrap:wrap;align-items:center;gap:6px 8px;margin:0 6px}
+.pv-sys-val s{font-family:var(--display);font-weight:var(--dw);font-size:20px;color:var(--soft);text-decoration-color:var(--violet);text-decoration-thickness:2px}
+.pv-sys-val em{font-style:normal;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#1F7A4D;background:#E6F5EC;border-radius:999px;padding:3px 8px}
+.pv-sys-val span{flex-basis:100%;font-size:12.5px;line-height:1.4;color:var(--soft)}
+.pv-stack-sum{max-width:860px;margin:28px auto 0;background:#fff;border:1px solid var(--line);border-radius:28px;padding:6px 26px 26px;box-shadow:0 30px 60px -44px rgba(125,9,90,.4)}
+@media (max-width:560px){.pv-stack-sum{padding:4px 16px 18px}}

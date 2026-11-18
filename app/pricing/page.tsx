@@ -15,7 +15,8 @@ import { GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, MagnetArt } fr
 import { TreatmentPagesArt } from "@/components/home/LocalSeoArt";
 import { RaveLoopArt, MonthlyReportArt } from "@/components/home/FullBookArt";
 import SeeExample from "@/components/pricing/SeeExample";
-import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, ItemIcon, ItemName, WebsiteOptional, Tip, MIN_WHY, FREE_SITE_TERMS } from "@/components/pricing/PlanCards";
+import LaserAwayProof from "@/components/home/LaserAwayProof";
+import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, WebsiteOptional, Tip, MIN_WHY, FREE_SITE_TERMS } from "@/components/pricing/PlanCards";
 
 // Picture for each system in the "8 Systems" section (existing site art).
 const ART: Record<string, { Art: () => ReactNode; note: string }> = {
@@ -164,27 +165,48 @@ export default function Pricing() {
         </div>
       </section>
 
-      {/* ---------------- Value stack (like the proposals) ---------------- */}
-      <section className="hv-sec pv-stack-sec" id="value">
+      {/* ---------------- The systems ---------------- */}
+      <section className="hv-sec pv-sys-sec">
         <div className="wrap">
           <div className="hv-head">
-            <h2>Everything You Get, And What It&apos;s Worth</h2>
-            <p>Here&apos;s what each piece would cost you bought separately for a year.</p>
+            <h2>8 Systems, One Monthly Price</h2>
+            <p>Each one is built and run for you. Here&apos;s what each would cost you on its own for a year.</p>
           </div>
-          <div className="pv-stack">
-            {ITEMS.map((i) => (
-              <div key={i.name} className="pv-stack-row">
-                <ItemIcon i={i} />
-                <div className="pv-stack-t">
-                  <ItemName i={i} />
-                  <span>{i.basis}</span>
+          <div className="pv-sys">
+            {SYSTEM_INFO.map((s) => (
+              <div key={s.id} className="pv-sys-card has-art">
+                {(() => {
+                  const { Art, note } = ART[s.id];
+                  return (
+                    <SeeExample name={s.name} note={note}>
+                      <Art />
+                    </SeeExample>
+                  );
+                })()}
+                <div className="pv-sys-head">
+                  <ProductMark id={s.id} />
+                  <h3><B n={s.name} /></h3>
                 </div>
-                <div className="pv-stack-v">
-                  <s>{usd(i.value)}</s>
-                  <em>Included</em>
-                </div>
+                {(() => {
+                  const it = ITEMS.find((i) => i.mark === s.id);
+                  return it ? (
+                    <p className="pv-sys-val">
+                      <s>{usd(it.value)}</s>
+                      <em>Included</em>
+                      <span>{it.basis}</span>
+                    </p>
+                  ) : null;
+                })()}
+                <p>{s.p}</p>
+                {s.href && (
+                  <Link className="pv-more" href={s.href}>
+                    How {s.name}™ works →
+                  </Link>
+                )}
               </div>
             ))}
+          </div>
+          <div className="pv-stack-sum">
             <WebsiteOptional />
             <div className="pv-stack-total">
               <div>
@@ -205,40 +227,6 @@ export default function Pricing() {
                 Get a free demo
               </a>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ---------------- The systems ---------------- */}
-      <section className="hv-sec pv-sys-sec">
-        <div className="wrap">
-          <div className="hv-head">
-            <h2>8 Systems, One Monthly Price</h2>
-            <p>Each one is built and run for you. Nothing to learn, nothing to log into.</p>
-          </div>
-          <div className="pv-sys">
-            {SYSTEM_INFO.map((s) => (
-              <div key={s.id} className="pv-sys-card has-art">
-                {(() => {
-                  const { Art, note } = ART[s.id];
-                  return (
-                    <SeeExample name={s.name} note={note}>
-                      <Art />
-                    </SeeExample>
-                  );
-                })()}
-                <div className="pv-sys-head">
-                  <ProductMark id={s.id} />
-                  <h3><B n={s.name} /></h3>
-                </div>
-                <p>{s.p}</p>
-                {s.href && (
-                  <Link className="pv-more" href={s.href}>
-                    How {s.name}™ works →
-                  </Link>
-                )}
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -308,6 +296,12 @@ export default function Pricing() {
           </div>
         </div>
       </section>
+
+      {/* ---------------- LaserAway proof ---------------- */}
+      <LaserAwayProof
+        title="We've Done This Before, At LaserAway"
+        lede="Before More Booked Consults, Gabe Meierotto ran five years of booking tests as LaserAway's Director of CRO. Every system here comes from that work."
+      />
 
       {/* ---------------- FAQ ---------------- */}
       <section className="hv-sec hv-faq-sec">
