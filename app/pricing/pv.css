@@ -81,3 +81,8 @@
 /* homepage pricing section */
 .hv-pricing .pr-plans{margin-top:8px}
 .hv-pricing-more{text-align:center;margin-top:26px}
+
+/* two plans: centered pair */
+.pr-plans.two{grid-template-columns:repeat(2,1fr);max-width:780px;margin-left:auto;margin-right:auto}
+@media (max-width:980px){.pr-plans.two{grid-template-columns:1fr;max-width:520px}}
+.pr-plans.two ~ .pv-anchor{max-width:780px;margin-left:auto;margin-right:auto}

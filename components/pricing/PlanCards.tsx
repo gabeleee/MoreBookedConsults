@@ -2,7 +2,8 @@ import { ProductMark } from "@/components/home/ProductMark";
 
 // The three plan cards, shared by /pricing/ and the homepage. Styles: .pr-* in
 // app/pricing/pr.css + .pv-* in app/pricing/pv.css (import both where used,
-// inside a "pr pv" wrapper). Prices set by Gabe 2026-11-18.
+// inside a "pr pv" wrapper). Prices set by Gabe 2026-11-18; Full Book Pro
+// ($749) was dropped the same day: two plans only, more pages = upsell later.
 const CALL = "/demo/";
 
 type MarkId = Parameters<typeof ProductMark>[0]["id"];
@@ -75,30 +76,12 @@ export const PLANS: Plan[] = [
     },
     featured: true,
   },
-  {
-    id: "full-book-pro",
-    name: "Full Book Pro",
-    who: "A new website that covers every treatment in your city on Google.",
-    price: "$749",
-    terms: "Website included · 12-month minimum",
-    hi: ["A 150-page website in 90 days", "30 new Google pages a month", "4 design updates a month"],
-    rows: {
-      atlas: "150 pages in 90 days",
-      "glide-path": "Highly optimized booking flow",
-      sienna: "AI receptionist, answers 24/7",
-      "second-glance": "Exit offer for leaving visitors",
-      "consult-magnet": "An offer for each top treatment",
-      "leak-finder": "Pinpoints where visitors drop off",
-      "rave-loop": "Review texts + replies to every review",
-      "clear-view": "Report, dashboard + monthly call",
-    },
-  },
 ];
 
 
 export function PlanCards({ cta = "Get a free demo" }: { cta?: string }) {
   return (
-    <div className="pr-plans pv-plans">
+    <div className="pr-plans pv-plans two">
       {PLANS.map((p) => (
         <div key={p.id} id={p.id} className={`pr-plan pv-plan${p.featured ? " featured" : ""}`}>
           {p.tag && <span className="pr-tag">{p.tag}</span>}

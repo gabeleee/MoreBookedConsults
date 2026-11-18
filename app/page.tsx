@@ -135,7 +135,7 @@ const PLATFORMS = [
 const FAQ = [
   {
     q: "How much does it cost?",
-    a: "Plans start at $299 a month. Front Desk ($299) answers every call. Full Book ($499) adds a new website designed to book and 20 new Google pages a month. Full Book Pro ($749) builds a 150-page website in 90 days. Every plan is listed on our pricing page.",
+    a: "Two plans. Front Desk ($299) answers every call. Full Book ($499) adds a new website designed to book and 20 new Google pages a month, with your website included. Both are listed on our pricing page.",
   },
   {
     q: "Does it work with my booking software?",
@@ -143,7 +143,7 @@ const FAQ = [
   },
   {
     q: "Do I need a new website?",
-    a: "Front Desk works with the site you have. Full Book and Full Book Pro include a new website designed to book. If you love your current site, we can redesign the pages that matter most for booking instead.",
+    a: "Front Desk works with the site you have. Full Book includes a new website designed to book. If you love your current site, we can redesign the pages that matter most for booking instead.",
   },
   {
     q: "How long until it's live?",
@@ -167,7 +167,7 @@ const FAQ = [
   },
   {
     q: "Do you run ads or SEO too?",
-    a: "SEO is built into Full Book and Full Book Pro: Authority Atlas adds new Google pages for your treatments every month. Meta ads (Spotlight Ads) are an add-on once your site books more of the visitors it already gets.",
+    a: "SEO is built into Full Book: Authority Atlas adds new Google pages for your treatments every month. Meta ads (Spotlight Ads) are an add-on once your site books more of the visitors it already gets.",
   },
   {
     q: "Who will I work with?",
@@ -175,7 +175,7 @@ const FAQ = [
   },
   {
     q: "Is there a contract? What if I cancel?",
-    a: "Front Desk is month to month. Full Book and Full Book Pro include your website and have a 12-month minimum. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
+    a: "Front Desk is month to month. Full Book includes your website and has a 12-month minimum. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
   },
 ];
 
