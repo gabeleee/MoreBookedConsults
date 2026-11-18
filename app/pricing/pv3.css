@@ -32,3 +32,5 @@
 .pv-more{order:5;margin:0 6px;font-size:14px;font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
 .pv-more:hover{color:var(--violet-deep)}
 .pv-sys-card.has-art .pv-see{margin-bottom:-4px}
+/* 9 systems: 3 columns on desktop */
+@media (min-width:981px){.pv-sys-sec .pv-sys{grid-template-columns:repeat(3,1fr)}.pv-sys-sec .pv-thumb-in{--thumb-s:.69}}

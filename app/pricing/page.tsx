@@ -36,6 +36,7 @@ const SYSTEM_INFO: { id: MarkId; name: string; p: string; href?: string }[] = [
   { id: "atlas", name: "Authority Atlas", p: "New pages for every treatment, cost and nearby town people search for.", href: "/local-seo/" },
   { id: "glide-path", name: "Glide Path", p: "A highly optimized, multi-step booking flow that hands clients to your booking app.", href: "/booking-systems/#glide-path" },
   { id: "sienna", name: "Sienna AI", p: "An AI receptionist that answers every call and texts your booking link.", href: "/booking-systems/#sienna-ai" },
+  { id: "lift-lab", name: "Lift Lab", p: "2 design tests a month on your site. We keep the winners, so your conversion rate climbs over time." },
   { id: "second-glance", name: "Second Glance", p: "A well-timed offer that brings leaving visitors back to book.", href: "/booking-systems/#second-glance" },
   { id: "consult-magnet", name: "Consult Magnet", p: "A first-visit offer that turns browsers into booked consults." },
   { id: "leak-finder", name: "Leak Finder", p: "Tracking that shows the exact step where people give up.", href: "/booking-systems/#leak-finder" },
@@ -70,7 +71,7 @@ const FAQ: { q: string; a: ReactNode }[] = [
     a: (
       <>
         Yes. Most of the Optimized Booking System is your website and Google: <B n="Glide Path" />, <B n="Second Glance" />,{" "}
-        <B n="Leak Finder" />, 2 design tests and 20 new pages every month. Keep the receptionist you have;{" "}
+        <B n="Leak Finder" />, <B n="Lift Lab" /> design tests and 20 new pages every month. Keep the receptionist you have;{" "}
         <B n="Sienna AI" /> is there if you ever want to switch.
       </>
     ),
@@ -88,8 +89,8 @@ const FAQ: { q: string; a: ReactNode }[] = [
     a: "New Google pages usually take 3 to 6 months to rank, and design tests need a few months of real numbers to show what books more. Six months is enough time to see results you can count. After that, it's month to month with 30 days' notice.",
   },
   {
-    q: "What's a design test?",
-    a: "Each month we test 2 changes to your site based on what your numbers show: a new offer, a clearer booking step, a better page for a top treatment, a faster phone layout. We keep what books more, so your conversion rate climbs over time.",
+    q: "What's Lift Lab?",
+    a: "Lift Lab is our design testing program. Each month we test 2 changes to your site based on what your numbers show: a new offer, a clearer booking step, a better page for a top treatment, a faster phone layout. We keep what books more, so your conversion rate climbs over time.",
   },
   {
     q: "Are 20 pages a month really any good?",
@@ -155,7 +156,7 @@ export default function Pricing() {
       <section className="hv-sec pv-sys-sec">
         <div className="wrap">
           <div className="hv-head">
-            <h2>8 Systems, One Monthly Price</h2>
+            <h2>9 Systems, One Monthly Price</h2>
             <p>Each one is built and run for you. Here&apos;s what each would cost you on its own for a year.</p>
           </div>
           <div className="pv-sys">

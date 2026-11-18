@@ -1,7 +1,7 @@
 import { LineIcon } from "@/components/LineIcon";
 import { ProductMark } from "@/components/home/ProductMark";
 import type { ReactNode } from "react";
-import { HeroArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, MagnetArt } from "@/components/home/SystemArt";
+import { HeroArt, LiftLabArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, MagnetArt } from "@/components/home/SystemArt";
 import { TreatmentPagesArt } from "@/components/home/LocalSeoArt";
 import { RaveLoopArt, MonthlyReportArt } from "@/components/home/FullBookArt";
 import SeeExample from "@/components/pricing/SeeExample";
@@ -43,6 +43,7 @@ export const EXAMPLES: Record<string, { Art: () => ReactNode; note: string; href
   atlas: { Art: TreatmentPagesArt, note: "Example: a page for each treatment people search for in your city.", href: "/local-seo/" },
   "glide-path": { Art: GlidePathArt, note: "Example: visitors pick their goal, answer quick questions, then book.", href: "/booking-systems/#glide-path" },
   sienna: { Art: SiennaArt, note: "Example: Sienna answering a call and texting the booking link.", href: "/booking-systems/#sienna-ai" },
+  "lift-lab": { Art: LiftLabArt, note: "Example with sample data: version B beat the current page, so it stays and next month's tests start from there." },
   "second-glance": { Art: SecondGlanceArt, note: "Example: an exit offer shown to a visitor about to leave.", href: "/booking-systems/#second-glance" },
   "consult-magnet": { Art: MagnetArt, note: "Example: a first-visit offer built for one treatment." },
   "leak-finder": { Art: LeakFinderArt, note: "Example with sample data: the step where visitors give up.", href: "/booking-systems/#leak-finder" },
@@ -64,7 +65,7 @@ export const ITEMS: Item[] = [
   { mark: "atlas", name: "Authority Atlas", d: "20 new Google pages a month", basis: "Entry-level SEO runs about $500 a month", value: 6000 },
   { mark: "glide-path", name: "Glide Path", d: "Highly optimized booking flow", basis: "A custom multi-step booking flow, designed and built", value: 1200 },
   { mark: "sienna", name: "Sienna AI", d: "AI receptionist, answers 24/7", basis: "AI receptionists run about $79 to $299 a month", value: 1800 },
-  { icon: "trending", name: "2 design tests a month", d: "Raises your conversion rate over time", basis: "24 site tests a year", value: 2400 },
+  { mark: "lift-lab", name: "Lift Lab", d: "2 design tests a month that raise your conversion rate", basis: "24 design tests a year; we keep the winners", value: 2400 },
   { mark: "second-glance", name: "Second Glance", d: "Exit offer for leaving visitors", basis: "An exit offer, written, designed and built", value: 400 },
   { mark: "consult-magnet", name: "Consult Magnet", d: "Your first-visit offer, done for you", basis: "A first-visit offer, written and designed", value: 250 },
   { mark: "leak-finder", name: "Leak Finder", d: "Pinpoints where visitors drop off", basis: "Step-by-step drop-off tracking", value: 250 },

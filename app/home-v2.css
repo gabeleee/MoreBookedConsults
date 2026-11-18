@@ -758,3 +758,16 @@ html.scrolled body:has(.hv-hero) header{background:rgba(248,248,253,.9);border-b
 .sienna-ai-badge{position:absolute;right:-10px;bottom:4px;display:inline-flex;align-items:center;gap:3px;padding:4px 9px 4px 7px;border-radius:999px;
   background:var(--deep);color:#fff;font-family:var(--body);font-size:12px;font-weight:700;letter-spacing:.02em;box-shadow:0 6px 16px -6px rgba(47,18,32,.6);border:2px solid #fff}
 .sienna-ai-badge svg{width:11px;height:11px;fill:#F6C9DF}
+
+/* Lift Lab art (pricing page system card + popup) */
+.ll-pair{position:absolute;left:9%;right:9%;top:92px;display:grid;grid-template-columns:1fr 1fr;gap:14px;z-index:1}
+.ll-v{display:flex;flex-direction:column;gap:8px}
+.ll-v p{display:flex;justify-content:space-between;align-items:baseline;background:#fff;border-radius:10px;padding:7px 10px;font-size:11px;color:var(--soft);box-shadow:0 10px 24px -18px rgba(125,9,90,.5)}
+.ll-v p b{font-size:15px;color:var(--ink)}
+.ll-v p.up b{color:#1F7A4D}
+.ll-chart{position:absolute;left:9%;right:9%;bottom:44px;background:#fff;border-radius:14px;padding:12px 14px 10px;box-shadow:0 14px 30px -20px rgba(125,9,90,.5)}
+.ll-chart svg{display:block;width:100%;height:58px}
+.ll-chart path{fill:none;stroke:var(--violet);stroke-width:3;stroke-linecap:round;stroke-linejoin:round;vector-effect:non-scaling-stroke}
+.ll-chart span{display:block;margin-top:6px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--soft)}
+.ll-c1{right:4%;top:70px}
+.ll-c2{left:4%;bottom:150px}
