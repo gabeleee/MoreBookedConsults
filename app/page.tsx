@@ -171,7 +171,7 @@ const FAQ = [
   },
   {
     q: "Is there a contract? What if I cancel?",
-    a: "The Optimized Booking System has a 6-month minimum, because new Google pages take a few months to rank. After that, cancel with 30 days' notice. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
+    a: "No. The Optimized Booking System is month to month, and you can cancel anytime with 30 days' notice. The free website is the one exception: it needs 12 months. You keep your website and every page we built. Sienna AI and the dashboard run on our system, so they switch off when you leave.",
   },
 ];
 

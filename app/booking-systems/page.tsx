@@ -202,7 +202,7 @@ const FAQ = [
   },
   {
     q: "How much does it cost?",
-    a: "Booking Systems are part of the Optimized Booking System: $499 a month with a 6-month minimum, on the website you have or a new one we build free. Everything is listed on our pricing page.",
+    a: "Booking Systems are part of the Optimized Booking System: $499 a month , month to month, on the website you have or a new one we build free. Everything is listed on our pricing page.",
   },
   {
     q: "What if I cancel?",

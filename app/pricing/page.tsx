@@ -17,7 +17,7 @@ import { B, PlanCards, ITEMS, TOTAL, PRICE, usd, WebsiteOptional, Tip, MIN_WHY, 
 
 
 // Pricing (2026-11-18, Gabe): website as the front door. ONE plan, Optimized Booking System
-// $499/mo, 6-month minimum, website optional (free) + add-ons; no second plan.
+// $499/mo, month to month (no minimum), website optional (free with 12 months) + add-ons; no second plan.
 // Value stack (crossed-out year-one values) mirrors the proposals.
 // Plan cards live in components/pricing/PlanCards.tsx (also on the homepage).
 export const metadata: Metadata = {
@@ -85,8 +85,8 @@ const FAQ: { q: string; a: ReactNode }[] = [
     a: "No. Most of what you get works on the website you already have: new Google pages, the booking flow, the exit offer, Sienna AI and the monthly design tests. If you do need a new site, or yours is just a booking-app page, we build one for you free, on your own domain, with a 12-month minimum.",
   },
   {
-    q: "Why is there a 6-month minimum?",
-    a: "New Google pages usually take 3 to 6 months to rank, and design tests need a few months of real numbers to show what books more. Six months is enough time to see results you can count. After that, it's month to month with 30 days' notice.",
+    q: "Is there a contract?",
+    a: "No. It's month to month, and you can cancel anytime with 30 days' notice. The only exception is the free website, which needs a 12-month commitment. New Google pages usually take 3 to 6 months to rank, so most practices see the biggest gains after month three.",
   },
   {
     q: "What's Lift Lab?",
@@ -207,7 +207,7 @@ export default function Pricing() {
                   <small>/month</small>
                 </b>
                 <em>
-                  6-month minimum <Tip text={MIN_WHY} label="Why a 6-month minimum?" />
+                  No contract · cancel anytime <Tip text={MIN_WHY} label="When will I see results?" />
                 </em>
               </div>
               <a className="btn" href={BUY_URL || CALL}>

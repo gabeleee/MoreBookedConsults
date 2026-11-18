@@ -11,7 +11,7 @@ import { TopicalMapArt, ProfileArt, TreatmentPagesArt, CitationsArt, RankGridArt
 
 // Authority Atlas (local SEO) service page (2026-11-03 draft). The Services
 // menu points here; /medspa-seo/ stays as the SEO page. Same layout and styles
-// as /booking-systems/ and /spotlight-ads/. No prices (the 6-month minimum is
+// as /booking-systems/ and /spotlight-ads/. No prices (the term
 // a fit fact). Never promise a ranking: the seal is about ownership.
 export const metadata: Metadata = {
   title: "Authority Atlas: Local SEO For Med Spas And Plastic Surgeons",
@@ -181,7 +181,7 @@ const COMPARE: [string, string, string, string][] = [
 const FAQ = [
   {
     q: "How long does local SEO take?",
-    a: "Google profile improvements can show in weeks. Ranking for competitive treatment-and-city searches usually takes a few months of steady work, which is why Optimized Booking System has a 6-month minimum.",
+    a: "Google profile improvements can show in weeks. Ranking for competitive treatment-and-city searches usually takes a few months of steady work, so most practices see the biggest gains after month three.",
   },
   {
     q: "Do you guarantee first-page rankings?",
@@ -189,7 +189,7 @@ const FAQ = [
   },
   {
     q: "How much does it cost?",
-    a: "Authority Atlas is part of the Optimized Booking System: $499 a month for 20 new pages a month, with a 6-month minimum, since rankings take months to build.",
+    a: "Authority Atlas is part of the Optimized Booking System: $499 a month for 20 new pages a month, month to month, since rankings take months to build.",
   },
   {
     q: "Do you run review campaigns?",
