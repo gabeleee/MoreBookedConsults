@@ -2,6 +2,7 @@
   "client": {
     "slug": "land-aesthetics",
     "firstName": "Marjorie",
+    "ownerName": "Marjorie Murray",
     "plan": "Full Book · $499/month · website included",
     "offers": [
       "$99 Laser Fridays for new clients (you already run this)",
@@ -14,7 +15,7 @@
       "landaesthetics.co"
     ],
     "domainsChecked": "2026-11-18",
-    "_notes": "offers = built from her GlossGenius menu; domains = free per RDAP on domainsChecked (landaesthetics.com is taken)"
+    "_notes": "offers = built from her GlossGenius menu; domains = free per RDAP on domainsChecked (landaesthetics.com is taken); ownerName overrides the GlossGenius account name (Marjorie Land) with the name in her public bio (Gabe 11-18)"
   },
   "found": {
     "source": "GlossGenius",

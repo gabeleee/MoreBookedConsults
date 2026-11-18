@@ -50,6 +50,8 @@ export type Found = {
 export type ClientInfo = {
   slug: string;
   firstName: string;
+  /** Overrides the booking app's account name when they go by another name. */
+  ownerName?: string;
   plan: string;
   /** First-visit offers suggested from their own menu. */
   offers: string[];
@@ -70,11 +72,12 @@ export const CLIENTS: ClientFile[] = [landAesthetics as ClientFile];
 
 export const clientBySlug = (slug: string) => CLIENTS.find((c) => c.client.slug === slug);
 
-export function summarize(f: Found): FoundSummary {
+export function summarize(f: Found, c?: ClientInfo): FoundSummary {
   const { services, photos, about: _about, cancellationPolicy, ...rest } = f;
   void _about;
   return {
     ...rest,
+    ownerName: c?.ownerName ?? rest.ownerName,
     serviceCount: services.length,
     photos: [f.coverImage, ...photos].filter((p): p is string => Boolean(p)).slice(0, 6),
     hasCancellationPolicy: Boolean(cancellationPolicy),

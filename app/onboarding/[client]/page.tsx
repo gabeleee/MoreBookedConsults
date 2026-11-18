@@ -44,7 +44,7 @@ export default async function ClientOnboardingPage({ params }: Params) {
             </ul>
           </div>
         </div>
-        <IntakeForm client={c.client} found={summarize(c.found)} />
+        <IntakeForm client={c.client} found={summarize(c.found, c.client)} />
       </div>
     </main>
   );
