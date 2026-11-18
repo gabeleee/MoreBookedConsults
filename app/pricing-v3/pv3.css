@@ -26,3 +26,6 @@
   .pv-thumb-in{position:static;display:block;width:100%;height:auto;transform:none}
   .pv-thumb-in .hv-art{max-width:100%}
 }
+
+/* final CTA: room between the demo-line text and the button */
+.pv .hv-final > p:not(.hv-book-alt){margin-bottom:28px}
