@@ -1,0 +1,1043 @@
+{
+  "client": {
+    "slug": "land-aesthetics",
+    "firstName": "Marjorie",
+    "plan": "Full Book · $499/month · website included",
+    "offers": [
+      "$99 Laser Fridays for new clients (you already run this)",
+      "Your $30 consult, credited toward your first treatment",
+      "$25 off a first Express Hydro Facial or Glow and Go Facial"
+    ],
+    "domains": [
+      "landaestheticsdenver.com",
+      "marjorieaesthetics.com",
+      "landaesthetics.co"
+    ],
+    "domainsChecked": "2026-11-18",
+    "_notes": "offers = built from her GlossGenius menu; domains = free per RDAP on domainsChecked (landaesthetics.com is taken)"
+  },
+  "found": {
+    "source": "GlossGenius",
+    "sourceUrl": "https://landaesthetics.glossgenius.com",
+    "fetched": "2026-11-18",
+    "businessName": "Land Aesthetics",
+    "ownerName": "Marjorie Land",
+    "email": "marjorieland@hotmail.com",
+    "phone": "(910) 262-5187",
+    "address": "2644 Walnut St., Denver, CO 80205",
+    "hours": [
+      "Mon–Fri 10am–5pm",
+      "Sat 10am–3pm",
+      "Sun Closed"
+    ],
+    "about": "✨ Marjorie Murray | Denver’s Trusted Medical Aesthetician ✨\nWith over 26 years of experience, I specialize in transforming all skin types and tones using advanced, medical-grade treatments. From VI Peels,Hydro facials, Vivace RF Microneedling, dermaplane facials, laser hair removal, IPL, skin resurfacing, tattoo and vessel reduction—I offer results-driven care tailored to you.\n\nAll skin tones are safely treated  in my treatment room. Let’s bring out your skin’s healthiest, most radiant version—safely, effectively, and confidently.\n\n📍 Based in Denver | Your Skin, My Expertise\n\n\nFor more information 📞910-262-5187",
+    "instagram": "https://instagram.com/marjorieaestheticscolorado",
+    "facebook": "https://www.facebook.com/profile.php?id=100090769611014",
+    "website": null,
+    "googleReviewUrl": "https://g.page/r/CZXFYyAPK5tPEAI/review",
+    "cardRequired": true,
+    "cancellationPolicy": "At LAND AESTHETICS, we kindly request a 24-hour notice for any cancellations. Should you need to cancel within this time frame, a charge of 50% of the scheduled service will be charged . For no-show or no-call appointments, the full 100% of the service fee booked will be charged and a deposit will be required to rebook. This policy is in place to respect both our time and the ability of other clients to receive their desired services. Your understanding and cooperation are greatly appreciated.",
+    "coverImage": "https://static.glossgenius.com/public/salon/5e47ae160cb723e8e3484e6e1f932df0f55a071d/website_cover_image/63b5b7e3d8065e290e652df1ced2ad22.jpeg",
+    "photos": [
+      "https://static.glossgenius.com/public/service/7edfc793b4117399cca40d89689d39285db07895/image/adc2df6f7d96b9d5c203870e2a6ab304.jpg",
+      "https://static.glossgenius.com/public/service/4b08960c9bc1bf7ddfe8ee038943b49541235527/image/c049ca988ece9922a1633170f9b22824.jpg",
+      "https://static.glossgenius.com/public/service/39c012602cd8ebfcc24e02e1c63cc551d7a7d358/image/61d9c527e359713f539d2016db825c0b.jpg",
+      "https://static.glossgenius.com/public/service/43af288b735d7731121891677e94380c2661d88c/image/98942336ed6b52067ec95724114fad84.jpg",
+      "https://static.glossgenius.com/public/service/a8339570a259f01d54a7de635c89b96c17024662/image/655ddc2b7aa3f2cdb6ada86dd0bed01a.jpg",
+      "https://static.glossgenius.com/public/service/bbe76eed55e6d35a8b8cb4dee18833ecaeb1b363/image/7d5bf8eaa98e0e12fd640795677aa1f5.jpg",
+      "https://static.glossgenius.com/public/service/6df63f2cafe99cd3e3a3ab3af2488afcdfbb8eaa/image/0b5514ecbb9a594121a0c7e47b1572b8.jpg",
+      "https://static.glossgenius.com/public/service/9552c5cd31d6996a60e2c87b49615bcc326780cb/image/f06a3cf9b47597aa5721184237379a93.jpg",
+      "https://static.glossgenius.com/public/service/28355135edcc456c2ae02771ae36511c8ab658b6/image/a2edaeae13f6ba068bb7552dc5e89772.jpg",
+      "https://static.glossgenius.com/public/service/c1749b1ba5544ea99e50d785d5b08a7f6a0f5baf/image/62475e5738b4e0c7989cbc8e61cea7c9.jpg",
+      "https://static.glossgenius.com/public/stockimage/f01063211ba10f08f02fd4354bee0415559de28f/image/99b0601b1c256620fb8cece2df69e3e6.png",
+      "https://static.glossgenius.com/public/service/119aeb1ac38af4036f0073698b6454e5c6c5779b/image/b1a41dd5962381d59052547e869b0f9d.jpg",
+      "https://static.glossgenius.com/public/service/0a85d59719a8a248d8c63355aba697c29557e0f4/image/4852284d14fd4a137f3a0c51ad04098c.jpg",
+      "https://static.glossgenius.com/public/service/d1c347d768cce32dd80184709effabc75992c74d/image/d74b91480488d03e395c142cb2908d2e.jpg",
+      "https://static.glossgenius.com/public/service/c9f660ee31d7ebdbe1abdf2f8ed19806622c54d0/image/4d8eb2a4be456ccb9d3c1e02fce11177.jpg",
+      "https://static.glossgenius.com/public/service/f08d9b3cd451d70b1b37d3ab93abe87a1143ea53/image/1f08e0a3108a037a94acee1251d0da74.jpg",
+      "https://static.glossgenius.com/public/service/636154f18b1567fbaced2fe11a22735556c77051/image/ebad9d2f8f74b739cb84b20b9fef8087.jpg",
+      "https://static.glossgenius.com/public/service/a946c582637595ca7f6ed774548c8a20ec3ce2e5/image/94e7758d1724ada3f81c3512ca97828f.jpg",
+      "https://static.glossgenius.com/public/service/967284a03cfb157cbc350d6f5c93bafc3f92a33f/image/b3fa612cacdc1edc58c0fd07382eb9a7.jpg",
+      "https://static.glossgenius.com/public/service/ae32b53575a8a74959776307880796419f22fb18/image/4f0267290f950d44b4e166a41cdcfb5a.jpg",
+      "https://static.glossgenius.com/public/service/f4988e8cb8365dff20ff1a378c7f63e945236706/image/d18d25005ea1c5ff617b57209be0e81e.jpg",
+      "https://static.glossgenius.com/public/service/a9680aacd8388c0973a9e9e8ffcd7e63e664c92d/image/13c084a54fc60d08a46d89971bea5f49.jpg",
+      "https://static.glossgenius.com/public/service/31a163e44f1f917222b4345deabad88af9fd92dd/image/91c7ac020ae051c1d98c1638fc0c0fdb.jpg",
+      "https://static.glossgenius.com/public/service/440fa7ed6535d732ed6a02db5530d12a1d3437a3/image/6a2ba239d7079302494ff1ddbadee677.jpg",
+      "https://static.glossgenius.com/public/service/d5909d693bebc8b9fe3094dd2039776374ea8422/image/318ce28f5ede66287201e78b0305ff72.jpg",
+      "https://static.glossgenius.com/public/service/d89d33eb7cab4d4e3ebbb1f472f5b65d87a793a4/image/74c5593efe9a3701c361aab9ab4fec41.jpg",
+      "https://static.glossgenius.com/public/service/a5db79d787fbb112c4fa26baa69fa3850a21d74b/image/437b79e767b0213b8147cd03df7bc478.jpg",
+      "https://static.glossgenius.com/public/service/d7a7347fb97861f9d469bc3e1d84a8668f8bc49a/image/f54fce213a6f2f4648598e69ebb6dc79.jpg",
+      "https://static.glossgenius.com/public/service/5ea68fe958ba0a4309682727e7b331647b950246/image/310d020ca319e00737edbf6a0dc0c23c.jpg",
+      "https://static.glossgenius.com/public/service/4151f761902b17df378ac8b7bcfb620883d13989/image/4f62bd1080b5c5c0105e64506ee86d63.jpg",
+      "https://static.glossgenius.com/public/service/e5f8cbafd0a3942bccc5666a17e7d77892af2deb/image/adad919a566c977374a0f0500b2d8ab2.jpg",
+      "https://static.glossgenius.com/public/service/2279f5fe05fd35940d2c25ac03260190d5a84a48/image/93cde8fa83a39dfa897696b3dc027cc2.jpg",
+      "https://static.glossgenius.com/public/service/550cf59196253959beb10d27b993669f591fc0bf/image/80278c76a6a6c8eed76992903f80d350.jpg",
+      "https://static.glossgenius.com/public/service/08520d2fc0a6671389c5b0fdbe29bc516f897f7f/image/ee3a60d7485b0a5c5c3132525777e6c1.jpg",
+      "https://static.glossgenius.com/public/service/1e19452d5f59592bf8228af91298b6c9b80078f7/image/31536888782170bedd7a07b41285e446.jpg",
+      "https://static.glossgenius.com/public/service/3c2791d3a2e2601d16417a8d2cc42b2d68f3fbfc/image/ce9511afe9020747c1b37c1c8ad338a2.jpg",
+      "https://static.glossgenius.com/public/service/01151be4b1fe95744ee5ea1eba9fb18fe63a6de7/image/6606e6fbdf3d39622e7900f3aabfe66e.jpg",
+      "https://static.glossgenius.com/public/service/56f9174837715c5bf11f8d096c3f28d186a27f29/image/183ab8cbc4857097da41cd0c95f77718.jpg",
+      "https://static.glossgenius.com/public/service/6c6e3b08b4daee72ede391139e60a5c5c32bbc35/image/caa90a350bfa5611c69eecb79e40b0e3.jpg",
+      "https://static.glossgenius.com/public/service/4561b35cc229c7656b70922d806eb0a407c0198c/image/2ec97286304fcb014c51c7674327a851.jpg",
+      "https://static.glossgenius.com/public/service/f3cdf3ea47680c3c57c9f7c747d6e2d012820d8e/image/36655f6cc24b0dfd83d49bf72d33c1b8.jpg",
+      "https://static.glossgenius.com/public/service/7af6bd4344b53e0716c100b1994b3d836079d89c/image/5bf0f43c1574a5bd229b5e9233e2cd86.jpg",
+      "https://static.glossgenius.com/public/service/b066cf043539a9af7351276e3939b09030d99c81/image/a59421eb6c2556d92563ba45a9c28a31.jpg",
+      "https://static.glossgenius.com/public/service/48ac74640722e9ef9f1122415855cdd3866b0c7a/image/3b3c079cbe9b8166441331cf9381303f.jpg",
+      "https://static.glossgenius.com/public/service/02a2d3ebb22978e83b78ff60f216a9acaa7bf15e/image/04ac204ac9dd5bfd0ae6b6f2eaf307ac.jpg",
+      "https://static.glossgenius.com/public/service/5659ed22df749f7787e67a60f61d29c96573838e/image/3c06a0b5cd7665f00ece63221edffd71.jpg",
+      "https://static.glossgenius.com/public/service/761cf62be2266d9bce0740ebaa59fc971ef4fd51/image/0f54c5a7178b63123b8cfd3eae3acbcb.jpg",
+      "https://static.glossgenius.com/public/service/1056f3cc281fc34f1f856696e09274069fea129f/image/59ec393dadd5c0cd4254745a77a95046.jpg",
+      "https://static.glossgenius.com/public/service/dd202a07093ce6e044c318c8cae022f16af0aec8/image/6a254a17caea02a4da9515a27134e7cd.jpg",
+      "https://static.glossgenius.com/public/service/5359f528ae561ab06be489dda21468749f9994a7/image/55ce8225c798bd15a05b1a5dca5aa252.jpg",
+      "https://static.glossgenius.com/public/service/85318aabf23ec7c0a5f84d6bc210bf4b051c000f/image/b89206b278aa331d63272e9155ef8033.jpg",
+      "https://static.glossgenius.com/public/service/4b105c830aec9c6c54e6a155bb62d7c108dddb0f/image/820796d8d015ec35b11e22e519d47e10.jpg",
+      "https://static.glossgenius.com/public/service/a92148066f890d15d775213cbc3b2de0d75369a6/image/7d4d690b12375407175a7045e67d7285.jpg",
+      "https://static.glossgenius.com/public/service/c13837a2c5c69e4ca6e1a05ff41d4f151806c359/image/ec58e80f938a6809604548862765d39c.jpg",
+      "https://static.glossgenius.com/public/service/c9b0d7c8c565276e61c91c4ee11ad99cc3ab76f6/image/a0e5b9a4ca6014241c56f009cbd2e6dd.jpg",
+      "https://static.glossgenius.com/public/service/0e78fb461871308e9f3d6bf034465a1970fe556b/image/fccf1d7609284f6c6b0e6c713d3c6980.jpg",
+      "https://static.glossgenius.com/public/service/8c1ef8f780c0b4976a30cc6ae53ed821a60c6e4d/image/a1c9ccd4437d8d655eb979e67caede9f.jpg",
+      "https://static.glossgenius.com/public/service/649f740f47525f9b9d28db5a7d633cf7c91872f1/image/bcf5e0adf2349528bbcd12bd54b2cb46.jpg",
+      "https://static.glossgenius.com/public/service/27a71b55010d6f4ca02932ac30d2e6f0f3d52a9d/image/56653d5734768187516b17526bf40f31.jpg",
+      "https://static.glossgenius.com/public/service/c92109ea089a67ac2b831ed3ee3a4d6d640a00d3/image/d73ff87d18af6f9e2d9f2adf6fe6e95b.jpg",
+      "https://static.glossgenius.com/public/service/47f57afdefa7cb3076bc0796152d95251f9bac90/image/9ab001254219f0ad9f899ec3489275a7.jpg",
+      "https://static.glossgenius.com/public/service/3e6c288a7f11aeefda2afdf9a25131d44f5eab6d/image/d9c870580471c455424889def073c5f8.jpg",
+      "https://static.glossgenius.com/public/service/418d222e5d469b1dc708d0c79ddb89a269648a0e/image/a22847176690c027272a3dc1748979f8.jpg",
+      "https://static.glossgenius.com/public/service/8d2cf632271479c707f9dc7314c147e9808ad8c3/image/300822b15a233adfb0fbfcfcdb210586.jpg",
+      "https://static.glossgenius.com/public/service/7895131505b89c3b9720028423feeb260b2fd14c/image/0c43cb4d1972d73c765984a1af271a46.jpg",
+      "https://static.glossgenius.com/public/service/ae22776d1302687298233d7653223b4db8f1d09e/image/fcdff0ae16ae4c11fdb63349eedb6fb8.jpg",
+      "https://static.glossgenius.com/public/service/83167bd07c64ca5dd88fe1dc0d845089c8430a77/image/3de637114c1a1a732990f08de0f5830b.jpg",
+      "https://static.glossgenius.com/public/service/1dff14133d3e6a1db57c4faad08eb30c06ce9354/image/a88f021b612c36171c1900f57f76e38a.jpg",
+      "https://static.glossgenius.com/public/service/8148a348f6d64187fee374809aeeac45f1505382/image/fbe971da5615fe82b748e9abc096b895.jpg",
+      "https://static.glossgenius.com/public/service/05c3906e0d6ab98e3ac60fb148a5625139d25bed/image/6b9dace0efbe20a7b4d638ab0632a905.jpg",
+      "https://static.glossgenius.com/public/service/a73302396b92fafc2a9a23af506d2f0c68fef2e2/image/1eceb3f886f43ba3ed7a10d3b018ea38.jpg",
+      "https://static.glossgenius.com/public/service/5bd88e7524181a38bc08efb27b8f617c3ee11654/image/1b0c42e1d68ff3ed501e9b2378c27752.jpg",
+      "https://static.glossgenius.com/public/service/1807aef1a787d3c9bf260c800af75a3414b7a80c/image/a40789450fe421c4a4b2655e4505e523.jpg",
+      "https://static.glossgenius.com/public/service/79d72760c9bca51818ab83ea19e17c692f00beb8/image/34d01b1e7590dd3425cfba9890136e80.jpg",
+      "https://static.glossgenius.com/public/service/9ae89d513f14d71af4e55b14fdb54ecbd390b67e/image/2c0b18aa6bdc0f57e58fc34d09f57dbc.jpg",
+      "https://static.glossgenius.com/public/service/968445b107e1610c62d5e48acd5f42d00d6fda7a/image/fd690ec9cee75fb3a04b9fddfa4c56c7.jpg",
+      "https://static.glossgenius.com/public/service/79beaec2cae049aed9a0a3acafc3a85ba21573a7/image/a0dd6a94501f884efd6224e2b7f3c5c0.jpg",
+      "https://static.glossgenius.com/public/service/5fc7aa941751f42776fbd1c3f22f8bce04b6a1d4/image/db949e55113fb5da2e0326eed6ac312e.jpg",
+      "https://static.glossgenius.com/public/service/6e7484755812d7b883d75e0347faf8bfa4034a23/image/2708b5ea240f625ab29173955e190ca8.jpg",
+      "https://static.glossgenius.com/public/service/64c7663d5ab9779109d6a301182eb77cbba3ecb9/image/42be158b2420c32dcdea8707eeb49f8b.jpg",
+      "https://static.glossgenius.com/public/service/4039527a716257b8c9b43ac26dbbf0ad4d372515/image/ef79c9f0673ff1f55d413f8d039f6296.jpg",
+      "https://static.glossgenius.com/public/service/8462fe1948147b8a45dbcdfb92a5bb303f1a16d3/image/937126541797d69ad425f11f127ae9a4.jpg",
+      "https://static.glossgenius.com/public/service/f2967cb81b61e11b17dde81d7843ff9bbf40b937/image/23efe5103370384d75c36c7c1e89d2cc.jpg",
+      "https://static.glossgenius.com/public/service/ec5ef3c00dc81e0dc1973903a9bffca1546f5df7/image/90033ee85715f1772e8ecbf0896f9053.jpg",
+      "https://static.glossgenius.com/public/service/739d38d0b018b97d8b00214bc345ebe360368413/image/39e94063b86732f50e825c68386a13c0.jpg"
+    ],
+    "treatmentGroups": [
+      {
+        "name": "Laser Hair Removal",
+        "count": 24
+      },
+      {
+        "name": "Fractional Resurfacing Laser",
+        "count": 13
+      },
+      {
+        "name": "Intense Pulse Light (IPL) Pigment Eraser",
+        "count": 10
+      },
+      {
+        "name": "Laser Tattoo Removal",
+        "count": 7
+      },
+      {
+        "name": "Wax",
+        "count": 3
+      },
+      {
+        "name": "Extraction session",
+        "count": 3
+      },
+      {
+        "name": "VI Peels",
+        "count": 3
+      },
+      {
+        "name": "Radio Frequency Microneedling",
+        "count": 3
+      },
+      {
+        "name": "Microdermabrasion",
+        "count": 2
+      },
+      {
+        "name": "Microneedling",
+        "count": 2
+      },
+      {
+        "name": "B 12 Injection",
+        "count": 1
+      },
+      {
+        "name": "Hydro Facial",
+        "count": 1
+      },
+      {
+        "name": "Dermaplane",
+        "count": 1
+      },
+      {
+        "name": "Facial",
+        "count": 1
+      },
+      {
+        "name": "Ultimate Trio",
+        "count": 1
+      }
+    ],
+    "services": [
+      {
+        "name": "Consultation",
+        "category": "Consultation",
+        "price": 30,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Embark on your skincare journey with a personalized consultation to analyze your skin needs and create a tailored treatment plan just for you!",
+        "image": "https://static.glossgenius.com/public/service/7edfc793b4117399cca40d89689d39285db07895/image/adc2df6f7d96b9d5c203870e2a6ab304.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-414744d4-7e34-4557-b831-a0c74b45d05b"
+      },
+      {
+        "name": "B 12",
+        "category": "B 12 Injection",
+        "price": 33,
+        "priceVaries": false,
+        "minutes": 15,
+        "description": "Boost your energy and improve your mood with our B12 injections, a quick and effective way to support your well-being.",
+        "image": "https://static.glossgenius.com/public/service/4b08960c9bc1bf7ddfe8ee038943b49541235527/image/c049ca988ece9922a1633170f9b22824.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-8c5f48d8-0c1b-48db-a94d-24b408e41e3a"
+      },
+      {
+        "name": "Brow Wax",
+        "category": "Wax",
+        "price": 40,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Sculpt, shape, and define your brows with our professional brow waxing service, tailored to enhance your natural beauty and create a polished look.",
+        "image": "https://static.glossgenius.com/public/service/39c012602cd8ebfcc24e02e1c63cc551d7a7d358/image/61d9c527e359713f539d2016db825c0b.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-ef99af3e-678d-4167-90a6-abd725a9ec98"
+      },
+      {
+        "name": "Brow Tint",
+        "category": "None",
+        "price": 40,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Enhance your brows with a long-lasting tint for defined, fuller-looking eyebrows that frame your face beautifully.",
+        "image": "https://static.glossgenius.com/public/service/43af288b735d7731121891677e94380c2661d88c/image/98942336ed6b52067ec95724114fad84.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-2d18067e-8258-4015-91c1-6503e233a51f"
+      },
+      {
+        "name": "Brow Wax and Tint",
+        "category": "Wax",
+        "price": 75,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "Achieve perfectly sculpted and defined brows with our expert brow wax and tint services for a polished, eye-catching look!",
+        "image": "https://static.glossgenius.com/public/service/a8339570a259f01d54a7de635c89b96c17024662/image/655ddc2b7aa3f2cdb6ada86dd0bed01a.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-28eae312-111b-4888-87c9-6925588b3a7c"
+      },
+      {
+        "name": "Lip Wax",
+        "category": "Wax",
+        "price": 40,
+        "priceVaries": false,
+        "minutes": 15,
+        "description": "Experience quick and efficient hair removal with our expert lip waxing service for smooth, silky lips!",
+        "image": "https://static.glossgenius.com/public/service/bbe76eed55e6d35a8b8cb4dee18833ecaeb1b363/image/7d5bf8eaa98e0e12fd640795677aa1f5.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-42c80138-b1d9-4eb5-acbb-af1cb49ac518"
+      },
+      {
+        "name": "Acne Extinguisher Spot Treatment",
+        "category": "Extraction session",
+        "price": 45,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "Experience rapid relief with our Acne Extinguisher Spot Treatment, a powerful solution to target and eliminate stubborn blemishes effectively.",
+        "image": "https://static.glossgenius.com/public/service/6df63f2cafe99cd3e3a3ab3af2488afcdfbb8eaa/image/0b5514ecbb9a594121a0c7e47b1572b8.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-e61b6677-b49f-49db-98e6-645979c634f1"
+      },
+      {
+        "name": "EXTRACTION SESSION",
+        "category": "Extraction session",
+        "price": 80,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Experience the ultimate deep cleansing with our Extraction Session! Purify your skin and banish impurities for a fresh, clear complexion.",
+        "image": "https://static.glossgenius.com/public/service/9552c5cd31d6996a60e2c87b49615bcc326780cb/image/f06a3cf9b47597aa5721184237379a93.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-a729d910-97f7-448a-9ee5-1b52a171191e"
+      },
+      {
+        "name": "AHA/BHA PEEL with MASK",
+        "category": "VI Peels",
+        "price": 260,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Reveal brighter, smoother skin with our AHA/BHA peel treatment, complemented by a rejuvenating mask to enhance your glow from within.",
+        "image": "https://static.glossgenius.com/public/service/28355135edcc456c2ae02771ae36511c8ab658b6/image/a2edaeae13f6ba068bb7552dc5e89772.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-74f3bc4b-78bf-4cb9-8882-8b7dc39a8233"
+      },
+      {
+        "name": "Epionce Peel with Microdermabrasion",
+        "category": "Microdermabrasion",
+        "price": 275,
+        "priceVaries": false,
+        "minutes": 90,
+        "description": "Experience the ultimate skin rejuvenation with our Epionce Peel combined with Microdermabrasion for a radiant, youthful glow like never before.",
+        "image": "https://static.glossgenius.com/public/service/c1749b1ba5544ea99e50d785d5b08a7f6a0f5baf/image/62475e5738b4e0c7989cbc8e61cea7c9.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-9d4abc65-ded0-490f-9127-78fa9c58cdb2"
+      },
+      {
+        "name": "Baby Peel",
+        "category": "VI Peels",
+        "price": 210,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Experience the gentle yet effective exfoliation with our Baby Peel treatment, revealing smoother, brighter skin without any downtime.",
+        "image": "https://static.glossgenius.com/public/stockimage/f01063211ba10f08f02fd4354bee0415559de28f/image/99b0601b1c256620fb8cece2df69e3e6.png",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-20ec0b00-1d12-4061-bc76-af71ba3abd27"
+      },
+      {
+        "name": "CO2 Lift Mask",
+        "category": "None",
+        "price": 95,
+        "priceVaries": false,
+        "minutes": 75,
+        "description": "Revive your skin with our CO2 Lift Mask, a rejuvenating treatment that delivers instant hydration and a youthful glow.",
+        "image": "https://static.glossgenius.com/public/service/119aeb1ac38af4036f0073698b6454e5c6c5779b/image/b1a41dd5962381d59052547e869b0f9d.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-4a2da206-1f47-456d-9d86-01681df33d66"
+      },
+      {
+        "name": "Deluxe Hydro Facial",
+        "category": "None",
+        "price": 308,
+        "priceVaries": false,
+        "minutes": 75,
+        "description": "Experience the ultimate hydration with our Deluxe Hydro Facial, featuring advanced techniques to revitalize and nourish your skin for a radiant glow like never before.",
+        "image": "https://static.glossgenius.com/public/service/0a85d59719a8a248d8c63355aba697c29557e0f4/image/4852284d14fd4a137f3a0c51ad04098c.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-6a606beb-185c-47ad-bbb3-bbb6b52c1c4e"
+      },
+      {
+        "name": "Express Hydro Facial",
+        "category": "Hydro Facial",
+        "price": 165,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Experience a deep cleanse and hydration boost with our Express Hydro Facial, leaving your skin refreshed and rejuvenated in no time!",
+        "image": "https://static.glossgenius.com/public/service/d1c347d768cce32dd80184709effabc75992c74d/image/d74b91480488d03e395c142cb2908d2e.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-3a14a095-e896-4bec-bee8-235b5bd7e17c"
+      },
+      {
+        "name": "Express Dermaplane",
+        "category": "Dermaplane",
+        "price": 75,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": " A quick, lunchtime-friendly treatment that removes dead skin and fine facial hair for instantly smoother, brighter skin. Great for prepping skin before an event or as a glow-boosting reset between facials. No downtime — you walk out radiant.",
+        "image": "https://static.glossgenius.com/public/service/c9f660ee31d7ebdbe1abdf2f8ed19806622c54d0/image/4d8eb2a4be456ccb9d3c1e02fce11177.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-3d49ea8e-7cc5-4bf9-9348-cf9d8c5bb052"
+      },
+      {
+        "name": "Dermaplane and Mask",
+        "category": "None",
+        "price": 145,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Experience the ultimate glow-up with our Dermaplane and Mask combo, revealing smoother, brighter skin instantly!",
+        "image": "https://static.glossgenius.com/public/service/f08d9b3cd451d70b1b37d3ab93abe87a1143ea53/image/1f08e0a3108a037a94acee1251d0da74.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-40a63a01-bc08-4636-9e17-dcd89fb795da"
+      },
+      {
+        "name": "Glow and Go Express Facial",
+        "category": "Facial",
+        "price": 165,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "A streamlined facial built for busy Denver clients who want real results without the full-service time commitment. Deep cleanse, exfoliation, and a targeted treatment leave your skin refreshed, hydrated, and glowing. Ideal before a night out, a photo shoot, or whenever your skin needs a quick reset.",
+        "image": "https://static.glossgenius.com/public/service/636154f18b1567fbaced2fe11a22735556c77051/image/ebad9d2f8f74b739cb84b20b9fef8087.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-4e89f30d-b082-4f23-8a3a-910e04562fc8"
+      },
+      {
+        "name": "LED Light Therapy",
+        "category": "None",
+        "price": 45,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Revitalize your skin with our advanced LED Light Therapy to target specific skin concerns and achieve a luminous complexion that radiates health and vitality.",
+        "image": "https://static.glossgenius.com/public/service/a946c582637595ca7f6ed774548c8a20ec3ce2e5/image/94e7758d1724ada3f81c3512ca97828f.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-aaeca1ec-93da-4762-8ff1-35d270588f0d"
+      },
+      {
+        "name": "Microdermabrasion and Mask",
+        "category": "Microdermabrasion",
+        "price": 200,
+        "priceVaries": false,
+        "minutes": 75,
+        "description": "Revitalize your skin with our Microdermabrasion and Mask duo, providing a deep exfoliation and nourishment for a glowing, rejuvenated appearance.",
+        "image": "https://static.glossgenius.com/public/service/967284a03cfb157cbc350d6f5c93bafc3f92a33f/image/b3fa612cacdc1edc58c0fd07382eb9a7.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-3ef0320f-fa5d-4053-9e7b-ac9cf3158e39"
+      },
+      {
+        "name": "Ultimate Trio -Skin Refresh",
+        "category": "Ultimate Trio",
+        "price": 300,
+        "priceVaries": false,
+        "minutes": 90,
+        "description": "Experience the ultimate luxury of choosing between a dermaplane or micro dermabrasion, a light chemical peel, and nano needle to rejuvenate your skin with zero downtime. This treatment will make your skin red carpet ready.",
+        "image": "https://static.glossgenius.com/public/service/ae32b53575a8a74959776307880796419f22fb18/image/4f0267290f950d44b4e166a41cdcfb5a.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-e2456689-b4f2-4abf-8ea9-d0b47618092e"
+      },
+      {
+        "name": "VI Peel",
+        "category": "VI Peels",
+        "price": 350,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Experience the rejuvenating power of a VI Peel, a medical-grade chemical peel that targets skin imperfections and promotes a smoother, more radiant complexion.",
+        "image": "https://static.glossgenius.com/public/service/f4988e8cb8365dff20ff1a378c7f63e945236706/image/d18d25005ea1c5ff617b57209be0e81e.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-d9b539d3-0989-4a0a-ab08-2be09ecb4f7f"
+      },
+      {
+        "name": "Microneedling Face Only",
+        "category": "Microneedling",
+        "price": 350,
+        "priceVaries": false,
+        "minutes": 90,
+        "description": "Microneedling Face Only: Precision microneedling creates tiny controlled channels in the skin to trigger your body's natural collagen response. Ideal for softening acne scars, refining large pores, and smoothing texture on the face. Expect redness for 24–48 hours and a visible glow in the weeks that follow as collagen rebuilds.",
+        "image": "https://static.glossgenius.com/public/service/a9680aacd8388c0973a9e9e8ffcd7e63e664c92d/image/13c084a54fc60d08a46d89971bea5f49.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-84be5806-1b39-48e6-b623-017411a13bbc"
+      },
+      {
+        "name": "Microneedling Face, Neck and Chest",
+        "category": "Microneedling",
+        "price": 500,
+        "priceVaries": false,
+        "minutes": 120,
+        "description": "Microneedling Face, Neck and Chest : Microneedling across the full face, neck, and décolleté — the three areas that show aging and sun damage first. Builds new collagen, evens tone, and improves texture everywhere your skin is visible. A great fit if your neck and chest show more sun damage than your face.\n",
+        "image": "https://static.glossgenius.com/public/service/31a163e44f1f917222b4345deabad88af9fd92dd/image/91c7ac020ae051c1d98c1638fc0c0fdb.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-33740f2c-95a5-4b77-be68-f1432f691797"
+      },
+      {
+        "name": "VIVACE Microneedling Face",
+        "category": "Radio Frequency Microneedling",
+        "price": 800,
+        "priceVaries": false,
+        "minutes": 105,
+        "description": "Precision RF microneedling on the face stimulates collagen to smooth acne scars, refine pores, and leave skin tighter and more radiant. A focused treatment when you want to reset facial texture with visible lifting — performed at our RiNo studio in Denver.",
+        "image": "https://static.glossgenius.com/public/service/440fa7ed6535d732ed6a02db5530d12a1d3437a3/image/6a2ba239d7079302494ff1ddbadee677.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-d2e7199f-4f90-48a8-bb7b-6fdef3f383a4"
+      },
+      {
+        "name": "Vivace Face And Neck",
+        "category": "Radio Frequency Microneedling",
+        "price": 900,
+        "priceVaries": false,
+        "minutes": 120,
+        "description": "Vivace combines microneedling with radiofrequency to tighten skin, soften fine lines, and improve texture across the face and neck. A great fit if you want visible lifting and smoother skin with minimal downtime.",
+        "image": "https://static.glossgenius.com/public/service/d5909d693bebc8b9fe3094dd2039776374ea8422/image/318ce28f5ede66287201e78b0305ff72.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-eaa6e61f-4c8d-4df5-bd13-05f02bef74f2"
+      },
+      {
+        "name": "Vivace Face, Neck And Chest",
+        "category": "Radio Frequency Microneedling",
+        "price": 1100,
+        "priceVaries": false,
+        "minutes": 150,
+        "description": " Our most comprehensive Vivace treatment pairs microneedling with radiofrequency across the face, neck, and chest to firm crepey skin, fade sun damage, and rebuild collagen for a glowing, even complexion.",
+        "image": "https://static.glossgenius.com/public/service/d89d33eb7cab4d4e3ebbb1f472f5b65d87a793a4/image/74c5593efe9a3701c361aab9ab4fec41.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-ded8df30-26f0-46db-820e-6a71370588cf"
+      },
+      {
+        "name": "Exosomes",
+        "category": "None",
+        "price": 300,
+        "priceVaries": false,
+        "minutes": 15,
+        "description": "Experience the ultimate skin rejuvenation with our Exosomes Overlay Micro-Needling Add-On, a cutting-edge treatment for deeply revitalized and glowing skin. Promotes faster, healing, and stronger collagen, utilizing billions of growth factors.",
+        "image": "https://static.glossgenius.com/public/service/a5db79d787fbb112c4fa26baa69fa3850a21d74b/image/437b79e767b0213b8147cd03df7bc478.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-6b0b4fdb-7a58-4eaf-88ca-762d88275383"
+      },
+      {
+        "name": "Laser Hair Removal Lip",
+        "category": "Laser Hair Removal",
+        "price": 90,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Achieve smooth, hair-free lips with our advanced laser hair removal treatment for precise and long-lasting results.",
+        "image": "https://static.glossgenius.com/public/service/d7a7347fb97861f9d469bc3e1d84a8668f8bc49a/image/f54fce213a6f2f4648598e69ebb6dc79.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-86a87fc2-71e3-43b9-85ee-f424c337f0f5"
+      },
+      {
+        "name": "Laser Hair Removal Chin",
+        "category": "Laser Hair Removal",
+        "price": 120,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "Achieve silky smooth skin with our Laser Hair Removal Chin service, say goodbye to unwanted hair for a long-lasting result! Say goodbye to those wiry hairs on your chiny  chin chin.",
+        "image": "https://static.glossgenius.com/public/service/5ea68fe958ba0a4309682727e7b331647b950246/image/310d020ca319e00737edbf6a0dc0c23c.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-81c77889-32af-4217-88b9-6e465430e817"
+      },
+      {
+        "name": "Laser Hair Removal Neckline",
+        "category": "Laser Hair Removal",
+        "price": 200,
+        "priceVaries": false,
+        "minutes": 50,
+        "description": "Say goodbye to unwanted neck hair with our specialized laser hair removal treatment, leaving your neckline smooth and hair-free.",
+        "image": "https://static.glossgenius.com/public/service/4151f761902b17df378ac8b7bcfb620883d13989/image/4f62bd1080b5c5c0105e64506ee86d63.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-53286d95-1dac-4968-b932-42df7e83db4c"
+      },
+      {
+        "name": "Laser Hair Full Face",
+        "category": "Laser Hair Removal",
+        "price": 225,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Laser Hair Removal Full Face : Precision laser hair removal across the full face for long-term smoothness. A series of sessions permanently reduces unwanted hair — no more daily upkeep. Ideal for clients wanting a hands-off solution to facial hair.",
+        "image": "https://static.glossgenius.com/public/service/e5f8cbafd0a3942bccc5666a17e7d77892af2deb/image/adad919a566c977374a0f0500b2d8ab2.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-fc4f54f1-ee3e-4997-bd89-c77d22eebd0b"
+      },
+      {
+        "name": "Laser Hair Removal Beard",
+        "category": "Laser Hair Removal",
+        "price": 200,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Experience the convenience of our Laser Hair Removal Beard service, ensuring long-lasting smoothness for a perfectly groomed look! Let’s ditch the razor 🪒! ",
+        "image": "https://static.glossgenius.com/public/service/2279f5fe05fd35940d2c25ac03260190d5a84a48/image/93cde8fa83a39dfa897696b3dc027cc2.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-9330a9a1-8d08-4300-8b67-90280b7cb5e7"
+      },
+      {
+        "name": "Laser Hair Removal Chest",
+        "category": "Laser Hair Removal",
+        "price": 450,
+        "priceVaries": false,
+        "minutes": 75,
+        "description": "Say goodbye to unwanted chest hair with our specialized laser hair removal treatment, leaving your skin smooth and hair-free for a confident appearance you'll love!",
+        "image": "https://static.glossgenius.com/public/service/550cf59196253959beb10d27b993669f591fc0bf/image/80278c76a6a6c8eed76992903f80d350.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-8967a29f-2690-4e5d-9423-0e11c73707e3"
+      },
+      {
+        "name": "LHR Upper Back /Shoulders",
+        "category": "Laser Hair Removal",
+        "price": 200,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "Experience the freedom of smooth skin on your upper back and shoulders with our cutting-edge laser hair removal service designed for lasting comfort and confidence!",
+        "image": "https://static.glossgenius.com/public/service/08520d2fc0a6671389c5b0fdbe29bc516f897f7f/image/ee3a60d7485b0a5c5c3132525777e6c1.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-a191db6f-cbfe-4c95-b582-625a60e9b00c"
+      },
+      {
+        "name": "Laser Hair Removal Full Back",
+        "category": "Laser Hair Removal",
+        "price": 275,
+        "priceVaries": false,
+        "minutes": 90,
+        "description": "Say goodbye to back hair with our specialized laser hair removal treatment, providing a smooth and confident look that lasts.",
+        "image": "https://static.glossgenius.com/public/service/1e19452d5f59592bf8228af91298b6c9b80078f7/image/31536888782170bedd7a07b41285e446.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-ad674420-ac22-445e-996e-9edf6bd06eb1"
+      },
+      {
+        "name": "Laser Hair Removal Underarm",
+        "category": "Laser Hair Removal",
+        "price": 150,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Laser Hair Removal Underarm : Say goodbye to razor burn and daily shaving. Laser hair removal on the underarms is one of the fastest, most satisfying areas to treat — a series of quick sessions delivers smooth, hair-free skin for the long haul.",
+        "image": "https://static.glossgenius.com/public/service/3c2791d3a2e2601d16417a8d2cc42b2d68f3fbfc/image/ce9511afe9020747c1b37c1c8ad338a2.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-19c59308-3f51-4c87-b369-c2465b4bfa22"
+      },
+      {
+        "name": "Laser Hair Removal Brazilian",
+        "category": "None",
+        "price": 225,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "Laser Hair Removal Brazilian : Laser hair removal for the Brazilian area delivers long-term smoothness and freedom from shaving, waxing, and ingrowns. A series of sessions permanently reduces hair for lasting results.",
+        "image": "https://static.glossgenius.com/public/service/01151be4b1fe95744ee5ea1eba9fb18fe63a6de7/image/6606e6fbdf3d39622e7900f3aabfe66e.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-7a678fc1-6358-4a06-95a7-66b023229245"
+      },
+      {
+        "name": "Laser Hair Removal Bikini",
+        "category": "None",
+        "price": 150,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Experience the liberation of smooth skin with our Laser Hair Removal service tailored for the Bikini area, providing long-lasting results and enhancing your confidence.",
+        "image": "https://static.glossgenius.com/public/service/56f9174837715c5bf11f8d096c3f28d186a27f29/image/183ab8cbc4857097da41cd0c95f77718.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-70c1433c-930d-46a3-a9e3-278a618bfbed"
+      },
+      {
+        "name": "Laser Hair Removal Half Arm",
+        "category": "Laser Hair Removal",
+        "price": 150,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Experience smooth, hair-free half arms with our advanced laser hair removal treatment for long-lasting results without the hassle of shaving or waxing.",
+        "image": "https://static.glossgenius.com/public/service/6c6e3b08b4daee72ede391139e60a5c5c32bbc35/image/caa90a350bfa5611c69eecb79e40b0e3.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-e1fa744a-c32d-481c-a6bb-89e52fb4cc9a"
+      },
+      {
+        "name": "Laser Hair Removal Full Arms",
+        "category": "Laser Hair Removal",
+        "price": 300,
+        "priceVaries": false,
+        "minutes": 90,
+        "description": "Discover the key to silky-smooth arms with our precise laser hair removal service, ensuring lasting hair-free results for flawless skin.",
+        "image": "https://static.glossgenius.com/public/service/4561b35cc229c7656b70922d806eb0a407c0198c/image/2ec97286304fcb014c51c7674327a851.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-3d957278-5576-45f2-b10d-1628f204f408"
+      },
+      {
+        "name": "Laser Hair Removal (1/2 Leg)",
+        "category": "None",
+        "price": 250,
+        "priceVaries": false,
+        "minutes": 80,
+        "description": "Benefit from our Laser Hair Removal service designed for half legs, promising silky-smooth skin without the hassle of constant shaving or waxing!",
+        "image": "https://static.glossgenius.com/public/service/f3cdf3ea47680c3c57c9f7c747d6e2d012820d8e/image/36655f6cc24b0dfd83d49bf72d33c1b8.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-934a68f3-a067-4c3b-b182-248a75bf6eab"
+      },
+      {
+        "name": "Laser Hair Removal Full Leg",
+        "category": "Laser Hair Removal",
+        "price": 400,
+        "priceVaries": false,
+        "minutes": 120,
+        "description": "Laser Hair Removal Full Leg : Full-leg laser hair removal replaces years of shaving and waxing with long-term smoothness. A series of sessions permanently reduces hair for silky, low-maintenance legs.",
+        "image": "https://static.glossgenius.com/public/service/7af6bd4344b53e0716c100b1994b3d836079d89c/image/5bf0f43c1574a5bd229b5e9233e2cd86.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-5305fa96-bb75-4132-aefb-fa4ae8e95840"
+      },
+      {
+        "name": "Laser Hair Removal Ears",
+        "category": "None",
+        "price": 120,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Achieve a sleek, hair-free look with our targeted laser hair removal service for the ears, ensuring precise and lasting results! ",
+        "image": "https://static.glossgenius.com/public/service/b066cf043539a9af7351276e3939b09030d99c81/image/a59421eb6c2556d92563ba45a9c28a31.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-f4d45f53-796d-4d0d-b098-e8d187b09d0f"
+      },
+      {
+        "name": "Laser Hair Removal Side Burns",
+        "category": "None",
+        "price": 120,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "Achieve effortlessly smooth sideburns with our specialized laser hair removal, ensuring precise and long-lasting results for a refined appearance!",
+        "image": "https://static.glossgenius.com/public/service/48ac74640722e9ef9f1122415855cdd3866b0c7a/image/3b3c079cbe9b8166441331cf9381303f.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-f1c51148-0a4f-484b-96ce-d39c9e6ef2d7"
+      },
+      {
+        "name": "LHR Butt Cheeks ( Inbetween)",
+        "category": "Laser Hair Removal",
+        "price": 150,
+        "priceVaries": false,
+        "minutes": 40,
+        "description": "Tired of risky razor acrobatics? Laser that tricky spot—no nicks, no stress, just smooth cheeks! 😅✨\nThis service will target the hair in between your cheeks! ",
+        "image": "https://static.glossgenius.com/public/service/02a2d3ebb22978e83b78ff60f216a9acaa7bf15e/image/04ac204ac9dd5bfd0ae6b6f2eaf307ac.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-ebfde96d-8648-4d18-8e11-3bc4c0a49449"
+      },
+      {
+        "name": "Laser Hair Removal Full Butt Cheeks",
+        "category": "Laser Hair Removal",
+        "price": 350,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Full bum laser = no more weird angles, razor bumps, or surprise stubble—just smooth cheeks all the time! 🍑✨",
+        "image": "https://static.glossgenius.com/public/service/5659ed22df749f7787e67a60f61d29c96573838e/image/3c06a0b5cd7665f00ece63221edffd71.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-75e10849-d331-4fd0-bb51-8ca0b303e189"
+      },
+      {
+        "name": "Laser Hair Removal Abdomen",
+        "category": "Laser Hair Removal",
+        "price": 175,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Experience smooth, hair-free skin with our laser hair removal service for the abdomen—say goodbye to unwanted hair and hello to lasting results!",
+        "image": "https://static.glossgenius.com/public/service/761cf62be2266d9bce0740ebaa59fc971ef4fd51/image/0f54c5a7178b63123b8cfd3eae3acbcb.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-a6b886c5-6021-487b-9400-57139f3516bf"
+      },
+      {
+        "name": "Laser Hair Removal Aerolas",
+        "category": "None",
+        "price": 120,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Say goodbye to fuzz around the areolas—because some spots are just too delicate for a razor! 💁‍♀️✨",
+        "image": "https://static.glossgenius.com/public/service/1056f3cc281fc34f1f856696e09274069fea129f/image/59ec393dadd5c0cd4254745a77a95046.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-cbc8f421-3d2c-4fc4-aeb8-14a02c358649"
+      },
+      {
+        "name": "LHR Happy Trail below Abdomen",
+        "category": "None",
+        "price": 120,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Smooth skin awaits with our LHR Happy Trail below Abdomen service! Say goodbye to unwanted hair and hello to confidence.",
+        "image": "https://static.glossgenius.com/public/service/dd202a07093ce6e044c318c8cae022f16af0aec8/image/6a254a17caea02a4da9515a27134e7cd.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-6a0aa1d1-82dd-4c6c-8e2f-37d0f912636c"
+      },
+      {
+        "name": "Laser Hair Removal Feet And Toes",
+        "category": "Laser Hair Removal",
+        "price": 140,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "Unveil silky smooth skin with laser hair removal designed specifically for your feet and toes, ensuring lasting hair reduction for a carefree, confident stride. Be flip flop ready. ",
+        "image": "https://static.glossgenius.com/public/service/5359f528ae561ab06be489dda21468749f9994a7/image/55ce8225c798bd15a05b1a5dca5aa252.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-a9b3bf9b-1cd9-450f-bac5-280887508534"
+      },
+      {
+        "name": "Laser Hair Full Body",
+        "category": "Laser Hair Removal",
+        "price": 550,
+        "priceVaries": false,
+        "minutes": 105,
+        "description": "🔥 Full Body Laser Hair Removal targets unwanted hair from head to toe—face, arms, legs, underarms, bikini, back & more—for smooth, low-maintenance skin. Ditch the 🪒",
+        "image": "https://static.glossgenius.com/public/service/85318aabf23ec7c0a5f84d6bc210bf4b051c000f/image/b89206b278aa331d63272e9155ef8033.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-15c196fe-264f-4a8c-9bcb-e388a2247ef5"
+      },
+      {
+        "name": "Tattoo Removal ( Tiny Ink) 2X2",
+        "category": "Laser Tattoo Removal",
+        "price": 150,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": " (Tiny Ink) 2x2 ($150): Precision laser tattoo removal for small ink up to 2\"x2\". Advanced wavelengths safely break down unwanted pigment across a series of sessions, fading the tattoo until the area returns to clear skin. A thoughtful entry point for small coverups or lingering spot regrets.",
+        "image": "https://static.glossgenius.com/public/service/4b105c830aec9c6c54e6a155bb62d7c108dddb0f/image/820796d8d015ec35b11e22e519d47e10.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-3976fdee-e449-4eec-9c14-f06df797b277"
+      },
+      {
+        "name": "Tattoo Removal Medium",
+        "category": "Laser Tattoo Removal",
+        "price": 350,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "\n Medium ($350): Laser tattoo removal for ink about the size of a half sheet of paper. Our advanced laser safely breaks down ink particles over a series of sessions, fading the tattoo progressively until the area returns to clear skin. A consultation sets realistic expectations and the right treatment plan for your tattoo.",
+        "image": "https://static.glossgenius.com/public/service/a92148066f890d15d775213cbc3b2de0d75369a6/image/7d4d690b12375407175a7045e67d7285.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-4ad86600-0aa3-4283-908f-c71d9ea1199e"
+      },
+      {
+        "name": "Tatttoo Removal Large",
+        "category": "Laser Tattoo Removal",
+        "price": 550,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": " Large ($550): Laser tattoo removal for ink roughly the size of a full sheet of paper. Multiple sessions progressively break down ink and clear the area. Ideal for clients serious about fully removing a larger piece — a consultation covers session count, timing between sessions, and aftercare so you know exactly what to expect.",
+        "image": "https://static.glossgenius.com/public/service/c13837a2c5c69e4ca6e1a05ff41d4f151806c359/image/ec58e80f938a6809604548862765d39c.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-9ba9711b-82f4-431d-a2fa-d501cf32327d"
+      },
+      {
+        "name": "Tattoo Removal Extra Large",
+        "category": "Laser Tattoo Removal",
+        "price": 800,
+        "priceVaries": true,
+        "minutes": 150,
+        "description": " For tattoos two or more sheets of paper in size. Our advanced laser breaks down ink across a planned series of sessions, with pricing confirmed at consultation based on size, ink depth, and color. A consultation ensures the right plan and realistic timeline for full removal.",
+        "image": "https://static.glossgenius.com/public/service/c9b0d7c8c565276e61c91c4ee11ad99cc3ab76f6/image/a0e5b9a4ca6014241c56f009cbd2e6dd.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-bea65504-36a3-48e9-bf23-38819c4a5d50"
+      },
+      {
+        "name": "Tattoo Removal Packages",
+        "category": "Laser Tattoo Removal",
+        "price": 950,
+        "priceVaries": true,
+        "minutes": 45,
+        "description": "Tailored multi-session packages for clients committed to full tattoo removal. We build the plan around your tattoo's size, age, and ink type, so each session moves you closer to clear skin. Pricing confirmed at consultation.",
+        "image": "https://static.glossgenius.com/public/service/0e78fb461871308e9f3d6bf034465a1970fe556b/image/fccf1d7609284f6c6b0e6c713d3c6980.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-0c45a72f-9d44-451f-859c-2bb3c3309a31"
+      },
+      {
+        "name": "IPL Face",
+        "category": "Intense Pulse Light (IPL) Pigment Eraser",
+        "price": 350,
+        "priceVaries": false,
+        "minutes": 75,
+        "description": "IPL Face : Our IPL Face treatment uses intense pulsed light to break up sun damage, brown spots, and redness across the complexion. Over a series of sessions, your skin tone evens out and that lit-from-within glow returns. Little to no downtime — expect pigment to surface and flake off over the following week as your skin renews.",
+        "image": "https://static.glossgenius.com/public/service/8c1ef8f780c0b4976a30cc6ae53ed821a60c6e4d/image/a1c9ccd4437d8d655eb979e67caede9f.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-3f102384-3511-4740-abd4-cc278f137feb"
+      },
+      {
+        "name": "IPL Neck",
+        "category": "Intense Pulse Light (IPL) Pigment Eraser",
+        "price": 350,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "IPL Neck : The neck often shows sun damage before the face does. Our IPL Neck treatment targets brown spots, redness, and uneven tone in this delicate area for a smoother, more even appearance. A thoughtful pairing with IPL Face when your neck has told on you more than your face.",
+        "image": "https://static.glossgenius.com/public/service/649f740f47525f9b9d28db5a7d633cf7c91872f1/image/bcf5e0adf2349528bbcd12bd54b2cb46.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-cabeed8d-0452-40f6-8211-1bfd86797900"
+      },
+      {
+        "name": "IPL Chest",
+        "category": "Intense Pulse Light (IPL) Pigment Eraser",
+        "price": 400,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "IPL Chest : The décolleté catches more sun than almost anywhere else. IPL on the chest fades years of sun damage and evens tone across this visible area. Beautiful stand-alone, or paired with IPL Face and Neck for a full upper-body brightening plan.",
+        "image": "https://static.glossgenius.com/public/service/27a71b55010d6f4ca02932ac30d2e6f0f3d52a9d/image/56653d5734768187516b17526bf40f31.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-3c866678-6a2b-4437-b0db-9b953bc457c8"
+      },
+      {
+        "name": "IPL Half Arm",
+        "category": "Intense Pulse Light (IPL) Pigment Eraser",
+        "price": 350,
+        "priceVaries": false,
+        "minutes": 90,
+        "description": "Clear up brown spots ( hyperpigmentation ) from years of sun damage with this advanced treatment. ",
+        "image": "https://static.glossgenius.com/public/service/c92109ea089a67ac2b831ed3ee3a4d6d640a00d3/image/d73ff87d18af6f9e2d9f2adf6fe6e95b.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-5c9aab12-8cd0-472e-ada5-d697b87798c9"
+      },
+      {
+        "name": "IPL Full Arm",
+        "category": "Intense Pulse Light (IPL) Pigment Eraser",
+        "price": 550,
+        "priceVaries": false,
+        "minutes": 90,
+        "description": "Experience flawless, sun damaged free arms with our IPL full arm treatment . ",
+        "image": "https://static.glossgenius.com/public/service/47f57afdefa7cb3076bc0796152d95251f9bac90/image/9ab001254219f0ad9f899ec3489275a7.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-09e27d59-ce7d-4182-ba6d-daf4d323e2b6"
+      },
+      {
+        "name": "IPL Hands",
+        "category": "Intense Pulse Light (IPL) Pigment Eraser",
+        "price": 250,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Bye-bye sun spots 👋 Hello smooth, glowing hands ✨ Thanks, IPL!",
+        "image": "https://static.glossgenius.com/public/service/3e6c288a7f11aeefda2afdf9a25131d44f5eab6d/image/d9c870580471c455424889def073c5f8.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-ccccb3d5-e00d-4aed-acad-7a4aface1551"
+      },
+      {
+        "name": "IPL Full Back",
+        "category": "Intense Pulse Light (IPL) Pigment Eraser",
+        "price": 600,
+        "priceVaries": false,
+        "minutes": 90,
+        "description": "Say goodbye to sundamage on your back! This treatment will leave your back with a more even skin tone! ",
+        "image": "https://static.glossgenius.com/public/service/418d222e5d469b1dc708d0c79ddb89a269648a0e/image/a22847176690c027272a3dc1748979f8.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-ca89f9c7-0dfd-47af-ab65-7c86118da8e6"
+      },
+      {
+        "name": "IPL Half Back",
+        "category": "Intense Pulse Light (IPL) Pigment Eraser",
+        "price": 400,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Experience a more even skin tone  with our IPL half back treatment for lasting results and a confident  back!",
+        "image": "https://static.glossgenius.com/public/service/8d2cf632271479c707f9dc7314c147e9808ad8c3/image/300822b15a233adfb0fbfcfcdb210586.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-17531655-891b-45d7-974e-ac58db9ea3fc"
+      },
+      {
+        "name": "Laser Acne Spot Treatment",
+        "category": "Intense Pulse Light (IPL) Pigment Eraser",
+        "price": 150,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Zap ✨ those stubborn little breakouts with our IPL spot treatment — like a magic eraser for pimples that won’t take the hint 🥰",
+        "image": "https://static.glossgenius.com/public/service/7895131505b89c3b9720028423feeb260b2fd14c/image/0c43cb4d1972d73c765984a1af271a46.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-14a4304b-2e0c-4551-a812-b44b84dd512e"
+      },
+      {
+        "name": "Acne Laser Facial (IPL)",
+        "category": "Intense Pulse Light (IPL) Pigment Eraser",
+        "price": 225,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Acne Laser Facial / IPL : Targeted light therapy that calms active breakouts by reducing acne-causing bacteria and soothing inflammation. A gentle, downtime-free option when you want your skin clearer and calmer without a harsh peel. Works well as part of an ongoing clear-skin plan.",
+        "image": "https://static.glossgenius.com/public/service/ae22776d1302687298233d7653223b4db8f1d09e/image/fcdff0ae16ae4c11fdb63349eedb6fb8.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-414e3000-4984-44b3-86bf-ee84973d8355"
+      },
+      {
+        "name": "Fractional Resurfacing Laser Face",
+        "category": "Fractional Resurfacing Laser",
+        "price": 750,
+        "priceVaries": true,
+        "minutes": 120,
+        "description": "Fractional Resurfacing Laser Face — Fractional laser resurfacing for the face targets fine lines, sun damage, acne scars, and uneven texture. Expect a smoother, brighter complexion as collagen rebuilds in the weeks after treatment. ",
+        "image": "https://static.glossgenius.com/public/service/83167bd07c64ca5dd88fe1dc0d845089c8430a77/image/3de637114c1a1a732990f08de0f5830b.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-95b012a8-d63c-434d-92db-e93e5d78a529"
+      },
+      {
+        "name": "Fractional Resurfacing Laser Neck",
+        "category": "Fractional Resurfacing Laser",
+        "price": 350,
+        "priceVaries": true,
+        "minutes": 90,
+        "description": " Resurfacing for the neck softens crepey skin, smooths texture, and improves tone in that delicate area. A great complement to a face treatment. Partial and full neck pricing confirmed at consultation.",
+        "image": "https://static.glossgenius.com/public/service/1dff14133d3e6a1db57c4faad08eb30c06ce9354/image/a88f021b612c36171c1900f57f76e38a.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-110d9f62-535d-40d6-b1b4-c8b15b76e3b5"
+      },
+      {
+        "name": "Fractional Chest",
+        "category": "Fractional Resurfacing Laser",
+        "price": 400,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "Fractional Chest : A Micro Laser Peel with fractional energy refreshes the chest by creating tiny microchannels that wake up your collagen. This treatment softens fine lines, fades sun damage, and brightens tone across the décolleté with less downtime than a full ablative resurfacing. Ideal if you want visible improvement with a shorter recovery, or as part of an ongoing plan for long-term skin health.",
+        "image": "https://static.glossgenius.com/public/service/8148a348f6d64187fee374809aeeac45f1505382/image/fbe971da5615fe82b748e9abc096b895.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-70eee079-7538-4ca3-802e-7ee6c320c20a"
+      },
+      {
+        "name": "Fractional Resurfacing Laser Back",
+        "category": "Fractional Resurfacing Laser",
+        "price": 750,
+        "priceVaries": false,
+        "minutes": 105,
+        "description": "Renew your skin's texture with our Resurfacing Laser Back treatment, targeting imperfections for a smoother, rejuvenated back complexion. Partial $500.00 Full $600.00",
+        "image": "https://static.glossgenius.com/public/service/05c3906e0d6ab98e3ac60fb148a5625139d25bed/image/6b9dace0efbe20a7b4d638ab0632a905.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-b61234ec-5126-488b-b929-c622797cdb38"
+      },
+      {
+        "name": "Fractional Laser Eyes Or Mouth",
+        "category": "Fractional Resurfacing Laser",
+        "price": 350,
+        "priceVaries": true,
+        "minutes": 45,
+        "description": "Illuminate your skin with our Resurfacing Laser treatment tailored for the delicate areas around your eyes or mouth, revealing a smoother, more youthful complexion. ",
+        "image": "https://static.glossgenius.com/public/service/a73302396b92fafc2a9a23af506d2f0c68fef2e2/image/1eceb3f886f43ba3ed7a10d3b018ea38.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-23eeb055-3758-4c6f-8b10-e01a59947e58"
+      },
+      {
+        "name": "Fractional Overlay: Scar & Texture",
+        "category": "Fractional Resurfacing Laser",
+        "price": 350,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "This treatment targets a specific area of concern on the face, focusing on scars and uneven texture. Perfect for precise, localized improvement without treating the entire face. This service is meant to be paired with Microneedling! ",
+        "image": "https://static.glossgenius.com/public/service/5bd88e7524181a38bc08efb27b8f617c3ee11654/image/1b0c42e1d68ff3ed501e9b2378c27752.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-a9a7e9e2-4f5b-477e-8bf9-06751cb761f4"
+      },
+      {
+        "name": "Ablative Resurfacing Laser Face",
+        "category": "Fractional Resurfacing Laser",
+        "price": 910,
+        "priceVaries": false,
+        "minutes": 90,
+        "description": "Ablative Resurfacing Laser Face : Erbium ablative laser resurfacing is a deep, transformative reset for your skin. This advanced treatment addresses wrinkles, sun damage, acne scars, and dull, uneven texture in a single comprehensive session. Fresh new skin surfaces as your body rebuilds collagen in the weeks that follow, revealing a smoother, brighter, more youthful complexion. Expect several days of downtime as your skin heals — the long-term results are well worth it. Ideal for clients serious about long-term skin health and visible, lasting change.",
+        "image": "https://static.glossgenius.com/public/service/1807aef1a787d3c9bf260c800af75a3414b7a80c/image/a40789450fe421c4a4b2655e4505e523.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-9e020b01-a5ea-45cd-bfc6-2dc0c6176aa8"
+      },
+      {
+        "name": "Ablative Resurfacing Laser Neck",
+        "category": "Fractional Resurfacing Laser",
+        "price": 450,
+        "priceVaries": false,
+        "minutes": 45,
+        "description": "Ablative Resurfacing Laser Neck: Ablative laser resurfacing for the neck softens fine lines, smooths crepey texture, and gives this delicate area a lifted, refreshed appearance. The treatment triggers your body's collagen response, so results continue improving in the weeks after your session. A thoughtful pairing with facial resurfacing, or a stand-alone option for clients noticing more aging on the neck than the face.",
+        "image": "https://static.glossgenius.com/public/service/79d72760c9bca51818ab83ea19e17c692f00beb8/image/34d01b1e7590dd3425cfba9890136e80.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-7a3a0fe3-5222-4ab4-9ea4-2bf097bf8af0"
+      },
+      {
+        "name": "Ablative Resurfacing Chest",
+        "category": "Fractional Resurfacing Laser",
+        "price": 500,
+        "priceVaries": false,
+        "minutes": 30,
+        "description": "Ablative Resurfacing Chest : Fractional ablative laser resurfacing addresses the décolleté — the chest area that shows sun damage, crepey texture, and fine lines first. This treatment smooths and refines, breaking up pigment while triggering new collagen growth underneath. Over the weeks following your session, fresh skin surfaces for a more even, youthful chest. A beautiful complement to facial treatments when your chest shows more sun damage than your face.",
+        "image": "https://static.glossgenius.com/public/service/9ae89d513f14d71af4e55b14fdb54ecbd390b67e/image/2c0b18aa6bdc0f57e58fc34d09f57dbc.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-a99f6aa7-5579-42e7-88f7-50324276622a"
+      },
+      {
+        "name": "Ablative Laser Eyes Or Mouth",
+        "category": "Fractional Resurfacing Laser",
+        "price": 450,
+        "priceVaries": true,
+        "minutes": 10,
+        "description": "An ablative laser treatment focused on the eyes or mouth area to smooth texture and soften lines for a more refreshed look.  👀 ",
+        "image": "https://static.glossgenius.com/public/service/968445b107e1610c62d5e48acd5f42d00d6fda7a/image/fd690ec9cee75fb3a04b9fddfa4c56c7.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-37c36716-5389-43e9-ad0d-8949d6701df2"
+      },
+      {
+        "name": "Laser Resurfacing Hands",
+        "category": "Fractional Resurfacing Laser",
+        "price": 400,
+        "priceVaries": true,
+        "minutes": 30,
+        "description": " Renews the appearance of your hands by reducing age spots and refreshing the skin for a more youthful look. \n ",
+        "image": "https://static.glossgenius.com/public/service/79beaec2cae049aed9a0a3acafc3a85ba21573a7/image/a0dd6a94501f884efd6224e2b7f3c5c0.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-8bac2078-2902-4125-9341-417e1dd4f2cc"
+      },
+      {
+        "name": "Scar Rejuvenation",
+        "category": "Fractional Resurfacing Laser",
+        "price": 300,
+        "priceVaries": false,
+        "minutes": 60,
+        "description": "Scar Rejuvenation : Targeted laser resurfacing to fade and smooth scars — including surgical, acne, and injury scars. The treatment resurfaces the scarred area so fresh skin forms underneath, softening texture and evening tone over a series of sessions. Ideal for clients bothered by a specific scar and ready for visible, long-term improvement. A consultation ensures the right treatment plan and expectations for your skin.",
+        "image": "https://static.glossgenius.com/public/service/5fc7aa941751f42776fbd1c3f22f8bce04b6a1d4/image/db949e55113fb5da2e0326eed6ac312e.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-fec33947-b506-4a50-b309-35398a3e9fa8"
+      },
+      {
+        "name": "Ablative Laser Back Rejuvenation",
+        "category": "Fractional Resurfacing Laser",
+        "price": 900,
+        "priceVaries": false,
+        "minutes": 90,
+        "description": "Transform your back with Fractional Rejuvenation—a targeted treatment to improve skin texture and reduce scarring, revealing smoother, healthier-looking skin.",
+        "image": "https://static.glossgenius.com/public/service/6e7484755812d7b883d75e0347faf8bfa4034a23/image/2708b5ea240f625ab29173955e190ca8.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-0da86639-c0d8-41ca-99aa-71578b1a6727"
+      },
+      {
+        "name": "Melasma Clear Complex 🧪",
+        "category": "None",
+        "price": 50,
+        "priceVaries": false,
+        "minutes": 15,
+        "description": "✨ Meet the “Melasma Stamp-Out Serum” ✨Incoming Tranexamic acid!! \nThis liquid magic goes on right after your microneedling session and targets melasma like  missile. 🌪️\nMelasma hates this stuff — it’s like pressing a reset button on stubborn pigmentation.\nBrightening power ✔️\nSpot-lightening punch ✔️\nGlowy, even skin tone ✔️",
+        "image": "https://static.glossgenius.com/public/service/64c7663d5ab9779109d6a301182eb77cbba3ecb9/image/42be158b2420c32dcdea8707eeb49f8b.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-16fb6239-cd3e-4e28-a4bb-6bddea85daae"
+      },
+      {
+        "name": "Vascular Treatment",
+        "category": "Extraction session",
+        "price": 165,
+        "priceVaries": true,
+        "minutes": 30,
+        "description": "Experience advanced vascular treatment targeting specific concerns for healthier, rejuvenated skin—revealing a smoother, more even complexion! Pricing: $165 for each 15 minutes.",
+        "image": "https://static.glossgenius.com/public/service/4039527a716257b8c9b43ac26dbbf0ad4d372515/image/ef79c9f0673ff1f55d413f8d039f6296.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-af2d53bb-7f35-4c35-919b-9a3b6a3b774e"
+      },
+      {
+        "name": "Melasma Laser Facial ( NO HEAT)",
+        "category": "Laser Tattoo Removal",
+        "price": 300,
+        "priceVaries": true,
+        "minutes": 60,
+        "description": " (NO HEAT) A gentle laser approach built specifically for melasma. Heat can aggravate pigmentation, so this treatment uses precise light with no heat to break up stubborn spots over a series of sessions. Ideal for clients with melasma looking for a safe, measured approach to a more even tone.",
+        "image": "https://static.glossgenius.com/public/service/8462fe1948147b8a45dbcdfb92a5bb303f1a16d3/image/937126541797d69ad425f11f127ae9a4.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-29fd39d9-a28f-4d05-94fd-289ad2489dad"
+      },
+      {
+        "name": "Pigment Lesion Removal",
+        "category": "Laser Tattoo Removal",
+        "price": 225,
+        "priceVaries": false,
+        "minutes": 15,
+        "description": "💫 Laser Pigment Removal\n\nSome brown spots just won’t fade with IPL or chemical peels — that’s where laser treatment shines.   ($225 per 15 min):  Targeted laser pigment removal uses a precise wavelength to safely break down stubborn pigment — ideal for sunspots and dark patches that don't respond to other treatments. Minimal downtime, visible results, radiant skin.",
+        "image": "https://static.glossgenius.com/public/service/f2967cb81b61e11b17dde81d7843ff9bbf40b937/image/23efe5103370384d75c36c7c1e89d2cc.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-ed0505d7-487b-463b-a351-90b852b2c87d"
+      },
+      {
+        "name": "Salmon DNA Repair Infusion",
+        "category": "None",
+        "price": 200,
+        "priceVaries": false,
+        "minutes": 15,
+        "description": "Experience the rejuvenating benefits of a Salmon DNA overlay, revitalizing your skin for a radiant and youthful glow!      Meant to be paired with microneedling or fractional laser.🍣",
+        "image": "https://static.glossgenius.com/public/service/ec5ef3c00dc81e0dc1973903a9bffca1546f5df7/image/90033ee85715f1772e8ecbf0896f9053.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-57a2ef48-6c34-498d-995e-f53b6c3705ea"
+      },
+      {
+        "name": "$99 Laser Fridays",
+        "category": "Laser Fridays",
+        "price": 99,
+        "priceVaries": false,
+        "minutes": 75,
+        "description": "🔥 $99 LASER FRIDAYS 🔥\nNEW CLIENTS ONLY\n\nNew clients only. Every Friday, try a qualifying laser treatment on an area up to 4\" x 4\" for $99 — choose from IPL, fractional laser, laser hair removal, or tattoo removal. A low-commitment way to experience our lasers before committing to a full treatment plan.",
+        "image": "https://static.glossgenius.com/public/service/739d38d0b018b97d8b00214bc345ebe360368413/image/39e94063b86732f50e825c68386a13c0.jpg",
+        "bookUrl": "https://landaesthetics.glossgenius.com/services?service_token=1000f-ce31ea47-e4bf-4223-ba3a-40b131d545ac"
+      }
+    ]
+  }
+}

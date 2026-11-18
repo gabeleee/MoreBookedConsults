@@ -19,11 +19,12 @@ export async function POST(req: Request) {
   }
 
   const v = data.values;
-  const name = String(v.practice_name ?? clientBySlug(data.client ?? "")?.practice ?? "Unknown practice");
-  const replyTo = typeof v.email === "string" && /.+@.+\..+/.test(v.email) ? v.email : undefined;
+  const c = clientBySlug(String(data.client ?? ""));
+  const name = c?.found.businessName ?? `Unknown client (${String(data.client)})`;
+  const replyTo = c?.found.email && /.+@.+\..+/.test(c.found.email) ? c.found.email : undefined;
   const subject = `Onboarding intake: ${name}`;
   const text = [
-    `Onboarding intake from ${name} (link: /onboarding/${data.client ?? ""})`,
+    `Onboarding intake from ${name} (link: /onboarding/${data.client}/)\nText number: ${String(v.text_number ?? "")}`,
     intakeAsText(v),
     "",
     "== RAW JSON ==",

@@ -6,39 +6,23 @@ import {
   isShown,
   isFilled,
   missingIn,
-  type ClientPrefill,
+  optionsFor,
+  type ClientInfo,
   type Field,
+  type FoundSummary,
+  type Values,
 } from "@/lib/onboarding";
 
-// Multi-step client onboarding intake. Questions come from lib/onboarding.ts.
-// Answers are kept in this browser between visits (so a client can stop and
-// come back), then sent once to /api/onboarding.
+// Client onboarding intake: 3 short steps. Step 1 shows what we already
+// pulled from their booking page for a one-tap confirm. Answers are kept in
+// this browser until sent (so a client can stop and come back).
 
-type Values = Record<string, string | string[]>;
+const storageKey = (slug: string) => `mbc-intake:${slug}`;
 
-const storageKey = (slug: string | null) => `mbc-intake:${slug ?? "general"}`;
-
-function load(slug: string | null): { values: Values; step: number } | null {
-  try {
-    const raw = localStorage.getItem(storageKey(slug));
-    return raw ? JSON.parse(raw) : null;
-  } catch {
-    return null;
-  }
-}
-
-function save(slug: string | null, values: Values, step: number) {
-  try {
-    localStorage.setItem(storageKey(slug), JSON.stringify({ values, step }));
-  } catch {
-    /* storage blocked: the form still works, it just won't remember */
-  }
-}
-
-export default function IntakeForm({ client }: { client: ClientPrefill | null }) {
-  const slug = client?.slug ?? null;
-  const [values, setValues] = useState<Values>(client?.values ?? {});
-  const [step, setStep] = useState(0); // STEPS.length = review screen
+export default function IntakeForm({ client, found }: { client: ClientInfo; found: FoundSummary }) {
+  const slug = client.slug;
+  const [values, setValues] = useState<Values>({ text_number: found.phone ?? "" });
+  const [step, setStep] = useState(0);
   const [showErrors, setShowErrors] = useState(false);
   const [status, setStatus] = useState<"idle" | "sending" | "done" | "failed">("idle");
   const [restored, setRestored] = useState(false);
@@ -46,47 +30,45 @@ export default function IntakeForm({ client }: { client: ClientPrefill | null })
   // Restore a half-finished intake after hydration (localStorage isn't
   // available during the server render).
   useEffect(() => {
-    const saved = load(slug);
     /* eslint-disable react-hooks/set-state-in-effect */
-    if (saved) {
-      setValues((v) => ({ ...v, ...saved.values }));
-      setStep(Math.min(saved.step, STEPS.length));
-    }
+    try {
+      const raw = localStorage.getItem(storageKey(slug));
+      if (raw) {
+        const saved = JSON.parse(raw) as { values: Values; step: number };
+        setValues((v) => ({ ...v, ...saved.values }));
+        setStep(Math.min(saved.step, STEPS.length - 1));
+      }
+    } catch {}
     setRestored(true);
     /* eslint-enable react-hooks/set-state-in-effect */
   }, [slug]);
 
   useEffect(() => {
-    if (restored && status !== "done") save(slug, values, step);
+    if (!restored || status === "done") return;
+    try {
+      localStorage.setItem(storageKey(slug), JSON.stringify({ values, step }));
+    } catch {}
   }, [restored, slug, values, step, status]);
 
   const set = (id: string, v: string | string[]) => setValues((prev) => ({ ...prev, [id]: v }));
   const total = STEPS.length;
-  const onReview = step === total;
   const current = STEPS[step];
+  const last = step === total - 1;
 
   function go(to: number) {
     setShowErrors(false);
     setStep(to);
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    document.getElementById("intake")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
-  function next() {
+  async function next() {
     if (missingIn(current, values).length) {
       setShowErrors(true);
       return;
     }
-    posthog.capture("onboarding_step_completed", { client: slug ?? "general", step: current.id });
-    go(step + 1);
-  }
+    posthog.capture("onboarding_step_completed", { client: slug, step: current.id });
+    if (!last) return go(step + 1);
 
-  async function submit() {
-    const firstGap = STEPS.findIndex((s) => missingIn(s, values).length);
-    if (firstGap !== -1) {
-      go(firstGap);
-      setShowErrors(true);
-      return;
-    }
     setStatus("sending");
     try {
       const res = await fetch("/api/onboarding/", {
@@ -99,7 +81,7 @@ export default function IntakeForm({ client }: { client: ClientPrefill | null })
       try {
         localStorage.removeItem(storageKey(slug));
       } catch {}
-      posthog.capture("onboarding_submitted", { client: slug ?? "general" });
+      posthog.capture("onboarding_submitted", { client: slug });
     } catch {
       setStatus("failed");
     }
@@ -107,113 +89,134 @@ export default function IntakeForm({ client }: { client: ClientPrefill | null })
 
   if (status === "done") {
     return (
-      <div className="ob-card ob-done">
-        <h2>Thank you{client ? `, ${client.firstName}` : ""}!</h2>
-        <p>Your answers are in.</p>
-        <p>I&apos;ll go through them today and text or email you if anything needs a quick answer.</p>
-        <p>Next, I&apos;ll send your topical map: the list of Google pages we&apos;ll build first.</p>
+      <div className="ob-card ob-done" id="intake">
+        <h2>That&apos;s everything, {client.firstName}. Thank you!</h2>
+        <p className="ob-intro">Here&apos;s what happens next:</p>
+        <ol className="ob-next">
+          <li>
+            <b>Google emails you a request</b> to let us help manage your Google profile. Tap Approve. That&apos;s
+            the only thing you need to do this week.
+          </li>
+          <li>
+            <b>I build your site, your first Google pages and Sienna AI™.</b> You&apos;ll get a preview link to look
+            over before anything goes live.
+          </li>
+          <li>
+            <b>A 10-minute call to switch on Sienna AI™.</b> It&apos;s one setting on your phone, and I&apos;ll walk
+            you through it.
+          </li>
+        </ol>
       </div>
     );
   }
 
   return (
-    <div className="ob-card">
-      <div className="ob-progress" aria-label={`Step ${Math.min(step + 1, total)} of ${total}`}>
+    <div className="ob-card" id="intake">
+      <div className="ob-progress">
         <span className="ob-progress-label">
-          {onReview ? "Review" : `Step ${step + 1} of ${total}`}
+          Step {step + 1} of {total}
         </span>
-        <span className="ob-bars">
+        <span className="ob-bars" aria-hidden="true">
           {STEPS.map((s, i) => (
-            <button
-              key={s.id}
-              type="button"
-              className={i < step ? "on" : i === step ? "now" : undefined}
-              onClick={() => i < step && go(i)}
-              aria-label={s.title}
-              tabIndex={i < step ? 0 : -1}
-            />
+            <i key={s.id} className={i < step ? "on" : i === step ? "now" : undefined} />
           ))}
         </span>
       </div>
 
-      {!onReview && (
-        <form
-          onSubmit={(e) => {
-            e.preventDefault();
-            next();
-          }}
-          noValidate
-        >
-          {current.feeds && <p className="ob-feeds">Sets up {current.feeds}</p>}
-          <h2>{current.title}</h2>
-          <p className="ob-intro">{current.intro}</p>
-          {current.fields
-            .filter((f) => isShown(f, values))
-            .map((f) => (
-              <FieldInput
-                key={f.id}
-                f={f}
-                value={values[f.id]}
-                onChange={(v) => set(f.id, v)}
-                error={Boolean(showErrors && f.required && !isFilled(values[f.id]))}
-              />
-            ))}
-          {showErrors && missingIn(current, values).length > 0 && (
-            <p className="ob-error" role="alert">
-              Please fill in the fields marked above.
-            </p>
-          )}
-          <div className="ob-nav">
-            {step > 0 && (
-              <button type="button" className="btn-ghost" onClick={() => go(step - 1)}>
-                Back
-              </button>
-            )}
-            <button type="submit" className="btn">
-              {step === total - 1 ? "Review my answers" : "Next"}
-            </button>
-          </div>
-          <p className="ob-saved">Your answers save as you go. You can close this page and finish later.</p>
-        </form>
-      )}
-
-      {onReview && (
-        <div>
-          <h2>Check your answers</h2>
-          <p className="ob-intro">Tap Edit on any section to change it.</p>
-          {STEPS.map((s, i) => (
-            <section key={s.id} className="ob-review">
-              <div className="ob-review-head">
-                <h3>{s.title}</h3>
-                <button type="button" className="ob-edit" onClick={() => go(i)}>
-                  Edit
-                </button>
-              </div>
-              <dl>
-                {s.fields
-                  .filter((f) => isShown(f, values) && isFilled(values[f.id]))
-                  .map((f) => (
-                    <div key={f.id}>
-                      <dt>{f.label}</dt>
-                      <dd>{Array.isArray(values[f.id]) ? (values[f.id] as string[]).join(", ") : values[f.id]}</dd>
-                    </div>
-                  ))}
-              </dl>
-            </section>
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          next();
+        }}
+        noValidate
+      >
+        <h2>{current.title}</h2>
+        <p className="ob-intro">{current.intro}</p>
+        {current.foundPanel && <FoundPanel f={found} />}
+        {current.fields
+          .filter((f) => isShown(f, values))
+          .map((f) => (
+            <FieldInput
+              key={f.id}
+              f={f}
+              options={optionsFor(f, client, found.treatmentGroups)}
+              value={values[f.id]}
+              onChange={(v) => set(f.id, v)}
+              error={Boolean(showErrors && f.required && !isFilled(values[f.id]))}
+            />
           ))}
-          {status === "failed" && (
-            <p className="ob-error" role="alert">
-              That didn&apos;t go through. Please try again, or email hello@morebookedconsults.com.
-            </p>
-          )}
-          <div className="ob-nav">
-            <button type="button" className="btn-ghost" onClick={() => go(total - 1)}>
+        {showErrors && missingIn(current, values).length > 0 && (
+          <p className="ob-error" role="alert">
+            Please answer the questions marked in red.
+          </p>
+        )}
+        {status === "failed" && (
+          <p className="ob-error" role="alert">
+            That didn&apos;t go through. Please try again, or text me and I&apos;ll sort it out.
+          </p>
+        )}
+        <div className="ob-nav">
+          {step > 0 && (
+            <button type="button" className="btn-ghost" onClick={() => go(step - 1)}>
               Back
             </button>
-            <button type="button" className="btn" onClick={submit} disabled={status === "sending"}>
-              {status === "sending" ? "Sending…" : "Send my answers"}
-            </button>
-          </div>
+          )}
+          <button type="submit" className="btn" disabled={status === "sending"}>
+            {status === "sending" ? "Sending…" : last ? "Finish" : "Next"}
+          </button>
+        </div>
+        <p className="ob-saved">Your answers save as you go, so you can finish later.</p>
+      </form>
+    </div>
+  );
+}
+
+function FoundPanel({ f }: { f: FoundSummary }) {
+  const rows: [string, string | null][] = [
+    ["Business", f.businessName],
+    ["Owner", f.ownerName],
+    ["Phone", f.phone],
+    ["Email", f.email],
+    ["Address", f.address],
+    ["Hours", f.hours.join(" · ")],
+    [
+      "Menu",
+      `${f.serviceCount} treatments with prices, in ${f.treatmentGroups.length} groups (${f.treatmentGroups
+        .slice(0, 3)
+        .map((g) => g.name)
+        .join(", ")}…)`,
+    ],
+    [
+      "Booking",
+      [f.source, f.cardRequired && "card required to book", f.hasCancellationPolicy && "cancellation policy"]
+        .filter(Boolean)
+        .join(" · "),
+    ],
+    [
+      "Online",
+      [f.instagram && "Instagram", f.facebook && "Facebook", f.googleReviewUrl && "Google review link"]
+        .filter(Boolean)
+        .join(" · ") || null,
+    ],
+  ];
+  return (
+    <div className="ob-found">
+      <dl>
+        {rows
+          .filter(([, v]) => v)
+          .map(([k, v]) => (
+            <div key={k}>
+              <dt>{k}</dt>
+              <dd>{v}</dd>
+            </div>
+          ))}
+      </dl>
+      {f.photos.length > 0 && (
+        <div className="ob-photos" aria-label="Photos we'll use">
+          {f.photos.map((src) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img key={src} src={src} alt="" loading="lazy" />
+          ))}
         </div>
       )}
     </div>
@@ -222,32 +225,30 @@ export default function IntakeForm({ client }: { client: ClientPrefill | null })
 
 function FieldInput({
   f,
+  options,
   value,
   onChange,
   error,
 }: {
   f: Field;
+  options: string[];
   value: string | string[] | undefined;
   onChange: (v: string | string[]) => void;
   error: boolean;
 }) {
   const id = `ob-${f.id}`;
   const str = typeof value === "string" ? value : "";
-  const label = (
-    <>
-      {f.label}
-      {f.required && <span className="ob-req"> *</span>}
-    </>
-  );
 
   if (f.type === "choice" || f.type === "multi") {
     const picked = f.type === "multi" ? (Array.isArray(value) ? value : []) : [str];
+    const full = f.max != null && picked.length >= f.max;
     return (
       <fieldset className={`ob-field${error ? " ob-bad" : ""}`}>
-        <legend>{label}</legend>
+        <legend>{f.label}</legend>
         {f.hint && <p className="ob-hint">{f.hint}</p>}
-        <div className="ob-opts">
-          {f.options!.map((o) => {
+        {f.why && <p className="ob-why">{f.why}</p>}
+        <div className={`ob-opts${f.type === "multi" ? " ob-chips" : ""}`}>
+          {options.map((o) => {
             const on = picked.includes(o);
             return (
               <button
@@ -255,6 +256,7 @@ function FieldInput({
                 type="button"
                 className={`ob-opt${on ? " on" : ""}`}
                 aria-pressed={on}
+                disabled={f.type === "multi" && !on && full}
                 onClick={() =>
                   f.type === "multi"
                     ? onChange(on ? picked.filter((p) => p !== o) : [...picked, o])
@@ -272,7 +274,7 @@ function FieldInput({
 
   return (
     <div className={`ob-field${error ? " ob-bad" : ""}`}>
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id}>{f.label}</label>
       {f.hint && <p className="ob-hint">{f.hint}</p>}
       {f.type === "textarea" ? (
         <textarea id={id} rows={3} value={str} placeholder={f.placeholder} onChange={(e) => onChange(e.target.value)} />
@@ -282,7 +284,7 @@ function FieldInput({
           type={f.type}
           value={str}
           placeholder={f.placeholder}
-          autoComplete={f.type === "email" ? "email" : f.type === "tel" ? "tel" : "off"}
+          autoComplete={f.type === "tel" ? "tel" : "off"}
           onChange={(e) => onChange(e.target.value)}
         />
       )}
