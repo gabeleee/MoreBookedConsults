@@ -263,9 +263,9 @@ export default function Header() {
             </div>
           </div>
         </nav>
-        <AuditCtaLink className="nav-cta" href="/demo/" location="nav" native>
-          <span className="cta-full">Get a free demo</span>
-          <span className="cta-short">Get a free demo</span>
+        <AuditCtaLink className="nav-cta" href="/pricing/" location="nav" native>
+          <span className="cta-full">See pricing</span>
+          <span className="cta-short">See pricing</span>
         </AuditCtaLink>
         <MobileNav
           items={[

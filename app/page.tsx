@@ -13,7 +13,7 @@ import PrismBackground from "@/components/PrismBackground";
 import ProofLine from "@/components/home/ProofLine";
 import { LineIcon } from "@/components/LineIcon";
 import { ProductTitle, ProductMark, MARK_FOR } from "@/components/home/ProductMark";
-import HeroVideo from "@/components/home/HeroVideo";
+import HomeHeroArt from "@/components/home/HomeHeroArt";
 import { MissedCallArt } from "@/components/home/FullBookArt";
 import { MazeArt, WaitArt, SpotlightAds, AdMoneyFlow, GuaranteeSeal, MagnetArt, LoopLeakArt, LoopTestArt, LoopWinArt, FastArt, KeepArt, DoneArt, MeasuredArt, GlidePathArt, SiennaArt, SecondGlanceArt, LeakFinderArt, LiftLabArt, ClearViewArt } from "@/components/home/SystemArt";
 
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     "Aesthetic practice marketing for med spas and plastic surgeons: we build six booking systems into your website in 14 days, then keep improving them every month.",
 };
 
-const CALL = "/demo/";
+const CALL = "/pricing/"; // 2026-11-18: every CTA = See pricing (demo is secondary, on /pricing/)
 
 const SYSTEMS = [
   {
@@ -194,7 +194,7 @@ const FAQ = [
   },
 ];
 
-function CallButton({ children = "Get a free demo", className = "btn" }: { children?: React.ReactNode; className?: string }) {
+function CallButton({ children = "See pricing", className = "btn" }: { children?: React.ReactNode; className?: string }) {
   return (
     <a className={className} href={CALL}>
       {children}
@@ -205,37 +205,36 @@ function CallButton({ children = "Get a free demo", className = "btn" }: { child
 export default function Home() {
   return (
     <main className="hv">
-      {/* ---------------- Hero ---------------- */}
-      <section className="hv-hero" id="top">
+      {/* ---------------- Hero (two columns, 2026-11-18) ---------------- */}
+      <section className="hv-hero hx-hero" id="top">
         <PrismBackground tone="light" gain={1.25} tilt={0.38} phase={70} />
-        <div className="wrap hv-hero-in">
-          <h1 data-prism-calm="0.8">Turn more of your website visitors into booked consults.</h1>
-          <ProofLine />
-          <p className="hv-lede" data-prism-calm="0.6">
-            We build <a href="#systems">six booking systems</a>{" "}into your med spa&apos;s website in 14 days, then keep improving them every month.
-            Done for you, measured, $499 a month.
-          </p>
-          <div className="hv-ctas">
-            <a className="btn hv-cta-hero" href={CALL}>
-              <span className="hv-cta-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24">
-                  <path d="M9 7.5v9l7.5-4.5z" />
-                </svg>
+        <div className="wrap hx-in">
+          <div className="hx-copy">
+            <ProofLine />
+            <h1 data-prism-calm="0.8">Turn Your Website Into A Booking Machine</h1>
+            <p className="hv-lede" data-prism-calm="0.6">
+              New Google pages every month, a booking flow that converts, and an AI receptionist that answers every call.
+              One plan, done for you, $499 a month.
+            </p>
+            <div className="hx-ctas">
+              <Link className="btn hv-cta-hero" href="/pricing/#full-book">
+                Get started, $499/month
+                <span className="hv-cta-arrow" aria-hidden="true">→</span>
+              </Link>
+              <Link className="hx-demo" href="/demo/">
+                Prefer to talk first? <span>Book a free demo</span>
+              </Link>
+            </div>
+            <a className="fb-hear" href="tel:+17732490840">
+              <span className="fb-hear-ic" aria-hidden="true">
+                <LineIcon name="call" />
               </span>
-              Get a free demo
-              <span className="hv-cta-arrow" aria-hidden="true">→</span>
+              <span>
+                Hear Sienna<span className="fb-hear-long"> AI answer now</span>: <b>(773) 249-0840</b>
+              </span>
             </a>
           </div>
-          <a className="fb-hear" href="tel:+17732490840">
-            <span className="fb-hear-ic" aria-hidden="true">
-              <LineIcon name="call" />
-            </span>
-            <span>
-              Hear Sienna<span className="fb-hear-long"> AI answer now</span>: <b>(773) 249-0840</b>
-            </span>
-          </a>
-          <HeroVideo />
-          <p className="hv-video-cap">Sample walkthrough. Glow Aesthetics is an illustrative med spa.</p>
+          <HomeHeroArt />
         </div>
       </section>
 
@@ -486,20 +485,15 @@ export default function Home() {
       {/* ---------------- Final CTA ---------------- */}
       <section className="hv-book" id="book">
         <div className="wrap hv-final">
-          <h2>See What We Would Build For Your Site</h2>
-          <p>A free 20-minute demo. Answer 5 quick questions, then pick your time.</p>
+          <h2>One Plan, Everything Included</h2>
+          <p>The Optimized Booking System™ is $499 a month. See everything that&apos;s included, then get started in minutes.</p>
           <ul>
-            <li><LineIcon name="check" /> Where your site loses bookings today</li>
-            <li><LineIcon name="check" /> Hear Sienna AI make a live call</li>
-            <li><LineIcon name="check" /> A fixed monthly price, no pressure</li>
+            <li><LineIcon name="check" /> 20 new Google pages every month</li>
+            <li><LineIcon name="check" /> A booking flow built to convert</li>
+            <li><LineIcon name="check" /> Every call answered, 24/7</li>
           </ul>
           <a className="btn hv-cta-hero" href={CALL}>
-            <span className="hv-cta-ic" aria-hidden="true">
-              <svg viewBox="0 0 24 24">
-                <path d="M9 7.5v9l7.5-4.5z" />
-              </svg>
-            </span>
-            Get a free demo
+            See pricing
             <span className="hv-cta-arrow" aria-hidden="true">→</span>
           </a>
           <p className="hv-book-alt">

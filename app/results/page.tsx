@@ -22,7 +22,7 @@ export const metadata: Metadata = {
 // company's client results. Program stats come from the Intellimize case study
 // (PDF in /public). No promises about the reader's results.
 const PDF = "/laseraway-intellimize-case-study.pdf";
-const CALL = "/demo/";
+const CALL = "/pricing/"; // 2026-11-18: every CTA = See pricing (demo is secondary, on /pricing/)
 
 const HERO_STATS = [
   { n: "3% → 11%", l: "Sitewide conversion", s: "LaserAway · 2018–2023" },
@@ -127,12 +127,7 @@ const FAQ = [
 function HeroCta() {
   return (
     <a className="btn hv-cta-hero" href={CALL}>
-      <span className="hv-cta-ic" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M9 7.5v9l7.5-4.5z" />
-        </svg>
-      </span>
-      Get a free demo
+      See pricing
       <span className="hv-cta-arrow" aria-hidden="true">→</span>
     </a>
   );
@@ -390,9 +385,9 @@ export default function Results() {
         <div className="wrap hv-faq-wrap">
           <div className="hv-head left">
             <h2>Results, answered</h2>
-            <p>Anything else, ask Gabe on the demo.</p>
+            <p>Anything else? Email hello@morebookedconsults.com or book a <Link href="/demo/">free demo</Link>.</p>
             <a className="btn" href={CALL}>
-              Get a free demo
+              See pricing
             </a>
           </div>
           <div className="hv-faq">
@@ -413,11 +408,11 @@ export default function Results() {
       <section className="hv-book">
         <div className="wrap hv-final">
           <h2>Put the same playbook to work on your site</h2>
-          <p>A free 20-minute demo. Answer 5 quick questions, then pick your time.</p>
+          <p>The Optimized Booking System™ is $499 a month. See everything that&apos;s included, then get started in minutes.</p>
           <ul>
-            <li><LineIcon name="check" /> Where your site loses bookings today</li>
+            <li><LineIcon name="check" /> 20 new Google pages every month</li>
             <li><LineIcon name="check" /> Which LaserAway wins fit your practice</li>
-            <li><LineIcon name="check" /> A fixed monthly price, no pressure</li>
+            <li><LineIcon name="check" /> Every call answered, 24/7</li>
           </ul>
           <HeroCta />
           <p className="hv-book-alt">

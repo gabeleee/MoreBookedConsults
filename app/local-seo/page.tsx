@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/local-seo/" },
 };
 
-const CALL = "/demo/";
+const CALL = "/pricing/"; // 2026-11-18: every CTA = See pricing (demo is secondary, on /pricing/)
 
 // Where each part sits in a searcher's path (the hero map).
 const PATH = [
@@ -232,12 +232,7 @@ function Mark({ v }: { v: string }) {
 function HeroCta() {
   return (
     <a className="btn hv-cta-hero" href={CALL}>
-      <span className="hv-cta-ic" aria-hidden="true">
-        <svg viewBox="0 0 24 24">
-          <path d="M9 7.5v9l7.5-4.5z" />
-        </svg>
-      </span>
-      Get a free demo
+      See pricing
       <span className="hv-cta-arrow" aria-hidden="true">→</span>
     </a>
   );
@@ -589,9 +584,9 @@ export default function LocalSeoPage() {
         <div className="wrap hv-faq-wrap">
           <div className="hv-head left">
             <h2>Local SEO, answered</h2>
-            <p>Anything else, ask us on the demo.</p>
+            <p>Anything else? Email hello@morebookedconsults.com or book a <Link href="/demo/">free demo</Link>.</p>
             <a className="btn" href={CALL}>
-              Get a free demo
+              See pricing
             </a>
           </div>
           <div className="hv-faq">
@@ -612,7 +607,7 @@ export default function LocalSeoPage() {
       <section className="hv-book">
         <div className="wrap hv-final">
           <h2>See where you show up today</h2>
-          <p>A free 20-minute demo. Answer 5 quick questions, then pick your time.</p>
+          <p>The Optimized Booking System™ is $499 a month. See everything that&apos;s included, then get started in minutes.</p>
           <ul>
             <li><LineIcon name="check" /> How you rank for your top treatments</li>
             <li><LineIcon name="check" /> The pages we&apos;d build first</li>

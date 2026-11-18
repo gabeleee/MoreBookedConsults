@@ -295,8 +295,8 @@ export default function Pricing() {
         <div className="wrap hv-faq-wrap">
           <div className="hv-head left">
             <h2>Pricing, Answered</h2>
-            <p>Not sure which plan fits? We&apos;ll tell you on the demo.</p>
-            <a className="btn" href={CALL}>Get a free demo</a>
+            <p>Still deciding? Book a <Link href="/demo/">free demo</Link> and ask us anything.</p>
+            <a className="btn" href={BUY_URL || CALL}>Get started</a>
           </div>
           <div className="hv-faq">
             {FAQ.map((f) => (
@@ -315,9 +315,9 @@ export default function Pricing() {
       <section className="hv-book">
         <div className="wrap hv-final">
           <h2>Hear Sienna Answer Before You Decide</h2>
-          <p>Call our demo line: <a href="tel:+17732490840">(773) 249-0840</a>. Then book a free 20-minute demo.</p>
-          <a className="btn hv-cta-hero" href={CALL}>
-            Get a free demo <span className="hv-cta-arrow" aria-hidden="true">→</span>
+          <p>Call our demo line: <a href="tel:+17732490840">(773) 249-0840</a>. Then get started in minutes.</p>
+          <a className="btn hv-cta-hero" href={BUY_URL || CALL}>
+            Get started, $499/month <span className="hv-cta-arrow" aria-hidden="true">→</span>
           </a>
           <p className="hv-book-alt">Or see <Link href="/results/">the track record</Link>.</p>
           <p className="pv-fine" id="fine-print">{FREE_SITE_TERMS}</p>
