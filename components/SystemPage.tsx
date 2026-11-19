@@ -25,6 +25,7 @@ export type SystemPageData = {
   Art: () => ReactNode;
   faq: { q: string; a: string }[];
   extra?: ReactNode; // optional line under the hero CTA (e.g. Sienna demo line)
+  after?: { h: string; p: string; body: ReactNode }; // optional section after the system (e.g. Lift Lab chart)
 };
 
 const CALL = "/pricing/";
@@ -122,6 +123,18 @@ export default function SystemPage({ d }: { d: SystemPageData }) {
           </div>
         </div>
       </section>
+
+      {d.after && (
+        <section className="hv-sec bs-after">
+          <div className="wrap">
+            <div className="hv-head">
+              <h2>{d.after.h}</h2>
+              <p>{d.after.p}</p>
+            </div>
+            {d.after.body}
+          </div>
+        </section>
+      )}
 
       <section className="hv-sec hv-faq-sec">
         <div className="wrap hv-faq-wrap">
