@@ -1,5 +1,6 @@
 /* /pricing/ (2026-11-04 redesign in the service-page style). Reuses hv- (home-v2.css) and bs- (booking-systems/bs.css); classes here start pr-. */
-.pr-hero{padding-bottom:70px}
+.pr-hero{padding-top:40px;padding-bottom:70px}
+@media (max-width:760px){.pr-hero{padding-top:22px}}
 
 /* plan cards */
 .pr-plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;width:100%;margin-top:48px;text-align:left;align-items:stretch}
