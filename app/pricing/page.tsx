@@ -63,7 +63,7 @@ const APPS = ["Boulevard", "Vagaro", "GlossGenius", "Aesthetic Record", "Zenoti"
 const ADDONS: { mark: MarkId; name: string; brand?: boolean; price: string; p: string }[] = [
   { mark: "atlas", name: "More Google pages", price: "+$150 a month", p: "20 more Google pages every month, so you cover more treatments, costs and nearby towns, faster." },
   { mark: "leak-finder", name: "More design tests", price: "+$150 a month", p: "2 more measured design tests every month, for busy sites with plenty of traffic." },
-  { mark: "spotlight", name: "Spotlight Ads", brand: true, price: "Priced on the demo", p: "Meta ads built around your best offer. Ad spend paid straight to Meta, never marked up." },
+  { mark: "spotlight", name: "Spotlight Ads", brand: true, price: "$499 a month, no setup fee", p: "Meta ads built around your best offer. Ad spend ($1,500 a month minimum) paid straight to Meta, never marked up. 3-month minimum." },
 ];
 
 const FAQ: { q: string; a: ReactNode }[] = [
