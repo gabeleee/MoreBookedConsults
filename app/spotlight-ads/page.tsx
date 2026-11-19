@@ -12,8 +12,8 @@ import { AdStudioArt, OfferPageArt, AudienceArt, AdReportArt, MonthlyReportArt }
 // Spotlight Ads service page (2026-11-03 draft). The Services menu points here;
 // /medspa-advertising/ stays as the SEO page. Same layout and styles as
 // /booking-systems/ (bs- classes), with ad-specific pieces in sp.css.
-// No prices (the $3,000/mo ad-spend minimum is a fit fact, paid to Meta, not
-// our fee). No results promised: the only guarantees allowed are the two
+// Price (Gabe 2026-11-18): $499/mo total, no setup fee, ad spend $1,500/mo
+// minimum paid to Meta, 3-month minimum. No results promised: the only guarantees allowed are the two
 // booking-system ones, so the seal here is about ownership, not outcomes.
 export const metadata: Metadata = {
   title: "Spotlight Ads: Meta Ads For Med Spas And Plastic Surgeons",
@@ -156,12 +156,12 @@ const INCLUDED = [
 
 const FIT_YES = [
   "You run a med spa, plastic surgery practice, injector studio or laser clinic",
-  "You can put at least $3,000 a month into ads, paid straight to Meta",
+  "You can put at least $1,500 a month into ads, paid straight to Meta",
   "You can give it 3 months, since Meta campaigns need time to learn",
   "Your team has room in the calendar for new clients",
 ];
 const FIT_NO = [
-  "Your ad budget is under $3,000 a month (Booking Systems or local SEO will help more)",
+  "Your ad budget is under $1,500 a month (Booking Systems or local SEO will help more)",
   "You want a set number of leads or a fixed cost per lead promised up front",
   "You're outside aesthetics",
 ];
@@ -202,7 +202,7 @@ const FAQ = [
   },
   {
     q: "How much does it cost?",
-    a: "You get one flat monthly fee on the demo call, before you commit to anything. Your ad budget is separate and goes straight to Meta, with a $3,000 a month minimum. There's a 3-month minimum, since Meta campaigns need that long to learn.",
+    a: "$499 a month, flat, with no setup fee. Your ad budget is separate and goes straight to Meta, with a $1,500 a month minimum, never marked up and never a percentage of spend. There's a 3-month minimum, since Meta campaigns need that long to learn.",
   },
   {
     q: "Can you promise a number of leads?",
@@ -392,7 +392,7 @@ export default function SpotlightAdsPage() {
         <div className="wrap">
           <div className="hv-head">
             <h2>Everything that&apos;s included</h2>
-            <p>One flat monthly fee covers all of it. Your ad budget goes straight to Meta.</p>
+            <p>One flat fee, $499 a month with no setup fee, covers all of it. Your ad budget goes straight to Meta.</p>
           </div>
           <div className="bs-inc">
             {INCLUDED.map((g, gi) => (
