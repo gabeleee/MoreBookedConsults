@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import SystemPage, { type SystemPageData } from "@/components/SystemPage";
 import { LiftLabArt } from "@/components/home/SystemArt";
+import StairsCard from "@/components/home/StairsCard";
 
 export const metadata: Metadata = {
   title: "Lift Lab™: Monthly Design Tests For Med Spa Websites",
@@ -29,6 +30,7 @@ const d: SystemPageData = {
     "A website that keeps getting better at booking consults",
   ],
   Art: LiftLabArt,
+  after: { h: "Every Win Stacks On The Last", p: "Each month starts from a higher booking rate, because the winners stay live.", body: <StairsCard /> },
   faq: [
     { q: "What if my site doesn't get much traffic?", a: "With enough traffic, we split-test: half your visitors see the new version and half see the old one. With less, we make bigger changes that already won elsewhere and compare your bookings before and after." },
     { q: "Do I approve the changes?", a: "Yes. You see each test before it goes live." },
