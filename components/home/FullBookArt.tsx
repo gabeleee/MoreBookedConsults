@@ -168,8 +168,8 @@ export function RaveLoopArt() {
       <Chip icon="star" className="hv-float f2 rl-c1">
         New 5-star review
       </Chip>
-      <Chip icon="shield" className="hv-float rl-c2">
-        Unhappy? It comes to you first
+      <Chip icon="message" className="hv-float rl-c2">
+        Sent after every visit
       </Chip>
     </Frame>
   );

@@ -32,16 +32,16 @@ const CALL = "/demo/";
 
 type MarkId = Parameters<typeof ProductMark>[0]["id"];
 
-// href = the page that explains the system in detail (none yet for Consult Magnet, Rave Loop).
+// href = the page that explains the system in detail (own short pages since 2026-11-18).
 const SYSTEM_INFO: { id: MarkId; name: string; p: string; href?: string }[] = [
   { id: "atlas", name: "Authority Atlas", p: "New pages for every treatment, cost and nearby town people search for.", href: "/local-seo/" },
   { id: "glide-path", name: "Glide Path", p: "A highly optimized, multi-step booking flow that hands clients to your booking app.", href: "/booking-systems/#glide-path" },
-  { id: "sienna", name: "Sienna AI", p: "An AI receptionist that answers every call and texts your booking link.", href: "/booking-systems/#sienna-ai" },
-  { id: "lift-lab", name: "Lift Lab", p: "2 design tests a month on your site. We keep the winners, so your conversion rate climbs over time." },
+  { id: "sienna", name: "Sienna AI", p: "An AI receptionist that answers every call and texts your booking link.", href: "/sienna-ai/" },
+  { id: "lift-lab", name: "Lift Lab", p: "2 design tests a month on your site. We keep the winners, so your conversion rate climbs over time.", href: "/lift-lab/" },
   { id: "second-glance", name: "Second Glance", p: "A well-timed offer that brings leaving visitors back to book.", href: "/booking-systems/#second-glance" },
-  { id: "consult-magnet", name: "Consult Magnet", p: "A first-visit offer that turns browsers into booked consults." },
+  { id: "consult-magnet", name: "Consult Magnet", p: "A first-visit offer that turns browsers into booked consults.", href: "/consult-magnet/" },
   { id: "leak-finder", name: "Leak Finder", p: "Tracking that shows the exact step where people give up.", href: "/booking-systems/#leak-finder" },
-  { id: "rave-loop", name: "Rave Loop", p: "Review requests after each visit. Unhappy clients reach you first." },
+  { id: "rave-loop", name: "Rave Loop", p: "A Google review request texted to every client after their visit.", href: "/rave-loop/" },
   { id: "clear-view", name: "Clear View", p: "One plain-numbers report: calls, new clients booked, reviews.", href: "/booking-systems/#clear-view" },
 ];
 

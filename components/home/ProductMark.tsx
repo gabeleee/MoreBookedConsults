@@ -2,7 +2,7 @@
 // its name so each reads like a product. Dark tile + light line art (the
 // berry→orchid gradient is reserved for CTA buttons). Styles: .pm-* in home-v2.css.
 
-type MarkId =
+export type MarkId =
   | "glide-path"
   | "sienna"
   | "second-glance"
