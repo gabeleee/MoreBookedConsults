@@ -9,6 +9,7 @@ import "../full-book/fb.css";
 import "./pv.css";
 import "./pv3.css";
 import PrismBackground from "@/components/PrismBackground";
+import ProofLine from "@/components/home/ProofLine";
 import { LineIcon } from "@/components/LineIcon";
 import { ProductMark } from "@/components/home/ProductMark";
 import SeeExample from "@/components/pricing/SeeExample";
@@ -133,6 +134,7 @@ export default function Pricing() {
       <section className="bs-hero pr-hero">
         <PrismBackground tone="light" gain={1.25} tilt={0.46} phase={30} />
         <div className="wrap bs-hero-in">
+          <ProofLine />
           <h1 data-prism-calm="0.8">Turn Your Website Into A Booking Machine</h1>
           <p className="hv-lede" data-prism-calm="0.6">
             New Google pages, a booking flow that converts, and every call answered.
