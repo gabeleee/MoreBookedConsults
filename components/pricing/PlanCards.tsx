@@ -42,12 +42,12 @@ export function B({ n }: { n: string }) {
 export const EXAMPLES: Record<string, { Art: () => ReactNode; note: string; href?: string }> = {
   atlas: { Art: TreatmentPagesArt, note: "Example: a page for each treatment people search for in your city.", href: "/local-seo/" },
   "glide-path": { Art: GlidePathArt, note: "Example: visitors pick their goal, answer quick questions, then book.", href: "/booking-systems/#glide-path" },
-  sienna: { Art: SiennaArt, note: "Example: Sienna answering a call and texting the booking link.", href: "/booking-systems/#sienna-ai" },
-  "lift-lab": { Art: LiftLabArt, note: "Example with sample data: version B beat the current page, so it stays and next month's tests start from there." },
+  sienna: { Art: SiennaArt, note: "Example: Sienna answering a call and texting the booking link.", href: "/sienna-ai/" },
+  "lift-lab": { Art: LiftLabArt, note: "Example with sample data: version B beat the current page, so it stays and next month's tests start from there.", href: "/lift-lab/" },
   "second-glance": { Art: SecondGlanceArt, note: "Example: an exit offer shown to a visitor about to leave.", href: "/booking-systems/#second-glance" },
-  "consult-magnet": { Art: MagnetArt, note: "Example: a first-visit offer built for one treatment." },
+  "consult-magnet": { Art: MagnetArt, note: "Example: a first-visit offer built for one treatment.", href: "/consult-magnet/" },
   "leak-finder": { Art: LeakFinderArt, note: "Example with sample data: the step where visitors give up.", href: "/booking-systems/#leak-finder" },
-  "rave-loop": { Art: RaveLoopArt, note: "Example: the review text a client gets after a visit." },
+  "rave-loop": { Art: RaveLoopArt, note: "Example: the review text a client gets after a visit.", href: "/rave-loop/" },
   "clear-view": { Art: MonthlyReportArt, note: "Example with sample data: your plain-numbers monthly report.", href: "/booking-systems/#clear-view" },
 };
 
