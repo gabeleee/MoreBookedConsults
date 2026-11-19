@@ -54,6 +54,18 @@ const SYSTEMS = [
   },
   {
     n: "03",
+    cat: "Design tests",
+    name: "Lift Lab",
+    tag: "Your booking rate climbs every month.",
+    pts: [
+      "2 new design tests on your site every month: offers, booking steps, layouts and treatment pages.",
+      "Picked from what your numbers show, starting with the biggest leak.",
+      "We keep the winners, so each month starts from a higher booking rate.",
+    ],
+    Art: LiftLabArt,
+  },
+  {
+    n: "04",
     cat: "Exit offer",
     name: "Second Glance",
     tag: "Win back the people about to leave.",
@@ -65,7 +77,7 @@ const SYSTEMS = [
     Art: SecondGlanceArt,
   },
   {
-    n: "04",
+    n: "05",
     cat: "Drop-off analytics",
     name: "Leak Finder",
     tag: "See exactly where bookings slip away.",
@@ -75,18 +87,6 @@ const SYSTEMS = [
       "We fix the worst step first, so every month starts with the biggest win.",
     ],
     Art: LeakFinderArt,
-  },
-  {
-    n: "05",
-    cat: "Design tests",
-    name: "Lift Lab",
-    tag: "Your booking rate climbs every month.",
-    pts: [
-      "2 new design tests on your site every month: offers, booking steps, layouts and treatment pages.",
-      "Picked from what your numbers show, starting with the biggest leak.",
-      "We keep the winners, so each month starts from a higher booking rate.",
-    ],
-    Art: LiftLabArt,
   },
   {
     n: "06",

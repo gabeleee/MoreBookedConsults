@@ -133,7 +133,7 @@ export default function Pricing() {
       <section className="bs-hero pr-hero">
         <PrismBackground tone="light" gain={1.25} tilt={0.46} phase={30} />
         <div className="wrap bs-hero-in">
-          <h1 data-prism-calm="0.8">Turn Your Website Into A Booking Machine, $499 A Month</h1>
+          <h1 data-prism-calm="0.8">Turn Your Website Into A Booking Machine</h1>
           <p className="hv-lede" data-prism-calm="0.6">
             New Google pages, a booking flow that converts, and every call answered.
           </p>
