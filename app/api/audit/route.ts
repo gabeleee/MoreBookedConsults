@@ -6,7 +6,9 @@ import type { AuditSubmission } from "@/lib/submitAudit";
 
 // Single ingest point for audit-form submissions. Fans out to the CRM webhook
 // and an email notification. Both no-op gracefully (log only) when their env
-// vars are absent, so local dev works without secrets.
+// vars are absent, so local dev works without secrets. In production a log-only
+// channel does not count as delivered: when no channel delivers the lead the
+// route returns 502, so the form shows an error instead of the success screen.
 //
 // Env (set in Vercel):
 //   AWS_SES_ACCESS_KEY_ID, AWS_SES_SECRET_ACCESS_KEY — when both are set the email
@@ -15,6 +17,8 @@ import type { AuditSubmission } from "@/lib/submitAudit";
 //   RESEND_API_KEY   — fallback email send when SES is not configured (Resend's HTTP API)
 //   AUDIT_FROM_EMAIL — verified Resend sender, e.g. "More Booked Consults <audits@morebookedconsults.com>"
 //   CRM_WEBHOOK_URL  — optional; the submission JSON is POSTed here (Zapier/Make/CRM)
+const LOG_ONLY_DELIVERS = process.env.NODE_ENV !== "production";
+
 export async function POST(req: Request) {
   let data: AuditSubmission;
   try {
@@ -26,7 +30,16 @@ export async function POST(req: Request) {
     );
   }
 
-  await Promise.allSettled([sendToCrm(data), sendEmailNotification(data)]);
+  const results = await Promise.allSettled([sendToCrm(data), sendEmailNotification(data)]);
+  const delivered = results.some((r) => r.status === "fulfilled" && r.value);
+  if (!delivered) {
+    console.error("[audit] no channel delivered the lead ->", data);
+    return NextResponse.json(
+      { ok: false, error: "delivery failed" },
+      { status: 502 },
+    );
+  }
+
   const ph = posthogIdsFromRequest(req);
   await captureServerEvent({
     distinctId: ph.distinctId ?? crypto.randomUUID(),
@@ -42,11 +55,11 @@ export async function POST(req: Request) {
   return NextResponse.json({ ok: true });
 }
 
-async function sendToCrm(data: AuditSubmission) {
+async function sendToCrm(data: AuditSubmission): Promise<boolean> {
   const url = process.env.CRM_WEBHOOK_URL;
   if (!url) {
     console.info("[audit] CRM (no CRM_WEBHOOK_URL; logging only) ->", data);
-    return;
+    return LOG_ONLY_DELIVERS;
   }
   const res = await fetch(url, {
     method: "POST",
@@ -56,9 +69,10 @@ async function sendToCrm(data: AuditSubmission) {
   if (!res.ok) {
     console.error("[audit] CRM webhook failed", res.status, await res.text());
   }
+  return res.ok;
 }
 
-async function sendEmailNotification(data: AuditSubmission) {
+async function sendEmailNotification(data: AuditSubmission): Promise<boolean> {
   const apiKey = process.env.RESEND_API_KEY;
   const from =
     process.env.AUDIT_FROM_EMAIL ||
@@ -88,10 +102,11 @@ async function sendEmailNotification(data: AuditSubmission) {
         subject,
         text: body,
       });
+      return true;
     } catch (err) {
       console.error("[audit] SES email send failed", err);
+      return false;
     }
-    return;
   }
 
   if (!apiKey) {
@@ -99,7 +114,7 @@ async function sendEmailNotification(data: AuditSubmission) {
       `[audit] email notify -> ${SITE.email} (no RESEND_API_KEY; logging only) ->`,
       data,
     );
-    return;
+    return LOG_ONLY_DELIVERS;
   }
 
   const res = await fetch("https://api.resend.com/emails", {
@@ -120,4 +135,5 @@ async function sendEmailNotification(data: AuditSubmission) {
   if (!res.ok) {
     console.error("[audit] email send failed", res.status, await res.text());
   }
+  return res.ok;
 }
