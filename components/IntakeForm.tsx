@@ -102,8 +102,8 @@ export default function IntakeForm({ client, found }: { client: ClientInfo; foun
             over before anything goes live.
           </li>
           <li>
-            <b>A 10-minute call to switch on Sienna AI™.</b> It&apos;s one setting on your phone, and I&apos;ll walk
-            you through it.
+            <b>Switch on Sienna AI™.</b> It&apos;s one setting on your phone. I&apos;ll send you the steps, and
+            we can do a quick call instead if you&apos;d like.
           </li>
         </ol>
       </div>

@@ -54,7 +54,7 @@ export async function POST(req: Request) {
     `Page:     ${SITE.url}/audits/${slug}/`,
     `When:     ${when} (Chicago)`,
     "",
-    "They were told you'll email them within a day to set up a 20-minute call.",
+    `They were sent straight to their onboarding form: ${SITE.url}/onboarding/${slug.replace(/-free-site$/, "")}/`,
   ].join("\n");
 
   if (sesConfigured()) {
