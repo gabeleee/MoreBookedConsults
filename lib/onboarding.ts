@@ -13,6 +13,8 @@
 
 import landAesthetics from "@/content/onboarding/land-aesthetics.json";
 import aestheticaMd from "@/content/onboarding/aesthetica-md.json";
+import skinSolutionsOrcutt from "@/content/onboarding/skin-solutions-orcutt.json";
+import beautyTheoryWnc from "@/content/onboarding/beauty-theory-wnc.json";
 
 export type Service = {
   name: string;
@@ -69,7 +71,7 @@ export type FoundSummary = Omit<Found, "services" | "photos" | "about" | "cancel
   hasCancellationPolicy: boolean;
 };
 
-export const CLIENTS: ClientFile[] = [landAesthetics as ClientFile, aestheticaMd as unknown as ClientFile];
+export const CLIENTS: ClientFile[] = [landAesthetics as ClientFile, aestheticaMd as unknown as ClientFile, skinSolutionsOrcutt as unknown as ClientFile, beautyTheoryWnc as unknown as ClientFile];
 
 export const clientBySlug = (slug: string) => CLIENTS.find((c) => c.client.slug === slug);
 

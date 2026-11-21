@@ -1,0 +1,158 @@
+{
+  "client": {
+    "slug": "skin-solutions-orcutt",
+    "firstName": "Rachel",
+    "ownerName": "Dr. Rachel Zonca",
+    "plan": "Free website · pay per new client",
+    "offers": [],
+    "domains": [],
+    "domainsChecked": "2026-11-21",
+    "_notes": "Built 11-21 by Sulu from their Google profile + AestheticHires job post (no menu prices online). Services are names only."
+  },
+  "found": {
+    "source": "Google Business Profile",
+    "sourceUrl": "https://www.google.com/maps?cid=9460880500182089350&hl=en&gl=US",
+    "fetched": "2026-11-21",
+    "businessName": "Skin Solutions with Same Day Care",
+    "ownerName": "Dr. Rachel Zonca",
+    "email": null,
+    "phone": "(805) 868-7960",
+    "address": "145 S Gray St #201, Orcutt, CA 93455",
+    "hours": [
+      "Mon–Fri 9am–5pm",
+      "Sat–Sun Closed"
+    ],
+    "about": "We are healthcare specialists who offer skin solutions for most skin concerns. Services include microneedling, chemical peels, neurotoxins, PRF and facials. We also are providing same day medical care for the patients of Dr. Rachel Zonca, Dr. Robert Okerblom, Dr. Donald Hole, Dr. Sean Christiansen and Dr. Peter Scott, as well as their other office NPs and PAs. Follow us on instagram! @skinsolutions805.",
+    "instagram": null,
+    "facebook": null,
+    "website": null,
+    "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJ1UWlvIYV7IARhv7FY7DMS4M",
+    "cardRequired": false,
+    "cancellationPolicy": null,
+    "coverImage": null,
+    "photos": [],
+    "treatmentGroups": [],
+    "services": [
+      {
+        "name": "Consultation",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "A one-on-one visit to talk through your goals and options.",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "Botox",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "Daxxify",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "Dermal Fillers",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "Sculptra",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "Microneedling",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "PRP",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "PRF",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "Chemical Peels",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "Facials",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "Laser Treatments",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      },
+      {
+        "name": "Massage",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://www.vagaro.com/skinsolutionsorcutt"
+      }
+    ]
+  }
+}
