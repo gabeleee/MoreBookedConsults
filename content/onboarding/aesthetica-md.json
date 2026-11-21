@@ -1,0 +1,1628 @@
+{
+  "client": {
+    "slug": "aesthetica-md",
+    "firstName": "Ashley",
+    "ownerName": "Ashley Smith",
+    "plan": "Free website · pay per new client",
+    "offers": [
+      "$169 Signature HydraFacial + consult for new clients (you already run this)",
+      "$100 off lip filler for new clients (you already run this)",
+      "Free consult for new clients"
+    ],
+    "domains": [],
+    "domainsChecked": "2026-11-21",
+    "_notes": "Built 11-21 from her live Boulevard menu (mbc-client-sites data/boulevard/aesthetica-md.json). Email = public site address. No domain search yet."
+  },
+  "found": {
+    "source": "Boulevard",
+    "sourceUrl": "https://aestheticamdcypress.com/",
+    "fetched": "2026-11-21",
+    "businessName": "Aesthetica MD Med Spa",
+    "ownerName": "Ashley Smith",
+    "email": "info@aestheticamdcypress.com",
+    "phone": "(281) 815-3051",
+    "address": "8118 Fry Rd #1304, Cypress, TX 77433",
+    "hours": [
+      "Mon–Tue 9am–5pm",
+      "Wed 9am–6pm",
+      "Thu–Fri 9am–5pm",
+      "Sat 10am–3pm",
+      "Sun Closed"
+    ],
+    "about": "Aesthetica MD Med Spa in Cypress, TX specializes in advanced aesthetic and wellness treatments designed to help you look and feel your best. Our services include Botox, Dysport, Xeomin, Daxxify, dermal fillers, lip fillers, Sculptra, PRF EZ Gel, PDO threads, microneedling, HydraFacial, chemical peels, IPL photofacials, fractional laser resurfacing, laser hair removal, vein treatments, skin tightening, and body contouring. We also offer hormone replacement therapy (HRT), testosterone therapy, medical weight loss, semaglutide, tirzepatide, retatrutide, peptide therapy, NAD+ therapy, and B12 injections. Proudly serving Cypress, Katy and Northwest Houston.",
+    "instagram": null,
+    "facebook": "https://www.facebook.com/105704832346899",
+    "website": "https://aestheticamdcypress.com/",
+    "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJq8BlQaLXQIYRzvoFu584Ugs",
+    "cardRequired": false,
+    "cancellationPolicy": null,
+    "coverImage": null,
+    "photos": [],
+    "treatmentGroups": [
+      {
+        "name": "Laser Treatments (Laser Consult Required)",
+        "count": 17
+      },
+      {
+        "name": "Injectables",
+        "count": 15
+      },
+      {
+        "name": "Injectable Packages",
+        "count": 15
+      },
+      {
+        "name": "Laser Packages",
+        "count": 14
+      },
+      {
+        "name": "Facials (Returning Clients, No Consult)",
+        "count": 13
+      },
+      {
+        "name": "Massage",
+        "count": 10
+      },
+      {
+        "name": "Body Contouring Packages",
+        "count": 10
+      },
+      {
+        "name": "Monthly Specials",
+        "count": 9
+      },
+      {
+        "name": "New Client Specials",
+        "count": 8
+      },
+      {
+        "name": "New Clients Start Here - New Client Consultation",
+        "count": 7
+      },
+      {
+        "name": "Body Contouring Treatments",
+        "count": 7
+      },
+      {
+        "name": "Wellness",
+        "count": 7
+      },
+      {
+        "name": "Microneedling",
+        "count": 5
+      },
+      {
+        "name": "Facial Packages",
+        "count": 5
+      },
+      {
+        "name": "Chemical Peels",
+        "count": 3
+      },
+      {
+        "name": "Membership",
+        "count": 3
+      },
+      {
+        "name": "Consultations",
+        "count": 2
+      },
+      {
+        "name": "Massage Packages",
+        "count": 1
+      }
+    ],
+    "services": [
+      {
+        "name": "New Client Skin Consultation w/ Customized Treatment Plan",
+        "category": "New Clients Start Here - New Client Consultation",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "A one-on-one visit to talk through your goals and options.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Clients%20Start%20Here%20-%20New%20Client%20Consultation%2Fs_f24be8a2-84f9-4145-80af-503a6edeaa85"
+      },
+      {
+        "name": "New Client Body Contouring Consultation",
+        "category": "New Clients Start Here - New Client Consultation",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Non-surgical body contouring in Cypress, TX with CoolSculpting, RF Skin Tightening, & EmSculpt to lift & tighten your body & give the perfect shape. Book now.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Clients%20Start%20Here%20-%20New%20Client%20Consultation%2Fs_8eadbebd-7460-49f1-a9ea-7469ff7280c2"
+      },
+      {
+        "name": "New Client Facial + Free Consultation",
+        "category": "New Clients Start Here - New Client Consultation",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "A one-on-one visit to talk through your goals and options.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Clients%20Start%20Here%20-%20New%20Client%20Consultation%2Fs_ec0c9c1d-0780-48db-9fa7-bb5a5403b19d"
+      },
+      {
+        "name": "New Client Injectables Consult (Tox, Fillers)",
+        "category": "New Clients Start Here - New Client Consultation",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Clients%20Start%20Here%20-%20New%20Client%20Consultation%2Fs_f37f848c-e9a6-4d98-8e33-8a8f70fc0c67"
+      },
+      {
+        "name": "New Client Laser Consult",
+        "category": "New Clients Start Here - New Client Consultation",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Clients%20Start%20Here%20-%20New%20Client%20Consultation%2Fs_cd50f1d2-d0ba-4ee2-ac07-073656220dd9"
+      },
+      {
+        "name": "New Client Special - Chemical Peel $299 (Normally $349)",
+        "category": "New Clients Start Here - New Client Consultation",
+        "price": 299,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Chemical peels treat fine lines, discoloration, sun damage, & uneven texture to restore clarity & smoothness for radiant skin in Cypress, TX. Book today!",
+        "image": "/c/aesthetica-md/svc/chemical-peels.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Clients%20Start%20Here%20-%20New%20Client%20Consultation%2Fs_6c4c4302-4ab7-45e0-a310-c7f5972440b0"
+      },
+      {
+        "name": "Signature HydraFacial - Normally at $199 -> $169 For First Time Clients",
+        "category": "New Clients Start Here - New Client Consultation",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Experience glowing skin with medical-grade facials in Cypress, TX! Target acne, wrinkles, and dryness for a rejuvenated look. Book your session today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Clients%20Start%20Here%20-%20New%20Client%20Consultation%2Fs_2540c889-bb92-4070-9f55-38edc3add681"
+      },
+      {
+        "name": "Skin Consult",
+        "category": "Consultations",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FConsultations%2Fs_b9e480f9-7351-440e-a3f9-0073a3be1cf5"
+      },
+      {
+        "name": "Laser Consult",
+        "category": "Consultations",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FConsultations%2Fs_e55f9896-4caa-4ec2-96b1-eb758c305dbd"
+      },
+      {
+        "name": "Face Reality Acne Consultation",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 149,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "A one-on-one visit to talk through your goals and options.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_215d568d-ba33-4116-81e4-de5edf27d712"
+      },
+      {
+        "name": "HydraFacial - Signature",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 199,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Experience glowing skin with medical-grade facials in Cypress, TX! Target acne, wrinkles, and dryness for a rejuvenated look. Book your session today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_5f19e97e-05a2-44cf-929a-4a24893e4b26"
+      },
+      {
+        "name": "HydraFacial - Deluxe",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 249,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Experience glowing skin with medical-grade facials in Cypress, TX! Target acne, wrinkles, and dryness for a rejuvenated look. Book your session today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_f28028bd-adc5-41a1-bb37-86252ef8319f"
+      },
+      {
+        "name": "HydraFacial - Platinum",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 299,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Experience glowing skin with medical-grade facials in Cypress, TX! Target acne, wrinkles, and dryness for a rejuvenated look. Book your session today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_e74976a4-3a87-4ae8-9acb-394d5407282b"
+      },
+      {
+        "name": "Skin Clearing Facial",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Our skin clearing works to reduce acne and blemishes. This facial includes basic cleansing, steamer, extractions, antibacterial treatment and light therapy.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_ff9d876d-8279-4786-b072-a2ce44855033"
+      },
+      {
+        "name": "Vitamin C Facial",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Our Vitamin C is great for exfoliating and revealing rejuvenated, glowing skin. Great for aging skin and pigmentation.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_14630fcd-39a0-4212-b994-73a183be8c1b"
+      },
+      {
+        "name": "Oxygen Facial",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Designed to brighten, calm, and infuse essential nutrients for a healthy, hydrated glow.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_3586900e-6e0e-4404-b4dd-785b5f802c2b"
+      },
+      {
+        "name": "Men's Hot Towel Facial",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Relax and unwind with our men's hot towel facial including cleansing, steaming, extractions, and hot towels for ultimate relaxation.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_2fdf0132-fa5f-4386-8211-ee3f44bf684b"
+      },
+      {
+        "name": "Teen Facial",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 129,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Experience glowing skin with medical-grade facials in Cypress, TX! Target acne, wrinkles, and dryness for a rejuvenated look. Book your session today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_2da22c9e-180c-4923-8f9b-530ff2d85228"
+      },
+      {
+        "name": "Seasonal Facial",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Experience glowing skin with medical-grade facials in Cypress, TX! Target acne, wrinkles, and dryness for a rejuvenated look. Book your session today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_002fba3b-ce07-467a-8ebf-9a4d7cde35ee"
+      },
+      {
+        "name": "Face Reality - Consultation and Treatment",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 199,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "A one-on-one visit to talk through your goals and options.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_6e81ec85-bfb6-4d16-b12d-01eeba0ccccb"
+      },
+      {
+        "name": "Face Reality - Treatment Only",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 199,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Clear acne & acne marks with the Face Reality Acne Bootcamp in Cypress, TX. Get a personalized plan designed to treat the root cause & maintain clear skin.",
+        "image": "/c/aesthetica-md/svc/face-reality.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_6c0bf2c7-a40d-45d8-986f-23b3d03b4bfb"
+      },
+      {
+        "name": "Dermaplaning (Standalone)",
+        "category": "Facials (Returning Clients, No Consult)",
+        "price": 149,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacials%20%28Returning%20Clients%2C%20No%20Consult%29%2Fs_7d20b5e0-4372-421e-9eeb-4970e2dc3006"
+      },
+      {
+        "name": "Perfect Derma Chemical Peel - Original",
+        "category": "Chemical Peels",
+        "price": 349,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Chemical peels treat fine lines, discoloration, sun damage, & uneven texture to restore clarity & smoothness for radiant skin in Cypress, TX. Book today!",
+        "image": "/c/aesthetica-md/svc/chemical-peels.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FChemical%20Peels%2Fs_627943a4-c268-4405-a3d7-18d204de6f37"
+      },
+      {
+        "name": "Neova Chemical Peel",
+        "category": "Chemical Peels",
+        "price": 299,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Chemical peels treat fine lines, discoloration, sun damage, & uneven texture to restore clarity & smoothness for radiant skin in Cypress, TX. Book today!",
+        "image": "/c/aesthetica-md/svc/chemical-peels.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FChemical%20Peels%2Fs_3c283c56-496a-4312-b122-3d9bee06c2f6"
+      },
+      {
+        "name": "Dermamelan",
+        "category": "Chemical Peels",
+        "price": 1499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FChemical%20Peels%2Fs_80c12d54-c22a-4a61-98f9-4d7ca688fada"
+      },
+      {
+        "name": "Microneedling - Face Only",
+        "category": "Microneedling",
+        "price": 399,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Microneedling with PRP in Cypress, TX, treats scars, dull skin, rough texture, stretch marks, and aging signs while improving tone and texture. Book now.",
+        "image": "/c/aesthetica-md/svc/microneedling.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMicroneedling%2Fs_e572d351-cf3b-4a92-809a-13dc4e14fb2f"
+      },
+      {
+        "name": "Microneedling (Face Only)",
+        "category": "Microneedling",
+        "price": 399,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Microneedling is a minimally invasive cosmetic procedure that’s used to treat skin concerns by stimulating collagen production. Also known as collagen induction therapy, microneedling treatment creates micro-punctures in the skin using miniature, sterilized needles. This treatment is great for reducing the appearance of pigmentation and acne scars!",
+        "image": "/c/aesthetica-md/svc/microneedling.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMicroneedling%2Fs_a74fac1a-9116-4a47-9749-033550ed91fb"
+      },
+      {
+        "name": "Microneedling with PRP (Face Only)",
+        "category": "Microneedling",
+        "price": 499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "The plasma facial (as known as a vampire facial) works by triggering the body’s healing and regenerative properties, boosting the production of collagen and elastin, and rejuvenating the skin for a firmer, more youthful appearance. This procedure combines microneedling with your own platelet rich fibrin.",
+        "image": "/c/aesthetica-md/svc/microneedling.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMicroneedling%2Fs_4292a468-e243-4e65-b87a-94ca6c9de720"
+      },
+      {
+        "name": "Microneedling (Face, Neck, Dec)",
+        "category": "Microneedling",
+        "price": 599,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Microneedling is a minimally invasive cosmetic procedure that’s used to treat skin concerns by stimulating collagen production. Also known as collagen induction therapy, microneedling treatment creates micro-punctures in the skin using miniature, sterilized needles. This treatment is great for reducing the appearance of pigmentation and acne scars!",
+        "image": "/c/aesthetica-md/svc/microneedling.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMicroneedling%2Fs_316e8e5a-85ed-40bd-ba5e-a8f80217239a"
+      },
+      {
+        "name": "Microneedling with PRP (Face, Neck, Dec)",
+        "category": "Microneedling",
+        "price": 699,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "The plasma facial (as known as a vampire facial) works by triggering the body’s healing and regenerative properties, boosting the production of collagen and elastin, and rejuvenating the skin for a firmer, more youthful appearance. This procedure combines microneedling with your own platelet rich fibrin.",
+        "image": "/c/aesthetica-md/svc/microneedling.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMicroneedling%2Fs_50b820f5-1f15-4d6c-8677-6a2004735bc1"
+      },
+      {
+        "name": "Tox Consult/Appointment",
+        "category": "Injectables",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_71211168-5e7f-4c24-84ed-e07c0370b88d"
+      },
+      {
+        "name": "Filler Consult/Appointment",
+        "category": "Injectables",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_13dce46f-863d-4163-bb06-f8f870602428"
+      },
+      {
+        "name": "Dysport",
+        "category": "Injectables",
+        "price": 4.66,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "We offer Dysport in Cypress, TX, for neck bands, glabellar lines, lip lines, & chin dimpling to achieve natural results. Rejuvenate your look. Book now!",
+        "image": "/c/aesthetica-md/svc/dysport.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_4f62fe78-d5b0-4fb9-94e9-a309d915ea75"
+      },
+      {
+        "name": "Daxxify",
+        "category": "Injectables",
+        "price": 7,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Get Daxxify in Cypress to smooth severe frown lines, forehead creases, glabellar lines, crow's feet, & dynamic facial wrinkles for a refreshed look. Book now.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_ad7103f9-3037-4ed0-82ea-c9ae3002c4a6"
+      },
+      {
+        "name": "Botox",
+        "category": "Injectables",
+        "price": 13,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Get smoother, youthful skin with Botox in Cypress, TX. Reduce frown lines, crow’s feet, and forehead wrinkles with fast, non-surgical results. Book now!",
+        "image": "/c/aesthetica-md/svc/botox.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_4d13af80-ab4d-42b2-b526-6ad107c9f253"
+      },
+      {
+        "name": "Juvaderm Volbella - Half Syringe",
+        "category": "Injectables",
+        "price": 500,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Smooth wrinkles & restore volume with Juvederm in Cypress, TX. Enhance lips, cheeks, chin & facial contours with natural & long-lasting results. Book today.",
+        "image": "/c/aesthetica-md/svc/juvederm.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_3da41c97-785a-4629-b712-a9abb0f3c62f"
+      },
+      {
+        "name": "Lip Flip",
+        "category": "Injectables",
+        "price": 150,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_04220e89-1a65-437f-ad25-eedf636c55cc"
+      },
+      {
+        "name": "Revanesse Versa Filler",
+        "category": "Injectables",
+        "price": 750,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Revanesse fillers in Cypress restore volume, soften smile lines, & enhances lips, cheeks, & under-eye hollows with low swelling & lasting results. Book now.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_68be9d4c-df49-4954-9c47-9d09b0a5650d"
+      },
+      {
+        "name": "Sculptra",
+        "category": "Injectables",
+        "price": 800,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Restore volume and smooth wrinkles with Sculptra treatment in Cypress, TX. Enhance cheeks, temples, nasolabial folds, jawline, chin & lower face. Book today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_05e7a5f8-79a4-43e9-ba3f-33e76f62ebb3"
+      },
+      {
+        "name": "PDGF (Single)",
+        "category": "Injectables",
+        "price": 800,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_49a6335c-2116-46e0-aa66-4491a6e7c032"
+      },
+      {
+        "name": "PRF Under Eyes",
+        "category": "Injectables",
+        "price": 499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_67e4b202-0a5c-40af-a0bc-4af9d90e70a9"
+      },
+      {
+        "name": "EZ Gel Treatment - Single",
+        "category": "Injectables",
+        "price": 999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_01ef730d-3779-4fbb-a6e8-4b52a6f28897"
+      },
+      {
+        "name": "Filler Dissolve",
+        "category": "Injectables",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_3b150fc8-6fb7-4f81-b13a-57092c5eaef0"
+      },
+      {
+        "name": "Neurotoxin Appointment",
+        "category": "Injectables",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Get a clear skin with Botox, Dysport, & Jeaveau in Cypress, TX. Smooth forehead lines, reduce fine lines, lift brows, & soften chin wrinkles. Book now.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_58a13860-94fc-4de1-b5ac-d5dd924023c8"
+      },
+      {
+        "name": "Filler Appointment",
+        "category": "Injectables",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectables%2Fs_9d7794a3-3fbf-44b4-8f47-aa30b2d8a9dd"
+      },
+      {
+        "name": "LHR Small Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 249,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Get smooth, hair-free skin with Laser Hair Removal in Cypress, TX. This treatment offers long-lasting results, minimal downtime, and comfort. Book today!",
+        "image": "/c/aesthetica-md/svc/laser-hair-removal.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_f40f726e-cca6-438d-b6e4-e40dd26ca913"
+      },
+      {
+        "name": "LHR Medium Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 299,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Get smooth, hair-free skin with Laser Hair Removal in Cypress, TX. This treatment offers long-lasting results, minimal downtime, and comfort. Book today!",
+        "image": "/c/aesthetica-md/svc/laser-hair-removal.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_7b116465-50b1-4419-972f-626779d1d8e5"
+      },
+      {
+        "name": "Vein Treatment Small Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 125,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_b4b10e9e-5020-4ae9-8fd1-1019c2f32022"
+      },
+      {
+        "name": "Vein Treatment Medium Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 250,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_9e564fcf-e5e3-4eca-8d70-2544f326519f"
+      },
+      {
+        "name": "IPL Small Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 299,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_767ab2d2-2b4f-455d-a17f-d9079408a946"
+      },
+      {
+        "name": "IPL Medium Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_8f22977f-8d61-4848-a788-2819f524fd90"
+      },
+      {
+        "name": "IPL Large Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 699,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_b6d7a557-4451-4404-a54e-d48e33b39055"
+      },
+      {
+        "name": "IPL XL Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 799,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_e6db179b-31ad-4ce8-9901-f8639acab03f"
+      },
+      {
+        "name": "Q Switch Laser Small",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 599,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_fbff35f6-854d-4147-a29f-fb6360c746bf"
+      },
+      {
+        "name": "Q Switch Laser Medium",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 799,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_af404427-7be4-40a8-b257-6e14cdff1a65"
+      },
+      {
+        "name": "Q Switch Laser Large",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_ca77f9bd-3daa-403c-bbaa-dd42a701542e"
+      },
+      {
+        "name": "Fractional Erbium Laser - Small Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 599,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_d9912436-da5a-4825-90b2-72d6bfda198d"
+      },
+      {
+        "name": "Fractional Erbium Laser - Medium Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 799,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_42034e08-5b1d-4142-b685-f1e250dfc51b"
+      },
+      {
+        "name": "Fractional Erbium Laser - Large Area",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_c5d422ed-b963-4897-83d4-b7d1ece5a30a"
+      },
+      {
+        "name": "Erbium Ablative Skin Resurfacing - Small",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 799,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Laser skin resurfacing in Cypress, TX, smooths texture, reduces wrinkles, fades sun damage & acne scars, & boosts collagen for firmer, clearer skin. Book now.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_dd63b77e-8493-4928-a22c-ea996a9c4cdd"
+      },
+      {
+        "name": "Erbium Ablative Skin Resurfacing - Medium",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Laser skin resurfacing in Cypress, TX, smooths texture, reduces wrinkles, fades sun damage & acne scars, & boosts collagen for firmer, clearer skin. Book now.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_55a2a1e7-036f-4642-b880-053074412d8c"
+      },
+      {
+        "name": "Erbium Ablative Skin Resurfacing - Large",
+        "category": "Laser Treatments (Laser Consult Required)",
+        "price": 1199,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Laser skin resurfacing in Cypress, TX, smooths texture, reduces wrinkles, fades sun damage & acne scars, & boosts collagen for firmer, clearer skin. Book now.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Treatments%20%28Laser%20Consult%20Required%29%2Fs_61418e0c-bebd-483f-ba76-cfa7c04ff601"
+      },
+      {
+        "name": "Radio Frequency",
+        "category": "Body Contouring Treatments",
+        "price": 249,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Achieve tighter & smoother skin with RF Skin Tightening in Cypress, TX. Treat sagging, fine lines, wrinkles, boost collagen, & lift contours. Book now!",
+        "image": "/c/aesthetica-md/svc/radio-frequency-rf-skin-tightening.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Treatments%2Fs_d272482a-a005-441a-9103-83cfeabdde89"
+      },
+      {
+        "name": "Laser Lipo",
+        "category": "Body Contouring Treatments",
+        "price": 499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Say goodbye to stubborn fat with non-invasive Laser Lipo in Cypress, TX. Non-surgical, targeted fat reduction with minimal downtime & natural results. Book now.",
+        "image": "/c/aesthetica-md/svc/laser-lipo.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Treatments%2Fs_62c9d60b-9d0d-4463-9205-c43705a99cde"
+      },
+      {
+        "name": "EmSculpt",
+        "category": "Body Contouring Treatments",
+        "price": 499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "EmSculpt in Cypress, TX, reduces fat while building and toning muscle. A non-surgical body contouring treatment that enhances muscle definition. Book now.",
+        "image": "/c/aesthetica-md/svc/emsculpt.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Treatments%2Fs_f58fc32f-b0d5-44f5-82f3-f600f6194bce"
+      },
+      {
+        "name": "Cavitation",
+        "category": "Body Contouring Treatments",
+        "price": 249,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Ultrasound cavitation in Cypress, TX, uses non-surgical ultrasonic fat reduction to contour the body, reduce stubborn fat, & reshape the body with no downtime.",
+        "image": "/c/aesthetica-md/svc/ultrasound-cavitation.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Treatments%2Fs_2ef4b1c9-a533-4c5f-9bf9-ae06b7ca8e3e"
+      },
+      {
+        "name": "Lymphatic Massage (30 min)",
+        "category": "Body Contouring Treatments",
+        "price": 74.5,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Treatments%2Fs_7ddd4cc7-0ad8-4634-aacb-0310c056eb81"
+      },
+      {
+        "name": "Belfie Butt Lift",
+        "category": "Body Contouring Treatments",
+        "price": 1499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Treatments%2Fs_fad1c05c-6d54-4f46-83b9-d5bf30540f11"
+      },
+      {
+        "name": "Detox Wrap",
+        "category": "Body Contouring Treatments",
+        "price": 149,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Get detox wraps in Cypress, TX, to reduce bloating, relieve water retention, promote circulation, hydrate skin, and smooth body contours. Book today!",
+        "image": "/c/aesthetica-md/svc/detox-wraps.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Treatments%2Fs_357b80fc-5344-494b-a888-8e94e4a034ec"
+      },
+      {
+        "name": "Deep Tissue Massage 60 Min",
+        "category": "Massage",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%2Fs_2727b01f-1382-41b1-bea0-dbb521b1e0db"
+      },
+      {
+        "name": "Deep Tissue Massage 90 Min",
+        "category": "Massage",
+        "price": 199,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%2Fs_fae6d0c0-a918-4d18-b4ec-1e2a95a29ad9"
+      },
+      {
+        "name": "Relaxation Massage 90 Min",
+        "category": "Massage",
+        "price": 199,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%2Fs_564bc92e-dd6d-45c3-8971-a14c14509ab1"
+      },
+      {
+        "name": "Relaxation Massage 60 Min",
+        "category": "Massage",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%2Fs_241c2137-ac8c-4083-86d3-20e3fcb10c33"
+      },
+      {
+        "name": "Hot Stone Massage 60 Min",
+        "category": "Massage",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%2Fs_5ccef425-7b42-4c3a-84e0-18fc6e500f7a"
+      },
+      {
+        "name": "Hot Stone Massage 90 Min",
+        "category": "Massage",
+        "price": 199,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%2Fs_dd22b2d5-9af4-4b38-9cc9-0a3fca1c907f"
+      },
+      {
+        "name": "Lymphatic Massage 60 min",
+        "category": "Massage",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%2Fs_6fea0783-e9cc-4800-afee-199aa240570e"
+      },
+      {
+        "name": "Lymphatic Massage 90 min",
+        "category": "Massage",
+        "price": 199,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%2Fs_3a175cac-b56b-4209-b96b-0b5ef632096a"
+      },
+      {
+        "name": "Post Surgery Lymphatic Massage - Face (30 Min)",
+        "category": "Massage",
+        "price": 99,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%2Fs_e75c1eed-2bfa-4444-9614-be5a9b1fe6c0"
+      },
+      {
+        "name": "Post Surgery Lymphatic Massage - Body (60 Min)",
+        "category": "Massage",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Non-surgical body contouring in Cypress, TX with CoolSculpting, RF Skin Tightening, & EmSculpt to lift & tighten your body & give the perfect shape. Book now.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%2Fs_1784b72c-b66f-4c52-8d3e-9626e4be2eb9"
+      },
+      {
+        "name": "Wellness Consult (Weight Loss/HRT/Peptides) w/ Labs - $250",
+        "category": "Wellness",
+        "price": 250,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Virtual Consult",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FWellness%2Fs_471b972e-93c9-4422-8ded-b82c4ab9dd29"
+      },
+      {
+        "name": "Wellness Consult (Weight Loss/HRT/Peptides) w/out Labs - $150",
+        "category": "Wellness",
+        "price": 150,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Virtual Consult",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FWellness%2Fs_5f6da4b0-4520-4e6a-9884-c0153540d4eb"
+      },
+      {
+        "name": "B12 Skinny Shot",
+        "category": "Wellness",
+        "price": 30,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Boost metabolism, burn fat, preserve muscle, and increase energy with B12 Skinny Shots in Cypress, TX. Quick, painless, and highly effective. Book today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FWellness%2Fs_43d96b08-47bb-4cb2-8469-9d5f2a021efd"
+      },
+      {
+        "name": "NAD+ Shot",
+        "category": "Wellness",
+        "price": 60,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Boost metabolism, burn fat, preserve muscle, and increase energy with B12 Skinny Shots in Cypress, TX. Quick, painless, and highly effective. Book today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FWellness%2Fs_6251b77a-aea6-48ec-b7d6-7630bf781699"
+      },
+      {
+        "name": "Vitamin D Shot",
+        "category": "Wellness",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Boost metabolism, burn fat, preserve muscle, and increase energy with B12 Skinny Shots in Cypress, TX. Quick, painless, and highly effective. Book today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FWellness%2Fs_4223cc83-d9c2-4c22-8039-d5d3e5329863"
+      },
+      {
+        "name": "Glutathione",
+        "category": "Wellness",
+        "price": 60,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FWellness%2Fs_3c4108c9-b1ea-4fbd-83b2-aa6b4cb081b8"
+      },
+      {
+        "name": "Wellness Follow Up",
+        "category": "Wellness",
+        "price": 99,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FWellness%2Fs_a8554038-fad2-4e88-933f-beda91e388f5"
+      },
+      {
+        "name": "NEW CLIENT CONSULT + 20% Off First Visit",
+        "category": "New Client Specials",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Client%20Specials%2Fs_dd6d6999-de89-4bd1-9173-2df893e2e9d0"
+      },
+      {
+        "name": "NEW CLIENT SPECIAL - Signature HydraFacial $169 + Consultation",
+        "category": "New Client Specials",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "NEW CLIENT SPECIAL - Signature HydraFacial + Free Red Light Booster for $149 (Normally $199). Don't Miss This Deal! Book Now!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Client%20Specials%2Fs_d07b1820-c0bf-495d-897b-34a506118a7a"
+      },
+      {
+        "name": "NEW CLIENT SPECIAL --> Laser Consult + Complimentary AI Skin Analysis",
+        "category": "New Client Specials",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Laser Hair Removal Consult --> Free Consult + Buy One Area & Get One Area for FREE! Book Now!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Client%20Specials%2Fs_72476b67-c742-49c5-9631-aa40abb85f52"
+      },
+      {
+        "name": "NEW CLIENT SPECIAL --> $4.25 Dysport",
+        "category": "New Client Specials",
+        "price": 10,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "We offer Dysport in Cypress, TX, for neck bands, glabellar lines, lip lines, & chin dimpling to achieve natural results. Rejuvenate your look. Book now!",
+        "image": "/c/aesthetica-md/svc/dysport.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Client%20Specials%2Fs_0299e2e8-13ae-4ea1-926f-ab8f4d039861"
+      },
+      {
+        "name": "NEW CLIENT SPECIAL --> $100 Off Lip Filler + Head to Toe Consult",
+        "category": "New Client Specials",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "NEW CLIENT SPECIAL - Lip Filler $100 Off - Don't Miss This Deal! Book Now!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Client%20Specials%2Fs_e1aadc66-73a6-4e29-bee8-f3427d02c221"
+      },
+      {
+        "name": "NEW CLIENT SPECIAL --> Free Body Contouring Consultation",
+        "category": "New Client Specials",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Free Consult + $500 Off Packages - Don't Miss This Deal! Book Now!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Client%20Specials%2Fs_eb53215f-5a71-4d68-bca2-12cc2bb96378"
+      },
+      {
+        "name": "NEW CLIENT SPECIAL --> Skin Consult + Complimentary AI Skin Analysis",
+        "category": "New Client Specials",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Book your free skin consult with one of our seasoned Aestheticians! Your skin will thank you!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Client%20Specials%2Fs_79ca0ae6-882d-474d-b667-33fd08fc930b"
+      },
+      {
+        "name": "NEW CLIENT SPECIAL - Free Tox Consult",
+        "category": "New Client Specials",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FNew%20Client%20Specials%2Fs_9d17018e-9265-447e-a349-4f9a3ab91bef"
+      },
+      {
+        "name": "Beauty Bank Membership - $99",
+        "category": "Membership",
+        "price": 99,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Bank $99 per month towards aesthetics services like tox, facials, etc! You also get exclusive discounts like vip tox pricing, $100 off filler, 15% off packages and skincare.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMembership%2Fp_e8666a10-e36f-4ef6-bde4-0bcc2bd422aa"
+      },
+      {
+        "name": "Elite Membership 2026 - $249",
+        "category": "Membership",
+        "price": 249,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Services Included:\nAny $169 Facials or Deluxe HydraFacial \nFree Dermaplane add-on\nBody Contouring Treatment or Chemical Peel \n\nSpecial Pricing:\n15% off all retail skincare products\n20% off services/packages\n$100 off filler\nVIP pricing on neurotoxins \n50% off any service during your birthday month (Excluding Injectables)",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMembership%2Fp_5a861659-ec6c-42ac-a0f7-d3c33a4153a9"
+      },
+      {
+        "name": "Premier Membership 2026 - $169",
+        "category": "Membership",
+        "price": 169,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Services Included:\nAny $169 Facial or $199 Signature HydraFacial \n\n\nSpecial Pricing:\n15% off on all retail skincare products \n$100 of filler\nVIP pricing on neurotoxins \n15% off packages\n50% off any service during your birthday month (Excluding Injectables)",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMembership%2Fp_52d55d05-878f-4f3d-956d-c18fd173dc91"
+      },
+      {
+        "name": "6 Week Body Contouring Package",
+        "category": "Body Contouring Packages",
+        "price": 2499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Our 6-week body contouring package consisting of 12 sessions over 6 weeks. Treatments include Zerona Laser, Cavitation, Lymphatic Drainage, RF Skin Tightening & More! This package is designed to sculpt the body for a smoother, more toned appearance.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Packages%2Fp_6a99bd59-1671-493b-8522-a08afc63a5e5"
+      },
+      {
+        "name": "Belfie Butt Lift",
+        "category": "Body Contouring Packages",
+        "price": 1499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Packages%2Fp_4ffd727c-6ed6-42f4-ad6c-7d92d9bcb8d4"
+      },
+      {
+        "name": "Carboxy - 6 Sessions ",
+        "category": "Body Contouring Packages",
+        "price": 499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Packages%2Fp_40eff0b8-d351-43df-a97e-b93adf14c0a6"
+      },
+      {
+        "name": "Cellulite Package",
+        "category": "Body Contouring Packages",
+        "price": 1999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Discover cellulite treatment in Cypress, TX, can reduce bumps, firm skin, & contour your body while supporting fat loss. Safe, non-surgical solution. Book now!",
+        "image": "/c/aesthetica-md/svc/cellulite.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Packages%2Fp_079514a8-3e84-419a-aa74-690b37a69715"
+      },
+      {
+        "name": "EmSculpt (3 Sessions)",
+        "category": "Body Contouring Packages",
+        "price": 1199,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "EmSculpt in Cypress, TX, reduces fat while building and toning muscle. A non-surgical body contouring treatment that enhances muscle definition. Book now.",
+        "image": "/c/aesthetica-md/svc/emsculpt.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Packages%2Fp_97c63808-fb8f-4f92-927c-4ceda5855e4d"
+      },
+      {
+        "name": "EmSculpt (6 Sessions)",
+        "category": "Body Contouring Packages",
+        "price": 1999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "EmSculpt in Cypress, TX, reduces fat while building and toning muscle. A non-surgical body contouring treatment that enhances muscle definition. Book now.",
+        "image": "/c/aesthetica-md/svc/emsculpt.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Packages%2Fp_05f70a28-9c2e-4df1-91a7-0887bac2faf6"
+      },
+      {
+        "name": "Mini Body Contouring Package",
+        "category": "Body Contouring Packages",
+        "price": 999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Our mini body contouring package is 3 weeks (6 sessions) and includes laser lipo, cavitation, radio frequency skin tightening!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Packages%2Fp_6baa6368-d6c1-4c5d-ae4d-284a000fadc0"
+      },
+      {
+        "name": "Radio Frequency Skin Tightening (3 Sessions)",
+        "category": "Body Contouring Packages",
+        "price": 699,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "3 Sessions",
+        "image": "/c/aesthetica-md/svc/radio-frequency-rf-skin-tightening.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Packages%2Fp_480a7636-cb3a-4830-876c-11467e47f3b5"
+      },
+      {
+        "name": "Zerona Laser (3 Sessions)",
+        "category": "Body Contouring Packages",
+        "price": 1299,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Packages%2Fp_489128e2-1b0b-4a90-9d2b-a9ddf3c1fa76"
+      },
+      {
+        "name": "Zerona Laser (6 Sessions)",
+        "category": "Body Contouring Packages",
+        "price": 2499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FBody%20Contouring%20Packages%2Fp_aaddc4d6-933f-4f95-a278-5108bac74214"
+      },
+      {
+        "name": "Microneedling (Face, Neck, Dec) - 3 Sessions",
+        "category": "Facial Packages",
+        "price": 1499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "3 Sessions",
+        "image": "/c/aesthetica-md/svc/microneedling.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacial%20Packages%2Fp_1e4b98da-d065-462b-b090-c58d3d2a42df"
+      },
+      {
+        "name": "Microneedling (Face Only) - 3 Sessions",
+        "category": "Facial Packages",
+        "price": 999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "3 Sessions",
+        "image": "/c/aesthetica-md/svc/microneedling.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacial%20Packages%2Fp_c6f61a04-26a0-4fb8-b71f-dae9a2061ed0"
+      },
+      {
+        "name": "Microneedling with PDRN - 3 Sessions",
+        "category": "Facial Packages",
+        "price": 1599,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Microneedling with PRP in Cypress, TX, treats scars, dull skin, rough texture, stretch marks, and aging signs while improving tone and texture. Book now.",
+        "image": "/c/aesthetica-md/svc/microneedling.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacial%20Packages%2Fp_47f1b469-7822-4b96-a7b0-610da054eabc"
+      },
+      {
+        "name": "Perfect Derma Peel (3 Sessions)",
+        "category": "Facial Packages",
+        "price": 849,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Perfect Derma Peel (3 Sessions) Face Only",
+        "image": "/c/aesthetica-md/svc/chemical-peels.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacial%20Packages%2Fp_24df0bb2-61aa-4afe-96b2-c02aaa5d4412"
+      },
+      {
+        "name": "Plasma Facial (Face Only) - 3 Sessions",
+        "category": "Facial Packages",
+        "price": 1299,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "3 Sessions",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FFacial%20Packages%2Fp_da39356c-ed8b-46ae-8923-96a3acbd3eb7"
+      },
+      {
+        "name": "B12 Skinny Shot  - Pack of 6",
+        "category": "Injectable Packages",
+        "price": 150,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Boost metabolism, burn fat, preserve muscle, and increase energy with B12 Skinny Shots in Cypress, TX. Quick, painless, and highly effective. Book today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_6352a931-8a37-44d9-aa26-7c5eb4e37f49"
+      },
+      {
+        "name": "EZ Gel Full Face Rejuvenation - 3 Sessions",
+        "category": "Injectable Packages",
+        "price": 2399,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_213d7a00-e865-448a-a936-034aa485353b"
+      },
+      {
+        "name": "Glutathione 6 Pack",
+        "category": "Injectable Packages",
+        "price": 300,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_bf5ed132-6bff-4b80-8dc3-5ca4eb242df1"
+      },
+      {
+        "name": "Immunity Package (NAD, b12, & Vitamin D)",
+        "category": "Injectable Packages",
+        "price": 499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "6 NAD, 6 b12, & 6 Vitamin D Shots",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_0d688603-f326-43e8-a251-9349aab6cf9e"
+      },
+      {
+        "name": "Lipodissolve Chin Package",
+        "category": "Injectable Packages",
+        "price": 999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "1 small area of LD, 2 lymphatics, 2 RF skin tightening",
+        "image": "/c/aesthetica-md/svc/kybella-lipodissolve.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_695f4544-fd51-429c-aea7-3681509ec609"
+      },
+      {
+        "name": "NAD + - 6 pack",
+        "category": "Injectable Packages",
+        "price": 300,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "6 shots of NAD+",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_59ea6809-d69d-41ec-810b-9d0c1990ca21"
+      },
+      {
+        "name": "PDGF - 2 Sessions",
+        "category": "Injectable Packages",
+        "price": 1299,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "PDGF (Platelet Derived Growth Factors) - 2 Sessions",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_4e7c7226-c8a8-4c0d-be63-2fdec5b3cd9e"
+      },
+      {
+        "name": "PDGF - 3 Sessions",
+        "category": "Injectable Packages",
+        "price": 1699,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_dcee8969-3e7a-4f8d-9b77-56a2ee8cbcf0"
+      },
+      {
+        "name": "PRF Hair Restoration - 3 Sessions",
+        "category": "Injectable Packages",
+        "price": 1499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Get smooth, hair-free skin with Laser Hair Removal in Cypress, TX. This treatment offers long-lasting results, minimal downtime, and comfort. Book today!",
+        "image": "/c/aesthetica-md/svc/laser-hair-removal.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_96b7626d-af39-484d-8782-206ce8c3a403"
+      },
+      {
+        "name": "PRF Hair Restoration - 6 Sessions",
+        "category": "Injectable Packages",
+        "price": 2999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Get smooth, hair-free skin with Laser Hair Removal in Cypress, TX. This treatment offers long-lasting results, minimal downtime, and comfort. Book today!",
+        "image": "/c/aesthetica-md/svc/laser-hair-removal.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_3c4455b8-3000-4453-adef-bb612fff6a8a"
+      },
+      {
+        "name": "Restylane Defyne Filler",
+        "category": "Injectable Packages",
+        "price": 750,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Enhance cheeks, smooth folds, define lips, & sculpt your jawline with Restylane Contour in Cypress, TX, for balanced, long-lasting facial results. Book now.",
+        "image": "/c/aesthetica-md/svc/restylane.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_19593250-e77d-4d87-876d-ab2ea8af0ea6"
+      },
+      {
+        "name": "Restylane L Filler",
+        "category": "Injectable Packages",
+        "price": 750,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Enhance cheeks, smooth folds, define lips, & sculpt your jawline with Restylane Contour in Cypress, TX, for balanced, long-lasting facial results. Book now.",
+        "image": "/c/aesthetica-md/svc/restylane.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_8b5db716-1905-44ae-ac9f-fc4860802235"
+      },
+      {
+        "name": "Sculptra -1 Session (2 Vials)",
+        "category": "Injectable Packages",
+        "price": 1600,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "2 Vials of Sculptra",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_a7d08fd2-6c2e-4a42-828d-f866e90fa08d"
+      },
+      {
+        "name": "Sculptra - 3 Sessions (6 Vials)",
+        "category": "Injectable Packages",
+        "price": 4800,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "6 Vials of Sculptra",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_a765d165-e451-4f6a-947b-124c9a0cefc9"
+      },
+      {
+        "name": "Vitamin D Shots- 6 Pack",
+        "category": "Injectable Packages",
+        "price": 150,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Boost metabolism, burn fat, preserve muscle, and increase energy with B12 Skinny Shots in Cypress, TX. Quick, painless, and highly effective. Book today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FInjectable%20Packages%2Fp_83ecbd2b-faa3-4450-ba67-ce4a182056c4"
+      },
+      {
+        "name": "Erbium Skin Resurfacing - Large Area (3 sessions)",
+        "category": "Laser Packages",
+        "price": 2999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Smooths texture, softens fine lines, and improves scars and pigmentation. 1 session. Areas Include: Face, Neck, & Dec.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_9fd3cc5c-2df9-41af-9c57-eb3f101fa0a2"
+      },
+      {
+        "name": "Erbium Skin Resurfacing - Medium Area (3 Sessions)",
+        "category": "Laser Packages",
+        "price": 2499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Smooths texture, softens fine lines, and improves scars and pigmentation. Areas Include: Full Face, front of neck, or back of neck",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_964b3f9c-3cd7-4ff1-a165-c503476c2780"
+      },
+      {
+        "name": "Erbium Skin Resurfacing - Small Area (3 Sessions)",
+        "category": "Laser Packages",
+        "price": 1999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Smooths texture, softens fine lines, and improves scars and pigmentation. Hands, cheeks, forehead, chin, nose, fingers or feet",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_9a9e648f-81b2-4789-b1fa-0417ed3296f0"
+      },
+      {
+        "name": "Fractional Resurfacing- Large area (3 Sessions)",
+        "category": "Laser Packages",
+        "price": 2499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Treats fine lines, texture, scars, and sun damage on a targeted area.. Treatment Areas: Full abdomen, full chest, or Face, Neck, & Dec. 3 sessions",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_dbeafcc0-969a-46ff-9afc-287e7b983f4f"
+      },
+      {
+        "name": "Fractional Resurfacing - Medium Area (3 Sessions)",
+        "category": "Laser Packages",
+        "price": 1999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Treats fine lines, texture, scars, and sun damage on a targeted area. Treatment Areas include:  Full face, front of neck, or back of neck. 3 sessions",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_d9d0a710-c0ce-4d10-a599-714397a257c0"
+      },
+      {
+        "name": "Fractional Resurfacing - Small area (3 Sessions)",
+        "category": "Laser Packages",
+        "price": 1499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Treats fine lines, texture, scars, and sun damage on a targeted area. Treatment Areas include: Hands, Cheeks, forehead, nose, or feet. 3 sessions",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_b7420907-1ce7-488b-acde-b6d839e1ab64"
+      },
+      {
+        "name": "IPL Large Area (3 Sessions)",
+        "category": "Laser Packages",
+        "price": 1299,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Targets sunspots, freckles, and uneven pigmentation to reveal brighter, more even-toned skin. Choose from face/neck/dec, back, chest, arms, etc",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_c5012f63-0b88-425d-b8d9-b0731f03c1e1"
+      },
+      {
+        "name": "IPL Medium Area (3 Sessions)",
+        "category": "Laser Packages",
+        "price": 999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Targets sunspots, freckles, and uneven pigmentation to reveal brighter, more even-toned skin. Choose from front of neck, back of neck, or full face",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_75b8478d-2827-4312-a609-7d06eb525646"
+      },
+      {
+        "name": "IPL Small Area (3 Sessions)",
+        "category": "Laser Packages",
+        "price": 499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Targets sunspots, freckles, and uneven pigmentation to reveal brighter, more even-toned skin. Choose from hands, feet, eyes, cheeks, forehead, chin, nose, fingers",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_9ebebc08-f851-4c88-96ef-bb9aa02e1ca0"
+      },
+      {
+        "name": "LHR - Full Body (6 Sessions)",
+        "category": "Laser Packages",
+        "price": 3999,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Get smooth, hair-free skin with Laser Hair Removal in Cypress, TX. This treatment offers long-lasting results, minimal downtime, and comfort. Book today!",
+        "image": "/c/aesthetica-md/svc/laser-hair-removal.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_d093ca0c-3a04-494c-940d-3f5a4e6377f1"
+      },
+      {
+        "name": "Morpheus8 Lower Abdomen",
+        "category": "Laser Packages",
+        "price": 2250,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_d77aeb68-ee16-419f-bd36-680a74955f1d"
+      },
+      {
+        "name": "Tattoo Removal (12 Sessions)",
+        "category": "Laser Packages",
+        "price": 2499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "12 sessions of Tattoo Removal",
+        "image": "/c/aesthetica-md/svc/laser-hair-removal.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_c6ad6509-631f-4d07-bfe2-fc1b9930373f"
+      },
+      {
+        "name": "Tattoo Removal (6 Sessions)",
+        "category": "Laser Packages",
+        "price": 1499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "6 sessions of Tattoo Removal",
+        "image": "/c/aesthetica-md/svc/laser-hair-removal.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_65be3c87-0d7a-4147-b721-932e29549ebf"
+      },
+      {
+        "name": "Vein Treatment - Medium Area (2 Sessions)",
+        "category": "Laser Packages",
+        "price": 399,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Treats facial and leg veins, broken capillaries, cherry angiomas, etc",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FLaser%20Packages%2Fp_8cf6472b-32ba-4b00-9083-78646eb227ef"
+      },
+      {
+        "name": "Lymphatic Massage 30 Min",
+        "category": "Massage Packages",
+        "price": 85,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMassage%20Packages%2Fp_47590f78-4012-43f2-a437-f8018ed8224a"
+      },
+      {
+        "name": "ALL BODY PACKAGES 40% OFF! ENTER BODY40 AT CHECKOUT",
+        "category": "Monthly Specials",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Choose from our 6 week Cellulite Package or Body Contouring Package!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMonthly%20Specials%2Fp_0216fa3a-c911-4e64-945e-0a9019ccb925"
+      },
+      {
+        "name": "ALL LASER PACKAGES 40% OFF! USE CODE LASER40 AT CHECKOUT",
+        "category": "Monthly Specials",
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Choose from any of our laser packages - Laser Hair Removal, IPL, Fractional Laser, Fully Ablative Laser!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMonthly%20Specials%2Fp_d54ba56b-e999-4590-8e5d-549864ae9c53"
+      },
+      {
+        "name": "BELFIE + LIQUID BBL (4 SYRINGES OF RADIEESE) - $2,499 (SAVE $2,000!)",
+        "category": "Monthly Specials",
+        "price": 2499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMonthly%20Specials%2Fp_c6e2f310-62e2-421d-ab82-33c6351c90a2"
+      },
+      {
+        "name": "DELUXE HYDRAFACIAL - BUY 2, GET 1 FREE - $499",
+        "category": "Monthly Specials",
+        "price": 499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Experience glowing skin with medical-grade facials in Cypress, TX! Target acne, wrinkles, and dryness for a rejuvenated look. Book your session today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMonthly%20Specials%2Fp_9021f816-0ee3-4704-abf4-648eaa366202"
+      },
+      {
+        "name": "FACIAL BALANCING PACKAGE (4 SYRINGES) - $2,250 (SAVE $750)",
+        "category": "Monthly Specials",
+        "price": 2250,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Experience glowing skin with medical-grade facials in Cypress, TX! Target acne, wrinkles, and dryness for a rejuvenated look. Book your session today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMonthly%20Specials%2Fp_9cdc3b0f-9f27-4978-abf8-7b29456ea0a1"
+      },
+      {
+        "name": "MICRONEEDLING W/ PRP OR PDRN - 3 SESSIONS - $1,199 (SAVE $300!)",
+        "category": "Monthly Specials",
+        "price": 1199,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Microneedling with PRP in Cypress, TX, treats scars, dull skin, rough texture, stretch marks, and aging signs while improving tone and texture. Book now.",
+        "image": "/c/aesthetica-md/svc/microneedling.jpg",
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMonthly%20Specials%2Fp_17207ad5-913e-4fa0-a657-a5b7357b4d3d"
+      },
+      {
+        "name": "REVANESSE VERSA LIP FILLER - $499",
+        "category": "Monthly Specials",
+        "price": 499,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Revanesse fillers in Cypress restore volume, soften smile lines, & enhances lips, cheeks, & under-eye hollows with low swelling & lasting results. Book now.",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMonthly%20Specials%2Fp_9c14aa1d-d4bc-4db1-ae11-560807b9a202"
+      },
+      {
+        "name": "SCULPTRA - BUY 3 , GET 1 GREE ($800 SAVINGS)",
+        "category": "Monthly Specials",
+        "price": 2400,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Restore volume and smooth wrinkles with Sculptra treatment in Cypress, TX. Enhance cheeks, temples, nasolabial folds, jawline, chin & lower face. Book today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMonthly%20Specials%2Fp_bf217d28-b7ea-42f9-a106-e2322d6bd5d6"
+      },
+      {
+        "name": "ULTIMATE SKIN RESET (HYDRAFACIAL, IPL, MICRONEEDLING) - $799 ",
+        "category": "Monthly Specials",
+        "price": 749,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "Experience glowing skin with medical-grade facials in Cypress, TX! Target acne, wrinkles, and dryness for a rejuvenated look. Book your session today!",
+        "image": null,
+        "bookUrl": "https://dashboard.boulevard.io/booking/businesses/1e4851f8-0c56-40eb-8147-50ca1943a2a2/widget?locationId=ffe231d4-d2b4-4f43-a51d-d41704b68929&visitType=SELF_VISIT&path=%2Fcart%2Fmenu%2FMonthly%20Specials%2Fp_2dffe6f7-98c8-4e51-b244-f4fd50b02fa8"
+      }
+    ]
+  }
+}
