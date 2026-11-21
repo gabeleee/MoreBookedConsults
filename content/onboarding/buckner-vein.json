@@ -1,0 +1,337 @@
+{
+  "client": {
+    "slug": "buckner-vein",
+    "firstName": "Dr. Buckner",
+    "ownerName": "Scott Buckner, MD",
+    "plan": "Free website · pay per new client",
+    "offers": [],
+    "domains": [],
+    "domainsChecked": "2026-11-21",
+    "_notes": "Built 11-21 from their Google listing + website (mbc-client-sites clients/buckner-vein/intake.json). Email is the one on their AestheticHires order. Offers are only ones seen on their site/menu today."
+  },
+  "found": {
+    "source": "Google Business Profile (DataForSEO) + their website",
+    "sourceUrl": "https://www.google.com/maps?cid=14626881945256140300&hl=en&gl=US",
+    "fetched": "2026-11-21",
+    "businessName": "Buckner Vein and Aesthetics",
+    "ownerName": "Scott Buckner, MD",
+    "email": "bucknerveinandaesthetics@gmail.com",
+    "phone": "(240) 913-5900",
+    "address": "1330 Liberty Rd Ste H, Eldersburg, MD 21784",
+    "hours": [
+      "Mon 7:30am–5:30pm",
+      "Tue–Wed 7:30am–7pm",
+      "Thu 7:30am–5:30pm",
+      "Fri–Sun Closed"
+    ],
+    "about": "Buckner Vein and Aesthetics will always provide a comprehensive array of vascular and aesthetics services for our patients, utilizing leading-edge technology and techniques. At BVA, we provide a positive and impactful environment bound by integrity that culminates with excellent outcomes. Our clinical care team and support staff will work together as a close-knit team. In turn, this collaborative culture will allow us to continually attract the highest quality providers and staff members.\n\nSuburban Maryland is also a place we call home. Our patients are our friends, family, and neighbors. Buckner Vein and Aesthetics will continue to work actively in support of this community through volunteer service and charitable giving.",
+    "instagram": null,
+    "facebook": null,
+    "website": "https://bucknerveinandaesthetics.com/?utm_source=googlemybusiness&utm_medium=search&utm_content=eldersburg&utm_campaign=bvaLocal",
+    "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJh7sy66clyIkRDB6R9qEf_co",
+    "cardRequired": false,
+    "cancellationPolicy": null,
+    "coverImage": null,
+    "photos": [
+      "/c/buckner-vein/hero.jpg",
+      "/c/buckner-vein/web/12.jpg",
+      "/c/buckner-vein/web/21.jpg",
+      "/c/buckner-vein/web/16.jpg",
+      "/c/buckner-vein/web/13.jpg",
+      "/c/buckner-vein/web/20.jpg",
+      "/c/buckner-vein/web/09.jpg",
+      "/c/buckner-vein/web/05.jpg",
+      "/c/buckner-vein/web/03.jpg",
+      "/c/buckner-vein/web/10.jpg",
+      "/c/buckner-vein/web/07.jpg",
+      "/c/buckner-vein/web/04.jpg",
+      "/c/buckner-vein/web/01.jpg",
+      "/c/buckner-vein/web/06.jpg",
+      "/c/buckner-vein/web/02.jpg",
+      "/c/buckner-vein/web/19.jpg"
+    ],
+    "treatmentGroups": [],
+    "services": [
+      {
+        "name": "Consultation",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "A one-on-one visit to talk through your goals and options.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Broad Spectrum LHR",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Safely customize hair reduction sessions for your skin type with advanced ProWave broad-spectrum light systems at Buckner Vein and Aesthetics. Book today.",
+        "image": "/c/buckner-vein/svc/broad-spectrum-laser-hair-removal.jpg",
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Laser Hair Removal for All Skin Types",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Achieve long-term hair reduction and smooth skin with advanced, comfortable laser treatments at Buckner Vein and Aesthetics in Eldersburg, MD. Book today.",
+        "image": "/c/buckner-vein/svc/laser-hair-removal.jpg",
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Electromagnetic Incontinence Therapy",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Regain your bladder control and reduce daily leaks with non-invasive electromagnetic pelvic floor therapies at Buckner Vein and Aesthetics. Book today.",
+        "image": "/c/buckner-vein/svc/incontinence-treatments-for-women.jpg",
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "PRP Injections & Cellular Repair",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Accelerate organic tissue repair, soften fine lines, and smooth rough skin textures with personalized PRP injections at Buckner Vein and Aesthetics. Book now.",
+        "image": "/c/buckner-vein/svc/prp-injections-cellular-repair.jpg",
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Endovenous Radiofrequency Ablation​",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Treat painful varicose veins with minimally invasive radiofrequency ablation at Buckner Vein and Aesthetics in Columbia & Eldersburg, MD. Schedule a visit.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Sclerotherapy",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Buckner Vein and Aesthetics offers expert foam sclerotherapy in Columbia and Eldersburg, MD. Eliminate painful varicose veins and achieve smoother legs today.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Hemorrhoid Artery Embolization",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Get painless, non-surgical relief from chronic hemorrhoids at Buckner Vein and Aesthetics in Columbia & Eldersburg, MD. Schedule your local consultation.",
+        "image": "/c/buckner-vein/svc/hemorrhoid-artery-embolization.jpg",
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Uterine Fibroid Embolization (UFE)",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Buckner Vein and Aesthetics provides uterine fibroid embolization in Columbia and Eldersburg, MD. Relieve uncomfortable fibroid symptoms without any surgery.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Gonadal Vein Embolization",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Buckner Vein and Aesthetics offers gonadal vein embolization in Columbia and Eldersburg, MD. Find non-surgical relief from pelvic congestion syndrome today.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Uterine Fibroid Embolization",
+        "category": "Medical Clinic",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Get relief form painful fibroid symptoms with Uterine Fibroid Embolization (UFE), a minimally invasive procedure performed by Dr. Buckner that cuts off blood flow to the fibroids and causes them to shrink.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Pelvic Congestion Syndrome Treatment",
+        "category": "Medical Clinic",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "We offer effective, personalized care for women with Pelvic Congestion Syndrome. Diagnosis of the condition is done through pelvic ultrasound, CT or MRI, followed by gonadal vein embolization treatment.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Spider Vein Treatment",
+        "category": "Medical Clinic",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "With over 30 years of experience and expertise, Dr. Scott Buckner specializes in leading-edge sclerotherapy technology and techniques for highly effective spider vein treatment.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Varicose Vein Treatment",
+        "category": "Medical Clinic",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Dr. Scott Buckner has extensive training in the diagnosis and treatment of varicose vein disease and related disorders using such highly effective varicose vein treatments as Endovenous Ablation and Varithena.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Vein Clinic",
+        "category": "Medical Clinic",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "At our Eldersburg, MD and Columbia, MD vein clinics, we do more than just diagnose and treat spider and varicose veins. As an Interventional Radiologist, Dr. Scott Buckner receives referrals from other vein practices for second opinions and treatment of the most complex venous problems.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Vein Treatment",
+        "category": "Medical Clinic",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Chemical peels",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Refresh your complexion with expert Chemical Peels at Buckner Vein & Aesthetics. Our customized facial peel begins with a detailed skin analysis and cleanse, followed by a tailored chemical solution to gently exfoliate and renew your skin.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Microneedling",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "We are proud to offer Secret RF, a new microneedling treatment that uses microneedles to deliver fractional Radio Frequency energy into varying levels of the skin. This improves signs of aging skin, fine lines, wrinkles, stretch marks and scars with minimal downtime.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Body Sculpting",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "We offer EVOLVE X®, the first and only FDA-cleared, non-invasive body sculpting device that helps build muscle while also burning unwanted fat. This produces remarkable body contouring results without surgery or downtime.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "PDO Thread Lift",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "A minimally invasive cosmetic procedure, a PDO thread lift uses Polydioxanone (PDO) threads to lift and tighten sagging skin on the face and neck to help maintain beautiful, younger-looking skin.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "IV Therapy",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "A treatment method in which a high concentration of vitamins, minerals, and anti-oxidants are administered directly into the bloodstream, IV therapy allows for 100% absorption of these nutrients into the bloodstream and at much faster rates.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Pelvic Floor Treatment",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "At Buckner Vein and Aesthetics, we offer the latest and most innovative pelvic floor treatment designed to strengthen the pelvic floor muscles and improve their coordination and endurance.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Laser Hair Removal",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "The perfect solution for permanent hair reduction for both men and women, our Cutera CoolGlide and ProWave hair removal lasers can treat a wide range of skin types and tones safely and effectively. No more painful waxing, electrolysis or razors!",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "O Shot",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "At Buckner Vein and Aesthetics, we offer a variety of minimally invasive vaginal rejuvenation treatment options such as the \"O-Shot,\" which rejuvenates vaginal tissues and enhances sexual pleasure.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "UFE",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "BOTOX or Fillers",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Anti-wrinkle injections such as BOTOX and fillers target one of the underlying causes of frown lines and crow's feet—the repeated muscle contractions from frowning and squinting over the years.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "IPL",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "A noninvasive light treatment that can be customized for different skin tones and aging skin conditions, the Cutera LimeLight IPL Facial offers the advantage of improving skin tone and surface imperfections associated with aging and photodamage.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      },
+      {
+        "name": "Laser Treatment",
+        "category": "Medical Spa",
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Buckner Vein and Aesthetics specializes in the most innovative laser treatment, including the Cutera Laser, which can safely and effectively treat both tiny superficial face veins and deeper blue leg veins on men and women of all skin tones.",
+        "image": null,
+        "bookUrl": "https://bucknerveinandaesthetics.com/contact/"
+      }
+    ]
+  }
+}
