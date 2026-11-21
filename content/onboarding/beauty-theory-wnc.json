@@ -1,0 +1,185 @@
+{
+  "client": {
+    "slug": "beauty-theory-wnc",
+    "firstName": "there",
+    "ownerName": null,
+    "plan": "Free website · pay per new client",
+    "offers": [],
+    "domains": [],
+    "domainsChecked": "2026-11-21",
+    "_notes": "Built 11-21 by Sulu from their Google profile + AestheticHires job post (no menu prices online). Services are names only."
+  },
+  "found": {
+    "source": "Google Business Profile",
+    "sourceUrl": null,
+    "fetched": "2026-11-21",
+    "businessName": "The Beauty Theory of WNC",
+    "ownerName": null,
+    "email": null,
+    "phone": "(828) 673-0333",
+    "address": "76 Glendale Ave #302, Asheville, NC 28803",
+    "hours": [],
+    "about": "Welcome to The Beauty Theory of WNC, a luxury medical spa in Asheville, NC, specializing in advanced aesthetics, injectables, and skin rejuvenation. Our services include Botox, Dysport, dermal fillers, Sculptra, Radiesse, PDO threads, CO2 laser resurfacing, IPL photofacials, Scarlet RF microneedling, laser hair removal, HydraFacials, chemical peels, permanent makeup, and luxury lash and brow services.\n\nWe combine advanced medical-grade technology with personalized treatments designed to enhance your natural beauty. Our goal is to provide exceptional care, beautiful results, and a luxurious, welcoming experience where every client feels confident, comfortable, and cared for.",
+    "instagram": null,
+    "facebook": null,
+    "website": "https://www.thebeautytheoryofwnc.com/",
+    "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJF2ZWoPnDWYgR9lcp7FWfK3s",
+    "cardRequired": false,
+    "cancellationPolicy": null,
+    "coverImage": null,
+    "photos": [],
+    "treatmentGroups": [],
+    "services": [
+      {
+        "name": "Consultation",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "A one-on-one visit to talk through your goals and options.",
+        "image": null,
+        "bookUrl": "/contact/?service=Consultation"
+      },
+      {
+        "name": "Botox",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=Botox"
+      },
+      {
+        "name": "Dysport",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=Dysport"
+      },
+      {
+        "name": "Dermal Fillers",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=Dermal%20Fillers"
+      },
+      {
+        "name": "Sculptra",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=Sculptra"
+      },
+      {
+        "name": "Radiesse",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=Radiesse"
+      },
+      {
+        "name": "PDO Threads",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=PDO%20Threads"
+      },
+      {
+        "name": "CO2 Laser Resurfacing",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=CO2%20Laser%20Resurfacing"
+      },
+      {
+        "name": "IPL Photofacial",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=IPL%20Photofacial"
+      },
+      {
+        "name": "Scarlet RF Microneedling",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=Scarlet%20RF%20Microneedling"
+      },
+      {
+        "name": "Laser Hair Removal",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=Laser%20Hair%20Removal"
+      },
+      {
+        "name": "HydraFacial",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=HydraFacial"
+      },
+      {
+        "name": "Chemical Peels",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=Chemical%20Peels"
+      },
+      {
+        "name": "Permanent Makeup",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=Permanent%20Makeup"
+      },
+      {
+        "name": "Lash & Brow Services",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": 0,
+        "description": "",
+        "image": null,
+        "bookUrl": "/contact/?service=Lash%20%26%20Brow%20Services"
+      }
+    ]
+  }
+}
