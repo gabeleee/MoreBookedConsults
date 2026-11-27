@@ -1,0 +1,172 @@
+{
+  "client": {
+    "slug": "hydrate-me",
+    "firstName": "Patti",
+    "plan": "Free website · pay per new client",
+    "offers": [
+      "Free aesthetics consult (on your Zenoti menu today)",
+      "Free Face BBL with any HALO or MOXI (your Nov 1 to Dec 31 holiday special)"
+    ],
+    "domains": [],
+    "domainsChecked": "2026-11-21",
+    "_notes": "Built 11-21 from their Google listing + website (mbc-client-sites clients/hydrate-me/intake.json). Email is the one on their AestheticHires order. Offers are only ones seen on their site/menu today."
+  },
+  "found": {
+    "source": "Google Business Profile (DataForSEO) + their website",
+    "sourceUrl": "https://www.google.com/maps?cid=12483621590700921966&hl=en&gl=US",
+    "fetched": "2026-11-21",
+    "businessName": "Hydrate Me Medspa",
+    "ownerName": null,
+    "email": "patti@hydratememedspa.com",
+    "phone": "(614) 297-7565",
+    "address": "955 W 5th Ave, Columbus, OH 43212",
+    "hours": [
+      "Mon–Fri 10am–6pm",
+      "Sat–Sun 9am–5pm"
+    ],
+    "about": "Hydrate Me Medspa is your premier destination for advanced skincare, wellness, and rejuvenation treatments. Located in the heart of Grandview, we specialize in a wide range of services designed to help you look and feel your best. From luxurious skin revitalization therapies to IV hydration and weight management, our expert team provides personalized care in a relaxing, comfortable environment. Whether you're seeking anti-aging treatments, stress relief, or simply a boost of energy, Hydrate Me Medspa has the perfect solution for your needs. Discover the benefits of radiant skin and total wellness today—because you deserve to feel your best, inside and out!",
+    "instagram": null,
+    "facebook": null,
+    "website": "http://hydratememedspa.com/",
+    "googleReviewUrl": "https://search.google.com/local/writereview?placeid=ChIJr-dLRfeOOIgRbhQgGLK7Pq0",
+    "cardRequired": false,
+    "cancellationPolicy": null,
+    "coverImage": null,
+    "photos": [
+      "/c/hydrate-me/hero.jpg",
+      "/c/hydrate-me/web/01.jpg",
+      "/c/hydrate-me/web/23.jpg",
+      "/c/hydrate-me/web/11.jpg",
+      "/c/hydrate-me/web/05.jpg",
+      "/c/hydrate-me/web/06.jpg",
+      "/c/hydrate-me/web/09.jpg",
+      "/c/hydrate-me/web/03.jpg",
+      "/c/hydrate-me/web/07.jpg",
+      "/c/hydrate-me/web/10.jpg",
+      "/c/hydrate-me/web/08.jpg"
+    ],
+    "treatmentGroups": [],
+    "services": [
+      {
+        "name": "Consultation",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "A one-on-one visit to talk through your goals and options.",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "Hormone Replacement Therapy · , OH",
+        "category": null,
+        "price": null,
+        "priceVaries": false,
+        "minutes": null,
+        "description": "Hormone replacement therapy in Columbus. Consult + labs $149. Restore energy, sleep, mood and drive with licensed nurse practitioners.",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "B-12",
+        "category": "Booster Shots",
+        "price": 55,
+        "priceVaries": true,
+        "minutes": null,
+        "description": "B-12",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "IV Consult",
+        "category": "IV Therapies",
+        "price": 0,
+        "priceVaries": true,
+        "minutes": null,
+        "description": "First-time client? Unsure of which IV Drip to choose? Book a complimentary consultation with one of our NP providers and let us help you choose which drip would be best for you!",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "Ultimate Health Drip",
+        "category": "IV Therapies",
+        "price": 199,
+        "priceVaries": true,
+        "minutes": null,
+        "description": "If we put any more in this mother of a cocktail, you’d turn superhuman—and that could get awkward. With this ideal blend of 7 vitamins and minerals, you’ll find yourself feeling, well, pretty darn unstoppable. AKA - Myers' Cocktail",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "Normal Saline",
+        "category": "IV Therapies",
+        "price": 59,
+        "priceVaries": true,
+        "minutes": null,
+        "description": "In need of some additional hydration without the additives? Our Normal Saline is the option for you!",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "Anti-Inflammatory",
+        "category": "IV Therapies",
+        "price": 199,
+        "priceVaries": true,
+        "minutes": null,
+        "description": "Our innovative new intravenous therapy designed specifically to combat inflammation and promote rapid recovery. Harnessing a specialized blend of electrolytes, antioxidants, and anti-inflammatory agents, this IV treatment delivers targeted relief directly into your bloodstream, bypassing the digestive system for optimal absorption and efficacy.",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "Party Drip",
+        "category": "IV Therapies",
+        "price": 129,
+        "priceVaries": true,
+        "minutes": null,
+        "description": "Replace your usual pre-game routine with a pre-emptive strike or if it’s after the party don't wait! Get 100% absorption of our custom blend of Pepcid, Zofran, B-Complex, and Toradol to settle your stomach, restore your body’s natural balance and give you the energy you need to roll through the day, and rock another night.",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "Anti Aging Drip",
+        "category": "IV Therapies",
+        "price": 219,
+        "priceVaries": true,
+        "minutes": null,
+        "description": "We may not be able to undo a history of poor choices and all-nighters, but our blend can help turn back the clock on sun damage, pollution, lack of sleep, and years of dehydration. For improved elasticity and smoother, more youthful looking skin.",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "Recover & Recharge",
+        "category": "IV Therapies",
+        "price": 159,
+        "priceVaries": true,
+        "minutes": null,
+        "description": "Whether you're recuperating from a demanding workout, managing jet lag, or simply seeking a boost to face the day refreshed, Recover and Recharge will deliver what you need. This specialized infusion is crafted to replenish essential nutrients, electrolytes, and vitamins, providing a tailored solution for rapid recovery and sustained energy. **Please note Vitamin D & B12 are administered as IM Injections",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "Botox",
+        "category": "Neurotoxins",
+        "price": 13,
+        "priceVaries": true,
+        "minutes": null,
+        "description": "Used to improve the appearance of forehead wrinkles, crow's feet, and angry lines. Your expert injector will determine the number of units you will need to achieve your desired result. **price per unit",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      },
+      {
+        "name": "Tirzepatide Tier 1 (2.5 - 5 MG)",
+        "category": "Weight Loss",
+        "price": 399,
+        "priceVaries": true,
+        "minutes": null,
+        "description": "Tirzepatide Tier 1 (2.5 - 5 MG)",
+        "image": null,
+        "bookUrl": "https://hydratemedspa.zenoti.com/webstoreNew/services"
+      }
+    ]
+  }
+}
