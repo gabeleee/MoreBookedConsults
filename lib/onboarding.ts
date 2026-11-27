@@ -14,7 +14,6 @@
 import landAesthetics from "@/content/onboarding/land-aesthetics.json";
 import aestheticaMd from "@/content/onboarding/aesthetica-md.json";
 import lePelle from "@/content/onboarding/le-pelle.json";
-import wellnessByAesthetica from "@/content/onboarding/wellness-by-aesthetica.json";
 import bucknerVein from "@/content/onboarding/buckner-vein.json";
 import hydrateMe from "@/content/onboarding/hydrate-me.json";
 
@@ -73,7 +72,7 @@ export type FoundSummary = Omit<Found, "services" | "photos" | "about" | "cancel
   hasCancellationPolicy: boolean;
 };
 
-export const CLIENTS: ClientFile[] = [landAesthetics as ClientFile, aestheticaMd as unknown as ClientFile, lePelle as unknown as ClientFile, wellnessByAesthetica as unknown as ClientFile, bucknerVein as unknown as ClientFile, hydrateMe as unknown as ClientFile];
+export const CLIENTS: ClientFile[] = [landAesthetics as ClientFile, aestheticaMd as unknown as ClientFile, lePelle as unknown as ClientFile, bucknerVein as unknown as ClientFile, hydrateMe as unknown as ClientFile];
 
 export const clientBySlug = (slug: string) => CLIENTS.find((c) => c.client.slug === slug);
 
